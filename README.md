@@ -1,4 +1,3 @@
-indiantinker.github.io
-======================
+# My Blog
+Built using Jekyll
 
-The new jekyll blog

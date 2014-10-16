@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Rohit Gupta
+tagline:          Think,Design,Make,Repeat 
+description:      'A blog by <a href="http://www.indiantinker.wordpress.com">IndianTinker</a> Get in Touch on Twitter <a href="www.twitter.com/rohit7gupta">@rohit7gupta</a> .  '
+url:              http://indiantinker.github.io
+baseurl:          /
+
+author:
+  name:           'Rohit'
+  url:            https://twitter.com/rohit7gupta
+
+paginate:         4
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           https://github.com/indiantinker
