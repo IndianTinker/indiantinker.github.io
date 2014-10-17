@@ -89,7 +89,7 @@ html {
 }
 .sidebar-nav-item {
   display: block;
-  line-height: 1.2;
+  line-height: 1.1rem;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
