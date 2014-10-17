@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-  Howdy! I am Rohit Gupta. I completed his undergraduate degree in Electrical Engineering from [Delhi Technological University](http://dce.edu), New Delhi, India. I am Avid Maker and Do It Yourself (DIY) enthusiast.I am always fiddling with ”things” to bring sense to this entropic world. Back in college days i have even built and raced solar cars. I loves to blog about Technology, DIY,Travel and almost everything i feel.I am great fan of Iron Man. 
+Howdy! I am Rohit Gupta. I completed my undergraduate degree in Electrical Engineering from [Delhi Technological University](http://dce.edu), New Delhi, India. I am Avid Maker and Do It Yourself (DIY) enthusiast.I am always fiddling with ”things” to bring sense to this entropic world. Back in college days i have even built and raced solar cars. I love to blog about Technology, DIY,Travel and almost everything i feel.I am great fan of Iron Man.
 
 > see my [Arc Reactor](http://hackaday.io/project/792-ArcReactorX-) .
 
