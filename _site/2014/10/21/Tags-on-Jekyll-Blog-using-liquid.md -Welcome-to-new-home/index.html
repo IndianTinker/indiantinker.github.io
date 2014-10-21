@@ -11,7 +11,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Implementing Tags/Categories on Jekyll using Liquid ! &middot; Rohit Gupta
     
   </title>
 
@@ -49,7 +49,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="/">Home</a>
+      <a class="sidebar-nav-item" href="/">Home</a>
 
       
 
@@ -123,18 +123,15 @@ window.twttr = (function (d, s, id) {
 
  
     <div class="content container">
-      <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/">
-        Implementing Tags/Categories on Jekyll using Liquid !
-      </a>
-    </h1>
+      <div class="post">
+  <h1 class="post-title">Implementing Tags/Categories on Jekyll using Liquid !</h1>
+  <span class="post-date">21 Oct 2014</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-    <span class="post-date">21 Oct 2014</span>
 
-    <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful. It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. </p>
+
+  <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful. It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. </p>
 
 <p>Interestingly, Jekyll supports <a href="liquidmarkup.org/">Liquid</a> a templating engine built on ruby that is developed by e commerce giant <em>Shopify</em>.
 Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using <strong>Liquid</strong> .</p>
@@ -178,44 +175,48 @@ If you face any issues be sure to comment here .</p>
 
 <p>Rohit</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/10/16/Welcome-to-new-home/">
-        Welcome to the new home!
-      </a>
-    </h1>
-
-    <span class="post-date">16 Oct 2014</span>
-
-    <p>I am now in process of migrating my main blog on <a href="http://indiantinker.wordpress.com">wordpress</a> to github pages for more contexual/design/layout freedom. This blog is built using <a href="http://jekyllrb.com">Jekyll</a>:</p>
-
-<blockquote>
-<p>Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
-
-<p>For those who have used <a href="http://www.latex-project.org/">LaTeX</a> in the past Jekyll is excellent as it (personally saying) generates a static website by compiling all the code you wrote in the post.Obviously, with the luxury of <strong>platforms</strong> like wordpress,blogspot etc writing bare code is archaic. Jekyll has got your back here too, you never <em>write</em> the html/css tags from scratch. The Jekyll engine takes standard markdown which it builds into a html code and once built gives you a complete website. You an obviously code in html too.</p>
-
-<p>Comments,widgets and Analytics work too with just a bit of playing required.
-The comments on this site are supported via Disqus !</p>
-
-<p>Hope this post compiles well ! :)</p>
-
-  </div>
-  
 </div>
 
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page2">Older</a>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2014/10/16/Welcome-to-new-home/">
+            Welcome to the new home!
+            <small>16 Oct 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2014/10/16/MakerParty/">
+            Mozilla Maker Party-Pune
+            <small>16 Oct 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
 </div>
+
     </div>
 
 

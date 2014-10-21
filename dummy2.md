@@ -1,8 +1,14 @@
 ---
 layout: page
-title: Dummy Page-2
+title: Travelopedia
 ---
+My thoughts about the places i go and people i meet around the globe! 
 
-# This is a dummy page  
-
-This is the second dummy page for testing purposes! Still opening them.. Tch
+  {% for post in site.posts %}
+  {% for tag in post.tags %}
+  {% if tag == 'travel' or tag =='travelogue' or tag =='Travel' %}
+  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
+	
+  {% endif %}
+  {% endfor %}
+  {% endfor %}

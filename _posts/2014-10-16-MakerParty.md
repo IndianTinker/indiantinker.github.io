@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Mozilla Maker Party-Pune
+tags:
+- travel
 ---
 CAUTION:This post might sound different. Writing gears need some oiling.
 

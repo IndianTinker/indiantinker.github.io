@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Welcome to the new home!
+tags:
+- jekyll
+- Pune
+- Blogging
+- web
 ---
 I am now in process of migrating my main blog on [wordpress](http://indiantinker.wordpress.com) to github pages for more contexual/design/layout freedom. This blog is built using [Jekyll](http://jekyllrb.com):
 

@@ -4,13 +4,64 @@
  <title>Rohit Gupta</title>
  <link href="http://indiantinker.github.io/atom.xml" rel="self"/>
  <link href="http://indiantinker.github.io/"/>
- <updated>2014-10-17T23:14:24+05:30</updated>
+ <updated>2014-10-21T20:31:11+05:30</updated>
  <id>http://indiantinker.github.io</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Implementing Tags/Categories on Jekyll using Liquid !</title>
+   <link href="http://indiantinker.github.io/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/"/>
+   <updated>2014-10-21T00:00:00+05:30</updated>
+   <id>http://indiantinker.github.io/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md -Welcome-to-new-home</id>
+   <content type="html">&lt;p&gt;I have recently been working on my blog on using &lt;em&gt;Jekyll&lt;/em&gt; on &lt;strong&gt;Github Pages&lt;/strong&gt; and the experience has been wonderful. It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. &lt;/p&gt;
+
+&lt;p&gt;Interestingly, Jekyll supports &lt;a href=&quot;liquidmarkup.org/&quot;&gt;Liquid&lt;/a&gt; a templating engine built on ruby that is developed by e commerce giant &lt;em&gt;Shopify&lt;/em&gt;.
+Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using &lt;strong&gt;Liquid&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;It essentially involves two steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Editing YML front matter (The thing between the 3 dashes)&lt;/li&gt;
+&lt;li&gt;Creating a Category page to automatically accumulate all the tags you added &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!&lt;/p&gt;
+
+&lt;p&gt;Lets get started.&lt;/p&gt;
+
+&lt;p&gt;Add a &lt;code&gt;Tags&lt;/code&gt; variable to the frontmatter block and list the tags as shown the following example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;---
+layout: post
+title: Tagging Jekyll
+tags:
+- Jekyll
+- Blogging
+- web
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say &lt;em&gt;Categories&lt;/em&gt; etc.
+Lets name it Categories.md&lt;/p&gt;
+
+&lt;p&gt;Use the following snippet to display tags.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/3eddb75957eaf9f9b8e8.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Now&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;jekyll build
+jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and see the changes in the blog on &lt;em&gt;http://localhost:4000&lt;/em&gt;.
+If you face any issues be sure to comment here .&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Welcome to the new home!</title>
