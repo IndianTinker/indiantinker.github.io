@@ -13,9 +13,6 @@ description:      'A blog by <a href="www.twitter.com/rohit7gupta">@rohit7gupta<
 url:              http://indiantinker.github.io
 baseurl:          /
 
-gems:
-  - jekyll-sitemap
-
 author:
   name:           'Rohit'
   url:            https://twitter.com/rohit7gupta
