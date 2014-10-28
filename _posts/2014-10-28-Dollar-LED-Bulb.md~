@@ -1,0 +1,42 @@
+---
+layout: post
+title: Inside a Cheap LED Bulb
+tags:
+- takeapart
+- general
+---
+
+I was recently on the visit to my hometown *Delhi* this Diwali when i visited **Lajpat Rai** market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.
+
+It was pretty clear that the Bulbs wont have those *Chinese* drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.
+
+<a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align= "center"></a>
+
+And Bingo!
+It did have a textbook transformerless design ([like this](4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS, One can only gjnvg/s1600/transformerless+power+supply+circuit.png)) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (*No Zener*)
+
+<a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia"></a>
+
+The entire Bulb had:
+
+* 2x `470k` resistors, 
+* 1 x `100uf` Electrolytic Capacitor, 
+* 1 x `0.1uf`(guess) Capacitor with severed markings
+* 12 LEDs
+* 4 Diodes in bridge rectifier configuration.
+
+<a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003"></a>
+
+The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.
+
+<a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005"></a>
+
+One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.
+
+Cheers!
+
+Rohit 
+
+ 
+ 
+

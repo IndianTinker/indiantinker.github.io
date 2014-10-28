@@ -5,7 +5,7 @@ tags:
 - jekyll
 - Pune
 - Blogging
-- projects
+- web
 ---
 I am now in process of migrating my main blog on [wordpress](http://indiantinker.wordpress.com) to github pages for more contexual/design/layout freedom. This blog is built using [Jekyll](http://jekyllrb.com):
 

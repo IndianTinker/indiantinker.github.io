@@ -13,8 +13,7 @@ description:      'A blog by <a href="www.twitter.com/rohit7gupta">@rohit7gupta<
 url:              http://indiantinker.github.io
 baseurl:          /
 
-#gems:
- # - jekyll-sitemap
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 
 author:
   name:           'Rohit'

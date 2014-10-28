@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://indiantinker.github.io/atom.xml" rel="self"/>
  <link href="http://indiantinker.github.io/"/>
- <updated>2014-10-22T10:04:29+05:30</updated>
+ <updated>2014-10-28T17:04:15+05:30</updated>
  <id>http://indiantinker.github.io</id>
  <author>
    <name>Rohit</name>
@@ -13,11 +13,51 @@
 
  
  <entry>
+   <title>Inside a Cheap LED Bulb</title>
+   <link href="http://indiantinker.github.io/2014/10/28/Dollar-LED-Bulb/"/>
+   <updated>2014-10-28T00:00:00+05:30</updated>
+   <id>http://indiantinker.github.io/2014/10/28/Dollar-LED-Bulb</id>
+   <content type="html">&lt;p&gt;I was recently on the visit to my hometown &lt;em&gt;Delhi&lt;/em&gt; this Diwali when i visited &lt;strong&gt;Lajpat Rai&lt;/strong&gt; market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.&lt;/p&gt;
+
+&lt;p&gt;It was pretty clear that the Bulbs wont have those &lt;em&gt;Chinese&lt;/em&gt; drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15646628781&quot; title=&quot;WP_20141026_004 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;WP_20141026_004&quot; align= &quot;center&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And Bingo!
+It did have a textbook transformerless design (&lt;a href=&quot;4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS,%20One%20can%20only%20gjnvg/s1600/transformerless+power+supply+circuit.png&quot;&gt;like this&lt;/a&gt;) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (&lt;em&gt;No Zener&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15012068084&quot; title=&quot;#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg&quot; width=&quot;320&quot; height=&quot;320&quot; alt=&quot;#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The entire Bulb had:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2x &lt;code&gt;470k&lt;/code&gt; resistors, &lt;/li&gt;
+&lt;li&gt;1 x &lt;code&gt;100uf&lt;/code&gt; Electrolytic Capacitor, &lt;/li&gt;
+&lt;li&gt;1 x &lt;code&gt;0.1uf&lt;/code&gt;(guess) Capacitor with severed markings&lt;/li&gt;
+&lt;li&gt;12 LEDs&lt;/li&gt;
+&lt;li&gt;4 Diodes in bridge rectifier configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15649322345&quot; title=&quot;WP_20141026_003 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg&quot; width=&quot;500&quot; height=&quot;281&quot; alt=&quot;WP_20141026_003&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15028564094&quot; title=&quot;WP_20141026_005 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg&quot; width=&quot;281&quot; height=&quot;500&quot; alt=&quot;WP_20141026_005&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Implementing Tags/Categories on Jekyll using Liquid !</title>
    <link href="http://indiantinker.github.io/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/"/>
    <updated>2014-10-21T00:00:00+05:30</updated>
    <id>http://indiantinker.github.io/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md -Welcome-to-new-home</id>
-   <content type="html">&lt;p&gt;I have recently been working on my blog on using &lt;em&gt;Jekyll&lt;/em&gt; on &lt;strong&gt;Github Pages&lt;/strong&gt; and the experience has been wonderful. It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. &lt;/p&gt;
+   <content type="html">&lt;p&gt;I have recently been working on my blog on using &lt;em&gt;Jekyll&lt;/em&gt; on &lt;strong&gt;Github Pages&lt;/strong&gt; and the experience has been wonderful.&amp;lt;!--more--&amp;gt; It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. &lt;/p&gt;
 
 &lt;p&gt;Interestingly, Jekyll supports &lt;a href=&quot;liquidmarkup.org/&quot;&gt;Liquid&lt;/a&gt; a templating engine built on ruby that is developed by e commerce giant &lt;em&gt;Shopify&lt;/em&gt;.
 Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using &lt;strong&gt;Liquid&lt;/strong&gt; .&lt;/p&gt;
@@ -68,7 +108,7 @@ If you face any issues be sure to comment here .&lt;/p&gt;
    <link href="http://indiantinker.github.io/2014/10/16/Welcome-to-new-home/"/>
    <updated>2014-10-16T00:00:00+05:30</updated>
    <id>http://indiantinker.github.io/2014/10/16/Welcome-to-new-home</id>
-   <content type="html">&lt;p&gt;I am now in process of migrating my main blog on &lt;a href=&quot;http://indiantinker.wordpress.com&quot;&gt;wordpress&lt;/a&gt; to github pages for more contexual/design/layout freedom. This blog is built using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;:&lt;/p&gt;
+   <content type="html">&lt;p&gt;I am now in process of migrating my main blog on &lt;a href=&quot;http://indiantinker.wordpress.com&quot;&gt;wordpress&lt;/a&gt; to github pages for more contexual/design/layout freedom. This blog is built using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;:&amp;lt;!--more--&amp;gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
@@ -90,9 +130,9 @@ The comments on this site are supported via Disqus !&lt;/p&gt;
    <link href="http://indiantinker.github.io/2014/10/16/MakerParty/"/>
    <updated>2014-10-16T00:00:00+05:30</updated>
    <id>http://indiantinker.github.io/2014/10/16/MakerParty</id>
-   <content type="html">&lt;p&gt;CAUTION:This post might sound different. Writing gears need some oiling.&lt;/p&gt;
-
-&lt;p&gt;I have moved to pune for work now and exploring the city has always been on my top agenda.  Pune has always been a happening city of makers. Mumbai is close-by and easily commutable. There are a lot of DIY/Maker start-ups here too and who doesnt know about IOTPune/DooThings. [A more detailed city review sometime later]&lt;/p&gt;
+   <content type="html">&lt;p&gt;CAUTION:This post might sound different. Writing gears need some oiling.
+&amp;lt;!--more--&amp;gt;
+I have moved to pune for work now and exploring the city has always been on my top agenda.  Pune has always been a happening city of makers. Mumbai is close-by and easily commutable. There are a lot of DIY/Maker start-ups here too and who doesnt know about IOTPune/DooThings. [A more detailed city review sometime later]&lt;/p&gt;
 
 &lt;p&gt;Bored one night,thinking how to spend the weekend more constructively, i started to scroll through the meetups around my place on weekend. The main priority was &amp;quot;Distance&amp;quot; . People living in Pune can relate. The city transportation is awful and a thread is always running in mind querying, &amp;quot;Dude! Will be able to walk back? &amp;quot;&lt;/p&gt;
 

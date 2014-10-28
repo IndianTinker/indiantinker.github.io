@@ -7,9 +7,9 @@ tags:
 - Blogging
 - web
 ---
+I have recently been working on my blog on using *Jekyll* on **Github Pages** and the experience has been wonderful.<!--more--> It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. 
 
 
-I have recently been working on my blog on using *Jekyll* on **Github Pages** and the experience has been wonderful. It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. 
 
 Interestingly, Jekyll supports [Liquid](liquidmarkup.org/) a templating engine built on ruby that is developed by e commerce giant *Shopify*.
 Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using **Liquid** .
