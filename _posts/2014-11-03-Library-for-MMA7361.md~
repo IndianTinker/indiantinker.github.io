@@ -1,0 +1,55 @@
+---
+layout: post
+title: Arduino Library for Freescale's MMA7361 3 axis accelerometer
+tags:
+- hardware
+- arduino
+---
+
+Accelerometers huh! No new term these days! Every **practical** phone these days has one! Accelerometers churn out data in two ways :
+
+* Analog which can be directly read by our friendly ADC
+* Digital which send data in values riding on I2C/SPI.
+
+The one that i had is an analog one and is probably the first one that comes when you search with keywords *Arduino Accelerometer* on ebay/AliExpress. It(module) is based on [Freescale 's MMA7361 analog 3Axis Accelerometer](http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf). 
+
+![Image](http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg)
+
+I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done [here](http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf)) is as follows:
+
+
+* **X,Y,Z** give Analog Voltage outputs based on the orientation
+* **SL** - Sleep (needs to be Pulled up)
+* **0g** - It gives a signal when 0g is detected.
+* **5v,3v,GND** - Usual Power Connections 3V is produced internally if 5v is applied
+* **GS** - Sensitivity select- the IC allows 1.5g and 6g settings 
+* **ST** - Self Test
+
+Without doing the **RTFD(D-Datasheet)** i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in *Sleep* Mode and has to be awaken by *pulling-Up* the Sleep pin.
+
+Just connect a `10k` resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.
+
+![IMg](https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg)
+
+Now just:
+
+* read the analog values from the pin
+* convert them to voltages
+* apply sensitivity and correction
+* and get g value
+
+Simple as that!
+   
+Having deciphered it, i wrote a test code:
+
+{% gist 1d5402b9b3562345cc44 %}
+
+It worked as designed.
+Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
+The process turned out to be easy thanks to the documentation by **Arduino**.
+My Library can be found here on [github](https://github.com/IndianTinker/MMA7361Library)
+Feel free to fork it and use it. 
+Hoping the community finds it useful.
+
+Cheers,
+Rohit 

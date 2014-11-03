@@ -12,7 +12,7 @@
 
   <title>
     
-      Welcome to the new home! &middot; Rohit Gupta
+      Rohit Gupta &middot; Think,Design,Make,Repeat
     
   </title>
 
@@ -150,80 +150,75 @@ window.twttr = (function (d, s, id) {
 
  
     <div class="content container">
-      <div class="post">
-  <h1 class="post-title">Welcome to the new home!</h1>
-  <span class="post-date">16 Oct 2014</span>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/">
+        Implementing Tags/Categories on Jekyll using Liquid !
+      </a>
+    </h1>
 
+    <span class="post-date">21 Oct 2014</span>
 
+    <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful.&lt;!--more--&gt; It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. </p>
 
-  <p>I am now in process of migrating my main blog on <a href="http://indiantinker.wordpress.com">wordpress</a> to github pages for more contexual/design/layout freedom. This blog is built using <a href="http://jekyllrb.com">Jekyll</a>:&lt;!--more--&gt;</p>
+<p>Interestingly, Jekyll supports <a href="liquidmarkup.org/">Liquid</a> a templating engine built on ruby that is developed by e commerce giant <em>Shopify</em>.
+Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using <strong>Liquid</strong> .</p>
 
-<blockquote>
-<p>Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
+<p>It essentially involves two steps:</p>
 
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+<ol>
+<li>Editing YML front matter (The thing between the 3 dashes)</li>
+<li>Creating a Category page to automatically accumulate all the tags you added </li>
+</ol>
 
-<p>For those who have used <a href="http://www.latex-project.org/">LaTeX</a> in the past Jekyll is excellent as it (personally saying) generates a static website by compiling all the code you wrote in the post.Obviously, with the luxury of <strong>platforms</strong> like wordpress,blogspot etc writing bare code is archaic. Jekyll has got your back here too, you never <em>write</em> the html/css tags from scratch. The Jekyll engine takes standard markdown which it builds into a html code and once built gives you a complete website. You an obviously code in html too.</p>
+<p>After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!</p>
 
-<p>Comments,widgets and Analytics work too with just a bit of playing required.
-The comments on this site are supported via Disqus !</p>
+<p>Lets get started.</p>
 
-<p>Hope this post compiles well ! :)</p>
+<p>Add a <code>Tags</code> variable to the frontmatter block and list the tags as shown the following example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
+layout: post
+title: Tagging Jekyll
+tags:
+- Jekyll
+- Blogging
+- web
+---
+</code></pre></div>
+<p>Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say <em>Categories</em> etc.
+Lets name it Categories.md</p>
 
+<p>Use the following snippet to display tags.</p>
+
+<script src="https://gist.github.com/3eddb75957eaf9f9b8e8.js"> </script>
+
+<p>Now</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">jekyll build
+jekyll serve
+</code></pre></div>
+<p>and see the changes in the blog on <em>http://localhost:4000</em>.
+If you face any issues be sure to comment here .</p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+
+  </div>
+  
 </div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page4">Older</a>
+  
+  
     
-      <li>
-        <h3>
-          <a href="/2014/11/03/Library-for-MMA7361/">
-            Arduino Library for Freescale's MMA7361 3 axis accelerometer
-            <small>03 Nov 2014</small>
-          </a>
-        </h3>
-      </li>
+      <a class="pagination-item newer" href="/page2">Newer</a>
     
-      <li>
-        <h3>
-          <a href="/2014/10/28/Dollar-LED-Bulb/">
-            Inside a Cheap LED Bulb
-            <small>28 Oct 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/">
-            Implementing Tags/Categories on Jekyll using Liquid !
-            <small>21 Oct 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-
+  
 </div>
-
     </div>
 
 

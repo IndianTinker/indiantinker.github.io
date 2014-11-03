@@ -4,13 +4,77 @@
  <title>Rohit Gupta</title>
  <link href="http://indiantinker.github.io/atom.xml" rel="self"/>
  <link href="http://indiantinker.github.io/"/>
- <updated>2014-10-28T17:04:15+05:30</updated>
+ <updated>2014-11-03T20:45:16+05:30</updated>
  <id>http://indiantinker.github.io</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Arduino Library for Freescale's MMA7361 3 axis accelerometer</title>
+   <link href="http://indiantinker.github.io/2014/11/03/Library-for-MMA7361/"/>
+   <updated>2014-11-03T00:00:00+05:30</updated>
+   <id>http://indiantinker.github.io/2014/11/03/Library-for-MMA7361</id>
+   <content type="html">&lt;p&gt;Accelerometers huh! No new term these days! Every &lt;strong&gt;practical&lt;/strong&gt; phone these days has one! Accelerometers churn out data in two ways :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Analog which can be directly read by our friendly ADC&lt;/li&gt;
+&lt;li&gt;Digital which send data in values riding on I2C/SPI.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The one that i had is an analog one and is probably the first one that comes when you search with keywords &lt;em&gt;Arduino Accelerometer&lt;/em&gt; on ebay/AliExpress. It(module) is based on &lt;a href=&quot;http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf&quot;&gt;Freescale &amp;#39;s MMA7361 analog 3Axis Accelerometer&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg&quot; alt=&quot;Image&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done &lt;a href=&quot;http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf&quot;&gt;here&lt;/a&gt;) is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;X,Y,Z&lt;/strong&gt; give Analog Voltage outputs based on the orientation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SL&lt;/strong&gt; - Sleep (needs to be Pulled up)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;0g&lt;/strong&gt; - It gives a signal when 0g is detected.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;5v,3v,GND&lt;/strong&gt; - Usual Power Connections 3V is produced internally if 5v is applied&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GS&lt;/strong&gt; - Sensitivity select- the IC allows 1.5g and 6g settings &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ST&lt;/strong&gt; - Self Test&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Without doing the &lt;strong&gt;RTFD(D-Datasheet)&lt;/strong&gt; i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in &lt;em&gt;Sleep&lt;/em&gt; Mode and has to be awaken by &lt;em&gt;pulling-Up&lt;/em&gt; the Sleep pin.&lt;/p&gt;
+
+&lt;p&gt;Just connect a &lt;code&gt;10k&lt;/code&gt; resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg&quot; alt=&quot;IMg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Now just:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;read the analog values from the pin&lt;/li&gt;
+&lt;li&gt;convert them to voltages&lt;/li&gt;
+&lt;li&gt;apply sensitivity and correction&lt;/li&gt;
+&lt;li&gt;and get g value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Simple as that!&lt;/p&gt;
+
+&lt;p&gt;Having deciphered it, i wrote a test code:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1d5402b9b3562345cc44.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;It worked as designed.&lt;/p&gt;
+
+&lt;p&gt;Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
+The process turned out to be easy thanks to the documentation by &lt;strong&gt;Arduino&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;My Library can be found here on &lt;a href=&quot;https://github.com/IndianTinker/MMA7361Library&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Feel free to fork it and use it. 
+Hoping the community finds it useful.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Inside a Cheap LED Bulb</title>
