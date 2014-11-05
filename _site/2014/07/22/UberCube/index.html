@@ -12,7 +12,7 @@
 
   <title>
     
-      Implementing Tags/Categories on Jekyll using Liquid ! &middot; Rohit Gupta
+      UberCubeX4- The portable LED Cube ! &middot; Rohit Gupta
     
   </title>
 
@@ -175,56 +175,37 @@ window.twttr = (function (d, s, id) {
  
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Implementing Tags/Categories on Jekyll using Liquid !</h1>
-  <span class="post-date">21 Oct 2014</span>
+  <h1 class="post-title">UberCubeX4- The portable LED Cube !</h1>
+  <span class="post-date">22 Jul 2014</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 
-  <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful.&lt;!--more--&gt; It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. </p>
+  <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
 
-<p>Interestingly, Jekyll supports <a href="liquidmarkup.org/">Liquid</a> a templating engine built on ruby that is developed by e commerce giant <em>Shopify</em>.
-Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using <strong>Liquid</strong> .</p>
+<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen></iframe>
 
-<p>It essentially involves two steps:</p>
+<p>Want to build your own?</p>
 
-<ol>
-<li>Editing YML front matter (The thing between the 3 dashes)</li>
-<li>Creating a Category page to automatically accumulate all the tags you added </li>
-</ol>
+<p>Keep watching this place and i will bring a complete tutorial in while!</p>
 
-<p>After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!</p>
+<p>Cheers,</p>
 
-<p>Lets get started.</p>
+<p>IndianTinker</p>
 
-<p>Add a <code>Tags</code> variable to the frontmatter block and list the tags as shown the following example:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">---
-layout: post
-title: Tagging Jekyll
-tags:
-- Jekyll
-- Blogging
-- web
----
-</code></pre></div>
-<p>Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say <em>Categories</em> etc.
-Lets name it Categories.md</p>
+<p><strong>Update: </strong>
+<ul>
+    <li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
+    <li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
+    <li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
+    <li><strong>Won: University level &quot;Open H/W&quot; competition</strong></li>
+</ul>
+The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
 
-<p>Use the following snippet to display tags.</p>
+<p>&nbsp;</p>
 
-<script src="https://gist.github.com/3eddb75957eaf9f9b8e8.js"> </script>
-
-<p>Now</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">jekyll build
-jekyll serve
-</code></pre></div>
-<p>and see the changes in the blog on <em>http://localhost:4000</em>.
-If you face any issues be sure to comment here .</p>
-
-<p>Cheers!</p>
-
-<p>Rohit</p>
+<p>&nbsp;</p>
 
 </div>
 
@@ -252,9 +233,9 @@ If you face any issues be sure to comment here .</p>
     
       <li>
         <h3>
-          <a href="/2014/10/16/Welcome-to-new-home/">
-            Welcome to the new home!
-            <small>16 Oct 2014</small>
+          <a href="/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/">
+            Implementing Tags/Categories on Jekyll using Liquid !
+            <small>21 Oct 2014</small>
           </a>
         </h3>
       </li>

@@ -27,12 +27,12 @@ Microcontrollers
   {% endfor %}
   {% endfor %}
 
-Python
+Python/Visual C Sharp
 --------
-*Python for everyday problem solving*
+*Code for everyday problem solving*
   {% for post in site.posts %}
   {% for tag in post.tags %}
-  {% if tag == 'python' %}
+  {% if tag == 'python' or tag=='vcsharp' %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
 	
   {% endif %}

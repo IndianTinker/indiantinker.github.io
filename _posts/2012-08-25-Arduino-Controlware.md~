@@ -1,0 +1,32 @@
+---
+layout: post
+title: Arduino Controlware- Play with your duino without frequent code uploads
+tags:
+- arduino
+- python
+---
+
+I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.
+
+During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!
+
+You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.
+
+<a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a>
+
+You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+![vimeo](http://www.vimeo.com/50615424 w=500&h=375)
+
+<a href="http://vimeo.com/50615424">ControlCom</a> from <a href="http://vimeo.com/user7342256">Indian Tinker</a> on <a href="http://vimeo.com">Vimeo</a>.
+
+Edit: 02 Oct'12 : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://sdrv.ms/VonGvI" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino Code To be uploaded is :                                                     <a href="http://sdrv.ms/UtUu5Y" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p>
+
+<ol>
+	<li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+	<li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+	<li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+	<li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
