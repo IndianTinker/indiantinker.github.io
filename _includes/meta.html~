@@ -10,16 +10,16 @@
   <meta content="website" property="og:type">
 {% endif %}
 {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  <meta content="{{ site.url }}{{ page.url }}/index.html" property="og:url">
 {% endif %}
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}/about/" property="article:author">
+  <meta content="{{ site.url }}/about/index.html" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="/img/posts/{{ page.image }}" property="og:image">
+  <meta content="{ page.image }" property="og:image">
 {% else %}
-  <meta content="/img/logo-high-resolution.png" property="og:image">
+  <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
