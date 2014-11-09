@@ -2,6 +2,11 @@
 <meta name="twitter:creator" content="@rohit7gupta">
 <meta name="twitter:card" content="summary">
 <meta content="{{ site.title }}" property="og:site_name">
+{% if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+  <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)">
+{% endif %}
 {% if page.title %}
   <meta content="{{ page.title }}" property="og:title">
   <meta name="twitter:title" content="{{ page.title }}">
