@@ -97,7 +97,8 @@ And you can continue to update only a single bank just in case you have dynamic 
 
 The communication is done using SPI.
 
-The code that i used is based on [RobG's post](http://forum.43oh.com/topic/1312-nokia-5110-display/)
+The code that i used is based on [RobG's post](http://forum.43oh.com/topic/1312-nokia-5110-display/).
+
 It displays the temperature and some static text
 
 Connections are as follows(PORT1):

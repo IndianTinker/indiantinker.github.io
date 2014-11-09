@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://indiantinker.github.io/2014/11/09/Nokia5510-lcd-with-MSP430/</loc>
+        <loc>http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/11/03/Library-for-MMA7361/</loc>
+        <loc>http://rohitg.in/2014/11/03/Library-for-MMA7361/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/10/28/Dollar-LED-Bulb/</loc>
+        <loc>http://rohitg.in/2014/10/28/Dollar-LED-Bulb/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/</loc>
+        <loc>http://rohitg.in/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/10/16/Welcome-to-new-home/</loc>
+        <loc>http://rohitg.in/2014/10/16/Welcome-to-new-home/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/10/16/MakerParty/</loc>
+        <loc>http://rohitg.in/2014/10/16/MakerParty/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/07/24/Hyderabad/</loc>
+        <loc>http://rohitg.in/2014/07/24/Hyderabad/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/07/22/UberCube/</loc>
+        <loc>http://rohitg.in/2014/07/22/UberCube/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/04/16/Tiano-Piano/</loc>
+        <loc>http://rohitg.in/2014/04/16/Tiano-Piano/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/04/07/OpenAgitator/</loc>
+        <loc>http://rohitg.in/2014/04/07/OpenAgitator/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2014/03/31/Ahemdabad/</loc>
+        <loc>http://rohitg.in/2014/03/31/Ahemdabad/</loc>
     </url>
     
     <url>
-        <loc>http://indiantinker.github.io/2012/08/25/Arduino-Controlware/</loc>
+        <loc>http://rohitg.in/2012/08/25/Arduino-Controlware/</loc>
     </url>
     
 
@@ -54,7 +54,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/404.html</loc>
+        <loc>http://rohitg.in/404.html</loc>
     </url>
     
     
@@ -62,7 +62,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/about/</loc>
+        <loc>http://rohitg.in/about/</loc>
     </url>
     
     
@@ -70,25 +70,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/archive/</loc>
-    </url>
-    
-    
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://indiantinker.github.io/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://indiantinker.github.io/projects/</loc>
+        <loc>http://rohitg.in/archive/</loc>
     </url>
     
     
@@ -98,7 +80,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/travels/</loc>
+        <loc>http://rohitg.in/</loc>
     </url>
     
     
@@ -106,7 +88,17 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page2/</loc>
+        <loc>http://rohitg.in/projects/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://rohitg.in/travels/</loc>
     </url>
     
     
@@ -114,7 +106,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page3/</loc>
+        <loc>http://rohitg.in/page2/</loc>
     </url>
     
     
@@ -122,7 +114,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page4/</loc>
+        <loc>http://rohitg.in/page3/</loc>
     </url>
     
     
@@ -130,7 +122,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page5/</loc>
+        <loc>http://rohitg.in/page4/</loc>
     </url>
     
     
@@ -138,7 +130,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page6/</loc>
+        <loc>http://rohitg.in/page5/</loc>
     </url>
     
     
@@ -146,7 +138,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page7/</loc>
+        <loc>http://rohitg.in/page6/</loc>
     </url>
     
     
@@ -154,7 +146,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page8/</loc>
+        <loc>http://rohitg.in/page7/</loc>
     </url>
     
     
@@ -162,7 +154,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page9/</loc>
+        <loc>http://rohitg.in/page8/</loc>
     </url>
     
     
@@ -170,7 +162,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page10/</loc>
+        <loc>http://rohitg.in/page9/</loc>
     </url>
     
     
@@ -178,7 +170,7 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page11/</loc>
+        <loc>http://rohitg.in/page10/</loc>
     </url>
     
     
@@ -186,7 +178,15 @@
     
     
     <url>
-        <loc>http://indiantinker.github.io/page12/</loc>
+        <loc>http://rohitg.in/page11/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://rohitg.in/page12/</loc>
     </url>
     
     

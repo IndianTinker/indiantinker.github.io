@@ -12,7 +12,7 @@ relative_permalinks: true
 title:            Rohit Gupta
 tagline:          Think,Design,Make,Repeat 
 description:      'A blog by <a href="www.twitter.com/rohit7gupta">@rohit7gupta</a>'
-url:              http://indiantinker.github.io
+url:              http://rohitg.in
 baseurl:          /
 
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.

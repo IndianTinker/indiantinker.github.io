@@ -31,7 +31,7 @@
         {% endif %}
       {% endfor %}
 
-    <br>
+   <!--
     <a class="twitter-follow-button"
   href="https://twitter.com/rohit7gupta"
   data-show-count="false"
@@ -47,13 +47,20 @@ window.twttr = (function (d, s, id) {
   fjs.parentNode.insertBefore(js, fjs);
   return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
 }(document, "script", "twitter-wjs"));
-</script>
-      <span class="sidebar-nav-item">Currently v{{ site.version }}
+</script> -->
 <br>
- Built with <a href="http://jekyllrb.com">[Jekyll]</a>
-      </span>
+<p style="font-size:175% ;">
+<a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
+<a class="list-group-item" href="https://www.instagram.com/rohit7gupta"><i class="fa fa-instagram"></i></a>
+<a class="list-group-item" href="https://www.flickr.com/photos/94411929@N06/"><i class="fa fa-flickr"></i></a>
+<a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
+</p>      </span>
     </nav>
+<p style="font-size:75% ;">Built proudly with <a href="http://jekyllrb.com/">Jekyll</a><br>
+All Rights Reserved
+</p>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+
+    
   </div>
 </div>
