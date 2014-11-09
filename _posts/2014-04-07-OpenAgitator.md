@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Open Agitator 
+image: http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg
 tags:
 - msp430
 - featured 

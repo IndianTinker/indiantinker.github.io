@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Arduino Library for Freescale's MMA7361 3 axis accelerometer
+image: http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg
 tags:
 - hardware
 - arduino
@@ -45,11 +46,15 @@ Having deciphered it, i wrote a test code:
 {% gist 1d5402b9b3562345cc44 %}
 
 It worked as designed.
+
 Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
 The process turned out to be easy thanks to the documentation by **Arduino**.
+
 My Library can be found here on [github](https://github.com/IndianTinker/MMA7361Library)
+
 Feel free to fork it and use it. 
 Hoping the community finds it useful.
 
 Cheers,
+
 Rohit 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: UberCubeX4- The portable LED Cube ! 
-tags:
+image: http://farm3.staticflickr.com/2805/12405005665_9ca2377862_z.jpg
 - msp430
 ---
 
 I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen></iframe>
 
 Want to build your own?
 

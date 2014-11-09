@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Hyderabad Quickie ! 
+image: https://farm4.staticflickr.com/3912/14346467217_03878e7626.jpg
 tags:
 - travel
 ---

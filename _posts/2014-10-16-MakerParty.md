@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mozilla Maker Party-Pune
+image: https://farm4.staticflickr.com/3941/15311313267_921127f8c0_c.jpg
 tags:
 - travel
 ---

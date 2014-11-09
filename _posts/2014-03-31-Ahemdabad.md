@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ahemdabad Che! 
+image: https://farm8.staticflickr.com/7310/11981362555_e8a0ab9e0c.jpg
 tags:
 - travel
 ---
@@ -41,15 +42,15 @@ Next we moved to <a href="https://www.google.com/maps/place/Das+Khaman+House/@23
 The Undio is basically a very spicy but tasty vegetable dish. It contains a lot of oil (I dont know why). But it was very tasty. It had Potatoes,Coriander and lot of other veggies i dont remember. Avoid this is you hate Oil and Chilly.
 <a title="Undio by Rohit Gupta, on Flickr" href="https://www.flickr.com/photos/94411929@N06/11981253235"><img class="aligncenter" src="https://farm4.staticflickr.com/3679/11981253235_963fe66719.jpg" alt="Undio" width="500" height="281" /></a>Then we had the Khaman. It was just Awwwwesome! There was a nice tinge of garlic and sweetness i haven't noticed anywhere. There is also a female version of Khaman called Khamani. Its a bit more crunchy and Spicy.It has tasty besan bhujia sprinkled over it and served with yellow chutney. Yummy..
 
-[caption id="false" align="aligncenter" width="500"]<a href="https://www.flickr.com/photos/94411929@N06/11981653504"><img src="https://farm3.staticflickr.com/2880/11981653504_fc80ed1a2f.jpg" alt="Khaman Dhokla" width="500" height="281" /></a> Khaman Dhokla[/caption]
+<a href="https://www.flickr.com/photos/94411929@N06/11981653504"><img src="https://farm3.staticflickr.com/2880/11981653504_fc80ed1a2f.jpg" alt="Khaman Dhokla" width="500" height="281" /></a> Khaman Dhokla
 
-[caption id="false" align="aligncenter" width="500"]<a href="https://www.flickr.com/photos/94411929@N06/11981938053"><img src="https://farm6.staticflickr.com/5547/11981938053_9a50556dd0.jpg" alt="Khamani" width="500" height="281" /></a> Khamani[/caption]
+<a href="https://www.flickr.com/photos/94411929@N06/11981938053"><img src="https://farm6.staticflickr.com/5547/11981938053_9a50556dd0.jpg" alt="Khamani" width="500" height="281" /></a> Khamani
 
 PS: Just before you start suspecting me of over-eating. This was eaten by a group of 3 :P
 
 With our input buffer almost full. We couldn't order full plates of stuff we saw in the shop and were happily obliged by the shop owner who gave us some taste samples!
 
-[caption id="false" align="aligncenter" width="500"]<a href="https://www.flickr.com/photos/94411929@N06/11981609385"><img src="https://farm8.staticflickr.com/7359/11981609385_c75dd5c739.jpg" alt="Taste Samples- Dhokla,Khandvi and Barfi Dhokla" width="500" height="281" /></a> Yellow- Khandvi, White-Green- Dhokla, White-Barfi Dhokla[/caption]
+<a href="https://www.flickr.com/photos/94411929@N06/11981609385"><img src="https://farm8.staticflickr.com/7359/11981609385_c75dd5c739.jpg" alt="Taste Samples- Dhokla,Khandvi and Barfi Dhokla" width="500" height="281" /></a> Yellow- Khandvi, White-Green- Dhokla, White-Barfi Dhokla
 
 The shop has almost 20 Different types of Dhoklas. Wow!
 

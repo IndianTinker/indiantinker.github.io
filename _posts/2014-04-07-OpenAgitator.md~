@@ -24,7 +24,7 @@ So, I just 'damaged' the tracks around the main feed motor and attached my own c
 
 Here is a proof-of-concept video i posted a while back where the Etchinator ( now Open Agitator after i realized it could do a lot more like cooling hot milk  :D ) was etching its own control board  :
 
-<iframe src="//www.youtube.com/embed?v=wOFcjrQe-is" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/wOFcjrQe-is" frameborder="0" allowfullscreen></iframe>
 
 I used a L293D H bridge motor controller to control the forward and backward movement of the cradle with an adjustable speed by giving a PWM on the Enable Pin . People who had made LFR's in the first/second year know its a child`s play.
 
@@ -84,7 +84,7 @@ Here is a video of me explaining the build.. Please ignore the following :
 	<li>Background Noise (if any)</li>
 </ul>
 
-<iframe src="//www.youtube.com/embed?v=0nLpa1uPF_E" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/0nLpa1uPF_E" frameborder="0" allowfullscreen></iframe>
 
 
 Hope you like it and build one for yourself..
@@ -97,7 +97,7 @@ Edit: Please vote for this project on instructables <a href="http://www.instruct
 
 See another make of my project by a reader on instructable:
 
-<iframe src="//www.youtube.com/embed?v=zX0pGGTKSB0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/zX0pGGTKSB0" frameborder="0" allowfullscreen></iframe>
 
 
 (Thanks for sharing <a href="http://http://ales.kapun.org/" target="_blank">Aleš</a> )

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inside a Cheap LED Bulb
+image: https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg
 tags:
 - takeapart
 - general

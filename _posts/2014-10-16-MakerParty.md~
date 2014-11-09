@@ -5,7 +5,7 @@ tags:
 - travel
 ---
 CAUTION:This post might sound different. Writing gears need some oiling.
-
+<!--more-->
 I have moved to pune for work now and exploring the city has always been on my top agenda.  Pune has always been a happening city of makers. Mumbai is close-by and easily commutable. There are a lot of DIY/Maker start-ups here too and who doesnt know about IOTPune/DooThings. [A more detailed city review sometime later]
 
 Bored one night,thinking how to spend the weekend more constructively, i started to scroll through the meetups around my place on weekend. The main priority was "Distance" . People living in Pune can relate. The city transportation is awful and a thread is always running in mind querying, "Dude! Will be able to walk back? "

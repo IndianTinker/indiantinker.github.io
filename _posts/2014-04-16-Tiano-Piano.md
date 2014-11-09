@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tiano- The Touchscreen Piano 
+image: http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg
 tags:
 - msp430
 - featured 
