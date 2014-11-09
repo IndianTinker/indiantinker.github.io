@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://indiantinker.github.io/2014/11/09/Nokia5510-lcd-with-MSP430/</loc>
+    </url>
+    
+    <url>
         <loc>http://indiantinker.github.io/2014/11/03/Library-for-MMA7361/</loc>
     </url>
     
@@ -175,6 +179,14 @@
     
     <url>
         <loc>http://indiantinker.github.io/page11/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://indiantinker.github.io/page12/</loc>
     </url>
     
     

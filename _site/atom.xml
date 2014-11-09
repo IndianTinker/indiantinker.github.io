@@ -4,13 +4,131 @@
  <title>Rohit Gupta</title>
  <link href="http://indiantinker.github.io/atom.xml" rel="self"/>
  <link href="http://indiantinker.github.io/"/>
- <updated>2014-11-05T23:45:08+05:30</updated>
+ <updated>2014-11-09T11:22:11+05:30</updated>
  <id>http://indiantinker.github.io</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Nokia 5110 LCDs and MSP430</title>
+   <link href="http://indiantinker.github.io/2014/11/09/Nokia5510-lcd-with-MSP430/"/>
+   <updated>2014-11-09T00:00:00+05:30</updated>
+   <id>http://indiantinker.github.io/2014/11/09/Nokia5510-lcd-with-MSP430</id>
+   <content type="html">&lt;p&gt;I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia&amp;#39;s Monochome days. Several might have spent days playing space invaders/snakes etc. &lt;/p&gt;
+
+&lt;p&gt;The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.&lt;/p&gt;
+
+&lt;p&gt;The LCD used a &lt;a href=&quot;https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf&quot;&gt;Phillips PCD 8544 Driver&lt;/a&gt; which communicates on SPI.The voltage levels are &lt;code&gt;2.7-3.3V&lt;/code&gt; happy for our MSP430.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NYC&lt;/em&gt; has a pretty nice explanation on how it works and how to play with it with MSP430 over on his &lt;a href=&quot;http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html&quot;&gt;blog&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;For TL:DR; &lt;/p&gt;
+
+&lt;p&gt;The LCD has the following pins to interface to:
+&lt;style type=&quot;text/css&quot;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+&lt;/style&gt;
+&lt;table class=&quot;tg&quot;&gt;
+  &lt;tr&gt;
+    &lt;th class=&quot;tg-031e&quot;&gt;Pin Number&lt;/th&gt;
+    &lt;th class=&quot;tg-031e&quot;&gt;Pin Label&lt;/th&gt;
+    &lt;th class=&quot;tg-031e&quot;&gt;Pin Function&lt;/th&gt;
+    &lt;th class=&quot;tg-031e&quot;&gt;Input/Output?&lt;/th&gt;
+    &lt;th class=&quot;tg-031e&quot;&gt;Notes&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;1&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;VCC&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Positive power supply&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Supply range is between 2.7V and 3.3V&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;2&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;GND&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Ground&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;3&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;SCE&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Chip select&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Active low&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;4&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;RST&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Reset&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Active low&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;5&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;D/C&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Mode select&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Select between command mode (low) and data mode (high).&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;6&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;DN(MOSI)&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Serial data in&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;7&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;SCLK&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Serial clock&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;8&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;LED&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;LED backlight supply&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
+    &lt;td class=&quot;tg-031e&quot;&gt;Maximum voltage supply is 3.3V.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .&lt;/p&gt;
+
+&lt;p&gt;At a time you write to a single bank.&lt;/p&gt;
+
+&lt;p&gt;And you can continue to update only a single bank just in case you have dynamic data in that particular bank.&lt;/p&gt;
+
+&lt;p&gt;The communication is done using SPI.&lt;/p&gt;
+
+&lt;p&gt;The code that i used is based on &lt;a href=&quot;http://forum.43oh.com/topic/1312-nokia-5110-display/&quot;&gt;RobG&amp;#39;s post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It displays the temperature and some static text&lt;/p&gt;
+
+&lt;p&gt;Connections are as follows(PORT1):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LCD5110_SCLK_PIN- BIT5&lt;/li&gt;
+&lt;li&gt;LCD5110_DN_PIN- BIT7&lt;/li&gt;
+&lt;li&gt;LCD5110_SCE_PIN- BIT0&lt;/li&gt;
+&lt;li&gt;LCD5110_DC_PIN- BIT1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/72070b40befcf1417e2a.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/14631629150&quot; title=&quot;When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; alt=&quot;When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune&quot; align=&quot;center&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Just incase you need to play more with graphics see this cool post by &lt;a href=&quot;https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide&quot;&gt;Sparkfun&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any difficulties post here in comments&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Arduino Library for Freescale's MMA7361 3 axis accelerometer</title>
@@ -158,7 +276,7 @@ Lets name it Categories.md&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;jekyll build
 jekyll serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;and see the changes in the blog on &lt;em&gt;http://localhost:4000&lt;/em&gt;.
+&lt;p&gt;and see the changes in the blog on &lt;em&gt;&lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;&lt;/em&gt;.
 If you face any issues be sure to comment here .&lt;/p&gt;
 
 &lt;p&gt;Cheers!&lt;/p&gt;
