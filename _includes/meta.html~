@@ -1,8 +1,14 @@
+<meta name="twitter:site" content="@rohit7gupta">
+<meta name="twitter:creator" content="@rohit7gupta">
+<meta name="twitter:card" content="summary">
 <meta content="{{ site.title }}" property="og:site_name">
 {% if page.title %}
   <meta content="{{ page.title }}" property="og:title">
+  <meta name="twitter:title" content="{{ page.title }}">
+  
 {% else %}
   <meta content="{{ site.title }}" property="og:title">
+  <meta name="twitter:title" content="{{ site.title }}">
 {% endif %}
 {% if page.title %}
   <meta content="article" property="og:type">
@@ -10,16 +16,18 @@
   <meta content="website" property="og:type">
 {% endif %}
 {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}/index.html" property="og:url">
+  <meta content="{{ site.url }}{{ page.url }}index.html" property="og:url">
 {% endif %}
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="{{ site.url }}/about/index.html" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="{ page.image }" property="og:image">
+  <meta content="{{ page.image }}" property="og:image">
+  <meta name="twitter:image:src" content="{{ page.image }}">
 {% else %}
   <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image">
+  <meta name="twitter:image:src" content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
@@ -31,3 +39,6 @@
   <meta content="{{ tag }}" property="article:tag">
   {% endfor %}
 {% endif %}
+
+
+
