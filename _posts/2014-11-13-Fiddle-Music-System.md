@@ -1,0 +1,87 @@
+---
+layout: post
+title: Fiddle - The DIYed Music System
+image: https://farm8.staticflickr.com/7548/15767866626_676df79bb9_c.jpg
+tags:
+- hardware
+- projects
+---
+
+*Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK* Thats how my old 'Phillips All in One' failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed **CD Player with a segmented Display**. But today most of the music is digital and hence *Upgrade was necessary*.
+
+I was planning to buy one and browsing the estores but then then *Makers Dilemma* struck me. 
+> Why Buy? When it can be Built!
+
+And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:
+
+* Play MP3s
+* Radio
+* Aux -IN
+* Take SD Cards
+* Remotes will be good too.
+
+Fitting such things in a project would rather be heavenly. I searched online for references and *You have it boy!* there is one ready to amplify (supply) module from our friends in China that does it all . See [this](http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg)  .
+
+I had seen this in a Taxi (less formally called *Gramin Seva*) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )
+
+Now all i need to do is :
+
+1. Decipher the connections
+2. Build a power supply and Amplifier
+3. Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box
+4. Modify the box to fit all in 
+5. Enjoy
+
+**Connections** were pretty easy as the silkscreen had some references. It basically needs a `5V DC` supply that's the two pin connected on the left for and give **stereo** output using the 3 of 4 connectors on right (*Right, Left and GND*) and the last one is for the FM Antenna
+
+<a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape"></a>
+
+The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. *FingersCrossed*
+
+It worked fine and i was playing things off the USB straight away!
+
+<a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading"></a>
+
+Now, the power supply and Amplifier. I used the omnipresent `7805 Regulator` that could power the module easily as i estimated the current requirements to be around `250-300mA` . The supply was going to be `12VDC` due to the Amp i was building and hence, a heat sink was necessary.
+The Amp was build out of **ST's** [TDA2030](http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf) which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.
+
+The Application circuit works charm.
+So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?
+
+Demo runs showed `TDA2030` needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the `TDA2030` and made a makeshift heat sink for `7805` 
+
+<a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View"></a>
+
+<a href="https://www.flickr.com/photos/94411929@N06/15767878536" title="Circuit -Front by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg" width="640" height="359" alt="Circuit -Front"></a>
+
+<a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back"></a>
+
+I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the `10k` and `0.1uF` combination. 
+
+I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (*Oh! Yeah*)
+
+<a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer"></a>
+
+I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.
+
+This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.
+
+<a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut"></a>
+
+Now it was assembling time.
+
+<a href="https://www.flickr.com/photos/94411929@N06/15789671841" title="All Messed up by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" width="640" height="359" alt="All Messed up"></a>
+
+After a few half hours, i got it all working.. No Buzz and all music!
+
+<a href="https://www.flickr.com/photos/94411929@N06/15606708190" title="Charm by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg" width="359" height="640" alt="Charm"></a>
+
+
+
+Cheers!
+
+Rohit  
+
+
+
+ 

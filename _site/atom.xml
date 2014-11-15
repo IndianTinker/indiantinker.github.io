@@ -4,13 +4,100 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2014-11-13T22:49:34+05:30</updated>
+ <updated>2014-11-15T11:24:16+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Fiddle - The DIYed Music System</title>
+   <link href="http://rohitg.in/2014/11/13/Fiddle-Music-System/"/>
+   <updated>2014-11-13T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2014/11/13/Fiddle-Music-System</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK&lt;/em&gt; Thats how my old &amp;#39;Phillips All in One&amp;#39; failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed &lt;strong&gt;CD Player with a segmented Display&lt;/strong&gt;. But today most of the music is digital and hence &lt;em&gt;Upgrade was necessary&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I was planning to buy one and browsing the estores but then then &lt;em&gt;Makers Dilemma&lt;/em&gt; struck me. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Why Buy? When it can be Built!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Play MP3s&lt;/li&gt;
+&lt;li&gt;Radio&lt;/li&gt;
+&lt;li&gt;Aux -IN&lt;/li&gt;
+&lt;li&gt;Take SD Cards&lt;/li&gt;
+&lt;li&gt;Remotes will be good too.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fitting such things in a project would rather be heavenly. I searched online for references and &lt;em&gt;You have it boy!&lt;/em&gt; there is one ready to amplify (supply) module from our friends in China that does it all . See &lt;a href=&quot;http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg&quot;&gt;this&lt;/a&gt;  .&lt;/p&gt;
+
+&lt;p&gt;I had seen this in a Taxi (less formally called &lt;em&gt;Gramin Seva&lt;/em&gt;) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )&lt;/p&gt;
+
+&lt;p&gt;Now all i need to do is :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Decipher the connections&lt;/li&gt;
+&lt;li&gt;Build a power supply and Amplifier&lt;/li&gt;
+&lt;li&gt;Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box&lt;/li&gt;
+&lt;li&gt;Modify the box to fit all in &lt;/li&gt;
+&lt;li&gt;Enjoy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Connections&lt;/strong&gt; were pretty easy as the silkscreen had some references. It basically needs a &lt;code&gt;5V DC&lt;/code&gt; supply that&amp;#39;s the two pin connected on the left for and give &lt;strong&gt;stereo&lt;/strong&gt; output using the 3 of 4 connectors on right (&lt;em&gt;Right, Left and GND&lt;/em&gt;) and the last one is for the FM Antenna&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606424407&quot; title=&quot;The Landscape by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The Landscape&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. &lt;em&gt;FingersCrossed&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It worked fine and i was playing things off the USB straight away!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606417287&quot; title=&quot;USB Reading by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;USB Reading&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, the power supply and Amplifier. I used the omnipresent &lt;code&gt;7805 Regulator&lt;/code&gt; that could power the module easily as i estimated the current requirements to be around &lt;code&gt;250-300mA&lt;/code&gt; . The supply was going to be &lt;code&gt;12VDC&lt;/code&gt; due to the Amp i was building and hence, a heat sink was necessary.
+The Amp was build out of &lt;strong&gt;ST&amp;#39;s&lt;/strong&gt; &lt;a href=&quot;http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf&quot;&gt;TDA2030&lt;/a&gt; which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.&lt;/p&gt;
+
+&lt;p&gt;The Application circuit works charm.
+So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?&lt;/p&gt;
+
+&lt;p&gt;Demo runs showed &lt;code&gt;TDA2030&lt;/code&gt; needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the &lt;code&gt;TDA2030&lt;/code&gt; and made a makeshift heat sink for &lt;code&gt;7805&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15791566865&quot; title=&quot;Ortho View by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Ortho View&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15767878536&quot; title=&quot;Circuit -Front by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Circuit -Front&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606714790&quot; title=&quot;Circuit- Back by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Circuit- Back&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the &lt;code&gt;10k&lt;/code&gt; and &lt;code&gt;0.1uF&lt;/code&gt; combination. &lt;/p&gt;
+
+&lt;p&gt;I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (&lt;em&gt;Oh! Yeah&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15767875046&quot; title=&quot;Look at that Woofer by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Look at that Woofer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.&lt;/p&gt;
+
+&lt;p&gt;This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15789702321&quot; title=&quot;The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The 2 hour , 2 broken blades cut&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now it was assembling time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15789671841&quot; title=&quot;All Messed up by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;All Messed up&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After a few half hours, i got it all working.. No Buzz and all music!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606708190&quot; title=&quot;Charm by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Charm&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;Rohit  &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Nokia 5110 LCDs and MSP430</title>
@@ -119,6 +206,9 @@
 &lt;li&gt;LCD5110_SCE_PIN- BIT0&lt;/li&gt;
 &lt;li&gt;LCD5110_DC_PIN- BIT1&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15171730494&quot; title=&quot;WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg&quot; width=&quot;640&quot; height=&quot;372&quot; alt=&quot;WP_20140803_19_27_04_Pro&quot;&gt;&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/72070b40befcf1417e2a.js&quot;&gt; &lt;/script&gt;
 

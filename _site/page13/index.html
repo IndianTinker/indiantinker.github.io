@@ -16,37 +16,22 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)">
 
 
-  <meta content="Implementing Tags/Categories on Jekyll using Liquid !" property="og:title">
-  <meta name="twitter:title" content="Implementing Tags/Categories on Jekyll using Liquid !">
+  <meta content="Home" property="og:title">
+  <meta name="twitter:title" content="Home">
   
 
 
   <meta content="article" property="og:type">
 
 
-  <meta content="http://rohitg.in/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md%20-Welcome-to-new-home/index.html" property="og:url">
+  <meta content="http://rohitg.in/page13/index.html" property="og:url">
 
-
-  <meta content="2014-10-21T00:00:00+05:30" property="article:published_time">
-  <meta content="http://rohitg.in/about/index.html" property="article:author">
 
 
   <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image">
   <meta name="twitter:image:src" content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg">
 
 
-  
-
-
-  
-  <meta content="Jekyll" property="article:tag">
-  
-  <meta content="Pune" property="article:tag">
-  
-  <meta content="Blogging" property="article:tag">
-  
-  <meta content="web" property="article:tag">
-  
 
 
 
@@ -57,7 +42,7 @@
 
   <title>
     
-      Implementing Tags/Categories on Jekyll using Liquid ! &middot; Rohit Gupta
+      Rohit Gupta &middot; Think,Design,Make,Repeat
     
   </title>
 
@@ -235,109 +220,54 @@ All Rights Reserved
 
  
     <div class="content container">
-      <div class="post">
-  <h1 class="post-title">Implementing Tags/Categories on Jekyll using Liquid !</h1>
-  <span class="post-date">21 Oct 2014</span>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
+      </a>
+    </h1>
 
+    <span class="post-date">25 Aug 2012</span>
 
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
-  <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful.&lt;!--more--&gt; It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it. </p>
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<p>Interestingly, Jekyll supports <a href="liquidmarkup.org/">Liquid</a> a templating engine built on ruby that is developed by e commerce giant <em>Shopify</em>.
-Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using <strong>Liquid</strong> .</p>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
-<p>It essentially involves two steps:</p>
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
+
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </p>
+
+<p>Edit: 02 Oct&#39;12 : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://sdrv.ms/VonGvI" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino Code To be uploaded is :                                                     <a href="http://sdrv.ms/UtUu5Y" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p></p>
 
 <ol>
-<li>Editing YML front matter (The thing between the 3 dashes)</li>
-<li>Creating a Category page to automatically accumulate all the tags you added </li>
+    <li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+    <li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+    <li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+    <li>Its not Cross Compatible..works best on Windows Only</li>
 </ol>
 
-<p>After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!</p>
-
-<p>Lets get started.</p>
-
-<p>Add a <code>Tags</code> variable to the frontmatter block and list the tags as shown the following example:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">---
-layout: post
-title: Tagging Jekyll
-tags:
-- Jekyll
-- Blogging
-- web
----
-</code></pre></div>
-<p>Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say <em>Categories</em> etc.
-Lets name it Categories.md</p>
-
-<p>Use the following snippet to display tags.</p>
-
-<script src="https://gist.github.com/3eddb75957eaf9f9b8e8.js"> </script>
-
-<p>Now</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">jekyll build
-jekyll serve
-</code></pre></div>
-<p>and see the changes in the blog on <em><a href="http://localhost:4000">http://localhost:4000</a></em>.
-If you face any issues be sure to comment here .</p>
-
-<p>Cheers!</p>
-
-<p>Rohit</p>
-
+  </div>
+  
 </div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
     
-      <li>
-        <h3>
-          <a href="/2014/11/13/Fiddle-Music-System/">
-            Fiddle - The DIYed Music System
-            <small>13 Nov 2014</small>
-          </a>
-        </h3>
-      </li>
+      <a class="pagination-item newer" href="/page12">Newer</a>
     
-      <li>
-        <h3>
-          <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
-            Nokia 5110 LCDs and MSP430
-            <small>09 Nov 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2014/11/03/Library-for-MMA7361/">
-            Arduino Library for Freescale's MMA7361 3 axis accelerometer
-            <small>03 Nov 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-
+  
 </div>
-
     </div>
 
 
