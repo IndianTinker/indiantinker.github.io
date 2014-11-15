@@ -28,11 +28,11 @@ Now all i need to do is :
 
 1. Decipher the connections
 2. Build a power supply and Amplifier
-3. Find/Repurpose/Build a Coaxial(1-Woof and 1-Tweeter) speaker box
+3. Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box
 4. Modify the box to fit all in 
 5. Enjoy
 
-**Connections** were pretty easy as the silkscreen had some references. It basically needs a `5V DC` supply thats the two pin connected on the left for and give **stereo** output using the 3 of 4 connectors on right (*Right, Left and GND*) and the last one is for the FM Antenna
+**Connections** were pretty easy as the silkscreen had some references. It basically needs a `5V DC` supply that's the two pin connected on the left for and give **stereo** output using the 3 of 4 connectors on right (*Right, Left and GND*) and the last one is for the FM Antenna
 
 <a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape"></a>
 
@@ -58,13 +58,13 @@ Demo runs showed `TDA2030` needs it badly. Now using some thermal glue and nuts 
 
 I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the `10k` and `0.1uF` combination. 
 
-I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces.I reworked them and the Woofer was working . (*Oh! Yeah*)
+I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (*Oh! Yeah*)
 
 <a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer"></a>
 
-I planned to fit the circuit inside the speakerbox itself.For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.
+I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.
 
-This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , 1 was able to do this.
+This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.
 
 <a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut"></a>
 
@@ -79,6 +79,7 @@ After a few half hours, i got it all working.. No Buzz and all music!
 
 
 Cheers!
+
 Rohit  
 
 
