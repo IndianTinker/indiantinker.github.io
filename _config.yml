@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:            Rohit Gupta
 tagline:          Think,Design,Make,Repeat 
-description:      'A blog by <a href="www.twitter.com/rohit7gupta">@rohit7gupta</a>'
+description:      'A blog by <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a>'
 url:              http://rohitg.in
 baseurl:          /
 
