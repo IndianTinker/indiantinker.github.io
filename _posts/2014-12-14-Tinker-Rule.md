@@ -26,8 +26,6 @@ After a few hours of designing, i etched the board (which took quite an effort),
 
 Here's what i mananged.
 
-<a href="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" title="TinkerRule by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="The Landscape"></a>
-
 1. **Continuity Tester** : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
 <a href="https://www.flickr.com/photos/94411929@N06/15831125987" title="Tinker Rule Continuity by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg" width="640" height="359" alt="Tinker Rule"></a>
 
@@ -44,7 +42,6 @@ Here's what i mananged.
 
 6. **Right angled rule with both inch and cm scale** : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
 <a href="https://www.flickr.com/photos/94411929@N06/15992846056" title="CM Scale by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg" width="640" height="359" alt="CM Scale"></a>
-
 <a href="https://www.flickr.com/photos/94411929@N06/15832394669" title="Complete by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="WP_20140511_00_36_03_Pro"></a>
 
 7. **Rust Buster** : A fine sandpaper to rust off those parts that just dont solder .
