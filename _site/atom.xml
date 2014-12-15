@@ -4,13 +4,77 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2014-11-23T20:57:36+05:30</updated>
+ <updated>2014-12-14T22:13:35+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>TinkerRule- The Maker's Swiss Army Knife</title>
+   <link href="http://rohitg.in/2014/12/14/Tinker-Rule/"/>
+   <updated>2014-12-14T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2014/12/14/Tinker-Rule</id>
+   <content type="html">&lt;p&gt;This project was done during my time at &lt;a href=&quot;http://www.cedtnsit.in/&quot;&gt;TI-CEPD,NSIT,Delhi&lt;/a&gt;. They have an awesome Winter Internship program going on, Be sure to have a look.&lt;/p&gt;
+
+&lt;p&gt;I source a lot of my components from Local Markets in Delhi like &lt;em&gt;Lajpat Rai Market&lt;/em&gt; etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate. &lt;/p&gt;
+
+&lt;p&gt;There are two ways to overcome this issue (assuming that the package is not standard) :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Measure each and every thing using a vernier and then make a part for it in eagle.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that &lt;strong&gt;most&lt;/strong&gt; leaded parts can be resolved in a 0.1inch grid.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make a reference and then use that to make parts without picking up the vernier.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In this we make a reference for most common footprints and use them as a reference. What&amp;#39;s better is that the known reference helps in finding out packages of some component you found lying in the parts bin.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on &lt;em&gt;Eagle&lt;/em&gt; that can be etched. Nothing could offer me better precison than that.&lt;/p&gt;
+
+&lt;p&gt;After a few hours of designing, i etched the board (which took quite an effort), then selectively tinned a few pads and applied protective lacquer on the board.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s what i mananged.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg&quot; title=&quot;TinkerRule by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The Landscape&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Continuity Tester&lt;/strong&gt; : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15831125987&quot; title=&quot;Tinker Rule Continuity by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Tinker Rule&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Standard Packages&lt;/strong&gt; : Some standard packages used, good to compare them and match.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16016173942&quot; title=&quot;Tinker Rule Footprints by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8570/16016173942_aff8aefc2f_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Tinker Rule&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;0.1 inch grid&lt;/strong&gt; : This is the best one and used most of the times. Makes it easy to simulate breadboard/perfboard behaviour.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16016646101&quot; title=&quot;0.1inch Grid by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8581/16016646101_8945045d09_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;0.1inch Grid&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Common Drills&lt;/strong&gt; : Most common drill sizes(bits) , just see what inserts easily and voila, we have a good enough drill size. 
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15396343364&quot; title=&quot;Standard Drills by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7465/15396343364_a16d3cea16_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Standard Drills&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Track Widths&lt;/strong&gt; : Compare track widths on the go.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16017936652&quot; title=&quot;Tracks by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8603/16017936652_40ce3d6217_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Tracks&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Right angled rule with both inch and cm scale&lt;/strong&gt; : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15992846056&quot; title=&quot;CM Scale by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;CM Scale&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15832394669&quot; title=&quot;Complete by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;WP_20140511_00_36_03_Pro&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Rust Buster&lt;/strong&gt; : A fine sandpaper to rust off those parts that just dont solder .
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15397629893&quot; title=&quot;TinkerRule SandPaper by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8622/15397629893_70cf484542_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;TinkerRule&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I have now been using it for quite sometime and its really useful and serves the purpose. &lt;/p&gt;
+
+&lt;p&gt;If you are interested in this i can mail you the file , just drop me an email at indiantinker [at] gmail [dot] com.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;Rohit  &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Fiddle - The DIYed Music System</title>

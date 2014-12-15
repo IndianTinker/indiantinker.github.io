@@ -1,0 +1,63 @@
+---
+layout: post
+title: TinkerRule- The Maker's Swiss Army Knife
+image: https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg
+location: TI-CEPD, NSIT, Delhi, India
+tags:
+- hardware
+- projects
+---
+
+This project was done during my time at [TI-CEPD,NSIT,Delhi](http://www.cedtnsit.in/). They have an awesome Winter Internship program going on, Be sure to have a look.
+
+I source a lot of my components from Local Markets in Delhi like *Lajpat Rai Market* etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate. 
+
+There are two ways to overcome this issue (assuming that the package is not standard) :
+
+1. Measure each and every thing using a vernier and then make a part for it in eagle.
+> I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that **most** leaded parts can be resolved in a 0.1inch grid.
+
+2. Make a reference and then use that to make parts without picking up the vernier.
+> In this we make a reference for most common footprints and use them as a reference. What's better is that the known reference helps in finding out packages of some component you found lying in the parts bin.
+
+So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on *Eagle* that can be etched. Nothing could offer me better precison than that.
+
+After a few hours of designing, i etched the board (which took quite an effort), then selectively tinned a few pads and applied protective lacquer on the board.
+
+Here's what i mananged.
+
+<a href="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" title="TinkerRule by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="The Landscape"></a>
+
+1. **Continuity Tester** : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
+<a href="https://www.flickr.com/photos/94411929@N06/15831125987" title="Tinker Rule Continuity by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg" width="640" height="359" alt="Tinker Rule"></a>
+
+2. **Standard Packages** : Some standard packages used, good to compare them and match.
+<a href="https://www.flickr.com/photos/94411929@N06/16016173942" title="Tinker Rule Footprints by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8570/16016173942_aff8aefc2f_z.jpg" width="640" height="359" alt="Tinker Rule"></a>
+
+3. **0.1 inch grid** : This is the best one and used most of the times. Makes it easy to simulate breadboard/perfboard behaviour.
+<a href="https://www.flickr.com/photos/94411929@N06/16016646101" title="0.1inch Grid by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8581/16016646101_8945045d09_z.jpg" width="640" height="359" alt="0.1inch Grid"></a>
+4. **Common Drills** : Most common drill sizes(bits) , just see what inserts easily and voila, we have a good enough drill size. 
+<a href="https://www.flickr.com/photos/94411929@N06/15396343364" title="Standard Drills by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7465/15396343364_a16d3cea16_z.jpg" width="640" height="359" alt="Standard Drills"></a>
+
+5. **Track Widths** : Compare track widths on the go.
+<a href="https://www.flickr.com/photos/94411929@N06/16017936652" title="Tracks by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8603/16017936652_40ce3d6217_z.jpg" width="640" height="359" alt="Tracks"></a>
+
+6. **Right angled rule with both inch and cm scale** : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
+<a href="https://www.flickr.com/photos/94411929@N06/15992846056" title="CM Scale by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg" width="640" height="359" alt="CM Scale"></a>
+
+<a href="https://www.flickr.com/photos/94411929@N06/15832394669" title="Complete by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="WP_20140511_00_36_03_Pro"></a>
+
+7. **Rust Buster** : A fine sandpaper to rust off those parts that just dont solder .
+<a href="https://www.flickr.com/photos/94411929@N06/15397629893" title="TinkerRule SandPaper by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8622/15397629893_70cf484542_z.jpg" width="640" height="359" alt="TinkerRule"></a>
+
+I have now been using it for quite sometime and its really useful and serves the purpose. 
+
+If you are interested in this i can mail you the file , just drop me an email at indiantinker [at] gmail [dot] com.
+
+Cheers!
+
+Rohit  
+
+
+
+ 

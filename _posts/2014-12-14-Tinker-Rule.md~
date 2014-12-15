@@ -1,0 +1,38 @@
+---
+layout: post
+title: TinkerRule- The Maker's Swiss Army Knife
+image: https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg
+location: TI-CEPD, NSIT, Delhi, India
+tags:
+- hardware
+- projects
+---
+
+This project was done during my time at [TI-CEPD,NSIT,Delhi](http://www.cedtnsit.in/). They have an awesome Winter Internship program going on, Be sure to have a look.
+
+I source a lot of my components from Local Markets in Delhi like *Lajpat Rai Market* etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate. 
+
+There are two ways to overcome this issue (assuming that the package is not standard) :
+
+1. Measure each and every thing using a vernier and then make a part for it in eagle.
+> I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that **most** leaded parts can be resolved in a 0.1inch grid.
+
+2. Make a reference and then use that to make parts without picking up the vernier.
+> In this we make a reference for most common footprints and use them as a reference. What's better is that the known reference helps in finding out packages of some component you found lying in the parts bin.
+
+So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on *Eagle* that can be etched. Nothing could offer me better precison than that.
+
+After a few hours of designing, i etched the board (which took quite an effort)
+
+
+
+  
+
+
+Cheers!
+
+Rohit  
+
+
+
+ 
