@@ -16,7 +16,7 @@ Ah! Makerfest 2014 at NID, Ahmedabad was super awesome. When i saw a notificatio
 
 Unlike last year, this time around Makerfest was present at CEPT . Whenever i got some free time,i did explore the campus which has various installations by students and some funny (rather intriguing) posters . 
 
-As always, i did reach a day in advance. The first (pre) day was composed of a workshop at **IIM - A** . My Chaotic bus provider didn’t try enough to make it on time and I entered the session with about 25% left. It was a good time to visit the campus though. 
+As always, i did reach a day in advance. The first (pre) day we had a workshop at **IIM - A** . My Chaotic bus provider didn’t try hard enough to make it on time and I entered the session with about 25% left. It was a good time to visit the campus though. 
 
 <a href="https://www.flickr.com/photos/94411929@N06/16287907815" title="IIM A &lt;3 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8644/16287907815_463a3e8e40_z.jpg" width="640" height="359" alt="IIM A &lt;3"></a>
 
@@ -43,11 +43,11 @@ I had my workshop on DAY 1 of the event, where i explained about 10 people, how 
 And yah! If you too want to ask the same question? I dont work with TI; just spreading Awesomeness ! :D
 
 My workshop took place is **FabLab CEPT**. It was a good time to explore what equipments they had. 
-They had a epilog laser cutter, A 3D printer, An ultimaker that was probably being repaired, a FULL SCALE shopbot (Like the one you see in Ben's videos ) Modella PCB mill,Roland Vinyl Cutter, a reciprocating saw and probably other stuff too.
+They had a epilog laser cutter, A 3D printer, An ultimaker that was probably being repaired, a FULL SCALE shopbot (Like the one you see in Ben's videos ) Modella PCB mill, Roland Vinyl Cutter, a reciprocating saw and probably other stuff too.
 
 <a href="https://www.flickr.com/photos/94411929@N06/15665086594" title="Laser Cutter @ FABLAB CEPT by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8646/15665086594_2e7b704eac_z.jpg" width="640" height="359" alt="Laser Cutter @ FABLAB CEPT"></a>
 
-When the workshop got over, i began visiting stalls and questioning (interviewing? eh) people about their product and idea. Whats better, i was joined by a friend *Sunil Sir* from **Doo Things**, Pune's very own hackerspace. He is pretty amazing guy with knowledge of almost anything. Together we started visting the stalls. 
+When the workshop got over, i began visiting stalls and questioning (interviewing? eh) people about their product and idea. Whats better, i was joined by a friend *Sunil Sir* from **Doo Things**, Pune's very own hackerspace. He is pretty amazing guy with knowledge of almost anything. Together we started visiting the stalls. 
 
 I got a chance to see what the *Google Cardboard* is all about. Basically there are two simulataneos images that a combined in your brain to give you an effect of VR.
 
@@ -70,13 +70,13 @@ Another *Delhiwalla* brought this amazing interactive cloth made using Bare Cond
 
 <a href="https://www.flickr.com/photos/94411929@N06/16286061001" title="Interactive Cloth using Bare Conductive ink by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7516/16286061001_8ae04bf4e6_z.jpg" width="640" height="359" alt="Interactive Cloth using Bare Conductive ink"></a>
 
-Another cool startup in Ahmedabad is **My BYK** . They rent bicycles to anyone to roam around the city in a greener way. They charge a fixed security and a minimal monthly fees that covers the repairs. The bikes are equipped with passive RFIDs which help them to track bikes. Please come to PUNE ! 
+ **My BYK** is startup in Ahmedabad. They rent bicycles to anyone to roam around the city in a greener way. They charge a fixed security and a minimal monthly fees that covers the repairs. The bikes are equipped with passive RFIDs which help them to track bikes. Please come to PUNE ! 
 
 <a href="https://www.flickr.com/photos/94411929@N06/16286103291" title="Rentable Bikes by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8604/16286103291_8b4667215d_z.jpg" width="640" height="359" alt="Rentable Bikes"></a>
 
 <a href="https://www.flickr.com/photos/94411929@N06/16100355128" title="Rentable Bikes by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/16100355128_65ffd5095d_z.jpg" width="359" height="640" alt="Rentable Bikes"></a>
 
-Lets call it a day and explore the Food !
+Tired we were, So lets call it a day and explore the Food !
 
 Another unusal ( in my frame of reference ) thing was this Wood Furnance Pizza stall on CEPT road. They make pizza by heating it in a mobile furnance. Curious to know whether it would taste different. We just ordered one. They usually bake thin crust (which i hate) and even after asking of a thick base, what turned out was thicker by a *Vernier's Resolution* . The Pizza tasted good, But i would still put my money on the Indian Conventional way. (No Offences! Do Try it though.)
 
@@ -92,20 +92,20 @@ Battery Low! and we now crashed thinking what next day had in store !
 
 **Day 2** :
 
-Early Morning, we were joined by friends from **Revealing Hour Creations**. They too have a workshop on their successfully crowd funded *Tah* board.
+Early Morning, we were joined by friends from **Revealing Hour Creations**. They had a workshop on their successfully crowd funded *Tah* board.
 
-While Sunil, Dhiraj and Vikas continued to CEPT i wanted to eat Jalebie and Fafda from the shop which (according to me) serves the best in the country-*Juna Sharebazaar near Nehru Nagar Circle* . So, i took an Auto and went to the place. It looked familier and this is what you get when you say- a bit of everything.
+While Sunil, Dhiraj and Vikas continued to CEPT, I wanted to eat Jalebie and Fafda from the shop which (according to me) serves the best in the country-*Juna Sharebazaar near Nehru Nagar Circle* . So, i took an Auto and went to the place. It looked familier and this is what you get when you say- a bit of everything.
 
 <a href="https://www.flickr.com/photos/94411929@N06/16100013318" title="Food @ Juna ShareBazaar, Nehru Nagar Circle by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7573/16100013318_32f119b9f7_z.jpg" width="640" height="359" alt="Food @ Juna ShareBazaar, Nehru Nagar Circle"></a>
 
-**Le Bhari**
+**Le Bhari !**
 
 I walked my way to CEPT to explore the remaining stalls.
 
 A firecracker Ignitor that lets to burn crackers safely from a distance over bluetooth.
 <a href="https://www.flickr.com/photos/94411929@N06/16285656421" title="BT Fire Cracker Ignitor by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7536/16285656421_4000285da1_z.jpg" width="640" height="359" alt="BT Fire Cracker Ignitor"></a>
 
-Interactive Puppetry using a kinect type sensor from Creative by Folo. The way move your fingers is detected and the puppet is moved on the screen.
+Interactive Puppetry using a kinect type sensor from Creative by Folo. The way you move your fingers is detected and the puppet is moved on the screen.
 <a href="https://www.flickr.com/photos/94411929@N06/16101320849" title="Interactive Puppetry by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7524/16101320849_44f486eab0_z.jpg" width="640" height="359" alt="Interactive Puppetry"></a>
 
 A lot of cool innovations were showcased by MIT Media Labs - India Initiative.
@@ -132,7 +132,7 @@ Electro bricks showcased a much bigger collection this time. They are making ele
 People from all ages bringing out the **Maker** in them.
 <a href="https://www.flickr.com/photos/94411929@N06/16100279990" title="Make ! by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8681/16100279990_2c7297cb39_z.jpg" width="640" height="359" alt="Make !"></a>
 
-Surendranath from Redd Robotics with his printer.
+Surendranath from Redd Robotics with his about-to-go-viral printer.Why? Price!
 <a href="https://www.flickr.com/photos/94411929@N06/15667834573" title="Reddy from Redd Robotics with his new printer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7528/15667834573_8abc86d8c6_z.jpg" width="359" height="640" alt="Reddy from Redd Robotics with his new printer"></a>
 
 A young inventor from Delhi with his LiFi setup. He was streaming audio via laser from his laptop to an LDR which was connected to the speaker and voild music transferred via Light.
