@@ -24,7 +24,7 @@
   <meta content="article" property="og:type">
 
 
-  <meta content="http://rohitg.in/page8/index.html" property="og:url">
+  <meta content="http://rohitg.in/page15/index.html" property="og:url">
 
 
 
@@ -232,27 +232,35 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/10/16/Welcome-to-new-home/">
-        Welcome to the new home!
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
       </a>
     </h1>
 
-    <span class="post-date">16 Oct 2014</span>
+    <span class="post-date">25 Aug 2012</span>
 
-    <p>I am now in process of migrating my main blog on <a href="http://indiantinker.wordpress.com">wordpress</a> to github pages for more contexual/design/layout freedom. This blog is built using <a href="http://jekyllrb.com">Jekyll</a>:&lt;!--more--&gt;</p>
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
-<blockquote>
-<p>Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
-<p>For those who have used <a href="http://www.latex-project.org/">LaTeX</a> in the past Jekyll is excellent as it (personally saying) generates a static website by compiling all the code you wrote in the post.Obviously, with the luxury of <strong>platforms</strong> like wordpress,blogspot etc writing bare code is archaic. Jekyll has got your back here too, you never <em>write</em> the html/css tags from scratch. The Jekyll engine takes standard markdown which it builds into a html code and once built gives you a complete website. You an obviously code in html too.</p>
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
 
-<p>Comments,widgets and Analytics work too with just a bit of playing required.
-The comments on this site are supported via Disqus !</p>
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </p>
 
-<p>Hope this post compiles well ! :)</p>
+<p>Edit: 02 Oct&#39;12 : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://sdrv.ms/VonGvI" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino Code To be uploaded is :                                                     <a href="http://sdrv.ms/UtUu5Y" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p></p>
+
+<ol>
+    <li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+    <li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+    <li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+    <li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
 
   </div>
   
@@ -260,11 +268,11 @@ The comments on this site are supported via Disqus !</p>
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page9">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     
-      <a class="pagination-item newer" href="/page7">Newer</a>
+      <a class="pagination-item newer" href="/page14">Newer</a>
     
   
 </div>

@@ -4,13 +4,182 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2014-12-15T20:04:08+05:30</updated>
+ <updated>2015-01-18T11:08:50+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>MakerFest 2015 Ahe !</title>
+   <link href="http://rohitg.in/2015/01/17/Makerfest/"/>
+   <updated>2015-01-17T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/01/17/Makerfest</id>
+   <content type="html">&lt;p&gt;Lets start with my amateurish &lt;em&gt;Haiku&lt;/em&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dusty days and chilly Nights
+&lt;br&gt;Curious&lt;br&gt;Lets celebrate Making !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;(Apologies)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ah! Makerfest 2014 at NID, Ahmedabad was super awesome. When i saw a notification for applications in my feed one fine day. I had to apply. I decided to give a small &lt;em&gt;Getting Started with MSP430&lt;/em&gt; workshop at MakerFest. Plus it would be a great time to refresh some memories( rather taste buds) from last year. Ahmedabad is quite reachable from Pune. It takes about 8-9 hrs by Duronto and 12-13 hours via bus. I decided to go via bus and return with whatever seems convenient.&lt;/p&gt;
+
+&lt;p&gt;Unlike last year, this time around Makerfest was present at CEPT . Whenever i got some free time,i did explore the campus which has various installations by students and some funny (rather intriguing) posters . &lt;/p&gt;
+
+&lt;p&gt;As always, i did reach a day in advance. The first (pre) day was composed of a workshop at &lt;strong&gt;IIM - A&lt;/strong&gt; . My Chaotic bus provider didn’t try enough to make it on time and I entered the session with about 25% left. It was a good time to visit the campus though. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16287907815&quot; title=&quot;IIM A &amp;lt;3 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8644/16287907815_463a3e8e40_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;IIM A &amp;lt;3&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Somehow we couldn’t find our way exploring the campus on ourselves, So I called my friend &lt;em&gt;Miteshwar&lt;/em&gt; who studies here to help us out. Glad he could make out of his busy schedule and give a trip around the beautiful campus. My phone died , and i didn’t click pictures of the old campus. But those of you who have seen &lt;strong&gt;2 states&lt;/strong&gt; ; Guys, its the same, but seems so great in real!&lt;/p&gt;
+
+&lt;p&gt;I found this unusual contraption on most 2 wheelers around Ahmedabad. Curious, I asked a passer by who explains:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;During the kite festival, the city is almost covered with kites and numerous number of kites are given freedom (thread-cut) every moment.They carry with them a meticulously sharpened thread which has caused road accidents and even severed some necks of two-wheeler riders.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And I declare MakerFest OPEN ! &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101786639&quot; title=&quot;Desi Juggad by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8662/16101786639_5b96ae0b37_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Desi Juggad&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DAY 1&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(Asynchronously Documented)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I had my workshop on DAY 1 of the event, where i explained about 10 people, how to get started with MSP430 using the ever-cool &lt;a href=&quot;http://energia.nu&quot;&gt;Energia&lt;/a&gt; . About 10 people attended the workshop. I distributed a getting started kit which had lots of components to test/begin any mcu platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101995927&quot; title=&quot;My Workshop by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8611/16101995927_f6c97e1380_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;My Workshop&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15667993083&quot; title=&quot;My Workshop by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8631/15667993083_8e9bef653b_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;My Workshop&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And yah! If you too want to ask the same question? I dont work with TI; just spreading Awesomeness ! :D&lt;/p&gt;
+
+&lt;p&gt;My workshop took place is &lt;strong&gt;FabLab CEPT&lt;/strong&gt;. It was a good time to explore what equipments they had. 
+They had a epilog laser cutter, A 3D printer, An ultimaker that was probably being repaired, a FULL SCALE shopbot (Like the one you see in Ben&amp;#39;s videos ) Modella PCB mill,Roland Vinyl Cutter, a reciprocating saw and probably other stuff too.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15665086594&quot; title=&quot;Laser Cutter @ FABLAB CEPT by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8646/15665086594_2e7b704eac_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Laser Cutter @ FABLAB CEPT&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When the workshop got over, i began visiting stalls and questioning (interviewing? eh) people about their product and idea. Whats better, i was joined by a friend &lt;em&gt;Sunil Sir&lt;/em&gt; from &lt;strong&gt;Doo Things&lt;/strong&gt;, Pune&amp;#39;s very own hackerspace. He is pretty amazing guy with knowledge of almost anything. Together we started visting the stalls. &lt;/p&gt;
+
+&lt;p&gt;I got a chance to see what the &lt;em&gt;Google Cardboard&lt;/em&gt; is all about. Basically there are two simulataneos images that a combined in your brain to give you an effect of VR.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100289520&quot; title=&quot;Google Cardboard ka pardafash by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7482/16100289520_5f3e5c8daf_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Google Cardboard ka pardafash&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A team from Surat, brought their college innovations of cheap solar cells using touchscreen panels and a scientifically validated water purifier for villages. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16287657485&quot; title=&quot;Dye Synthesized Solar Cells by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7464/16287657485_008872a207_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Dye Synthesized Solar Cells&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16261743236&quot; title=&quot;Water Purifier by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7509/16261743236_d6b8264b4f_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Water Purifier&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An inventor from Delhi (&lt;em&gt;Missing Delhi&lt;/em&gt;) made a cool robot that can be controlled by an Android APP to draw things on the ground.Plus kids can program it in a custom language like &lt;strong&gt;Logo&lt;/strong&gt; which introduces them the basics of programming. He is selling it in probably in a few weeks time. The wheels have encoders to help you get the drawing right and an IR sensor to do any avoidance activity. So, bye bye Turtle, Kids move the Robby !&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15667813553&quot; title=&quot;Robby- Get your kids started with Robots by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7549/15667813553_ec8b0524fd_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Robby- Get your kids started with Robots&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Another &lt;em&gt;Delhiwalla&lt;/em&gt; brought this amazing interactive cloth made using Bare Conductive ink and capactive sensing. It will play music of the part you touch. So, if you touch a leaf, it plays the sound of crumpled leaves. Cool !&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100482530&quot; title=&quot;Interactive Cloth using Bare Conductive ink by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7472/16100482530_d90542a178_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Interactive Cloth using Bare Conductive ink&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16286061001&quot; title=&quot;Interactive Cloth using Bare Conductive ink by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7516/16286061001_8ae04bf4e6_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Interactive Cloth using Bare Conductive ink&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Another cool startup in Ahmedabad is &lt;strong&gt;My BYK&lt;/strong&gt; . They rent bicycles to anyone to roam around the city in a greener way. They charge a fixed security and a minimal monthly fees that covers the repairs. The bikes are equipped with passive RFIDs which help them to track bikes. Please come to PUNE ! &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16286103291&quot; title=&quot;Rentable Bikes by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8604/16286103291_8b4667215d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Rentable Bikes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100355128&quot; title=&quot;Rentable Bikes by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7579/16100355128_65ffd5095d_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Rentable Bikes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lets call it a day and explore the Food !&lt;/p&gt;
+
+&lt;p&gt;Another unusal ( in my frame of reference ) thing was this Wood Furnance Pizza stall on CEPT road. They make pizza by heating it in a mobile furnance. Curious to know whether it would taste different. We just ordered one. They usually bake thin crust (which i hate) and even after asking of a thick base, what turned out was thicker by a &lt;em&gt;Vernier&amp;#39;s Resolution&lt;/em&gt; . The Pizza tasted good, But i would still put my money on the Indian Conventional way. (No Offences! Do Try it though.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101715317&quot; title=&quot;Wood Furnance Pizza by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8574/16101715317_f3d85825bb_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Wood Furnance Pizza&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15665162724&quot; title=&quot;Wood Furnance Pizza by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8575/15665162724_491368be7d_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Wood Furnance Pizza&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Asking for a good tea stall in Ellisbridge area, where our Hotel was, got us to &lt;em&gt;Mehta &amp;#39;s&lt;/em&gt; which served the best tea in that area. Forget &lt;em&gt;cutting&lt;/em&gt; ( tiny cup full of tea, enough to fill your mouth once), this was almost a hybrid of Tea and Lassi. Literally Loaded with Sugar and probably fits into the &lt;em&gt;Haryanavi&lt;/em&gt; description of good tea - &lt;em&gt;Pani, Patti rok ke, Doodh, Chini Thok ke&lt;/em&gt; ! &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16285774291&quot; title=&quot;Desi Chai by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7489/16285774291_78d746aef5_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Desi Chai&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Battery Low! and we now crashed thinking what next day had in store !&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Day 2&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;Early Morning, we were joined by friends from &lt;strong&gt;Revealing Hour Creations&lt;/strong&gt;. They too have a workshop on their successfully crowd funded &lt;em&gt;Tah&lt;/em&gt; board.&lt;/p&gt;
+
+&lt;p&gt;While Sunil, Dhiraj and Vikas continued to CEPT i wanted to eat Jalebie and Fafda from the shop which (according to me) serves the best in the country-&lt;em&gt;Juna Sharebazaar near Nehru Nagar Circle&lt;/em&gt; . So, i took an Auto and went to the place. It looked familier and this is what you get when you say- a bit of everything.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100013318&quot; title=&quot;Food @ Juna ShareBazaar, Nehru Nagar Circle by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7573/16100013318_32f119b9f7_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Food @ Juna ShareBazaar, Nehru Nagar Circle&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Le Bhari&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I walked my way to CEPT to explore the remaining stalls.&lt;/p&gt;
+
+&lt;p&gt;A firecracker Ignitor that lets to burn crackers safely from a distance over bluetooth.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16285656421&quot; title=&quot;BT Fire Cracker Ignitor by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7536/16285656421_4000285da1_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;BT Fire Cracker Ignitor&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Interactive Puppetry using a kinect type sensor from Creative by Folo. The way move your fingers is detected and the puppet is moved on the screen.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101320849&quot; title=&quot;Interactive Puppetry by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7524/16101320849_44f486eab0_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Interactive Puppetry&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A lot of cool innovations were showcased by MIT Media Labs - India Initiative.
+This is an electric skate board which has a pressure sensor on the front. The more you press the faster it goes. 
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16099926878&quot; title=&quot;Electric Skate Board by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7568/16099926878_88abf71cc9_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Electric Skate Board&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Our friend Varun was present there with his Delta Printer that he has made from scratch. The printer is insanely accurate and fast. Splendid!
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16285687611&quot; title=&quot;Varun &amp;#x27;s Super Cool Delta Printer by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7530/16285687611_2269beb59e_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Varun &amp;#x27;s Super Cool Delta Printer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Apart from that there was a nutella chocolate printer that was printing customised chocolates.&lt;/p&gt;
+
+&lt;p&gt;An inventor from Bangladesh came up with an amazing EBraile glove that is a boon to blind. It has a RFID so, people can locate things and a mobile app to train people. Amazing! 
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101349959&quot; title=&quot;E Braile by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7490/16101349959_5e8bdec05b_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;E Braile&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Meanwhile, i started to explore campus. There was this installation  where you have to move the handle and the pattern on the roof changes. The handle required quite a lot of effort but the effect was visible.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16286684892&quot; title=&quot;Interactive Student Installations @ CEPT by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7526/16286684892_91f19dd5f8_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Interactive Student Installations @ CEPT&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101406819&quot; title=&quot;Interactive Student Installations @ CEPT by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7549/16101406819_821974c570_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Interactive Student Installations @ CEPT&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Electro bricks showcased a much bigger collection this time. They are making electronics like lego bricks. Add a music brick to a power brick and an amplifier brick and you have your own Music player. 
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100065278&quot; title=&quot;Electro bricks by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7546/16100065278_4b9afed5b5_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Electro bricks&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;People from all ages bringing out the &lt;strong&gt;Maker&lt;/strong&gt; in them.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100279990&quot; title=&quot;Make ! by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8681/16100279990_2c7297cb39_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Make !&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Surendranath from Redd Robotics with his printer.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15667834573&quot; title=&quot;Reddy from Redd Robotics with his new printer by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7528/15667834573_8abc86d8c6_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Reddy from Redd Robotics with his new printer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A young inventor from Delhi with his LiFi setup. He was streaming audio via laser from his laptop to an LDR which was connected to the speaker and voild music transferred via Light.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100362040&quot; title=&quot;LiFi by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7570/16100362040_ca8d577c89_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;LiFi&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Circuit Tricks presented their pencil based circuit design idea. They used a 9B pencil to create a conductive path and used that to make circuits.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101877047&quot; title=&quot;Circuit Tricks by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7512/16101877047_f82f2e37f8_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Circuit Tricks&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Button Masala from last year came up with a new way to not sew things. Bolt-em up. So, you have a fabric and you can bolt them to make whatever you want. Heavy!
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100207788&quot; title=&quot;Bolt-a-dress by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7559/16100207788_4d85035d5f_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Bolt-a-dress&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;They also had a LED Dress whose color can be changed.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101627939&quot; title=&quot;LED Dress by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7526/16101627939_ea2257ec9b_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;LED Dress&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The circuit of the dress.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16261825626&quot; title=&quot;Andar Ka Khel by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7473/16261825626_ddbca08643_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Andar Ka Khel&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Interested in making anything look like polka dots? Try this. A button and a rubber band and you have your own button dress.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16100424060&quot; title=&quot;Button Masala by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8583/16100424060_fd3908e4fd_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Button Masala&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We also had students with mind controlled wheel chairs.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16286965992&quot; title=&quot;Mind Controlled Chair by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7540/16286965992_9fb87f8be4_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Mind Controlled Chair&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A banglore startup with their Creatorbot CNC and 3D Printer.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101681469&quot; title=&quot;3D Printer/CNC by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7549/16101681469_057e1543bc_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;3D Printer/CNC&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16101688779&quot; title=&quot;3D Printer/CNC by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7567/16101688779_1bea18b18d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;3D Printer/CNC&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I also got a chance to see and experience the &lt;em&gt;Oculus Rift&lt;/em&gt; , &lt;em&gt;Google Glass&lt;/em&gt; and Mind Controlled Things. It was pretty nice experience seeing projects/products. Thanks to Aditi and a awesome team of volunteers who made it possible!&lt;/p&gt;
+
+&lt;p&gt;Auvjo !&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>TinkerRule- The Maker's Swiss Army Knife</title>
