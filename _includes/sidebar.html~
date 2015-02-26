@@ -49,6 +49,7 @@ window.twttr = (function (d, s, id) {
 }(document, "script", "twitter-wjs"));
 </script> -->
 <br>
+
 <p style="font-size:175% ;">
 <a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
 <a class="list-group-item" href="https://www.instagram.com/rohit7gupta"><i class="fa fa-instagram"></i></a>
@@ -56,7 +57,7 @@ window.twttr = (function (d, s, id) {
 <a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
 </p>      </span>
     </nav>
-<p style="font-size:75% ;">Built proudly with <a href="http://jekyllrb.com/">Jekyll</a><br>
+<p style="font-size:65% ;">Made in India with <i class="fa fa-heart"></i> and <a href="http://jekyllrb.com/">Jekyll</a><br>
 All Rights Reserved
 </p>
 
