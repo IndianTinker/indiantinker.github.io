@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-02-26T22:18:08+05:30</updated>
+ <updated>2015-04-05T00:04:37+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -845,13 +845,45 @@ Biriyani is like pulao but with an overdose of clove, cinammon and some secret i
 
 &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/8qF-NFmNIvc&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;Want to build your own?&lt;/p&gt;
+&lt;p&gt;The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old &lt;em&gt;TI Samples Box&lt;/em&gt; and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.&lt;/p&gt;
 
-&lt;p&gt;Keep watching this place and i will bring a complete tutorial in while!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17032377895&quot; title=&quot;UberCubeJig by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;UberCubeJig&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . &lt;strong&gt;Some Hard work Required.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;IndianTinker&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16846178389&quot; title=&quot;FinalStac by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;FinalStac&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17006413856&quot; title=&quot;AssembledonPerfboard by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;AssembledonPerfboard&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16412234233&quot; title=&quot;Prototyping by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Prototyping&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16846159069&quot; title=&quot;TEST by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;TEST&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the circuit and code is almost final. I designed the PCB (&lt;em&gt;All SMD ! Yeah \m/&lt;/em&gt; ) using Eagle and etched the same to the PCB. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17030954562&quot; title=&quot;Etched PCB by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Etched PCB&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Soldered one!
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16844844580&quot; title=&quot;SolderedPCB by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;SolderedPCB&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm). &lt;/p&gt;
+
+&lt;p&gt;Power Switch and DC Jack for power.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16824981487&quot; title=&quot;LC4 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;LC4&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16844603938&quot; title=&quot;LC2 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;LC2&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16412245853&quot; title=&quot;LC1 by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;LC1&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The source code is available on &lt;a href=&quot;https://github.com/IndianTinker/UberCubeX4&quot;&gt;github&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Cheers !
+Rohit&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt;
 &lt;ul&gt;
@@ -859,8 +891,7 @@ Biriyani is like pulao but with an overdose of clove, cinammon and some secret i
     &lt;li&gt;&lt;strong&gt;See it on &lt;/strong&gt;&lt;a href=&quot;http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/&quot;&gt;Instructables &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;strong&gt;Won: TI India&lt;a href=&quot;http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx&quot;&gt; Diwali Contest&lt;/a&gt;&lt;/strong&gt;&lt;a href=&quot;http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx&quot;&gt; &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;strong&gt;Won: University level &amp;quot;Open H/W&amp;quot; competition&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-The source code is available on &lt;a href=&quot;https://github.com/IndianTinker/UberCubeX4&quot;&gt;github&lt;/a&gt; .&lt;/p&gt;
+&lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -1158,9 +1189,9 @@ IndianTinker&lt;/p&gt;
 &lt;p&gt;You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
 &lt;iframe src=&quot;//player.vimeo.com/video/50615424&quot; width=&quot;500&quot; height=&quot;375&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt; &lt;/p&gt;
 
-&lt;p&gt;Edit: 02 Oct&amp;#39;12 : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a title=&quot;ControlWare&quot; href=&quot;http://sdrv.ms/VonGvI&quot; target=&quot;_blank&quot;&gt;ControlWare.exe&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:left;&quot;&gt;The Arduino Code To be uploaded is :                                                     &lt;a href=&quot;http://sdrv.ms/UtUu5Y&quot; target=&quot;_blank&quot;&gt; Source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update-02 Oct&amp;#39;12&lt;/em&gt; : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a title=&quot;ControlWare&quot; href=&quot;http://1drv.ms/1FaBBZS&quot; target=&quot;_blank&quot;&gt;ControlWare.exe&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:left;&quot;&gt;The Arduino sketch To be uploaded is :&lt;a href=&quot;http://1drv.ms/1FtOSPY&quot; target=&quot;_blank&quot;&gt; Source&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:left;&quot;&gt;Some of FAQ`s are:&lt;/p&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -1169,6 +1200,8 @@ IndianTinker&lt;/p&gt;
     &lt;li&gt;This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P&lt;/li&gt;
     &lt;li&gt;Its not Cross Compatible..works best on Windows Only&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Update-5th Apr&amp;#39;15&lt;/em&gt;: Fixed broken links&lt;/p&gt;
 </content>
  </entry>
  
