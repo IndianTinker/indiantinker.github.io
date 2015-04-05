@@ -16,32 +16,30 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)">
 
 
-  <meta content="Inside a Cheap LED Bulb" property="og:title">
-  <meta name="twitter:title" content="Inside a Cheap LED Bulb">
+  <meta content="Kindify- Making PDFs readable on the Kindle" property="og:title">
+  <meta name="twitter:title" content="Kindify- Making PDFs readable on the Kindle">
   
 
 
   <meta content="article" property="og:type">
 
 
-  <meta content="http://rohitg.in/2014/10/28/Dollar-LED-Bulb/index.html" property="og:url">
+  <meta content="http://rohitg.in/2015/04/05/Kindify/index.html" property="og:url">
 
 
-  <meta content="2014-10-28T00:00:00+05:30" property="article:published_time">
+  <meta content="2015-04-05T00:00:00+05:30" property="article:published_time">
   <meta content="http://rohitg.in/about/index.html" property="article:author">
 
 
-  <meta content="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" property="og:image">
-  <meta name="twitter:image:src" content="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg">
+  <meta content="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg" property="og:image">
+  <meta name="twitter:image:src" content="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg">
 
 
   
 
 
   
-  <meta content="takeapart" property="article:tag">
-  
-  <meta content="general" property="article:tag">
+  <meta content="python" property="article:tag">
   
 
 
@@ -53,7 +51,7 @@
 
   <title>
     
-      Inside a Cheap LED Bulb &middot; Rohit Gupta
+      Kindify- Making PDFs readable on the Kindle &middot; Rohit Gupta
     
   </title>
 
@@ -248,13 +246,13 @@ All Rights Reserved
  
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Inside a Cheap LED Bulb</h1>
-  <span class="post-date">28 Oct 2014</span>
+  <h1 class="post-title">Kindify- Making PDFs readable on the Kindle</h1>
+  <span class="post-date">05 Apr 2015</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi,India">Delhi, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
 
 
 <br>
@@ -263,53 +261,54 @@ All Rights Reserved
 
 
 <br>
-  <p>I was recently on the visit to my hometown <em>Delhi</em> this Diwali when i visited <strong>Lajpat Rai</strong> market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.</p>
+  <p>Probably <strong>YOU</strong> too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. <strong>YOU</strong> too considered it would be fantastic to read them, a single device for only books. Consider this no calmuny to the device. But PDFs are seriously not its cup of tea. Mercurial, <strong>YOU</strong> might be seeing the way the pdf is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didnt seem comfortable.</p>
 
-<p>It was pretty clear that the Bulbs wont have those <em>Chinese</em> drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.</p>
+<p>Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align= "center"></a></p>
+<p>I tried assiduously to somehow read and lost interest until i stumbled upon a slick python library <em>pyPDF</em> while solving a problem with printing PDFs. </p>
 
-<p>And Bingo!
-It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS,%20One%20can%20only%20gjnvg/s1600/transformerless+power+supply+circuit.png">like this</a>) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (<em>No Zener</em>)</p>
+<p>Clip the borders and Light you shall see !</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia"></a></p>
+<p>Kindle does automatically clip borders but it retains the primodial page number which limits the usability and since, it also indexes the page number anyway, even if i remove it using some python script it wont hurt.</p>
 
-<p>The entire Bulb had:</p>
+<p>So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a pdf with the same name but -kindified appended to its file name to be read on the Kindle.</p>
 
-<ul>
-<li>2x <code>470k</code> resistors, </li>
-<li>1 x <code>100uf</code> Electrolytic Capacitor, </li>
-<li>1 x <code>0.1uf</code>(guess) Capacitor with severed markings</li>
-<li>12 LEDs</li>
-<li>4 Diodes in bridge rectifier configuration.</li>
-</ul>
+<p>The only dependency is <em>pyPDF</em> .</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003"></a></p>
+<p>Install PyPDF using pip :
+<code>pip install pypdf</code></p>
 
-<p>The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.</p>
+<p>Now clone the github repository:</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005"></a></p>
+<p><code>git clone https://github.com/IndianTinker/kindify.git</code></p>
 
-<p>One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.</p>
+<p>Now, paste the pdf in the kindify directory and run the command:</p>
+
+<p><code>python kindify.py yourPdfName.pdf</code></p>
+
+<p>An interactive menu will pop up with list of some famous book houses that have predefined cropping parameters. You can always choose the custom one to suit your needs or edit the predefined ones to suit your needs.</p>
+
+<p>Lets see the magic in this sample from Orielly.
+Before the script the pdf renders as follows:</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16834820407" title="Pre Script by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8752/16834820407_9c9be5a74e_z.jpg" width="385" height="640" alt="Pre Script"></a></p>
+
+<p>And after the script</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16854436058" title="Post Script by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg" width="423" height="640" alt="Post Script"></a></p>
+
+<p>There is a noticable difference between the two images. Clearly the second one is a <em>bit</em> more clear.
+So, yet again Python saves the day! </p>
 
 <p>Cheers!</p>
 
-<p>Rohit </p>
+<p>Rohit   </p>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2015/04/05/Kindify/">
-            Kindify- Making PDFs readable on the Kindle
-            <small>05 Apr 2015</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -325,6 +324,15 @@ It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZu
           <a href="/2015/01/17/Makerfest/">
             MakerFest 2015 Ahe !
             <small>17 Jan 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2014/12/14/Tinker-Rule/">
+            TinkerRule- The Maker's Swiss Army Knife
+            <small>14 Dec 2014</small>
           </a>
         </h3>
       </li>

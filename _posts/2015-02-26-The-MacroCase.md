@@ -4,7 +4,7 @@ title: MacroCASE- A DIY phone case to see, up close !
 image: http://cdn.instructables.com/FCA/9T71/I5J54CJK/FCA9T71I5J54CJK.MEDIUM.jpg
 location: Pune, India
 tags:
-- Electronics
+- hardware
 ---
 
 *A detailed build procedure of this is already posted on [Instructables](http://www.instructables.com/id/MacroCase-A-DIY-Phone-Case-for-Macro-Photography/)*

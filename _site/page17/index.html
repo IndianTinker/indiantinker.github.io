@@ -24,7 +24,7 @@
   <meta content="article" property="og:type">
 
 
-  <meta content="http://rohitg.in/page6/index.html" property="og:url">
+  <meta content="http://rohitg.in/page17/index.html" property="og:url">
 
 
 
@@ -240,126 +240,37 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
-        Nokia 5110 LCDs and MSP430
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
       </a>
     </h1>
 
-    <span class="post-date">09 Nov 2014</span>
+    <span class="post-date">25 Aug 2012</span>
 
-    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia&#39;s Monochome days. Several might have spent days playing space invaders/snakes etc. </p>
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
-<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code>2.7-3.3V</code> happy for our MSP430.</p>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
-<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a> </p>
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
 
-<p>For TL:DR; </p>
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </p>
 
-<p>The LCD has the following pins to interface to:
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Pin Number</th>
-    <th class="tg-031e">Pin Label</th>
-    <th class="tg-031e">Pin Function</th>
-    <th class="tg-031e">Input/Output?</th>
-    <th class="tg-031e">Notes</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">1</td>
-    <td class="tg-031e">VCC</td>
-    <td class="tg-031e">Positive power supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">2</td>
-    <td class="tg-031e">GND</td>
-    <td class="tg-031e">Ground</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">3</td>
-    <td class="tg-031e">SCE</td>
-    <td class="tg-031e">Chip select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">4</td>
-    <td class="tg-031e">RST</td>
-    <td class="tg-031e">Reset</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">5</td>
-    <td class="tg-031e">D/C</td>
-    <td class="tg-031e">Mode select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">6</td>
-    <td class="tg-031e">DN(MOSI)</td>
-    <td class="tg-031e">Serial data in</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">7</td>
-    <td class="tg-031e">SCLK</td>
-    <td class="tg-031e">Serial clock</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">8</td>
-    <td class="tg-031e">LED</td>
-    <td class="tg-031e">LED backlight supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
-  </tr>
-</table></p>
+<p><em>Update-02 Oct&#39;12</em> : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://1drv.ms/1FaBBZS" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino sketch To be uploaded is :<a href="http://1drv.ms/1FtOSPY" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p></p>
 
-<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
+<ol>
+    <li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+    <li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+    <li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+    <li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
 
-<p>At a time you write to a single bank.</p>
-
-<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
-
-<p>The communication is done using SPI.</p>
-
-<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG&#39;s post</a>.</p>
-
-<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
-
-<p>Connections are as follows(PORT1):</p>
-
-<ul>
-<li>LCD5110_SCLK_PIN- BIT5</li>
-<li>LCD5110_DN_PIN- BIT7</li>
-<li>LCD5110_SCE_PIN- BIT0</li>
-<li>LCD5110_DC_PIN- BIT1</li>
-</ul>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro"></a>
-<br></p>
-
-<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center"></a></p>
-
-<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
-
-<p>If you have any difficulties post here in comments</p>
+<p><em>Update-5th Apr&#39;15</em>: Fixed broken links</p>
 
   </div>
   
@@ -367,11 +278,11 @@ All Rights Reserved
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page7">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     
-      <a class="pagination-item newer" href="/page5">Newer</a>
+      <a class="pagination-item newer" href="/page16">Newer</a>
     
   
 </div>

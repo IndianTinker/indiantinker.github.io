@@ -4,13 +4,63 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-04-05T00:04:37+05:30</updated>
+ <updated>2015-04-05T20:25:31+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Kindify- Making PDFs readable on the Kindle</title>
+   <link href="http://rohitg.in/2015/04/05/Kindify/"/>
+   <updated>2015-04-05T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/04/05/Kindify</id>
+   <content type="html">&lt;p&gt;Probably &lt;strong&gt;YOU&lt;/strong&gt; too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. &lt;strong&gt;YOU&lt;/strong&gt; too considered it would be fantastic to read them, a single device for only books. Consider this no calmuny to the device. But PDFs are seriously not its cup of tea. Mercurial, &lt;strong&gt;YOU&lt;/strong&gt; might be seeing the way the pdf is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didnt seem comfortable.&lt;/p&gt;
+
+&lt;p&gt;Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.&lt;/p&gt;
+
+&lt;p&gt;I tried assiduously to somehow read and lost interest until i stumbled upon a slick python library &lt;em&gt;pyPDF&lt;/em&gt; while solving a problem with printing PDFs. &lt;/p&gt;
+
+&lt;p&gt;Clip the borders and Light you shall see !&lt;/p&gt;
+
+&lt;p&gt;Kindle does automatically clip borders but it retains the primodial page number which limits the usability and since, it also indexes the page number anyway, even if i remove it using some python script it wont hurt.&lt;/p&gt;
+
+&lt;p&gt;So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a pdf with the same name but -kindified appended to its file name to be read on the Kindle.&lt;/p&gt;
+
+&lt;p&gt;The only dependency is &lt;em&gt;pyPDF&lt;/em&gt; .&lt;/p&gt;
+
+&lt;p&gt;Install PyPDF using pip :
+&lt;code&gt;pip install pypdf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now clone the github repository:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/IndianTinker/kindify.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, paste the pdf in the kindify directory and run the command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python kindify.py yourPdfName.pdf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;An interactive menu will pop up with list of some famous book houses that have predefined cropping parameters. You can always choose the custom one to suit your needs or edit the predefined ones to suit your needs.&lt;/p&gt;
+
+&lt;p&gt;Lets see the magic in this sample from Orielly.
+Before the script the pdf renders as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16834820407&quot; title=&quot;Pre Script by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8752/16834820407_9c9be5a74e_z.jpg&quot; width=&quot;385&quot; height=&quot;640&quot; alt=&quot;Pre Script&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And after the script&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16854436058&quot; title=&quot;Post Script by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg&quot; width=&quot;423&quot; height=&quot;640&quot; alt=&quot;Post Script&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a noticable difference between the two images. Clearly the second one is a &lt;em&gt;bit&lt;/em&gt; more clear.
+So, yet again Python saves the day! &lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;Rohit   &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>MacroCASE- A DIY phone case to see, up close !</title>
