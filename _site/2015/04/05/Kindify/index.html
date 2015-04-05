@@ -261,17 +261,19 @@ All Rights Reserved
 
 
 <br>
-  <p>Probably <strong>YOU</strong> too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. <strong>YOU</strong> too considered it would be fantastic to read them, a single device for only books. Consider this no calmuny to the device. But PDFs are seriously not its cup of tea. Mercurial, <strong>YOU</strong> might be seeing the way the pdf is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didnt seem comfortable.</p>
+  <p>Probably <strong>YOU</strong> too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. <strong>YOU</strong> too considered it would be fantastic to read them, a single device for only books. Consider this no calumny to the device. But PDFs are seriously not its cup of tea. Mercurial, <strong>YOU</strong> might be seeing the way the PDF is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didn’t seem comfortable.</p>
 
 <p>Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.</p>
 
-<p>I tried assiduously to somehow read and lost interest until i stumbled upon a slick python library <em>pyPDF</em> while solving a problem with printing PDFs. </p>
+<p>I tried assiduously to somehow read and lost interest until I stumbled upon a slick python library <em>pyPDF</em> while solving a problem with printing PDFs. </p>
 
+<blockquote>
 <p>Clip the borders and Light you shall see !</p>
+</blockquote>
 
-<p>Kindle does automatically clip borders but it retains the primodial page number which limits the usability and since, it also indexes the page number anyway, even if i remove it using some python script it wont hurt.</p>
+<p>Kindle does automatically clip borders but it retains the primordial page number which limits the usability and since, it also indexes the page number anyway, even if I remove it using some python script it wont hurt.</p>
 
-<p>So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a pdf with the same name but -kindified appended to its file name to be read on the Kindle.</p>
+<p>So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a PDF with the same name but -kindified appended to its file name to be read on the Kindle.</p>
 
 <p>The only dependency is <em>pyPDF</em> .</p>
 
@@ -282,14 +284,14 @@ All Rights Reserved
 
 <p><code>git clone https://github.com/IndianTinker/kindify.git</code></p>
 
-<p>Now, paste the pdf in the kindify directory and run the command:</p>
+<p>Now, paste the PDF in the kindify directory and run the command:</p>
 
 <p><code>python kindify.py yourPdfName.pdf</code></p>
 
 <p>An interactive menu will pop up with list of some famous book houses that have predefined cropping parameters. You can always choose the custom one to suit your needs or edit the predefined ones to suit your needs.</p>
 
 <p>Lets see the magic in this sample from Orielly.
-Before the script the pdf renders as follows:</p>
+Before the script the PDF renders as follows:</p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/16834820407" title="Pre Script by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8752/16834820407_9c9be5a74e_z.jpg" width="385" height="640" alt="Pre Script"></a></p>
 
@@ -297,7 +299,7 @@ Before the script the pdf renders as follows:</p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/16854436058" title="Post Script by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg" width="423" height="640" alt="Post Script"></a></p>
 
-<p>There is a noticable difference between the two images. Clearly the second one is a <em>bit</em> more clear.
+<p>There is a difference between the two images. Clearly the second one is a <em>bit</em> more clear.
 So, yet again Python saves the day! </p>
 
 <p>Cheers!</p>
