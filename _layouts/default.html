@@ -5,10 +5,13 @@
 
   <body>
 
-    {% include ads.html %}
+  
     {% include sidebar.html %}
  
     <div class="content container">
+    <div class="post">
+      {% include ads.html %}
+    </div>
       {{ content }}
     </div>
 
