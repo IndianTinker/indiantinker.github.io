@@ -16,30 +16,30 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)">
 
 
-  <meta content="UberCubeX4- The portable LED Cube !" property="og:title">
-  <meta name="twitter:title" content="UberCubeX4- The portable LED Cube !">
+  <meta content="BoardMerge- The command line single page PDF merge utility for PCBs" property="og:title">
+  <meta name="twitter:title" content="BoardMerge- The command line single page PDF merge utility for PCBs">
   
 
 
   <meta content="article" property="og:type">
 
 
-  <meta content="http://rohitg.in/2014/07/22/UberCube/index.html" property="og:url">
+  <meta content="http://rohitg.in/2015/04/17/BoardMerge/index.html" property="og:url">
 
 
-  <meta content="2014-07-22T00:00:00+05:30" property="article:published_time">
+  <meta content="2015-04-17T00:00:00+05:30" property="article:published_time">
   <meta content="http://rohitg.in/about/index.html" property="article:author">
 
 
-  <meta content="http://farm3.staticflickr.com/2805/12405005665_9ca2377862_z.jpg" property="og:image">
-  <meta name="twitter:image:src" content="http://farm3.staticflickr.com/2805/12405005665_9ca2377862_z.jpg">
+  <meta content="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" property="og:image">
+  <meta name="twitter:image:src" content="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg">
 
 
   
 
 
   
-  <meta content="msp430" property="article:tag">
+  <meta content="python" property="article:tag">
   
 
 
@@ -51,7 +51,7 @@
 
   <title>
     
-      UberCubeX4- The portable LED Cube ! &middot; Rohit Gupta
+      BoardMerge- The command line single page PDF merge utility for PCBs &middot; Rohit Gupta
     
   </title>
 
@@ -268,13 +268,13 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">UberCubeX4- The portable LED Cube !</h1>
-  <span class="post-date">22 Jul 2014</span>
+  <h1 class="post-title">BoardMerge- The command line single page PDF merge utility for PCBs</h1>
+  <span class="post-date">17 Apr 2015</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi,India">Delhi, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
 
 
 <br>
@@ -283,76 +283,57 @@ All Rights Reserved
 
 
 <br>
-  <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
+  <p>Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this <a href="http://rohitg.in/2014/04/07/OpenAgitator/">Open Agitator</a> a while back to help me ease out the etching process.</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen></iframe>
+<p>I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.</p>
 
-<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
+<p>The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we <em>should</em> cut costs. Further the <em>several-times-on-a-page</em> approach had more issues:</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig"></a></p>
-
-<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac"></a></p>
-
-<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling. </p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard"></a></p>
-
-<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping"></a></p>
-
-<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
-<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST"></a></p>
-
-<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB. </p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB"></a></p>
-
-<p>The Soldered one!
-<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB"></a></p>
-
-<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm). </p>
-
-<p>Power Switch and DC Jack for power.
-<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1"></a></p>
-
-<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
-
-<p>Cheers !
-Rohit</p>
-
-<p><strong>Update: </strong>
 <ul>
-    <li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
-    <li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
-    <li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
-    <li><strong>Won: University level &quot;Open H/W&quot; competition</strong></li>
-</ul></p>
+<li>Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers</li>
+<li>The shop keeper usually charges for a single round in the printer and printing many times added to the costs.</li>
+<li>I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)</li>
+<li>You also need to set the no scaling option in <em>Acrobat</em> again and again.. duh..</li>
+</ul>
 
-<p>&nbsp;</p>
+<p>Thats too much work specially after waiting in a queue to get to the printer !</p>
 
-<p>&nbsp;</p>
+<p>I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a <strong>Single</strong> page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..</p>
+
+<p>Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to <em>re-etch (just imagine)</em> a whole board.</p>
+
+<p><strong>The Process</strong></p>
+
+<ol>
+<li><p>Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.</p></li>
+<li><p>This way you will have many pdfs on the same folder. Now:
+<code>git clone https://github.com/IndianTinker/BoardMerge.git</code>  or download from <a href="https://github.com/IndianTinker/BoardMerge">here</a></p></li>
+<li><p>You need to install pyPDF dependency. PIP is the boss here!
+<code>sudo pip install pypdf</code></p></li>
+<li><p>Now paste the <code>merge.py</code> in the active eagle folder and run :
+<code>python merge.py file1.pdf file2.pdf .. .. ..</code> </p></li>
+<li><p>Wait till it gets completed and you shall see a file <code>Combine.pdf</code> with all the pdfs on a single page!</p></li>
+</ol>
+
+<p>This a directory full of 17 pdfs !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16557649863" title="before by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg" width="640" height="402" alt="before"></a></p>
+
+<p>After some python-fu you get this:</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17151890736" title="final by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" width="640" height="366" alt="final"></a></p>
+
+<p>Hoping that fellow makers find it useful.</p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2015/04/17/BoardMerge/">
-            BoardMerge- The command line single page PDF merge utility for PCBs
-            <small>17 Apr 2015</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -368,6 +349,15 @@ Rohit</p>
           <a href="/2015/04/05/Kindify/">
             Kindify- Making PDFs readable on the Kindle
             <small>05 Apr 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/02/26/The-MacroCase/">
+            MacroCASE- A DIY phone case to see, up close !
+            <small>26 Feb 2015</small>
           </a>
         </h3>
       </li>

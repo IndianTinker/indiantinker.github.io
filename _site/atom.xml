@@ -4,13 +4,66 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-04-16T21:27:53+05:30</updated>
+ <updated>2015-04-17T20:31:55+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>BoardMerge- The command line single page PDF merge utility for PCBs</title>
+   <link href="http://rohitg.in/2015/04/17/BoardMerge/"/>
+   <updated>2015-04-17T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/04/17/BoardMerge</id>
+   <content type="html">&lt;p&gt;Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this &lt;a href=&quot;http://rohitg.in/2014/04/07/OpenAgitator/&quot;&gt;Open Agitator&lt;/a&gt; a while back to help me ease out the etching process.&lt;/p&gt;
+
+&lt;p&gt;I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.&lt;/p&gt;
+
+&lt;p&gt;The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we &lt;em&gt;should&lt;/em&gt; cut costs. Further the &lt;em&gt;several-times-on-a-page&lt;/em&gt; approach had more issues:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers&lt;/li&gt;
+&lt;li&gt;The shop keeper usually charges for a single round in the printer and printing many times added to the costs.&lt;/li&gt;
+&lt;li&gt;I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)&lt;/li&gt;
+&lt;li&gt;You also need to set the no scaling option in &lt;em&gt;Acrobat&lt;/em&gt; again and again.. duh..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thats too much work specially after waiting in a queue to get to the printer !&lt;/p&gt;
+
+&lt;p&gt;I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a &lt;strong&gt;Single&lt;/strong&gt; page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..&lt;/p&gt;
+
+&lt;p&gt;Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to &lt;em&gt;re-etch (just imagine)&lt;/em&gt; a whole board.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Process&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This way you will have many pdfs on the same folder. Now:
+&lt;code&gt;git clone https://github.com/IndianTinker/BoardMerge.git&lt;/code&gt;  or download from &lt;a href=&quot;https://github.com/IndianTinker/BoardMerge&quot;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You need to install pyPDF dependency. PIP is the boss here!
+&lt;code&gt;sudo pip install pypdf&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now paste the &lt;code&gt;merge.py&lt;/code&gt; in the active eagle folder and run :
+&lt;code&gt;python merge.py file1.pdf file2.pdf .. .. ..&lt;/code&gt; &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Wait till it gets completed and you shall see a file &lt;code&gt;Combine.pdf&lt;/code&gt; with all the pdfs on a single page!&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This a directory full of 17 pdfs !&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16557649863&quot; title=&quot;before by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg&quot; width=&quot;640&quot; height=&quot;402&quot; alt=&quot;before&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After some python-fu you get this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17151890736&quot; title=&quot;final by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg&quot; width=&quot;640&quot; height=&quot;366&quot; alt=&quot;final&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hoping that fellow makers find it useful.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>The Noob's Guide to Pune Relocation</title>
