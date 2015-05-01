@@ -24,7 +24,7 @@
   <meta content="article" property="og:type">
 
 
-  <meta content="http://rohitg.in/page16/index.html" property="og:url">
+  <meta content="http://rohitg.in/page20/index.html" property="og:url">
 
 
 
@@ -266,68 +266,37 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/07/22/UberCube/">
-        UberCubeX4- The portable LED Cube !
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
       </a>
     </h1>
 
-    <span class="post-date">22 Jul 2014</span>
+    <span class="post-date">25 Aug 2012</span>
 
-    <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen></iframe>
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig"></a></p>
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
 
-<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac"></a></p>
+<p><em>Update-02 Oct&#39;12</em> : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://1drv.ms/1FaBBZS" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino sketch To be uploaded is :<a href="http://1drv.ms/1FtOSPY" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p></p>
 
-<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling. </p>
+<ol>
+    <li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+    <li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+    <li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+    <li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard"></a></p>
-
-<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping"></a></p>
-
-<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
-<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST"></a></p>
-
-<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB. </p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB"></a></p>
-
-<p>The Soldered one!
-<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB"></a></p>
-
-<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm). </p>
-
-<p>Power Switch and DC Jack for power.
-<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1"></a></p>
-
-<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
-
-<p>Cheers !
-Rohit</p>
-
-<p><strong>Update: </strong>
-<ul>
-    <li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
-    <li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
-    <li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
-    <li><strong>Won: University level &quot;Open H/W&quot; competition</strong></li>
-</ul></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
+<p><em>Update-5th Apr&#39;15</em>: Fixed broken links</p>
 
   </div>
   
@@ -335,11 +304,11 @@ Rohit</p>
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page17">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     
-      <a class="pagination-item newer" href="/page15">Newer</a>
+      <a class="pagination-item newer" href="/page19">Newer</a>
     
   
 </div>

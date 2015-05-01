@@ -4,13 +4,95 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-04-26T10:46:05+05:30</updated>
+ <updated>2015-05-01T19:23:58+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia</title>
+   <link href="http://rohitg.in/2015/05/01/RoomMote/"/>
+   <updated>2015-05-01T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/05/01/RoomMote</id>
+   <content type="html">&lt;p&gt;Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and this loner mosquitoes who just pisses me off by buzzing, you have to choose a lesser evil. Obviously, I turned on the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it off back, leaving the warmed blanked on a chilly Delhi December Night. The nocturnal dilemma .&lt;/p&gt;
+
+&lt;p&gt;So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control ,Mood Lighting? &lt;/p&gt;
+
+&lt;p&gt;Interesting !!&lt;/p&gt;
+
+&lt;p&gt;Having the above in mind i thought of building my own &lt;em&gt;Room Automation and Mood Lighting controller&lt;/em&gt; and for this make it look good and no mess visible. I had bought some nice overpriced a while back and the bigger one of them would be perfect for the project. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16710796873&quot; title=&quot;The Box by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The Box&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So, the plan was   :&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with an RGB LED strip to give a room a different tint at night. Above all the system should be able to tell if a wrong action has been taken by itself. Above all it should look good. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For the recipe, the main ingredient was &lt;strong&gt;MSP430&lt;/strong&gt; as i was able to get it in desired packages (The local seller dont seem to like SMDs), Its easy to play with thanks to &lt;em&gt;Energia&lt;/em&gt; and best of all - &lt;em&gt;Low Power&lt;/em&gt; .&lt;/p&gt;
+
+&lt;p&gt;I chose to use &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/msp430g2553.pdf&quot;&gt;MSP430G2553&lt;/a&gt; as i already had the chip in DIP to prototype with.&lt;/p&gt;
+
+&lt;p&gt;For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/uln2803a.pdf&quot;&gt;ULN2803&lt;/a&gt; , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.&lt;/p&gt;
+
+&lt;p&gt;For demodulating the 38kHz IR Pulse train, i used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 i used &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/lp2951-n.pdf&quot;&gt;LP2950-3.3V&lt;/a&gt;, a TO92 packaged LDO .&lt;/p&gt;
+
+&lt;p&gt;Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.&lt;/p&gt;
+
+&lt;p&gt;Thats pretty much the circuit part. Once, i had them all on my table. I designed a small PCB to fit the box and house all the components and a seperate Relay board for the Sockets ! Next after &lt;strong&gt;Toner Transfer&lt;/strong&gt; and some etching in my &lt;a href=&quot;http://rohitg.in/2014/04/07/OpenAgitator/&quot;&gt;OpenAgitator&lt;/a&gt; i got this sparkling PCB .&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17331055925&quot; title=&quot;Newly ETched by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Newly ETched&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some soldering !&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16708584584&quot; title=&quot;Bottom Side by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Bottom Side&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17329162242&quot; title=&quot;Top Side - All assembled by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Top Side - All assembled&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;and some Brain Implant ( aka Code Download )&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17123607967&quot; title=&quot;Brain Implant by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Brain Implant&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Code :
+&lt;script src=&quot;https://gist.github.com/075a3fc4815eaa9d11af.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Modifying the nice little box to suit the PCB  (That moment when you say, &amp;quot;If only i had a 3D Printer&amp;quot; )&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17144793609&quot; title=&quot;Make space for the DC Jack by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Make space for the DC Jack&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17143469950&quot; title=&quot;All Snug? by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;All Snug?&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17144792019&quot; title=&quot;On the wall by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;On the wall&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say &lt;strong&gt;Manual Over-ride&lt;/strong&gt; ?&lt;/p&gt;
+
+&lt;p&gt;The wiring mess inside the switch-board.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17305070826&quot; title=&quot;Wire mess inside the power board by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Wire mess inside the power board&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All cleared up !
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17144797209&quot; title=&quot;Wires out by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Wires out&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up. &lt;/p&gt;
+
+&lt;p&gt;Now with a press of the button, Its all done ! I already feel so lazy!&lt;/p&gt;
+
+&lt;p&gt;And yes here are the colors&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17305080226&quot; title=&quot;MoodLights by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg&quot; width=&quot;640&quot; height=&quot;453&quot; alt=&quot;MoodLights&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dont forget to watch the video below and if you have something to say, Please Comment Down here!&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/hsQ9HEd14hQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>BoardMerge- The command line single page PDF merge utility for PCBs</title>
