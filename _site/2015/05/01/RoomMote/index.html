@@ -220,6 +220,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -287,33 +291,33 @@ All Rights Reserved
 
 
 <br>
-  <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and this loner mosquitoes who just pisses me off by buzzing, you have to choose a lesser evil. Obviously, I turned on the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it off back, leaving the warmed blanked on a chilly Delhi December Night. The nocturnal dilemma .</p>
+  <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .</p>
 
-<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control ,Mood Lighting? </p>
+<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting? </p>
 
 <p>Interesting !!</p>
 
-<p>Having the above in mind i thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this make it look good and no mess visible. I had bought some nice overpriced a while back and the bigger one of them would be perfect for the project. </p>
+<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and &quot;no mess visible&quot;. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project. </p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box"></a></p>
 
 <p>So, the plan was   :</p>
 
 <blockquote>
-<p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with an RGB LED strip to give a room a different tint at night. Above all the system should be able to tell if a wrong action has been taken by itself. Above all it should look good. </p>
+<p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall). </p>
 </blockquote>
 
-<p>For the recipe, the main ingredient was <strong>MSP430</strong> as i was able to get it in desired packages (The local seller dont seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
+<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don&#39;t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
 
 <p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
 
 <p>For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used <a href="http://www.ti.com/lit/ds/symlink/uln2803a.pdf">ULN2803</a> , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.</p>
 
-<p>For demodulating the 38kHz IR Pulse train, i used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 i used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged LDO .</p>
+<p>For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged 100mA LDO .</p>
 
 <p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
 
-<p>Thats pretty much the circuit part. Once, i had them all on my table. I designed a small PCB to fit the box and house all the components and a seperate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> i got this sparkling PCB .</p>
+<p>That&#39;s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched"></a></p>
 
@@ -330,7 +334,7 @@ All Rights Reserved
 <p>The Code :
 <script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script></p>
 
-<p>Modifying the nice little box to suit the PCB  (That moment when you say, &quot;If only i had a 3D Printer&quot; )</p>
+<p>Then modifying the nice little box to suit the PCB  (That moment when you say, &quot;If only i had a 3D Printer&quot; )</p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack"></a></p>
 
@@ -350,7 +354,7 @@ All Rights Reserved
 
 <p>Now with a press of the button, Its all done ! I already feel so lazy!</p>
 
-<p>And yes here are the colors</p>
+<p>And yes here are the colors !</p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights"></a></p>
 
@@ -370,6 +374,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2015/05/17/FM430/">
+            FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM
+            <small>17 May 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2015/04/17/BoardMerge/">
             BoardMerge- The command line single page PDF merge utility for PCBs
             <small>17 Apr 2015</small>
@@ -382,15 +395,6 @@ All Rights Reserved
           <a href="/2015/04/12/NoobsGuide/">
             The Noob's Guide to Pune Relocation
             <small>12 Apr 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/04/05/Kindify/">
-            Kindify- Making PDFs readable on the Kindle
-            <small>05 Apr 2015</small>
           </a>
         </h3>
       </li>
