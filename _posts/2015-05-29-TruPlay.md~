@@ -28,7 +28,7 @@ Clearly my job was half done:  we knew the Protocol (UART) and the points. I did
 
 Google helps !  I found [this](http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html) nice forum post detailing the adapter. Bingo its the **OVC3860** Chip. And here are the [commands](http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf). 
 
-Basically all commands are in a **AT#CMD[cr][lf]** Format. The "CMD" for a particular action is mentioned on the sheet above.Thats pretty much all the code you need to control it.
+Basically all commands are in a **AT#CMD[cr][lf]** Format. The "CMD" for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.
 
 The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a '115600' one. This setting seems to be stored in the **EEPROM** on the adapter. As [this](http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/) post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!
 
