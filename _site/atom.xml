@@ -4,13 +4,100 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-05-19T00:37:17+05:30</updated>
+ <updated>2015-05-29T23:26:50+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>TruPlay- Hacking into a Bluetooth A2DP Adapter using the MSP430 and OVC3860</title>
+   <link href="http://rohitg.in/2015/05/29/TruPlay/"/>
+   <updated>2015-05-29T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/05/29/TruPlay</id>
+   <content type="html">&lt;p&gt;I recently ordered &lt;a href=&quot;http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;amp;hash=item1a00397396&quot;&gt;this&lt;/a&gt; Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and &lt;strong&gt;Changing Songs&lt;/strong&gt;. Its more like getting chained to the speakers. Woof !!&lt;/p&gt;
+
+&lt;p&gt;After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the &lt;em&gt;Free Shipping&lt;/em&gt; fellas !&lt;/p&gt;
+
+&lt;p&gt;It worked as advertised. But the range was hardly 15feet &lt;strong&gt;LOS&lt;/strong&gt; and in a maze like house i live in , it would hardly go through the walls. So, the &lt;em&gt;Wireless&lt;/em&gt; problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , &amp;quot;Think out of the box !&amp;quot; my answer was inside the box. &lt;/p&gt;
+
+&lt;p&gt;It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads : &lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/0zeXPvvULI/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-03-29T08:06:06+00:00&quot;&gt;Mar 29, 2015 at 1:06am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+&lt;/center&gt; &lt;/p&gt;
+
+&lt;p&gt;Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the &lt;em&gt;AT Commands&lt;/em&gt;).
+&lt;center&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/1n1xClPUD-/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-04-18T16:11:06+00:00&quot;&gt;Apr 18, 2015 at 9:11am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+ &lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Google helps !  I found &lt;a href=&quot;http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html&quot;&gt;this&lt;/a&gt; nice forum post detailing the adapter. Bingo its the &lt;strong&gt;OVC3860&lt;/strong&gt; Chip. And here are the &lt;a href=&quot;http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf&quot;&gt;commands&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Basically all commands are in a &lt;strong&gt;AT#CMD[cr][lf]&lt;/strong&gt; Format. The &amp;quot;CMD&amp;quot; for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.&lt;/p&gt;
+
+&lt;p&gt;The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a &amp;#39;115600&amp;#39; one. This setting seems to be stored in the &lt;strong&gt;EEPROM&lt;/strong&gt; on the adapter. As &lt;a href=&quot;http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/&quot;&gt;this&lt;/a&gt; post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!&lt;/p&gt;
+
+&lt;p&gt;So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!&lt;/p&gt;
+
+&lt;iframe width=&quot;653&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/XGC1E0VE39Y&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Tested it for a few days ! I could now control my phone&amp;#39;s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB. &lt;/p&gt;
+
+&lt;p&gt;I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra &lt;strong&gt;SMD&lt;/strong&gt; tactile switch to further expand capabilities. 
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17148091553&quot; title=&quot;Dongle Tapping by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Dongle Tapping&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The connections are simple. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads ! &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After designing the board it was time for the best part : &lt;strong&gt;Etching&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;Here are the chronologically arranged pictures of PCB Etching using &lt;em&gt;Toner Transfer Method&lt;/em&gt; :&lt;/p&gt;
+
+&lt;p&gt;Making sure the TSSOP Pads got nicely transferred. Clicked using &lt;a href=&quot;http://rohitg.in/2015/02/26/The-MacroCase/&quot;&gt;MACROCase&lt;/a&gt; .
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768382545&quot; title=&quot;Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg&quot; width=&quot;640&quot; height=&quot;583&quot; alt=&quot;Making sure the tiny tracks got transferred&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All set for the bath.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768440115&quot; title=&quot;Toner Transfer by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Toner Transfer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Rough times to follow.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768864201&quot; title=&quot;Just Etched by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Just Etched&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After some sanding.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17582193499&quot; title=&quot;Cleaned after ACID Bath by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Cleaned after ACID Bath&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Flashing the code after soldering.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768419595&quot; title=&quot;Code Dump by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Code Dump&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Testing.
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17765735442&quot; title=&quot;First Test in Progress by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;First Test in Progress&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ta Da !!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768811751&quot; title=&quot;Unobstructing by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Unobstructing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17742078846&quot; title=&quot;Looks Cool by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Looks Cool&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the video for the project in action:&lt;/p&gt;
+
+&lt;iframe width=&quot;653&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/mrToz8M_BPQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Interested in building one? Grab the code here:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/a35bf659325d0eac2ce5.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM</title>
@@ -32,10 +119,11 @@ I tried to make one when i was in 7th grade, waiting at the counter of a dingy e
 
 &lt;p&gt;Next step? Let others know about it... :D&lt;/p&gt;
 
+&lt;p&gt;&lt;center&gt;
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://instagram.com/p/0nwlsDPUN1/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_top&quot;&gt;#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
 Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-03-24T18:54:28+00:00&quot;&gt;Mar 24, 2015 at 11:54am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-
 &lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.&lt;/p&gt;
 
