@@ -3,43 +3,61 @@
 
   <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+</script>
+<script type="text/javascript"> 
+	
+				
+		     
+			// get the data with a webservice call
+			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
+					    					
+				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';  
+				//alert(data.field1)    
   
+			});
+			
+		
+	
+	</script>
 
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="twitter:site" content="@rohit7gupta">
-<meta name="twitter:creator" content="@rohit7gupta">
-<meta name="twitter:card" content="summary_large_image">
-<meta content="Rohit Gupta" property="og:site_name">
-
-  <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)">
+<meta name="twitter:site" content="@rohit7gupta"/>
+<meta name="twitter:creator" content="@rohit7gupta"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta content="Rohit Gupta" property="og:site_name"/>
 
 
-  <meta content="The Noob's Guide to Pune Relocation" property="og:title">
-  <meta name="twitter:title" content="The Noob's Guide to Pune Relocation">
+  <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
+
+
+  <meta  property="og:title" content="The Noob's Guide to Pune Relocation"/>
+  <meta name="twitter:title" content="The Noob's Guide to Pune Relocation"/>
   
 
 
-  <meta content="article" property="og:type">
+  <meta property="og:type" content="article"/>
+  <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta content="http://rohitg.in/2015/04/12/NoobsGuide/index.html" property="og:url">
+  <meta property="og:url" content="http://rohitg.in/2015/04/12/NoobsGuide/" />
 
 
-  <meta content="2015-04-12T00:00:00+05:30" property="article:published_time">
-  <meta content="http://rohitg.in/about/index.html" property="article:author">
+  <meta content="2015-04-12T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm8.staticflickr.com/7557/15832777439_19e0ea75be_z.jpg" property="og:image">
-  <meta name="twitter:image:src" content="https://farm8.staticflickr.com/7557/15832777439_19e0ea75be_z.jpg">
+  <meta content="https://farm8.staticflickr.com/7557/15832777439_19e0ea75be_z.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://farm8.staticflickr.com/7557/15832777439_19e0ea75be_z.jpg"/>
 
 
   
 
 
   
-  <meta content="travel" property="article:tag">
+  <meta content="travel" property="article:tag"/>
   
 
 
@@ -86,12 +104,10 @@
 
   
     <div class="sidebar">
+ <b><p style="font-size:90% ;color:#BFFF00;background-color:#006699;"> IOTWatch: Real Time Data </b><br>
+	<B><span id="iot" style="font-size:80%; color:#B6C0D2;"></span></B></p>
   <div class="container sidebar-sticky">
-	<h3><b>
-	<span style="color:#5CB8E6">Think</span> 
-	<span style="color:#FF47A3">Design</span> 
-	<span style="color:#FFFF19">Make</span> 
-	<span style="color:#FF1919">Repeat</span> </b></h3>
+	
     <div class="sidebar-about">
       <h1>
         <a href="/">
@@ -255,7 +271,7 @@ window.twttr = (function (d, s, id) {
 <a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
 </p>      </span>
     </nav>
-<p style="font-size:75% ;">Made with <i class="fa fa-heart"></i> and <a href="http://jekyllrb.com/">Jekyll</a><br>
+<p style="font-size:75% ;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
 
