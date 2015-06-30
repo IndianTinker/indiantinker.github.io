@@ -9,7 +9,7 @@
 			// get the data with a webservice call
 			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
 					    					
-				document.getElementById("iot").innerHTML = 'Temperature: ' +data.field1 +'<br>';  
+				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';  
 				//alert(data.field1)    
   
 			});

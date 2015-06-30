@@ -4,13 +4,87 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-05-31T12:56:09+05:30</updated>
+ <updated>2015-06-30T19:36:48+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>LiTiny- A Tiny LiIon charger for most things battery</title>
+   <link href="http://rohitg.in/2015/06/29/LiTiny/"/>
+   <updated>2015-06-29T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/06/29/LiTiny</id>
+   <content type="html">&lt;p&gt;Lithium Batteries are indispensable. I have a few project like my own &lt;em&gt;DIY Badge [Post Soon]&lt;/em&gt; or a &lt;em&gt;Light Wand for Light Photography&lt;/em&gt; and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.&lt;/p&gt;
+
+&lt;p&gt;The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Li Ion Charger Required&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903&quot;&gt;MCP73831&lt;/a&gt; Tiny SOT23-5 Pkg and promise of 550mA Charging current &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf&quot;&gt;TP4056&lt;/a&gt; SOIC with T-Pad and 1A Charging Current&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  &lt;/p&gt;
+
+&lt;p&gt;There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Why buy, When it can be built.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also none of the boards satisfied both my needs together:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Control I/F with a MCU&lt;/li&gt;
+&lt;li&gt;Micro USB &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&quot;http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg&quot;&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;There were only the following changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I provided a jumper for &lt;code&gt;CE&lt;/code&gt; pin to be connected either to a pin head (for MCU Control) or VCC (Auto)&lt;/li&gt;
+&lt;li&gt;Extended the &lt;code&gt;!CHRG&lt;/code&gt; and &lt;code&gt;!STBY&lt;/code&gt; to end to a pin head too.&lt;/li&gt;
+&lt;li&gt;Provided a common ground to i/f&lt;/li&gt;
+&lt;li&gt;Added microUSB and a 90degree pinheader for my batteries.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the build process:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768590175&quot; title=&quot;Ready to be etched by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Ready to be etched&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17765917222&quot; title=&quot;Just from the Acid Bath by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Just from the Acid Bath&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17146111014&quot; title=&quot;Drilled and Cleaned by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Drilled and Cleaned&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17580781998&quot; title=&quot;PCB by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;PCB&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17765876082&quot; title=&quot;Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg&quot; width=&quot;640&quot; height=&quot;537&quot; alt=&quot;Checking if the uUSB is properly soldered&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;During Charging:
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17765884992&quot; title=&quot;Charging in progress by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Charging in progress&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After charge Termination:
+&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17148219053&quot; title=&quot;The Battery just got charged ! by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The Battery just got charged !&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. &lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430</title>
