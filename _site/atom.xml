@@ -4,13 +4,76 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-06-30T19:36:48+05:30</updated>
+ <updated>2015-07-05T23:13:21+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Juggad Supply- Saving a power supply from planned obsolescence</title>
+   <link href="http://rohitg.in/2015/07/05/JuggadSupply/"/>
+   <updated>2015-07-05T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/07/05/JuggadSupply</id>
+   <content type="html">&lt;p&gt;Next time your printer stops printing for no reason or changing the battery of your MP3 Player from &lt;strong&gt;Authorised Service Station&lt;/strong&gt; costs a major percentage of the original cost, Be informed this all is a part of an industrial design policy,Planned Obsolescence, to make goods last a bit shorter by tweaking the design. &lt;/p&gt;
+
+&lt;p&gt;Never mind a broken device is an opportunity to learn. That&amp;#39;s what i had in mind when i didnt throw away my 2004 ATX supply when it failed in 2010 probably due to some connection/connector issue. In a haste to get the PC working in summer break I installed a new supply on the PC and kept it with me to play with later.&lt;/p&gt;
+
+&lt;p&gt;After saving it from the routine disposal drives of Diwali , I finally had some use of it when the WalWart 12V@1A supply i have was not capable of driving the stepper motors i used in my major project.&lt;/p&gt;
+
+&lt;p&gt;Moding ATX to use it as a bench supply is not new.The power output is pretty stable and can provide high currents. DP has an amazing &lt;a href=&quot;http://dangerousprototypes.com/2012/06/28/new-prototype-atx-breakout-board/&quot;&gt;ATX to Power supply Board&lt;/a&gt; too.&lt;/p&gt;
+
+&lt;p&gt;I wanted one that i could carry around anywhere and should be in one piece and durable with no wires outside the case except the power cable of course . &lt;/p&gt;
+
+&lt;p&gt;Lets see how that ATX Connector looks like.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&quot;http://etech.dyndns.org/images/vcr/atx.jpg&quot;&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;The important points are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shorting &lt;code&gt;PS_ON(14)&lt;/code&gt; to &lt;code&gt;GND&lt;/code&gt; will turn on the PSU and that is what actually the motherboard does.&lt;/li&gt;
+&lt;li&gt;By checking the voltage on &lt;code&gt;Power_ok or Power Good(8)&lt;/code&gt; one can decide whether the power supply OUTPUT is ON (+5V when ON).&lt;/li&gt;
+&lt;li&gt;By checking the voltage on &lt;code&gt;+5vSB(9)&lt;/code&gt; one can decide whether the Mains are ON or not (+5v when ON).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, I will connect LEDs to pin 8 and 9 and a switch between 14 and GND, thats pretty much it.&lt;/p&gt;
+
+&lt;p&gt;Since I had the no wires outside clause and usual power supplies have more that one connector, I had to open the power supply and cut wires literally like a barber and then solder the same coloured ones together to bring them onto the front panel.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/19435985395&quot; title=&quot;Same Colour ,Same Voltage by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/469/19435985395_e8dde8d935_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Same Colour ,Same Voltage&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Most morden ATXs don&amp;#39;t need the load resistor on 5V bus as many posts mention. Phew ! One part less :D &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I then drilled the holes @ CEDT for the Thumb Screw connectors i got from Lajpat Rai and also fixed a small handle to it for carrying it around.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/19248429460&quot; title=&quot;Drilling the cover by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/523/19248429460_bc1a02963b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Drilling the cover&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then connected the circuit as mentioned above to test it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/19429707752&quot; title=&quot;Testing by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/302/19429707752_05839665a2_z.jpg&quot; width=&quot;640&quot; height=&quot;475&quot; alt=&quot;Testing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Carefully packed everything inside the original case.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/19429714392&quot; title=&quot;Ready ! by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/354/19429714392_4a600b79fd_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Ready !&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Printed some labels from my archaic inkjet and I had my ATX power Supply ready !&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/19435982985&quot; title=&quot;Labelled UP by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/317/19435982985_69fc1b1b18_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Labelled UP&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty simple and effective hack ! So, when are you making one ? &lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>LiTiny- A Tiny LiIon charger for most things battery</title>
