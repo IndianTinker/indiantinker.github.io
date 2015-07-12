@@ -4,13 +4,91 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-07-05T23:13:21+05:30</updated>
+ <updated>2015-07-12T15:47:00+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>CricPi- The (probably) MOST Minimalistic Live Cricket Ever</title>
+   <link href="http://rohitg.in/2015/07/12/CrickPi/"/>
+   <updated>2015-07-12T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/07/12/CrickPi</id>
+   <content type="html">&lt;p&gt;Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old &lt;strong&gt;WebSense Blocked&lt;/strong&gt; page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times. &lt;/p&gt;
+
+&lt;p&gt;Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would&amp;#39;nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the &lt;strong&gt;SCORE&lt;/strong&gt;. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .&lt;/p&gt;
+
+&lt;p&gt;I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score &lt;em&gt;always&lt;/em&gt; during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.  &lt;/p&gt;
+
+&lt;p&gt;Most people wanted just the score as expected.Then it was Overs&amp;gt; RR &amp;gt; 4s/6s &amp;gt;Who is batting team/players&amp;gt; Who won/What&amp;#39;s Up? (mostly after meetings) &amp;gt; Who the hell is playing ?&lt;/p&gt;
+
+&lt;p&gt;Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.&lt;/p&gt;
+
+&lt;p&gt;The first thing required was a data source like a website/API that has all the data we need to display. We will anyway display it at 1 refresh per minute so rocket-science precision is not required. I stumbled upon &lt;a href=&quot;https://developers.litzscore.com/plans/&quot;&gt;this&lt;/a&gt; which unfortunately was not free and beyond my budget. &lt;/p&gt;
+
+&lt;p&gt;I thought best way is to make an API myself when there is none that suits me. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;I&amp;#39;ll scrape&lt;/em&gt; !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, i wrote a &lt;em&gt;python&lt;/em&gt; script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out. &lt;/p&gt;
+
+&lt;p&gt;I used the adorable &lt;code&gt;beautifulsoup&lt;/code&gt; for scraping !&lt;/p&gt;
+
+&lt;p&gt;Next based on the observations, I sat down and made an interface for the info gathered be displayed.I choose my old and trusted &lt;a href=&quot;http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/&quot;&gt;Nokia 5510 Graphic Display&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Many thanks to &lt;a href=&quot;http://www.adafruit.com/&quot;&gt;Adafruit&lt;/a&gt; for their amazing Python Library for the LCD already available that made things easy.&lt;/p&gt;
+
+&lt;p&gt;Here is the first visual of a World Cup match on my project :&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/0CfR7pPUHD/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-03-10T07:31:20+00:00&quot;&gt;Mar 10, 2015 at 12:31am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;BR&gt;
+This too.
+&lt;img src=&quot;https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg&quot; width=&quot;614&quot; height=&quot;640&quot; alt=&quot;WorldCup&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see we have the following parts of score displayed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Teams playing&lt;/li&gt;
+&lt;li&gt;Currently batting team with overs underneath it&lt;/li&gt;
+&lt;li&gt;The score in the largest font&lt;/li&gt;
+&lt;li&gt;4s/6s and Run Rate&lt;/li&gt;
+&lt;li&gt;1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.&lt;/li&gt;
+&lt;li&gt;Match Status - Rains, Ended,In Progress etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the picture of the setup:
+&lt;center&gt;
+&lt;img src=&quot;https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg&quot; width=&quot;640&quot; height=&quot;408&quot; alt=&quot;Setup&quot;&gt;
+&lt;/center&gt;
+A Laser cut case and we could go wall mount.  &lt;/p&gt;
+
+&lt;p&gt;I then made the script executable and queued it as a &lt;code&gt;cron-job&lt;/code&gt; to be run every minute.  &lt;em&gt;BLISS&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now I could watch(over) cricket matches in a non-intrusive and minimalistic way . &lt;/p&gt;
+
+&lt;p&gt;If you too are interested you can grab the code &lt;a href=&quot;https://github.com/IndianTinker/CricPI&quot;&gt;here&lt;/a&gt; to check out on the process.&lt;/p&gt;
+
+&lt;p&gt;Here is how i kept a track of IPL :&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/14Z6-PvUD3/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-04-25T02:34:53+00:00&quot;&gt;Apr 24, 2015 at 7:34pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;BR&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Juggad Supply- Saving a power supply from planned obsolescence</title>
