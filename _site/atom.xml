@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-08-01T12:40:32+05:30</updated>
+ <updated>2015-08-01T15:00:16+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -39,7 +39,9 @@
 
 &lt;p&gt;Aaron from @INTEL explains the IOT setup intel has in Mind and company&amp;#39;s vision on being a part of the maker movement! Its huge.. We will get our kits soon. &lt;/p&gt;
 
-&lt;p&gt;We did an Unbox !! &lt;/p&gt;
+&lt;p&gt;We did an Unbox !! 
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://instagram.com/p/51ck7GPUNj/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_top&quot;&gt;@random.pics.everyday with #Edison #StarterKit #IntelMaker #IOTRoadshow #Pune&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-08-01T09:05:57+00:00&quot;&gt;Aug 1, 2015 at 2:05am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;At the &lt;a href=&quot;https://twitter.com/hashtag/intelmakers?src=hash&quot;&gt;#intelmakers&lt;/a&gt; with &lt;a href=&quot;https://twitter.com/rohit7gupta&quot;&gt;@rohit7gupta&lt;/a&gt; ... who just unboxed his edison. &lt;a href=&quot;http://t.co/baMEeg2Hpj&quot;&gt;pic.twitter.com/baMEeg2Hpj&lt;/a&gt;&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627345570009624576&quot;&gt;August 1, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -50,6 +52,22 @@
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;The session starts now. &lt;/p&gt;
+
+&lt;p&gt;In the session several speakers covered cool ways to play with the #Edison. We spent most of our time trying to configure it @rituparna&amp;#39;s MacBook. After several failed attempts we gave up on the Mac. Tried with My Dualbooted windows box. In windows we are not comfortable at all. They advised us to tether Laptop&amp;#39;s Wifi to Edison over USB via the RNDIS which works well with WIndows but not with others.&lt;/p&gt;
+
+&lt;p&gt;We went back to Ubuntu and voila it seems to do some stuff over ssh via serial. We were able to toggle LEDs.&lt;/p&gt;
+
+&lt;p&gt;Next we installed Pip and other required python stuff and broke for Lunch&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;ALERT:&lt;/em&gt; Won a bluetooth headset for social blogging! Thanks Intel.
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Surprise! &lt;a href=&quot;https://twitter.com/rohit7gupta&quot;&gt;@rohit7gupta&lt;/a&gt; wins a pair of Intel powered smartearbuds for LIVE blogging. Great job! &lt;a href=&quot;https://twitter.com/hashtag/IntelMaker?src=hash&quot;&gt;#IntelMaker&lt;/a&gt; &lt;a href=&quot;http://t.co/waNgTpBzEc&quot;&gt;pic.twitter.com/waNgTpBzEc&lt;/a&gt;&lt;/p&gt;&amp;mdash; Intel Software India (@IntelSoftwareIn) &lt;a href=&quot;https://twitter.com/IntelSoftwareIn/status/627383667145355264&quot;&gt;August 1, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the blinky on Edison! Note the LED is off. Windows Phone does not support videos on official app.&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/51ck1CvUNi/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-08-01T09:05:56+00:00&quot;&gt;Aug 1, 2015 at 2:05am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
 </content>
  </entry>
  
