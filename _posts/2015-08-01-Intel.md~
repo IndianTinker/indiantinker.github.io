@@ -64,13 +64,78 @@ Next was thingspeak integration. We made it working using requests and you can t
 The further part of the day we faced a major internet outage..
 Bummer!!
 
-After having the sumptous dinner we went home.
+After having the sumptuous dinner we went home.
 
 I tried compiling the Mplayer as mentioned on our mentor's [blog](https://scratchbuffer.wordpress.com/) at night but i turned out it would just not compile. We followed similar instruction and got ALSA to play our trolltones over USB DAC!
 
 SWEET !
 
 **Day 2**
+
+With a lot of work pending I mostly got working my python framework for the controlling i/os and a cron job to update our thingspeak channel every 5 mins.
+
+Ritu was working on the [door's website](http://doormate.github.io/website/) and Twitter integration.
+
+We did a few tweets during the time.
+
+<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/mQQ6rAgsIP">pic.twitter.com/mQQ6rAgsIP</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627666066475384832">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Updating using OAuth authentication via Tweepy!</p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627671710356013056">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="https://twitter.com/hashtag/doothings?src=hash">#doothings</a> <a href="https://twitter.com/doo">@doo</a> <a href="https://twitter.com/io">@io</a> <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> <a href="https://twitter.com/jasveer2589">@jasveer2589</a> When Doors Tweet <a href="https://twitter.com/hashtag/LOL?src=hash">#LOL</a> <a href="https://twitter.com/hashtag/DIY?src=hash">#DIY</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627683336991870976">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+With some work to do we broke for lunch.
+
+<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/lunch?src=hash">#lunch</a> <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/4PJV8yqLoS">pic.twitter.com/4PJV8yqLoS</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627774541327011840">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+We hastily submitted the project without the video. Twitter had blocked our api due to excessive calls.
+
+We implemented TTS and an alternative script to show the other use case.
+
+Judging starts *Anxious!!*
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Team 7 .. Presenting to judges <a href="https://twitter.com/hashtag/intelmaker?src=hash">#intelmaker</a> <a href="http://t.co/ICmf0tVtfo">pic.twitter.com/ICmf0tVtfo</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627783108167766018">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+This is our awesome door!
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/54UVbpsh7t/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#IntelMakers checkout what I made ... From yesterday to today.</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rituparna Matkar (@random.pics.everyday) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-02T11:51:39+00:00">Aug 2, 2015 at 4:51am PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+Check out the video in the tweet.
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://t.co/k49JgXCmdF">https://t.co/k49JgXCmdF</a> <a href="https://twitter.com/IntelSoftwareIn">@IntelSoftwareIn</a> <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> <a href="https://twitter.com/DooThings">@DooThings</a> <a href="https://twitter.com/hashtag/intelmaker?src=hash">#intelmaker</a> Team 41 - We make doors awesome! <a href="https://twitter.com/hashtag/iotroadshow?src=hash">#iotroadshow</a> <a href="https://twitter.com/hashtag/iot?src=hash">#iot</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627798093786824704">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+The prize distribution is on ! *Super Anxious*
+
+<strike>All three 3rd Prizes gone !</strike> I and ritu look at each other.. I call it a wrap and start packing stuff up. Ritu is reluctant and says there is still some hope.
+
+<strike>1st Runner Up -I Gone</strike> Laptop Shutdown. Edsion `shutdown -h now` ! Disconnecting the grove connectors...
+
+BUT wait.. Did we hear **Door Mate** ?
+
+**LOL**
+
+We won the 1st Runner UP ! OMG !!
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">2nd place winners: Smart city plugin &amp; Doormate. They win $1000 cash prize! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/ztKeilDPOi">pic.twitter.com/ztKeilDPOi</a></p>&mdash; Intel Software India (@IntelSoftwareIn) <a href="https://twitter.com/IntelSoftwareIn/status/627835693511761920">August 2, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+Thanks a ton [Aaron](https://twitter.com/Tersteeg) , [Preethi](https://twitter.com/preethy) , [Ghanashyam](https://scratchbuffer.wordpress.com/) and Team. 2  Days of Awesomeness !
+
+Cheers,
+
+Rohit
+
 
  
 
