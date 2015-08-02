@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-08-01T15:00:16+05:30</updated>
+ <updated>2015-08-02T18:04:24+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -63,11 +63,72 @@
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Surprise! &lt;a href=&quot;https://twitter.com/rohit7gupta&quot;&gt;@rohit7gupta&lt;/a&gt; wins a pair of Intel powered smartearbuds for LIVE blogging. Great job! &lt;a href=&quot;https://twitter.com/hashtag/IntelMaker?src=hash&quot;&gt;#IntelMaker&lt;/a&gt; &lt;a href=&quot;http://t.co/waNgTpBzEc&quot;&gt;pic.twitter.com/waNgTpBzEc&lt;/a&gt;&lt;/p&gt;&amp;mdash; Intel Software India (@IntelSoftwareIn) &lt;a href=&quot;https://twitter.com/IntelSoftwareIn/status/627383667145355264&quot;&gt;August 1, 2015&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Here is the blinky on Edison! Note the LED is off. Windows Phone does not support videos on official app.&lt;/p&gt;
+&lt;p&gt;Here is the blinky on Edison! Note the LED is off. Windows Phone does not support videos on official app. We used &lt;a href=&quot;https://github.com/intel-iot-devkit/mraa&quot;&gt;mraa&lt;/a&gt; and &lt;strong&gt;vi&lt;/strong&gt; as the IDE. Long time to learn VI and never to late to start. &lt;em&gt;:wq&lt;/em&gt;&lt;/p&gt;
 
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/51ck1CvUNi/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-08-01T09:05:56+00:00&quot;&gt;Aug 1, 2015 at 2:05am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
 
 &lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;After messing around MPlayer compiles we dropped the idea of playing sound via BT. That would be actually pretty cool. &lt;/p&gt;
+
+&lt;p&gt;Next was thingspeak integration. We made it working using requests and you can track the channel &lt;a href=&quot;https://thingspeak.com/channels/49681&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The further part of the day we faced a major internet outage..
+Bummer!!&lt;/p&gt;
+
+&lt;p&gt;After having the sumptuous dinner we went home.&lt;/p&gt;
+
+&lt;p&gt;I tried compiling the Mplayer as mentioned on our mentor&amp;#39;s &lt;a href=&quot;https://scratchbuffer.wordpress.com/&quot;&gt;blog&lt;/a&gt; at night but i turned out it would just not compile. We followed similar instruction and got ALSA to play our trolltones over USB DAC!&lt;/p&gt;
+
+&lt;p&gt;SWEET !&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Day 2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With a lot of work pending I mostly got working my python framework for the controlling i/os and a cron job to update our thingspeak channel every 5 mins.&lt;/p&gt;
+
+&lt;p&gt;Ritu was working on the &lt;a href=&quot;http://doormate.github.io/website/&quot;&gt;door&amp;#39;s website&lt;/a&gt; and Twitter integration.&lt;/p&gt;
+
+&lt;p&gt;We did a few tweets during the time.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;und&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/hashtag/IntelMaker?src=hash&quot;&gt;#IntelMaker&lt;/a&gt; &lt;a href=&quot;http://t.co/mQQ6rAgsIP&quot;&gt;pic.twitter.com/mQQ6rAgsIP&lt;/a&gt;&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627666066475384832&quot;&gt;August 2, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Updating using OAuth authentication via Tweepy!&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627671710356013056&quot;&gt;August 2, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/hashtag/IntelMaker?src=hash&quot;&gt;#IntelMaker&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/doothings?src=hash&quot;&gt;#doothings&lt;/a&gt; &lt;a href=&quot;https://twitter.com/doo&quot;&gt;@doo&lt;/a&gt; &lt;a href=&quot;https://twitter.com/io&quot;&gt;@io&lt;/a&gt; &lt;a href=&quot;https://twitter.com/rohit7gupta&quot;&gt;@rohit7gupta&lt;/a&gt; &lt;a href=&quot;https://twitter.com/jasveer2589&quot;&gt;@jasveer2589&lt;/a&gt; When Doors Tweet &lt;a href=&quot;https://twitter.com/hashtag/LOL?src=hash&quot;&gt;#LOL&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/DIY?src=hash&quot;&gt;#DIY&lt;/a&gt;&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627683336991870976&quot;&gt;August 2, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;With some work to do we broke for lunch.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;und&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/hashtag/lunch?src=hash&quot;&gt;#lunch&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/IntelMaker?src=hash&quot;&gt;#IntelMaker&lt;/a&gt; &lt;a href=&quot;http://t.co/4PJV8yqLoS&quot;&gt;pic.twitter.com/4PJV8yqLoS&lt;/a&gt;&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627774541327011840&quot;&gt;August 2, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We hastily submitted the project without the video. Twitter had blocked our api due to excessive calls.&lt;/p&gt;
+
+&lt;p&gt;We implemented TTS and an alternative script to show the other use case.&lt;/p&gt;
+
+&lt;p&gt;Judging starts &lt;em&gt;Anxious!!&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Team 7 .. Presenting to judges &lt;a href=&quot;https://twitter.com/hashtag/intelmaker?src=hash&quot;&gt;#intelmaker&lt;/a&gt; &lt;a href=&quot;http://t.co/ICmf0tVtfo&quot;&gt;pic.twitter.com/ICmf0tVtfo&lt;/a&gt;&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627783108167766018&quot;&gt;August 2, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This is our awesome door!&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://instagram.com/p/54UVbpsh7t/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_top&quot;&gt;#IntelMakers checkout what I made ... From yesterday to today.&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Rituparna Matkar (@random.pics.everyday) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-08-02T11:51:39+00:00&quot;&gt;Aug 2, 2015 at 4:51am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Check out the video in the tweet.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://t.co/k49JgXCmdF&quot;&gt;https://t.co/k49JgXCmdF&lt;/a&gt; &lt;a href=&quot;https://twitter.com/IntelSoftwareIn&quot;&gt;@IntelSoftwareIn&lt;/a&gt; &lt;a href=&quot;https://twitter.com/rohit7gupta&quot;&gt;@rohit7gupta&lt;/a&gt; &lt;a href=&quot;https://twitter.com/DooThings&quot;&gt;@DooThings&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/intelmaker?src=hash&quot;&gt;#intelmaker&lt;/a&gt; Team 41 - We make doors awesome! &lt;a href=&quot;https://twitter.com/hashtag/iotroadshow?src=hash&quot;&gt;#iotroadshow&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/iot?src=hash&quot;&gt;#iot&lt;/a&gt;&lt;/p&gt;&amp;mdash; rituparna matkar (@mrrituparna) &lt;a href=&quot;https://twitter.com/mrrituparna/status/627798093786824704&quot;&gt;August 2, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 </content>
  </entry>
  
