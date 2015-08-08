@@ -1,0 +1,81 @@
+---
+layout: post
+title: Unbricking a MotoX, Resurrecting Smiles 
+image: https://s3.amazonaws.com/images.seroundtable.com/android-google-boot-loops-1419943695.jpg
+location: Pune, India
+tags:
+- Linux
+---
+
+This didnt seem to be coming ! Some of us were travelling to Bedse Caves on a weekend. *[ZT]* had the amazing MotoX -Ghost aka 2013 one that served as our primary camera and navigator since he was leading. The MotoX was (or rather is) a flagship phone that gave way for the present generation Moto G and E. But it had an AMOLED that usually steals the show.. If you know what i mean.
+
+The essence of the trip was captured in the phone and we were to meet the next day to swap pictures. I was anticipating it even more as I wanted to write a short trip entry.
+
+The next day *[ZT]* didnt have the same phone. His hands were graced by a crappy qwerty from the time Texts became cheaper than an alpenliebe.
+
+With profound grief he said, Dude it got bricked after installing an OTA for Lollipop. The worst part he had already tried clear memory.
+
+We discussed how to get it up and running. The obvious choice being service guys! He submitted the phone for repair.
+
+A week passed and he reverted saying the service guys say they cant figure what happened and are saying to change the motherboard costing around 15k INR ($235). Logically.. Its better to buy a new phone.
+
+But AMOLED !
+
+As his search for a new phone began. I thought that since the phone is booting but is stuck in a loop. Maybe the hardware is fine. Its the software that has got hurt. Clueless as a noob, I asked him to give me the *brick* to play around. He gladly obliged. I searched places to find a solution to assess the gravity of the situation. It turns out, Bootloops are pretty common issues and videos like [these](https://www.youtube.com/watch?v=2LjoFSgLlds) were surely encouraging.
+
+Maintaining brevity of the topic, Most android phones have a fastboot mode which is like a BIOS thing that can be used to flash things (usually compiled codes/OS aka ROMs) to the internal memory sectors and then hoping they will all come together to work. This mode gets activated using a hardware trigger (like happens on PCs) which is usually a combination of lock and Volume button. Searching online one can get it for any device. In the X its Vol - + Pwr 
+
+And if a device enters a fastboot it should be easy to heal it.
+Thankfully our did.
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20405991741/in/dateposted-public/" title="Fastboot mode"><img src="https://farm1.staticflickr.com/513/20405991741_b8e6f44db4_z.jpg" width="640" height="359" alt="Fastboot mode"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+
+Now the USB on the MotoX has some durability issues and it was not working on this device. *[ZT]* says it works when the time and physics are fine. Bummer.. It took me the whole night to connect it via USB to the PC. I turns out i have about 7 USB-micro cables. LOL
+
+At around 2am the space time matrix budged a bit and i was able to connect it using a micromax cable.
+
+Now i started the process whats mentioned on several blogs around the web. Its a generic method to restore any phone via fastboot.
+
+It works well on windows i reckon! All you need is a couple of drivers and the OS you wished to flash (obviously for ur device).
+
+Folks at **XDA Developers** have made a streamlined setup for that [here](http://forum.xda-developers.com/showthread.php?t=2588979). You should get that. Plus you need motorola drivers from motorola website i suggest you get the suite !
+
+For Moto Devices you will need the [mfastboot](https://drive.google.com/file/d/0B2c2Ms7szI99RkpiZWkyZGgyeTQ/edit)
+
+When you are all set. Go to the adb folder in C: and type `fastboot devices` . You should see your device or maybe check USB cable or the word connected written on fastboot screen.
+
+Like this:
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20213179149/in/dateposted-public/" title="FastBOOT"><img src="https://farm1.staticflickr.com/434/20213179149_5eb4a3748d_z.jpg" width="640" height="359" alt="FastBOOT"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>      
+
+Now download the ROM from a trusted source. I got the MotoX Kitkat Asia ROM from [here](https://docs.google.com/file/d/0B5XNxZ2OcfKtdDROTk5kb21ObU0/edit) after 5 failed downloads.
+
+Now unzip the file and copy the contents of adb folder plus mfastboot exe into the unzipped folder. Rename it to give a short name.
+
+You will find a `.xml` file in the ROM that shows the commands for fastboot installation. You have to prefix `fastboot` before every command.  For Moto devices use the command `mfastboot flash system system.img` instead of  `fastboot flash system system.img`
+Follow them and make sure your USB is always connected. Mine got disconnected after much efforts that almost killed the excitement for me.I was up all night to get the USB connected after about 100 failed insertion and reinsertion cycles i  gave up to try with the last cable that i had but was in use - The Kindle cable.
+
+Next Day! It got connected in one shot. Followed the commands but forgot the last one `fastboot oem fb_mode_clear`. It failed to boot. After much googling i found out the cure and wrote the command. 
+
+And it booted.... Yeah!! Victory!
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20211757430/in/dateposted-public/" title="Resurrected"><img src="https://farm1.staticflickr.com/265/20211757430_1fc13ecc39_z.jpg" width="359" height="640" alt="Resurrected"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+There was one problem. The camera was not working! I ran a couple of checks with *[ZT]* who quickly came to collect the phone ! I turned out that the Ribbon for camera had loosened. We just pressed it a bit and it was up and running again.
+
+One device saved !
+
+If you guys need any more info shoot the queries in the comment window.
+
+
+Cheers,
+
+Rohit
+
+
+ 
+
+ 
+ 
+ 
