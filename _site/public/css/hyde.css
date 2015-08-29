@@ -24,7 +24,11 @@
  * Themes
  */
 
-
+code
+{
+background : #eeeeee;
+color: #d84315;
+}
 /*
  * Global resets
  *
@@ -32,7 +36,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Noto, PT Sans, Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -49,6 +53,11 @@ img
  float:center;
 }
 
+body 
+{
+background: #FAFAFA;
+}
+
 /*
  * Sidebar
  *
@@ -60,7 +69,7 @@ img
   text-align: center;
   padding: 1rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #202020;
+  background-color: #39A4B8;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -75,12 +84,13 @@ img
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #ffffff;
 }
+
 
 /* About section */
 .sidebar-about h1 {
-  color: #FF8C00;
+  color: #224687;
   margin-top: 1rem;
   font-family: "Abril Fatface", serif;
   font-size: 2.20rem;
