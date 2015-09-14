@@ -1,17 +1,17 @@
 <div class="sidebar">
-{% comment %}
+{% comment %}<!-->
  <b><p style="font-size:90% ;color:#BFFF00;background-color:#006699;"> IOTWatch: Real Time Data <br>
 	<span id="iot" style="font-size:80%; color:#B6C0D2;"></span></B></p>
 
 <b>
-<!-->
+
 <span style="font-size:140% ; color:#0000FF;">
 Solder</span><span style="font-size:110% ; color:#7FFF00;"> Code</span><span style="font-size:90% ; color:#FF1493;"> Internet</span><span style="font-size:90% ; color:#FFD700;"> Travel</span><span style="font-size:95% ; color:white;"> Machines</span><span style="font-size:60% ; color:#00FA9A;"> & Stuff </span><!-->{% endcomment %}
  </b>
   <div class="container sidebar-sticky">
 	
     <div class="sidebar-about">
-      <h1>
+      <h1 color="#F09300">
         <a href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
@@ -55,14 +55,14 @@ window.twttr = (function (d, s, id) {
 </script> -->
 <br>
 
-<p style="font-size:175% ;">
+<p style="font-size:175% ;color:#eceff1;">
 <a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
 <a class="list-group-item" href="https://www.instagram.com/rohit7gupta"><i class="fa fa-instagram"></i></a>
 <a class="list-group-item" href="https://www.flickr.com/photos/94411929@N06/"><i class="fa fa-flickr"></i></a>
 <a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
 </p>      </span>
     </nav>
-<p style="font-size:75% ;">Made with <i class="fa fa-heart"></i> in India</a><br>
+<p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
 
