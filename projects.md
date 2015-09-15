@@ -57,7 +57,7 @@ CAD/CAM
 *The latest hobby with CNC's and 3D Printing*
   {% for post in site.posts %}
   {% for tag in post.tags %}
-  {% if tag == 'rpi' or tag =='raspberrypi' or tag =='beaglebone' %}
+  {% if tag == 'CAD' or tag =='CNC' or tag =='3dprinters' %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
 	
   {% endif %}

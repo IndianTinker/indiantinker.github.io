@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Travelopedia"/>
-  <meta name="twitter:title" content="Travelopedia"/>
+  <meta  property="og:title" content="PiTuber- The Low Power Overnight Raspberry Pi Youtube Downloader"/>
+  <meta name="twitter:title" content="PiTuber- The Low Power Overnight Raspberry Pi Youtube Downloader"/>
   
 
 
@@ -43,14 +43,25 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/travels/" />
+  <meta property="og:url" content="http://rohitg.in/2015/09/15/PiTuber/" />
 
 
+  <meta content="2015-09-15T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
-  <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg"/>
+
+  <meta content="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Raspberry_Pi_Logo.svg/810px-Raspberry_Pi_Logo.svg.png" property="og:image"/>
+  <meta name="twitter:image:src" content="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Raspberry_Pi_Logo.svg/810px-Raspberry_Pi_Logo.svg.png"/>
 
 
+  
+
+
+  
+  <meta content="rpi" property="article:tag"/>
+  
+  <meta content="python" property="article:tag"/>
+  
 
 
 
@@ -61,7 +72,7 @@
 
   <title>
     
-      Travelopedia &middot; Rohit Gupta
+      PiTuber- The Low Power Overnight Raspberry Pi Youtube Downloader &middot; Rohit Gupta
     
   </title>
 
@@ -148,7 +159,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/travels/">Travelopedia</a>
+            <a class="sidebar-nav-item" href="/travels/">Travelopedia</a>
           
         
       
@@ -315,22 +326,106 @@ All Rights Reserved
 </script>
 
     </div>
-      <div class="page">
-  <h1 class="page-title">Travelopedia</h1>
- 
-  <p>My thoughts about the places i go and people i meet around the globe! </p>
+      <div class="post">
+  <h1 class="post-title">PiTuber- The Low Power Overnight Raspberry Pi Youtube Downloader</h1>
+  <span class="post-date">15 Sep 2015</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
+
+
+<br>
+
+
+
+
+<br>
+  <p>Happy Engineers Day !</p>
+
+<p>Staying away from home triggers these nostalgic eruptions some of us can relate to. I feel them sometimes and usually get over with them by watching oldie TV shows i used loved. TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. Its changed and i would certainly refrain from using the word &#39;evolved&#39;. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather &#39;evolved&#39; to avoid them.</p>
+
+<p>Being the &#39;90&#39;s Kid&#39;, that&#39;s the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like &quot;Byomkesh Bakshi&quot; , &quot;Recess&quot; ,&quot;Small Wonder&quot;, &quot;Shreeman Shreemati&quot;, &quot;TaleSpin&quot;, &quot;Captain Planet&quot; etc.</p>
+
+<p>Thanks to Youtube, these are now all available on web to watch anywhere, any-time. But the crappy web connections, still make them buffer. Youtube app on android does have an offline feature but god knows where it stores them, just in case i want to see it on my PC. Moving to youtube downloading (spamming) applications for PC are not too great either. Especially when downloading documentaries you have to wait for long on a slow connection which frankly is too boring and power consuming (mental included). </p>
+
+<p>So, one fine day while struggling with the problem,it occurred to me that a Pi which usually runs on my cellphone charger would be a great tool for overnight and omnipresent youtube downloading.</p>
+
+<p>The system should read a couple of links from a file and then download them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video.</p>
+
+<p>It turned out to be a pretty easy task. Thanks to <code>pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to download the file. </p>
+
+<p>The steps are pretty simple:</p>
 
 <ul>
-<li><p>12 Apr 2015 &raquo; <a href="/2015/04/12/NoobsGuide/"> The Noob&#39;s Guide to Pune Relocation </a>  </p></li>
-<li><p>17 Jan 2015 &raquo; <a href="/2015/01/17/Makerfest/"> MakerFest 2015 Ahe ! </a>  </p></li>
-<li><p>16 Oct 2014 &raquo; <a href="/2014/10/16/MakerParty/"> Mozilla Maker Party-Pune </a>  </p></li>
-<li><p>24 Jul 2014 &raquo; <a href="/2014/07/24/Hyderabad/"> The Hyderabad Quickie ! </a>  </p></li>
-<li><p>31 Mar 2014 &raquo; <a href="/2014/03/31/Ahemdabad/"> Ahemdabad Che! </a>  </p></li>
+<li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
+<li>Install <code>pafy</code> using pip the usual way</li>
+<li>Change the urls in the txt file. Please do preserve the format.</li>
+<li>Execute the script.</li>
 </ul>
 
-<br>
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code>screen</code> . It just detaches the terminal instance you are on and opens a new one. Which you can exit, So the task you were originally in the old instance runs.</p>
+
+<p>I prefer this for such onetime downloading stints.</p>
+
+<p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
+
+<p>After you are finished, just <code>sftp</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+
+<p>Happy Downloading !</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+</div>
 <br>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8347954072174647"
+     data-ad-slot="5368304813"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2015/08/08/MotoX/">
+            Unbricking a MotoX, Resurrecting Smiles
+            <small>08 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/01/Intel/">
+            LIVE BLOG - Intel IOT Roadshow Pune
+            <small>01 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/07/27/Kalam-Sir/">
+            Kalam Sir
+            <small>27 Jul 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+<br>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- blog -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -340,6 +435,21 @@ All Rights Reserved
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<br>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
 
 </div>
 

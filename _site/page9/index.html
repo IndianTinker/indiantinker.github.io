@@ -260,6 +260,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -315,87 +319,59 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/05/01/RoomMote/">
-        RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia
+      <a href="/2015/05/17/FM430/">
+        FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM
       </a>
     </h1>
 
-    <span class="post-date">01 May 2015</span>
+    <span class="post-date">17 May 2015</span>
 
-    <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .</p>
+    <p>One fine day while i was rummaging through the part bin, I found an old project that probably was never completed ! <strong>FM Radio</strong> !
+I tried to make one when i was in 7th grade, waiting at the counter of a dingy electronics repair shop for anyone to pay attention to the parts list gathered over the internet ( Dial up days ! ).</p>
 
-<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting? </p>
+<p>At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw &#39;TEA5767 FM Receiver&#39; module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me. </p>
 
-<p>Interesting !!</p>
+<p><a href="http://www.voti.nl/docs/TEA5767.pdf">TEA5767</a> is a digital FM Receiver chip from NXP/Phillips that can be commanded over I2C to tune to various frequencies easily.</p>
 
-<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and &quot;no mess visible&quot;. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project. </p>
+<p>But alas ! The one i got never matched with any pictures online ! Where was the missing &quot;crystal&quot; responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen &quot;TT-502X&quot; i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to <a href="http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio">Dilshan</a>, an amazing maker himself, I was able to get this done.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box"></a></p>
+<p>It turns out that the module is actually used in some Samsung Products and requires a <em>generic</em> watch crystal.</p>
 
-<p>So, the plan was   :</p>
+<p>The connections are similar to what <em>Dilshan</em> mentions it in his post. I added a diode (Reverse Polarity. Ouch!) and a decoupling cap. And after a bit of work with the solder iron i was able to make my own FM Receiver Module.</p>
 
-<blockquote>
-<p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall). </p>
-</blockquote>
+<p>Next step? Let others know about it... :D</p>
 
-<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don&#39;t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
+<p><center>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0nwlsDPUN1/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
+Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-24T18:54:28+00:00">Mar 24, 2015 at 11:54am PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+</center></p>
 
-<p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
+<p>FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.</p>
 
-<p>For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used <a href="http://www.ti.com/lit/ds/symlink/uln2803a.pdf">ULN2803</a> , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17152069784" title="Back side ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg" width="359" height="640" alt="Back side !"></a></p>
 
-<p>For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged 100mA LDO .</p>
+<p>After doing the same! A commander was needed. Chose my workhorse, the MSP430 Launchpad for the extra switch they have on it that helps me change channels and doing that on arduino pro mini would require some breadboarding i was too lazy to try.</p>
 
-<p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
+<p>The code is pretty easy and shown below. It was coded using <a href="http://energia.nu/">Energia</a> IDE.</p>
 
-<p>That&#39;s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
+<p>Based on the datasheet the I2C address of the device is <code>0x60</code> and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched"></a></p>
+<p>The other data bytes i.e. <code>0xB0</code> and <code>0x10</code> are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.</p>
 
-<p>Some soldering !</p>
+<p>I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side"></a></p>
+<script src="https://gist.github.com/aa9a2a524853674807e6.js"> </script>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled"></a></p>
+<p>If you need to check for signal quality and other things you can check out my github repo <a href="https://github.com/IndianTinker/FM430">here</a> .</p>
 
-<p>and some Brain Implant ( aka Code Download )</p>
+<p>Here&#39;s me explaining the whole setup in detail !</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant"></a></p>
-
-<p>The Code :
-<script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script></p>
-
-<p>Then modifying the nice little box to suit the PCB  (That moment when you say, &quot;If only i had a 3D Printer&quot; )</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall"></a></p>
-
-<p>Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say <strong>Manual Over-ride</strong> ?</p>
-
-<p>The wiring mess inside the switch-board.
-<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board"></a></p>
-
-<p>All cleared up !
-<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out"></a></p>
-
-<p>After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up. </p>
-
-<p>Now with a press of the button, Its all done ! I already feel so lazy!</p>
-
-<p>And yes here are the colors !</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights"></a></p>
-
-<p>Dont forget to watch the video below and if you have something to say, Please Comment Down here!</p>
-
-<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="650" height="380" src="https://www.youtube.com/embed/r3fGMu5iPY8" frameborder="0" allowfullscreen></iframe>
 
 <p>Cheers,</p>
 
-<p>Rohit </p>
+<p>Rohit</p>
 
   </div>
   
