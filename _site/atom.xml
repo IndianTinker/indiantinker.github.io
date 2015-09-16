@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-09-15T23:33:23+05:30</updated>
+ <updated>2015-09-16T07:59:56+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -19,13 +19,13 @@
    <id>http://rohitg.in/2015/09/15/PiTuber</id>
    <content type="html">&lt;p&gt;Happy Engineers Day !&lt;/p&gt;
 
-&lt;p&gt;Staying away from home triggers these nostalgic eruptions some of us can relate to. I feel them sometimes and usually get over with them by watching oldie TV shows i used loved. TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. Its changed and i would certainly refrain from using the word &amp;#39;evolved&amp;#39;. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather &amp;#39;evolved&amp;#39; to avoid them.&lt;/p&gt;
+&lt;p&gt;Televison and Childhood... These things are inseparable. Remember waiting for your favourite TV show to come live. That experience was certainly unique.TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. It has changed and I would certainly refrain from using the word &amp;#39;evolved&amp;#39;. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather &amp;#39;evolved&amp;#39; to avoid them.&lt;/p&gt;
 
-&lt;p&gt;Being the &amp;#39;90&amp;#39;s Kid&amp;#39;, that&amp;#39;s the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like &amp;quot;Byomkesh Bakshi&amp;quot; , &amp;quot;Recess&amp;quot; ,&amp;quot;Small Wonder&amp;quot;, &amp;quot;Shreeman Shreemati&amp;quot;, &amp;quot;TaleSpin&amp;quot;, &amp;quot;Captain Planet&amp;quot; etc.&lt;/p&gt;
+&lt;p&gt;Being the &amp;#39;90&amp;#39;s Kid&amp;#39;, going by the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like &amp;quot;Byomkesh Bakshi&amp;quot; , &amp;quot;Recess&amp;quot; ,&amp;quot;Small Wonder&amp;quot;, &amp;quot;Shreeman Shreemati&amp;quot;, &amp;quot;TaleSpin&amp;quot;, &amp;quot;Captain Planet&amp;quot; etc.&lt;/p&gt;
 
 &lt;p&gt;Thanks to Youtube, these are now all available on web to watch anywhere, any-time. But the crappy web connections, still make them buffer. Youtube app on android does have an offline feature but god knows where it stores them, just in case i want to see it on my PC. Moving to youtube downloading (spamming) applications for PC are not too great either. Especially when downloading documentaries you have to wait for long on a slow connection which frankly is too boring and power consuming (mental included). &lt;/p&gt;
 
-&lt;p&gt;So, one fine day while struggling with the problem,it occurred to me that a Pi which usually runs on my cellphone charger would be a great tool for overnight and omnipresent youtube downloading.&lt;/p&gt;
+&lt;p&gt;So, one fine day while struggling with the problem,it occurred to me that a Pi which can runs off my cellphone charger would be a great tool for overnight and omnipresent youtube downloading.&lt;/p&gt;
 
 &lt;p&gt;The system should read a couple of links from a file and then download them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video.&lt;/p&gt;
 
@@ -36,17 +36,21 @@
 &lt;ul&gt;
 &lt;li&gt;Clone &lt;a href=&quot;https://github.com/IndianTinker/PiTUBEr&quot;&gt;this&lt;/a&gt; repo&lt;/li&gt;
 &lt;li&gt;Install &lt;code&gt;pafy&lt;/code&gt; using pip the usual way&lt;/li&gt;
-&lt;li&gt;Change the urls in the txt file. Please do preserve the format.&lt;/li&gt;
+&lt;li&gt;Change the urls in the txt file or too might end up downloading Byomkesh Bakshi. Please do preserve the format.&lt;/li&gt;
+&lt;li&gt;Edit the script for your preferred quality and storage location.&lt;/li&gt;
 &lt;li&gt;Execute the script.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you intend to sleep and leave Pi do the work, you can check an awesome utility called &lt;code&gt;screen&lt;/code&gt; . It just detaches the terminal instance you are on and opens a new one. Which you can exit, So the task you were originally in the old instance runs.&lt;/p&gt;
+&lt;p&gt;If you intend to sleep and leave Pi do the work, you can check an awesome utility called &lt;code&gt;screen&lt;/code&gt; . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.&lt;/p&gt;
 
 &lt;p&gt;I prefer this for such onetime downloading stints.&lt;/p&gt;
 
 &lt;p&gt;You can check this amazing tutorial about screen &lt;a href=&quot;http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;After you are finished, just &lt;code&gt;sftp&lt;/code&gt; to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.&lt;/p&gt;
+&lt;p&gt;After you are finished, just &lt;code&gt;SFTP&lt;/code&gt; to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.&lt;/p&gt;
+
+&lt;p&gt;There can be several extensions of the idea. Simplest being a mailer client daemon on top of Pi, that actually receives a mail from you to download a video and sends you a mail when its done. We can also attach a small LED on one of the Pins to indicate when downloading ends.
+Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with torrents to make Pi a Bandwidth Hogger and a mean downloading machine.&lt;/p&gt;
 
 &lt;p&gt;Happy Downloading !&lt;/p&gt;
 

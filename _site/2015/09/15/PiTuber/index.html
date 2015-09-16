@@ -344,13 +344,13 @@ All Rights Reserved
 <br>
   <p>Happy Engineers Day !</p>
 
-<p>Staying away from home triggers these nostalgic eruptions some of us can relate to. I feel them sometimes and usually get over with them by watching oldie TV shows i used loved. TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. Its changed and i would certainly refrain from using the word &#39;evolved&#39;. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather &#39;evolved&#39; to avoid them.</p>
+<p>Televison and Childhood... These things are inseparable. Remember waiting for your favourite TV show to come live. That experience was certainly unique.TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. It has changed and I would certainly refrain from using the word &#39;evolved&#39;. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather &#39;evolved&#39; to avoid them.</p>
 
-<p>Being the &#39;90&#39;s Kid&#39;, that&#39;s the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like &quot;Byomkesh Bakshi&quot; , &quot;Recess&quot; ,&quot;Small Wonder&quot;, &quot;Shreeman Shreemati&quot;, &quot;TaleSpin&quot;, &quot;Captain Planet&quot; etc.</p>
+<p>Being the &#39;90&#39;s Kid&#39;, going by the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like &quot;Byomkesh Bakshi&quot; , &quot;Recess&quot; ,&quot;Small Wonder&quot;, &quot;Shreeman Shreemati&quot;, &quot;TaleSpin&quot;, &quot;Captain Planet&quot; etc.</p>
 
 <p>Thanks to Youtube, these are now all available on web to watch anywhere, any-time. But the crappy web connections, still make them buffer. Youtube app on android does have an offline feature but god knows where it stores them, just in case i want to see it on my PC. Moving to youtube downloading (spamming) applications for PC are not too great either. Especially when downloading documentaries you have to wait for long on a slow connection which frankly is too boring and power consuming (mental included). </p>
 
-<p>So, one fine day while struggling with the problem,it occurred to me that a Pi which usually runs on my cellphone charger would be a great tool for overnight and omnipresent youtube downloading.</p>
+<p>So, one fine day while struggling with the problem,it occurred to me that a Pi which can runs off my cellphone charger would be a great tool for overnight and omnipresent youtube downloading.</p>
 
 <p>The system should read a couple of links from a file and then download them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video.</p>
 
@@ -361,17 +361,21 @@ All Rights Reserved
 <ul>
 <li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
 <li>Install <code>pafy</code> using pip the usual way</li>
-<li>Change the urls in the txt file. Please do preserve the format.</li>
+<li>Change the urls in the txt file or too might end up downloading Byomkesh Bakshi. Please do preserve the format.</li>
+<li>Edit the script for your preferred quality and storage location.</li>
 <li>Execute the script.</li>
 </ul>
 
-<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code>screen</code> . It just detaches the terminal instance you are on and opens a new one. Which you can exit, So the task you were originally in the old instance runs.</p>
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code>screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
 
 <p>I prefer this for such onetime downloading stints.</p>
 
 <p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
 
-<p>After you are finished, just <code>sftp</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+<p>After you are finished, just <code>SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+
+<p>There can be several extensions of the idea. Simplest being a mailer client daemon on top of Pi, that actually receives a mail from you to download a video and sends you a mail when its done. We can also attach a small LED on one of the Pins to indicate when downloading ends.
+Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with torrents to make Pi a Bandwidth Hogger and a mean downloading machine.</p>
 
 <p>Happy Downloading !</p>
 
