@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="BoardMerge- The command line single page PDF merge utility for PCBs"/>
-  <meta name="twitter:title" content="BoardMerge- The command line single page PDF merge utility for PCBs"/>
+  <meta  property="og:title" content="CNCs & Me- Part 1 - Easy Peasy Stepper System Tester"/>
+  <meta name="twitter:title" content="CNCs & Me- Part 1 - Easy Peasy Stepper System Tester"/>
   
 
 
@@ -43,22 +43,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/04/17/BoardMerge/" />
+  <meta property="og:url" content="http://rohitg.in/2015/09/24/CNCsnMe1/" />
 
 
-  <meta content="2015-04-17T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2015-09-24T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg"/>
+  <meta content="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png" property="og:image"/>
+  <meta name="twitter:image:src" content="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png"/>
 
 
   
 
 
   
-  <meta content="python" property="article:tag"/>
+  <meta content="CNC" property="article:tag"/>
   
 
 
@@ -70,7 +70,7 @@
 
   <title>
     
-      BoardMerge- The command line single page PDF merge utility for PCBs &middot; Rohit Gupta
+      CNCs & Me- Part 1 - Easy Peasy Stepper System Tester &middot; Rohit Gupta
     
   </title>
 
@@ -329,13 +329,13 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">BoardMerge- The command line single page PDF merge utility for PCBs</h1>
-  <span class="post-date">17 Apr 2015</span>
+  <h1 class="post-title">CNCs & Me- Part 1 - Easy Peasy Stepper System Tester</h1>
+  <span class="post-date">24 Sep 2015</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi, India">Delhi, India</a></span>
 
 
 <br>
@@ -344,51 +344,48 @@ All Rights Reserved
 
 
 <br>
-  <p>Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this <a href="http://rohitg.in/2014/04/07/OpenAgitator/">Open Agitator</a> a while back to help me ease out the etching process.</p>
+  <p><em>This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff i have built! This post is about a stepper system tester i built a while back.</em></p>
 
-<p>I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.</p>
+<p>Stepper motors are quite widely used for CNCs/3D Printers or other Electromechanical hacks like the polar plotter etc. ! There is as always a constant need to run the motor to check whether its aligned properly or not? Does the flex coupling has any issues? Is the driver dead or alive and the best one- whether the current setting is fine to generate enough torque to hold or move the lead screw/Belt.</p>
 
-<p>The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we <em>should</em> cut costs. Further the <em>several-times-on-a-page</em> approach had more issues:</p>
+<p>Pestered by the same above questions i wanted to build my own driver/motor tester overnight and it 'must' be built ACAP (As cheap as possible) :D ! I stumbled open <a href="https://labitat.dk/wiki/Easy_Stepper_Motor_Controller">this</a> awesome project that i saw on Hack-A-Day.</p>
 
-<ul>
-<li>Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers</li>
-<li>The shop keeper usually charges for a single round in the printer and printing many times added to the costs.</li>
-<li>I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)</li>
-<li>You also need to set the no scaling option in <em>Acrobat</em> again and again.. duh..</li>
-</ul>
+<p>It uses an ATiny AVR microcontroller which I did'nt have and the least capable one i had was the MSP430G2230 which came in a SOIC pkg a bit difficult to go on the perfboard and my laziness propelled me away from etching a board for accommodating the same (I now feel the need though). I thought of building a microcontroller-less one as most modern stepper drivers like the ones from <a href="http://www.pololu.com/category/120/stepper-motor-drivers">Pololu</a>  need just two signal i.e STEP and DIR.</p>
 
-<p>Thats too much work specially after waiting in a queue to get to the printer !</p>
+<p>A pulse on step pin will initiate a step to the internal indexer that handles what coil has to be energized based on the sequence and micro-stepping settings, while the DIR is a level signal whose level decides whether the internal indexer of the driver counts up or down!</p>
 
-<p>I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a <strong>Single</strong> page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..</p>
+<p>So, only two inputs i.e Pulsed input for STEP and level input for DIR. This can be achieved using the 555 timer in the <b>astable</b> mode. The Output of 555 i.e pin 3 will go into the step pin and the DIR pin is pulled up using a resistor and it is also connected to ground via switch.</p>
 
-<p>Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to <em>re-etch (just imagine)</em> a whole board.</p>
+<p>This gets the job done! We can also have a POT to vary the frequency since some motors don't respond to faster pulses due to rotor inertia.The driver i am using is based on DRV8825 from TI. It is slightly wider than the polulu one. (You might call me a TI fan boy).
+I designed it myself based on reference designs by TI and had the PCBs made by SeeedStudio's Fusion PCB Service. It took about 30 odd days to reach. The driver is two layer in-contrast the Pololu ones are 4 layer. I had to widen the PCB to provide enough dissipating area for the inbuilt heatsink on the the HTSSOP pkg of the DRV8825. Also the SMD resistor cousins of those lower value resistors were not available here in Delhi, so had to go with through hole ones. Ditto for the POT ! </p>
 
-<p><strong>The Process</strong></p>
+<p>With the Tester designing almost final , I grabbed a piece of perfboard since, i didnt have the time to etch the board.</p>
 
-<ol>
-<li><p>Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.</p></li>
-<li><p>This way you will have many pdfs on the same folder. Now:
-<code>git clone https://github.com/IndianTinker/BoardMerge.git</code>  or download from <a href="https://github.com/IndianTinker/BoardMerge">here</a></p></li>
-<li><p>You need to install pyPDF dependency. PIP is the boss here!
-<code>sudo pip install pypdf</code></p></li>
-<li><p>Now paste the <code>merge.py</code> in the active eagle folder and run :
-<code>python merge.py file1.pdf file2.pdf .. .. ..</code> </p></li>
-<li><p>Wait till it gets completed and you shall see a file <code>Combine.pdf</code> with all the pdfs on a single page!</p></li>
-</ol>
+<p>The circuit is as follows:</p>
 
-<p>This a directory full of 17 pdfs !</p>
+<p><a href="https://indiantinker.files.wordpress.com/2014/04/final.png"><img class="aligncenter size-full wp-image-647" src="https://indiantinker.files.wordpress.com/2014/04/final.png?w=662" alt="final"   /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16557649863" title="before by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg" width="640" height="402" alt="before"></a></p>
+<p>It has two power inputs 12v, 5v and a common ground, all of which are sourced from an ATX! The circuit itself is pretty simple.</p>
 
-<p>After some python-fu you get this:</p>
+<p>The final build on a perfboard is shown below.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17151890736" title="final by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" width="640" height="366" alt="final"></a></p>
+<p><a href="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png"><img class="aligncenter size-full wp-image-645" src="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png?w=662" alt="perfboard1"   /></a></p>
 
-<p>Hoping that fellow makers find it useful.</p>
+<p><a href="https://indiantinker.files.wordpress.com/2014/04/perf.png"><img class="aligncenter size-full wp-image-653" src="https://indiantinker.files.wordpress.com/2014/04/perf.png?w=662" alt="PERF"   /></a></p>
 
-<p>Cheers!</p>
+<p>I chose to use a SMD 0603 10K resistor between pin 8 and 7 to reduce the space and connected 104 (0.1uF) Ceramic caps as shown. The switch is a 10xx and the capacitor is required at the input of stepper driver to reduce supply dips when it draws current. I have used female headers for the motor since most motors come with a connector that can be easily wired up with a single strand wire. I used the Power Terminal connectors for the main 12V Driver supply as the driver is rated for 2.5A which is too high for the usual jumper cables !</p>
 
-<p>Rohit</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/13828736933" title="top and bottom by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5579/13828736933_b4393c9c19_c.jpg" width="800" height="450" alt="top and bottom"></a><br />
+&nbsp;</p>
+
+<p><b>TIP:</b> If you are using the non-tinned/less tinned headers that have been lying around in the component box for a while, make sure to rub the connectors using sandpaper to remove corrosion residue on the contacts else it might seem soldered but it wont actually be soldered. Also you may use some extra flux.</p>
+
+<p>Video:<br />
+<div class="jetpack-video-wrapper"><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='662' height='403' src='https://www.youtube.com/embed/6tETMOMKnxY?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' frameborder='0' allowfullscreen='true'></iframe></span></div></p>
+
+<p>Cheers !</p>
+
+<p>Rohit Gupta</p>
 
 </div>
 <br>
@@ -409,15 +406,6 @@ All Rights Reserved
     
       <li>
         <h3>
-          <a href="/2015/09/24/CNCsnMe1/">
-            CNCs & Me- Part 1 - Easy Peasy Stepper System Tester
-            <small>24 Sep 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2015/09/15/PiTuber/">
             PiTuber- The Low Power Raspberry Pi Youtube Offliner
             <small>15 Sep 2015</small>
@@ -430,6 +418,15 @@ All Rights Reserved
           <a href="/2015/08/08/MotoX/">
             Unbricking a MotoX, Resurrecting Smiles
             <small>08 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/01/Intel/">
+            LIVE BLOG - Intel IOT Roadshow Pune
+            <small>01 Aug 2015</small>
           </a>
         </h3>
       </li>
