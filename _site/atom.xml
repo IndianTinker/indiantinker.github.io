@@ -4,13 +4,86 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-09-24T23:38:26+05:30</updated>
+ <updated>2015-09-27T01:00:30+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Fiddle Mini - The DIY 'Portable' Music System</title>
+   <link href="http://rohitg.in/2015/09/26/FiddleMini/"/>
+   <updated>2015-09-26T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/09/26/FiddleMini</id>
+   <content type="html">&lt;p&gt;Music and Portability ! These guys have a pretty long relationship ever since somebody thought of listening to his favorite tunes while wasting his time travelling in a train/bus or walking on the streets and even crossing roads or riding bikes ! It started with those shoulder mounted stereo sets until music became a bit disturbing to be heard publicly and we had our first personal music system the &lt;strong&gt;Sony Walkman&lt;/strong&gt; ! I even have a functional one from 1995. &lt;/p&gt;
+
+&lt;p&gt;Quite recently we have moved on again from the personal space to a public exhibition and we have those new JBLs and BOSEs taking up the market by a storm. The headphones are becoming increasing ergonomic to wear and we even have cranium ones available. So the next time you say it feels someone&amp;#39;s talking in my head ; It could quite well be literally taken. &lt;/p&gt;
+
+&lt;p&gt;But nothing can beat the pleasure of hearing music as it amalgamates with the swish of the breeze, the chirp of the birds and the song of nature. I am probably from the clan that just dont fall in with headphones. There is a forced disconnect i believe unless people around you make insane noises that beg to be ignored or due to social niceties. So, I decided to build my own &lt;em&gt;Portable Wood Music Box&lt;/em&gt; that could well play from any source on the go ! Yeah ! That means it runs off a battery.&lt;/p&gt;
+
+&lt;p&gt;I had this in mind ever since i made &lt;a href=&quot;/2014/11/13/Fiddle-Music-System/&quot;&gt;Fiddle&lt;/a&gt; ! The size of the speaker was too big to bring with me to Pune. &lt;/p&gt;
+
+&lt;p&gt;I did a couple of attempts but the complexity of making one was too much and using the same Circuit i used on the Fiddle anyways seemed an overkill. While, i was in Mumbai earlier this year, I was searching for a handy small speaker box, so that i get an idea of the size of electronics to squeeze in. Lamington disappointed me terribly or probably i needed a better guide ?&lt;/p&gt;
+
+&lt;p&gt;The idea was scraped until recently I went to a local eStore to check out some stuff and noticed a portable speaker i wanted to build. It was a JBL Flip kind of thing. Did A2DP only. Sounded fine ! Costed a bomb ! INR 4000 for that ! I better make my own than falling in to these marketing gimmicks !&lt;/p&gt;
+
+&lt;p&gt;And yet again :&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Why buy ? When it can be built !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;While making some unrelated search on eBay (gob bless their algorithm) i stumbled upon &lt;a href=&quot;http://www.ebay.in/itm/Can-Speaker-Mp3-Player-Supports-USB-Pen-Drive-Memory-Card-FM-Radio-Aux-/321874916228?hash=item4af13d7384&quot;&gt;this&lt;/a&gt; . This could be an ideal configuration. I was not sure about the claims though. But i made a point to buy one from Delhi which i was about to visit. It costed about the half in Delhi from the person i usually buy stuff. I got it for 200 bucks. I wonder why the form factor is like the CAN ?&lt;/p&gt;
+
+&lt;p&gt;Following &lt;em&gt;Dave Jone&lt;/em&gt;&amp;#39;s words, &amp;quot;Dont Turn it On, Take it Apart &amp;quot;.. The CAN had a very loud and &amp;quot;high on the Higher Fs&amp;quot; speaker ! Connected to a PCB with handful of passives and 3 ICs. 1 for amplification ( guessing its class D probably) , 1 seems to be a microcontroller that reads the switch and plays music from sources and one seems to be a tuner chip for FM reception. The broad feature set (get ready to be BLOWN) :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Supports USB and microSD Cards ( I have tested and found my 8GB PD doesnt work while less than 4GB works )&lt;/li&gt;
+&lt;li&gt;Has an onboard battery , a repurposed Motorola 1150mAh battery&lt;/li&gt;
+&lt;li&gt;Has FM with Autostore functionality that works pretty well&lt;/li&gt;
+&lt;li&gt;Has Aux in and out&lt;/li&gt;
+&lt;li&gt;Can be charged with a MiniUSB connector&lt;/li&gt;
+&lt;li&gt;Has a Blue Red LED to show status. Red when charging and Blue when in use. Blinking blue when autostoring etc.&lt;/li&gt;
+&lt;li&gt;A control button - Long Press Up increases volume,Long Press Down decreases volume, Push changes source, single up/down toggles the track. Minimal and effective &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thats quite a value !&lt;/p&gt;
+
+&lt;p&gt;I then started searching on Home turf for the &lt;em&gt;Classy&lt;/em&gt; form i was looking for. &lt;/p&gt;
+
+&lt;p&gt;For the infrequent visitors of the place, if you enter LR from the Railway Station side, you can find a scrap market that sells off stuff that have some defect. Kind of a junk market.That&amp;#39;s where all the gold is.I found a wooden speaker being sold for about 50 bucks a pop ! The size and the form enamoured me. It was like someone scrapped them for me. The shopkeeper who was adamant to stick one to me and was not agreeing to allow a few electrons flow down to speaker coil, so that i can make sure that everything is fine. After a few minutes he budged and got an old amp from the back and the speaker i chose was fine. All the speakers he had were forcibly severed from the back in varied proportions probably to avoid reuse. I chose the least one that can be aptly covered by the CAN speaker parts with minimal changes.&lt;/p&gt;
+
+&lt;p&gt;I desoldered all wires and connected my own antenna to it. Then accommodated the battery and antenna inside the wooden box. &lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/7DZwuMvUJs/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-08-31T15:42:06+00:00&quot;&gt;Aug 31, 2015 at 8:42am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This is what it looks before being glued and Msealed. The part is a cut out from the lower section of the CAN Speaker.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21233003405/in/dateposted-public/&quot; title=&quot;P_20150830_232403&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5663/21233003405_44877b817b_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;P_20150830_232403&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The cut out has been oriented such that it fits the Fattest USB i have and the USB is always inside the periphery of the box to avoid accidental collision with other objects around. The control button is at the bottom for increased ergonomics and avoiding accidental operation. ON/OFF button on the top ! &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21206733356/in/dateposted-public/&quot; title=&quot;P_20150830_234246&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5733/21206733356_d0dd00ff77_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;P_20150830_234246&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I next bought a collapsible handle from the hardware store and fitted it on top. Kind of serves like a makeshift dock sometimes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21044805990/in/dateposted-public/&quot; title=&quot;P_20150902_083120&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;P_20150902_083120&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The sound quality is pretty nice thanks to the speaker cabinet and a few extra passives added. And Bluetooth and IR also works with &lt;a href=&quot;/2015/05/29/TruPlay/&quot;&gt;TruPlay&lt;/a&gt; Project ! &lt;/p&gt;
+
+&lt;p&gt;I have noticed that the plastic does look a bit disjoint. So i chamfered it using Mseal ! Matches with the overall color theme too :D &lt;/p&gt;
+
+&lt;p&gt;So, when are you building one ?&lt;/p&gt;
+
+&lt;p&gt;Cheers !&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>CNCs & Me- Part 1 - Easy Peasy Stepper System Tester</title>
