@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fiddle - The DIYed Music System
-image: https://farm8.staticflickr.com/7548/15767866626_676df79bb9_c.jpg
+image: https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg
 location: Pune, India
 tags:
 - hardware

@@ -2,80 +2,121 @@
 layout: page
 title: Projects
 ---
+<div class="projects">
 
-Microcontrollers
---------
-*MSP430,ARM,Arduinos,Sensors,Motors..Awesomeness*
+<h3>Microcontrollers</h3>
+
   {% for post in site.posts %}
   {% for tag in post.tags %}
   {% if tag == 'arduino' or tag =='msp430' or tag == 'arm' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
-	
+ <div class="project">
+ <a href="{{post.url}}">
+ <img src="{{post.image}}" width="270"></a>
+ <p>
+ {{post.title}}
+ </p>
+ </div>
+
   {% endif %}
   {% endfor %}
   {% endfor %}
+</div>
 
-General Electronics
---------
-*Building things from barebone resistors,capacitors and ICs of course*
+<div class="projects">
+<h3>General Electronics</h3>
+
   {% for post in site.posts %}
   {% for tag in post.tags %}
   {% if tag == 'hardware' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
+   <div class="project">
+ <a href="{{post.url}}">
+ <img src="{{post.image}}" width="270"></a>
+ <p>
+ {{post.title}}
+ </p>
+ </div>
+
 	
   {% endif %}
   {% endfor %}
   {% endfor %}
-
-Python/Visual C Sharp
---------
-*Code for everyday problem solving*
-  {% for post in site.posts %}
+</div>
+<div class="projects">
+<h3>Python/Visual C Sharp</h3>
+{% for post in site.posts %}
   {% for tag in post.tags %}
   {% if tag == 'python' or tag=='vcsharp' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
+   <div class="project">
+ <a href="{{post.url}}">
+ <img src="{{post.image}}" width="270"></a>
+ <p>
+ {{post.title}}
+ </p>
+ </div>
+
 	
   {% endif %}
   {% endfor %}
   {% endfor %}
+</div>
 
-Web
-----
-*Mostly includes exploits with Jekyll, HTML, IOT and other web platforms*
+<div class="projects">
+<h3>Blogging</h3>
 
   {% for post in site.posts %}
   {% for tag in post.tags %}
   {% if tag == 'blogging' or tag =='web' or tag =='internet' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
-	
+   <div class="project">
+ <a href="{{post.url}}">
+ <img src="{{post.image}}" width="270"></a>
+ <p>
+ {{post.title}}
+ </p>
+ </div>
+
   {% endif %}
   {% endfor %}
   {% endfor %}
+</div>
 
-CAD/CAM 
---------
-*The latest hobby with CNC's and 3D Printing*
+
+<div class="projects">
+<h3>CAD/CAM</h3> 
+
   {% for post in site.posts %}
   {% for tag in post.tags %}
   {% if tag == 'CAD' or tag =='CNC' or tag =='3dprinters' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
+   <div class="project">
+ <a href="{{post.url}}">
+ <img src="{{post.image}}" width="270"></a>
+ <p>
+ {{post.title}}
+ </p>
+ </div>
 	
   {% endif %}
   {% endfor %}
   {% endfor %}
 
+</div>
 
-Embedded Linux
---------
-*Rasperry Pi, Beaglebone and stuff like that..*
+<div class="projects">
+<h3>Embedded Linux/IOT/SDR</h3>
+
   {% for post in site.posts %}
   {% for tag in post.tags %}
-  {% if tag == 'rpi' or tag =='raspberrypi' or tag =='beaglebone' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})  
+  {% if tag == 'rpi' or tag =='raspberrypi' or tag =='beaglebone' or tag =='sdr' or tag =='iot' %}
+   <div class="project">
+ <a href="{{post.url}}">
+ <img src="{{post.image}}" width="270"></a>
+ <p>
+ {{post.title}}
+ </p>
+ </div>
 	
   {% endif %}
   {% endfor %}
   {% endfor %}
-
+</div>
 
 

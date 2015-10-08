@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Implementing Tags/Categories on Jekyll using Liquid !
+image: https://farm6.staticflickr.com/5818/21418272493_57f79e5919_m.jpg
 tags:
 - Jekyll
 - Pune
