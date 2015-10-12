@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-10-12T21:53:14+05:30</updated>
+ <updated>2015-10-12T23:28:52+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -30,9 +30,9 @@ Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning 
 
 &lt;p&gt;Since, more &amp;#39;easy to dive in&amp;#39; stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.&lt;/p&gt;
 
-&lt;p&gt;There are lots of cool software tools available to get started. The most common being &lt;a href=&quot;http://airspy.com/download/&quot;&gt;SDR#&lt;/a&gt; probably written in C#. An amazing getting started post is written [here].(&lt;a href=&quot;http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/&quot;&gt;http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;There are lots of cool software tools available to get started. The most common being &lt;a href=&quot;http://airspy.com/download/&quot;&gt;SDR#&lt;/a&gt; probably written in C#. An amazing getting started post is written &lt;a href=&quot;http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up &lt;a href=&quot;http://1drv.ms/1LoLvdn&quot;&gt;here&lt;/a&gt; or by Adafruit [here].(&lt;a href=&quot;http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip&quot;&gt;http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up &lt;a href=&quot;http://1drv.ms/1LoLvdn&quot;&gt;here&lt;/a&gt; or by Adafruit &lt;a href=&quot;http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.&lt;/p&gt;
 
