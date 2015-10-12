@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Arduino Library for Freescale's MMA7361 3 axis accelerometer"/>
-  <meta name="twitter:title" content="Arduino Library for Freescale's MMA7361 3 axis accelerometer"/>
+  <meta  property="og:title" content="Home"/>
+  <meta name="twitter:title" content="Home"/>
   
 
 
@@ -43,23 +43,14 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/11/03/Library-for-MMA7361/" />
+  <meta property="og:url" content="http://rohitg.in/page33/" />
 
 
-  <meta content="2014-11-03T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+
+  <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg"/>
 
 
-  <meta content="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg"/>
-
-
-  
-
-
-  
-  <meta content="arduino" property="article:tag"/>
-  
 
 
 
@@ -70,7 +61,7 @@
 
   <title>
     
-      Arduino Library for Freescale's MMA7361 3 axis accelerometer &middot; Rohit Gupta
+      Rohit Gupta &middot; Think,Design,Make,Repeat
     
   </title>
 
@@ -340,153 +331,56 @@ All Rights Reserved
 </script>
 
     </div>
-      <div class="post">
-  <h1 class="post-title">Arduino Library for Freescale's MMA7361 3 axis accelerometer</h1>
-  <span class="post-date">03 Nov 2014</span>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
+      </a>
+    </h1>
 
+    <span class="post-date">25 Aug 2012</span>
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi,India">Delhi, India</a></span>
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<br>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
 
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </p>
 
+<p><em>Update-02 Oct&#39;12</em> : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://1drv.ms/1FaBBZS" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino sketch To be uploaded is :<a href="http://1drv.ms/1FtOSPY" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p></p>
 
-<br>
-  <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+<ol>
+    <li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+    <li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+    <li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+    <li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
 
-<ul>
-<li>Analog which can be directly read by our friendly ADC</li>
-<li>Digital which send data in values riding on I2C/SPI.</li>
-</ul>
+<p><em>Update-5th Apr&#39;15</em>: Fixed broken links</p>
 
-<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale &#39;s MMA7361 analog 3Axis Accelerometer</a>. </p>
-
-<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image"></p>
-
-<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
-
-<ul>
-<li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
-<li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
-<li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
-<li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
-<li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings </li>
-<li><strong>ST</strong> - Self Test</li>
-</ul>
-
-<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
-
-<p>Just connect a <code>10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
-
-<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg"></p>
-
-<p>Now just:</p>
-
-<ul>
-<li>read the analog values from the pin</li>
-<li>convert them to voltages</li>
-<li>apply sensitivity and correction</li>
-<li>and get g value</li>
-</ul>
-
-<p>Simple as that!</p>
-
-<p>Having deciphered it, i wrote a test code:</p>
-
-<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
-
-<p>It worked as designed.</p>
-
-<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
-The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
-
-<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
-
-<p>Feel free to fork it and use it. 
-Hoping the community finds it useful.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit </p>
-
-</div>
-<br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- blog2 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8347954072174647"
-     data-ad-slot="5368304813"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2015/10/12/RTLSDR1/">
-            Getting Started with RTL SDR- Playing some old school FM
-            <small>12 Oct 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/10/06/Tamhini/">
-            Tamhini Ghats
-            <small>06 Oct 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/09/26/FiddleMini/">
-            Fiddle Mini - The DIY 'Portable' Music System
-            <small>26 Sep 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-<br>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- blog -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8347954072174647"
-     data-ad-slot="1723302410"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-
+  </div>
+  
 </div>
 
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/page32">Newer</a>
+    
+  
+</div>
     </div>
 
 

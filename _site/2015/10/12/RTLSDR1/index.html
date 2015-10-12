@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Arduino Library for Freescale's MMA7361 3 axis accelerometer"/>
-  <meta name="twitter:title" content="Arduino Library for Freescale's MMA7361 3 axis accelerometer"/>
+  <meta  property="og:title" content="Getting Started with RTL SDR- Playing some old school FM"/>
+  <meta name="twitter:title" content="Getting Started with RTL SDR- Playing some old school FM"/>
   
 
 
@@ -43,22 +43,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/11/03/Library-for-MMA7361/" />
+  <meta property="og:url" content="http://rohitg.in/2015/10/12/RTLSDR1/" />
 
 
-  <meta content="2014-11-03T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2015-10-12T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg"/>
+  <meta content="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg"/>
 
 
   
 
 
   
-  <meta content="arduino" property="article:tag"/>
+  <meta content="sdr" property="article:tag"/>
   
 
 
@@ -70,7 +70,7 @@
 
   <title>
     
-      Arduino Library for Freescale's MMA7361 3 axis accelerometer &middot; Rohit Gupta
+      Getting Started with RTL SDR- Playing some old school FM &middot; Rohit Gupta
     
   </title>
 
@@ -341,13 +341,13 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">Arduino Library for Freescale's MMA7361 3 axis accelerometer</h1>
-  <span class="post-date">03 Nov 2014</span>
+  <h1 class="post-title">Getting Started with RTL SDR- Playing some old school FM</h1>
+  <span class="post-date">12 Oct 2015</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi,India">Delhi, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
 
 
 <br>
@@ -356,60 +356,38 @@ All Rights Reserved
 
 
 <br>
-  <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+  <p><em>This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online</em></p>
 
-<ul>
-<li>Analog which can be directly read by our friendly ADC</li>
-<li>Digital which send data in values riding on I2C/SPI.</li>
-</ul>
+<p>SDR ? 
+Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those &#39;virtual&#39; components. Sounds Expensive?</p>
 
-<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale &#39;s MMA7361 analog 3Axis Accelerometer</a>. </p>
+<p>SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like <a href="http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html">this</a> or <a href="http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820">this</a> .</p>
 
-<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image"></p>
+<p>The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">link</a> for more. But many folks have mentioned R820T being much more stable than E4000. </p>
 
-<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
+<p>I bought one of these a while back. I comes with a small antenna, a remote and the main dongle. </p>
 
-<ul>
-<li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
-<li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
-<li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
-<li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
-<li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings </li>
-<li><strong>ST</strong> - Self Test</li>
-</ul>
+<p>Since, more &#39;easy to dive in&#39; stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.</p>
 
-<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
+<p>There are lots of cool software tools available to get started. The most common being <a href="http://airspy.com/download/">SDR#</a> probably written in C#. An amazing getting started post is written [here].(<a href="http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/">http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/</a>)</p>
 
-<p>Just connect a <code>10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+<p>Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up <a href="http://1drv.ms/1LoLvdn">here</a> or by Adafruit [here].(<a href="http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip">http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip</a>).</p>
 
-<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg"></p>
+<p>After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.</p>
 
-<p>Now just:</p>
+<p>As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..</p>
 
-<ul>
-<li>read the analog values from the pin</li>
-<li>convert them to voltages</li>
-<li>apply sensitivity and correction</li>
-<li>and get g value</li>
-</ul>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/" title="fm1"><img src="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" width="640" height="360" alt="fm1"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Simple as that!</p>
+<p>You can also check out another great software called <a href="http://sdr-radio.com/Software">SDR Console</a>. Its a much more &#39;Pro-ish&#39; SDR receiver available. This again wont work out of the box. You can follow this <a href="http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html">link</a> for more instruction on getting RTLSDR USB support on SDR Console.</p>
 
-<p>Having deciphered it, i wrote a test code:</p>
+<p>Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.</p>
 
-<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/" title="sdrconsole"><img src="https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg" width="640" height="360" alt="sdrconsole"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>It worked as designed.</p>
+<p>Hope you found this useful! Next? Maybe we should check out the planes or satellites ?</p>
 
-<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
-The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
-
-<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
-
-<p>Feel free to fork it and use it. 
-Hoping the community finds it useful.</p>
-
-<p>Cheers,</p>
+<p>Cheers !</p>
 
 <p>Rohit </p>
 
@@ -432,15 +410,6 @@ Hoping the community finds it useful.</p>
     
       <li>
         <h3>
-          <a href="/2015/10/12/RTLSDR1/">
-            Getting Started with RTL SDR- Playing some old school FM
-            <small>12 Oct 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2015/10/06/Tamhini/">
             Tamhini Ghats
             <small>06 Oct 2015</small>
@@ -453,6 +422,15 @@ Hoping the community finds it useful.</p>
           <a href="/2015/09/26/FiddleMini/">
             Fiddle Mini - The DIY 'Portable' Music System
             <small>26 Sep 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/09/24/CNCsnMe1/">
+            CNCs & Me- Part 1 - Easy Peasy Stepper System Tester
+            <small>24 Sep 2015</small>
           </a>
         </h3>
       </li>

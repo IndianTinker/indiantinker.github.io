@@ -4,13 +4,55 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-10-08T23:15:22+05:30</updated>
+ <updated>2015-10-12T21:53:14+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Getting Started with RTL SDR- Playing some old school FM</title>
+   <link href="http://rohitg.in/2015/10/12/RTLSDR1/"/>
+   <updated>2015-10-12T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/10/12/RTLSDR1</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;SDR ? 
+Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those &amp;#39;virtual&amp;#39; components. Sounds Expensive?&lt;/p&gt;
+
+&lt;p&gt;SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like &lt;a href=&quot;http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html&quot;&gt;this&lt;/a&gt; or &lt;a href=&quot;http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820&quot;&gt;this&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this &lt;a href=&quot;http://sdr.osmocom.org/trac/wiki/rtl-sdr&quot;&gt;link&lt;/a&gt; for more. But many folks have mentioned R820T being much more stable than E4000. &lt;/p&gt;
+
+&lt;p&gt;I bought one of these a while back. I comes with a small antenna, a remote and the main dongle. &lt;/p&gt;
+
+&lt;p&gt;Since, more &amp;#39;easy to dive in&amp;#39; stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.&lt;/p&gt;
+
+&lt;p&gt;There are lots of cool software tools available to get started. The most common being &lt;a href=&quot;http://airspy.com/download/&quot;&gt;SDR#&lt;/a&gt; probably written in C#. An amazing getting started post is written [here].(&lt;a href=&quot;http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/&quot;&gt;http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up &lt;a href=&quot;http://1drv.ms/1LoLvdn&quot;&gt;here&lt;/a&gt; or by Adafruit [here].(&lt;a href=&quot;http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip&quot;&gt;http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.&lt;/p&gt;
+
+&lt;p&gt;As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/&quot; title=&quot;fm1&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;fm1&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also check out another great software called &lt;a href=&quot;http://sdr-radio.com/Software&quot;&gt;SDR Console&lt;/a&gt;. Its a much more &amp;#39;Pro-ish&amp;#39; SDR receiver available. This again wont work out of the box. You can follow this &lt;a href=&quot;http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html&quot;&gt;link&lt;/a&gt; for more instruction on getting RTLSDR USB support on SDR Console.&lt;/p&gt;
+
+&lt;p&gt;Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/&quot; title=&quot;sdrconsole&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;sdrconsole&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope you found this useful! Next? Maybe we should check out the planes or satellites ?&lt;/p&gt;
+
+&lt;p&gt;Cheers !&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Tamhini Ghats</title>
