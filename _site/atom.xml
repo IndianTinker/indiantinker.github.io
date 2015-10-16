@@ -4,13 +4,145 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-10-12T23:28:52+05:30</updated>
+ <updated>2015-10-17T02:06:34+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>CNCs & Me- Part 2 - Sketchy:The TableTop Pen Artist</title>
+   <link href="http://rohitg.in/2015/10/14/CNCsnMe2/"/>
+   <updated>2015-10-14T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/10/14/CNCsnMe2</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff I have built! This post is about a Table Top Pen scribler called &amp;quot;Sketchy&amp;quot; made with junkyard stuff that lets you draw stuff on paper !&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I had proposed my guide that i intended to make a CNC for the final project. She didnt looked too confident that we will make it past the first stage neither were we. The image of a CNC that was in the mind was probably the one we had in our shops. Big Humongous !&lt;/p&gt;
+
+&lt;p&gt;I planned to make something smaller like a ShopBot or may be a shapeOko.To test the idea and establish confidence, I thought of making a tiny pen plotter for the mid term review that could draw intricate designs on a 4cm x 4cm paper piece.&lt;/p&gt;
+
+&lt;p&gt;I saw an amazing laser engraver made by a Swedish guy doing rounds on the internet which gave me enough confidence that it is possible.&lt;/p&gt;
+
+&lt;p&gt;The plan was to buy a couple of CD Rom drives and use the lens assemble to move a pen ( Did not use a laser citing dangerous repercussions ) in X and Y axis and a Servo controlling the pen lifts. &lt;/p&gt;
+
+&lt;p&gt;Next day, i was at &amp;#39;Wazirpur&amp;#39; , my local IT hub in search of discarded office equipment. I knew a few people there who happily guided me to come late evening to pick up stuff from the pile that gets generated throughout the day. &lt;/p&gt;
+
+&lt;p&gt;As suggested, went there about 8pm and a junk pile was awaiting me. There were no promises as always. I bought 3 for 250 bucks. That night was going to be long as i had to open them and extract the assemblies. Thankfully testing them with my &lt;a href=&quot;/2015/09/24/CNCsnMe1/&quot;&gt;Stepper Tester&lt;/a&gt; they all turned out to be fine. &lt;/p&gt;
+
+&lt;p&gt;Now, the frame had to be made to have everything in place. We had recently got a new Airconditioner that came in a wooden frame. Ahaaaa!
+I quickly gathered them and used some nooby CAD skills to make a frame out of it in digital. I didnt want to fail for the very first time.
+CAD Package? &lt;code&gt;FreeCAD&lt;/code&gt; :D&lt;/p&gt;
+
+&lt;p&gt;These were the designs:&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/16708678754/in/dateposted-public/&quot; title=&quot;tinyg2&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8739/16708678754_92c44085f4_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;tinyg2&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17331146885/in/dateposted-public/&quot; title=&quot;tinyg&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8711/17331146885_ecccec2e11_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;tinyg&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After some lumber work, I replicated the design on actual wood. Its a fit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17330714291/in/dateposted-public/&quot; title=&quot;All Nailed up&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7681/17330714291_9c5572be10_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;All Nailed up&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now assembling the axis to the wooden frame was easy too. Just screwed them using a soft rubber damper which are originally used in CD ROMs. They help in absorbing stepper motor/movement vibrations. I used some old FRP to make a functional base and then a piece of cardboard from TI samples boxes to make a final plane surface. All held together by hot glue. A servo (from a broken RC Plane) to just sway away the pen when its done on the vertical axis was also glued.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17331113775/in/dateposted-public/&quot; title=&quot;Assembling the axis&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8721/17331113775_735084b3b2_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Assembling the axis&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time for the First Test&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I used the &lt;em&gt;MSP430 Launchpad&lt;/em&gt; to cook a basic code to make a small square( Nostalgic Logo Days ).
+You can notice the servo and felt pen. I ran into a problem.. Whenever the servo would finish it would make a long enough strike to destroy the art work. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17331112105/in/dateposted-public/&quot; title=&quot;Without a good PenLifting Mechanism&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8838/17331112105_f250af88b8_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Without a good PenLifting Mechanism&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;So, instead of using this mechanism, of moving the pen on the paper, i should rather just lift the pen. But, I had blown the 3rd CD ROM i bought of over heating (higher current setting on stepper Driver). So, i had to do something with the servo only. The catch was to convert the circular motion of the servo to pen lifting motion. Analogy ? ? ?&lt;/p&gt;
+
+&lt;p&gt;PISTONS&lt;/p&gt;
+
+&lt;p&gt;Unfortunately the picture is not available as the old laptop crashed. I drilled a small hole in the pen and then screwed it to an arm that is attached to the point of rotation of servo motor. The pen was made to pass through a hole drilled in an acrylic sheet and pasted on the servo. Now whenever the servo would move up, the arm would move in a circular motion lifting the pen through the hole and voila the circular motion is converted to a up and down motion. &lt;/p&gt;
+
+&lt;p&gt;Next problem was with the software. I did make an elementary (could hardly do basic shapes) &lt;em&gt;g-Code&lt;/em&gt; interpretor for MSP430 but it was not that robust and was not compatible with standard tools that could make the device far more incompatible with higher level software.&lt;/p&gt;
+
+&lt;p&gt;So, i made the switch to &lt;a href=&quot;https://github.com/grbl/grbl&quot;&gt;GRBL&lt;/a&gt;. &lt;strong&gt;GRBL&lt;/strong&gt; brings hobby grade setups to professional levels. ShapeOko is an example. Also it runs on my 4$ Arduino Pro Mini happily. &lt;/p&gt;
+
+&lt;p&gt;Yee Haw!!&lt;/p&gt;
+
+&lt;p&gt;The only foreseeable problem left was to lift the Pen. Standard Grbl gives only a Spindle ON/OFF Command and a Spindle PWM command that does not work with servos. Running short of time, I added a slave &lt;em&gt;MSP430G2230&lt;/em&gt; to just check the Spindle ON/OFF pin (D12) and lift the pen accordingly. With all in place, I designed,etched,drilled and soldered my own control board. Check out the pics below:&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21605813333/in/dateposted-public/&quot; title=&quot;Pro Mini on the front&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/668/21605813333_7bf2be476a_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;Pro Mini on the front&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the MSP430 Below and a teeny tiny SOT23 Voltage Regulator.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/22039088618/in/dateposted-public/&quot; title=&quot;MSP430 on the back&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5747/22039088618_50dca53f82_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;MSP430 on the back&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;2 Bottlenecks were waiting for me down the line.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First:&lt;/strong&gt; The way i implemented the PWM for servo was terribly buggy. To save time i was doing delay stuff. Bad ! The old and rickety servo motor gave up on me while trying to debug the issue. Problem solved by running down to &lt;em&gt;LR&lt;/em&gt; late evening to get a brand new tower pro and doing a hardware PWM for the Servo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second:&lt;/strong&gt; The curious case of tilted bed. The base of the setup where the paper was placed was not very smooth and this resulted in the pen not even making contact in some parts, destroying the job. Uff.. I could not figure out a solution soon.&lt;/p&gt;
+
+&lt;p&gt;Thankfully &lt;a href=&quot;https://twitter.com/anool&quot;&gt;@anool&lt;/a&gt; helped and suggested me to use a spring loaded pen to overcome the undulations on the surface.
+With little trial and error, it worked out to be great.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17305398656/in/dateposted-public/&quot; title=&quot;Gel Pen Mod&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8846/17305398656_bf5f239a43_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Gel Pen Mod&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the progress in the quality of output:&lt;/p&gt;
+
+&lt;p&gt;No pen lift mechanism:&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17143652098/in/dateposted-public/&quot; title=&quot;Test&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7792/17143652098_8aea98f163_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Test&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;New pen lift mechanism:&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17329551372/in/dateposted-public/&quot; title=&quot;with the new pen lift mechanism&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8733/17329551372_1a7ee56429_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;with the new pen lift mechanism&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17143651048/in/dateposted-public/&quot; title=&quot;Albert Baba&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8812/17143651048_cf87f4d6ef_z.jpg&quot; width=&quot;568&quot; height=&quot;640&quot; alt=&quot;Albert Baba&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Changing the Servo angles a bit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17331110185/in/dateposted-public/&quot; title=&quot;HackADay&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7664/17331110185_20f8b3655c_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;HackADay&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/16708636354/in/dateposted-public/&quot; title=&quot;Batman&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8765/16708636354_9b2e11ef57_z.jpg&quot; width=&quot;640&quot; height=&quot;536&quot; alt=&quot;Batman&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17329216742/in/dateposted-public/&quot; title=&quot;IronMan&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7730/17329216742_7466b08f30_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;IronMan&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/17329550132/in/dateposted-public/&quot; title=&quot;Cards&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8706/17329550132_0c1ecae547_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Cards&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Workflow&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The work flow is pretty standard one: The softwares used are :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://inkscape.org/en/&quot;&gt;Inkscape&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slackersdelight.com/instructables/laserengraver.zip&quot;&gt;Inkscape Laser Engraver Extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zapmaker.org/projects/grbl-controller-3-0/grbl-controller-main-screen-options/&quot;&gt;GRBL Controller&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Inkscape - this is open source vector editing software. (download )
+Laser engraver extension - This generates the g-code needed to control the laser. (download )
+G-code sender - A small windows program I wrote to communicate with Grbl. (download )(source )&lt;/p&gt;
+
+&lt;p&gt;Install Inkscape.
+For the extension.Open the .zip file  and copy all the contents to &amp;quot;c:\Program Files\Inkscape\share\extensions&amp;quot;. You have to restart Inkscape for the extension to show up. &lt;/p&gt;
+
+&lt;p&gt;Now Download and install grbl controller. Since my machine does not have the end switch you will have to take care of the constraints in the design and manually home the machine.&lt;/p&gt;
+
+&lt;p&gt;Now, draw the art work in inkscape and export the g code by running the extension. Load the .nc file in GRBL Controller and START the job!! Wohoo! The machine can pretty much draw anything.&lt;/p&gt;
+
+&lt;p&gt;Check out a couple of time lapses of the machine in progress.&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/-j6FE01CGlQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/ASgAicTuyx4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Please feel free to ask any questions in comments below,&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Getting Started with RTL SDR- Playing some old school FM</title>
