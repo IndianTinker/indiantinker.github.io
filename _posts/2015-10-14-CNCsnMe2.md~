@@ -68,7 +68,7 @@ Check out the MSP430 Below and a teeny tiny SOT23 Voltage Regulator.
 
 2 Bottlenecks were waiting for me down the line.
 
-**First:** The way i implemented the PWM for servo was terribly buggy. To save time i was doing delay stuff. Bad ! The old and rickety servo motor gave up on me while trying to debug the issue. Problem solved by running down to *LR* late evening to get a brand new tower pro.
+**First:** The way i implemented the PWM for servo was terribly buggy. To save time i was doing delay stuff. Bad ! The old and rickety servo motor gave up on me while trying to debug the issue. Problem solved by running down to *LR* late evening to get a brand new tower pro and doing a hardware PWM for the Servo.
 
 **Second:** The curious case of tilted bed. The base of the setup where the paper was placed was not very smooth and this resulted in the pen not even making contact in some parts, destroying the job. Uff.. I could not figure out a solution soon.
 
@@ -105,7 +105,7 @@ Changing the Servo angles a bit.
 
 **Workflow**
 
-The work flow is pretty standard one: The software used are :
+The work flow is pretty standard one: The softwares used are :
 
 - [Inkscape](https://inkscape.org/en/)
 - [Inkscape Laser Engraver Extension](http://www.slackersdelight.com/instructables/laserengraver.zip)

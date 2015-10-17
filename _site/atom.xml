@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-10-17T02:06:34+05:30</updated>
+ <updated>2015-10-17T12:26:23+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -119,12 +119,8 @@ With little trial and error, it worked out to be great.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://zapmaker.org/projects/grbl-controller-3-0/grbl-controller-main-screen-options/&quot;&gt;GRBL Controller&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Inkscape - this is open source vector editing software. (download )
-Laser engraver extension - This generates the g-code needed to control the laser. (download )
-G-code sender - A small windows program I wrote to communicate with Grbl. (download )(source )&lt;/p&gt;
-
 &lt;p&gt;Install Inkscape.
-For the extension.Open the .zip file  and copy all the contents to &amp;quot;c:\Program Files\Inkscape\share\extensions&amp;quot;. You have to restart Inkscape for the extension to show up. &lt;/p&gt;
+For the extension.Open the .zip file  and copy all the contents to &lt;code&gt;c:\Program Files\Inkscape\share\extensions&lt;/code&gt;. You have to restart Inkscape for the extension to show up. &lt;/p&gt;
 
 &lt;p&gt;Now Download and install grbl controller. Since my machine does not have the end switch you will have to take care of the constraints in the design and manually home the machine.&lt;/p&gt;
 
