@@ -4,13 +4,103 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-10-17T12:26:23+05:30</updated>
+ <updated>2015-10-25T09:52:26+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Open Badge:You'da Maker</title>
+   <link href="http://rohitg.in/2015/10/22/OpenBadge/"/>
+   <updated>2015-10-22T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/10/22/OpenBadge</id>
+   <content type="html">&lt;p&gt;Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.&lt;/p&gt;
+
+&lt;p&gt;For the LED array we could use the usual LED Matrix,5x7 seemed to be a good size comfortable for both the pins and programmer.But..&lt;/p&gt;
+
+&lt;p&gt;The LED Matrix available in stores nearby had a lot of issues: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Profile was too thick&lt;/li&gt;
+&lt;li&gt;The sizes available were either too big or too small for a 5x7 size.&lt;/li&gt;
+&lt;li&gt;Came with no datasheet, which meant bull work required to find out all the R and C values. Dahh!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, I had to make a &lt;strong&gt;tough&lt;/strong&gt; choice of soldering 35 LEDs which meant the PCB was going to be &lt;em&gt;Dou.Double Sided&lt;/em&gt; (Literal stammering). I had never done double sided at home. But it was never too late and that difficult. &lt;strong&gt;Basically&lt;/strong&gt; you have to align two sides and just slip in the copper clad , tape it , iron it and  etch it and then &lt;em&gt;Hope is all you need&lt;/em&gt; !&lt;/p&gt;
+
+&lt;p&gt;FYI, that &amp;#39;basically&amp;#39; came after i spoilt one full PCB. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;PRO-TIP: You can have some alignment marks out of the scope of PCB in different directions in the dimension layer. Now when you align the front and back you just align the marks. Check this &lt;a href=&quot;http://www.instructables.com/id/Two-sided-PCB-using-toner-method/&quot;&gt;instructable&lt;/a&gt; i used as a reference.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The major elements on the PCB were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LED Matrix&lt;/li&gt;
+&lt;li&gt;A MSP430G2553 microcontroller brain&lt;/li&gt;
+&lt;li&gt;A ULN2803 Darlington Driver to sink the current&lt;/li&gt;
+&lt;li&gt;A USB connector to charge the battery&lt;/li&gt;
+&lt;li&gt;A SBW connector to program the MSP430&lt;/li&gt;
+&lt;li&gt;A Switch to change the message&lt;/li&gt;
+&lt;li&gt;A Li-Ion battery from a Discarded Phone&lt;/li&gt;
+&lt;li&gt;Current limiting and Pull up resistors&lt;/li&gt;
+&lt;li&gt;Decoupling Capacitors&lt;/li&gt;
+&lt;li&gt;A REG1117 Regulator for MSP430&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Schematics and PCBs took 3 days of part-time work. Etching,Drilling and Soldering took a nighter.I had a provision to use the PCB directly as the badge with two big drill holes on the top.&lt;/p&gt;
+
+&lt;p&gt;Check out the images below: &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/20736425093/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5823/20736425093_7349c070f7_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21346949492/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/737/21346949492_c5295449cb_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/20736678943/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5800/20736678943_11ac529978_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21365927401/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/612/21365927401_052a3bfdef_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/20736053114/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/575/20736053114_bf0ed32bef_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21171876949/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/676/21171876949_394ce34d21_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21169357760/in/dateposted-public/&quot; title=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/568/21169357760_4dc214b3f0_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery.&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After experimenting with readability, i found out that the display was a dud in bright light. So, i repurposed an already cut-out heart shaped Red Diffuser for the display. It was a game changer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/21510455275/in/dateposted-public/&quot; title=&quot;P_20150917_110935&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/567/21510455275_37e0e33463_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;P_20150917_110935&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The basic code is available &lt;a href=&quot;https://github.com/IndianTinker/OpenBadge&quot;&gt;here&lt;/a&gt; for people who wish to build it.
+The final version could do:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;5 Strings scrolling&lt;/li&gt;
+&lt;li&gt;Temperature Display (MSP430s have a temperature sensor in-built)&lt;/li&gt;
+&lt;li&gt;Static Display&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Things that the hardware allowed but i didnt get the time to program:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Battery state sensing&lt;/li&gt;
+&lt;li&gt;Animations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When i showed it to &lt;a href=&quot;https://twitter.com/anool&quot;&gt;@anool&lt;/a&gt; at Maker Fest, he liked it and gave me a &lt;a href=&quot;http://wyolum.com/projects/badger/&quot;&gt;BadgEr&lt;/a&gt; which was even cooler.&lt;/p&gt;
+
+&lt;p&gt;Please check out the video below:&lt;/p&gt;
+
+&lt;iframe width=&quot;480&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/KU9X9qTaQvg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers !!&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>CNCs & Me- Part 2 - Sketchy:The TableTop Pen Artist</title>
@@ -2442,6 +2532,35 @@ IndianTinker&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
 &lt;p&gt;Edit: There is a bit more to Ahemadabad - The Sabarmati Ashram, Vintage Car Museum, Science City and Delux Gujrati Thali ! Maybe next time ! :D&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>TI-CEPD Diaries:The Electronic Inaugural Lamp</title>
+   <link href="http://rohitg.in/2013/04/29/InnaugLamp/"/>
+   <updated>2013-04-29T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2013/04/29/InnaugLamp</id>
+   <content type="html">&lt;p&gt;Inauguration Lamps.. They are just so mainstream. The same one candle lighting the others one by one. Pretty Bucolic ! But Prof.Gadre had something different in mind for the inauguration of Texas Instruments Analog Design Challenge Finals in Blore,2013.&lt;/p&gt;
+
+&lt;p&gt;I was glad to be the part of the team doing all the work for the project. The concept was to use a conventional usability model and introduce a different way to light things up. In brevity,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;An electronic matchstick with a magnetic field sensor ( not a pricey hall sensor ) while be struck against a magic matchbox with a precise number of magnets. When the matchstick is struck with matchbox magic happens and the LEDs start lighting up on the matchstick. Ah! The matchbox is powered by a supercap mind you ! Hidden somewhere inside the matchstick is an IR LED, whispering a secret modulated code which can only be read by our compatible lamps that too only within a certain distance. When the Lamps see the matchstick they just light up ! No ghee teel, pure electronics !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We all worked for a few months on the project and the final versions demonstrated had two LEDs to indicate the state of the Lamps and were hand(routed-etched-drilled-soldered and assembled) at CEPD. The main diffuser was 3D printed in the Lab itself in the shape of a Flame.&lt;/p&gt;
+
+&lt;p&gt;The structure was made using industrially laser cut acrylic elements.&lt;/p&gt;
+
+&lt;p&gt;Check out &lt;a href=&quot;https://e2e.ti.com/blogs_/b/designproject/archive/2013/04/26/rub-the-lamp-and-make-a-wish&quot;&gt;this&lt;/a&gt; blog post by &lt;strong&gt;Ravikumar Sir&lt;/strong&gt; that details the project. The project also got covered in &lt;a href=&quot;http://www.timescrest.com/life/3d-printer-the-desi-dimension-10505&quot;&gt;Times Crest&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is Prof. Gadre showing the project in action.&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/l5DQwYKH-GU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
 </content>
  </entry>
  

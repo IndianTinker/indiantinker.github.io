@@ -1,0 +1,94 @@
+---
+layout: post
+title: The Noob's Guide to Pune Relocation
+image: https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg 
+location: Pune, India
+tags:
+- travel
+---
+
+
+It has almost been 8 months since i moved to Pune for Work from my hometown *Delhi* . Pune has a comparably benevolent weather as compared to Delhi. Summers are sweeter and so are winters. People of the city are great. They are quite helpful and humble. The city's older areas have stark resemblance to Old Delhi and has lots of nice Forts, Temples, Museums and best of all eateries. Language is not a major issue as Marathi is somewhat similar to Hindi and most people understand Hindi but prefer to talk in Marathi. *Changla !* 
+
+I am writing is post mostly in a log format and will keep adding information as an when I get more. 
+
+If google sent you here, then probably you too are interested/moving to Pune soon.I hope you find the information useful. The post is divided into several important sections that will be updated from time to time. Lots of unorganized info to follow so lets get started:
+
+**Shelter**
+
+*This section deals with housing related things*
+
+- If you are coming here for an IT company, most of them are concentrated in *Hinjewadi and Wakad* side of Pune, which geographically comes under Pimpri Chinchwad city of Pune Metropolitan Region. Then most popular housing locations will be Wakad, Hinjewadi, Vishal Nagar(Jagtap Dairy), Pimple Saudagar and Pimple Gurav.
+- Before you hit the land, searching for houses/flats , take note of the relocation policy of your company and make sure brokerage is covered.
+- Choose room-mates wisely. Initial judgements can be pretentious. You would certainly like to live with people on the same frequency as your' s else, things could go wary. 
+-Prefer searching online on sites like [Housing.com](http://housing.com/), [MagicBricks](http://www.magicbricks.com) etc first and prefer ones that are listed by Owners themselves to avoid steep brokerage , which is usually 1 month rent for 11 months agreement and 2 months rent for more than 11 months.
+- Most societies have a board *Beware of Dogs* right below a board that says **Bachelors Not Allowed** that pretty much sets their priorities straight. Dont go looking for flats in them.
+- Prefer on *pakka* agreement which requires you to go to the municipality office against a Notary Agreement. This depends on the landlord entirely. A pakka agreement is useful when you wish to own a vehicle in Pune where a notorized one bites the dust.
+- In case you need furniture, the market has a rental based system. You can buy cheap and flimsy furniture and once you leave you can return it for 50-60% its value. Mattresses are also available for cheap.
+- Some flats come with a furnished status but are usually 10k more than normal. If you plan to stay about 11 months then evaluate the economics. 10k* 11 = 1,11,000 INR. So, if the facilities are worth that even after depreciation. Go for it! else negotiate. 
+- Chalk out a *Room Mate Agreement* like Sheldon ! It helps in long run.
+- D Mart is the best place to shop here.
+
+**Transportation**
+
+*This section deals with Transportation related things*
+
+Expect Nothing
+--------------
+
+- The city's transport is abysmal and has been so since ages. The Pune City is a bit better but PCMC is worse. Its like Noida of Pune. Auto walla's make money on your sufferings.Prefer Ola Cabs !
+- You wont get a direct bus quite often. That was pretty irritating initially until i met Mr. Chaturvedi on the Rakshak Chowk Bus Stop one day. He his golden words were:  "Only a few buses go to your destination directly, but many go that way !" Saying so he boarded his bus to Vishrantwadi leaving me with ideas ! So, the trick is use **Here Transit** to find buses that go in the direction you want and board them and deboard at the point they divert from your path and then reboard. So, if you want to go to FC Road. Take a bus for PMC/Station and use the above algo.
+- Get a 2 wheeler (I don’t have one though) ! OLX is great place to find or go to Rasta Peth for second hand stuff. Again you have to pay more to the brokers here, and a notorized agreement wont work !
+- There is also a local train service in Pune but is not preferred unless you wish to travel out of the city like going to *Lonavala* or *Malavali* etc.
+- If you wish to go to Mumbai ! Trust only **Shivneri** , Neeta has a terrible service everywhere and even to Ahemadabad (Been there Done that). You can also take shared cabs from Chinchwad Station. They charge about 200 - 250 bucks based on demand. 
+  
+**Food**
+
+*This section deals with Food related things*
+
+- Everything is awesome! There are lot of options here. Dosa's and Vada Pao's are like staple street foods. The Standard Price for Vada Pao is 10 bucks and Dosa is 20- 30 bucks .
+- There are lot of good places in the city. Try GoodLuck Cafe's Fruit Fanny,La Plaisir Patisserie & Bistro's Chesse Cake, Garden Vada Pao , Marz-o-rin's Sandwiches, Durvankur's Thali or Sabutdana Wadi at Shaniwar Wada. Check Zomato for more listings. There is a *Burger King* as well in Koregaon Park where you get *gross* burgers and the infamous *German Bakery* is there too, near Osho Ashram 
+- You can't get on eating from these restaurants on daily basis so, for usual days you can either hire a cook. There is no dearth of them and they charge around 600-700 per head. 
+- If cook is too much of a pain, go get a dabbawalla . He serves hot food in a tiffin at a reasonable price. Do ping me in the comments if you need any contacts. I have tried about 4 of them :P
+
+**Internet**
+
+*This section deals with Connectivity related things*
+
+- Internet Broadband service is a booming business here and there are tons and tons of them. To name a few Spectranet, iConnect, Reliance, Tikona, Tata Docomo, Airtel etc.
+- Tikona is Ok and there are several breakdowns, but customer service is good.
+- Docomo is great but limited to certain societies only.
+- Reliance s*#ks as usual ! No support and useless Helplines, but its the cheapest.
+- iConnect and Sprectranet are good too but again limited to some societies.
+- As far as cellular connectivity is concerned. Voda>Idea>Airtel>Docomo
+
+
+**POIs**
+
+
+*This section deals with Places to roam around*
+
+- Shaniwar Wada
+- Dagdu Shet Ganpati Temple
+- Raja Dinakar Museum 
+- Lonavala
+- Karla Caves , Malavali
+- Sinhagad Fort
+- Bike ride through Pashan Area
+- *will add more as i visit*
+
+
+Hope people find this useful!
+
+
+Cheers !!
+
+Rohit 
+
+
+
+
+
+
+
+ 
