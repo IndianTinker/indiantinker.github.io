@@ -3,7 +3,7 @@ layout: post
 title: Arduino Library for Freescale's MMA7361 3 axis accelerometer
 image: https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg
 tags:
-- arduino
+- tutarduino
 ---
 
 Accelerometers huh! No new term these days! Every **practical** phone these days has one! Accelerometers churn out data in two ways :
