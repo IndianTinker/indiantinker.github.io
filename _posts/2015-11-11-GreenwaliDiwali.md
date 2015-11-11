@@ -23,6 +23,8 @@ The idea was to reiterate the experience of fire crackers by amalgamating the li
 
 For the installation, i used the Rasperry Pi ( as it was in my Arm's Reach :P ) and some Python to search `Twitter` for tweets that were supporting the cause for a green Diwali by tracking the hastag `#Diwali` and then parsing the tweets to check if they sounded 'Green' and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.
 
+**Update :** Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is *happy* ! Tweet Tweet! which means tweet with a **#GreenDiwali** and there should be the word **happy** in it.
+
 Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !
 
 That's pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet ! 

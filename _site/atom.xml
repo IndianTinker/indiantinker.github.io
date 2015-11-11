@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-11-11T10:08:30+05:30</updated>
+ <updated>2015-11-11T10:46:51+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -32,6 +32,8 @@
 &lt;p&gt;The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it &lt;em&gt;electronically&lt;/em&gt; .&lt;/p&gt;
 
 &lt;p&gt;For the installation, i used the Rasperry Pi ( as it was in my Arm&amp;#39;s Reach :P ) and some Python to search &lt;code&gt;Twitter&lt;/code&gt; for tweets that were supporting the cause for a green Diwali by tracking the hastag &lt;code&gt;#Diwali&lt;/code&gt; and then parsing the tweets to check if they sounded &amp;#39;Green&amp;#39; and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update :&lt;/strong&gt; Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is &lt;em&gt;happy&lt;/em&gt; ! Tweet Tweet! which means tweet with a &lt;strong&gt;#GreenDiwali&lt;/strong&gt; and there should be the word &lt;strong&gt;happy&lt;/strong&gt; in it.&lt;/p&gt;
 
 &lt;p&gt;Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !&lt;/p&gt;
 
