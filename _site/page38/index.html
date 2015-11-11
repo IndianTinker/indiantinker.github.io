@@ -43,7 +43,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page18/" />
+  <meta property="og:url" content="http://rohitg.in/page38/" />
 
 
 
@@ -355,87 +355,37 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/05/01/RoomMote/">
-        RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
       </a>
     </h1>
 
-    <span class="post-date">01 May 2015</span>
+    <span class="post-date">25 Aug 2012</span>
 
-    <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .</p>
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
-<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting? </p>
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<p>Interesting !!</p>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
-<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and &quot;no mess visible&quot;. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project. </p>
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box"></a></p>
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </p>
 
-<p>So, the plan was   :</p>
+<p><em>Update-02 Oct&#39;12</em> : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+<p style="text-align:center;"><a title="ControlWare" href="http://1drv.ms/1FaBBZS" target="_blank">ControlWare.exe</a></p>
+<p style="text-align:left;">The Arduino sketch To be uploaded is :<a href="http://1drv.ms/1FtOSPY" target="_blank"> Source</a></p>
+<p style="text-align:left;">Some of FAQ`s are:</p></p>
 
-<blockquote>
-<p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall). </p>
-</blockquote>
+<ol>
+    <li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+    <li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+    <li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+    <li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
 
-<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don&#39;t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
-
-<p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
-
-<p>For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used <a href="http://www.ti.com/lit/ds/symlink/uln2803a.pdf">ULN2803</a> , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.</p>
-
-<p>For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged 100mA LDO .</p>
-
-<p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
-
-<p>That&#39;s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched"></a></p>
-
-<p>Some soldering !</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled"></a></p>
-
-<p>and some Brain Implant ( aka Code Download )</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant"></a></p>
-
-<p>The Code :
-<script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script></p>
-
-<p>Then modifying the nice little box to suit the PCB  (That moment when you say, &quot;If only i had a 3D Printer&quot; )</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall"></a></p>
-
-<p>Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say <strong>Manual Over-ride</strong> ?</p>
-
-<p>The wiring mess inside the switch-board.
-<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board"></a></p>
-
-<p>All cleared up !
-<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out"></a></p>
-
-<p>After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up. </p>
-
-<p>Now with a press of the button, Its all done ! I already feel so lazy!</p>
-
-<p>And yes here are the colors !</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights"></a></p>
-
-<p>Dont forget to watch the video below and if you have something to say, Please Comment Down here!</p>
-
-<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen></iframe>
-
-<p>Cheers,</p>
-
-<p>Rohit </p>
+<p><em>Update-5th Apr&#39;15</em>: Fixed broken links</p>
 
   </div>
   
@@ -443,11 +393,11 @@ All Rights Reserved
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page19">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     
-      <a class="pagination-item newer" href="/page17">Newer</a>
+      <a class="pagination-item newer" href="/page37">Newer</a>
     
   
 </div>
