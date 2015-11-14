@@ -300,6 +300,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -355,45 +363,126 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/10/28/Dollar-LED-Bulb/">
-        Inside a Cheap LED Bulb
+      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
+        Nokia 5110 LCDs and MSP430
       </a>
     </h1>
 
-    <span class="post-date">28 Oct 2014</span>
+    <span class="post-date">09 Nov 2014</span>
 
-    <p>I was recently on the visit to my hometown <em>Delhi</em> this Diwali when i visited <strong>Lajpat Rai</strong> market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.</p>
+    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia&#39;s Monochome days. Several might have spent days playing space invaders/snakes etc. </p>
 
-<p>It was pretty clear that the Bulbs wont have those <em>Chinese</em> drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.</p>
+<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align= "center"></a></p>
+<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code>2.7-3.3V</code> happy for our MSP430.</p>
 
-<p>And Bingo!
-It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS,%20One%20can%20only%20gjnvg/s1600/transformerless+power+supply+circuit.png">like this</a>) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (<em>No Zener</em>)</p>
+<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a> </p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia"></a></p>
+<p>For TL:DR; </p>
 
-<p>The entire Bulb had:</p>
+<p>The LCD has the following pins to interface to:
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Pin Number</th>
+    <th class="tg-031e">Pin Label</th>
+    <th class="tg-031e">Pin Function</th>
+    <th class="tg-031e">Input/Output?</th>
+    <th class="tg-031e">Notes</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">1</td>
+    <td class="tg-031e">VCC</td>
+    <td class="tg-031e">Positive power supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">2</td>
+    <td class="tg-031e">GND</td>
+    <td class="tg-031e">Ground</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">3</td>
+    <td class="tg-031e">SCE</td>
+    <td class="tg-031e">Chip select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">4</td>
+    <td class="tg-031e">RST</td>
+    <td class="tg-031e">Reset</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">5</td>
+    <td class="tg-031e">D/C</td>
+    <td class="tg-031e">Mode select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">6</td>
+    <td class="tg-031e">DN(MOSI)</td>
+    <td class="tg-031e">Serial data in</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">7</td>
+    <td class="tg-031e">SCLK</td>
+    <td class="tg-031e">Serial clock</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">8</td>
+    <td class="tg-031e">LED</td>
+    <td class="tg-031e">LED backlight supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
+  </tr>
+</table></p>
+
+<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
+
+<p>At a time you write to a single bank.</p>
+
+<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
+
+<p>The communication is done using SPI.</p>
+
+<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG&#39;s post</a>.</p>
+
+<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
+
+<p>Connections are as follows(PORT1):</p>
 
 <ul>
-<li>2x <code>470k</code> resistors, </li>
-<li>1 x <code>100uf</code> Electrolytic Capacitor, </li>
-<li>1 x <code>0.1uf</code>(guess) Capacitor with severed markings</li>
-<li>12 LEDs</li>
-<li>4 Diodes in bridge rectifier configuration.</li>
+<li>LCD5110_SCLK_PIN- BIT5</li>
+<li>LCD5110_DN_PIN- BIT7</li>
+<li>LCD5110_SCE_PIN- BIT0</li>
+<li>LCD5110_DC_PIN- BIT1</li>
 </ul>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro"></a>
+<br></p>
 
-<p>The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.</p>
+<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center"></a></p>
 
-<p>One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.</p>
+<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
 
-<p>Cheers!</p>
-
-<p>Rohit </p>
+<p>If you have any difficulties post here in comments</p>
 
   </div>
   

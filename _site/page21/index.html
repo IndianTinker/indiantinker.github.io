@@ -300,6 +300,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -355,57 +363,58 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/04/05/Kindify/">
-        Kindify- Making PDFs readable on the Kindle
+      <a href="/2015/04/17/BoardMerge/">
+        BoardMerge- The command line single page PDF merge utility for PCBs
       </a>
     </h1>
 
-    <span class="post-date">05 Apr 2015</span>
+    <span class="post-date">17 Apr 2015</span>
 
-    <p>Probably <strong>YOU</strong> too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. <strong>YOU</strong> too considered it would be fantastic to read them, a single device for only books. Consider this no calumny to the device. But PDFs are seriously not its cup of tea. Mercurial, <strong>YOU</strong> might be seeing the way the PDF is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didn’t seem comfortable.</p>
+    <p>Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this <a href="http://rohitg.in/2014/04/07/OpenAgitator/">Open Agitator</a> a while back to help me ease out the etching process.</p>
 
-<p>Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.</p>
+<p>I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.</p>
 
-<p>I tried assiduously to somehow read and lost interest until I stumbled upon a slick python library <em>pyPDF</em> while solving a problem with printing PDFs. </p>
+<p>The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we <em>should</em> cut costs. Further the <em>several-times-on-a-page</em> approach had more issues:</p>
 
-<blockquote>
-<p>Clip the borders and Light you shall see !</p>
-</blockquote>
+<ul>
+<li>Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers</li>
+<li>The shop keeper usually charges for a single round in the printer and printing many times added to the costs.</li>
+<li>I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)</li>
+<li>You also need to set the no scaling option in <em>Acrobat</em> again and again.. duh..</li>
+</ul>
 
-<p>Kindle does automatically clip borders but it retains the primordial page number which limits the usability and since, it also indexes the page number anyway, even if I remove it using some python script it wont hurt.</p>
+<p>Thats too much work specially after waiting in a queue to get to the printer !</p>
 
-<p>So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a PDF with the same name but -kindified appended to its file name to be read on the Kindle.</p>
+<p>I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a <strong>Single</strong> page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..</p>
 
-<p>The only dependency is <em>pyPDF</em> .</p>
+<p>Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to <em>re-etch (just imagine)</em> a whole board.</p>
 
-<p>Install PyPDF using pip :
-<code>pip install pypdf</code></p>
+<p><strong>The Process</strong></p>
 
-<p>Now clone the github repository:</p>
+<ol>
+<li><p>Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.</p></li>
+<li><p>This way you will have many pdfs on the same folder. Now:
+<code>git clone https://github.com/IndianTinker/BoardMerge.git</code>  or download from <a href="https://github.com/IndianTinker/BoardMerge">here</a></p></li>
+<li><p>You need to install pyPDF dependency. PIP is the boss here!
+<code>sudo pip install pypdf</code></p></li>
+<li><p>Now paste the <code>merge.py</code> in the active eagle folder and run :
+<code>python merge.py file1.pdf file2.pdf .. .. ..</code> </p></li>
+<li><p>Wait till it gets completed and you shall see a file <code>Combine.pdf</code> with all the pdfs on a single page!</p></li>
+</ol>
 
-<p><code>git clone https://github.com/IndianTinker/kindify.git</code></p>
+<p>This a directory full of 17 pdfs !</p>
 
-<p>Now, paste the PDF in the kindify directory and run the command:</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16557649863" title="before by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg" width="640" height="402" alt="before"></a></p>
 
-<p><code>python kindify.py yourPdfName.pdf</code></p>
+<p>After some python-fu you get this:</p>
 
-<p>An interactive menu will pop up with list of some famous book houses that have predefined cropping parameters. You can always choose the custom one to suit your needs or edit the predefined ones to suit your needs.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17151890736" title="final by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" width="640" height="366" alt="final"></a></p>
 
-<p>Lets see the magic in this sample from Orielly.
-Before the script the PDF renders as follows:</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16834820407" title="Pre Script by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8752/16834820407_9c9be5a74e_z.jpg" width="385" height="640" alt="Pre Script"></a></p>
-
-<p>And after the script</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16854436058" title="Post Script by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg" width="423" height="640" alt="Post Script"></a></p>
-
-<p>There is a difference between the two images. Clearly the second one is a <em>bit</em> more clear.
-So, yet again Python saves the day! </p>
+<p>Hoping that fellow makers find it useful.</p>
 
 <p>Cheers!</p>
 
-<p>Rohit   </p>
+<p>Rohit</p>
 
   </div>
   

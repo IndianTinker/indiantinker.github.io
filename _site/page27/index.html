@@ -300,6 +300,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -355,69 +363,92 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/03/Library-for-MMA7361/">
-        Arduino Library for Freescale's MMA7361 3 axis accelerometer
+      <a href="/2014/11/13/Fiddle-Music-System/">
+        Fiddle - The DIYed Music System
       </a>
     </h1>
 
-    <span class="post-date">03 Nov 2014</span>
+    <span class="post-date">13 Nov 2014</span>
 
-    <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+    <p><em>Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK</em> Thats how my old &#39;Phillips All in One&#39; failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed <strong>CD Player with a segmented Display</strong>. But today most of the music is digital and hence <em>Upgrade was necessary</em>.</p>
 
-<ul>
-<li>Analog which can be directly read by our friendly ADC</li>
-<li>Digital which send data in values riding on I2C/SPI.</li>
-</ul>
+<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me. </p>
 
-<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale &#39;s MMA7361 analog 3Axis Accelerometer</a>. </p>
+<blockquote>
+<p>Why Buy? When it can be Built!</p>
+</blockquote>
 
-<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image"></p>
-
-<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
+<p>And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:</p>
 
 <ul>
-<li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
-<li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
-<li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
-<li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
-<li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings </li>
-<li><strong>ST</strong> - Self Test</li>
+<li>Play MP3s</li>
+<li>Radio</li>
+<li>Aux -IN</li>
+<li>Take SD Cards</li>
+<li>Remotes will be good too.</li>
 </ul>
 
-<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
+<p>Fitting such things in a project would rather be heavenly. I searched online for references and <em>You have it boy!</em> there is one ready to amplify (supply) module from our friends in China that does it all . See <a href="http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg">this</a>  .</p>
 
-<p>Just connect a <code>10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+<p>I had seen this in a Taxi (less formally called <em>Gramin Seva</em>) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )</p>
 
-<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg"></p>
+<p>Now all i need to do is :</p>
 
-<p>Now just:</p>
+<ol>
+<li>Decipher the connections</li>
+<li>Build a power supply and Amplifier</li>
+<li>Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box</li>
+<li>Modify the box to fit all in </li>
+<li>Enjoy</li>
+</ol>
 
-<ul>
-<li>read the analog values from the pin</li>
-<li>convert them to voltages</li>
-<li>apply sensitivity and correction</li>
-<li>and get g value</li>
-</ul>
+<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code>5V DC</code> supply that&#39;s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
 
-<p>Simple as that!</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape"></a></p>
 
-<p>Having deciphered it, i wrote a test code:</p>
+<p>The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. <em>FingersCrossed</em></p>
 
-<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+<p>It worked fine and i was playing things off the USB straight away!</p>
 
-<p>It worked as designed.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading"></a></p>
 
-<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
-The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
+<p>Now, the power supply and Amplifier. I used the omnipresent <code>7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code>250-300mA</code> . The supply was going to be <code>12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
+The Amp was build out of <strong>ST&#39;s</strong> <a href="http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf">TDA2030</a> which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.</p>
 
-<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
+<p>The Application circuit works charm.
+So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?</p>
 
-<p>Feel free to fork it and use it. 
-Hoping the community finds it useful.</p>
+<p>Demo runs showed <code>TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code>TDA2030</code> and made a makeshift heat sink for <code>7805</code> </p>
 
-<p>Cheers,</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View"></a></p>
 
-<p>Rohit </p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767878536" title="Circuit -Front by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg" width="640" height="359" alt="Circuit -Front"></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back"></a></p>
+
+<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code>10k</code> and <code>0.1uF</code> combination. </p>
+
+<p>I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (<em>Oh! Yeah</em>)</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer"></a></p>
+
+<p>I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.</p>
+
+<p>This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut"></a></p>
+
+<p>Now it was assembling time.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789671841" title="All Messed up by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" width="640" height="359" alt="All Messed up"></a></p>
+
+<p>After a few half hours, i got it all working.. No Buzz and all music!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606708190" title="Charm by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg" width="359" height="640" alt="Charm"></a></p>
+
+<p>Cheers!</p>
+
+<p>Rohit  </p>
 
   </div>
   

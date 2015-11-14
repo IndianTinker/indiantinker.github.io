@@ -300,6 +300,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -355,75 +363,81 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/06/29/LiTiny/">
-        LiTiny- A Tiny LiIon charger for most things battery
+      <a href="/2015/07/12/CrickPi/">
+        CricPi- The (probably) MOST Minimalistic Live Cricket Ever
       </a>
     </h1>
 
-    <span class="post-date">29 Jun 2015</span>
+    <span class="post-date">12 Jul 2015</span>
 
-    <p>Lithium Batteries are indispensable. I have a few project like my own <em>DIY Badge [Post Soon]</em> or a <em>Light Wand for Light Photography</em> and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.</p>
+    <p>Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old <strong>WebSense Blocked</strong> page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times. </p>
 
-<p>The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.</p>
+<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would&#39;nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
 
-<p><strong>Li Ion Charger Required</strong></p>
+<p>I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score <em>always</em> during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.  </p>
 
-<p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
+<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What&#39;s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
 
-<ul>
-<li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
-<li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
-</ul>
+<p>Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.</p>
 
-<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  </p>
+<p>The first thing required was a data source like a website/API that has all the data we need to display. We will anyway display it at 1 refresh per minute so rocket-science precision is not required. I stumbled upon <a href="https://developers.litzscore.com/plans/">this</a> which unfortunately was not free and beyond my budget. </p>
 
-<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,</p>
+<p>I thought best way is to make an API myself when there is none that suits me. </p>
 
 <blockquote>
-<p>Why buy, When it can be built.</p>
+<p><em>I&#39;ll scrape</em> !</p>
 </blockquote>
 
-<p>Also none of the boards satisfied both my needs together:</p>
+<p>So, i wrote a <em>python</em> script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out. </p>
+
+<p>I used the adorable <code>beautifulsoup</code> for scraping !</p>
+
+<p>Next based on the observations, I sat down and made an interface for the info gathered be displayed.I choose my old and trusted <a href="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/">Nokia 5510 Graphic Display</a>.</p>
+
+<p>Many thanks to <a href="http://www.adafruit.com/">Adafruit</a> for their amazing Python Library for the LCD already available that made things easy.</p>
+
+<p>Here is the first visual of a World Cup match on my project :</p>
+
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0CfR7pPUHD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-10T07:31:20+00:00">Mar 10, 2015 at 12:31am PDT</time></p></div></blockquote>
+
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p><BR>
+This too.
+<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup"></a></p>
+
+<p>As you can see we have the following parts of score displayed:</p>
 
 <ul>
-<li>Control I/F with a MCU</li>
-<li>Micro USB </li>
+<li>Teams playing</li>
+<li>Currently batting team with overs underneath it</li>
+<li>The score in the largest font</li>
+<li>4s/6s and Run Rate</li>
+<li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
+<li>Match Status - Rains, Ended,In Progress etc</li>
 </ul>
 
-<p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
+<p>Here is the picture of the setup:
+<center>
+<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup">
+</center>
+A Laser cut case and we could go wall mount.  </p>
 
-<p><center>
-<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg">
-</center></p>
+<p>I then made the script executable and queued it as a <code>cron-job</code> to be run every minute.  <em>BLISS</em></p>
 
-<p>There were only the following changes:</p>
+<p>Now I could watch(over) cricket matches in a non-intrusive and minimalistic way . </p>
 
-<ul>
-<li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
-<li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
-<li>Provided a common ground to i/f</li>
-<li>Added microUSB and a 90degree pinheader for my batteries.</li>
-</ul>
+<p>If you too are interested you can grab the code <a href="https://github.com/IndianTinker/CricPI">here</a> to check out on the process.</p>
 
-<p>Here is the build process:</p>
+<p>Here is how i kept a track of IPL :</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched"></a></p>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/14Z6-PvUD3/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-25T02:34:53+00:00">Apr 24, 2015 at 7:34pm PDT</time></p></div></blockquote>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath"></a></p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned"></a></p>
+<p><BR></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB"></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered"></a></p>
-
-<p>During Charging:
-<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress"></a></p>
-
-<p>After charge Termination:
-<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !"></a></p>
-
-<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. </p>
+<p><strong>NOTE :</strong> The project was not performed/made at the workplace. Only the use case was inspired from there.</p>
 
 <p>Cheers,</p>
 
