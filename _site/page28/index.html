@@ -308,6 +308,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -363,126 +367,92 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
-        Nokia 5110 LCDs and MSP430
+      <a href="/2014/11/13/Fiddle-Music-System/">
+        Fiddle - The DIYed Music System
       </a>
     </h1>
 
-    <span class="post-date">09 Nov 2014</span>
+    <span class="post-date">13 Nov 2014</span>
 
-    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia&#39;s Monochome days. Several might have spent days playing space invaders/snakes etc. </p>
+    <p><em>Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK</em> Thats how my old &#39;Phillips All in One&#39; failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed <strong>CD Player with a segmented Display</strong>. But today most of the music is digital and hence <em>Upgrade was necessary</em>.</p>
 
-<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
+<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me. </p>
 
-<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code>2.7-3.3V</code> happy for our MSP430.</p>
+<blockquote>
+<p>Why Buy? When it can be Built!</p>
+</blockquote>
 
-<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a> </p>
-
-<p>For TL:DR; </p>
-
-<p>The LCD has the following pins to interface to:
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Pin Number</th>
-    <th class="tg-031e">Pin Label</th>
-    <th class="tg-031e">Pin Function</th>
-    <th class="tg-031e">Input/Output?</th>
-    <th class="tg-031e">Notes</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">1</td>
-    <td class="tg-031e">VCC</td>
-    <td class="tg-031e">Positive power supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">2</td>
-    <td class="tg-031e">GND</td>
-    <td class="tg-031e">Ground</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">3</td>
-    <td class="tg-031e">SCE</td>
-    <td class="tg-031e">Chip select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">4</td>
-    <td class="tg-031e">RST</td>
-    <td class="tg-031e">Reset</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">5</td>
-    <td class="tg-031e">D/C</td>
-    <td class="tg-031e">Mode select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">6</td>
-    <td class="tg-031e">DN(MOSI)</td>
-    <td class="tg-031e">Serial data in</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">7</td>
-    <td class="tg-031e">SCLK</td>
-    <td class="tg-031e">Serial clock</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">8</td>
-    <td class="tg-031e">LED</td>
-    <td class="tg-031e">LED backlight supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
-  </tr>
-</table></p>
-
-<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
-
-<p>At a time you write to a single bank.</p>
-
-<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
-
-<p>The communication is done using SPI.</p>
-
-<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG&#39;s post</a>.</p>
-
-<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
-
-<p>Connections are as follows(PORT1):</p>
+<p>And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:</p>
 
 <ul>
-<li>LCD5110_SCLK_PIN- BIT5</li>
-<li>LCD5110_DN_PIN- BIT7</li>
-<li>LCD5110_SCE_PIN- BIT0</li>
-<li>LCD5110_DC_PIN- BIT1</li>
+<li>Play MP3s</li>
+<li>Radio</li>
+<li>Aux -IN</li>
+<li>Take SD Cards</li>
+<li>Remotes will be good too.</li>
 </ul>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro"></a>
-<br></p>
+<p>Fitting such things in a project would rather be heavenly. I searched online for references and <em>You have it boy!</em> there is one ready to amplify (supply) module from our friends in China that does it all . See <a href="http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg">this</a>  .</p>
 
-<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
+<p>I had seen this in a Taxi (less formally called <em>Gramin Seva</em>) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center"></a></p>
+<p>Now all i need to do is :</p>
 
-<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
+<ol>
+<li>Decipher the connections</li>
+<li>Build a power supply and Amplifier</li>
+<li>Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box</li>
+<li>Modify the box to fit all in </li>
+<li>Enjoy</li>
+</ol>
 
-<p>If you have any difficulties post here in comments</p>
+<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code>5V DC</code> supply that&#39;s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape"></a></p>
+
+<p>The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. <em>FingersCrossed</em></p>
+
+<p>It worked fine and i was playing things off the USB straight away!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading"></a></p>
+
+<p>Now, the power supply and Amplifier. I used the omnipresent <code>7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code>250-300mA</code> . The supply was going to be <code>12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
+The Amp was build out of <strong>ST&#39;s</strong> <a href="http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf">TDA2030</a> which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.</p>
+
+<p>The Application circuit works charm.
+So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?</p>
+
+<p>Demo runs showed <code>TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code>TDA2030</code> and made a makeshift heat sink for <code>7805</code> </p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View"></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767878536" title="Circuit -Front by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg" width="640" height="359" alt="Circuit -Front"></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back"></a></p>
+
+<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code>10k</code> and <code>0.1uF</code> combination. </p>
+
+<p>I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (<em>Oh! Yeah</em>)</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer"></a></p>
+
+<p>I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.</p>
+
+<p>This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut"></a></p>
+
+<p>Now it was assembling time.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789671841" title="All Messed up by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" width="640" height="359" alt="All Messed up"></a></p>
+
+<p>After a few half hours, i got it all working.. No Buzz and all music!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606708190" title="Charm by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg" width="359" height="640" alt="Charm"></a></p>
+
+<p>Cheers!</p>
+
+<p>Rohit  </p>
 
   </div>
   

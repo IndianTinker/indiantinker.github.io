@@ -308,6 +308,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -363,59 +367,92 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/05/17/FM430/">
-        FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM
+      <a href="/2015/05/29/TruPlay/">
+        TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430
       </a>
     </h1>
 
-    <span class="post-date">17 May 2015</span>
+    <span class="post-date">29 May 2015</span>
 
-    <p>One fine day while i was rummaging through the part bin, I found an old project that probably was never completed ! <strong>FM Radio</strong> !
-I tried to make one when i was in 7th grade, waiting at the counter of a dingy electronics repair shop for anyone to pay attention to the parts list gathered over the internet ( Dial up days ! ).</p>
+    <p>I recently ordered <a href="http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;hash=item1a00397396">this</a> Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and <strong>Changing Songs</strong>. Its more like getting chained to the speakers. Woof !!</p>
 
-<p>At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw &#39;TEA5767 FM Receiver&#39; module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me. </p>
+<p>After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the <em>Free Shipping</em> fellas !</p>
 
-<p><a href="http://www.voti.nl/docs/TEA5767.pdf">TEA5767</a> is a digital FM Receiver chip from NXP/Phillips that can be commanded over I2C to tune to various frequencies easily.</p>
+<p>It worked as advertised. But the range was hardly 15feet <strong>LOS</strong> and in a maze like house i live in , it would hardly go through the walls. So, the <em>Wireless</em> problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , &quot;Think out of the box !&quot; my answer was inside the box. </p>
 
-<p>But alas ! The one i got never matched with any pictures online ! Where was the missing &quot;crystal&quot; responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen &quot;TT-502X&quot; i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to <a href="http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio">Dilshan</a>, an amazing maker himself, I was able to get this done.</p>
-
-<p>It turns out that the module is actually used in some Samsung Products and requires a <em>generic</em> watch crystal.</p>
-
-<p>The connections are similar to what <em>Dilshan</em> mentions it in his post. I added a diode (Reverse Polarity. Ouch!) and a decoupling cap. And after a bit of work with the solder iron i was able to make my own FM Receiver Module.</p>
-
-<p>Next step? Let others know about it... :D</p>
+<p>It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads : </p>
 
 <p><center>
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0nwlsDPUN1/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
-Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-24T18:54:28+00:00">Mar 24, 2015 at 11:54am PDT</time></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0zeXPvvULI/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-29T08:06:06+00:00">Mar 29, 2015 at 1:06am PDT</time></p></div></blockquote>
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-</center></p>
+</center> </p>
 
-<p>FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.</p>
+<p>Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the <em>AT Commands</em>).
+<center>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/1n1xClPUD-/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-18T16:11:06+00:00">Apr 18, 2015 at 9:11am PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+ </center></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17152069784" title="Back side ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg" width="359" height="640" alt="Back side !"></a></p>
+<p>Google helps !  I found <a href="http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html">this</a> nice forum post detailing the adapter. Bingo its the <strong>OVC3860</strong> Chip. And here are the <a href="http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf">commands</a>. </p>
 
-<p>After doing the same! A commander was needed. Chose my workhorse, the MSP430 Launchpad for the extra switch they have on it that helps me change channels and doing that on arduino pro mini would require some breadboarding i was too lazy to try.</p>
+<p>Basically all commands are in a <strong>AT#CMD[cr][lf]</strong> Format. The &quot;CMD&quot; for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.</p>
 
-<p>The code is pretty easy and shown below. It was coded using <a href="http://energia.nu/">Energia</a> IDE.</p>
+<p>The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a &#39;115600&#39; one. This setting seems to be stored in the <strong>EEPROM</strong> on the adapter. As <a href="http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/">this</a> post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!</p>
 
-<p>Based on the datasheet the I2C address of the device is <code>0x60</code> and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.</p>
+<p>So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!</p>
 
-<p>The other data bytes i.e. <code>0xB0</code> and <code>0x10</code> are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.</p>
+<iframe width="653" height="380" src="https://www.youtube.com/embed/XGC1E0VE39Y" frameborder="0" allowfullscreen></iframe>
 
-<p>I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !</p>
+<p>Tested it for a few days ! I could now control my phone&#39;s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB. </p>
 
-<script src="https://gist.github.com/aa9a2a524853674807e6.js"> </script>
+<p>I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra <strong>SMD</strong> tactile switch to further expand capabilities. 
+<a href="https://www.flickr.com/photos/94411929@N06/17148091553" title="Dongle Tapping by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg" width="640" height="359" alt="Dongle Tapping"></a></p>
 
-<p>If you need to check for signal quality and other things you can check out my github repo <a href="https://github.com/IndianTinker/FM430">here</a> .</p>
+<p>The connections are simple. </p>
 
-<p>Here&#39;s me explaining the whole setup in detail !</p>
+<blockquote>
+<p>The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads ! </p>
+</blockquote>
 
-<iframe width="650" height="380" src="https://www.youtube.com/embed/r3fGMu5iPY8" frameborder="0" allowfullscreen></iframe>
+<p>After designing the board it was time for the best part : <strong>Etching</strong> </p>
+
+<p>Here are the chronologically arranged pictures of PCB Etching using <em>Toner Transfer Method</em> :</p>
+
+<p>Making sure the TSSOP Pads got nicely transferred. Clicked using <a href="http://rohitg.in/2015/02/26/The-MacroCase/">MACROCase</a> .
+<a href="https://www.flickr.com/photos/94411929@N06/17768382545" title="Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg" width="640" height="583" alt="Making sure the tiny tracks got transferred"></a></p>
+
+<p>All set for the bath.
+<a href="https://www.flickr.com/photos/94411929@N06/17768440115" title="Toner Transfer by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg" width="640" height="359" alt="Toner Transfer"></a></p>
+
+<p>Rough times to follow.
+<a href="https://www.flickr.com/photos/94411929@N06/17768864201" title="Just Etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg" width="640" height="359" alt="Just Etched"></a></p>
+
+<p>After some sanding.
+<a href="https://www.flickr.com/photos/94411929@N06/17582193499" title="Cleaned after ACID Bath by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg" width="640" height="359" alt="Cleaned after ACID Bath"></a></p>
+
+<p>Flashing the code after soldering.
+<a href="https://www.flickr.com/photos/94411929@N06/17768419595" title="Code Dump by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg" width="640" height="359" alt="Code Dump"></a></p>
+
+<p>Testing.
+<a href="https://www.flickr.com/photos/94411929@N06/17765735442" title="First Test in Progress by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg" width="640" height="359" alt="First Test in Progress"></a></p>
+
+<p>Ta Da !!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17768811751" title="Unobstructing by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg" width="640" height="359" alt="Unobstructing"></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17742078846" title="Looks Cool by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg" width="640" height="359" alt="Looks Cool"></a></p>
+
+<p>Check out the video for the project in action:</p>
+
+<iframe width="653" height="380" src="https://www.youtube.com/embed/mrToz8M_BPQ" frameborder="0" allowfullscreen></iframe>
+
+<p>Interested in building one? Grab the code here:</p>
+
+<script src="https://gist.github.com/a35bf659325d0eac2ce5.js"> </script>
 
 <p>Cheers,</p>
 
-<p>Rohit</p>
+<p>Rohit </p>
 
   </div>
   

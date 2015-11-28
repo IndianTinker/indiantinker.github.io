@@ -308,6 +308,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -363,42 +367,62 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/15/GettingStartedwithESP1/">
-        Getting Started with ESP8266:AT-Commands and Wifi DataLogger
+      <a href="/2015/11/16/Plantpal/">
+        PlantPal-Garden Light Watering Reminder
       </a>
     </h1>
 
-    <span class="post-date">15 Nov 2015</span>
+    <span class="post-date">16 Nov 2015</span>
 
-    <p>About a few months back, i ordered those viral ESP8266 Wifi Chips from AliEx, after travelling half of the country they landed up at my place in Delhi, from where i picked them up. </p>
+    <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
 
-<p>The Legend is as follows:</p>
+<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched &#39;Automatic System&#39;, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
 
-<blockquote>
-<p>While half the world was busy taming the rogue CC3000 (Mine never worked), the suddenly out of the darkest dungeons of the cloud clans of the east came the blue board. The Elders called it ESP8266. It was fast and swift. Easy to tame and it quickly befriended the world and gave rise to a new era on connected projects at 1/10 the gold!</p>
-</blockquote>
+<p>Hence,<strong>PlantPal</strong> .</p>
 
-<p>I was initially skeptical, So ordered just 2 ESP-01s. Next up in my cart is the NodeMCU board or rather i will make my own.</p>
+<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The &#39;Chinese&#39; made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
 
-<p>The first project was with AT Commands. The chip comes with the default firmware that offers limited but streamlined functionality using AT Commands. Check out these excellent resources for them:</p>
+<p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
 
 <ul>
-<li><a href="http://rancidbacon.com/files/kiwicon8/ESP8266_WiFi_Module_Quick_Start_Guide_v_1.0.4.pdf">RancidBacon&#39;s PDF guide</a> </li>
-<li><a href="https://nurdspace.nl/ESP8266">Nurdspace.nl</a></li>
-<li><a href="http://electronut.in/an-iot-project-with-esp8266/">Mahesh&#39;s Blog</a></li>
+<li>A yet-another-no-datasheet chinese IC.</li>
+<li>A axial resistor like inductor</li>
+<li>An LED</li>
+<li>A resistor for the LED.</li>
+<li>The solar panel</li>
+<li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
 </ul>
 
-<p>Obviously, when using AT Commands, we need a master. An Arduino with a level shifter would do that easily. Next we needed some data-source and cloud service to blurt out the data. A <strong>BMP180</strong> I2C Pressure and Temperature sensor would do justice and help us produce 2 valuable weather data points and cloud service will be my favourite <strong>Thinkspeak</strong> (recently bought by Mathworks).</p>
+<p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
 
-<p>In whatever i could rummage i made this: 
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="5" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/9hyc4hPUCO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">My #ESP8266 #gettingstarted  setup ! Uses a BMP180 Temperature and Pressure #sensor and #Arduino , A #MSP430 Launchpad casted as a 3.3V regulator ! #DIY</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-11-01T03:57:51+00:00">Oct 31, 2015 at 8:57pm PDT</time></p></div></blockquote>
-<script async defer src="//platform.instagram.com/en_US/embeds.js"></script></p>
+<p>So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.</p>
 
-<p>The MSP430 Launchpad is just used as a voltage regulator. I couldnt find any thing else in the night. No matter how funny it looks, This thing worked and was able to update the Temperature and pressure feed after every 60 secs on thingspeak, without fail. The best part is even if there is an outage, the moment power comes back, the ESP will auto connect and work flawlessly again.  </p>
+<p>So, the power issue was sorted. For the sensor, i used the usual <em>two-wires-in-gypsum</em> sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my <a href="http://www.ti.com/product/msp430g2230">MSP430G2230</a> used up. It was time to work on the code.  </p>
 
-<p>The data was posted on my <a href="https://thingspeak.com/channels/6998">Thingspeak Channel</a>. After the acquisition, Mathworks added the capability to run Matlab scripts on the Thingspeak data channels to empower it on the Analytics front.</p>
+<p><em>With great power, comes greater responsibility</em>. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.</p>
 
-<p>Check out the code in this <a href="https://github.com/IndianTinker/ESP8266">repo</a> ! The code is based on Mahesh&#39;s original post. </p>
+<p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
+
+<blockquote>
+<p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED&#39;s blinking rate also acts like an indicator of sorts.</p>
+</blockquote>
+
+<p><strong>Problems and solutions</strong></p>
+
+<p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
+
+<ul>
+<li><p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon. </p></li>
+<li><p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p></li>
+<li><p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p></li>
+<li><p>Even lower power, using the MSP430&#39;s clock module i can certainly go below 1MHz until it affects other peripherals.</p></li>
+</ul>
+
+<p>Check out the video of it in action:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen></iframe>
+
+<p>Please do comment if you have any queries :D</p>
 
 <p>Cheers !!</p>
 

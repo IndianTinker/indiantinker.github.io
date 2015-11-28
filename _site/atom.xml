@@ -4,13 +4,74 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-11-14T20:15:56+05:30</updated>
+ <updated>2015-11-28T21:10:05+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>PlantPal-Garden Light Watering Reminder</title>
+   <link href="http://rohitg.in/2015/11/16/Plantpal/"/>
+   <updated>2015-11-16T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/11/16/Plantpal</id>
+   <content type="html">&lt;p&gt;I had this very special plant-A &lt;em&gt;Neem&lt;/em&gt; sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.&lt;/p&gt;
+
+&lt;p&gt;Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched &amp;#39;Automatic System&amp;#39;, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.&lt;/p&gt;
+
+&lt;p&gt;Hence,&lt;strong&gt;PlantPal&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The &amp;#39;Chinese&amp;#39; made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D&lt;/p&gt;
+
+&lt;p&gt;The garden light had a joule thief IC inside it. So, there were essentially 6 components:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A yet-another-no-datasheet chinese IC.&lt;/li&gt;
+&lt;li&gt;A axial resistor like inductor&lt;/li&gt;
+&lt;li&gt;An LED&lt;/li&gt;
+&lt;li&gt;A resistor for the LED.&lt;/li&gt;
+&lt;li&gt;The solar panel&lt;/li&gt;
+&lt;li&gt;The Battery (AAA,1.2V,120mAh,NiCd)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.&lt;/p&gt;
+
+&lt;p&gt;So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.&lt;/p&gt;
+
+&lt;p&gt;So, the power issue was sorted. For the sensor, i used the usual &lt;em&gt;two-wires-in-gypsum&lt;/em&gt; sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my &lt;a href=&quot;http://www.ti.com/product/msp430g2230&quot;&gt;MSP430G2230&lt;/a&gt; used up. It was time to work on the code.  &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;With great power, comes greater responsibility&lt;/em&gt;. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.&lt;/p&gt;
+
+&lt;p&gt;Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED&amp;#39;s blinking rate also acts like an indicator of sorts.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems and solutions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The main problem was &lt;em&gt;too little power&lt;/em&gt;. Other auxiliary problems were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like &lt;a href=&quot;https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/&quot;&gt;this&lt;/a&gt;. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Even lower power, using the MSP430&amp;#39;s clock module i can certainly go below 1MHz until it affects other peripherals.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out the video of it in action:&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/2O21kL86JAI&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Please do comment if you have any queries :D&lt;/p&gt;
+
+&lt;p&gt;Cheers !!&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Getting Started with ESP8266:AT-Commands and Wifi DataLogger</title>

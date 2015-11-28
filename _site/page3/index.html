@@ -308,6 +308,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -363,60 +367,54 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/11/GreenwaliDiwali/">
-        GreenWali Diwali:A social interactivity experiment
+      <a href="/2015/11/14/hearty/">
+        TI-CEPD Diaries:Reactive Wearable LED Heart
       </a>
     </h1>
 
-    <span class="post-date">11 Nov 2015</span>
+    <span class="post-date">14 Nov 2015</span>
 
-    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
+    <p>Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this <strong>Wearable LED heart</strong> project to showcase at MakerFest 2014. This would be our team&#39;s signature.</p>
 
-<ul>
-<li>Lights/Sound to attract attention</li>
-<li>A unique randomness of explosion</li>
-<li>An Obnoxious Odour </li>
-<li>Fear of getting yourself hurt</li>
-<li>Fear of setting someone on fire</li>
-</ul>
+<p>Basically, we have a small PCB milled in the shape of a heart and studded with LEDs that react to the ambient light and change their beating rate and whenever someone comes too close(basically a hand in most cases :P), the LEDs change the pattern to what Prof.Gadre calls the <em>Happy Mode</em> ! </p>
 
-<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
+<p>I worked on the initial schematics and made the <em>first</em> working prototype of it involving the LDR as the sensor. The code that went inside worked as follows:</p>
 
-<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
+<blockquote>
+<p>It takes two snapshots of the LDR reading before and after the LED blinks, i.e. the ON state and OFF state and based on the delta the algorithm decides the lighting conditions and varies the beat rate. Once the Delta exceeds a point, it switches to happy mode !</p>
+</blockquote>
 
-<p>For the installation, i used the Rasperry Pi ( as it was in my Arm&#39;s Reach :P ) and some Python to search <code>Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code>#Diwali</code> and then parsing the tweets to check if they sounded &#39;Green&#39; and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
+<p>The PCB is a double sided one ; made after i made <a href="/2015/10/22/OpenBadge/">Open Badge</a> . So, most pitfalls were over. Without the temperature controlled soldering iron and LEDs mounted very close-by it was a pain to solder them. They would heat and sometimes blow away due to excess heat. Probably the best way was to reflow ?</p>
 
-<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
+<p>Check out the pictures of the build in action !</p>
 
-<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22262732850/in/dateposted-public/" title="Dumping some neurons"><img src="https://farm1.staticflickr.com/751/22262732850_b239316ce1_z.jpg" width="640" height="359" alt="Dumping some neurons"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>That&#39;s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet ! </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22424711966/in/dateposted-public/" title="Front side"><img src="https://farm6.staticflickr.com/5810/22424711966_e144c2f32a_z.jpg" width="640" height="359" alt="Front side"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company&#39;s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm&#39;s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22263012308/in/dateposted-public/" title="Front"><img src="https://farm1.staticflickr.com/759/22263012308_5cbde5866a_z.jpg" width="640" height="359" alt="Front"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21827990404/in/dateposted-public/" title="All LEDs survive the temperature"><img src="https://farm6.staticflickr.com/5718/21827990404_209e639397_z.jpg" width="640" height="359" alt="All LEDs survive the temperature"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<ul>
-<li>Sign In/Up on Twitter</li>
-<li>Go <a href="https://apps.twitter.com/">here</a></li>
-<li>Create <strong>New Application</strong></li>
-<li>Fill the Yet-Another-Form and Create the Application.</li>
-<li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
-<li>You will see your consumer keys there !</li>
-<li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
-</ul>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22263867379/in/dateposted-public/" title="All soldered up"><img src="https://farm6.staticflickr.com/5763/22263867379_566a4080cc_z.jpg" width="640" height="359" alt="All soldered up"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>These 4 keys are used for the Code above.</p>
+<p>The video of the heart in action:</p>
 
-<p>Then just install the dependencies based on the <code>README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code>screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/dAfC-3cFSuY" frameborder="0" allowfullscreen></iframe>
 
-<p>Check out the video of me testing it !</p>
+<p>Final PCBs for MakerFest, all Hand Soldered :&#39;)</p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen></iframe>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/11980555293/" title="All Hearts soldered just in time"><img src="https://farm3.staticflickr.com/2849/11980555293_daca4acaed_z.jpg" width="640" height="366" alt="All Hearts soldered just in time"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Happy GreenWali Diwali !</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/11981073356/in/photostream/" title="Final Piece Back"><img src="https://farm8.staticflickr.com/7366/11981073356_201a3d139d_z.jpg" width="359" height="640" alt="Final Piece Back"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Rohit</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/11980650274/in/photostream/" title="LED thru the eye loupe"><img src="https://farm4.staticflickr.com/3731/11980650274_53fc2083c5_z.jpg" width="640" height="597" alt="LED thru the eye loupe"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The mass manufactured version of the same was also presented to the participants of <em>Texas Instruments Analog Design Contest 2014</em> !</p>
+
+<p>Cheers !!</p>
+
+<p>Rohit </p>
 
   </div>
   
