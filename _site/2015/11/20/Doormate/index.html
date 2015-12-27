@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Home"/>
-  <meta name="twitter:title" content="Home"/>
+  <meta  property="og:title" content="Doormate- Runner's Up at Intel IOT Roadshow"/>
+  <meta name="twitter:title" content="Doormate- Runner's Up at Intel IOT Roadshow"/>
   
 
 
@@ -43,14 +43,23 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page41/" />
+  <meta property="og:url" content="http://rohitg.in/2015/11/20/Doormate/" />
 
 
+  <meta content="2015-11-20T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
-  <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg"/>
+
+  <meta content="http://www.rapidio.org/wp-content/uploads/2015/07/intel_rgb_30001.png" property="og:image"/>
+  <meta name="twitter:image:src" content="http://www.rapidio.org/wp-content/uploads/2015/07/intel_rgb_30001.png"/>
 
 
+  
+
+
+  
+  <meta content="rpi" property="article:tag"/>
+  
 
 
 
@@ -61,7 +70,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Doormate- Runner's Up at Intel IOT Roadshow &middot; Rohit Gupta
     
   </title>
 
@@ -367,53 +376,116 @@ All Rights Reserved
 </script>
 
     </div>
-      <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2013/04/29/InnaugLamp/">
-        TI-CEPD Diaries:The Electronic Inaugural Lamp
-      </a>
-    </h1>
+      <div class="post">
+  <h1 class="post-title">Doormate- Runner's Up at Intel IOT Roadshow</h1>
+  <span class="post-date">20 Nov 2015</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-    <span class="post-date">29 Apr 2013</span>
 
-    <p>Inauguration Lamps.. They are just so mainstream. The same one candle lighting the others one by one. Pretty Bucolic ! But Prof.Gadre had something different in mind for the inauguration of Texas Instruments Analog Design Challenge Finals in Blore,2013.</p>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
 
-<p>I was glad to be the part of the team doing all the work for the project. The concept was to use a conventional usability model and introduce a different way to light things up. In brevity,</p>
 
-<blockquote>
-<p>An electronic matchstick with a magnetic field sensor ( not a pricey hall sensor ) while be struck against a magic matchbox with a precise number of magnets. When the matchstick is struck with matchbox magic happens and the LEDs start lighting up on the matchstick. Ah! The matchbox is powered by a supercap mind you ! Hidden somewhere inside the matchstick is an IR LED, whispering a secret modulated code which can only be read by our compatible lamps that too only within a certain distance. When the Lamps see the matchstick they just light up ! No ghee teel, pure electronics !</p>
-</blockquote>
+<br>
 
-<p>We all worked for a few months on the project and the final versions demonstrated had two LEDs to indicate the state of the Lamps and were hand(routed-etched-drilled-soldered and assembled) at CEPD. The main diffuser was 3D printed in the Lab itself in the shape of a Flame.</p>
 
-<p>The structure was made using industrially laser cut acrylic elements.</p>
 
-<p>Check out <a href="https://e2e.ti.com/blogs_/b/designproject/archive/2013/04/26/rub-the-lamp-and-make-a-wish">this</a> blog post by <strong>Ravikumar Sir</strong> that details the project. The project also got covered in <a href="http://www.timescrest.com/life/3d-printer-the-desi-dimension-10505">Times Crest</a>.</p>
 
-<p>Here is Prof. Gadre showing the project in action.</p>
+<br>
+  <p>Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog <a href="/2015/08/01/Intel/">link</a> that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did. </p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/l5DQwYKH-GU" frameborder="0" allowfullscreen></iframe>
+<p>Basically, our Project was called the <strong>Doormate</strong>. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.</p>
 
-<p>Cheers,</p>
+<p>The project uses the <strong>Intel edison</strong> and was built using whatever parts we could rummage at the event. </p>
 
-<p>Rohit</p>
+<p>The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka <em>The Bell Playlist</em> .</p>
 
-  </div>
-  
+<p>The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved <em>Mogambo</em> feels good and the door opens. (See video below to understand the context)</p>
+
+<p>Here is what the dashboard <a href="http://doormate.github.io/website/">looks like</a>.  </p>
+
+<p>The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/su8k2AwtbH0" frameborder="0" allowfullscreen></iframe>
+
+<p>Cheers !!</p>
+
+<p>Rohit </p>
+
+</div>
+<br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8347954072174647"
+     data-ad-slot="5368304813"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2015/11/16/Plantpal/">
+            PlantPal-Garden Light Watering Reminder
+            <small>16 Nov 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/11/15/GettingStartedwithESP1/">
+            Getting Started with ESP8266:AT-Commands and Wifi DataLogger
+            <small>15 Nov 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/11/14/hearty/">
+            TI-CEPD Diaries:Reactive Wearable LED Heart
+            <small>14 Nov 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+<br>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Blog -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8347954072174647"
+     data-ad-slot="4612798010"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
 </div>
 
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page42">Older</a>
-  
-  
-    
-      <a class="pagination-item newer" href="/page40">Newer</a>
-    
-  
-</div>
     </div>
 
 
