@@ -4,13 +4,50 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2015-12-27T15:43:32+05:30</updated>
+ <updated>2016-01-01T19:02:57+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>StarMAT-Star Wars Themed Interactive Doormat</title>
+   <link href="http://rohitg.in/2015/12/30/StarWars/"/>
+   <updated>2015-12-30T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/12/30/StarWars</id>
+   <content type="html">&lt;p&gt;This weekend, the new Star Wars movie got released. It might be &amp;#39;just&amp;#39; another movie for the droids and gungans of the planet, but not for the Padawans like us. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Messa, Likes Star Wars!&lt;/em&gt;  - Jar Jar Binks&lt;/p&gt;
+
+&lt;p&gt;Now, As we learn to master the force !&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;To make something that reminds us of the saga we need!  Herh herh herh.&lt;/em&gt; -Yoda&lt;/p&gt;
+
+&lt;p&gt;What could be better than making a Doormat that senses a footstep (using capacitive methods) and plays a random star wars song like the opening theme or the imperial march or a famous phrase from the movie like &amp;quot;May the force be with you !&amp;quot; ?&lt;/p&gt;
+
+&lt;p&gt;Presenting the &lt;strong&gt;Star Wars Theme Interactive Doormat&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned data-instgrm-version=&quot;6&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/_gGyumvUIn/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;The #StarWars #Reactive #DoorMat is ready ! Plays random #StarWars jargon  when someone steps on the doormat. #Maker #DIY #Arduino #Electronics #Hack #WeekendHacks&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A video posted by Rohit Gupta (@rohit7gupta) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-12-20T05:19:54+00:00&quot;&gt;Dec 19, 2015 at 9:19pm PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+
+&lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I kept it at the entrance of my room and every time there is someone to meet me, He is greeted with a Random Star Wars Jargon !  &lt;/p&gt;
+
+&lt;p&gt;The setup is temporary and hence on the breadboard. For the brains i use the &lt;em&gt;Arduino&lt;/em&gt; with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the &lt;em&gt;Arduino&lt;/em&gt; blinks to show that its ready to read the sensor.&lt;/p&gt;
+
+&lt;p&gt;Now, when some-one (except Darth Vader/Droids) steps on the mat. The relative capacitance changes and the sensor grounds its output which is pulled up by default. This is detected by the Arduino which commands the MP3 player to play a random song/phrase from the assorted collection stored on the SD Card . And Yes! The whole setup is powered by a power bank (the black PVC Tube in the video above) that i made for my CX-10 pocket-Quad recharging, which powers the setup for about 6-7 hours easily. To split power between the USB Speakers and the Arduino, i use the USB Hub (in white with blue LED) .&lt;/p&gt;
+
+&lt;p&gt;Any questions or suggestion, have you, use the comment section below!  &lt;/p&gt;
+
+&lt;p&gt;Seek Advice, You must!&lt;/p&gt;
+
+&lt;p&gt;May the force be with you ! :D&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Doormate- Runner's Up at Intel IOT Roadshow</title>

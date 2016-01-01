@@ -316,6 +316,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -346,7 +350,7 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-
+<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
 
     
   </div>
@@ -371,43 +375,67 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/10/28/Dollar-LED-Bulb/">
-        Inside a Cheap LED Bulb
+      <a href="/2014/11/03/Library-for-MMA7361/">
+        Arduino Library for Freescale's MMA7361 3 axis accelerometer
       </a>
     </h1>
 
-    <span class="post-date">28 Oct 2014</span>
+    <span class="post-date">03 Nov 2014</span>
 
-    <p>I was recently on the visit to my hometown <em>Delhi</em> this Diwali when i visited <strong>Lajpat Rai</strong> market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.</p>
-
-<p>It was pretty clear that the Bulbs wont have those <em>Chinese</em> drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align= "center"></a></p>
-
-<p>And Bingo!
-It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS,%20One%20can%20only%20gjnvg/s1600/transformerless+power+supply+circuit.png">like this</a>) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (<em>No Zener</em>)</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia"></a></p>
-
-<p>The entire Bulb had:</p>
+    <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
 
 <ul>
-<li>2x <code>470k</code> resistors, </li>
-<li>1 x <code>100uf</code> Electrolytic Capacitor, </li>
-<li>1 x <code>0.1uf</code>(guess) Capacitor with severed markings</li>
-<li>12 LEDs</li>
-<li>4 Diodes in bridge rectifier configuration.</li>
+<li>Analog which can be directly read by our friendly ADC</li>
+<li>Digital which send data in values riding on I2C/SPI.</li>
 </ul>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003"></a></p>
+<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale &#39;s MMA7361 analog 3Axis Accelerometer</a>. </p>
 
-<p>The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.</p>
+<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image"></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005"></a></p>
+<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
 
-<p>One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.</p>
+<ul>
+<li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
+<li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
+<li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
+<li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
+<li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings </li>
+<li><strong>ST</strong> - Self Test</li>
+</ul>
 
-<p>Cheers!</p>
+<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
+
+<p>Just connect a <code>10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+
+<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg"></p>
+
+<p>Now just:</p>
+
+<ul>
+<li>read the analog values from the pin</li>
+<li>convert them to voltages</li>
+<li>apply sensitivity and correction</li>
+<li>and get g value</li>
+</ul>
+
+<p>Simple as that!</p>
+
+<p>Having deciphered it, i wrote a test code:</p>
+
+<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+
+<p>It worked as designed.</p>
+
+<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
+The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
+
+<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
+
+<p>Feel free to fork it and use it. 
+Hoping the community finds it useful.</p>
+
+<p>Cheers,</p>
 
 <p>Rohit </p>
 

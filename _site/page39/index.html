@@ -316,6 +316,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -346,7 +350,7 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-
+<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
 
     
   </div>
@@ -371,110 +375,39 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/04/07/OpenAgitator/">
-        Open Agitator
+      <a href="/2014/04/16/Tiano-Piano/">
+        Tiano- The Touchscreen Piano
       </a>
     </h1>
 
-    <span class="post-date">07 Apr 2014</span>
+    <span class="post-date">16 Apr 2014</span>
 
-    <p>After a somewhat woeful week at college that shook my belief in several sectors.. I mustered up my courage to realize an old project they knocked the door every time i used to Etch PCB boards. Since, the solution i use has already done close to 20 boards of small size one has to really keep shaking/stirring/Agitating the solution for a fairy long time.. ( ya 7-8 mins of man power is fairly long time :P )</p>
+    <p>Touchscreens..huh.. They are all around us..Phones ,tablets, phablets and now even laptops. Most of them have a capacitive touchscreen where the change in capacitance at a point is used to sense it and then perform the corresponding action. Capacitive ones are multi point sensing. They sense more than 2 points and hence we get those pinch to zoom features etc.</p>
 
-<p>The idea came to me when i visited my brother in <a title="Travelogue: Bangalore" href="http://indiantinker.wordpress.com/2013/05/24/travelogue-bangalore/" target="_blank">Bangalore</a> earlier this year. He was generous enough to give us a tour of his world class Biotechnology lab in India.. He showed us stuff and things/instruments which were difficult to pronounce in one go but they all had a thing in common- They ended with syllables like -<em>&#39;-izer&#39;,-&#39;ator&#39;,&#39;-ation&#39;. </em></p>
+<p>On the other hand , almost archaic version on touchscreen is the resistive version. That are pretty easy to interface with almost any microcontroller with an ADC. In this project i did over the weekend i tried to interface a touchscreen ( resistive one..) ,available at mobile repair shops in Delhi with a MSP430G2553 (Although MSP430G2231 would also do)  to make a piano.</p>
 
-<p>One thing that they used for not allowing things/particles to sediment was called a shaker. It would be great if i could get one for myself that will take the work out of etching. When i returned i made an over-killed 3D model of the agitator that i had in mind. It would just be a 1-axis CNC with a stepper motor and belt, That was doing a lot for the task..</p>
+<p><a href="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg"><img class="aligncenter size-full wp-image-339" alt="Touchscreen setup" src="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg" width="470" height="230" /></a></p>
 
-<p>Here are some pics of the model:</p>
+<p><strong>Pre-requisites</strong>: The touchscreen may not be easier to get. I got mine from a mobile repair shop in LR. It is a 4-wire Touchscreen, pretty common with horribly thin contacts that took a lot of patience to solder.There is a lot of literature available on Touchscreens on the internet. I found two app notes that were best. First one from <a href="http://www.atmel.in/Images/doc8091.pdf" target="_blank">Atmel</a> , that explained the working of the touchsreen in a pretty clear way and one from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI</a> that some what helped in the software part.</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator2.jpg"><img class="size-full wp-image-488" alt="Looks Cool Though.. " src="http://indiantinker.files.wordpress.com/2013/09/etchinator2.jpg" width="570" height="514" /></a> Looks Cool Though..</p>
+<p>You must read the atmel one ( atleast the first few pgs to get how it works). Its essentially a resistive voltage divider. The value of the touch point is determined by the ADC value read.</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg"><img class="size-full wp-image-487" alt="Freewheel mount and stepper motor" src="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg" width="633" height="466" /></a> Freewheel mount and stepper motor</p>
+<p><a href="http://indiantinker.files.wordpress.com/2013/04/post1.jpg"><img class="aligncenter size-full wp-image-338" alt="formula" src="http://indiantinker.files.wordpress.com/2013/04/post1.jpg" width="470" height="264" /></a></p>
 
-<p>Realizing the overkill design, I went on to an easier one earlier this month ( actually previous month ) when a relative who was &#39;demolishing&#39; his old PC gave me some old CDROMs that didn`t work. The mechanics did work though..</p>
+<p>From the illustration above(borrowed from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>). One can easily see how the co-ordinates are read. In order to find out, what wire on your touch sreen corresponds to X and Y meshes. You can use a multi-meter first to measure the resistance between pins ,usually the alternate pins belong to same axes. in my case it was X-,Y-,X+,Y+  then to differentiate between x and y , one probable method will be to power the touchscreen i.e. giving the drive voltage and then find out the voltage at any other terminal w.r.t. ground and see whether is changing horizontally or vertically in your reference plane.</p>
 
-<p>So, I just &#39;damaged&#39; the tracks around the main feed motor and attached my own custom circuit based around the MSP430 micro-controller and majority of TI parts as they can be shipped to anyone  with an address making it very easy to re build yourself.</p>
+<p><em>CAUTION: Be careful about the current while powering the touchscreen externally!</em></p>
 
-<p>Here is a proof-of-concept video i posted a while back where the Etchinator ( now Open Agitator after i realized it could do a lot more like cooling hot milk  :D ) was etching its own control board  :</p>
+<p>After this coding part is pretty simple. For the algo refer to page no.7 on the <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>. If you plan to run your end application on a battery and you have hard-coded the co-ordinates and the Vdrive is sourced externally i suggest that you sample the Vdrive as well . If you are using  microcontroller pins to supply Vdrive then this can be neglected.</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/wOFcjrQe-is" frameborder="0" allowfullscreen></iframe>
+<p>I have a desire to learn to play music but unfortunately due to my low patience levels , i have failed to keep up. :D</p>
 
-<p>I used a L293D H bridge motor controller to control the forward and backward movement of the cradle with an adjustable speed by giving a PWM on the Enable Pin . People who had made LFR&#39;s in the first/second year know its a child`s play.</p>
+<p>So, i made this Piano using the MSP430 Launchpad and a touchscreen along with a speaker. The code algo is pretty same as TI App Note Suggests and i encourage the reader to code it himself . Any difficulties can be discussed. It uses the<a href="http://indiantinker.wordpress.com/2012/11/29/tone-library-for-msp430/" target="_blank"> tone library</a> i posted earlier to generate the <a href="http://en.wikipedia.org/wiki/Solf%C3%A8ge" target="_blank">solfeggio</a>.
+<h1 id="firstHeading"><span style="font-size:13px;">Here is the shaky and horrible video i made:</span><b></b></h1></p>
 
-<p>After running the aforementioned set up for a while i noticed that  the cradle would shift to the farther end where the gear was slightly worn out. So, when loaded the cradle would :</p>
+<iframe width="640" height="480" src="//www.youtube.com/embed/Aw63-2rYthY" frameborder="0" allowfullscreen></iframe>
 
-<ol>
-<li>Latch on to that part and stay stuck.</li>
-<li>The whole system would move a bit forward each time and latch on the wrong part.</li>
-</ol>
-
-<p>So, an end-stop detection was required which would keep the cradle in the fixed portion.. some what similar to the ones i had seen in the CNC`s which tell them their legitimate playing fields.</p>
-
-<p>The answer was using the old mouse push button that came with the CD-ROM. Its softer and probably made to withstand greater number of press-cycles than a standard SPST Tactile switch.</p>
-
-<p>So , now the logic would work like, whenever the button/EndStop is pressed, the direction will be reversed for a fixed time and then reversed again.. So, the cycle keeps on going.. .. .. ..</p>
-
-<p>Here is the final  schematic i came up with:</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/sche.png"><img class="size-full wp-image-492" alt="Schematic" src="http://indiantinker.files.wordpress.com/2013/09/sche.png" width="700" height="482" /></a> Schematic</p>
-
-<p>Since, i did&#39;nt wanted to leave any pins un-used i included 3 LED`s which show the different states of the agitator.</p>
-
-<p>The power supply needs special mention as it converts from a standard 12V DC adapter to 5V for the logic of the bridge (L293D) and again an <a href="http://www.ti.com/product/lp2950-33" target="_blank">LDO LP2950-3.3V</a> for the MSP430. The LDO can be sampled from TI and 7805 is available locally with every tinkerer.</p>
-
-<p>Even the driver i.e <a href="http://www.ti.com/product/l293d" target="_blank">L293D</a> can be sourced from Ti. The brain of the device is a <a href="http://www.ti.com/product/msp430g2231" target="_blank">MSP430G2231</a> also sampled from TI and programmed from the <a href="http://www.ti.com/tool/msp-exp430g2" target="_blank">MSP430 Launchpad</a>. So, This project was indirectly sponsored by TI :D</p>
-
-<p>The next came the board layout.. I designed it to have the least number of  vias (They can be a pain sometimes) while fitting at the back of the CD-ROM. Here is the one with just two vias.</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/brd.png"><img class="size-full wp-image-493" alt="Board!" src="http://indiantinker.files.wordpress.com/2013/09/brd.png" width="458" height="205" /></a> Board</p>
-
-<p>Since, the position of motor/EndStop switches were flexible they eased out the routing a bit. You can also add a DC Jack to it if you like. The files are available on github <a href="https://github.com/IndianTinker/OpenAgitator" target="_blank">here</a>.</p>
-
-<p>Here are pictures of the final build i managed to pull off.</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00522.jpg"><img class="size-full wp-image-497" alt="The EndStop" src="http://indiantinker.files.wordpress.com/2013/09/dsc00522.jpg" width="700" height="525" /></a> The EndStop</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00512.jpg"><img class="size-full wp-image-498" alt="Shiny Copper Board" src="http://indiantinker.files.wordpress.com/2013/09/dsc00512.jpg" width="700" height="420" /></a> Shiny Copper Board</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00515.jpg"><img class="size-full wp-image-499" alt="All in Place" src="http://indiantinker.files.wordpress.com/2013/09/dsc00515.jpg" width="700" height="444" /></a> All in Place</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00516.jpg"><img class="size-full wp-image-500" alt="Scratchy Soldering" src="http://indiantinker.files.wordpress.com/2013/09/dsc00516.jpg" width="700" height="476" /></a> Scratchy Soldering</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00517.jpg"><img class="size-full wp-image-501" alt="Power Test Complete" src="http://indiantinker.files.wordpress.com/2013/09/dsc00517.jpg" width="700" height="505" /></a> Power Test Complete</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg"><img class="size-full wp-image-503" alt="Fixed to the back of the CDROM" src="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg" width="700" height="525" /></a> Fixed to the back of the CDROM</p>
-
-<p>The next thing that was left was to give it a sturdy base. I choose two planks of wood that were lying around. It was essential to leave it without any base on the middle section as if &#39;ever&#39; there is a chemical spill that can be cleaned without unscrewing the entire assembly!</p>
-
-<p>So, Here is the final build :</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg"><img class="size-full wp-image-502" alt="Final Build" src="http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg" width="700" height="525" /></a> Final Build</p>
-
-<p>You can fork the complete code and design from my<a href="https://github.com/IndianTinker/OpenAgitator" target="_blank"> github repo</a>.</p>
-
-<p>Here is a video of me explaining the build.. Please ignore the following :
-<ul>
-    <li>Bad camera quality</li>
-    <li>Some goof-ups with the IC names.. Keep an eye on the Sub Titles/Captions</li>
-    <li>Background Noise (if any)</li>
-</ul></p>
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/0nLpa1uPF_E" frameborder="0" allowfullscreen></iframe>
-
-<p>Hope you like it and build one for yourself..
-Cheers,
-IndianTinker</p>
-
-<p>:D</p>
-
-<p>Edit: Please vote for this project on instructables <a href="http://www.instructables.com/id/Open-Agitator-Your-Personal-Chemistry-Lab-Shaker/" target="_blank">here</a> !</p>
-
-<p>See another make of my project by a reader on instructable:</p>
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/zX0pGGTKSB0" frameborder="0" allowfullscreen></iframe>
-
-<p>(Thanks for sharing <a href="http://http://ales.kapun.org/" target="_blank">Aleš</a> )</p>
-
-<p><span style="line-height:1.5;"> </span></p>
+<p>Cheers! :D</p>
 
   </div>
   
