@@ -4,13 +4,85 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2016-01-01T19:02:57+05:30</updated>
+ <updated>2016-01-03T18:16:53+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Maker's Rule-The PCB multi-tool now on Tindie</title>
+   <link href="http://rohitg.in/2016/01/01/MakersRule/"/>
+   <updated>2016-01-01T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/01/01/MakersRule</id>
+   <content type="html">&lt;p&gt;It has been a while since i posted my &lt;a href=&quot;/2014/12/14/Tinker-Rule/&quot;&gt;Tinker Rule&lt;/a&gt; which i made during college days. I received a few requests for the ready to etch pdf which helped me gauge if this seemed to be useful to people. The response was somewhat positive and so, i decided to put in some extra effort and make it handy, portable and &lt;strong&gt;manufacturable&lt;/strong&gt; !&lt;/p&gt;
+
+&lt;p&gt;My initial scale was big and not handy, So, this one should be small and compact and must not miss a single feature from its ancestor.
+This one has :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.1 inch grid to quickly prototype/resolve parts for perf-boarding or part creation&lt;/li&gt;
+&lt;li&gt;A collection of footprints and holes to quickly compare parts&lt;/li&gt;
+&lt;li&gt;A small pad with a sand paper to rust off those berg strips/resistor ends that just wont solder located ergonomically at the end to allow easy motion&lt;/li&gt;
+&lt;li&gt;A key chain form factor&lt;/li&gt;
+&lt;li&gt;A LED Tester&lt;/li&gt;
+&lt;li&gt;A continuity tester compatible with most common 4.5mm banana plug type probes and alternatively alligator clips too&lt;/li&gt;
+&lt;li&gt;A reference section for common equations,scales and track widths.&lt;/li&gt;
+&lt;li&gt;0.1 inch scale at right angles&lt;/li&gt;
+&lt;li&gt;1 mm resolution scale at right angles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I made an initial to-scale mockup to verify the parts and ergonomics.  &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23973471686/in/dateposted-public/&quot; title=&quot;IMG_20151227_145938&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5765/23973471686_a66bea0d23_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151227_145938&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23973471126/in/dateposted-public/&quot; title=&quot;IMG_20151227_145928&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1684/23973471126_6e2725d605_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151227_145928&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Then redesigned the board iteratively in KiCAD. The size was a bit higher to utilise the low volume PCB fabs from China.This presented an opportunity to search and try some local manufacturers and add a month to the project. Most of them &lt;em&gt;unfortunately&lt;/em&gt; gave disappointing replies to mails for low volume production. &lt;/p&gt;
+
+&lt;p&gt;Aghasted, I started street searching for PCB manufacturers here in Pune. Fortunately, I live near an Industrial Area and &lt;em&gt;Just Dial&lt;/em&gt; churned out a humble number of results. I visited a few of them and finalised one based on cost, quality and turn around time. But had to re-design it yet again to match the tolerances.&lt;/p&gt;
+
+&lt;p&gt;But Yeah!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Made In India&lt;/em&gt; :D&lt;/p&gt;
+
+&lt;p&gt;Here is what i managed to make :&lt;/p&gt;
+
+&lt;p&gt;The 5mm hole doubles up as a key-chain ring.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23917001301/in/dateposted-public/&quot; title=&quot;IMG_20151222_075249&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5725/23917001301_7f6116211a_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151222_075249&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Use normal multimeter probes with the Maker&amp;#39;s Rule for continuity testing. My multimeter meter has a habit of dying down when i need it the most to check continuity of newly etched PCB. Here i use a 0805 LED for the output. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23898462075/in/dateposted-public/&quot; title=&quot;IMG_20151222_075535&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5710/23898462075_058b936e0a_z.jpg&quot; width=&quot;640&quot; height=&quot;518&quot; alt=&quot;IMG_20151222_075535&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;It is available in two colors- Bright Green and Marine Blue &amp;amp; A CR2032 Battery adds more potential.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23602748930/in/dateposted-public/&quot; title=&quot;IMG_20151222_075206&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/616/23602748930_9d9270b930_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151222_075206&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23530569719/in/dateposted-public/&quot; title=&quot;IMG_20151222_075320&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/601/23530569719_6f30de9ca0_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151222_075320&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A LED Tester that helps you test those LEDs with equal leads or SMD packages with no marking.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23790133272/in/dateposted-public/&quot; title=&quot;IMG_20151222_075457&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5618/23790133272_b13a18aa74_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151222_075457&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A fine grit sand paper to beat some rust.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/23872361166/in/dateposted-public/&quot; title=&quot;IMG_20151222_075426&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/568/23872361166_dbd358dd50_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20151222_075426&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The first few PCBs had a drill issue as the 2.8mm drill hole was drilled by a 2.5mm one. I had to get them drilled again.&lt;/p&gt;
+
+&lt;p&gt;I have listed it on &lt;a href=&quot;https://www.tindie.com/products/IndianTinker/makers-rule-the-diyers-swiss-army-knife/&quot;&gt;Tindie&lt;/a&gt; if anyone is interested.It ships with a key-chain blank, A CR2032 Battery and the Rule of-course. &lt;/p&gt;
+
+&lt;p&gt;Also any customisations like putting your logo/content on it are also welcomed.  &lt;/p&gt;
+
+&lt;p&gt;Cheers !!&lt;/p&gt;
+
+&lt;p&gt;Rohit &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>StarMAT-Star Wars Themed Interactive Doormat</title>
@@ -35,9 +107,16 @@
 
 &lt;p&gt;I kept it at the entrance of my room and every time there is someone to meet me, He is greeted with a Random Star Wars Jargon !  &lt;/p&gt;
 
-&lt;p&gt;The setup is temporary and hence on the breadboard. For the brains i use the &lt;em&gt;Arduino&lt;/em&gt; with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the &lt;em&gt;Arduino&lt;/em&gt; blinks to show that its ready to read the sensor.&lt;/p&gt;
+&lt;p&gt;The setup is temporary and hence on the breadboard. For the brains i use the &lt;em&gt;Arduino&lt;/em&gt; with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the &lt;em&gt;Arduino&lt;/em&gt; blinks to show that its ready to read the sensor. The sensor i am using is this &lt;a href=&quot;http://www.seeedstudio.com/depot/datasheet/TTP223_SPEC.pdf&quot;&gt;one&lt;/a&gt;.I have used a big PLCC2 Pkg LED with a reference capacitance that matches the electrode length. I tried a few available caps. Then forgot the once i used. Argh!! SMD. The PCB is shown below. (Yeah! I know there is no bottom ground plane)&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot;  href=&quot;https://www.flickr.com/photos/94411929@N06/24062427081/in/dateposted-public/&quot; title=&quot;Touch Sensor&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1507/24062427081_43cb82aaed_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;Touch Sensor&quot;&gt;&lt;/a&gt;&lt;script async src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, when some-one (except Darth Vader/Droids) steps on the mat. The relative capacitance changes and the sensor grounds its output which is pulled up by default. This is detected by the Arduino which commands the MP3 player to play a random song/phrase from the assorted collection stored on the SD Card . And Yes! The whole setup is powered by a power bank (the black PVC Tube in the video above) that i made for my CX-10 pocket-Quad recharging, which powers the setup for about 6-7 hours easily. To split power between the USB Speakers and the Arduino, i use the USB Hub (in white with blue LED) .&lt;/p&gt;
+
+&lt;p&gt;Interested in the complete setup. Check out this video :D 
+Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/A_ZnKR84uk4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Any questions or suggestion, have you, use the comment section below!  &lt;/p&gt;
 

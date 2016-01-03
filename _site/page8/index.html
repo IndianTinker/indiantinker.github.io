@@ -320,6 +320,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -375,95 +379,84 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/10/22/OpenBadge/">
-        Open Badge:You'da Maker
+      <a href="/2015/11/08/NoobSentiment/">
+        Nooby Sentiment Analysis using nodejs
       </a>
     </h1>
 
-    <span class="post-date">22 Oct 2015</span>
+    <span class="post-date">08 Nov 2015</span>
 
-    <p>Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.</p>
+    <p><strong>News Flash</strong>: Sentiments are now easy to quantify because there is soooo much data around to poke into. People eat,laugh,cry,sleep when they tweet, or maybe its the other way around.</p>
 
-<p>For the LED array we could use the usual LED Matrix,5x7 seemed to be a good size comfortable for both the pins and programmer.But..</p>
+<p>So, we can derive loads of business and impact information based on these free streams of data and quantify them for our needs, which currently here is purely <em>exploratory</em> !</p>
 
-<p>The LED Matrix available in stores nearby had a lot of issues: </p>
+<p>For mere instance, Lets put our favorite sport into the picture, <em>Cricket</em>! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what &#39;I&#39; say somewhat <strong>elastic</strong> in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the &#39;played well&#39; stance and later become a neutral subject. There maybe some exceptions.</p>
 
-<ul>
-<li>Profile was too thick</li>
-<li>The sizes available were either too big or too small for a 5x7 size.</li>
-<li>Came with no datasheet, which meant bull work required to find out all the R and C values. Dahh!</li>
-</ul>
-
-<p>So, I had to make a <strong>tough</strong> choice of soldering 35 LEDs which meant the PCB was going to be <em>Dou.Double Sided</em> (Literal stammering). I had never done double sided at home. But it was never too late and that difficult. <strong>Basically</strong> you have to align two sides and just slip in the copper clad , tape it , iron it and  etch it and then <em>Hope is all you need</em> !</p>
-
-<p>FYI, that &#39;basically&#39; came after i spoilt one full PCB. </p>
+<p>As wiki states it:</p>
 
 <blockquote>
-<p>PRO-TIP: You can have some alignment marks out of the scope of PCB in different directions in the dimension layer. Now when you align the front and back you just align the marks. Check this <a href="http://www.instructables.com/id/Two-sided-PCB-using-toner-method/">instructable</a> i used as a reference.</p>
+<p>Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
 </blockquote>
 
-<p>The major elements on the PCB were:</p>
+<p>Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.</p>
+
+<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words. </p>
+
+<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality. </p>
+
+<p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
+
+<p>To install it: <code>npm install sentiment</code> . Check out the README on the page for a quick start.</p>
+
+<p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
+
+<p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the &#39;.&#39; operator.</p>
+
+<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code>fs</code> that already comes with the package.</p>
+
+<p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
+
+<p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
+
+<script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
+
+<p>After 500 Tweets the data is as follows:</p>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/61.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/57.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/53.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/55.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/59.embed"></iframe>
+
+<p><strong>Notable Observations</strong> :</p>
 
 <ul>
-<li>LED Matrix</li>
-<li>A MSP430G2553 microcontroller brain</li>
-<li>A ULN2803 Darlington Driver to sink the current</li>
-<li>A USB connector to charge the battery</li>
-<li>A SBW connector to program the MSP430</li>
-<li>A Switch to change the message</li>
-<li>A Li-Ion battery from a Discarded Phone</li>
-<li>Current limiting and Pull up resistors</li>
-<li>Decoupling Capacitors</li>
-<li>A REG1117 Regulator for MSP430</li>
+<li>Kolkata and Delhi are particularly sad</li>
+<li>Bengaluru&gt;Pune&gt;Mumbai is the way happiness goes.</li>
+<li>I found there are lots of twitter contest chasers as i kept on getting tons of similar tweets in Pune</li>
+<li>In Mumbai and Bengaluru, Tweets were mainly get togethers and parties.</li>
+<li>Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.</li>
+<li>The Cricket All Stars reasonably raised the happiness levels.</li>
 </ul>
 
-<p>Schematics and PCBs took 3 days of part-time work. Etching,Drilling and Soldering took a nighter.I had a provision to use the PCB directly as the badge with two big drill holes on the top.</p>
+<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities. </p>
 
-<p>Check out the images below: </p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/20736425093/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5823/20736425093_7349c070f7_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> </p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21346949492/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/737/21346949492_c5295449cb_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/20736678943/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5800/20736678943_11ac529978_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21365927401/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/612/21365927401_052a3bfdef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/20736053114/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/575/20736053114_bf0ed32bef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21171876949/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/676/21171876949_394ce34d21_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21169357760/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/568/21169357760_4dc214b3f0_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>After experimenting with readability, i found out that the display was a dud in bright light. So, i repurposed an already cut-out heart shaped Red Diffuser for the display. It was a game changer.</p>
-
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21510455275/in/dateposted-public/" title="P_20150917_110935"><img src="https://farm1.staticflickr.com/567/21510455275_37e0e33463_z.jpg" width="360" height="640" alt="P_20150917_110935"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The basic code is available <a href="https://github.com/IndianTinker/OpenBadge">here</a> for people who wish to build it.
-The final version could do:</p>
+<p><strong>Caveats</strong>:</p>
 
 <ul>
-<li>5 Strings scrolling</li>
-<li>Temperature Display (MSP430s have a temperature sensor in-built)</li>
-<li>Static Display</li>
+<li>Most of the time when tweets are not in English they end up scoring zero, i should rather translate them and then analyze</li>
+<li>The AFINN approach does fail sometimes, i have seen a neutral score on a feel good post quite a number of times.</li>
 </ul>
 
-<p>Things that the hardware allowed but i didnt get the time to program:</p>
+<p>Hoping to listen from some Data Gurus !</p>
 
-<ul>
-<li>Battery state sensing</li>
-<li>Animations</li>
-</ul>
+<p>Cheers,</p>
 
-<p>When i showed it to <a href="https://twitter.com/anool">@anool</a> at Maker Fest, he liked it and gave me a <a href="http://wyolum.com/projects/badger/">BadgEr</a> which was even cooler.</p>
-
-<p>Please check out the video below:</p>
-
-<iframe width="480" height="360" src="https://www.youtube.com/embed/KU9X9qTaQvg" frameborder="0" allowfullscreen></iframe>
-
-<p>Cheers !!</p>
-
-<p>Rohit </p>
+<p>Rohit</p>
 
   </div>
   

@@ -329,6 +329,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -414,9 +418,16 @@ All Rights Reserved
 
 <p>I kept it at the entrance of my room and every time there is someone to meet me, He is greeted with a Random Star Wars Jargon !  </p>
 
-<p>The setup is temporary and hence on the breadboard. For the brains i use the <em>Arduino</em> with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the <em>Arduino</em> blinks to show that its ready to read the sensor.</p>
+<p>The setup is temporary and hence on the breadboard. For the brains i use the <em>Arduino</em> with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the <em>Arduino</em> blinks to show that its ready to read the sensor. The sensor i am using is this <a href="http://www.seeedstudio.com/depot/datasheet/TTP223_SPEC.pdf">one</a>.I have used a big PLCC2 Pkg LED with a reference capacitance that matches the electrode length. I tried a few available caps. Then forgot the once i used. Argh!! SMD. The PCB is shown below. (Yeah! I know there is no bottom ground plane)</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/24062427081/in/dateposted-public/" title="Touch Sensor"><img src="https://farm2.staticflickr.com/1507/24062427081_43cb82aaed_z.jpg" width="480" height="640" alt="Touch Sensor"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>Now, when some-one (except Darth Vader/Droids) steps on the mat. The relative capacitance changes and the sensor grounds its output which is pulled up by default. This is detected by the Arduino which commands the MP3 player to play a random song/phrase from the assorted collection stored on the SD Card . And Yes! The whole setup is powered by a power bank (the black PVC Tube in the video above) that i made for my CX-10 pocket-Quad recharging, which powers the setup for about 6-7 hours easily. To split power between the USB Speakers and the Arduino, i use the USB Hub (in white with blue LED) .</p>
+
+<p>Interested in the complete setup. Check out this video :D 
+Sorry for the dull voice tone. I had the dark side messing up with me :P</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/A_ZnKR84uk4" frameborder="0" allowfullscreen></iframe>
 
 <p>Any questions or suggestion, have you, use the comment section below!  </p>
 
@@ -445,6 +456,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2016/01/01/MakersRule/">
+            Maker's Rule-The PCB multi-tool now on Tindie
+            <small>01 Jan 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2015/11/20/Doormate/">
             Doormate- Runner's Up at Intel IOT Roadshow
             <small>20 Nov 2015</small>
@@ -457,15 +477,6 @@ All Rights Reserved
           <a href="/2015/11/16/Plantpal/">
             PlantPal-Garden Light Watering Reminder
             <small>16 Nov 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/11/15/GettingStartedwithESP1/">
-            Getting Started with ESP8266:AT-Commands and Wifi DataLogger
-            <small>15 Nov 2015</small>
           </a>
         </h3>
       </li>

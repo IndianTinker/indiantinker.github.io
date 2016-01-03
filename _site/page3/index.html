@@ -320,6 +320,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -375,62 +379,28 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/16/Plantpal/">
-        PlantPal-Garden Light Watering Reminder
+      <a href="/2015/11/20/Doormate/">
+        Doormate- Runner's Up at Intel IOT Roadshow
       </a>
     </h1>
 
-    <span class="post-date">16 Nov 2015</span>
+    <span class="post-date">20 Nov 2015</span>
 
-    <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
+    <p>Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog <a href="/2015/08/01/Intel/">link</a> that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did. </p>
 
-<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched &#39;Automatic System&#39;, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
+<p>Basically, our Project was called the <strong>Doormate</strong>. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.</p>
 
-<p>Hence,<strong>PlantPal</strong> .</p>
+<p>The project uses the <strong>Intel edison</strong> and was built using whatever parts we could rummage at the event. </p>
 
-<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The &#39;Chinese&#39; made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
+<p>The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka <em>The Bell Playlist</em> .</p>
 
-<p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
+<p>The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved <em>Mogambo</em> feels good and the door opens. (See video below to understand the context)</p>
 
-<ul>
-<li>A yet-another-no-datasheet chinese IC.</li>
-<li>A axial resistor like inductor</li>
-<li>An LED</li>
-<li>A resistor for the LED.</li>
-<li>The solar panel</li>
-<li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
-</ul>
+<p>Here is what the dashboard <a href="http://doormate.github.io/website/">looks like</a>.  </p>
 
-<p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
+<p>The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:</p>
 
-<p>So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.</p>
-
-<p>So, the power issue was sorted. For the sensor, i used the usual <em>two-wires-in-gypsum</em> sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my <a href="http://www.ti.com/product/msp430g2230">MSP430G2230</a> used up. It was time to work on the code.  </p>
-
-<p><em>With great power, comes greater responsibility</em>. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.</p>
-
-<p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
-
-<blockquote>
-<p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED&#39;s blinking rate also acts like an indicator of sorts.</p>
-</blockquote>
-
-<p><strong>Problems and solutions</strong></p>
-
-<p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
-
-<ul>
-<li><p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon. </p></li>
-<li><p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p></li>
-<li><p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p></li>
-<li><p>Even lower power, using the MSP430&#39;s clock module i can certainly go below 1MHz until it affects other peripherals.</p></li>
-</ul>
-
-<p>Check out the video of it in action:</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen></iframe>
-
-<p>Please do comment if you have any queries :D</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/su8k2AwtbH0" frameborder="0" allowfullscreen></iframe>
 
 <p>Cheers !!</p>
 
