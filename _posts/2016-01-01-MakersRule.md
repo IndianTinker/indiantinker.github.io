@@ -4,7 +4,7 @@ title: 	Maker's Rule-The PCB multi-tool now on Tindie
 image: https://farm6.staticflickr.com/5765/23973471686_a66bea0d23_z.jpg
 location: Pune, India
 tags:
-- electronics
+- hardware
 ---
 
 It has been a while since i posted my [Tinker Rule]({% post_url 2014-12-14-Tinker-Rule %}) which i made during college days. I received a few requests for the ready to etch pdf which helped me gauge if this seemed to be useful to people. The response was somewhat positive and so, i decided to put in some extra effort and make it handy, portable and **manufacturable** !
