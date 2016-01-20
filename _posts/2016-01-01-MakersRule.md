@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 	Maker's Rule-The PCB multi-tool now on Tindie
+title: 	Maker's Rule-The Feature Packed PCB Multi-Tool 
 image: https://farm6.staticflickr.com/5765/23973471686_a66bea0d23_z.jpg
 location: Pune, India
 tags:
