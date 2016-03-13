@@ -390,47 +390,45 @@ All Rights Reserved
 
     <span class="post-date">14 Nov 2015</span>
 
-    <p>Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this <strong>Wearable LED heart</strong> project to showcase at MakerFest 2014. This would be our team&#39;s signature.</p>
+    <p>Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this <strong>Wearable LED heart</strong> project to showcase at MakerFest 2014. This would be our team’s signature.</p>
 
 <p>Basically, we have a small PCB milled in the shape of a heart and studded with LEDs that react to the ambient light and change their beating rate and whenever someone comes too close(basically a hand in most cases :P), the LEDs change the pattern to what Prof.Gadre calls the <em>Happy Mode</em> ! </p>
 
-<p>I worked on the initial schematics and made the <em>first</em> working prototype of it involving the LDR as the sensor. The code that went inside worked as follows:</p>
-
-<blockquote>
-<p>It takes two snapshots of the LDR reading before and after the LED blinks, i.e. the ON state and OFF state and based on the delta the algorithm decides the lighting conditions and varies the beat rate. Once the Delta exceeds a point, it switches to happy mode !</p>
-</blockquote>
+<p>I worked on the initial schematics and made the <em>first</em> working prototype of it involving the LDR as the sensor. The code that went inside worked as follows:
+&gt; It takes two snapshots of the LDR reading before and after the LED blinks, i.e. the ON state and OFF state and based on the delta the algorithm decides the lighting conditions and varies the beat rate. Once the Delta exceeds a point, it switches to happy mode !</p>
 
 <p>The PCB is a double sided one ; made after i made <a href="/2015/10/22/OpenBadge/">Open Badge</a> . So, most pitfalls were over. Without the temperature controlled soldering iron and LEDs mounted very close-by it was a pain to solder them. They would heat and sometimes blow away due to excess heat. Probably the best way was to reflow ?</p>
 
 <p>Check out the pictures of the build in action !</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22262732850/in/dateposted-public/" title="Dumping some neurons"><img src="https://farm1.staticflickr.com/751/22262732850_b239316ce1_z.jpg" width="640" height="359" alt="Dumping some neurons"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22262732850/in/dateposted-public/" title="Dumping some neurons"><img src="https://farm1.staticflickr.com/751/22262732850_b239316ce1_z.jpg" width="640" height="359" alt="Dumping some neurons" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22424711966/in/dateposted-public/" title="Front side"><img src="https://farm6.staticflickr.com/5810/22424711966_e144c2f32a_z.jpg" width="640" height="359" alt="Front side"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22424711966/in/dateposted-public/" title="Front side"><img src="https://farm6.staticflickr.com/5810/22424711966_e144c2f32a_z.jpg" width="640" height="359" alt="Front side" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22263012308/in/dateposted-public/" title="Front"><img src="https://farm1.staticflickr.com/759/22263012308_5cbde5866a_z.jpg" width="640" height="359" alt="Front"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263012308/in/dateposted-public/" title="Front"><img src="https://farm1.staticflickr.com/759/22263012308_5cbde5866a_z.jpg" width="640" height="359" alt="Front" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21827990404/in/dateposted-public/" title="All LEDs survive the temperature"><img src="https://farm6.staticflickr.com/5718/21827990404_209e639397_z.jpg" width="640" height="359" alt="All LEDs survive the temperature"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21827990404/in/dateposted-public/" title="All LEDs survive the temperature"><img src="https://farm6.staticflickr.com/5718/21827990404_209e639397_z.jpg" width="640" height="359" alt="All LEDs survive the temperature" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/22263867379/in/dateposted-public/" title="All soldered up"><img src="https://farm6.staticflickr.com/5763/22263867379_566a4080cc_z.jpg" width="640" height="359" alt="All soldered up"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263867379/in/dateposted-public/" title="All soldered up"><img src="https://farm6.staticflickr.com/5763/22263867379_566a4080cc_z.jpg" width="640" height="359" alt="All soldered up" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>The video of the heart in action:</p>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/dAfC-3cFSuY" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/dAfC-3cFSuY" frameborder="0" allowfullscreen=""></iframe>
 
-<p>Final PCBs for MakerFest, all Hand Soldered :&#39;)</p>
+<p>Final PCBs for MakerFest, all Hand Soldered :’)</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/11980555293/" title="All Hearts soldered just in time"><img src="https://farm3.staticflickr.com/2849/11980555293_daca4acaed_z.jpg" width="640" height="366" alt="All Hearts soldered just in time"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980555293/" title="All Hearts soldered just in time"><img src="https://farm3.staticflickr.com/2849/11980555293_daca4acaed_z.jpg" width="640" height="366" alt="All Hearts soldered just in time" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/11981073356/in/photostream/" title="Final Piece Back"><img src="https://farm8.staticflickr.com/7366/11981073356_201a3d139d_z.jpg" width="359" height="640" alt="Final Piece Back"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11981073356/in/photostream/" title="Final Piece Back"><img src="https://farm8.staticflickr.com/7366/11981073356_201a3d139d_z.jpg" width="359" height="640" alt="Final Piece Back" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/11980650274/in/photostream/" title="LED thru the eye loupe"><img src="https://farm4.staticflickr.com/3731/11980650274_53fc2083c5_z.jpg" width="640" height="597" alt="LED thru the eye loupe"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980650274/in/photostream/" title="LED thru the eye loupe"><img src="https://farm4.staticflickr.com/3731/11980650274_53fc2083c5_z.jpg" width="640" height="597" alt="LED thru the eye loupe" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>The mass manufactured version of the same was also presented to the participants of <em>Texas Instruments Analog Design Contest 2014</em> !</p>
 
 <p>Cheers !!</p>
 
 <p>Rohit </p>
+
 
   </div>
   

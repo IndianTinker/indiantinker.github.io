@@ -408,11 +408,11 @@ All Rights Reserved
 <br>
   <p>Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old <strong>WebSense Blocked</strong> page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times. </p>
 
-<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would&#39;nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
+<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would’nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
 
 <p>I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score <em>always</em> during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.  </p>
 
-<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What&#39;s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
+<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What’s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
 
 <p>Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.</p>
 
@@ -421,7 +421,7 @@ All Rights Reserved
 <p>I thought best way is to make an API myself when there is none that suits me. </p>
 
 <blockquote>
-<p><em>I&#39;ll scrape</em> !</p>
+  <p><em>I’ll scrape</em> !</p>
 </blockquote>
 
 <p>So, i wrote a <em>python</em> script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out. </p>
@@ -435,29 +435,28 @@ All Rights Reserved
 <p>Here is the first visual of a World Cup match on my project :</p>
 
 <blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0CfR7pPUHD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-10T07:31:20+00:00">Mar 10, 2015 at 12:31am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p><BR>
+<p><br />
 This too.
-<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup"></a></p>
+<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup" />&lt;/a&gt;</p>
 
 <p>As you can see we have the following parts of score displayed:</p>
 
 <ul>
-<li>Teams playing</li>
-<li>Currently batting team with overs underneath it</li>
-<li>The score in the largest font</li>
-<li>4s/6s and Run Rate</li>
-<li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
-<li>Match Status - Rains, Ended,In Progress etc</li>
+  <li>Teams playing</li>
+  <li>Currently batting team with overs underneath it</li>
+  <li>The score in the largest font</li>
+  <li>4s/6s and Run Rate</li>
+  <li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
+  <li>Match Status - Rains, Ended,In Progress etc</li>
 </ul>
 
-<p>Here is the picture of the setup:
+<p>Here is the picture of the setup:</p>
 <center>
-<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup">
+<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup" />
 </center>
-A Laser cut case and we could go wall mount.  </p>
+<p>A Laser cut case and we could go wall mount.  </p>
 
 <p>I then made the script executable and queued it as a <code>cron-job</code> to be run every minute.  <em>BLISS</em></p>
 
@@ -468,16 +467,16 @@ A Laser cut case and we could go wall mount.  </p>
 <p>Here is how i kept a track of IPL :</p>
 
 <blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/14Z6-PvUD3/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-25T02:34:53+00:00">Apr 24, 2015 at 7:34pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p><BR></p>
+<p><br /></p>
 
 <p><strong>NOTE :</strong> The project was not performed/made at the workplace. Only the use case was inspired from there.</p>
 
 <p>Cheers,</p>
 
 <p>Rohit </p>
+
 
 </div>
 <br>

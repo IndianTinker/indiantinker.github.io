@@ -406,21 +406,21 @@ All Rights Reserved
 <br>
   <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
 
-<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched &#39;Automatic System&#39;, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
+<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched ‘Automatic System’, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
 
 <p>Hence,<strong>PlantPal</strong> .</p>
 
-<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The &#39;Chinese&#39; made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
+<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The ‘Chinese’ made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
 
 <p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
 
 <ul>
-<li>A yet-another-no-datasheet chinese IC.</li>
-<li>A axial resistor like inductor</li>
-<li>An LED</li>
-<li>A resistor for the LED.</li>
-<li>The solar panel</li>
-<li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
+  <li>A yet-another-no-datasheet chinese IC.</li>
+  <li>A axial resistor like inductor</li>
+  <li>An LED</li>
+  <li>A resistor for the LED.</li>
+  <li>The solar panel</li>
+  <li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
 </ul>
 
 <p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
@@ -434,7 +434,7 @@ All Rights Reserved
 <p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
 
 <blockquote>
-<p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED&#39;s blinking rate also acts like an indicator of sorts.</p>
+  <p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED’s blinking rate also acts like an indicator of sorts.</p>
 </blockquote>
 
 <p><strong>Problems and solutions</strong></p>
@@ -442,21 +442,30 @@ All Rights Reserved
 <p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
 
 <ul>
-<li><p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon. </p></li>
-<li><p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p></li>
-<li><p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p></li>
-<li><p>Even lower power, using the MSP430&#39;s clock module i can certainly go below 1MHz until it affects other peripherals.</p></li>
+  <li>
+    <p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon. </p>
+  </li>
+  <li>
+    <p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p>
+  </li>
+  <li>
+    <p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p>
+  </li>
+  <li>
+    <p>Even lower power, using the MSP430’s clock module i can certainly go below 1MHz until it affects other peripherals.</p>
+  </li>
 </ul>
 
 <p>Check out the video of it in action:</p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Please do comment if you have any queries :D</p>
 
 <p>Cheers !!</p>
 
 <p>Rohit </p>
+
 
 </div>
 <br>

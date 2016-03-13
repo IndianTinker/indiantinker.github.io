@@ -413,63 +413,61 @@ All Rights Reserved
 <p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
 
 <ul>
-<li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
-<li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
+  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
+  <li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
 </ul>
 
 <p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  </p>
 
-<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,</p>
-
-<blockquote>
-<p>Why buy, When it can be built.</p>
-</blockquote>
+<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,
+&gt;Why buy, When it can be built.</p>
 
 <p>Also none of the boards satisfied both my needs together:</p>
 
 <ul>
-<li>Control I/F with a MCU</li>
-<li>Micro USB </li>
+  <li>Control I/F with a MCU</li>
+  <li>Micro USB </li>
 </ul>
 
 <p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
 
-<p><center>
-<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg">
-</center></p>
+<center>
+<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg" />
+</center>
 
 <p>There were only the following changes:</p>
 
 <ul>
-<li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
-<li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
-<li>Provided a common ground to i/f</li>
-<li>Added microUSB and a 90degree pinheader for my batteries.</li>
+  <li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
+  <li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
+  <li>Provided a common ground to i/f</li>
+  <li>Added microUSB and a 90degree pinheader for my batteries.</li>
 </ul>
 
 <p>Here is the build process:</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered" /></a></p>
 
 <p>During Charging:
-<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress"></a></p>
+<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress" /></a></p>
 
 <p>After charge Termination:
-<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !"></a></p>
+<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !" /></a></p>
 
 <p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. </p>
 
 <p>Cheers,</p>
 
 <p>Rohit </p>
+
 
 </div>
 <br>

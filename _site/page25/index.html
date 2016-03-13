@@ -396,17 +396,17 @@ All Rights Reserved
 
 <p>Interesting !!</p>
 
-<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and &quot;no mess visible&quot;. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project. </p>
+<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and “no mess visible”. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project. </p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box" /></a></p>
 
 <p>So, the plan was   :</p>
 
 <blockquote>
-<p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall). </p>
+  <p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall). </p>
 </blockquote>
 
-<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don&#39;t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
+<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don’t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
 
 <p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
 
@@ -416,38 +416,38 @@ All Rights Reserved
 
 <p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
 
-<p>That&#39;s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
+<p>That’s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched" /></a></p>
 
 <p>Some soldering !</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled" /></a></p>
 
 <p>and some Brain Implant ( aka Code Download )</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant" /></a></p>
 
 <p>The Code :
 <script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script></p>
 
-<p>Then modifying the nice little box to suit the PCB  (That moment when you say, &quot;If only i had a 3D Printer&quot; )</p>
+<p>Then modifying the nice little box to suit the PCB  (That moment when you say, “If only i had a 3D Printer” )</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall" /></a></p>
 
 <p>Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say <strong>Manual Over-ride</strong> ?</p>
 
 <p>The wiring mess inside the switch-board.
-<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board"></a></p>
+<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board" /></a></p>
 
 <p>All cleared up !
-<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out"></a></p>
+<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out" /></a></p>
 
 <p>After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up. </p>
 
@@ -455,11 +455,11 @@ All Rights Reserved
 
 <p>And yes here are the colors !</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights" /></a></p>
 
 <p>Dont forget to watch the video below and if you have something to say, Please Comment Down here!</p>
 
-<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Cheers,</p>
 

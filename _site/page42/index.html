@@ -392,7 +392,7 @@ All Rights Reserved
 
     <p>After a somewhat woeful week at college that shook my belief in several sectors.. I mustered up my courage to realize an old project they knocked the door every time i used to Etch PCB boards. Since, the solution i use has already done close to 20 boards of small size one has to really keep shaking/stirring/Agitating the solution for a fairy long time.. ( ya 7-8 mins of man power is fairly long time :P )</p>
 
-<p>The idea came to me when i visited my brother in <a title="Travelogue: Bangalore" href="http://indiantinker.wordpress.com/2013/05/24/travelogue-bangalore/" target="_blank">Bangalore</a> earlier this year. He was generous enough to give us a tour of his world class Biotechnology lab in India.. He showed us stuff and things/instruments which were difficult to pronounce in one go but they all had a thing in common- They ended with syllables like -<em>&#39;-izer&#39;,-&#39;ator&#39;,&#39;-ation&#39;. </em></p>
+<p>The idea came to me when i visited my brother in <a title="Travelogue: Bangalore" href="http://indiantinker.wordpress.com/2013/05/24/travelogue-bangalore/" target="_blank">Bangalore</a> earlier this year. He was generous enough to give us a tour of his world class Biotechnology lab in India.. He showed us stuff and things/instruments which were difficult to pronounce in one go but they all had a thing in common- They ended with syllables like -<em>‘-izer’,-‘ator’,’-ation’. </em></p>
 
 <p>One thing that they used for not allowing things/particles to sediment was called a shaker. It would be great if i could get one for myself that will take the work out of etching. When i returned i made an over-killed 3D model of the agitator that i had in mind. It would just be a 1-axis CNC with a stepper motor and belt, That was doing a lot for the task..</p>
 
@@ -402,21 +402,21 @@ All Rights Reserved
 
 <p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg"><img class="size-full wp-image-487" alt="Freewheel mount and stepper motor" src="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg" width="633" height="466" /></a> Freewheel mount and stepper motor</p>
 
-<p>Realizing the overkill design, I went on to an easier one earlier this month ( actually previous month ) when a relative who was &#39;demolishing&#39; his old PC gave me some old CDROMs that didn`t work. The mechanics did work though..</p>
+<p>Realizing the overkill design, I went on to an easier one earlier this month ( actually previous month ) when a relative who was ‘demolishing’ his old PC gave me some old CDROMs that didn`t work. The mechanics did work though..</p>
 
-<p>So, I just &#39;damaged&#39; the tracks around the main feed motor and attached my own custom circuit based around the MSP430 micro-controller and majority of TI parts as they can be shipped to anyone  with an address making it very easy to re build yourself.</p>
+<p>So, I just ‘damaged’ the tracks around the main feed motor and attached my own custom circuit based around the MSP430 micro-controller and majority of TI parts as they can be shipped to anyone  with an address making it very easy to re build yourself.</p>
 
 <p>Here is a proof-of-concept video i posted a while back where the Etchinator ( now Open Agitator after i realized it could do a lot more like cooling hot milk  :D ) was etching its own control board  :</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/wOFcjrQe-is" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/wOFcjrQe-is" frameborder="0" allowfullscreen=""></iframe>
 
-<p>I used a L293D H bridge motor controller to control the forward and backward movement of the cradle with an adjustable speed by giving a PWM on the Enable Pin . People who had made LFR&#39;s in the first/second year know its a child`s play.</p>
+<p>I used a L293D H bridge motor controller to control the forward and backward movement of the cradle with an adjustable speed by giving a PWM on the Enable Pin . People who had made LFR’s in the first/second year know its a child`s play.</p>
 
 <p>After running the aforementioned set up for a while i noticed that  the cradle would shift to the farther end where the gear was slightly worn out. So, when loaded the cradle would :</p>
 
 <ol>
-<li>Latch on to that part and stay stuck.</li>
-<li>The whole system would move a bit forward each time and latch on the wrong part.</li>
+  <li>Latch on to that part and stay stuck.</li>
+  <li>The whole system would move a bit forward each time and latch on the wrong part.</li>
 </ol>
 
 <p>So, an end-stop detection was required which would keep the cradle in the fixed portion.. some what similar to the ones i had seen in the CNC`s which tell them their legitimate playing fields.</p>
@@ -429,7 +429,7 @@ All Rights Reserved
 
 <p><a href="http://indiantinker.files.wordpress.com/2013/09/sche.png"><img class="size-full wp-image-492" alt="Schematic" src="http://indiantinker.files.wordpress.com/2013/09/sche.png" width="700" height="482" /></a> Schematic</p>
 
-<p>Since, i did&#39;nt wanted to leave any pins un-used i included 3 LED`s which show the different states of the agitator.</p>
+<p>Since, i did’nt wanted to leave any pins un-used i included 3 LED`s which show the different states of the agitator.</p>
 
 <p>The power supply needs special mention as it converts from a standard 12V DC adapter to 5V for the logic of the bridge (L293D) and again an <a href="http://www.ti.com/product/lp2950-33" target="_blank">LDO LP2950-3.3V</a> for the MSP430. The LDO can be sampled from TI and 7805 is available locally with every tinkerer.</p>
 
@@ -455,7 +455,7 @@ All Rights Reserved
 
 <p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg"><img class="size-full wp-image-503" alt="Fixed to the back of the CDROM" src="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg" width="700" height="525" /></a> Fixed to the back of the CDROM</p>
 
-<p>The next thing that was left was to give it a sturdy base. I choose two planks of wood that were lying around. It was essential to leave it without any base on the middle section as if &#39;ever&#39; there is a chemical spill that can be cleaned without unscrewing the entire assembly!</p>
+<p>The next thing that was left was to give it a sturdy base. I choose two planks of wood that were lying around. It was essential to leave it without any base on the middle section as if ‘ever’ there is a chemical spill that can be cleaned without unscrewing the entire assembly!</p>
 
 <p>So, Here is the final build :</p>
 
@@ -463,14 +463,14 @@ All Rights Reserved
 
 <p>You can fork the complete code and design from my<a href="https://github.com/IndianTinker/OpenAgitator" target="_blank"> github repo</a>.</p>
 
-<p>Here is a video of me explaining the build.. Please ignore the following :
+<p>Here is a video of me explaining the build.. Please ignore the following :</p>
 <ul>
-    <li>Bad camera quality</li>
-    <li>Some goof-ups with the IC names.. Keep an eye on the Sub Titles/Captions</li>
-    <li>Background Noise (if any)</li>
-</ul></p>
+	<li>Bad camera quality</li>
+	<li>Some goof-ups with the IC names.. Keep an eye on the Sub Titles/Captions</li>
+	<li>Background Noise (if any)</li>
+</ul>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/0nLpa1uPF_E" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/0nLpa1uPF_E" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Hope you like it and build one for yourself..
 Cheers,
@@ -482,7 +482,7 @@ IndianTinker</p>
 
 <p>See another make of my project by a reader on instructable:</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/zX0pGGTKSB0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/zX0pGGTKSB0" frameborder="0" allowfullscreen=""></iframe>
 
 <p>(Thanks for sharing <a href="http://http://ales.kapun.org/" target="_blank">Aleš</a> )</p>
 

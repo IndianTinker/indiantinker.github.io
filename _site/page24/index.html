@@ -393,27 +393,27 @@ All Rights Reserved
     <p>One fine day while i was rummaging through the part bin, I found an old project that probably was never completed ! <strong>FM Radio</strong> !
 I tried to make one when i was in 7th grade, waiting at the counter of a dingy electronics repair shop for anyone to pay attention to the parts list gathered over the internet ( Dial up days ! ).</p>
 
-<p>At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw &#39;TEA5767 FM Receiver&#39; module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me. </p>
+<p>At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw ‘TEA5767 FM Receiver’ module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me. </p>
 
 <p><a href="http://www.voti.nl/docs/TEA5767.pdf">TEA5767</a> is a digital FM Receiver chip from NXP/Phillips that can be commanded over I2C to tune to various frequencies easily.</p>
 
-<p>But alas ! The one i got never matched with any pictures online ! Where was the missing &quot;crystal&quot; responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen &quot;TT-502X&quot; i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to <a href="http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio">Dilshan</a>, an amazing maker himself, I was able to get this done.</p>
+<p>But alas ! The one i got never matched with any pictures online ! Where was the missing “crystal” responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen “TT-502X” i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to <a href="http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio">Dilshan</a>, an amazing maker himself, I was able to get this done.</p>
 
 <p>It turns out that the module is actually used in some Samsung Products and requires a <em>generic</em> watch crystal.</p>
 
 <p>The connections are similar to what <em>Dilshan</em> mentions it in his post. I added a diode (Reverse Polarity. Ouch!) and a decoupling cap. And after a bit of work with the solder iron i was able to make my own FM Receiver Module.</p>
 
-<p>Next step? Let others know about it... :D</p>
+<p>Next step? Let others know about it… :D</p>
 
-<p><center>
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0nwlsDPUN1/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
+<center>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0nwlsDPUN1/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
 Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-24T18:54:28+00:00">Mar 24, 2015 at 11:54am PDT</time></p></div></blockquote>
-<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-</center></p>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+</center>
 
 <p>FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17152069784" title="Back side ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg" width="359" height="640" alt="Back side !"></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17152069784" title="Back side ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg" width="359" height="640" alt="Back side !" /></a></p>
 
 <p>After doing the same! A commander was needed. Chose my workhorse, the MSP430 Launchpad for the extra switch they have on it that helps me change channels and doing that on arduino pro mini would require some breadboarding i was too lazy to try.</p>
 
@@ -429,13 +429,14 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" colo
 
 <p>If you need to check for signal quality and other things you can check out my github repo <a href="https://github.com/IndianTinker/FM430">here</a> .</p>
 
-<p>Here&#39;s me explaining the whole setup in detail !</p>
+<p>Here’s me explaining the whole setup in detail !</p>
 
-<iframe width="650" height="380" src="https://www.youtube.com/embed/r3fGMu5iPY8" frameborder="0" allowfullscreen></iframe>
+<iframe width="650" height="380" src="https://www.youtube.com/embed/r3fGMu5iPY8" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
+
 
   </div>
   
