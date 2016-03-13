@@ -324,6 +324,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -379,55 +383,78 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/09/24/CNCsnMe1/">
-        CNCs & Me- Part 1 - Easy Peasy Stepper System Tester
+      <a href="/2015/09/26/FiddleMini/">
+        Fiddle Mini - The DIY 'Portable' Music System
       </a>
     </h1>
 
-    <span class="post-date">24 Sep 2015</span>
+    <span class="post-date">26 Sep 2015</span>
 
-    <p><em>This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff i have built! This post is about a stepper system tester i built a while back.</em></p>
+    <p>Music and Portability ! These guys have a pretty long relationship ever since somebody thought of listening to his favorite tunes while wasting his time travelling in a train/bus or walking on the streets and even crossing roads or riding bikes ! It started with those shoulder mounted stereo sets until music became a bit disturbing to be heard publicly and we had our first personal music system the <strong>Sony Walkman</strong> ! I even have a functional one from 1995. </p>
 
-<p>Stepper motors are quite widely used for CNCs/3D Printers or other Electromechanical hacks like the polar plotter etc. ! There is as always a constant need to run the motor to check whether its aligned properly or not? Does the flex coupling has any issues? Is the driver dead or alive and the best one- whether the current setting is fine to generate enough torque to hold or move the lead screw/Belt.</p>
+<p>Quite recently we have moved on again from the personal space to a public exhibition and we have those new JBLs and BOSEs taking up the market by a storm. The headphones are becoming increasing ergonomic to wear and we even have cranium ones available. So the next time you say it feels someone&#39;s talking in my head ; It could quite well be literally taken. </p>
 
-<p>Pestered by the same above questions i wanted to build my own driver/motor tester overnight and it 'must' be built ACAP (As cheap as possible) :D ! I stumbled open <a href="https://labitat.dk/wiki/Easy_Stepper_Motor_Controller">this</a> awesome project that i saw on Hack-A-Day.</p>
+<p>But nothing can beat the pleasure of hearing music as it amalgamates with the swish of the breeze, the chirp of the birds and the song of nature. I am probably from the clan that just dont fall in with headphones. There is a forced disconnect i believe unless people around you make insane noises that beg to be ignored or due to social niceties. So, I decided to build my own <em>Portable Wood Music Box</em> that could well play from any source on the go ! Yeah ! That means it runs off a battery.</p>
 
-<p>It uses an ATiny AVR microcontroller which I did'nt have and the least capable one i had was the MSP430G2230 which came in a SOIC pkg a bit difficult to go on the perfboard and my laziness propelled me away from etching a board for accommodating the same (I now feel the need though). I thought of building a microcontroller-less one as most modern stepper drivers like the ones from <a href="http://www.pololu.com/category/120/stepper-motor-drivers">Pololu</a>  need just two signal i.e STEP and DIR.</p>
+<p>I had this in mind ever since i made <a href="/2014/11/13/Fiddle-Music-System/">Fiddle</a> ! The size of the speaker was too big to bring with me to Pune. </p>
 
-<p>A pulse on step pin will initiate a step to the internal indexer that handles what coil has to be energized based on the sequence and micro-stepping settings, while the DIR is a level signal whose level decides whether the internal indexer of the driver counts up or down!</p>
+<p>I did a couple of attempts but the complexity of making one was too much and using the same Circuit i used on the Fiddle anyways seemed an overkill. While, i was in Mumbai earlier this year, I was searching for a handy small speaker box, so that i get an idea of the size of electronics to squeeze in. Lamington disappointed me terribly or probably i needed a better guide ?</p>
 
-<p>So, only two inputs i.e Pulsed input for STEP and level input for DIR. This can be achieved using the 555 timer in the <b>astable</b> mode. The Output of 555 i.e pin 3 will go into the step pin and the DIR pin is pulled up using a resistor and it is also connected to ground via switch.</p>
+<p>The idea was scraped until recently I went to a local eStore to check out some stuff and noticed a portable speaker i wanted to build. It was a JBL Flip kind of thing. Did A2DP only. Sounded fine ! Costed a bomb ! INR 4000 for that ! I better make my own than falling in to these marketing gimmicks !</p>
 
-<p>This gets the job done! We can also have a POT to vary the frequency since some motors don't respond to faster pulses due to rotor inertia.The driver i am using is based on DRV8825 from TI. It is slightly wider than the polulu one. (You might call me a TI fan boy).
-I designed it myself based on reference designs by TI and had the PCBs made by SeeedStudio's Fusion PCB Service. It took about 30 odd days to reach. The driver is two layer in-contrast the Pololu ones are 4 layer. I had to widen the PCB to provide enough dissipating area for the inbuilt heatsink on the the HTSSOP pkg of the DRV8825. Also the SMD resistor cousins of those lower value resistors were not available here in Delhi, so had to go with through hole ones. Ditto for the POT ! </p>
+<p>And yet again :</p>
 
-<p>With the Tester designing almost final , I grabbed a piece of perfboard since, i didnt have the time to etch the board.</p>
+<blockquote>
+<p>Why buy ? When it can be built !</p>
+</blockquote>
 
-<p>The circuit is as follows:</p>
+<p>While making some unrelated search on eBay (gob bless their algorithm) i stumbled upon <a href="http://www.ebay.in/itm/Can-Speaker-Mp3-Player-Supports-USB-Pen-Drive-Memory-Card-FM-Radio-Aux-/321874916228?hash=item4af13d7384">this</a> . This could be an ideal configuration. I was not sure about the claims though. But i made a point to buy one from Delhi which i was about to visit. It costed about the half in Delhi from the person i usually buy stuff. I got it for 200 bucks. I wonder why the form factor is like the CAN ?</p>
 
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/final.png"><img class="aligncenter size-full wp-image-647" src="https://indiantinker.files.wordpress.com/2014/04/final.png?w=662" alt="final"   /></a></p>
+<p>Following <em>Dave Jone</em>&#39;s words, &quot;Dont Turn it On, Take it Apart &quot;.. The CAN had a very loud and &quot;high on the Higher Fs&quot; speaker ! Connected to a PCB with handful of passives and 3 ICs. 1 for amplification ( guessing its class D probably) , 1 seems to be a microcontroller that reads the switch and plays music from sources and one seems to be a tuner chip for FM reception. The broad feature set (get ready to be BLOWN) :</p>
 
-<p>It has two power inputs 12v, 5v and a common ground, all of which are sourced from an ATX! The circuit itself is pretty simple.</p>
+<ul>
+<li>Supports USB and microSD Cards ( I have tested and found my 8GB PD doesnt work while less than 4GB works )</li>
+<li>Has an onboard battery , a repurposed Motorola 1150mAh battery</li>
+<li>Has FM with Autostore functionality that works pretty well</li>
+<li>Has Aux in and out</li>
+<li>Can be charged with a MiniUSB connector</li>
+<li>Has a Blue Red LED to show status. Red when charging and Blue when in use. Blinking blue when autostoring etc.</li>
+<li>A control button - Long Press Up increases volume,Long Press Down decreases volume, Push changes source, single up/down toggles the track. Minimal and effective </li>
+</ul>
 
-<p>The final build on a perfboard is shown below.</p>
+<p>Thats quite a value !</p>
 
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png"><img class="aligncenter size-full wp-image-645" src="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png?w=662" alt="perfboard1"   /></a></p>
+<p>I then started searching on Home turf for the <em>Classy</em> form i was looking for. </p>
 
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/perf.png"><img class="aligncenter size-full wp-image-653" src="https://indiantinker.files.wordpress.com/2014/04/perf.png?w=662" alt="PERF"   /></a></p>
+<p>For the infrequent visitors of the place, if you enter LR from the Railway Station side, you can find a scrap market that sells off stuff that have some defect. Kind of a junk market.That&#39;s where all the gold is.I found a wooden speaker being sold for about 50 bucks a pop ! The size and the form enamoured me. It was like someone scrapped them for me. The shopkeeper who was adamant to stick one to me and was not agreeing to allow a few electrons flow down to speaker coil, so that i can make sure that everything is fine. After a few minutes he budged and got an old amp from the back and the speaker i chose was fine. All the speakers he had were forcibly severed from the back in varied proportions probably to avoid reuse. I chose the least one that can be aptly covered by the CAN speaker parts with minimal changes.</p>
 
-<p>I chose to use a SMD 0603 10K resistor between pin 8 and 7 to reduce the space and connected 104 (0.1uF) Ceramic caps as shown. The switch is a 10xx and the capacitor is required at the input of stepper driver to reduce supply dips when it draws current. I have used female headers for the motor since most motors come with a connector that can be easily wired up with a single strand wire. I used the Power Terminal connectors for the main 12V Driver supply as the driver is rated for 2.5A which is too high for the usual jumper cables !</p>
+<p>I desoldered all wires and connected my own antenna to it. Then accommodated the battery and antenna inside the wooden box. </p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/13828736933" title="top and bottom by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5579/13828736933_b4393c9c19_c.jpg" width="800" height="450" alt="top and bottom"></a><br />
-&nbsp;</p>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/7DZwuMvUJs/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-31T15:42:06+00:00">Aug 31, 2015 at 8:42am PDT</time></p></div></blockquote>
 
-<p><b>TIP:</b> If you are using the non-tinned/less tinned headers that have been lying around in the component box for a while, make sure to rub the connectors using sandpaper to remove corrosion residue on the contacts else it might seem soldered but it wont actually be soldered. Also you may use some extra flux.</p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>Video:<br />
-<div class="jetpack-video-wrapper"><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='662' height='403' src='https://www.youtube.com/embed/6tETMOMKnxY?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' frameborder='0' allowfullscreen='true'></iframe></span></div></p>
+<p>This is what it looks before being glued and Msealed. The part is a cut out from the lower section of the CAN Speaker.</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21233003405/in/dateposted-public/" title="P_20150830_232403"><img src="https://farm6.staticflickr.com/5663/21233003405_44877b817b_z.jpg" width="360" height="640" alt="P_20150830_232403"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The cut out has been oriented such that it fits the Fattest USB i have and the USB is always inside the periphery of the box to avoid accidental collision with other objects around. The control button is at the bottom for increased ergonomics and avoiding accidental operation. ON/OFF button on the top ! </p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21206733356/in/dateposted-public/" title="P_20150830_234246"><img src="https://farm6.staticflickr.com/5733/21206733356_d0dd00ff77_z.jpg" width="640" height="360" alt="P_20150830_234246"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I next bought a collapsible handle from the hardware store and fitted it on top. Kind of serves like a makeshift dock sometimes.</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21044805990/in/dateposted-public/" title="P_20150902_083120"><img src="https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg" width="640" height="360" alt="P_20150902_083120"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The sound quality is pretty nice thanks to the speaker cabinet and a few extra passives added. And Bluetooth and IR also works with <a href="/2015/05/29/TruPlay/">TruPlay</a> Project ! </p>
+
+<p>I have noticed that the plastic does look a bit disjoint. So i chamfered it using Mseal ! Matches with the overall color theme too :D </p>
+
+<p>So, when are you building one ?</p>
 
 <p>Cheers !</p>
 
-<p>Rohit Gupta</p>
+<p>Rohit </p>
 
   </div>
   

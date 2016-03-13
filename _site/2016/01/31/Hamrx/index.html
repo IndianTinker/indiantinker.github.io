@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Tamhini Ghats"/>
-  <meta name="twitter:title" content="Tamhini Ghats"/>
+  <meta  property="og:title" content="RXing into the HAM World using RTL-SDR"/>
+  <meta name="twitter:title" content="RXing into the HAM World using RTL-SDR"/>
   
 
 
@@ -43,22 +43,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/10/06/Tamhini/" />
+  <meta property="og:url" content="http://rohitg.in/2016/01/31/Hamrx/" />
 
 
-  <meta content="2015-10-06T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2016-01-31T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg"/>
+  <meta content="https://farm6.staticflickr.com/5765/23973471686_a66bea0d23_z.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5765/23973471686_a66bea0d23_z.jpg"/>
 
 
   
 
 
   
-  <meta content="travel" property="article:tag"/>
+  <meta content="sdr" property="article:tag"/>
   
 
 
@@ -70,7 +70,7 @@
 
   <title>
     
-      Tamhini Ghats &middot; Rohit Gupta
+      RXing into the HAM World using RTL-SDR &middot; Rohit Gupta
     
   </title>
 
@@ -389,8 +389,8 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">Tamhini Ghats</h1>
-  <span class="post-date">06 Oct 2015</span>
+  <h1 class="post-title">RXing into the HAM World using RTL-SDR</h1>
+  <span class="post-date">31 Jan 2016</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
@@ -404,35 +404,51 @@ All Rights Reserved
 
 
 <br>
-  <p>After a pretty busy and drenching week, it was time to escape into the wilderness of the Ghats surrounding Pune. These pictures were captured on the ride to Tamhini Ghat near Pune. Getting there is pretty straight forward. When coming from Pune, just reach Pirangut Crossing and take the turn to Tamhini. Then just ride and let yourself dissolve into the calm and cool gusts of air. You will notice some waterfalls on the way. Their vigor depends on the abundance of rain</p>
+  <p>I have been intrigued by HAM ever since Prof.Gadre mentioned about it in one of his lectures. HAM has an amazing community and i have been fortunate to be included into one here in Pune. Special Thanks to <a href="http://amoghdesai.com/">VU2DES</a> and <a href="http://tinkertool.wordpress.com">VU2ASH</a>.</p>
 
-<p>The road quality is average and very bad in some parts and inviting in some. Ride carefully. </p>
+<p>The HAM group in Pune is a group of <em>highly</em> motivated and dedicated HAM enthusiasts and regularly have conversations on the HAM frequencies. They open-heartedly encourage n00bs to get their feet wet in the HAM world..</p>
 
-<p>Some places to eat are Bashos and Paradise Cafe. You may also try some local foods on Dhabas on the road. The one that we went to served lightly spiced and watery Dal and &#39;Lobiya&#39; with Rice and Chapatis.</p>
+<p>Frankly, the initial days were tough as the jargon used in HAM is intense and i could not make out many times what the conversations meant. Slowly with Amogh&#39;s help I figured out most of it. For Example: DIYers are called Home Brewers. </p>
 
-<p>Some pictures :</p>
+<p>As Amogh suggested, i started with building a 2M Band (140MHz) antenna and using it with my <a href="/2015/10/12/RTLSDR1/">RTL SDR Dongle</a>.
+The process involved severing my already working cable that connects to the tiny antenna using which i can do lots of cool things like tracking flying objects using ADSb, A post my hands are itching to write but looking at the growing <em>intolerance</em>, a few friends have cautioned me into not exploring stuff in the grey area more. If anyone with a better understanding of the grey value in this area reads it, please do tell me. Nevertheless, Cool things have to be risked to achieve cooler things. There you go, nice cable.</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21349596064/in/dateposted-public/" title="Roof"><img src="https://farm6.staticflickr.com/5658/21349596064_cdba549b93_z.jpg" width="640" height="474" alt="Roof"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Well, 2M is the n00bs band. Listening stuff is pretty easy with basic components costing less than a <em>Vada Pao</em> . RXing to most things (not all) is legal and this was quite relieving.</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21946135126/in/dateposted-public/" title="Edges"><img src="https://farm1.staticflickr.com/657/21946135126_72d540dd76_z.jpg" width="640" height="474" alt="Edges"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>BTW, the easiest antenna i plan to build was a <strong>Vertical Dipole</strong>. It largely has two(dipole) elements/wires/conductors that have a strict length and are (as the name suggests) oriented vertical to the ground. There is a simple equation that governs the length of the antenna elements. </p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21349545174/in/dateposted-public/" title="Flow"><img src="https://farm6.staticflickr.com/5761/21349545174_664417f8c1_z.jpg" width="640" height="480" alt="Flow"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The band is 2M, hence, the minimum antenna length should be lamda/4 . So, it is about 2/4=0.5m or 50cm or roughly 19.6 inches. So, we need two pieces of wire of 19.6 inches in length each and wired to our SDR cable. Amogh sent me a very detailed picture at the time of construction, which i lost. :(</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21972284855/in/dateposted-public/" title="Sparkling Fall"><img src="https://farm6.staticflickr.com/5619/21972284855_6a25940a59_z.jpg" width="640" height="474" alt="Sparkling Fall"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The SDR cable is essentially like those old RF in Co-Ax cables we receive cable TV from in our houses. The outer part is negative or shield and the centre part is signal or positive. I got the cheap iron wire that is used to tie re-bars in construction; they were frankly very sturdy and held shape. I measured and cut 19.6 inch elements with a little room of bending it.</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21785342979/in/dateposted-public/" title="Where is the rain ?"><img src="https://farm6.staticflickr.com/5806/21785342979_050f5ebc0b_z.jpg" width="640" height="556" alt="Where is the rain ?"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The frame (well sort of) was made using a T junction and  pipe segments with Tinned nut and bolts to the ends as they can be soldered.</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21349410254/in/dateposted-public/" title="Wildcraft"><img src="https://farm6.staticflickr.com/5764/21349410254_62220d902e_z.jpg" width="640" height="480" alt="Wildcraft"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/23586681329/in/dateposted-public/" title="IMG_20151222_192951"><img src="https://farm2.staticflickr.com/1482/23586681329_7ff69b2556_z.jpg" width="640" height="480" alt="IMG_20151222_192951"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21945971976/in/dateposted-public/" title="Focused Colors"><img src="https://farm1.staticflickr.com/715/21945971976_3dc0191c16_z.jpg" width="640" height="480" alt="Focused Colors"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Soldered</p>
 
-<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21945948766/in/dateposted-public/" title="Hey! Fellas.."><img src="https://farm6.staticflickr.com/5644/21945948766_5ac8ebe018_z.jpg" width="640" height="640" alt="Hey! Fellas.."></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/23327760413/in/dateposted-public/" title="IMG_20151222_193021"><img src="https://farm2.staticflickr.com/1445/23327760413_ef36ffc9c9_z.jpg" width="480" height="640" alt="IMG_20151222_193021"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><strong>Please Note</strong>: Major part of the roads around Tamhini have little to no street lighting, which is especially dangerous when the road is filled with potholes. So better make it back on time.</p>
+<p>I hot-glued one end and kept the other end free. This allowed me to fold the antenna and take it out of the cramped window and re-open it again outside.  </p>
 
-<p>Cheers !</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/23327760983/in/dateposted-public/" title="IMG_20151222_194750"><img src="https://farm2.staticflickr.com/1454/23327760983_c15f7745b6_z.jpg" width="640" height="480" alt="IMG_20151222_194750"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Rohit </p>
+<p>Now it was time to search for a open space. Since most people talk using Handies (Hand-held radios) with too low power(5W is my guess) and i am apparently the farthest from them. Most of them are in Pune, while I am pretty far away in PCMC . Also, the height at which they transmit also matter a lot. The only open place was a little used balcony. I made my base there and fixed the antenna with my Safety shoe. The SDR settings are 145.1Mhz and modulation is NFM.</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/23872027191/in/dateposted-public/" title="IMG_20151222_215517"><img src="https://farm6.staticflickr.com/5735/23872027191_1a1f2e7094_z.jpg" width="480" height="640" alt="IMG_20151222_215517"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>We have a active group and i requested for anyone to transmit on 145.1 MHz. A session was planned at 10pm. I guess i had to wait till then. Even at 10pm, i was getting nothing, just noise. I fiddled with the bandwidth on the SDR console and voila i could hear Rachit talking. He was probably on a Handy and hence his signal was weak. Then when VU2ASH talked it was like WoW. I literally had moist eyes, as if i had intercepted an alien signal or something. He stays at a high place and has a great antenna. I had to increase bandwidth to be able to hear him clearly. So, the whole time i was fiddling with Bandwidth controls and could hear the entire thing and yeah the <em>other</em> things still work :D</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_x4EYHvUMG/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#HAM #Rxing #Pune #DIY #2m #vhf</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-27T02:57:34+00:00">Dec 26, 2015 at 6:57pm PST</time></p></div></blockquote>
+
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>Next up? I will probably use my not-in-active-use raspberry pi to make an always ON HAM receiver tagged to our frequency and also improve the antenna.
+Do you have any leads on things that can be done? Please do share in the comments section below.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
 
 </div>
 <br>
@@ -453,15 +469,6 @@ All Rights Reserved
     
       <li>
         <h3>
-          <a href="/2016/01/31/Hamrx/">
-            RXing into the HAM World using RTL-SDR
-            <small>31 Jan 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2016/01/01/MakersRule/">
             Maker's Rule-The Feature Packed PCB Multi-Tool
             <small>01 Jan 2016</small>
@@ -474,6 +481,15 @@ All Rights Reserved
           <a href="/2015/12/30/StarWars/">
             StarMAT-Star Wars Themed Interactive Doormat
             <small>30 Dec 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/11/20/Doormate/">
+            Doormate- Runner's Up at Intel IOT Roadshow
+            <small>20 Nov 2015</small>
           </a>
         </h3>
       </li>
