@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,84 +401,38 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/07/12/CrickPi/">
-        CricPi- The (probably) MOST Minimalistic Live Cricket Ever
+      <a href="/2015/09/24/CNCsnMe1/">
+        CNCs & Me 1 - Easy Peasy Stepper System Tester
       </a>
     </h1>
 
-    <span class="post-date">12 Jul 2015</span>
+    <span class="post-date">24 Sep 2015</span>
 
-    <p>Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old <strong>WebSense Blocked</strong> page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times. </p>
+    <p><em>This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff i have built! This post is about a stepper system tester i built a while back.</em></p>
 
-<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would’nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
+<p>Stepper motors are quite widely used for CNCs/3D Printers or other Electromechanical hacks like the polar plotter etc. ! There is as always a constant need to run the motor to check whether its aligned properly or not? Does the flex coupling has any issues? Is the driver dead or alive and the best one- whether the current setting is fine to generate enough torque to hold or move the lead screw/Belt.</p>
+<p>Pestered by the same above questions i wanted to build my own driver/motor tester overnight and it 'must' be built ACAP (As cheap as possible) :D ! I stumbled open <a href="https://labitat.dk/wiki/Easy_Stepper_Motor_Controller">this</a> awesome project that i saw on Hack-A-Day.</p>
+<p>It uses an ATiny AVR microcontroller which I did'nt have and the least capable one i had was the MSP430G2230 which came in a SOIC pkg a bit difficult to go on the perfboard and my laziness propelled me away from etching a board for accommodating the same (I now feel the need though). I thought of building a microcontroller-less one as most modern stepper drivers like the ones from <a href="http://www.pololu.com/category/120/stepper-motor-drivers">Pololu</a>  need just two signal i.e STEP and DIR.</p>
+<p>A pulse on step pin will initiate a step to the internal indexer that handles what coil has to be energized based on the sequence and micro-stepping settings, while the DIR is a level signal whose level decides whether the internal indexer of the driver counts up or down!</p>
+<p>So, only two inputs i.e Pulsed input for STEP and level input for DIR. This can be achieved using the 555 timer in the <b>astable</b> mode. The Output of 555 i.e pin 3 will go into the step pin and the DIR pin is pulled up using a resistor and it is also connected to ground via switch.</p>
+<p>This gets the job done! We can also have a POT to vary the frequency since some motors don't respond to faster pulses due to rotor inertia.The driver i am using is based on DRV8825 from TI. It is slightly wider than the polulu one. (You might call me a TI fan boy).
+I designed it myself based on reference designs by TI and had the PCBs made by SeeedStudio's Fusion PCB Service. It took about 30 odd days to reach. The driver is two layer in-contrast the Pololu ones are 4 layer. I had to widen the PCB to provide enough dissipating area for the inbuilt heatsink on the the HTSSOP pkg of the DRV8825. Also the SMD resistor cousins of those lower value resistors were not available here in Delhi, so had to go with through hole ones. Ditto for the POT ! </p>
 
-<p>I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score <em>always</em> during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.  </p>
-
-<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What’s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
-
-<p>Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.</p>
-
-<p>The first thing required was a data source like a website/API that has all the data we need to display. We will anyway display it at 1 refresh per minute so rocket-science precision is not required. I stumbled upon <a href="https://developers.litzscore.com/plans/">this</a> which unfortunately was not free and beyond my budget. </p>
-
-<p>I thought best way is to make an API myself when there is none that suits me. </p>
-
-<blockquote>
-  <p><em>I’ll scrape</em> !</p>
-</blockquote>
-
-<p>So, i wrote a <em>python</em> script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out. </p>
-
-<p>I used the adorable <code>beautifulsoup</code> for scraping !</p>
-
-<p>Next based on the observations, I sat down and made an interface for the info gathered be displayed.I choose my old and trusted <a href="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/">Nokia 5510 Graphic Display</a>.</p>
-
-<p>Many thanks to <a href="http://www.adafruit.com/">Adafruit</a> for their amazing Python Library for the LCD already available that made things easy.</p>
-
-<p>Here is the first visual of a World Cup match on my project :</p>
-
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0CfR7pPUHD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-10T07:31:20+00:00">Mar 10, 2015 at 12:31am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p><br />
-This too.
-<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup" />&lt;/a&gt;</p>
-
-<p>As you can see we have the following parts of score displayed:</p>
-
-<ul>
-  <li>Teams playing</li>
-  <li>Currently batting team with overs underneath it</li>
-  <li>The score in the largest font</li>
-  <li>4s/6s and Run Rate</li>
-  <li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
-  <li>Match Status - Rains, Ended,In Progress etc</li>
-</ul>
-
-<p>Here is the picture of the setup:</p>
-<center>
-<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup" />
-</center>
-<p>A Laser cut case and we could go wall mount.  </p>
-
-<p>I then made the script executable and queued it as a <code>cron-job</code> to be run every minute.  <em>BLISS</em></p>
-
-<p>Now I could watch(over) cricket matches in a non-intrusive and minimalistic way . </p>
-
-<p>If you too are interested you can grab the code <a href="https://github.com/IndianTinker/CricPI">here</a> to check out on the process.</p>
-
-<p>Here is how i kept a track of IPL :</p>
-
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/14Z6-PvUD3/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-25T02:34:53+00:00">Apr 24, 2015 at 7:34pm PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p><br /></p>
-
-<p><strong>NOTE :</strong> The project was not performed/made at the workplace. Only the use case was inspired from there.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit </p>
-
+<p>With the Tester designing almost final , I grabbed a piece of perfboard since, i didnt have the time to etch the board.</p>
+<p>The circuit is as follows:</p>
+<p><a href="https://indiantinker.files.wordpress.com/2014/04/final.png"><img class="aligncenter size-full wp-image-647" src="https://indiantinker.files.wordpress.com/2014/04/final.png?w=662" alt="final" /></a></p>
+<p>It has two power inputs 12v, 5v and a common ground, all of which are sourced from an ATX! The circuit itself is pretty simple.</p>
+<p>The final build on a perfboard is shown below.</p>
+<p><a href="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png"><img class="aligncenter size-full wp-image-645" src="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png?w=662" alt="perfboard1" /></a></p>
+<p><a href="https://indiantinker.files.wordpress.com/2014/04/perf.png"><img class="aligncenter size-full wp-image-653" src="https://indiantinker.files.wordpress.com/2014/04/perf.png?w=662" alt="PERF" /></a></p>
+<p>I chose to use a SMD 0603 10K resistor between pin 8 and 7 to reduce the space and connected 104 (0.1uF) Ceramic caps as shown. The switch is a 10xx and the capacitor is required at the input of stepper driver to reduce supply dips when it draws current. I have used female headers for the motor since most motors come with a connector that can be easily wired up with a single strand wire. I used the Power Terminal connectors for the main 12V Driver supply as the driver is rated for 2.5A which is too high for the usual jumper cables !</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/13828736933" title="top and bottom by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5579/13828736933_b4393c9c19_c.jpg" width="800" height="450" alt="top and bottom" /></a><br />
+&nbsp;</p>
+<p><b>TIP:</b> If you are using the non-tinned/less tinned headers that have been lying around in the component box for a while, make sure to rub the connectors using sandpaper to remove corrosion residue on the contacts else it might seem soldered but it wont actually be soldered. Also you may use some extra flux.</p>
+<p>Video:<br />
+<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="662" height="403" src="https://www.youtube.com/embed/6tETMOMKnxY?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent" frameborder="0" allowfullscreen="true"></iframe></span></div></p>
+<p>Cheers !</p>
+<p>Rohit Gupta</p>
 
   </div>
   

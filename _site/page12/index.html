@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,45 +401,49 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/10/12/RTLSDR1/">
-        Getting Started with RTL SDR- Playing some old school FM
+      <a href="/2015/11/14/hearty/">
+        TI-CEPD Diaries:Reactive Wearable LED Heart
       </a>
     </h1>
 
-    <span class="post-date">12 Oct 2015</span>
+    <span class="post-date">14 Nov 2015</span>
 
-    <p><em>This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online</em></p>
+    <p>Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this <strong>Wearable LED heart</strong> project to showcase at MakerFest 2014. This would be our team’s signature.</p>
 
-<p>SDR ? 
-Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those ‘virtual’ components. Sounds Expensive?</p>
+<p>Basically, we have a small PCB milled in the shape of a heart and studded with LEDs that react to the ambient light and change their beating rate and whenever someone comes too close(basically a hand in most cases :P), the LEDs change the pattern to what Prof.Gadre calls the <em>Happy Mode</em> ! </p>
 
-<p>SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like <a href="http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html">this</a> or <a href="http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820">this</a> .</p>
+<p>I worked on the initial schematics and made the <em>first</em> working prototype of it involving the LDR as the sensor. The code that went inside worked as follows:
+&gt; It takes two snapshots of the LDR reading before and after the LED blinks, i.e. the ON state and OFF state and based on the delta the algorithm decides the lighting conditions and varies the beat rate. Once the Delta exceeds a point, it switches to happy mode !</p>
 
-<p>The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">link</a> for more. But many folks have mentioned R820T being much more stable than E4000. </p>
+<p>The PCB is a double sided one ; made after i made <a href="/2015/10/22/OpenBadge/">Open Badge</a> . So, most pitfalls were over. Without the temperature controlled soldering iron and LEDs mounted very close-by it was a pain to solder them. They would heat and sometimes blow away due to excess heat. Probably the best way was to reflow ?</p>
 
-<p>I bought one of these a while back. I comes with a small antenna, a remote and the main dongle. </p>
+<p>Check out the pictures of the build in action !</p>
 
-<p>Since, more ‘easy to dive in’ stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22262732850/in/dateposted-public/" title="Dumping some neurons"><img src="https://farm1.staticflickr.com/751/22262732850_b239316ce1_z.jpg" width="640" height="359" alt="Dumping some neurons" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>There are lots of cool software tools available to get started. The most common being <a href="http://airspy.com/download/">SDR#</a> probably written in C#. An amazing getting started post is written <a href="http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/">here</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22424711966/in/dateposted-public/" title="Front side"><img src="https://farm6.staticflickr.com/5810/22424711966_e144c2f32a_z.jpg" width="640" height="359" alt="Front side" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up <a href="http://1drv.ms/1LoLvdn">here</a> or by Adafruit <a href="http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip">here</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263012308/in/dateposted-public/" title="Front"><img src="https://farm1.staticflickr.com/759/22263012308_5cbde5866a_z.jpg" width="640" height="359" alt="Front" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21827990404/in/dateposted-public/" title="All LEDs survive the temperature"><img src="https://farm6.staticflickr.com/5718/21827990404_209e639397_z.jpg" width="640" height="359" alt="All LEDs survive the temperature" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263867379/in/dateposted-public/" title="All soldered up"><img src="https://farm6.staticflickr.com/5763/22263867379_566a4080cc_z.jpg" width="640" height="359" alt="All soldered up" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/" title="fm1"><img src="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" width="640" height="360" alt="fm1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The video of the heart in action:</p>
 
-<p>You can also check out another great software called <a href="http://sdr-radio.com/Software">SDR Console</a>. Its a much more ‘Pro-ish’ SDR receiver available. This again wont work out of the box. You can follow this <a href="http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html">link</a> for more instruction on getting RTLSDR USB support on SDR Console.</p>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/dAfC-3cFSuY" frameborder="0" allowfullscreen=""></iframe>
 
-<p>Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.</p>
+<p>Final PCBs for MakerFest, all Hand Soldered :’)</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/" title="sdrconsole"><img src="https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg" width="640" height="360" alt="sdrconsole" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980555293/" title="All Hearts soldered just in time"><img src="https://farm3.staticflickr.com/2849/11980555293_daca4acaed_z.jpg" width="640" height="366" alt="All Hearts soldered just in time" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Hope you found this useful! Next? Maybe we should check out the planes or satellites ?</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11981073356/in/photostream/" title="Final Piece Back"><img src="https://farm8.staticflickr.com/7366/11981073356_201a3d139d_z.jpg" width="359" height="640" alt="Final Piece Back" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Cheers !</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980650274/in/photostream/" title="LED thru the eye loupe"><img src="https://farm4.staticflickr.com/3731/11980650274_53fc2083c5_z.jpg" width="640" height="597" alt="LED thru the eye loupe" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The mass manufactured version of the same was also presented to the participants of <em>Texas Instruments Analog Design Contest 2014</em> !</p>
+
+<p>Cheers !!</p>
 
 <p>Rohit </p>
 

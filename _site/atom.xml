@@ -4,13 +4,206 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2016-03-13T19:07:08+05:30</updated>
+ <updated>2016-03-19T17:30:44+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Augmenting Reality with Visiting Cards</title>
+   <link href="http://rohitg.in/2016/03/19/ARCards/"/>
+   <updated>2016-03-19T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/03/19/ARCards</id>
+   <content type="html">&lt;p&gt;Augmented Reality? Virtual Reality? Reality Intervention? Such Reality, Much Wow!&lt;/p&gt;
+
+&lt;p&gt;We humans have always had the craving for &lt;em&gt;not-so-real&lt;/em&gt; things. Books, Theatre, Movies embody the idea and use various mediums to present the cooked up reality. But the keyword &lt;strong&gt;Personal&lt;/strong&gt; is IN. This word also has its own story whose value has decreased from the time of Personal Chauffeur to Uber. We now consume reality personally.&lt;/p&gt;
+
+&lt;p&gt;So, instead of Tony,the Iron Man acting the same way for a billion earth inhabitants, we want him to be personal. Some don’t want him to hit the Hulk, some want him to probably not drive the R8 and rather drive the Lamborghini (I vehemently disagree to this one) . &lt;/p&gt;
+
+&lt;p&gt;So, the crux is mediums are becoming personal and so is their content. Things will happen this way as these &lt;em&gt;“Things”&lt;/em&gt; are getting more affordable.&lt;/p&gt;
+
+&lt;p&gt;This time I thought of making some sense of the Augmented Reality. 
+With the growing trend of things that seem real but are not, I present to you ladies and gentlemen the &lt;strong&gt;AR Cards&lt;/strong&gt;.
+These cards are basically pumped up visiting cards that enable users to project 3D models of their products/creations on their business cards using a Phone that has a camera. They can explain things in depth by moving the cards or phone relative to each other. I made one for myself with my favourite car , &lt;em&gt;Chevy Camaro&lt;/em&gt; on it. &lt;/p&gt;
+
+&lt;p&gt;I also added some value to the Vcard by adding a scale to measure things. I kind of like &lt;a href=&quot;/2016/01/01/MakersRule/&quot;&gt;scales&lt;/a&gt;. There is the usual QR code. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25270472733/in/dateposted-public/&quot; title=&quot;Front Side with a usable scale&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1639/25270472733_53bae50a27_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Front Side with a usable scale&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;On the back we have the &lt;em&gt;marker&lt;/em&gt; that is used by the App to gauge the position and orientation of the object to be placed. The marker is at an offset, so that makes enough space for a note which we usually scribble on the card &lt;em&gt;somewhere&lt;/em&gt;. Now that somewhere as a space for it. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25778418582/in/dateposted-public/&quot; title=&quot;Marker Image for AR&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1524/25778418582_bbbafbf4cb_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Marker Image for AR&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The screen-shots from the mobile app !&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25899192545/in/dateposted-public/&quot; title=&quot;3D Object mapped on the marker&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1612/25899192545_375d9f0a32_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;3D Object mapped on the marker&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25804236331/in/dateposted-public/&quot; title=&quot;3D Object Mapped&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1511/25804236331_d6ec513989_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;3D Object Mapped&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ReactorX- The intuitive Arc Reactor from the movies</title>
+   <link href="http://rohitg.in/2016/03/12/arc/"/>
+   <updated>2016-03-12T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/03/12/arc</id>
+   <content type="html">&lt;p&gt;Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the &lt;em&gt;Iron Man&lt;/em&gt;. He is fundamentally the coolest engineer/maker around, at-least in the movies.&lt;/p&gt;
+
+&lt;p&gt;The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he &lt;em&gt;made&lt;/em&gt; it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)&lt;/p&gt;
+
+&lt;p&gt;The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.&lt;/p&gt;
+
+&lt;p&gt;Features:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Small and light&lt;/li&gt;
+  &lt;li&gt;Power efficient&lt;/li&gt;
+  &lt;li&gt;Bright&lt;/li&gt;
+  &lt;li&gt;Change-able modes using a switch&lt;/li&gt;
+  &lt;li&gt;Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!&lt;/li&gt;
+  &lt;li&gt;Morse Code for SOS&lt;/li&gt;
+  &lt;li&gt;A mind blowing start-up sequence&lt;/li&gt;
+  &lt;li&gt;Knight rider effect on LEDs&lt;/li&gt;
+  &lt;li&gt;Breathing effect on the Middle high power LED   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It also needs to be wearable and comfortable at the same time.&lt;/p&gt;
+
+&lt;p&gt;The motion and the light helps attract attention.&lt;/p&gt;
+
+&lt;p&gt;I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my &lt;a href=&quot;https://hackaday.io/rohit&quot;&gt;hackaday.io&lt;/a&gt; profile.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.hackaday.io/images/3053731397417432067.jpg&quot; alt=&quot;Board&quot; /&gt;
+&lt;img src=&quot;https://cdn.hackaday.io/images/6659031397312403141.jpg&quot; alt=&quot;Board soldered&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Added a test-code for the start-up sequence, i.e. when you turn it on for the first time&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/HKzWJtDY-tM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg&quot; alt=&quot;Wearable&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The TL-DR; video is here (please pardon me for the weird psychedelic audio) :&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/NbuMJwMDaMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Interested in building one too ? Grab the schematics and code from &lt;a href=&quot;https://github.com/IndianTinker/ArcReactorX&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>SpectraVUlizer- Lights,Music and Magic</title>
+   <link href="http://rohitg.in/2016/02/04/spectravulizer/"/>
+   <updated>2016-02-04T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/02/04/spectravulizer</id>
+   <content type="html">&lt;p&gt;One day while chatting with my good friend &lt;a href=&quot;https://twitter.com/mrrituparna&quot;&gt;Rituparna&lt;/a&gt; we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more &lt;em&gt;dhinchaak&lt;/em&gt;. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.&lt;/p&gt;
+
+&lt;p&gt;Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the &lt;a href=&quot;http://tah.io/&quot;&gt;Tah&lt;/a&gt; as our number cruncher of choice.&lt;/p&gt;
+
+&lt;p&gt;One fine afternoon we met at &lt;a href=&quot;http://www.meetup.com/Doo-Things/&quot;&gt;doo Things&lt;/a&gt; to get the project up and running. We decided to use the &lt;a href=&quot;https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf&quot;&gt;MSGEQ7&lt;/a&gt; which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
+Reading it is similar to how you read a shift register.&lt;/p&gt;
+
+&lt;p&gt;We followed the standard circuit from the datasheet and programmed the &lt;strong&gt;Tah&lt;/strong&gt; to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/&quot; title=&quot;WP_20150321_004&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;WP_20150321_004&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/&quot; title=&quot;WP_20150321_006&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;WP_20150321_006&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The test code we used is as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/*
+Released under MIT License
+A project by Rituparna and Rohit
+*/&lt;/span&gt;
+
+
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;Adafruit_NeoPixel.h&amp;gt;
+#define NEOPIXELPIN 4
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Adafruit_NeoPixel&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Adafruit_NeoPixel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;144&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NEOPIXELPIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NEO_GRB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NEO_KHZ800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;analogPin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strobePin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resetPin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spectrumValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// to hold a2d values
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doubledSpectrumValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Initialize all pixels to 'off'
+&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strobePin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resetPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;analogReference&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DEFAULT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  
+  &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resetPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strobePin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resetPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resetPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ 
+  &lt;span class=&quot;c1&quot;&gt;//Measure the magnitudes of the 7 frequency bins
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strobePin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delayMicroseconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// to allow the output to settle
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;spectrumValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;analogRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spectrumValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strobePin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+  &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Clear out the NeoPixel String
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;144&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setPixelColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;//Draw the meter on the NeoPixel string
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;144&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setPixelColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spectrumValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1023&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Added blue flash for bass hit
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setBrightness&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;125&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
+&lt;/p&gt;
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/xV4zOYUQKfM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The song is by Adiba Parveen just in case you like it. Its &lt;a href=&quot;https://www.youtube.com/watch?v=h0EoMozYWSs&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>RXing into the HAM World using RTL-SDR</title>
@@ -178,6 +371,102 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
 &lt;p&gt;May the force be with you ! :D&lt;/p&gt;
 
 &lt;p&gt;Rohit &lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CNCs & Me 4 - Fume Extractor</title>
+   <link href="http://rohitg.in/2015/12/11/fumeex/"/>
+   <updated>2015-12-11T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/12/11/fumeex</id>
+   <content type="html">&lt;p&gt;Soldering generates some not so healthy lead fumes. A Fume extractor is a device that passes the fume through a charcoal foam which adsorbs the vapour particles and hence removes them from the air. &lt;/p&gt;
+
+&lt;p&gt;As a demonstration for my &lt;a href=&quot;/2015/12/10/karigar/&quot;&gt;CNC&lt;/a&gt;, i made this simple design that uses a PVC tube with slots cut for attaching a charcoal foam piece. I have a BLDC fan on at one end to create a suction force to suck the air with fumes. The entire frame was made from MDF and hot glued and snap-fitted in place.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21354493105/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5814/21354493105_f269a2024d_z.jpg&quot; width=&quot;612&quot; height=&quot;612&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21343818212/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5820/21343818212_19a5576e8a_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The circle was cut using my CNC and the BLDC fan was fixed using 3mm nuts and bolts.There is an ON/OFF Switch as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/20734211424/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/701/20734211424_94183de982_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;LED lights help when soldering in dark.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21168927820/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5702/21168927820_643eca9547_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;It is powered using a standard 12V Wall Wart. The BLDC fan has a rating of 15V hence,the label. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/20736153913/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/699/20736153913_a9e2301be5_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CNCs & Me 3 - Karigar</title>
+   <link href="http://rohitg.in/2015/12/10/karigar/"/>
+   <updated>2015-12-10T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2015/12/10/karigar</id>
+   <content type="html">&lt;p&gt;Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a &lt;em&gt;Thumbs UP&lt;/em&gt; !&lt;/p&gt;
+
+&lt;p&gt;Fortunately, few of my friends agreed to work with me on it and quite thankfully we put up a great show for everyone at the demos.&lt;/p&gt;
+
+&lt;p&gt;I started with making the control circuits for the CNC first as opposed to the actual CNC first as the circuits were mostly trivial and had some stepper drivers and an Arduino brain with GRBL running on. I designed my own stepper drivers based on DRV8825 drivers from TI . With all things in place. I tested my electronics with Nadya Peek’s MTM SnapCNC available at TI-CEPD, NSIT.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks to Prof. Gadre&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21328576476/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5835/21328576476_b1a24eb625_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21168959808/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5716/21168959808_44edd750be_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, came the difficult part. We need to learn a CAD package so that we can design our frugal machine. We opted for FreeCAD. If you are interested in learning, we used &lt;a href=&quot;https://www.youtube.com/watch?v=xs1mFiJBYIo&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The entire project is explained elaborately in our thesis &lt;a href=&quot;https://drive.google.com/file/d/0B8DZ3bqHurUVWlZ2a29TVnRONGtVZ2hsY3V4MkxubksxSG9R/view?usp=sharing&quot;&gt;here&lt;/a&gt;. CAUTION: PDF and LaTeX !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After months of work and several visits to &lt;strong&gt;Chawari Bazaar&lt;/strong&gt; and &lt;strong&gt;Lajpat Rai&lt;/strong&gt;, we were able to have a working one that did wood easily. Our frame was made with wood and as the CNC Thumb Rule goes !&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A CNC can only work with materials that are softer than the material of the structure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The cutting head is made using the &lt;strong&gt;Dremel&lt;/strong&gt; and the Z axis is made of re-purposed drawer slides. In fact basically everything is re-purposed except the linear rods and bearings. I still have countless memories of the shops we visited for our project, located in small dingy and cramped lanes of Old Delhi in places which must not be named. We had to talk a lot so they would sell us in low quantity. &lt;/p&gt;
+
+&lt;p&gt;Check out the pictures of the project below.    &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25896935135/in/dateposted-public/&quot; title=&quot;WP_20150308_007&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1512/25896935135_c26c78503a_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;WP_20150308_007&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25896933575/in/dateposted-public/&quot; title=&quot;WP_20150308_010&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1537/25896933575_7d74c62331_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;WP_20150308_010&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25268211953/in/dateposted-public/&quot; title=&quot;WP_20150308_008&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1501/25268211953_d18a5c721b_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;WP_20150308_008&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25268211923/in/dateposted-public/&quot; title=&quot;WP_20150308_009&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1668/25268211923_3a95218f4e_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;WP_20150308_009&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21167775699/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/742/21167775699_c85d901429_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a ARM we milled for a dear friend of our who happens to a serious gyming enthusiast.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/20736205563/in/dateposted-public/&quot; title=&quot;Me and CNCs&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/666/20736205563_38466e2c14_z.jpg&quot; width=&quot;612&quot; height=&quot;612&quot; alt=&quot;Me and CNCs&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Looks like it wont work? Well it does work and cuts circles for the &lt;a href=&quot;/2015/12/11/fumeex/&quot;&gt;FumeEx&lt;/a&gt;:&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/FxMoRauk4EU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I recently de-commissioned the machine. I worked, but not very well (Its hard to acknowledge this fact). I am using the parts to build something.&lt;/p&gt;
+
+&lt;p&gt;So, until next post … &lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
 
 </content>
  </entry>
@@ -591,7 +880,7 @@ The final version could do:&lt;/p&gt;
  </entry>
  
  <entry>
-   <title>CNCs & Me- Part 2 - Sketchy:The TableTop Pen Artist</title>
+   <title>CNCs & Me 2 - Sketchy:The TableTop Pen Artist</title>
    <link href="http://rohitg.in/2015/10/14/CNCsnMe2/"/>
    <updated>2015-10-14T00:00:00+05:30</updated>
    <id>http://rohitg.in/2015/10/14/CNCsnMe2</id>
@@ -873,7 +1162,7 @@ Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning 
  </entry>
  
  <entry>
-   <title>CNCs & Me- Part 1 - Easy Peasy Stepper System Tester</title>
+   <title>CNCs & Me 1 - Easy Peasy Stepper System Tester</title>
    <link href="http://rohitg.in/2015/09/24/CNCsnMe1/"/>
    <updated>2015-09-24T00:00:00+05:30</updated>
    <id>http://rohitg.in/2015/09/24/CNCsnMe1</id>

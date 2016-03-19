@@ -101,7 +101,7 @@ title: Projects
 </div>
 
 <div class="projects">
-<h3>Embedded Linux/IOT/SDR</h3>
+<h3>Embedded Linux/IOT/SDR/Misc</h3>
 
   {% for post in site.posts %}
   {% for tag in post.tags %}

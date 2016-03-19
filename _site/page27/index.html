@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,92 +401,74 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/04/12/NoobsGuide/">
-        The Noob's Guide to Pune Relocation
+      <a href="/2015/06/29/LiTiny/">
+        LiTiny- A Tiny LiIon charger for most things battery
       </a>
     </h1>
 
-    <span class="post-date">12 Apr 2015</span>
+    <span class="post-date">29 Jun 2015</span>
 
-    <p>It has almost been 8 months since i moved to Pune for Work from my hometown <em>Delhi</em> . Pune has a comparably benevolent weather as compared to Delhi. Summers are sweeter and so are winters. People of the city are great. They are quite helpful and humble. The city’s older areas have stark resemblance to Old Delhi and has lots of nice Forts, Temples, Museums and best of all eateries. Language is not a major issue as Marathi is somewhat similar to Hindi and most people understand Hindi but prefer to talk in Marathi. <em>Changla !</em> </p>
+    <p>Lithium Batteries are indispensable. I have a few project like my own <em>DIY Badge [Post Soon]</em> or a <em>Light Wand for Light Photography</em> and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.</p>
 
-<p>I am writing is post mostly in a log format and will keep adding information as an when I get more. </p>
+<p>The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.</p>
 
-<p>If google sent you here, then probably you too are interested/moving to Pune soon.I hope you find the information useful. The post is divided into several important sections that will be updated from time to time. Lots of unorganized info to follow so lets get started:</p>
+<p><strong>Li Ion Charger Required</strong></p>
 
-<p><strong>Shelter</strong></p>
-
-<p><em>This section deals with housing related things</em></p>
+<p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
 
 <ul>
-  <li>If you are coming here for an IT company, most of them are concentrated in <em>Hinjewadi and Wakad</em> side of Pune, which geographically comes under Pimpri Chinchwad city of Pune Metropolitan Region. Then most popular housing locations will be Wakad, Hinjewadi, Vishal Nagar(Jagtap Dairy), Pimple Saudagar and Pimple Gurav.</li>
-  <li>Before you hit the land, searching for houses/flats , take note of the relocation policy of your company and make sure brokerage is covered.</li>
-  <li>Choose room-mates wisely. Initial judgements can be pretentious. You would certainly like to live with people on the same frequency as your’ s else, things could go wary. </li>
-  <li>Prefer searching online on sites like <a href="http://housing.com/">Housing.com</a>, <a href="http://www.magicbricks.com">MagicBricks</a> etc first and prefer ones that are listed by Owners themselves to avoid steep brokerage , which is usually 1 month rent for 11 months agreement and 2 months rent for more than 11 months.</li>
-  <li>Most societies have a board <em>Beware of Dogs</em> right below a board that says <strong>Bachelors Not Allowed</strong> that pretty much sets their priorities straight. Dont go looking for flats in them.</li>
-  <li>Prefer on <em>pakka</em> agreement which requires you to go to the municipality office against a Notary Agreement. This depends on the landlord entirely. A pakka agreement is useful when you wish to own a vehicle in Pune where a notorized one bites the dust.</li>
-  <li>In case you need furniture, the market has a rental based system. You can buy cheap and flimsy furniture and once you leave you can return it for 50-60% its value. Mattresses are also available for cheap.</li>
-  <li>Some flats come with a furnished status but are usually 10k more than normal. If you plan to stay about 11 months then evaluate the economics. 10k* 11 = 1,11,000 INR. So, if the facilities are worth that even after depreciation. Go for it! else negotiate. </li>
-  <li>Chalk out a <em>Room Mate Agreement</em> like Sheldon ! It helps in long run.</li>
-  <li>D Mart is the best place to shop here.</li>
+  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
+  <li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
 </ul>
 
-<p><strong>Transportation</strong></p>
+<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  </p>
 
-<p><em>This section deals with Transportation related things</em></p>
+<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,
+&gt;Why buy, When it can be built.</p>
 
-<h2 id="expect-nothing">Expect Nothing</h2>
+<p>Also none of the boards satisfied both my needs together:</p>
 
 <ul>
-  <li>The city’s transport is abysmal and has been so since ages. The Pune City is a bit better but PCMC is worse. Its like Noida of Pune. Auto walla’s make money on your sufferings.Prefer Ola Cabs !</li>
-  <li>You wont get a direct bus quite often. That was pretty irritating initially until i met Mr. Chaturvedi on the Rakshak Chowk Bus Stop one day. He his golden words were:  “Only a few buses go to your destination directly, but many go that way !” Saying so he boarded his bus to Vishrantwadi leaving me with ideas ! So, the trick is use <strong>Here Transit</strong> to find buses that go in the direction you want and board them and deboard at the point they divert from your path and then reboard. So, if you want to go to FC Road. Take a bus for PMC/Station and use the above algo.</li>
-  <li>Get a 2 wheeler (I don’t have one though) ! OLX is great place to find or go to Rasta Peth for second hand stuff. Again you have to pay more to the brokers here, and a notorized agreement wont work !</li>
-  <li>There is also a local train service in Pune but is not preferred unless you wish to travel out of the city like going to <em>Lonavala</em> or <em>Malavali</em> etc.</li>
-  <li>If you wish to go to Mumbai ! Trust only <strong>Shivneri</strong> , Neeta has a terrible service everywhere and even to Ahemadabad (Been there Done that). You can also take shared cabs from Chinchwad Station. They charge about 200 - 250 bucks based on demand. </li>
+  <li>Control I/F with a MCU</li>
+  <li>Micro USB </li>
 </ul>
 
-<p><strong>Food</strong></p>
+<p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
 
-<p><em>This section deals with Food related things</em></p>
+<center>
+<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg" />
+</center>
+
+<p>There were only the following changes:</p>
 
 <ul>
-  <li>Everything is awesome! There are lot of options here. Dosa’s and Vada Pao’s are like staple street foods. The Standard Price for Vada Pao is 10 bucks and Dosa is 20- 30 bucks .</li>
-  <li>There are lot of good places in the city. Try GoodLuck Cafe’s Fruit Fanny,La Plaisir Patisserie &amp; Bistro’s Chesse Cake, Garden Vada Pao , Marz-o-rin’s Sandwiches, Durvankur’s Thali or Sabutdana Wadi at Shaniwar Wada. Check Zomato for more listings. There is a <em>Burger King</em> as well in Koregaon Park where you get <em>gross</em> burgers and the infamous <em>German Bakery</em> is there too, near Osho Ashram </li>
-  <li>You can’t get on eating from these restaurants on daily basis so, for usual days you can either hire a cook. There is no dearth of them and they charge around 600-700 per head. </li>
-  <li>If cook is too much of a pain, go get a dabbawalla . He serves hot food in a tiffin at a reasonable price. Do ping me in the comments if you need any contacts. I have tried about 4 of them :P</li>
+  <li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
+  <li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
+  <li>Provided a common ground to i/f</li>
+  <li>Added microUSB and a 90degree pinheader for my batteries.</li>
 </ul>
 
-<p><strong>Internet</strong></p>
+<p>Here is the build process:</p>
 
-<p><em>This section deals with Connectivity related things</em></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched" /></a></p>
 
-<ul>
-  <li>Internet Broadband service is a booming business here and there are tons and tons of them. To name a few Spectranet, iConnect, Reliance, Tikona, Tata Docomo, Airtel etc.</li>
-  <li>Tikona is Ok and there are several breakdowns, but customer service is good.</li>
-  <li>Docomo is great but limited to certain societies only.</li>
-  <li>Reliance s*#ks as usual ! No support and useless Helplines, but its the cheapest.</li>
-  <li>iConnect and Sprectranet are good too but again limited to some societies.</li>
-  <li>As far as cellular connectivity is concerned. Voda&gt;Idea&gt;Airtel&gt;Docomo</li>
-</ul>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath" /></a></p>
 
-<p><strong>POIs</strong></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned" /></a></p>
 
-<p><em>This section deals with Places to roam around</em></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB" /></a></p>
 
-<ul>
-  <li>Shaniwar Wada</li>
-  <li>Dagdu Shet Ganpati Temple</li>
-  <li>Raja Dinakar Museum </li>
-  <li>Lonavala</li>
-  <li>Karla Caves , Malavali</li>
-  <li>Sinhagad Fort</li>
-  <li>Bike ride through Pashan Area</li>
-  <li><em>will add more as i visit</em></li>
-</ul>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered" /></a></p>
 
-<p>Hope people find this useful!</p>
+<p>During Charging:
+<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress" /></a></p>
 
-<p>Cheers !!</p>
+<p>After charge Termination:
+<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !" /></a></p>
+
+<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. </p>
+
+<p>Cheers,</p>
 
 <p>Rohit </p>
 

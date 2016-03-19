@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,58 +401,66 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/11/GreenwaliDiwali/">
-        GreenWali Diwali:A social interactivity experiment
+      <a href="/2015/12/10/karigar/">
+        CNCs & Me 3 - Karigar
       </a>
     </h1>
 
-    <span class="post-date">11 Nov 2015</span>
+    <span class="post-date">10 Dec 2015</span>
 
-    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
+    <p>Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.</p>
 
-<ul>
-  <li>Lights/Sound to attract attention</li>
-  <li>A unique randomness of explosion</li>
-  <li>An Obnoxious Odour </li>
-  <li>Fear of getting yourself hurt</li>
-  <li>Fear of setting someone on fire</li>
-</ul>
+<p>Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a <em>Thumbs UP</em> !</p>
 
-<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
+<p>Fortunately, few of my friends agreed to work with me on it and quite thankfully we put up a great show for everyone at the demos.</p>
 
-<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
+<p>I started with making the control circuits for the CNC first as opposed to the actual CNC first as the circuits were mostly trivial and had some stepper drivers and an Arduino brain with GRBL running on. I designed my own stepper drivers based on DRV8825 drivers from TI . With all things in place. I tested my electronics with Nadya Peek’s MTM SnapCNC available at TI-CEPD, NSIT.</p>
 
-<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code>Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code>#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
+<p><em>Thanks to Prof. Gadre</em></p>
 
-<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21328576476/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5835/21328576476_b1a24eb625_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21168959808/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5716/21168959808_44edd750be_z.jpg" width="640" height="360" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet ! </p>
+<p>Now, came the difficult part. We need to learn a CAD package so that we can design our frugal machine. We opted for FreeCAD. If you are interested in learning, we used <a href="https://www.youtube.com/watch?v=xs1mFiJBYIo">this</a> and <a href="https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g">this</a>.</p>
 
-<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
+<blockquote>
+  <p>The entire project is explained elaborately in our thesis <a href="https://drive.google.com/file/d/0B8DZ3bqHurUVWlZ2a29TVnRONGtVZ2hsY3V4MkxubksxSG9R/view?usp=sharing">here</a>. CAUTION: PDF and LaTeX !</p>
+</blockquote>
 
-<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
+<p>After months of work and several visits to <strong>Chawari Bazaar</strong> and <strong>Lajpat Rai</strong>, we were able to have a working one that did wood easily. Our frame was made with wood and as the CNC Thumb Rule goes !</p>
 
-<ul>
-  <li>Sign In/Up on Twitter</li>
-  <li>Go <a href="https://apps.twitter.com/">here</a></li>
-  <li>Create <strong>New Application</strong></li>
-  <li>Fill the Yet-Another-Form and Create the Application.</li>
-  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
-  <li>You will see your consumer keys there !</li>
-  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
-</ul>
+<blockquote>
+  <p>A CNC can only work with materials that are softer than the material of the structure.</p>
+</blockquote>
 
-<p>These 4 keys are used for the Code above.</p>
+<p>The cutting head is made using the <strong>Dremel</strong> and the Z axis is made of re-purposed drawer slides. In fact basically everything is re-purposed except the linear rods and bearings. I still have countless memories of the shops we visited for our project, located in small dingy and cramped lanes of Old Delhi in places which must not be named. We had to talk a lot so they would sell us in low quantity. </p>
 
-<p>Then just install the dependencies based on the <code>README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code>screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
+<p>Check out the pictures of the project below.    </p>
 
-<p>Check out the video of me testing it !</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896935135/in/dateposted-public/" title="WP_20150308_007"><img src="https://farm2.staticflickr.com/1512/25896935135_c26c78503a_z.jpg" width="640" height="359" alt="WP_20150308_007" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896933575/in/dateposted-public/" title="WP_20150308_010"><img src="https://farm2.staticflickr.com/1537/25896933575_7d74c62331_z.jpg" width="359" height="640" alt="WP_20150308_010" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Happy GreenWali Diwali !</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211953/in/dateposted-public/" title="WP_20150308_008"><img src="https://farm2.staticflickr.com/1501/25268211953_d18a5c721b_z.jpg" width="640" height="359" alt="WP_20150308_008" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211923/in/dateposted-public/" title="WP_20150308_009"><img src="https://farm2.staticflickr.com/1668/25268211923_3a95218f4e_z.jpg" width="640" height="359" alt="WP_20150308_009" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21167775699/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/742/21167775699_c85d901429_z.jpg" width="359" height="640" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Here is a ARM we milled for a dear friend of our who happens to a serious gyming enthusiast.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736205563/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/666/20736205563_38466e2c14_z.jpg" width="612" height="612" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Looks like it wont work? Well it does work and cuts circles for the <a href="/2015/12/11/fumeex/">FumeEx</a>:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/FxMoRauk4EU" frameborder="0" allowfullscreen=""></iframe>
+
+<p>I recently de-commissioned the machine. I worked, but not very well (Its hard to acknowledge this fact). I am using the parts to build something.</p>
+
+<p>So, until next post … </p>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
 

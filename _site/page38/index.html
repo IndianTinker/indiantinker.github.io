@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,100 +401,126 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/10/16/MakerParty/">
-        Mozilla Maker Party-Pune
+      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
+        Nokia 5110 LCDs and MSP430
       </a>
     </h1>
 
-    <span class="post-date">16 Oct 2014</span>
+    <span class="post-date">09 Nov 2014</span>
 
-    <p>CAUTION:This post might sound different. Writing gears need some oiling.
-<!--more-->
-I have moved to pune for work now and exploring the city has always been on my top agenda.  Pune has always been a happening city of makers. Mumbai is close-by and easily commutable. There are a lot of DIY/Maker start-ups here too and who doesnt know about IOTPune/DooThings. [A more detailed city review sometime later]</p>
+    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc. </p>
 
-<p>Bored one night,thinking how to spend the weekend more constructively, i started to scroll through the meetups around my place on weekend. The main priority was “Distance” . People living in Pune can relate. The city transportation is awful and a thread is always running in mind querying, “Dude! Will be able to walk back? “</p>
+<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
 
-<p>Thankfully, I noticed Mozilla is organizing a big event near my place and there is no better way to spend the weekend. After visiting, MakerFest last year, I have really started to like these events.Anool(Sir) from MakersAsylum/Wyolum was coming with his team and so was IOTPune and so was Mark Surman from Mozilla and so were many others.</p>
+<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code>2.7-3.3V</code> happy for our MSP430.</p>
 
-<p>I stared to plan how to go at Symbiosis Centre for Computer Research, Here Transit comes to the rescue and i boarded the bus and got down at a nearby bus stop. Initial (rather first day) experience has taught me that we should have “Say No to Autos” banner erected everywhere in the city. This is more important than Polybag Awareness etc. if thought in a more citizen centric way. [Weekly, Auto Rant Ends.Stay tuned for more]. I walked another 800m and there i was at the venue.</p>
+<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a> </p>
 
-<p>I entered the gate of the college. I was asked my credentials to check, if i registered. I had , so i went to see the workshops as they were listed on the website. I carried my OpenBadge [A no brains LED Matrix badge that i made for MakerFest but could’nt debug it completely] and some other projects too just in case someone like-minded crossed. Swag!
-<a title="OpenBadge by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15497565022/"><img src="https://farm6.staticflickr.com/5597/15497565022_027b3e70d3_c.jpg" alt="OpenBadge" width="777" height="800" /></a></p>
+<p>For TL:DR; </p>
 
-<p>I went straight to the main hall and found it jam packed. So, i gave it a pass and went on visiting the booths. There were pretty interesting things showcased. Let start the Booth WATCH:</p>
+<p>The LCD has the following pins to interface to:
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+&lt;table class="tg"&gt;</p>
+<tr>
+    <th class="tg-031e">Pin Number</th>
+    <th class="tg-031e">Pin Label</th>
+    <th class="tg-031e">Pin Function</th>
+    <th class="tg-031e">Input/Output?</th>
+    <th class="tg-031e">Notes</th>
+  </tr>
+<tr>
+    <td class="tg-031e">1</td>
+    <td class="tg-031e">VCC</td>
+    <td class="tg-031e">Positive power supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
+  </tr>
+<tr>
+    <td class="tg-031e">2</td>
+    <td class="tg-031e">GND</td>
+    <td class="tg-031e">Ground</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+<tr>
+    <td class="tg-031e">3</td>
+    <td class="tg-031e">SCE</td>
+    <td class="tg-031e">Chip select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+<tr>
+    <td class="tg-031e">4</td>
+    <td class="tg-031e">RST</td>
+    <td class="tg-031e">Reset</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+<tr>
+    <td class="tg-031e">5</td>
+    <td class="tg-031e">D/C</td>
+    <td class="tg-031e">Mode select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
+  </tr>
+<tr>
+    <td class="tg-031e">6</td>
+    <td class="tg-031e">DN(MOSI)</td>
+    <td class="tg-031e">Serial data in</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+<tr>
+    <td class="tg-031e">7</td>
+    <td class="tg-031e">SCLK</td>
+    <td class="tg-031e">Serial clock</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+<tr>
+    <td class="tg-031e">8</td>
+    <td class="tg-031e">LED</td>
+    <td class="tg-031e">LED backlight supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
+  </tr>
+<p>&lt;/table&gt;</p>
 
-<p>Makers Asylum was present with all guns blazing.</p>
+<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
 
-<p><a title="Banners by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15311177590/"><img src="https://farm4.staticflickr.com/3950/15311177590_1709f2f304_c.jpg" alt="Banners" width="800" height="449" /></a>
-The Word Clock was at display.
-<a title="Word Clock by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15474743986/"><img src="https://farm4.staticflickr.com/3932/15474743986_0baeaa47d6_c.jpg" alt="Word Clock" width="800" height="449" /></a></p>
+<p>At a time you write to a single bank.</p>
 
-<p>Samarth from Melting Mints who works with the Makers Asylum showed some mind blowing applications of 3D Printing. This is a human skull printed from a scan.
-<a title="3D Printed real scan by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15311313267/"><img src="https://farm4.staticflickr.com/3941/15311313267_921127f8c0_c.jpg" alt="3D Printed real scan" width="800" height="449" /></a></p>
+<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
 
-<p>A 3D Printed Jet Engine for educative purposes.
-<a title="3D Printed Jet Engine by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15494741961/"><img src="https://farm6.staticflickr.com/5600/15494741961_53a4e33bf2_c.jpg" alt="3D Printed Jet Engine" width="800" height="449" /></a></p>
+<p>The communication is done using SPI.</p>
 
-<p>A 3D printed Music Instrument and a Car that is so awesomely finished.
-<a title="Does 3D Printing sound good? by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15311318067/"><img src="https://farm6.staticflickr.com/5600/15311318067_110c8480c5_c.jpg" alt="Does 3D Printing sound good?" width="800" height="449" /></a></p>
+<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG’s post</a>.</p>
 
-<p>When asked if he can print custom parts and more specifically 3D Printer parts. He said, Why not? Plus he does it economically too for students willing to start printing.</p>
+<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
 
-<p>The Pipe Lamp
-<a title="The #PipeLamp by @makersasylum at @Mozilla #MakerParty #Pune #India #MakerWeekend #Makers #DIY by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/14976643067/"><img src="https://farm6.staticflickr.com/5588/14976643067_0c475d48cb.jpg" alt="The #PipeLamp by @makersasylum at @Mozilla #MakerParty #Pune #India #MakerWeekend #Makers #DIY" width="500" height="500" /></a></p>
+<p>Connections are as follows(PORT1):</p>
 
-<p>They also had a few 3D pens for visitors to play with.
-<a title="3Doodling at @mozilla #MakerParty #Pune at #MakersAsylum Stall ! #Event #Makers #Meetup by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/14968411250/"><img src="https://farm4.staticflickr.com/3897/14968411250_78839cac22.jpg" alt="3Doodling at @mozilla #MakerParty #Pune at #MakersAsylum Stall ! #Event #Makers #Meetup" width="500" height="500" /></a></p>
+<ul>
+  <li>LCD5110_SCLK_PIN- BIT5</li>
+  <li>LCD5110_DN_PIN- BIT7</li>
+  <li>LCD5110_SCE_PIN- BIT0</li>
+  <li>LCD5110_DC_PIN- BIT1</li>
+</ul>
 
-<p>I managed to build this cube. Tch!
-<a title="3Doodled Cube by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15497501122/"><img src="https://farm3.staticflickr.com/2946/15497501122_0cfa8e06eb.jpg" alt="3Doodled Cube" width="500" height="281" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
+<br /></p>
 
-<p>In the next booth, An interesting thing was up for display. A Smartphone and a DSLR ? Connect the dots and you get the triggertrap.
-It translates the audio out from a SmartPhone into DSLR jack signals to do interesting stuff. Intervalometers, Event activated clicks.. You say it and app does it all.</p>
+<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
 
-<p><a title="Trigger Trap by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15311258978/"><img src="https://farm3.staticflickr.com/2945/15311258978_c322f28e4e_z.jpg" alt="Trigger Trap" width="359" height="640" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
 
-<p><a title="Trigger Trap Device by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15474781676/"><img src="https://farm3.staticflickr.com/2946/15474781676_a05da516d2.jpg" alt="Trigger Trap Device" width="500" height="281" /></a></p>
+<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
 
-<p>I even saw a PrintrBot METAL at Maker Party by Reed Robotics. It was smoooooth.
-<a title="#ReedRobotics showcasing their #PrintrBotMetal at @mozilla #MakerParty in #Pune ! #3Dprinting #Maker #DIY #Wow by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/14972466959/"><img src="https://farm6.staticflickr.com/5569/14972466959_29ed6209e3_z.jpg" alt="#ReedRobotics showcasing their #PrintrBotMetal at @mozilla #MakerParty in #Pune ! #3Dprinting #Maker #DIY #Wow" width="612" height="612" /></a></p>
-
-<p>Ant Farm Robotics showcased their tiny WSN nodes that last for months on 2 AAs. The tiny ATTinY Runs a full blown RTOS and uses a TI Radio (RF2500/CC1100) to do the wireless part.
-<a title="A #Tiny #Node of a #WSN that can have tons of uses showcased by #Antfarm #Robotics at @mozilla #MakerParty in #Pune #India The node uses at #AVR #Atiny micro with a #TI radio. Surprisingly the ATtiny runs a #RTOS that does all the #processing. #ConnectedI by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/14978919450/"><img src="https://farm6.staticflickr.com/5568/14978919450_266f3446f1_z.jpg" alt="A #Tiny #Node of a #WSN that can have tons of uses showcased by #Antfarm #Robotics at @mozilla #MakerParty in #Pune #India The node uses at #AVR #Atiny micro with a #TI radio. Surprisingly the ATtiny runs a #RTOS that does all the #processing. #ConnectedI" width="612" height="612" /></a></p>
-
-<p>Navstick were showcasing their next generation Autonomous navigation systems that can be used in Quads, RC Planes and IGVs etc.</p>
-
-<p>A Quad with Navstick installed.
-<a title="Quads by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15310959009/"><img src="https://farm3.staticflickr.com/2945/15310959009_0586358ffe_z.jpg" alt="Quads" width="640" height="359" /></a></p>
-
-<p>A RTF Bixler that too supports NavStick
-<a title="Bixler? by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15474739636/"><img src="https://farm4.staticflickr.com/3955/15474739636_bb13f84e7b_z.jpg" alt="Bixler?" width="640" height="359" /></a></p>
-
-<p>They use a GoPro for Aerial Photography. Kewl!
-<a title="Go Pro by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15311217608/"><img src="https://farm4.staticflickr.com/3948/15311217608_5827e6bdd7_z.jpg" alt="Go Pro" width="640" height="359" /></a></p>
-
-<p>A part of Navstick Hardware Family. Built in India
-<a title="Navstick by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15310950989/"><img src="https://farm3.staticflickr.com/2950/15310950989_cc514cb667_z.jpg" alt="Navstick" width="640" height="359" /></a></p>
-
-<p>On the way to the second floor, I met Nishant Modak of IOT Pune.He too is(was) suffering from HP Laptop Syndrome and we talked a bit about his Makerspace in Pune called DoThings. He is doing a Pan America trip visiting MakerFaires with his team.
-<a title="With Nishant Modak of IOT Pune by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15494707141/"><img src="https://farm3.staticflickr.com/2950/15494707141_2f176610c8_z.jpg" alt="With Nishant Modak of IOT Pune" width="640" height="359" /></a></p>
-
-<p>They have developed an awesome BLE Arduino Board that does great things. Its called Tah! They also have a campaign running on <a href="https://www.crowdsupply.com/revealing-hour/tah-open-ble-arduino-board">crowd supply</a>. Get yours now!</p>
-
-<p><a title="Its #Arduino. Its #BLE and the best part its #Proudly #MadeInIndia ! Get the latest #Tah from @anujdeshpande , @nishantmodak and Team  Support their #Crowdsourcing #Campaign https://www.crowdsupply.com/revealing-hour/tah-open-ble-arduino-board #Wow by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15135191169/"><img src="https://farm4.staticflickr.com/3863/15135191169_23bfa9885a_z.jpg" alt="Its #Arduino. Its #BLE and the best part its #Proudly #MadeInIndia ! Get the latest #Tah from @anujdeshpande , @nishantmodak and Team  Support their #Crowdsourcing #Campaign https://www.crowdsupply.com/revealing-hour/tah-open-ble-arduino-board #Wow" width="612" height="612" /></a></p>
-
-<p>He accompanied me to their booth where Anuj was giving a talk about Tah!
-<a title="@anujdeshpande giving a #Talk on #InternetOfThings at @mozilla #MakerParty in #Pune #India by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15165142252/"><img src="https://farm6.staticflickr.com/5594/15165142252_1f8acdcb9c_z.jpg" alt="@anujdeshpande giving a #Talk on #InternetOfThings at @mozilla #MakerParty in #Pune #India" width="612" height="612" /></a></p>
-
-<p>They do great things at their MakerSpace which is verrrrry far from my place(Remember the thread). I saw an Intel Galileo which they had brought.
-<a title="Yes! Its Intel Galileo-Top by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15494766851/"><img src="https://farm4.staticflickr.com/3949/15494766851_d6f8e27d8f_z.jpg" alt="Yes! Its Intel Galileo-Top" width="640" height="359" /></a></p>
-
-<p><a title="Yes! Its Intel Galileo-Bottom by IndianTinker, on Flickr" href="https://www.flickr.com/photos/94411929@N06/15494761971/"><img src="https://farm4.staticflickr.com/3954/15494761971_33b9510d1d_z.jpg" alt="Yes! Its Intel Galileo-Bottom" width="640" height="359" /></a></p>
-
-<p>It was time to go. As i traveled back, I thought of various things like Autowalas, 3D Printing , Makerfaires and of course Food.</p>
-
-<p>Cheers!
-Rohit</p>
+<p>If you have any difficulties post here in comments</p>
 
   </div>
   

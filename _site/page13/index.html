@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,42 +401,60 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/10/06/Tamhini/">
-        Tamhini Ghats
+      <a href="/2015/11/11/GreenwaliDiwali/">
+        GreenWali Diwali:A social interactivity experiment
       </a>
     </h1>
 
-    <span class="post-date">06 Oct 2015</span>
+    <span class="post-date">11 Nov 2015</span>
 
-    <p>After a pretty busy and drenching week, it was time to escape into the wilderness of the Ghats surrounding Pune. These pictures were captured on the ride to Tamhini Ghat near Pune. Getting there is pretty straight forward. When coming from Pune, just reach Pirangut Crossing and take the turn to Tamhini. Then just ride and let yourself dissolve into the calm and cool gusts of air. You will notice some waterfalls on the way. Their vigor depends on the abundance of rain</p>
+    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
 
-<p>The road quality is average and very bad in some parts and inviting in some. Ride carefully. </p>
+<ul>
+  <li>Lights/Sound to attract attention</li>
+  <li>A unique randomness of explosion</li>
+  <li>An Obnoxious Odour </li>
+  <li>Fear of getting yourself hurt</li>
+  <li>Fear of setting someone on fire</li>
+</ul>
 
-<p>Some places to eat are Bashos and Paradise Cafe. You may also try some local foods on Dhabas on the road. The one that we went to served lightly spiced and watery Dal and ‘Lobiya’ with Rice and Chapatis.</p>
+<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
 
-<p>Some pictures :</p>
+<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349596064/in/dateposted-public/" title="Roof"><img src="https://farm6.staticflickr.com/5658/21349596064_cdba549b93_z.jpg" width="640" height="474" alt="Roof" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code>Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code>#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21946135126/in/dateposted-public/" title="Edges"><img src="https://farm1.staticflickr.com/657/21946135126_72d540dd76_z.jpg" width="640" height="474" alt="Edges" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349545174/in/dateposted-public/" title="Flow"><img src="https://farm6.staticflickr.com/5761/21349545174_664417f8c1_z.jpg" width="640" height="480" alt="Flow" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21972284855/in/dateposted-public/" title="Sparkling Fall"><img src="https://farm6.staticflickr.com/5619/21972284855_6a25940a59_z.jpg" width="640" height="474" alt="Sparkling Fall" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet ! </p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21785342979/in/dateposted-public/" title="Where is the rain ?"><img src="https://farm6.staticflickr.com/5806/21785342979_050f5ebc0b_z.jpg" width="640" height="556" alt="Where is the rain ?" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349410254/in/dateposted-public/" title="Wildcraft"><img src="https://farm6.staticflickr.com/5764/21349410254_62220d902e_z.jpg" width="640" height="480" alt="Wildcraft" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21945971976/in/dateposted-public/" title="Focused Colors"><img src="https://farm1.staticflickr.com/715/21945971976_3dc0191c16_z.jpg" width="640" height="480" alt="Focused Colors" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+  <li>Sign In/Up on Twitter</li>
+  <li>Go <a href="https://apps.twitter.com/">here</a></li>
+  <li>Create <strong>New Application</strong></li>
+  <li>Fill the Yet-Another-Form and Create the Application.</li>
+  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
+  <li>You will see your consumer keys there !</li>
+  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
+</ul>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21945948766/in/dateposted-public/" title="Hey! Fellas.."><img src="https://farm6.staticflickr.com/5644/21945948766_5ac8ebe018_z.jpg" width="640" height="640" alt="Hey! Fellas.." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>These 4 keys are used for the Code above.</p>
 
-<p><strong>Please Note</strong>: Major part of the roads around Tamhini have little to no street lighting, which is especially dangerous when the road is filled with potholes. So better make it back on time.</p>
+<p>Then just install the dependencies based on the <code>README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code>screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
 
-<p>Cheers !</p>
+<p>Check out the video of me testing it !</p>
 
-<p>Rohit </p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Happy GreenWali Diwali !</p>
+
+<p>Rohit</p>
 
 
   </div>

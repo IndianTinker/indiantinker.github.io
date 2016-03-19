@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,41 +401,46 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/15/GettingStartedwithESP1/">
-        Getting Started with ESP8266:AT-Commands and Wifi DataLogger
+      <a href="/2015/12/30/StarWars/">
+        StarMAT-Star Wars Themed Interactive Doormat
       </a>
     </h1>
 
-    <span class="post-date">15 Nov 2015</span>
+    <span class="post-date">30 Dec 2015</span>
 
-    <p>About a few months back, i ordered those viral ESP8266 Wifi Chips from AliEx, after travelling half of the country they landed up at my place in Delhi, from where i picked them up. </p>
+    <p>This weekend, the new Star Wars movie got released. It might be ‘just’ another movie for the droids and gungans of the planet, but not for the Padawans like us. </p>
 
-<p>The Legend is as follows:
-&gt;While half the world was busy taming the rogue CC3000 (Mine never worked), the suddenly out of the darkest dungeons of the cloud clans of the east came the blue board. The Elders called it ESP8266. It was fast and swift. Easy to tame and it quickly befriended the world and gave rise to a new era on connected projects at 1/10 the gold!</p>
+<p><em>Messa, Likes Star Wars!</em>  - Jar Jar Binks</p>
 
-<p>I was initially skeptical, So ordered just 2 ESP-01s. Next up in my cart is the NodeMCU board or rather i will make my own.</p>
+<p>Now, As we learn to master the force !</p>
 
-<p>The first project was with AT Commands. The chip comes with the default firmware that offers limited but streamlined functionality using AT Commands. Check out these excellent resources for them:</p>
+<p><em>To make something that reminds us of the saga we need!  Herh herh herh.</em> -Yoda</p>
 
-<ul>
-  <li><a href="http://rancidbacon.com/files/kiwicon8/ESP8266_WiFi_Module_Quick_Start_Guide_v_1.0.4.pdf">RancidBacon’s PDF guide</a> </li>
-  <li><a href="https://nurdspace.nl/ESP8266">Nurdspace.nl</a></li>
-  <li><a href="http://electronut.in/an-iot-project-with-esp8266/">Mahesh’s Blog</a></li>
-</ul>
+<p>What could be better than making a Doormat that senses a footstep (using capacitive methods) and plays a random star wars song like the opening theme or the imperial march or a famous phrase from the movie like “May the force be with you !” ?</p>
 
-<p>Obviously, when using AT Commands, we need a master. An Arduino with a level shifter would do that easily. Next we needed some data-source and cloud service to blurt out the data. A <strong>BMP180</strong> I2C Pressure and Temperature sensor would do justice and help us produce 2 valuable weather data points and cloud service will be my favourite <strong>Thinkspeak</strong> (recently bought by Mathworks).</p>
+<p>Presenting the <strong>Star Wars Theme Interactive Doormat</strong>.</p>
 
-<p>In whatever i could rummage i made this: 
-&lt;blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="5" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; <a href="https://instagram.com/p/9hyc4hPUCO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">My #ESP8266 #gettingstarted  setup ! Uses a BMP180 Temperature and Pressure #sensor and #Arduino , A #MSP430 Launchpad casted as a 3.3V regulator ! #DIY</a>&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-11-01T03:57:51+00:00">Oct 31, 2015 at 8:57pm PDT</time>&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script></p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_gGyumvUIn/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">The #StarWars #Reactive #DoorMat is ready ! Plays random #StarWars jargon  when someone steps on the doormat. #Maker #DIY #Arduino #Electronics #Hack #WeekendHacks</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-20T05:19:54+00:00">Dec 19, 2015 at 9:19pm PST</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>The MSP430 Launchpad is just used as a voltage regulator. I couldnt find any thing else in the night. No matter how funny it looks, This thing worked and was able to update the Temperature and pressure feed after every 60 secs on thingspeak, without fail. The best part is even if there is an outage, the moment power comes back, the ESP will auto connect and work flawlessly again.  </p>
+<p>I kept it at the entrance of my room and every time there is someone to meet me, He is greeted with a Random Star Wars Jargon !  </p>
 
-<p>The data was posted on my <a href="https://thingspeak.com/channels/6998">Thingspeak Channel</a>. After the acquisition, Mathworks added the capability to run Matlab scripts on the Thingspeak data channels to empower it on the Analytics front.</p>
+<p>The setup is temporary and hence on the breadboard. For the brains i use the <em>Arduino</em> with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the <em>Arduino</em> blinks to show that its ready to read the sensor. The sensor i am using is this <a href="http://www.seeedstudio.com/depot/datasheet/TTP223_SPEC.pdf">one</a>.I have used a big PLCC2 Pkg LED with a reference capacitance that matches the electrode length. I tried a few available caps. Then forgot the once i used. Argh!! SMD. The PCB is shown below. (Yeah! I know there is no bottom ground plane)</p>
 
-<p>Check out the code in this <a href="https://github.com/IndianTinker/ESP8266">repo</a> ! The code is based on Mahesh’s original post. </p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/24062427081/in/dateposted-public/" title="Touch Sensor"><img src="https://farm2.staticflickr.com/1507/24062427081_43cb82aaed_z.jpg" width="480" height="640" alt="Touch Sensor" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Cheers !!</p>
+<p>Now, when some-one (except Darth Vader/Droids) steps on the mat. The relative capacitance changes and the sensor grounds its output which is pulled up by default. This is detected by the Arduino which commands the MP3 player to play a random song/phrase from the assorted collection stored on the SD Card . And Yes! The whole setup is powered by a power bank (the black PVC Tube in the video above) that i made for my CX-10 pocket-Quad recharging, which powers the setup for about 6-7 hours easily. To split power between the USB Speakers and the Arduino, i use the USB Hub (in white with blue LED) .</p>
+
+<p>Interested in the complete setup. Check out this video :D 
+Sorry for the dull voice tone. I had the dark side messing up with me :P</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/A_ZnKR84uk4" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Any questions or suggestion, have you, use the comment section below!  </p>
+
+<p>Seek Advice, You must!</p>
+
+<p>May the force be with you ! :D</p>
 
 <p>Rohit </p>
 

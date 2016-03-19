@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 	Maker's Rule-The Feature Packed PCB Multi-Tool 
-image: https://farm6.staticflickr.com/5765/23973471686_a66bea0d23_z.jpg
+image: https://farm6.staticflickr.com/5725/23917001301_7f6116211a_z.jpg
 location: Pune, India
 tags:
 - hardware

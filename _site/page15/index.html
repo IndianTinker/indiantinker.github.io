@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,38 +401,96 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/09/24/CNCsnMe1/">
-        CNCs & Me- Part 1 - Easy Peasy Stepper System Tester
+      <a href="/2015/10/22/OpenBadge/">
+        Open Badge:You'da Maker
       </a>
     </h1>
 
-    <span class="post-date">24 Sep 2015</span>
+    <span class="post-date">22 Oct 2015</span>
 
-    <p><em>This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff i have built! This post is about a stepper system tester i built a while back.</em></p>
+    <p>Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.</p>
 
-<p>Stepper motors are quite widely used for CNCs/3D Printers or other Electromechanical hacks like the polar plotter etc. ! There is as always a constant need to run the motor to check whether its aligned properly or not? Does the flex coupling has any issues? Is the driver dead or alive and the best one- whether the current setting is fine to generate enough torque to hold or move the lead screw/Belt.</p>
-<p>Pestered by the same above questions i wanted to build my own driver/motor tester overnight and it 'must' be built ACAP (As cheap as possible) :D ! I stumbled open <a href="https://labitat.dk/wiki/Easy_Stepper_Motor_Controller">this</a> awesome project that i saw on Hack-A-Day.</p>
-<p>It uses an ATiny AVR microcontroller which I did'nt have and the least capable one i had was the MSP430G2230 which came in a SOIC pkg a bit difficult to go on the perfboard and my laziness propelled me away from etching a board for accommodating the same (I now feel the need though). I thought of building a microcontroller-less one as most modern stepper drivers like the ones from <a href="http://www.pololu.com/category/120/stepper-motor-drivers">Pololu</a>  need just two signal i.e STEP and DIR.</p>
-<p>A pulse on step pin will initiate a step to the internal indexer that handles what coil has to be energized based on the sequence and micro-stepping settings, while the DIR is a level signal whose level decides whether the internal indexer of the driver counts up or down!</p>
-<p>So, only two inputs i.e Pulsed input for STEP and level input for DIR. This can be achieved using the 555 timer in the <b>astable</b> mode. The Output of 555 i.e pin 3 will go into the step pin and the DIR pin is pulled up using a resistor and it is also connected to ground via switch.</p>
-<p>This gets the job done! We can also have a POT to vary the frequency since some motors don't respond to faster pulses due to rotor inertia.The driver i am using is based on DRV8825 from TI. It is slightly wider than the polulu one. (You might call me a TI fan boy).
-I designed it myself based on reference designs by TI and had the PCBs made by SeeedStudio's Fusion PCB Service. It took about 30 odd days to reach. The driver is two layer in-contrast the Pololu ones are 4 layer. I had to widen the PCB to provide enough dissipating area for the inbuilt heatsink on the the HTSSOP pkg of the DRV8825. Also the SMD resistor cousins of those lower value resistors were not available here in Delhi, so had to go with through hole ones. Ditto for the POT ! </p>
+<p>For the LED array we could use the usual LED Matrix,5x7 seemed to be a good size comfortable for both the pins and programmer.But..</p>
 
-<p>With the Tester designing almost final , I grabbed a piece of perfboard since, i didnt have the time to etch the board.</p>
-<p>The circuit is as follows:</p>
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/final.png"><img class="aligncenter size-full wp-image-647" src="https://indiantinker.files.wordpress.com/2014/04/final.png?w=662" alt="final" /></a></p>
-<p>It has two power inputs 12v, 5v and a common ground, all of which are sourced from an ATX! The circuit itself is pretty simple.</p>
-<p>The final build on a perfboard is shown below.</p>
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png"><img class="aligncenter size-full wp-image-645" src="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png?w=662" alt="perfboard1" /></a></p>
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/perf.png"><img class="aligncenter size-full wp-image-653" src="https://indiantinker.files.wordpress.com/2014/04/perf.png?w=662" alt="PERF" /></a></p>
-<p>I chose to use a SMD 0603 10K resistor between pin 8 and 7 to reduce the space and connected 104 (0.1uF) Ceramic caps as shown. The switch is a 10xx and the capacitor is required at the input of stepper driver to reduce supply dips when it draws current. I have used female headers for the motor since most motors come with a connector that can be easily wired up with a single strand wire. I used the Power Terminal connectors for the main 12V Driver supply as the driver is rated for 2.5A which is too high for the usual jumper cables !</p>
-<p><a href="https://www.flickr.com/photos/94411929@N06/13828736933" title="top and bottom by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5579/13828736933_b4393c9c19_c.jpg" width="800" height="450" alt="top and bottom" /></a><br />
-&nbsp;</p>
-<p><b>TIP:</b> If you are using the non-tinned/less tinned headers that have been lying around in the component box for a while, make sure to rub the connectors using sandpaper to remove corrosion residue on the contacts else it might seem soldered but it wont actually be soldered. Also you may use some extra flux.</p>
-<p>Video:<br />
-<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="662" height="403" src="https://www.youtube.com/embed/6tETMOMKnxY?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent" frameborder="0" allowfullscreen="true"></iframe></span></div></p>
-<p>Cheers !</p>
-<p>Rohit Gupta</p>
+<p>The LED Matrix available in stores nearby had a lot of issues: </p>
+
+<ul>
+  <li>Profile was too thick</li>
+  <li>The sizes available were either too big or too small for a 5x7 size.</li>
+  <li>Came with no datasheet, which meant bull work required to find out all the R and C values. Dahh!</li>
+</ul>
+
+<p>So, I had to make a <strong>tough</strong> choice of soldering 35 LEDs which meant the PCB was going to be <em>Dou.Double Sided</em> (Literal stammering). I had never done double sided at home. But it was never too late and that difficult. <strong>Basically</strong> you have to align two sides and just slip in the copper clad , tape it , iron it and  etch it and then <em>Hope is all you need</em> !</p>
+
+<p>FYI, that ‘basically’ came after i spoilt one full PCB. </p>
+
+<blockquote>
+  <p>PRO-TIP: You can have some alignment marks out of the scope of PCB in different directions in the dimension layer. Now when you align the front and back you just align the marks. Check this <a href="http://www.instructables.com/id/Two-sided-PCB-using-toner-method/">instructable</a> i used as a reference.</p>
+</blockquote>
+
+<p>The major elements on the PCB were:</p>
+
+<ul>
+  <li>LED Matrix</li>
+  <li>A MSP430G2553 microcontroller brain</li>
+  <li>A ULN2803 Darlington Driver to sink the current</li>
+  <li>A USB connector to charge the battery</li>
+  <li>A SBW connector to program the MSP430</li>
+  <li>A Switch to change the message</li>
+  <li>A Li-Ion battery from a Discarded Phone</li>
+  <li>Current limiting and Pull up resistors</li>
+  <li>Decoupling Capacitors</li>
+  <li>A REG1117 Regulator for MSP430</li>
+</ul>
+
+<p>Schematics and PCBs took 3 days of part-time work. Etching,Drilling and Soldering took a nighter.I had a provision to use the PCB directly as the badge with two big drill holes on the top.</p>
+
+<p>Check out the images below: </p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736425093/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5823/20736425093_7349c070f7_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> </p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21346949492/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/737/21346949492_c5295449cb_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736678943/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5800/20736678943_11ac529978_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21365927401/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/612/21365927401_052a3bfdef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736053114/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/575/20736053114_bf0ed32bef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21171876949/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/676/21171876949_394ce34d21_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21169357760/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/568/21169357760_4dc214b3f0_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>After experimenting with readability, i found out that the display was a dud in bright light. So, i repurposed an already cut-out heart shaped Red Diffuser for the display. It was a game changer.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21510455275/in/dateposted-public/" title="P_20150917_110935"><img src="https://farm1.staticflickr.com/567/21510455275_37e0e33463_z.jpg" width="360" height="640" alt="P_20150917_110935" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The basic code is available <a href="https://github.com/IndianTinker/OpenBadge">here</a> for people who wish to build it.
+The final version could do:</p>
+
+<ul>
+  <li>5 Strings scrolling</li>
+  <li>Temperature Display (MSP430s have a temperature sensor in-built)</li>
+  <li>Static Display</li>
+</ul>
+
+<p>Things that the hardware allowed but i didnt get the time to program:</p>
+
+<ul>
+  <li>Battery state sensing</li>
+  <li>Animations</li>
+</ul>
+
+<p>When i showed it to <a href="https://twitter.com/anool">@anool</a> at Maker Fest, he liked it and gave me a <a href="http://wyolum.com/projects/badger/">BadgEr</a> which was even cooler.</p>
+
+<p>Please check out the video below:</p>
+
+<iframe width="480" height="360" src="https://www.youtube.com/embed/KU9X9qTaQvg" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Cheers !!</p>
+
+<p>Rohit </p>
+
 
   </div>
   

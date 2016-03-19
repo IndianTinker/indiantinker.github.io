@@ -328,6 +328,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -358,8 +378,6 @@ window.twttr = (function (d, s, id) {
 <p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-<a href="https://www.tindie.com/stores/IndianTinker/?ref=offsite_badges&utm_source=sellers_IndianTinker&utm_medium=badges&utm_campaign=badge_small"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="I sell on Tindie"width="200" height="55"></a>
-
     
   </div>
 </div>
@@ -383,81 +401,32 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/08/NoobSentiment/">
-        Nooby Sentiment Analysis using nodejs
+      <a href="/2015/11/20/Doormate/">
+        Doormate- Runner's Up at Intel IOT Roadshow
       </a>
     </h1>
 
-    <span class="post-date">08 Nov 2015</span>
+    <span class="post-date">20 Nov 2015</span>
 
-    <p><strong>News Flash</strong>: Sentiments are now easy to quantify because there is soooo much data around to poke into. People eat,laugh,cry,sleep when they tweet, or maybe its the other way around.</p>
+    <p>Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog <a href="/2015/08/01/Intel/">link</a> that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did. </p>
 
-<p>So, we can derive loads of business and impact information based on these free streams of data and quantify them for our needs, which currently here is purely <em>exploratory</em> !</p>
+<p>Basically, our Project was called the <strong>Doormate</strong>. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.</p>
 
-<p>For mere instance, Lets put our favorite sport into the picture, <em>Cricket</em>! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what ‘I’ say somewhat <strong>elastic</strong> in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the ‘played well’ stance and later become a neutral subject. There maybe some exceptions.</p>
+<p>The project uses the <strong>Intel edison</strong> and was built using whatever parts we could rummage at the event. </p>
 
-<p>As wiki states it:
-&gt;Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
+<p>The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka <em>The Bell Playlist</em> .</p>
 
-<p>Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.</p>
+<p>The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved <em>Mogambo</em> feels good and the door opens. (See video below to understand the context)</p>
 
-<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words. </p>
+<p>Here is what the dashboard <a href="http://doormate.github.io/website/">looks like</a>.  </p>
 
-<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality. </p>
+<p>The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:</p>
 
-<p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/su8k2AwtbH0" frameborder="0" allowfullscreen=""></iframe>
 
-<p>To install it: <code>npm install sentiment</code> . Check out the README on the page for a quick start.</p>
+<p>Cheers !!</p>
 
-<p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
-
-<p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.</p>
-
-<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code>fs</code> that already comes with the package.</p>
-
-<p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
-
-<p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
-
-<script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
-
-<p>After 500 Tweets the data is as follows:</p>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/61.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/57.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/53.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/55.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/59.embed"></iframe>
-
-<p><strong>Notable Observations</strong> :</p>
-
-<ul>
-  <li>Kolkata and Delhi are particularly sad</li>
-  <li>Bengaluru&gt;Pune&gt;Mumbai is the way happiness goes.</li>
-  <li>I found there are lots of twitter contest chasers as i kept on getting tons of similar tweets in Pune</li>
-  <li>In Mumbai and Bengaluru, Tweets were mainly get togethers and parties.</li>
-  <li>Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.</li>
-  <li>The Cricket All Stars reasonably raised the happiness levels.</li>
-</ul>
-
-<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities. </p>
-
-<p><strong>Caveats</strong>:</p>
-
-<ul>
-  <li>Most of the time when tweets are not in English they end up scoring zero, i should rather translate them and then analyze</li>
-  <li>The AFINN approach does fail sometimes, i have seen a neutral score on a feel good post quite a number of times.</li>
-</ul>
-
-<p>Hoping to listen from some Data Gurus !</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
+<p>Rohit </p>
 
 
   </div>
