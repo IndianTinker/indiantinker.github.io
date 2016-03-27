@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2016-03-26T22:24:36+05:30</updated>
+ <updated>2016-03-27T10:21:35+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -255,6 +255,31 @@ Do you have any leads on things that can be done? Please do share in the comment
 
 &lt;p&gt;Rohit&lt;/p&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Interactive Standies</title>
+   <link href="http://rohitg.in/2016/01/10/InteractiveStandie/"/>
+   <updated>2016-01-10T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/01/10/InteractiveStandie</id>
+   <content type="html">&lt;p&gt;Standies? They are everywhere. Every event. Every exhibition, Flying around, falling down numerous times, a pain to manage them and even get people to read it.&lt;/p&gt;
+
+&lt;p&gt;We had the opportunity to design a reactive standie for &lt;a href=&quot;http://saavn.com/&quot;&gt;Saavn&lt;/a&gt; that will be present at their stalls throughout NH7 2015 Music festival.&lt;/p&gt;
+
+&lt;p&gt;Its apparently a XXL Sized phone with a UI that lists the artists playing at that festival and has their albums on the standie itself. &lt;/p&gt;
+
+&lt;p&gt;So, like a big screen a person could walk and press/tap/touch their artist and enjoy the selected music for the festival. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://interactive.makerville.io/images/Saavn.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Checkout out the video of the standie in action.&lt;/p&gt;
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0B8PpkBpPBA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
 </content>
  </entry>
  
