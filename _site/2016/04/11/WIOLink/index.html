@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Getting Started with RTL SDR- Playing some old school FM"/>
-  <meta name="twitter:title" content="Getting Started with RTL SDR- Playing some old school FM"/>
+  <meta  property="og:title" content="Getting started with WIO Link"/>
+  <meta name="twitter:title" content="Getting started with WIO Link"/>
   
 
 
@@ -43,22 +43,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/10/12/RTLSDR1/" />
+  <meta property="og:url" content="http://rohitg.in/2016/04/11/WIOLink/" />
 
 
-  <meta content="2015-10-12T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2016-04-11T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg"/>
+  <meta content="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg"/>
 
 
   
 
 
   
-  <meta content="sdr" property="article:tag"/>
+  <meta content="iot" property="article:tag"/>
   
 
 
@@ -70,7 +70,7 @@
 
   <title>
     
-      Getting Started with RTL SDR- Playing some old school FM &middot; Rohit Gupta
+      Getting started with WIO Link &middot; Rohit Gupta
     
   </title>
 
@@ -415,8 +415,8 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">Getting Started with RTL SDR- Playing some old school FM</h1>
-  <span class="post-date">12 Oct 2015</span>
+  <h1 class="post-title">Getting started with WIO Link</h1>
+  <span class="post-date">11 Apr 2016</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
@@ -430,41 +430,75 @@ All Rights Reserved
 
 
 <br>
-  <p><em>This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online</em></p>
+  <p><a href="https://github.com/anujdeshpande/">Anuj</a> recently gave me one of the few <em>WIO Links</em> he got as a <s>serial</s> Kickstarter backer to try them out. The Wio Link are </p>
 
-<p>SDR ? 
-Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those ‘virtual’ components. Sounds Expensive?</p>
+<blockquote>
+  <p>No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides <strong>Grove</strong> sensors a Web API kind of look. </p>
+</blockquote>
 
-<p>SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like <a href="http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html">this</a> or <a href="http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820">this</a> .</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097749300/in/dateposted-public/" title="20160409_192105"><img src="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" width="640" height="360" alt="20160409_192105" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">link</a> for more. But many folks have mentioned R820T being much more stable than E4000. </p>
+<p>So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with <em>API Endpoints</em> to control the devices using basic HTTP urls in curl for example. </p>
 
-<p>I bought one of these a while back. I comes with a small antenna, a remote and the main dongle. </p>
+<p>In this post, i walk you through the steps, just in case you got the Wio Link as well and we control an LED connected to the WIO link through the App itself. 
+You start with downloading the app from the <a href="https://play.google.com/store/apps/details?id=cc.seeed.iot.ap">Playstore</a>. The App starts with a sign-in process. Outside China, you have to choose the international server. Login and make an account. The app has a tour in which it asks you to press a button on the WioLink that basically turns the WioLink in an AP so, you can identify it and share the login credentials for your Wifi. I got this error.</p>
 
-<p>Since, more ‘easy to dive in’ stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304355621/in/dateposted-public/" title="Error1"><img src="https://farm2.staticflickr.com/1708/26304355621_d442b22c84_z.jpg" width="360" height="640" alt="Error1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>There are lots of cool software tools available to get started. The most common being <a href="http://airspy.com/download/">SDR#</a> probably written in C#. An amazing getting started post is written <a href="http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/">here</a>.</p>
+<p>Errors are good omens. Retrying i saw the Wio Link.</p>
 
-<p>Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up <a href="http://1drv.ms/1LoLvdn">here</a> or by Adafruit <a href="http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip">here</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852413/in/dateposted-public/" title="1"><img src="https://farm2.staticflickr.com/1704/25767852413_1131d7c1ba_z.jpg" width="360" height="640" alt="1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.</p>
+<p>The App is not the best designed one for the purpose. It is not that user friendly and maybe Seeed will improve upon it. Next the App asks you to give the credentials to the Wifi that will be used by the Wio Link to talk.</p>
 
-<p>As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852363/in/dateposted-public/" title="2"><img src="https://farm2.staticflickr.com/1633/25767852363_b6c6bbbe17_z.jpg" width="360" height="640" alt="2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/" title="fm1"><img src="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" width="640" height="360" alt="fm1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Once thats done. You get the Visual WioLink to Add Groves to. </p>
 
-<p>You can also check out another great software called <a href="http://sdr-radio.com/Software">SDR Console</a>. Its a much more ‘Pro-ish’ SDR receiver available. This again wont work out of the box. You can follow this <a href="http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html">link</a> for more instruction on getting RTLSDR USB support on SDR Console.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852273/in/dateposted-public/" title="4"><img src="https://farm2.staticflickr.com/1579/25767852273_599022c3d3_z.jpg" width="360" height="640" alt="4" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.</p>
+<p>Now here’s a thing. If at this point you click API or Click Update and then click API you get the following error.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/" title="sdrconsole"><img src="https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg" width="640" height="360" alt="sdrconsole" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278225372/in/dateposted-public/" title="Error2"><img src="https://farm2.staticflickr.com/1535/26278225372_caac01d812_z.jpg" width="360" height="640" alt="Error2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Hope you found this useful! Next? Maybe we should check out the planes or satellites ?</p>
+<p>This action should be restricted in the App.The groves are not very well organised making to difficult to find things. I could not find the LED one that i have. So, went for the Relay as in the end i needed a digital output. Also added a switch just in case.</p>
 
-<p>Cheers !</p>
+<p>PS: Ignore the Infrared Emitter. I thought it was an LED at the time of taking the screen shot. Only to figure it out later :p</p>
 
-<p>Rohit </p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097737210/in/dateposted-public/" title="6"><img src="https://farm2.staticflickr.com/1693/26097737210_f129470123_z.jpg" width="360" height="640" alt="6" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
+<p>Now once you click <strong>Update</strong> the App configures the Wio Link and enables a set of API to control the groves. I am not sure what it does here. Uploading the code from phone to the grove does not seem to be happening, maybe they enable/update some flags or a look-up table. Just Guessing !<br />
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304354631/in/dateposted-public/" title="Upload"><img src="https://farm2.staticflickr.com/1665/26304354631_14b9334f97_z.jpg" width="360" height="640" alt="Upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Once this is done, on the home screen you see this :</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26344667386/in/dateposted-public/" title="FINAL"><img src="https://farm2.staticflickr.com/1656/26344667386_a9e0a13aa6_z.jpg" width="360" height="640" alt="FINAL" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Now Lets see how the <strong>API</strong> looks like.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736540/in/dateposted-public/" title="LEDApi"><img src="https://farm2.staticflickr.com/1715/26097736540_c47cba5c70_z.jpg" width="360" height="640" alt="LEDApi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The best thing is that they provide the ability to make requests from the App itself. This comes handy to test things quickly. Here i send 1 to the Wio Link in hopes to turn the LED on.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278224872/in/dateposted-public/" title="LED On APi"><img src="https://farm2.staticflickr.com/1555/26278224872_0cbe5679e8_z.jpg" width="360" height="640" alt="LED On APi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Wohoo! Works the very first time. :D</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767855573/in/dateposted-public/" title="LED ON"><img src="https://farm2.staticflickr.com/1667/25767855573_e7edc6994f_z.jpg" width="640" height="360" alt="LED ON" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Now the LED Off Case. I send 0. </p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736430/in/dateposted-public/" title="LED Off api"><img src="https://farm2.staticflickr.com/1534/26097736430_2ab9c03492_z.jpg" width="360" height="640" alt="LED Off api" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Voila.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097744790/in/dateposted-public/" title="LED Off"><img src="https://farm2.staticflickr.com/1463/26097744790_26c971e90e_z.jpg" width="640" height="360" alt="LED Off" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I just love the simplicity and fun of working with the WioLink. Truly fantastic what Seeed is offering at this price. They have to work a bit on the App as it crashes often. Rest all is in place. Lets see what more can we build with this !</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
 
 </div>
 <br>
@@ -485,15 +519,6 @@ Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning 
     
       <li>
         <h3>
-          <a href="/2016/04/11/WIOLink/">
-            Getting started with WIO Link
-            <small>11 Apr 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2016/03/19/ARCards/">
             Augmenting Reality with Visiting Cards
             <small>19 Mar 2016</small>
@@ -506,6 +531,15 @@ Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning 
           <a href="/2016/03/12/arc/">
             ReactorX- The intuitive Arc Reactor from the movies
             <small>12 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/02/04/spectravulizer/">
+            SpectraVUlizer- Lights,Music and Magic
+            <small>04 Feb 2016</small>
           </a>
         </h3>
       </li>

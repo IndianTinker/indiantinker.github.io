@@ -4,13 +4,90 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2016-03-27T10:21:35+05:30</updated>
+ <updated>2016-04-17T16:09:19+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Getting started with WIO Link</title>
+   <link href="http://rohitg.in/2016/04/11/WIOLink/"/>
+   <updated>2016-04-11T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/04/11/WIOLink</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/anujdeshpande/&quot;&gt;Anuj&lt;/a&gt; recently gave me one of the few &lt;em&gt;WIO Links&lt;/em&gt; he got as a &lt;s&gt;serial&lt;/s&gt; Kickstarter backer to try them out. The Wio Link are &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides &lt;strong&gt;Grove&lt;/strong&gt; sensors a Web API kind of look. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26097749300/in/dateposted-public/&quot; title=&quot;20160409_192105&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;20160409_192105&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with &lt;em&gt;API Endpoints&lt;/em&gt; to control the devices using basic HTTP urls in curl for example. &lt;/p&gt;
+
+&lt;p&gt;In this post, i walk you through the steps, just in case you got the Wio Link as well and we control an LED connected to the WIO link through the App itself. 
+You start with downloading the app from the &lt;a href=&quot;https://play.google.com/store/apps/details?id=cc.seeed.iot.ap&quot;&gt;Playstore&lt;/a&gt;. The App starts with a sign-in process. Outside China, you have to choose the international server. Login and make an account. The app has a tour in which it asks you to press a button on the WioLink that basically turns the WioLink in an AP so, you can identify it and share the login credentials for your Wifi. I got this error.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26304355621/in/dateposted-public/&quot; title=&quot;Error1&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1708/26304355621_d442b22c84_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;Error1&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Errors are good omens. Retrying i saw the Wio Link.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25767852413/in/dateposted-public/&quot; title=&quot;1&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1704/25767852413_1131d7c1ba_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;1&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The App is not the best designed one for the purpose. It is not that user friendly and maybe Seeed will improve upon it. Next the App asks you to give the credentials to the Wifi that will be used by the Wio Link to talk.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25767852363/in/dateposted-public/&quot; title=&quot;2&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1633/25767852363_b6c6bbbe17_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;2&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Once thats done. You get the Visual WioLink to Add Groves to. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25767852273/in/dateposted-public/&quot; title=&quot;4&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1579/25767852273_599022c3d3_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;4&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now here’s a thing. If at this point you click API or Click Update and then click API you get the following error.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26278225372/in/dateposted-public/&quot; title=&quot;Error2&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1535/26278225372_caac01d812_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;Error2&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;This action should be restricted in the App.The groves are not very well organised making to difficult to find things. I could not find the LED one that i have. So, went for the Relay as in the end i needed a digital output. Also added a switch just in case.&lt;/p&gt;
+
+&lt;p&gt;PS: Ignore the Infrared Emitter. I thought it was an LED at the time of taking the screen shot. Only to figure it out later :p&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26097737210/in/dateposted-public/&quot; title=&quot;6&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1693/26097737210_f129470123_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;6&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now once you click &lt;strong&gt;Update&lt;/strong&gt; the App configures the Wio Link and enables a set of API to control the groves. I am not sure what it does here. Uploading the code from phone to the grove does not seem to be happening, maybe they enable/update some flags or a look-up table. Just Guessing !&lt;br /&gt;
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26304354631/in/dateposted-public/&quot; title=&quot;Upload&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1665/26304354631_14b9334f97_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;Upload&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Once this is done, on the home screen you see this :&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26344667386/in/dateposted-public/&quot; title=&quot;FINAL&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1656/26344667386_a9e0a13aa6_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;FINAL&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now Lets see how the &lt;strong&gt;API&lt;/strong&gt; looks like.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26097736540/in/dateposted-public/&quot; title=&quot;LEDApi&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1715/26097736540_c47cba5c70_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;LEDApi&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The best thing is that they provide the ability to make requests from the App itself. This comes handy to test things quickly. Here i send 1 to the Wio Link in hopes to turn the LED on.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26278224872/in/dateposted-public/&quot; title=&quot;LED On APi&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1555/26278224872_0cbe5679e8_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;LED On APi&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Wohoo! Works the very first time. :D&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/25767855573/in/dateposted-public/&quot; title=&quot;LED ON&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1667/25767855573_e7edc6994f_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;LED ON&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the LED Off Case. I send 0. &lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26097736430/in/dateposted-public/&quot; title=&quot;LED Off api&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1534/26097736430_2ab9c03492_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;LED Off api&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Voila.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/26097744790/in/dateposted-public/&quot; title=&quot;LED Off&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1463/26097744790_26c971e90e_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;LED Off&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I just love the simplicity and fun of working with the WioLink. Truly fantastic what Seeed is offering at this price. They have to work a bit on the App as it crashes often. Rest all is in place. Lets see what more can we build with this !&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Augmenting Reality with Visiting Cards</title>

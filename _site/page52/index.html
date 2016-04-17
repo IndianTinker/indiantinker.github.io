@@ -43,7 +43,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page35/" />
+  <meta property="og:url" content="http://rohitg.in/page52/" />
 
 
 
@@ -409,58 +409,37 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/04/05/Kindify/">
-        Kindify- Making PDFs readable on the Kindle
+      <a href="/2012/08/25/Arduino-Controlware/">
+        Arduino Controlware- Play with your duino without frequent code uploads
       </a>
     </h1>
 
-    <span class="post-date">05 Apr 2015</span>
+    <span class="post-date">25 Aug 2012</span>
 
-    <p>Probably <strong>YOU</strong> too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. <strong>YOU</strong> too considered it would be fantastic to read them, a single device for only books. Consider this no calumny to the device. But PDFs are seriously not its cup of tea. Mercurial, <strong>YOU</strong> might be seeing the way the PDF is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didn’t seem comfortable.</p>
+    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
 
-<p>Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.</p>
+<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
 
-<p>I tried assiduously to somehow read and lost interest until I stumbled upon a slick python library <em>pyPDF</em> while solving a problem with printing PDFs. </p>
+<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
 
-<blockquote>
-  <p>Clip the borders and Light you shall see !</p>
-</blockquote>
+<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
 
-<p>Kindle does automatically clip borders but it retains the primordial page number which limits the usability and since, it also indexes the page number anyway, even if I remove it using some python script it wont hurt.</p>
+<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.
+&lt;iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt; </p>
 
-<p>So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a PDF with the same name but -kindified appended to its file name to be read on the Kindle.</p>
+<p><em>Update-02 Oct’12</em> : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!
+&lt;p style="text-align:center;"&gt;<a title="ControlWare" href="http://1drv.ms/1FaBBZS" target="_blank">ControlWare.exe</a>&lt;/p&gt;
+&lt;p style="text-align:left;"&gt;The Arduino sketch To be uploaded is :<a href="http://1drv.ms/1FtOSPY" target="_blank"> Source</a>&lt;/p&gt;
+&lt;p style="text-align:left;"&gt;Some of FAQ`s are:&lt;/p&gt;</p>
 
-<p>The only dependency is <em>pyPDF</em> .</p>
+<ol>
+	<li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
+	<li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
+	<li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
+	<li>Its not Cross Compatible..works best on Windows Only</li>
+</ol>
 
-<p>Install PyPDF using pip :
-<code>pip install pypdf</code></p>
-
-<p>Now clone the github repository:</p>
-
-<p><code>git clone https://github.com/IndianTinker/kindify.git</code></p>
-
-<p>Now, paste the PDF in the kindify directory and run the command:</p>
-
-<p><code>python kindify.py yourPdfName.pdf</code></p>
-
-<p>An interactive menu will pop up with list of some famous book houses that have predefined cropping parameters. You can always choose the custom one to suit your needs or edit the predefined ones to suit your needs.</p>
-
-<p>Lets see the magic in this sample from Orielly.
-Before the script the PDF renders as follows:</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16834820407" title="Pre Script by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8752/16834820407_9c9be5a74e_z.jpg" width="385" height="640" alt="Pre Script" /></a></p>
-
-<p>And after the script</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16854436058" title="Post Script by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg" width="423" height="640" alt="Post Script" /></a></p>
-
-<p>There is a difference between the two images. Clearly the second one is a <em>bit</em> more clear.
-So, yet again Python saves the day! </p>
-
-<p>Cheers!</p>
-
-<p>Rohit   </p>
-
+<p><em>Update-5th Apr’15</em>: Fixed broken links</p>
 
   </div>
   
@@ -468,11 +447,11 @@ So, yet again Python saves the day! </p>
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page36">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     
-      <a class="pagination-item newer" href="/page34">Newer</a>
+      <a class="pagination-item newer" href="/page51">Newer</a>
     
   
 </div>
