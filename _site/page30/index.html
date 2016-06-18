@@ -356,6 +356,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -409,88 +413,72 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/05/29/TruPlay/">
-        TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430
+      <a href="/2015/06/29/LiTiny/">
+        LiTiny- A Tiny LiIon charger for most things battery
       </a>
     </h1>
 
-    <span class="post-date">29 May 2015</span>
+    <span class="post-date">29 Jun 2015</span>
 
-    <p>I recently ordered <a href="http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;hash=item1a00397396">this</a> Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and <strong>Changing Songs</strong>. Its more like getting chained to the speakers. Woof !!</p>
+    <p>Lithium Batteries are indispensable. I have a few project like my own <em>DIY Badge [Post Soon]</em> or a <em>Light Wand for Light Photography</em> and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.</p>
 
-<p>After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the <em>Free Shipping</em> fellas !</p>
+<p>The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.</p>
 
-<p>It worked as advertised. But the range was hardly 15feet <strong>LOS</strong> and in a maze like house i live in , it would hardly go through the walls. So, the <em>Wireless</em> problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , “Think out of the box !” my answer was inside the box. </p>
+<p><strong>Li Ion Charger Required</strong></p>
 
-<p>It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads : </p>
+<p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
+
+<ul>
+  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
+  <li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
+</ul>
+
+<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  </p>
+
+<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,
+&gt;Why buy, When it can be built.</p>
+
+<p>Also none of the boards satisfied both my needs together:</p>
+
+<ul>
+  <li>Control I/F with a MCU</li>
+  <li>Micro USB </li>
+</ul>
+
+<p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
 
 <center>
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0zeXPvvULI/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-29T08:06:06+00:00">Mar 29, 2015 at 1:06am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg" />
 </center>
 
-<p>Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the <em>AT Commands</em>).</p>
-<center>
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/1n1xClPUD-/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-18T16:11:06+00:00">Apr 18, 2015 at 9:11am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
- </center>
+<p>There were only the following changes:</p>
 
-<p>Google helps !  I found <a href="http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html">this</a> nice forum post detailing the adapter. Bingo its the <strong>OVC3860</strong> Chip. And here are the <a href="http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf">commands</a>. </p>
+<ul>
+  <li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
+  <li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
+  <li>Provided a common ground to i/f</li>
+  <li>Added microUSB and a 90degree pinheader for my batteries.</li>
+</ul>
 
-<p>Basically all commands are in a <strong>AT#CMD[cr][lf]</strong> Format. The “CMD” for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.</p>
+<p>Here is the build process:</p>
 
-<p>The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a ‘115600’ one. This setting seems to be stored in the <strong>EEPROM</strong> on the adapter. As <a href="http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/">this</a> post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched" /></a></p>
 
-<p>So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath" /></a></p>
 
-<iframe width="653" height="380" src="https://www.youtube.com/embed/XGC1E0VE39Y" frameborder="0" allowfullscreen=""></iframe>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned" /></a></p>
 
-<p>Tested it for a few days ! I could now control my phone’s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB. </p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB" /></a></p>
 
-<p>I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra <strong>SMD</strong> tactile switch to further expand capabilities. 
-<a href="https://www.flickr.com/photos/94411929@N06/17148091553" title="Dongle Tapping by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg" width="640" height="359" alt="Dongle Tapping" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered" /></a></p>
 
-<p>The connections are simple. </p>
+<p>During Charging:
+<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress" /></a></p>
 
-<blockquote>
-  <p>The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads ! </p>
-</blockquote>
+<p>After charge Termination:
+<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !" /></a></p>
 
-<p>After designing the board it was time for the best part : <strong>Etching</strong> </p>
-
-<p>Here are the chronologically arranged pictures of PCB Etching using <em>Toner Transfer Method</em> :</p>
-
-<p>Making sure the TSSOP Pads got nicely transferred. Clicked using <a href="http://rohitg.in/2015/02/26/The-MacroCase/">MACROCase</a> .
-<a href="https://www.flickr.com/photos/94411929@N06/17768382545" title="Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg" width="640" height="583" alt="Making sure the tiny tracks got transferred" /></a></p>
-
-<p>All set for the bath.
-<a href="https://www.flickr.com/photos/94411929@N06/17768440115" title="Toner Transfer by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg" width="640" height="359" alt="Toner Transfer" /></a></p>
-
-<p>Rough times to follow.
-<a href="https://www.flickr.com/photos/94411929@N06/17768864201" title="Just Etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg" width="640" height="359" alt="Just Etched" /></a></p>
-
-<p>After some sanding.
-<a href="https://www.flickr.com/photos/94411929@N06/17582193499" title="Cleaned after ACID Bath by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg" width="640" height="359" alt="Cleaned after ACID Bath" /></a></p>
-
-<p>Flashing the code after soldering.
-<a href="https://www.flickr.com/photos/94411929@N06/17768419595" title="Code Dump by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg" width="640" height="359" alt="Code Dump" /></a></p>
-
-<p>Testing.
-<a href="https://www.flickr.com/photos/94411929@N06/17765735442" title="First Test in Progress by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg" width="640" height="359" alt="First Test in Progress" /></a></p>
-
-<p>Ta Da !!</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768811751" title="Unobstructing by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg" width="640" height="359" alt="Unobstructing" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17742078846" title="Looks Cool by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg" width="640" height="359" alt="Looks Cool" /></a></p>
-
-<p>Check out the video for the project in action:</p>
-
-<iframe width="653" height="380" src="https://www.youtube.com/embed/mrToz8M_BPQ" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Interested in building one? Grab the code here:</p>
-
-<script src="https://gist.github.com/a35bf659325d0eac2ce5.js"> </script>
+<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. </p>
 
 <p>Cheers,</p>
 

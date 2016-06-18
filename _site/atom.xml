@@ -4,13 +4,39 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2016-04-17T16:09:19+05:30</updated>
+ <updated>2016-06-18T14:46:38+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Exif Data on Linux</title>
+   <link href="http://rohitg.in/2016/06/18/Exif/"/>
+   <updated>2016-06-18T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/06/18/Exif</id>
+   <content type="html">&lt;p&gt;A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the &lt;em&gt;Shutter Count&lt;/em&gt; ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend &lt;a href=&quot;https://www.youtube.com/watch?v=1BxXPTIvtHA&quot;&gt;this&lt;/a&gt; video. PS: Language might not be suitable for younger audiences. &lt;/p&gt;
+
+&lt;p&gt;On Linux (other platforms too) there is a nice tool called &lt;strong&gt;ExifTool&lt;/strong&gt; which was, as of writing this post available in the package manager of &lt;em&gt;Ubuntu&lt;/em&gt; .&lt;/p&gt;
+
+&lt;p&gt;So, Simply 
+&lt;code&gt;sudo apt-get install exiftool&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to use it, Simply go to the SD Card (generally) and &lt;em&gt;Right Click&lt;/em&gt; to open terminal here. Then use the command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;exiftool DSC_0004.JPG |grep &quot;Shutter Count&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Shutter Count should be visible, But depends on the camera you use. Most &lt;strong&gt;Nikons&lt;/strong&gt; we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.&lt;/p&gt;
+
+&lt;p&gt;To know more about EXIF check out &lt;a href=&quot;http://www.media.mit.edu/pia/Research/deepview/exif.html&quot;&gt;this&lt;/a&gt; resource .&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Getting started with WIO Link</title>

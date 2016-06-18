@@ -356,6 +356,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -409,85 +413,67 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/13/Fiddle-Music-System/">
-        Fiddle - The DIYed Music System
+      <a href="/2014/12/14/Tinker-Rule/">
+        TinkerRule- The Maker's Swiss Army Knife
       </a>
     </h1>
 
-    <span class="post-date">13 Nov 2014</span>
+    <span class="post-date">14 Dec 2014</span>
 
-    <p><em>Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK</em> Thats how my old ‘Phillips All in One’ failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed <strong>CD Player with a segmented Display</strong>. But today most of the music is digital and hence <em>Upgrade was necessary</em>.</p>
+    <p>This project was done during my time at <a href="http://www.cedtnsit.in/">TI-CEPD,NSIT,Delhi</a>. They have an awesome Winter Internship program going on, Be sure to have a look.</p>
 
-<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me. 
-&gt; Why Buy? When it can be Built!</p>
+<p>I source a lot of my components from Local Markets in Delhi like <em>Lajpat Rai Market</em> etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate. </p>
 
-<p>And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:</p>
-
-<ul>
-  <li>Play MP3s</li>
-  <li>Radio</li>
-  <li>Aux -IN</li>
-  <li>Take SD Cards</li>
-  <li>Remotes will be good too.</li>
-</ul>
-
-<p>Fitting such things in a project would rather be heavenly. I searched online for references and <em>You have it boy!</em> there is one ready to amplify (supply) module from our friends in China that does it all . See <a href="http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg">this</a>  .</p>
-
-<p>I had seen this in a Taxi (less formally called <em>Gramin Seva</em>) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )</p>
-
-<p>Now all i need to do is :</p>
+<p>There are two ways to overcome this issue (assuming that the package is not standard) :</p>
 
 <ol>
-  <li>Decipher the connections</li>
-  <li>Build a power supply and Amplifier</li>
-  <li>Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box</li>
-  <li>Modify the box to fit all in </li>
-  <li>Enjoy</li>
+  <li>
+    <p>Measure each and every thing using a vernier and then make a part for it in eagle.
+&gt; I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that <strong>most</strong> leaded parts can be resolved in a 0.1inch grid.</p>
+  </li>
+  <li>
+    <p>Make a reference and then use that to make parts without picking up the vernier.
+&gt; In this we make a reference for most common footprints and use them as a reference. What’s better is that the known reference helps in finding out packages of some component you found lying in the parts bin.</p>
+  </li>
 </ol>
 
-<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code>5V DC</code> supply that’s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
+<p>So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on <em>Eagle</em> that can be etched. Nothing could offer me better precison than that.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape" /></a></p>
+<p>After a few hours of designing, i etched the board (which took quite an effort), then selectively tinned a few pads and applied protective lacquer on the board.</p>
 
-<p>The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. <em>FingersCrossed</em></p>
+<p>Here’s what i mananged.</p>
 
-<p>It worked fine and i was playing things off the USB straight away!</p>
+<ol>
+  <li>
+    <p><strong>Continuity Tester</strong> : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
+<a href="https://www.flickr.com/photos/94411929@N06/15831125987" title="Tinker Rule Continuity by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
+  </li>
+  <li>
+    <p><strong>Standard Packages</strong> : Some standard packages used, good to compare them and match.
+<a href="https://www.flickr.com/photos/94411929@N06/16016173942" title="Tinker Rule Footprints by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8570/16016173942_aff8aefc2f_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
+  </li>
+  <li><strong>0.1 inch grid</strong> : This is the best one and used most of the times. Makes it easy to simulate breadboard/perfboard behaviour.
+<a href="https://www.flickr.com/photos/94411929@N06/16016646101" title="0.1inch Grid by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8581/16016646101_8945045d09_z.jpg" width="640" height="359" alt="0.1inch Grid" /></a></li>
+  <li>
+    <p><strong>Common Drills</strong> : Most common drill sizes(bits) , just see what inserts easily and voila, we have a good enough drill size. 
+<a href="https://www.flickr.com/photos/94411929@N06/15396343364" title="Standard Drills by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7465/15396343364_a16d3cea16_z.jpg" width="640" height="359" alt="Standard Drills" /></a></p>
+  </li>
+  <li>
+    <p><strong>Track Widths</strong> : Compare track widths on the go.
+<a href="https://www.flickr.com/photos/94411929@N06/16017936652" title="Tracks by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8603/16017936652_40ce3d6217_z.jpg" width="640" height="359" alt="Tracks" /></a></p>
+  </li>
+  <li>
+    <p><strong>Right angled rule with both inch and cm scale</strong> : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
+<a href="https://www.flickr.com/photos/94411929@N06/15992846056" title="CM Scale by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg" width="640" height="359" alt="CM Scale" /></a>
+<a href="https://www.flickr.com/photos/94411929@N06/15832394669" title="Complete by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="WP_20140511_00_36_03_Pro" /></a></p>
+  </li>
+  <li><strong>Rust Buster</strong> : A fine sandpaper to rust off those parts that just dont solder .
+<a href="https://www.flickr.com/photos/94411929@N06/15397629893" title="TinkerRule SandPaper by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8622/15397629893_70cf484542_z.jpg" width="640" height="359" alt="TinkerRule" /></a></li>
+</ol>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading" /></a></p>
+<p>I have now been using it for quite sometime and its really useful and serves the purpose. </p>
 
-<p>Now, the power supply and Amplifier. I used the omnipresent <code>7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code>250-300mA</code> . The supply was going to be <code>12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
-The Amp was build out of <strong>ST’s</strong> <a href="http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf">TDA2030</a> which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.</p>
-
-<p>The Application circuit works charm.
-So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?</p>
-
-<p>Demo runs showed <code>TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code>TDA2030</code> and made a makeshift heat sink for <code>7805</code> </p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15767878536" title="Circuit -Front by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg" width="640" height="359" alt="Circuit -Front" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back" /></a></p>
-
-<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code>10k</code> and <code>0.1uF</code> combination. </p>
-
-<p>I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (<em>Oh! Yeah</em>)</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer" /></a></p>
-
-<p>I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.</p>
-
-<p>This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut" /></a></p>
-
-<p>Now it was assembling time.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15789671841" title="All Messed up by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" width="640" height="359" alt="All Messed up" /></a></p>
-
-<p>After a few half hours, i got it all working.. No Buzz and all music!</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15606708190" title="Charm by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg" width="359" height="640" alt="Charm" /></a></p>
+<p>If you are interested in this i can mail you the file , just drop me an email at indiantinker [at] gmail [dot] com.</p>
 
 <p>Cheers!</p>
 

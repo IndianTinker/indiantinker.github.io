@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Tiano- The Touchscreen Piano"/>
-  <meta name="twitter:title" content="Tiano- The Touchscreen Piano"/>
+  <meta  property="og:title" content="Exif Data on Linux"/>
+  <meta name="twitter:title" content="Exif Data on Linux"/>
   
 
 
@@ -43,24 +43,20 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/04/16/Tiano-Piano/" />
+  <meta property="og:url" content="http://rohitg.in/2016/06/18/Exif/" />
 
 
-  <meta content="2014-04-16T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2016-06-18T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg"/>
+  <meta content="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-128.png" property="og:image"/>
+  <meta name="twitter:image:src" content="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-128.png"/>
 
 
   
 
 
-  
-  <meta content="msp430" property="article:tag"/>
-  
-  <meta content="featured" property="article:tag"/>
   
 
 
@@ -72,7 +68,7 @@
 
   <title>
     
-      Tiano- The Touchscreen Piano &middot; Rohit Gupta
+      Exif Data on Linux &middot; Rohit Gupta
     
   </title>
 
@@ -421,13 +417,13 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">Tiano- The Touchscreen Piano</h1>
-  <span class="post-date">16 Apr 2014</span>
+  <h1 class="post-title">Exif Data on Linux</h1>
+  <span class="post-date">18 Jun 2016</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi,India">Delhi, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
 
 
 <br>
@@ -436,32 +432,24 @@ All Rights Reserved
 
 
 <br>
-  <p>Touchscreens..huh.. They are all around us..Phones ,tablets, phablets and now even laptops. Most of them have a capacitive touchscreen where the change in capacitance at a point is used to sense it and then perform the corresponding action. Capacitive ones are multi point sensing. They sense more than 2 points and hence we get those pinch to zoom features etc.</p>
+  <p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences. </p>
 
-<p>On the other hand , almost archaic version on touchscreen is the resistive version. That are pretty easy to interface with almost any microcontroller with an ADC. In this project i did over the weekend i tried to interface a touchscreen ( resistive one..) ,available at mobile repair shops in Delhi with a MSP430G2553 (Although MSP430G2231 would also do)  to make a piano.</p>
+<p>On Linux (other platforms too) there is a nice tool called <strong>ExifTool</strong> which was, as of writing this post available in the package manager of <em>Ubuntu</em> .</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg"><img class="aligncenter size-full wp-image-339" alt="Touchscreen setup" src="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg" width="470" height="230" /></a></p>
+<p>So, Simply 
+<code>sudo apt-get install exiftool</code></p>
 
-<p><strong>Pre-requisites</strong>: The touchscreen may not be easier to get. I got mine from a mobile repair shop in LR. It is a 4-wire Touchscreen, pretty common with horribly thin contacts that took a lot of patience to solder.There is a lot of literature available on Touchscreens on the internet. I found two app notes that were best. First one from <a href="http://www.atmel.in/Images/doc8091.pdf" target="_blank">Atmel</a> , that explained the working of the touchsreen in a pretty clear way and one from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI</a> that some what helped in the software part.</p>
+<p>In order to use it, Simply go to the SD Card (generally) and <em>Right Click</em> to open terminal here. Then use the command.</p>
 
-<p>You must read the atmel one ( atleast the first few pgs to get how it works). Its essentially a resistive voltage divider. The value of the touch point is determined by the ADC value read.</p>
+<p><code>exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/04/post1.jpg"><img class="aligncenter size-full wp-image-338" alt="formula" src="http://indiantinker.files.wordpress.com/2013/04/post1.jpg" width="470" height="264" /></a></p>
+<p>Shutter Count should be visible, But depends on the camera you use. Most <strong>Nikons</strong> we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.</p>
 
-<p>From the illustration above(borrowed from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>). One can easily see how the co-ordinates are read. In order to find out, what wire on your touch sreen corresponds to X and Y meshes. You can use a multi-meter first to measure the resistance between pins ,usually the alternate pins belong to same axes. in my case it was X-,Y-,X+,Y+  then to differentiate between x and y , one probable method will be to power the touchscreen i.e. giving the drive voltage and then find out the voltage at any other terminal w.r.t. ground and see whether is changing horizontally or vertically in your reference plane.</p>
+<p>To know more about EXIF check out <a href="http://www.media.mit.edu/pia/Research/deepview/exif.html">this</a> resource .</p>
 
-<p><em>CAUTION: Be careful about the current while powering the touchscreen externally!</em></p>
+<p>Cheers,</p>
 
-<p>After this coding part is pretty simple. For the algo refer to page no.7 on the <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>. If you plan to run your end application on a battery and you have hard-coded the co-ordinates and the Vdrive is sourced externally i suggest that you sample the Vdrive as well . If you are using  microcontroller pins to supply Vdrive then this can be neglected.</p>
-
-<p>I have a desire to learn to play music but unfortunately due to my low patience levels , i have failed to keep up. :D</p>
-
-<p>So, i made this Piano using the MSP430 Launchpad and a touchscreen along with a speaker. The code algo is pretty same as TI App Note Suggests and i encourage the reader to code it himself . Any difficulties can be discussed. It uses the<a href="http://indiantinker.wordpress.com/2012/11/29/tone-library-for-msp430/" target="_blank"> tone library</a> i posted earlier to generate the <a href="http://en.wikipedia.org/wiki/Solf%C3%A8ge" target="_blank">solfeggio</a>.
-&lt;h1 id="firstHeading"&gt;<span style="font-size:13px;">Here is the shaky and horrible video i made:</span><b></b>&lt;/h1&gt;</p>
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/Aw63-2rYthY" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Cheers! :D</p>
+<p>Rohit</p>
 
 </div>
 <br>
@@ -482,15 +470,6 @@ All Rights Reserved
     
       <li>
         <h3>
-          <a href="/2016/06/18/Exif/">
-            Exif Data on Linux
-            <small>18 Jun 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2016/04/11/WIOLink/">
             Getting started with WIO Link
             <small>11 Apr 2016</small>
@@ -503,6 +482,15 @@ All Rights Reserved
           <a href="/2016/03/19/ARCards/">
             Augmenting Reality with Visiting Cards
             <small>19 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/03/12/arc/">
+            ReactorX- The intuitive Arc Reactor from the movies
+            <small>12 Mar 2016</small>
           </a>
         </h3>
       </li>
