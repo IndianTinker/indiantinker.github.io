@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! • A-Frame</title>
+    <meta name="description" content="Testing">
+    <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>">
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/aframe-particle-system-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene fog="type: exponential; color: #FF7F50; density: 0.05;">
+      <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
+      <a-camera position="0 1.764 4" look-controls wasd-controls>
+      <!--    <a-cursor color="#2E3A87"> -->
+        </a-camera >
+          <a-sky></a-sky>
+     <a-ocean width="50" depth="50" density="40" rotation="-90 0 0"></a-ocean>
+<a-assets>
+  <img id="texture" src="texture.jpg">
+</a-assets>
+      <a-box color="#6173F4" width="2" height="2" depth="2" position="0 0 0" src="#texture" >
+    <!--  <a-event name="mouseenter" color="#FFFFFF"></a-event>
+      <a-event name="mouseleave" color="#6173F4"></a-event>
+    </a-box>-->
+
+    </a-scene>
+
+
+      </body>
+</html>
