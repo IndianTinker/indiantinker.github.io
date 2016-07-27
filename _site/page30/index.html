@@ -360,6 +360,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -413,72 +417,64 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/06/29/LiTiny/">
-        LiTiny- A Tiny LiIon charger for most things battery
+      <a href="/2015/07/05/JuggadSupply/">
+        Juggad Supply- Saving a power supply from planned obsolescence
       </a>
     </h1>
 
-    <span class="post-date">29 Jun 2015</span>
+    <span class="post-date">05 Jul 2015</span>
 
-    <p>Lithium Batteries are indispensable. I have a few project like my own <em>DIY Badge [Post Soon]</em> or a <em>Light Wand for Light Photography</em> and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.</p>
+    <p>Next time your printer stops printing for no reason or changing the battery of your MP3 Player from <strong>Authorised Service Station</strong> costs a major percentage of the original cost, Be informed this all is a part of an industrial design policy,Planned Obsolescence, to make goods last a bit shorter by tweaking the design. </p>
 
-<p>The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.</p>
+<p>Never mind a broken device is an opportunity to learn. That’s what i had in mind when i didnt throw away my 2004 ATX supply when it failed in 2010 probably due to some connection/connector issue. In a haste to get the PC working in summer break I installed a new supply on the PC and kept it with me to play with later.</p>
 
-<p><strong>Li Ion Charger Required</strong></p>
+<p>After saving it from the routine disposal drives of Diwali , I finally had some use of it when the WalWart 12V@1A supply i have was not capable of driving the stepper motors i used in my major project.</p>
 
-<p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
+<p>Moding ATX to use it as a bench supply is not new.The power output is pretty stable and can provide high currents. DP has an amazing <a href="http://dangerousprototypes.com/2012/06/28/new-prototype-atx-breakout-board/">ATX to Power supply Board</a> too.</p>
 
-<ul>
-  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
-  <li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
-</ul>
+<p>I wanted one that i could carry around anywhere and should be in one piece and durable with no wires outside the case except the power cable of course . </p>
 
-<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  </p>
-
-<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,
-&gt;Why buy, When it can be built.</p>
-
-<p>Also none of the boards satisfied both my needs together:</p>
-
-<ul>
-  <li>Control I/F with a MCU</li>
-  <li>Micro USB </li>
-</ul>
-
-<p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
+<p>Lets see how that ATX Connector looks like.</p>
 
 <center>
-<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg" />
+<img src="http://etech.dyndns.org/images/vcr/atx.jpg" />
 </center>
 
-<p>There were only the following changes:</p>
+<p>The important points are:</p>
 
 <ul>
-  <li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
-  <li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
-  <li>Provided a common ground to i/f</li>
-  <li>Added microUSB and a 90degree pinheader for my batteries.</li>
+  <li>Shorting <code>PS_ON(14)</code> to <code>GND</code> will turn on the PSU and that is what actually the motherboard does.</li>
+  <li>By checking the voltage on <code>Power_ok or Power Good(8)</code> one can decide whether the power supply OUTPUT is ON (+5V when ON).</li>
+  <li>By checking the voltage on <code>+5vSB(9)</code> one can decide whether the Mains are ON or not (+5v when ON).</li>
 </ul>
 
-<p>Here is the build process:</p>
+<p>So, I will connect LEDs to pin 8 and 9 and a switch between 14 and GND, thats pretty much it.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched" /></a></p>
+<p>Since I had the no wires outside clause and usual power supplies have more that one connector, I had to open the power supply and cut wires literally like a barber and then solder the same coloured ones together to bring them onto the front panel.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19435985395" title="Same Colour ,Same Voltage by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/469/19435985395_e8dde8d935_z.jpg" width="640" height="480" alt="Same Colour ,Same Voltage" /></a></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned" /></a></p>
+<blockquote>
+  <p>Most morden ATXs don’t need the load resistor on 5V bus as many posts mention. Phew ! One part less :D </p>
+</blockquote>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB" /></a></p>
+<p>I then drilled the holes @ CEDT for the Thumb Screw connectors i got from Lajpat Rai and also fixed a small handle to it for carrying it around.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19248429460" title="Drilling the cover by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/523/19248429460_bc1a02963b_z.jpg" width="640" height="480" alt="Drilling the cover" /></a></p>
 
-<p>During Charging:
-<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress" /></a></p>
+<p>Then connected the circuit as mentioned above to test it.</p>
 
-<p>After charge Termination:
-<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19429707752" title="Testing by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/302/19429707752_05839665a2_z.jpg" width="640" height="475" alt="Testing" /></a></p>
 
-<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. </p>
+<p>Carefully packed everything inside the original case.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19429714392" title="Ready ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/354/19429714392_4a600b79fd_z.jpg" width="640" height="480" alt="Ready !" /></a></p>
+
+<p>Printed some labels from my archaic inkjet and I had my ATX power Supply ready !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19435982985" title="Labelled UP by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/317/19435982985_69fc1b1b18_z.jpg" width="640" height="480" alt="Labelled UP" /></a></p>
+
+<p>Pretty simple and effective hack ! So, when are you making one ? </p>
 
 <p>Cheers,</p>
 
