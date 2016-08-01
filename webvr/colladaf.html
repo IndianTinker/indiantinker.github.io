@@ -8,7 +8,7 @@
   </head>
   <body>
     <a-scene>
-      <!--<a-entity light="color:#F5C464;intensity: 1.5" position="-1 1 0"></a-entity>-->
+      <a-entity light="color:#F5C464;intensity: 1.5" position="-1 1 0"></a-entity>
       <a-sky src="bg.jpg"></a-sky>
     <a-assets>
       <a-asset-item id="dog" src="model2.dae"></a-asset-item>
@@ -19,6 +19,8 @@
       </a-camera >
 
          <a-entity collada-model="#dog" position="-1 0 2.5" ></a-entity>
+         <a-box color="red" depth="1" height="2" width="2" position="4 0 2" rotation="0 150 0"></a-box>
+         <a-box color="green" depth="1" height="2" width="2" position="6 0 2" rotation="0 150 0"></a-box>
          <!--<a-entity collada-model="#dust" position="4 0 2" rotation="0 150 0" ></a-entity>-->
          <!--<a-entity collada-model="#dust" position="6 0 2.2" rotation="0 150 0" ></a-entity>
          <a-entity collada-model="#dust" position="4 0 1.8" rotation="0 150 0" ></a-entity>-->
