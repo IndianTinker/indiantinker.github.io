@@ -1,0 +1,29 @@
+---
+layout: post
+title: DLogs: How to watch movies better
+image: https://pbs.twimg.com/profile_images/450621116503961600/-JRPDjcT.png
+location: IIT Bombay, India
+tags:
+- Design
+---
+
+The content of this post was mostly derived during a course on *Visual Syntactics* taught by Prof. Ravi Pooviah at IDC. The course is an amazing reflection of the thought, vision and ways in Ideas can be conveyed. As a part of the course we are shown a lot of movies,So many that i have never seen soo many in such a short span of time. But there are important aspects that defines the way films as a media are perceived. There is an art called "Cinematography" that probably most of us overlook in the consumerist consumption of the media. The general flow of what i think is : Book Tickets, CheckIn at the Cinema, Watch Movie, Spoilers/Rating/Egoistic Activity on Social Media, Forget. 
+
+Well ! There is an Art side. It has always been but differently weighted. Probably so transparent that it just flows and goes un-noticed by many except the **Film Nerds** as I call them. So, here is a n00bs guide to enjoying movies better. FYI, It takes a lot of time and the food is only good movies.
+
+Basically the film viewing process can be divided into 3 stages. You watch the movie at every stage:
+
+1. **Long Shot** : Get a basic feel of the Movie, Its Plot, Make assumptions, Do what you do now. Natural 
+2. **Mid Shot**  : Now that you know the stuff, look for deeper stuff like segmentation, interplay of various events, various subtle changes in things, spend time with the movie, Live it like a book
+
+3. **Close Shot** : This is the deepest stage. You notice the levels in the shots (focus moving), camera motion (pan, air motion) , Camera ON/OFF and basically its a more *forensic* look to the movie. Shot by Shot, Frame by Frame. Devil is in the Details.
+
+
+There is also something called the **Establishing Shot** which one of the super geeky film nerd told me here. It is basically the opening shot that introduces you to the movie and people like Martin Scorsese and Hitchcock are the masters in this domain.
+
+Hope we all start watching movies in a better way and enjoy the art.
+
+
+Cheers!
+
+Rohit
