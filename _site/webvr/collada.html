@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Frame 1</title>
+    <meta name="description" content="Testing">
+    <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!--<a-entity light="color:#F5C464;intensity: 1.5" position="-1 1 0"></a-entity>-->
+      <a-sky src="bg.jpg"></a-sky>
+    <a-assets>
+      <a-asset-item id="dog" src="model2.dae"></a-asset-item>
+      <a-asset-item id="dust" src="model.dae"></a-asset-item>
+    </a-assets>
+    <a-camera position="0 1.764 4">
+    <!--    <a-cursor color="#2E3A87"> -->
+      </a-camera >
+
+         <a-entity collada-model="#dog" position="-1 0 2.5" ></a-entity>
+         <a-entity collada-model="#dust" position="4 0 2" rotation="0 150 0" ></a-entity>
+         <!--<a-entity collada-model="#dust" position="6 0 2.2" rotation="0 150 0" ></a-entity>
+         <a-entity collada-model="#dust" position="4 0 1.8" rotation="0 150 0" ></a-entity>-->
+
+
+
+  </a-scene>
+
+
+
+
+      </body>
+</html>
