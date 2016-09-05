@@ -372,6 +372,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -425,132 +429,72 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/08/01/Intel/">
-        LIVE BLOG - Intel IOT Roadshow Pune
+      <a href="/2015/08/08/MotoX/">
+        Unbricking a MotoX, Resurrecting Smiles
       </a>
     </h1>
 
-    <span class="post-date">01 Aug 2015</span>
+    <span class="post-date">08 Aug 2015</span>
 
-    <p><strong>Day 1</strong></p>
+    <p>This didnt seem to be coming ! Some of us were travelling to Bedse Caves on a weekend. <em>[ZT]</em> had the amazing MotoX -Ghost aka 2013 one that served as our primary camera and navigator since he was leading. The MotoX was (or rather is) a flagship phone that gave way for the present generation Moto G and E. But it had an AMOLED that usually steals the show.. If you know what i mean.</p>
 
-<p>Reached a bit early at 6:59am after a minor slip on the bike. Rough start for the day ! </p>
+<p>The essence of the trip was captured in the phone and we were to meet the next day to swap pictures. I was anticipating it even more as I wanted to write a short trip entry.</p>
 
-<p>A crowd of 60 odd people were waiting in the queue at the event. Amazing response ! </p>
+<p>The next day <em>[ZT]</em> didnt have the same phone. His hands were graced by a crappy qwerty from the time Texts became cheaper than an alpenliebe.</p>
 
-<p>Hanged out with a couple of folks from VIT university ! They plan to make a universal controller for Home automation.</p>
+<p>With profound grief he said, Dude it got bricked after installing an OTA for Lollipop. The worst part he had already tried clear memory.</p>
 
-<p>The queue kept on getting bigger and bigger and wilder !</p>
+<p>We discussed how to get it up and running. The obvious choice being service guys! He submitted the phone for repair.</p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Indian?src=hash">#Indian</a> <a href="https://twitter.com/hashtag/Queue?src=hash">#Queue</a> is an highly flexible <a href="https://twitter.com/hashtag/stack?src=hash">#stack</a> with multiple entry points and governed by rules of brotherhood and childhood friendships</p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/627307207554564096">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>A week passed and he reverted saying the service guys say they cant figure what happened and are saying to change the motherboard costing around 15k INR ($235). Logically.. Its better to buy a new phone.</p>
 
-<p>My friend @rituparna Joins . We plan to do a LiveBlog! The network is hogged!! Hopefully its makes it on the outside. No pics sorry!</p>
+<p>But AMOLED !</p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Awesomeness <a href="https://twitter.com/intel">@intel</a> <a href="https://twitter.com/hashtag/IOTRoadShow?src=hash">#IOTRoadShow</a> <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> with <a href="https://twitter.com/mrrituparna">@mrrituparna</a> ! LiveBLOG to follow.. Battling a hogged network here !</p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/627352897487925249">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>As his search for a new phone began. I thought that since the phone is booting but is stuck in a loop. Maybe the hardware is fine. Its the software that has got hurt. Clueless as a noob, I asked him to give me the <em>brick</em> to play around. He gladly obliged. I searched places to find a solution to assess the gravity of the situation. It turns out, Bootloops are pretty common issues and videos like <a href="https://www.youtube.com/watch?v=2LjoFSgLlds">these</a> were surely encouraging.</p>
 
-<p>Aaron from @INTEL explains the IOT setup intel has in Mind and company’s vision on being a part of the maker movement! Its huge.. We will get our kits soon. </p>
+<p>Maintaining brevity of the topic, Most android phones have a fastboot mode which is like a BIOS thing that can be used to flash things (usually compiled codes/OS aka ROMs) to the internal memory sectors and then hoping they will all come together to work. This mode gets activated using a hardware trigger (like happens on PCs) which is usually a combination of lock and Volume button. Searching online one can get it for any device. In the X its Vol - + Pwr </p>
 
-<p>We did an Unbox !! 
-&lt;blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; <a href="https://instagram.com/p/51ck7GPUNj/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">@random.pics.everyday with #Edison #StarterKit #IntelMaker #IOTRoadshow #Pune</a>&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-01T09:05:57+00:00">Aug 1, 2015 at 2:05am PDT</time>&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script></p>
+<p>And if a device enters a fastboot it should be easy to heal it.
+Thankfully our did.</p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">At the <a href="https://twitter.com/hashtag/intelmakers?src=hash">#intelmakers</a> with <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> ... who just unboxed his edison. <a href="http://t.co/baMEeg2Hpj">pic.twitter.com/baMEeg2Hpj</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627345570009624576">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20405991741/in/dateposted-public/" title="Fastboot mode"><img src="https://farm1.staticflickr.com/513/20405991741_b8e6f44db4_z.jpg" width="640" height="359" alt="Fastboot mode" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Unboxed?src=hash">#Unboxed</a> and Ready to get the feet ! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="https://twitter.com/hashtag/IOTRoadshow?src=hash">#IOTRoadshow</a> with <a href="https://twitter.com/mrrituparna">@mrrituparna</a> <a href="http://t.co/y9cSgg6lCj">pic.twitter.com/y9cSgg6lCj</a></p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/627372418047184900">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Now the USB on the MotoX has some durability issues and it was not working on this device. <em>[ZT]</em> says it works when the time and physics are fine. Bummer.. It took me the whole night to connect it via USB to the PC. I turns out i have about 7 USB-micro cables. LOL</p>
 
-<p>The session starts now. </p>
+<p>At around 2am the space time matrix budged a bit and i was able to connect it using a micromax cable.</p>
 
-<p>In the session several speakers covered cool ways to play with the #Edison. We spent most of our time trying to configure it @rituparna’s MacBook. After several failed attempts we gave up on the Mac. Tried with My Dualbooted windows box. In windows we are not comfortable at all. They advised us to tether Laptop’s Wifi to Edison over USB via the RNDIS which works well with WIndows but not with others.</p>
+<p>Now i started the process whats mentioned on several blogs around the web. Its a generic method to restore any phone via fastboot.</p>
 
-<p>We went back to Ubuntu and voila it seems to do some stuff over ssh via serial. We were able to toggle LEDs.</p>
+<p>It works well on windows i reckon! All you need is a couple of drivers and the OS you wished to flash (obviously for ur device).</p>
 
-<p>Next we installed Pip and other required python stuff and broke for Lunch</p>
+<p>Folks at <strong>XDA Developers</strong> have made a streamlined setup for that <a href="http://forum.xda-developers.com/showthread.php?t=2588979">here</a>. You should get that. Plus you need motorola drivers from motorola website i suggest you get the suite !</p>
 
-<p><em>ALERT:</em> Won a bluetooth headset for social blogging! Thanks Intel.
-&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Surprise! <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> wins a pair of Intel powered smartearbuds for LIVE blogging. Great job! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/waNgTpBzEc">pic.twitter.com/waNgTpBzEc</a>&lt;/p&gt;— Intel Software India (@IntelSoftwareIn) <a href="https://twitter.com/IntelSoftwareIn/status/627383667145355264">August 1, 2015</a>&lt;/blockquote&gt;
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>For Moto Devices you will need the <a href="https://drive.google.com/file/d/0B2c2Ms7szI99RkpiZWkyZGgyeTQ/edit">mfastboot</a></p>
 
-<p>Here is the blinky on Edison! Note the LED is off. Windows Phone does not support videos on official app. We used <a href="https://github.com/intel-iot-devkit/mraa">mraa</a> and <strong>vi</strong> as the IDE. Long time to learn VI and never to late to start. <em>:wq</em></p>
+<p>When you are all set. Go to the adb folder in C: and type <code>fastboot devices</code> . You should see your device or maybe check USB cable or the word connected written on fastboot screen.</p>
 
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/51ck1CvUNi/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-01T09:05:56+00:00">Aug 1, 2015 at 2:05am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<p>Like this:</p>
 
-<p>After messing around MPlayer compiles we dropped the idea of playing sound via BT. That would be actually pretty cool. </p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20213179149/in/dateposted-public/" title="FastBOOT"><img src="https://farm1.staticflickr.com/434/20213179149_5eb4a3748d_z.jpg" width="640" height="359" alt="FastBOOT" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>      </p>
 
-<p>Next was thingspeak integration. We made it working using requests and you can track the channel <a href="https://thingspeak.com/channels/49681">here</a></p>
+<p>Now download the ROM from a trusted source. I got the MotoX Kitkat Asia ROM from <a href="https://docs.google.com/file/d/0B5XNxZ2OcfKtdDROTk5kb21ObU0/edit">here</a> after 5 failed downloads.</p>
 
-<p>The further part of the day we faced a major internet outage..
-Bummer!!</p>
+<p>Now unzip the file and copy the contents of adb folder plus mfastboot exe into the unzipped folder. Rename it to give a short name.</p>
 
-<p>After having the sumptuous dinner we went home.</p>
+<p>You will find a <code>.xml</code> file in the ROM that shows the commands for fastboot installation. You have to prefix <code>fastboot</code> before every command.  For Moto devices use the command <code>mfastboot flash system system.img</code> instead of  <code>fastboot flash system system.img</code>
+Follow them and make sure your USB is always connected. Mine got disconnected after much efforts that almost killed the excitement for me.I was up all night to get the USB connected after about 100 failed insertion and reinsertion cycles i  gave up to try with the last cable that i had but was in use - The Kindle cable.</p>
 
-<p>I tried compiling the Mplayer as mentioned on Ghanashyam sir’s <a href="https://scratchbuffer.wordpress.com/">blog</a> at night but i turned out it would just not compile. We followed similar instruction and got ALSA to play our trolltones over USB DAC!</p>
+<p>Next Day! It got connected in one shot. Followed the commands but forgot the last one <code>fastboot oem fb_mode_clear</code>. It failed to boot. After much googling i found out the cure and wrote the command. </p>
 
-<p>SWEET !</p>
+<p>And it booted…. Yeah!! Victory!</p>
 
-<p><strong>Day 2</strong></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20211757430/in/dateposted-public/" title="Resurrected"><img src="https://farm1.staticflickr.com/265/20211757430_1fc13ecc39_z.jpg" width="359" height="640" alt="Resurrected" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>With a lot of work pending I mostly got working my python framework for the controlling i/os and a cron job to update our thingspeak channel every 5 mins.</p>
+<p>There was one problem. The camera was not working! I ran a couple of checks with <em>[ZT]</em> who quickly came to collect the phone ! I turned out that the Ribbon for camera had loosened. We just pressed it a bit and it was up and running again.</p>
 
-<p>Ritu was working on the <a href="http://doormate.github.io/website/">door’s website</a> and Twitter integration.</p>
+<p>One device saved !</p>
 
-<p>We did a few tweets during the time.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/mQQ6rAgsIP">pic.twitter.com/mQQ6rAgsIP</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627666066475384832">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Updating using OAuth authentication via Tweepy!</p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627671710356013056">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="https://twitter.com/hashtag/doothings?src=hash">#doothings</a> <a href="https://twitter.com/doo">@doo</a> <a href="https://twitter.com/io">@io</a> <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> <a href="https://twitter.com/jasveer2589">@jasveer2589</a> When Doors Tweet <a href="https://twitter.com/hashtag/LOL?src=hash">#LOL</a> <a href="https://twitter.com/hashtag/DIY?src=hash">#DIY</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627683336991870976">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>With some work to do we broke for lunch.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/lunch?src=hash">#lunch</a> <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/4PJV8yqLoS">pic.twitter.com/4PJV8yqLoS</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627774541327011840">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>We hastily submitted the project without the video. Twitter had blocked our api due to excessive calls.</p>
-
-<p>We implemented TTS and an alternative script to show the other use case.</p>
-
-<p>Judging starts <em>Anxious!!</em></p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Team 7 .. Presenting to judges <a href="https://twitter.com/hashtag/intelmaker?src=hash">#intelmaker</a> <a href="http://t.co/ICmf0tVtfo">pic.twitter.com/ICmf0tVtfo</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627783108167766018">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>This is our awesome door!</p>
-
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/54UVbpsh7t/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#IntelMakers checkout what I made ... From yesterday to today.</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rituparna Matkar (@random.pics.everyday) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-02T11:51:39+00:00">Aug 2, 2015 at 4:51am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p>Check out the video in the tweet.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://t.co/k49JgXCmdF">https://t.co/k49JgXCmdF</a> <a href="https://twitter.com/IntelSoftwareIn">@IntelSoftwareIn</a> <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> <a href="https://twitter.com/DooThings">@DooThings</a> <a href="https://twitter.com/hashtag/intelmaker?src=hash">#intelmaker</a> Team 41 - We make doors awesome! <a href="https://twitter.com/hashtag/iotroadshow?src=hash">#iotroadshow</a> <a href="https://twitter.com/hashtag/iot?src=hash">#iot</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627798093786824704">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>The prize distribution is on ! <em>Super Anxious</em></p>
-
-<strike>All three 3rd Prizes gone !</strike>
-<p>I and ritu look at each other.. I call it a wrap and start packing stuff up. Ritu is reluctant and says there is still some hope.</p>
-
-<strike>1st Runner Up -I Gone</strike>
-<p>Laptop Shutdown. Edsion <code>shutdown -h now</code> ! Disconnecting the grove connectors…</p>
-
-<p>BUT wait.. Did we hear <strong>Door Mate</strong> ?</p>
-
-<p><strong>LOL</strong></p>
-
-<p>We won the 1st Runner UP ! OMG !!</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">2nd place winners: Smart city plugin &amp; Doormate. They win $1000 cash prize! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/ztKeilDPOi">pic.twitter.com/ztKeilDPOi</a></p>&mdash; Intel Software India (@IntelSoftwareIn) <a href="https://twitter.com/IntelSoftwareIn/status/627835693511761920">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Thanks a ton <a href="https://twitter.com/Tersteeg">Aaron</a> , <a href="https://twitter.com/preethy">Preethi</a> , <a href="https://scratchbuffer.wordpress.com/">Ghanashyam</a> and Team. 2  Days of Awesomeness !</p>
+<p>If you guys need any more info shoot the queries in the comment window.</p>
 
 <p>Cheers,</p>
 
