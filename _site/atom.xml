@@ -4,13 +4,44 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2016-09-05T16:23:23+05:30</updated>
+ <updated>2016-10-16T11:03:56+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Typesetting ePUBs in LaTex</title>
+   <link href="http://rohitg.in/2016/10/16/epubslatex/"/>
+   <updated>2016-10-16T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2016/10/16/epubslatex</id>
+   <content type="html">&lt;p&gt;In a recent class on Typesetting we were assigned a task to typeset an entire book, preferably an Open Book, using your favorite typesetting Program in a few days time. Typesetting is not &lt;em&gt;easy&lt;/em&gt; especially when you do it in &lt;strong&gt;LaTeX&lt;/strong&gt; and with the skill going rusty it was a hot pot of dilemmas that I think should not be a part of this post at all. &lt;/p&gt;
+
+&lt;p&gt;The book I choose was in ePub format and desperately needed to be converted to latex files so I can typeset them in &lt;a href=&quot;http://overleaf.com/&quot;&gt;overleaf&lt;/a&gt; or &lt;a href=&quot;http://sharelatex.com/&quot;&gt;sharelatex&lt;/a&gt; or &lt;em&gt;texworks&lt;/em&gt; as a matter of fact. I have moved in the favour of these online compilers as I no longer have to fiddle with searching the included &lt;code&gt;.sty&lt;/code&gt; that are so robotic to seek and use. I really wish there was some kind of package manager for latex too. Like pip for python. 
+&lt;em&gt;I Wish&lt;/em&gt; !&lt;/p&gt;
+
+&lt;p&gt;ePubs are essentially a zipped archive of &lt;code&gt;.html&lt;/code&gt; files following a specific numbering scheme or format. So the task was essentially to convert the &lt;code&gt;.html&lt;/code&gt; to &lt;code&gt;.tex&lt;/code&gt;. I did try a few things with python trying the &lt;code&gt;beautiful soup&lt;/code&gt; things. It did not taste well. I had to search other things.&lt;/p&gt;
+
+&lt;p&gt;I had heard of &lt;a href=&quot;http://pandoc.org/&quot;&gt;pandoc&lt;/a&gt; while I was writing my thesis few years back too but it &lt;em&gt;felt&lt;/em&gt; to complex that time but now it was a necessity I just can’t ignore. Its interesting how the perceived complexity of a act changes with necessity. &lt;strong&gt;Pandoc&lt;/strong&gt; is the Swiss army knife when handling documents. It can do anything. It took me a while to figure out it was a CLI tool. ( It happens )&lt;/p&gt;
+
+&lt;p&gt;It could translate the html page &lt;em&gt;almost&lt;/em&gt; perfectly to be used in &lt;em&gt;overleaf&lt;/em&gt;. Only some italics were not getting done properly for which I used &lt;code&gt;sed&lt;/code&gt; and compiled it all in a shell script to iterate over the entire folder and in a blink I had a directory full of tex files ready for the next stage. &lt;/p&gt;
+
+&lt;p&gt;The work was only 10% done as a lot of widows needed new husbands and orphans needed parents, I hope you get what I mean ! &lt;/p&gt;
+
+&lt;p&gt;Just in case you too are a fan of &lt;strong&gt;LaTeX&lt;/strong&gt; , the code I used and wrote is &lt;a href=&quot;https://github.com/IndianTinker/EPUB-to-Latex&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Long Live LaTeX !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Dapoli mein kya chalta hai?</title>
