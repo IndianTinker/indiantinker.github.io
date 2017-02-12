@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2017-02-12T10:31:32+05:30</updated>
+ <updated>2017-02-12T10:50:48+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -17,7 +17,7 @@
    <link href="http://rohitg.in/2017/02/12/InstallationReality/"/>
    <updated>2017-02-12T00:00:00+05:30</updated>
    <id>http://rohitg.in/2017/02/12/InstallationReality</id>
-   <content type="html">&lt;p&gt;Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI-17 conference at IIT Bombay.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI conference at IIT Bombay.&lt;/p&gt;
 
 &lt;p&gt;The idea initially was to ask people solve a rotating puzzle using in air gestures. In-air, gestures, Low tech ? Does it ring something to the occasional hacker? Yes we zeroed it on the ultrasonics for it. They work great but they are like pigeons you see. They don’t work well when a lot of them are around. They cause errors due to proximity with other sensors, angles etc.  &lt;/p&gt;
 
