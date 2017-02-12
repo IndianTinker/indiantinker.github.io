@@ -4,13 +4,35 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2017-02-12T10:50:48+05:30</updated>
+ <updated>2017-02-12T11:18:11+05:30</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Making processing and fluidsynth talk</title>
+   <link href="http://rohitg.in/2017/02/12/processingFluidsynth/"/>
+   <updated>2017-02-12T00:00:00+05:30</updated>
+   <id>http://rohitg.in/2017/02/12/processingFluidsynth</id>
+   <content type="html">&lt;p&gt;Just a quick post if you are interested in triggering notes from Processing to Fluidsynth. It could be great if your works have a visual component and you need responsive notes in the background that you wish to play using your soundfont via Fluidsynth. &lt;/p&gt;
+
+&lt;p&gt;Fluidsynth listens to commands via a telnet socket on port 8888 (you can change this i guess) that you can write to using a processing sketch.&lt;/p&gt;
+
+&lt;p&gt;So, just write to the socket if something turns up. It makes it very useful while making realistic music installation when playing frequency correct notes. There is also an option to use minim library, but i found it pretty complex and wanted a modular approach where i can fiddle with the audio program. I also feel it is a bit more responsive. &lt;/p&gt;
+
+&lt;p&gt;The code looks like :&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/IndianTinker/b158269c985c8b7e182c646ee8b26662.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Installation- Men and Three Worlds</title>

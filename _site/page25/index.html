@@ -396,6 +396,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -449,79 +453,58 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/08/NoobSentiment/">
-        Nooby Sentiment Analysis using nodejs
+      <a href="/2015/11/11/GreenwaliDiwali/">
+        GreenWali Diwali:A social interactivity experiment
       </a>
     </h1>
 
-    <span class="post-date">08 Nov 2015</span>
+    <span class="post-date">11 Nov 2015</span>
 
-    <p><strong>News Flash</strong>: Sentiments are now easy to quantify because there is soooo much data around to poke into. People eat,laugh,cry,sleep when they tweet, or maybe its the other way around.</p>
-
-<p>So, we can derive loads of business and impact information based on these free streams of data and quantify them for our needs, which currently here is purely <em>exploratory</em> !</p>
-
-<p>For mere instance, Lets put our favorite sport into the picture, <em>Cricket</em>! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what ‘I’ say somewhat <strong>elastic</strong> in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the ‘played well’ stance and later become a neutral subject. There maybe some exceptions.</p>
-
-<p>As wiki states it:
-&gt;Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
-
-<p>Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.</p>
-
-<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words. </p>
-
-<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality. </p>
-
-<p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
-
-<p>To install it: <code>npm install sentiment</code> . Check out the README on the page for a quick start.</p>
-
-<p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
-
-<p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.</p>
-
-<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code>fs</code> that already comes with the package.</p>
-
-<p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
-
-<p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
-
-<script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
-
-<p>After 500 Tweets the data is as follows:</p>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/61.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/57.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/53.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/55.embed"></iframe>
-
-<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/59.embed"></iframe>
-
-<p><strong>Notable Observations</strong> :</p>
+    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
 
 <ul>
-  <li>Kolkata and Delhi are particularly sad</li>
-  <li>Bengaluru&gt;Pune&gt;Mumbai is the way happiness goes.</li>
-  <li>I found there are lots of twitter contest chasers as i kept on getting tons of similar tweets in Pune</li>
-  <li>In Mumbai and Bengaluru, Tweets were mainly get togethers and parties.</li>
-  <li>Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.</li>
-  <li>The Cricket All Stars reasonably raised the happiness levels.</li>
+  <li>Lights/Sound to attract attention</li>
+  <li>A unique randomness of explosion</li>
+  <li>An Obnoxious Odour </li>
+  <li>Fear of getting yourself hurt</li>
+  <li>Fear of setting someone on fire</li>
 </ul>
 
-<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities. </p>
+<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
 
-<p><strong>Caveats</strong>:</p>
+<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
+
+<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code>Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code>#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
+
+<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
+
+<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
+
+<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet ! </p>
+
+<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
+
+<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
 
 <ul>
-  <li>Most of the time when tweets are not in English they end up scoring zero, i should rather translate them and then analyze</li>
-  <li>The AFINN approach does fail sometimes, i have seen a neutral score on a feel good post quite a number of times.</li>
+  <li>Sign In/Up on Twitter</li>
+  <li>Go <a href="https://apps.twitter.com/">here</a></li>
+  <li>Create <strong>New Application</strong></li>
+  <li>Fill the Yet-Another-Form and Create the Application.</li>
+  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
+  <li>You will see your consumer keys there !</li>
+  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
 </ul>
 
-<p>Hoping to listen from some Data Gurus !</p>
+<p>These 4 keys are used for the Code above.</p>
 
-<p>Cheers,</p>
+<p>Then just install the dependencies based on the <code>README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code>screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
+
+<p>Check out the video of me testing it !</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Happy GreenWali Diwali !</p>
 
 <p>Rohit</p>
 

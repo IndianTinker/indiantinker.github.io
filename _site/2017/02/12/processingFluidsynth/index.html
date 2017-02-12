@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="ReactorX- The intuitive Arc Reactor from the movies"/>
-  <meta name="twitter:title" content="ReactorX- The intuitive Arc Reactor from the movies"/>
+  <meta  property="og:title" content="Making processing and fluidsynth talk"/>
+  <meta name="twitter:title" content="Making processing and fluidsynth talk"/>
   
 
 
@@ -43,22 +43,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2016/03/12/arc/" />
+  <meta property="og:url" content="http://rohitg.in/2017/02/12/processingFluidsynth/" />
 
 
-  <meta content="2016-03-12T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2017-02-12T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg"/>
+  <meta content="https://blog.adafruit.com/wp-content/uploads/2012/09/256px-Processing_Logo_Clipped.svg_.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://blog.adafruit.com/wp-content/uploads/2012/09/256px-Processing_Logo_Clipped.svg_.jpg"/>
 
 
   
 
 
   
-  <meta content="msp430" property="article:tag"/>
+  <meta content="design" property="article:tag"/>
   
 
 
@@ -70,7 +70,7 @@
 
   <title>
     
-      ReactorX- The intuitive Arc Reactor from the movies &middot; Rohit Gupta
+      Making processing and fluidsynth talk &middot; Rohit Gupta
     
   </title>
 
@@ -459,13 +459,13 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">ReactorX- The intuitive Arc Reactor from the movies</h1>
-  <span class="post-date">12 Mar 2016</span>
+  <h1 class="post-title">Making processing and fluidsynth talk</h1>
+  <span class="post-date">12 Feb 2017</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/IDC IIT Bombay India">IDC IIT Bombay India</a></span>
 
 
 <br>
@@ -474,48 +474,15 @@ All Rights Reserved
 
 
 <br>
-  <p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
+  <p>Just a quick post if you are interested in triggering notes from Processing to Fluidsynth. It could be great if your works have a visual component and you need responsive notes in the background that you wish to play using your soundfont via Fluidsynth. </p>
 
-<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
+<p>Fluidsynth listens to commands via a telnet socket on port 8888 (you can change this i guess) that you can write to using a processing sketch.</p>
 
-<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
+<p>So, just write to the socket if something turns up. It makes it very useful while making realistic music installation when playing frequency correct notes. There is also an option to use minim library, but i found it pretty complex and wanted a modular approach where i can fiddle with the audio program. I also feel it is a bit more responsive. </p>
 
-<p>Features:</p>
+<p>The code looks like :</p>
 
-<ul>
-  <li>Small and light</li>
-  <li>Power efficient</li>
-  <li>Bright</li>
-  <li>Change-able modes using a switch</li>
-  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
-  <li>Morse Code for SOS</li>
-  <li>A mind blowing start-up sequence</li>
-  <li>Knight rider effect on LEDs</li>
-  <li>Breathing effect on the Middle high power LED   </li>
-</ul>
-
-<p>It also needs to be wearable and comfortable at the same time.</p>
-
-<p>The motion and the light helps attract attention.</p>
-
-<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
-
-<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
-<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
-
-<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
-
-<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
-
-<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
-
-<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>. </p>
+<script src="https://gist.github.com/IndianTinker/b158269c985c8b7e182c646ee8b26662.js"></script>
 
 <p>Cheers,</p>
 
@@ -541,15 +508,6 @@ All Rights Reserved
     
       <li>
         <h3>
-          <a href="/2017/02/12/processingFluidsynth/">
-            Making processing and fluidsynth talk
-            <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
@@ -562,6 +520,15 @@ All Rights Reserved
           <a href="/2016/12/26/StoriesHowDoILook/">
             How Do I Look Honey !
             <small>26 Dec 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/12/01/SemesterThatWas/">
+            The Semester that was
+            <small>01 Dec 2016</small>
           </a>
         </h3>
       </li>

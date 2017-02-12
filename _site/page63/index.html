@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="ReactorX- The intuitive Arc Reactor from the movies"/>
-  <meta name="twitter:title" content="ReactorX- The intuitive Arc Reactor from the movies"/>
+  <meta  property="og:title" content="Home"/>
+  <meta name="twitter:title" content="Home"/>
   
 
 
@@ -43,23 +43,14 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2016/03/12/arc/" />
+  <meta property="og:url" content="http://rohitg.in/page63/" />
 
 
-  <meta content="2016-03-12T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+
+  <meta content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://farm4.staticflickr.com/3837/15112162250_f1720783c9.jpg"/>
 
 
-  <meta content="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg"/>
-
-
-  
-
-
-  
-  <meta content="msp430" property="article:tag"/>
-  
 
 
 
@@ -70,7 +61,7 @@
 
   <title>
     
-      ReactorX- The intuitive Arc Reactor from the movies &middot; Rohit Gupta
+      Rohit Gupta &middot; Think,Design,Make,Repeat
     
   </title>
 
@@ -458,144 +449,53 @@ All Rights Reserved
 </script>
 
     </div>
-      <div class="post">
-  <h1 class="post-title">ReactorX- The intuitive Arc Reactor from the movies</h1>
-  <span class="post-date">12 Mar 2016</span>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2004/08/09/DLog1Movie/">
+        DLogs-How to watch movies better
+      </a>
+    </h1>
 
+    <span class="post-date">09 Aug 2004</span>
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
+    <p>The content of this post was mostly derived during a course on <em>Visual Syntactics</em> taught by Prof. Ravi Pooviah at IDC. The course is an amazing reflection of the thought, vision and ways in Ideas can be conveyed. As a part of the course we are shown a lot of movies,So many that i have never seen soo many in such a short span of time. But there are important aspects that defines the way films as a media are perceived. There is an art called “Cinematography” that probably most of us overlook in the consumerist consumption of the media. The general flow of what i think is : Book Tickets, CheckIn at the Cinema, Watch Movie, Spoilers/Rating/Egoistic Activity on Social Media, Forget. </p>
 
+<p>Well ! There is an Art side. It has always been but differently weighted. Probably so transparent that it just flows and goes un-noticed by many except the <strong>Film Nerds</strong> as I call them. So, here is a n00bs guide to enjoying movies better. FYI, It takes a lot of time and the food is only good movies.</p>
 
-<br>
+<p>Basically the film viewing process can be divided into 3 stages. You watch the movie at every stage:</p>
 
+<ol>
+  <li><strong>Long Shot</strong> : Get a basic feel of the Movie, Its Plot, Make assumptions, Do what you do now. Natural </li>
+  <li>
+    <p><strong>Mid Shot</strong>  : Now that you know the stuff, look for deeper stuff like segmentation, interplay of various events, various subtle changes in things, spend time with the movie, Live it like a book</p>
+  </li>
+  <li><strong>Close Shot</strong> : This is the deepest stage. You notice the levels in the shots (focus moving), camera motion (pan, air motion) , Camera ON/OFF and basically its a more <em>forensic</em> look to the movie. Shot by Shot, Frame by Frame. Devil is in the Details.</li>
+</ol>
 
+<p>There is also something called the <strong>Establishing Shot</strong> which one of the super geeky film nerd told me here. It is basically the opening shot that introduces you to the movie and people like Martin Scorsese and Hitchcock are the masters in this domain.</p>
 
+<p>Hope we all start watching movies in a better way and enjoy the art.</p>
 
-<br>
-  <p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
-
-<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
-
-<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
-
-<p>Features:</p>
-
-<ul>
-  <li>Small and light</li>
-  <li>Power efficient</li>
-  <li>Bright</li>
-  <li>Change-able modes using a switch</li>
-  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
-  <li>Morse Code for SOS</li>
-  <li>A mind blowing start-up sequence</li>
-  <li>Knight rider effect on LEDs</li>
-  <li>Breathing effect on the Middle high power LED   </li>
-</ul>
-
-<p>It also needs to be wearable and comfortable at the same time.</p>
-
-<p>The motion and the light helps attract attention.</p>
-
-<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
-
-<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
-<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
-
-<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
-
-<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
-
-<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
-
-<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>. </p>
-
-<p>Cheers,</p>
+<p>Cheers!</p>
 
 <p>Rohit</p>
 
-
-</div>
-<br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- blog2 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8347954072174647"
-     data-ad-slot="5368304813"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2017/02/12/processingFluidsynth/">
-            Making processing and fluidsynth talk
-            <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2017/02/12/InstallationReality/">
-            Installation- Men and Three Worlds
-            <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-<br>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Blog -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8347954072174647"
-     data-ad-slot="4612798010"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-
+  </div>
+  
 </div>
 
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/page62">Newer</a>
+    
+  
+</div>
     </div>
 
 
