@@ -2,6 +2,7 @@
 layout: post
 title: How Do I Look Honey !
 image: http://www.fairandlovely.in/wp-content/uploads/sites/10/2016/01/img3a_min.png
+location: IDC IIT Bombay India
 tags:
 - stories
 ---

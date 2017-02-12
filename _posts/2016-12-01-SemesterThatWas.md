@@ -2,6 +2,7 @@
 layout: post
 title: The Semester that was 
 image: https://c2.staticflickr.com/6/5662/31238013841_fc0a26ed87.jpg
+location: IDC IIT Bombay India
 tags:
 - design
 ---

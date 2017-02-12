@@ -2,12 +2,13 @@
 layout: post
 title: Installation- Men and Three Worlds
 image: https://c1.staticflickr.com/1/436/32850126965_681d9b81e9.jpg
+location: IDC IIT Bombay India
 tags:
 - stories
 - design
 ---
 
-Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI-17 conference at IIT Bombay.
+Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI conference at IIT Bombay.
 
 The idea initially was to ask people solve a rotating puzzle using in air gestures. In-air, gestures, Low tech ? Does it ring something to the occasional hacker? Yes we zeroed it on the ultrasonics for it. They work great but they are like pigeons you see. They don’t work well when a lot of them are around. They cause errors due to proximity with other sensors, angles etc.  
 
