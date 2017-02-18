@@ -4,7 +4,7 @@ title: Junior MDes Sem 1 Exhibitions
 image: https://c2.staticflickr.com/6/5662/31238013841_fc0a26ed87.jpg
 location: IDC IIT Bombay India
 tags:
-- design
+- designStories
 ---
 
 After every semester, we have an exhibition of sorts by various departments showcasing the excellent work they did during the course. Following is a rather utilitarian compilation of pictures of these exhibitions. 

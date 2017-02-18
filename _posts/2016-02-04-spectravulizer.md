@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 	SpectraVUlizer- Lights,Music and Magic
-image: https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg
+image: http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_crop,g_auto/https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg
 location: Doo Things, Pune, India
 tags:
 - arduino
