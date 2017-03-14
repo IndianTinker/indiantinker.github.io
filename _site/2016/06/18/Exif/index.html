@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2016/06/18/Exif/" />
+  <meta property="og:url" content="http://localhost:4000/2016/06/18/Exif/" />
 
 
   <meta content="2016-06-18T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-128.png" property="og:image"/>
@@ -407,6 +407,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -472,16 +476,16 @@ All Rights Reserved
 
 
 <br>
-  <p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences. </p>
+  <p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences.</p>
 
 <p>On Linux (other platforms too) there is a nice tool called <strong>ExifTool</strong> which was, as of writing this post available in the package manager of <em>Ubuntu</em> .</p>
 
 <p>So, Simply 
-<code>sudo apt-get install exiftool</code></p>
+<code class="highlighter-rouge">sudo apt-get install exiftool</code></p>
 
 <p>In order to use it, Simply go to the SD Card (generally) and <em>Right Click</em> to open terminal here. Then use the command.</p>
 
-<p><code>exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
+<p><code class="highlighter-rouge">exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
 
 <p>Shutter Count should be visible, But depends on the camera you use. Most <strong>Nikons</strong> we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.</p>
 
@@ -510,6 +514,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -522,15 +535,6 @@ All Rights Reserved
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

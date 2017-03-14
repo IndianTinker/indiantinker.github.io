@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/11/13/Fiddle-Music-System/" />
+  <meta property="og:url" content="http://localhost:4000/2014/11/13/Fiddle-Music-System/" />
 
 
   <meta content="2014-11-13T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" property="og:image"/>
@@ -411,6 +411,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -478,8 +482,10 @@ All Rights Reserved
 <br>
   <p><em>Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK</em> Thats how my old ‘Phillips All in One’ failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed <strong>CD Player with a segmented Display</strong>. But today most of the music is digital and hence <em>Upgrade was necessary</em>.</p>
 
-<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me. 
-&gt; Why Buy? When it can be Built!</p>
+<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me.</p>
+<blockquote>
+  <p>Why Buy? When it can be Built!</p>
+</blockquote>
 
 <p>And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:</p>
 
@@ -501,11 +507,11 @@ All Rights Reserved
   <li>Decipher the connections</li>
   <li>Build a power supply and Amplifier</li>
   <li>Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box</li>
-  <li>Modify the box to fit all in </li>
+  <li>Modify the box to fit all in</li>
   <li>Enjoy</li>
 </ol>
 
-<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code>5V DC</code> supply that’s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
+<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code class="highlighter-rouge">5V DC</code> supply that’s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape" /></a></p>
 
@@ -515,13 +521,13 @@ All Rights Reserved
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading" /></a></p>
 
-<p>Now, the power supply and Amplifier. I used the omnipresent <code>7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code>250-300mA</code> . The supply was going to be <code>12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
+<p>Now, the power supply and Amplifier. I used the omnipresent <code class="highlighter-rouge">7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code class="highlighter-rouge">250-300mA</code> . The supply was going to be <code class="highlighter-rouge">12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
 The Amp was build out of <strong>ST’s</strong> <a href="http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf">TDA2030</a> which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.</p>
 
 <p>The Application circuit works charm.
 So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?</p>
 
-<p>Demo runs showed <code>TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code>TDA2030</code> and made a makeshift heat sink for <code>7805</code> </p>
+<p>Demo runs showed <code class="highlighter-rouge">TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code class="highlighter-rouge">TDA2030</code> and made a makeshift heat sink for <code class="highlighter-rouge">7805</code></p>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View" /></a></p>
 
@@ -529,7 +535,7 @@ So, i assembled them on a single perfboard and was short of one heat sink. I now
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back" /></a></p>
 
-<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code>10k</code> and <code>0.1uF</code> combination. </p>
+<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code class="highlighter-rouge">10k</code> and <code class="highlighter-rouge">0.1uF</code> combination.</p>
 
 <p>I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (<em>Oh! Yeah</em>)</p>
 
@@ -551,7 +557,7 @@ So, i assembled them on a single perfboard and was short of one heat sink. I now
 
 <p>Cheers!</p>
 
-<p>Rohit  </p>
+<p>Rohit</p>
 
 
 </div>
@@ -573,6 +579,15 @@ So, i assembled them on a single perfboard and was short of one heat sink. I now
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -585,15 +600,6 @@ So, i assembled them on a single perfboard and was short of one heat sink. I now
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

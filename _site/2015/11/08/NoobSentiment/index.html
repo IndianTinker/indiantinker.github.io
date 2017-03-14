@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/11/08/NoobSentiment/" />
+  <meta property="og:url" content="http://localhost:4000/2015/11/08/NoobSentiment/" />
 
 
   <meta content="2015-11-08T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://g.twimg.com/Twitter_logo_blue.png" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -480,29 +484,33 @@ All Rights Reserved
 
 <p>For mere instance, Lets put our favorite sport into the picture, <em>Cricket</em>! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what ‘I’ say somewhat <strong>elastic</strong> in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the ‘played well’ stance and later become a neutral subject. There maybe some exceptions.</p>
 
-<p>As wiki states it:
-&gt;Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
+<p>As wiki states it:</p>
+<blockquote>
+  <p>Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
+</blockquote>
 
 <p>Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.</p>
 
-<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words. </p>
+<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words.</p>
 
-<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality. </p>
+<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality.</p>
 
 <p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
 
-<p>To install it: <code>npm install sentiment</code> . Check out the README on the page for a quick start.</p>
+<p>To install it: <code class="highlighter-rouge">npm install sentiment</code> . Check out the README on the page for a quick start.</p>
 
 <p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
 
 <p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.</p>
 
-<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code>fs</code> that already comes with the package.</p>
+<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code class="highlighter-rouge">fs</code> that already comes with the package.</p>
 
 <p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
 
 <p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
 
+<noscript><pre>400: Invalid request
+</pre></noscript>
 <script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
 
 <p>After 500 Tweets the data is as follows:</p>
@@ -528,7 +536,7 @@ All Rights Reserved
   <li>The Cricket All Stars reasonably raised the happiness levels.</li>
 </ul>
 
-<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities. </p>
+<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities.</p>
 
 <p><strong>Caveats</strong>:</p>
 
@@ -563,6 +571,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -575,15 +592,6 @@ All Rights Reserved
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

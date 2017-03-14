@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/06/29/LiTiny/" />
+  <meta property="og:url" content="http://localhost:4000/2015/06/29/LiTiny/" />
 
 
   <meta content="2015-06-29T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -483,20 +487,22 @@ All Rights Reserved
 <p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
 
 <ul>
-  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current </li>
+  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current</li>
   <li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
 </ul>
 
-<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.  </p>
+<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.</p>
 
-<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,
-&gt;Why buy, When it can be built.</p>
+<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,</p>
+<blockquote>
+  <p>Why buy, When it can be built.</p>
+</blockquote>
 
 <p>Also none of the boards satisfied both my needs together:</p>
 
 <ul>
   <li>Control I/F with a MCU</li>
-  <li>Micro USB </li>
+  <li>Micro USB</li>
 </ul>
 
 <p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
@@ -508,8 +514,8 @@ All Rights Reserved
 <p>There were only the following changes:</p>
 
 <ul>
-  <li>I provided a jumper for <code>CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
-  <li>Extended the <code>!CHRG</code> and <code>!STBY</code> to end to a pin head too.</li>
+  <li>I provided a jumper for <code class="highlighter-rouge">CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
+  <li>Extended the <code class="highlighter-rouge">!CHRG</code> and <code class="highlighter-rouge">!STBY</code> to end to a pin head too.</li>
   <li>Provided a common ground to i/f</li>
   <li>Added microUSB and a 90degree pinheader for my batteries.</li>
 </ul>
@@ -532,11 +538,11 @@ All Rights Reserved
 <p>After charge Termination:
 <a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !" /></a></p>
 
-<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs. </p>
+<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs.</p>
 
 <p>Cheers,</p>
 
-<p>Rohit </p>
+<p>Rohit</p>
 
 
 </div>
@@ -558,6 +564,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -570,15 +585,6 @@ All Rights Reserved
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

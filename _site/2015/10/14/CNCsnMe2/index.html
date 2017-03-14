@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/10/14/CNCsnMe2/" />
+  <meta property="og:url" content="http://localhost:4000/2015/10/14/CNCsnMe2/" />
 
 
   <meta content="2015-10-14T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://farm8.staticflickr.com/7730/17329216742_7466b08f30_z.jpg" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -482,15 +486,15 @@ All Rights Reserved
 
 <p>I saw an amazing laser engraver made by a Swedish guy doing rounds on the internet which gave me enough confidence that it is possible.</p>
 
-<p>The plan was to buy a couple of CD Rom drives and use the lens assemble to move a pen ( Did not use a laser citing dangerous repercussions ) in X and Y axis and a Servo controlling the pen lifts. </p>
+<p>The plan was to buy a couple of CD Rom drives and use the lens assemble to move a pen ( Did not use a laser citing dangerous repercussions ) in X and Y axis and a Servo controlling the pen lifts.</p>
 
-<p>Next day, i was at ‘Wazirpur’ , my local IT hub in search of discarded office equipment. I knew a few people there who happily guided me to come late evening to pick up stuff from the pile that gets generated throughout the day. </p>
+<p>Next day, i was at ‘Wazirpur’ , my local IT hub in search of discarded office equipment. I knew a few people there who happily guided me to come late evening to pick up stuff from the pile that gets generated throughout the day.</p>
 
-<p>As suggested, went there about 8pm and a junk pile was awaiting me. There were no promises as always. I bought 3 for 250 bucks. That night was going to be long as i had to open them and extract the assemblies. Thankfully testing them with my <a href="/2015/09/24/CNCsnMe1/">Stepper Tester</a> they all turned out to be fine. </p>
+<p>As suggested, went there about 8pm and a junk pile was awaiting me. There were no promises as always. I bought 3 for 250 bucks. That night was going to be long as i had to open them and extract the assemblies. Thankfully testing them with my <a href="/2015/09/24/CNCsnMe1/">Stepper Tester</a> they all turned out to be fine.</p>
 
 <p>Now, the frame had to be made to have everything in place. We had recently got a new Airconditioner that came in a wooden frame. Ahaaaa!
 I quickly gathered them and used some nooby CAD skills to make a frame out of it in digital. I didnt want to fail for the very first time.
-CAD Package? <code>FreeCAD</code> :D</p>
+CAD Package? <code class="highlighter-rouge">FreeCAD</code> :D</p>
 
 <p>These were the designs:</p>
 
@@ -509,7 +513,7 @@ CAD Package? <code>FreeCAD</code> :D</p>
 <p><strong>Time for the First Test</strong></p>
 
 <p>I used the <em>MSP430 Launchpad</em> to cook a basic code to make a small square( Nostalgic Logo Days ).
-You can notice the servo and felt pen. I ran into a problem.. Whenever the servo would finish it would make a long enough strike to destroy the art work. </p>
+You can notice the servo and felt pen. I ran into a problem.. Whenever the servo would finish it would make a long enough strike to destroy the art work.</p>
 
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/17331112105/in/dateposted-public/" title="Without a good PenLifting Mechanism"><img src="https://farm9.staticflickr.com/8838/17331112105_f250af88b8_z.jpg" width="359" height="640" alt="Without a good PenLifting Mechanism" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
@@ -517,11 +521,11 @@ You can notice the servo and felt pen. I ran into a problem.. Whenever the servo
 
 <p>PISTONS</p>
 
-<p>Unfortunately the picture is not available as the old laptop crashed. I drilled a small hole in the pen and then screwed it to an arm that is attached to the point of rotation of servo motor. The pen was made to pass through a hole drilled in an acrylic sheet and pasted on the servo. Now whenever the servo would move up, the arm would move in a circular motion lifting the pen through the hole and voila the circular motion is converted to a up and down motion. </p>
+<p>Unfortunately the picture is not available as the old laptop crashed. I drilled a small hole in the pen and then screwed it to an arm that is attached to the point of rotation of servo motor. The pen was made to pass through a hole drilled in an acrylic sheet and pasted on the servo. Now whenever the servo would move up, the arm would move in a circular motion lifting the pen through the hole and voila the circular motion is converted to a up and down motion.</p>
 
 <p>Next problem was with the software. I did make an elementary (could hardly do basic shapes) <em>g-Code</em> interpretor for MSP430 but it was not that robust and was not compatible with standard tools that could make the device far more incompatible with higher level software.</p>
 
-<p>So, i made the switch to <a href="https://github.com/grbl/grbl">GRBL</a>. <strong>GRBL</strong> brings hobby grade setups to professional levels. ShapeOko is an example. Also it runs on my 4$ Arduino Pro Mini happily. </p>
+<p>So, i made the switch to <a href="https://github.com/grbl/grbl">GRBL</a>. <strong>GRBL</strong> brings hobby grade setups to professional levels. ShapeOko is an example. Also it runs on my 4$ Arduino Pro Mini happily.</p>
 
 <p>Yee Haw!!</p>
 
@@ -577,7 +581,7 @@ With little trial and error, it worked out to be great.</p>
 </ul>
 
 <p>Install Inkscape.
-For the extension.Open the .zip file  and copy all the contents to <code>c:\Program Files\Inkscape\share\extensions</code>. You have to restart Inkscape for the extension to show up. </p>
+For the extension.Open the .zip file  and copy all the contents to <code class="highlighter-rouge">c:\Program Files\Inkscape\share\extensions</code>. You have to restart Inkscape for the extension to show up.</p>
 
 <p>Now Download and install grbl controller. Since my machine does not have the end switch you will have to take care of the constraints in the design and manually home the machine.</p>
 
@@ -614,6 +618,15 @@ For the extension.Open the .zip file  and copy all the contents to <code>c:\Prog
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -626,15 +639,6 @@ For the extension.Open the .zip file  and copy all the contents to <code>c:\Prog
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

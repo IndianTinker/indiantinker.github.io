@@ -43,7 +43,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page21/" />
+  <meta property="og:url" content="http://localhost:4000/page21/" />
 
 
 
@@ -400,6 +400,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -453,64 +457,32 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/12/10/karigar/">
-        CNCs & Me 3 - Karigar
+      <a href="/2015/12/11/fumeex/">
+        CNCs & Me 4 - Fume Extractor
       </a>
     </h1>
 
-    <span class="post-date">10 Dec 2015</span>
+    <span class="post-date">11 Dec 2015</span>
 
-    <p>Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.</p>
+    <p>Soldering generates some not so healthy lead fumes. A Fume extractor is a device that passes the fume through a charcoal foam which adsorbs the vapour particles and hence removes them from the air.</p>
 
-<p>Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a <em>Thumbs UP</em> !</p>
+<p>As a demonstration for my <a href="/2015/12/10/karigar/">CNC</a>, i made this simple design that uses a PVC tube with slots cut for attaching a charcoal foam piece. I have a BLDC fan on at one end to create a suction force to suck the air with fumes. The entire frame was made from MDF and hot glued and snap-fitted in place.</p>
 
-<p>Fortunately, few of my friends agreed to work with me on it and quite thankfully we put up a great show for everyone at the demos.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21354493105/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5814/21354493105_f269a2024d_z.jpg" width="612" height="612" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I started with making the control circuits for the CNC first as opposed to the actual CNC first as the circuits were mostly trivial and had some stepper drivers and an Arduino brain with GRBL running on. I designed my own stepper drivers based on DRV8825 drivers from TI . With all things in place. I tested my electronics with Nadya Peek’s MTM SnapCNC available at TI-CEPD, NSIT.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21343818212/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5820/21343818212_19a5576e8a_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><em>Thanks to Prof. Gadre</em></p>
+<p>The circle was cut using my CNC and the BLDC fan was fixed using 3mm nuts and bolts.There is an ON/OFF Switch as well.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21328576476/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5835/21328576476_b1a24eb625_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20734211424/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/701/20734211424_94183de982_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21168959808/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5716/21168959808_44edd750be_z.jpg" width="640" height="360" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>LED lights help when soldering in dark.</p>
 
-<p>Now, came the difficult part. We need to learn a CAD package so that we can design our frugal machine. We opted for FreeCAD. If you are interested in learning, we used <a href="https://www.youtube.com/watch?v=xs1mFiJBYIo">this</a> and <a href="https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g">this</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21168927820/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5702/21168927820_643eca9547_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<blockquote>
-  <p>The entire project is explained elaborately in our thesis <a href="https://drive.google.com/file/d/0B8DZ3bqHurUVWlZ2a29TVnRONGtVZ2hsY3V4MkxubksxSG9R/view?usp=sharing">here</a>. CAUTION: PDF and LaTeX !</p>
-</blockquote>
+<p>It is powered using a standard 12V Wall Wart. The BLDC fan has a rating of 15V hence,the label.</p>
 
-<p>After months of work and several visits to <strong>Chawari Bazaar</strong> and <strong>Lajpat Rai</strong>, we were able to have a working one that did wood easily. Our frame was made with wood and as the CNC Thumb Rule goes !</p>
-
-<blockquote>
-  <p>A CNC can only work with materials that are softer than the material of the structure.</p>
-</blockquote>
-
-<p>The cutting head is made using the <strong>Dremel</strong> and the Z axis is made of re-purposed drawer slides. In fact basically everything is re-purposed except the linear rods and bearings. I still have countless memories of the shops we visited for our project, located in small dingy and cramped lanes of Old Delhi in places which must not be named. We had to talk a lot so they would sell us in low quantity. </p>
-
-<p>Check out the pictures of the project below.    </p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896935135/in/dateposted-public/" title="WP_20150308_007"><img src="https://farm2.staticflickr.com/1512/25896935135_c26c78503a_z.jpg" width="640" height="359" alt="WP_20150308_007" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896933575/in/dateposted-public/" title="WP_20150308_010"><img src="https://farm2.staticflickr.com/1537/25896933575_7d74c62331_z.jpg" width="359" height="640" alt="WP_20150308_010" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211953/in/dateposted-public/" title="WP_20150308_008"><img src="https://farm2.staticflickr.com/1501/25268211953_d18a5c721b_z.jpg" width="640" height="359" alt="WP_20150308_008" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211923/in/dateposted-public/" title="WP_20150308_009"><img src="https://farm2.staticflickr.com/1668/25268211923_3a95218f4e_z.jpg" width="640" height="359" alt="WP_20150308_009" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21167775699/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/742/21167775699_c85d901429_z.jpg" width="359" height="640" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Here is a ARM we milled for a dear friend of our who happens to a serious gyming enthusiast.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736205563/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/666/20736205563_38466e2c14_z.jpg" width="612" height="612" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Looks like it wont work? Well it does work and cuts circles for the <a href="/2015/12/11/fumeex/">FumeEx</a>:</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/FxMoRauk4EU" frameborder="0" allowfullscreen=""></iframe>
-
-<p>I recently de-commissioned the machine. I worked, but not very well (Its hard to acknowledge this fact). I am using the parts to build something.</p>
-
-<p>So, until next post … </p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736153913/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/699/20736153913_a9e2301be5_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>Cheers,</p>
 

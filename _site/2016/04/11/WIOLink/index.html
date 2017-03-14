@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2016/04/11/WIOLink/" />
+  <meta property="og:url" content="http://localhost:4000/2016/04/11/WIOLink/" />
 
 
   <meta content="2016-04-11T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -474,15 +478,15 @@ All Rights Reserved
 
 
 <br>
-  <p><a href="https://github.com/anujdeshpande/">Anuj</a> recently gave me one of the few <em>WIO Links</em> he got as a <s>serial</s> Kickstarter backer to try them out. The Wio Link are </p>
+  <p><a href="https://github.com/anujdeshpande/">Anuj</a> recently gave me one of the few <em>WIO Links</em> he got as a <s>serial</s> Kickstarter backer to try them out. The Wio Link are</p>
 
 <blockquote>
-  <p>No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides <strong>Grove</strong> sensors a Web API kind of look. </p>
+  <p>No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides <strong>Grove</strong> sensors a Web API kind of look.</p>
 </blockquote>
 
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097749300/in/dateposted-public/" title="20160409_192105"><img src="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" width="640" height="360" alt="20160409_192105" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with <em>API Endpoints</em> to control the devices using basic HTTP urls in curl for example. </p>
+<p>So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with <em>API Endpoints</em> to control the devices using basic HTTP urls in curl for example.</p>
 
 <p>In this post, i walk you through the steps, just in case you got the Wio Link as well and we control an LED connected to the WIO link through the App itself. 
 You start with downloading the app from the <a href="https://play.google.com/store/apps/details?id=cc.seeed.iot.ap">Playstore</a>. The App starts with a sign-in process. Outside China, you have to choose the international server. Login and make an account. The app has a tour in which it asks you to press a button on the WioLink that basically turns the WioLink in an AP so, you can identify it and share the login credentials for your Wifi. I got this error.</p>
@@ -497,7 +501,7 @@ You start with downloading the app from the <a href="https://play.google.com/sto
 
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852363/in/dateposted-public/" title="2"><img src="https://farm2.staticflickr.com/1633/25767852363_b6c6bbbe17_z.jpg" width="360" height="640" alt="2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Once thats done. You get the Visual WioLink to Add Groves to. </p>
+<p>Once thats done. You get the Visual WioLink to Add Groves to.</p>
 
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852273/in/dateposted-public/" title="4"><img src="https://farm2.staticflickr.com/1579/25767852273_599022c3d3_z.jpg" width="360" height="640" alt="4" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
@@ -530,7 +534,7 @@ You start with downloading the app from the <a href="https://play.google.com/sto
 
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767855573/in/dateposted-public/" title="LED ON"><img src="https://farm2.staticflickr.com/1667/25767855573_e7edc6994f_z.jpg" width="640" height="360" alt="LED ON" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Now the LED Off Case. I send 0. </p>
+<p>Now the LED Off Case. I send 0.</p>
 
 <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736430/in/dateposted-public/" title="LED Off api"><img src="https://farm2.staticflickr.com/1534/26097736430_2ab9c03492_z.jpg" width="360" height="640" alt="LED Off api" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
@@ -563,6 +567,15 @@ You start with downloading the app from the <a href="https://play.google.com/sto
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -575,15 +588,6 @@ You start with downloading the app from the <a href="https://play.google.com/sto
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

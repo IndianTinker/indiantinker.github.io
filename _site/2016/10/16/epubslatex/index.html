@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2016/10/16/epubslatex/" />
+  <meta property="og:url" content="http://localhost:4000/2016/10/16/epubslatex/" />
 
 
   <meta content="2016-10-16T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://c5.staticflickr.com/9/8021/28773220604_90b61a421e.jpg" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -474,18 +478,18 @@ All Rights Reserved
 
 
 <br>
-  <p>In a recent class on Typesetting we were assigned a task to typeset an entire book, preferably an Open Book, using your favorite typesetting Program in a few days time. Typesetting is not <em>easy</em> especially when you do it in <strong>LaTeX</strong> and with the skill going rusty it was a hot pot of dilemmas that I think should not be a part of this post at all. </p>
+  <p>In a recent class on Typesetting we were assigned a task to typeset an entire book, preferably an Open Book, using your favorite typesetting Program in a few days time. Typesetting is not <em>easy</em> especially when you do it in <strong>LaTeX</strong> and with the skill going rusty it was a hot pot of dilemmas that I think should not be a part of this post at all.</p>
 
-<p>The book I choose was in ePub format and desperately needed to be converted to latex files so I can typeset them in <a href="http://overleaf.com/">overleaf</a> or <a href="http://sharelatex.com/">sharelatex</a> or <em>texworks</em> as a matter of fact. I have moved in the favour of these online compilers as I no longer have to fiddle with searching the included <code>.sty</code> that are so robotic to seek and use. I really wish there was some kind of package manager for latex too. Like pip for python. 
+<p>The book I choose was in ePub format and desperately needed to be converted to latex files so I can typeset them in <a href="http://overleaf.com/">overleaf</a> or <a href="http://sharelatex.com/">sharelatex</a> or <em>texworks</em> as a matter of fact. I have moved in the favour of these online compilers as I no longer have to fiddle with searching the included <code class="highlighter-rouge">.sty</code> that are so robotic to seek and use. I really wish there was some kind of package manager for latex too. Like pip for python. 
 <em>I Wish</em> !</p>
 
-<p>ePubs are essentially a zipped archive of <code>.html</code> files following a specific numbering scheme or format. So the task was essentially to convert the <code>.html</code> to <code>.tex</code>. I did try a few things with python trying the <code>beautiful soup</code> things. It did not taste well. I had to search other things.</p>
+<p>ePubs are essentially a zipped archive of <code class="highlighter-rouge">.html</code> files following a specific numbering scheme or format. So the task was essentially to convert the <code class="highlighter-rouge">.html</code> to <code class="highlighter-rouge">.tex</code>. I did try a few things with python trying the <code class="highlighter-rouge">beautiful soup</code> things. It did not taste well. I had to search other things.</p>
 
 <p>I had heard of <a href="http://pandoc.org/">pandoc</a> while I was writing my thesis few years back too but it <em>felt</em> to complex that time but now it was a necessity I just can’t ignore. Its interesting how the perceived complexity of a act changes with necessity. <strong>Pandoc</strong> is the Swiss army knife when handling documents. It can do anything. It took me a while to figure out it was a CLI tool. ( It happens )</p>
 
-<p>It could translate the html page <em>almost</em> perfectly to be used in <em>overleaf</em>. Only some italics were not getting done properly for which I used <code>sed</code> and compiled it all in a shell script to iterate over the entire folder and in a blink I had a directory full of tex files ready for the next stage. </p>
+<p>It could translate the html page <em>almost</em> perfectly to be used in <em>overleaf</em>. Only some italics were not getting done properly for which I used <code class="highlighter-rouge">sed</code> and compiled it all in a shell script to iterate over the entire folder and in a blink I had a directory full of tex files ready for the next stage.</p>
 
-<p>The work was only 10% done as a lot of widows needed new husbands and orphans needed parents, I hope you get what I mean ! </p>
+<p>The work was only 10% done as a lot of widows needed new husbands and orphans needed parents, I hope you get what I mean !</p>
 
 <p>Just in case you too are a fan of <strong>LaTeX</strong> , the code I used and wrote is <a href="https://github.com/IndianTinker/EPUB-to-Latex">here</a>.</p>
 
@@ -517,6 +521,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -529,15 +542,6 @@ All Rights Reserved
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

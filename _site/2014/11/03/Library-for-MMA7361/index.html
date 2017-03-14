@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/11/03/Library-for-MMA7361/" />
+  <meta property="og:url" content="http://localhost:4000/2014/11/03/Library-for-MMA7361/" />
 
 
   <meta content="2014-11-03T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -481,7 +485,7 @@ All Rights Reserved
   <li>Digital which send data in values riding on I2C/SPI.</li>
 </ul>
 
-<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale ‘s MMA7361 analog 3Axis Accelerometer</a>. </p>
+<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale ‘s MMA7361 analog 3Axis Accelerometer</a>.</p>
 
 <p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image" /></p>
 
@@ -492,13 +496,13 @@ All Rights Reserved
   <li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
   <li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
   <li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
-  <li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings </li>
+  <li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings</li>
   <li><strong>ST</strong> - Self Test</li>
 </ul>
 
 <p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
 
-<p>Just connect a <code>10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+<p>Just connect a <code class="highlighter-rouge">10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
 
 <p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg" /></p>
 
@@ -515,6 +519,8 @@ All Rights Reserved
 
 <p>Having deciphered it, i wrote a test code:</p>
 
+<noscript><pre>400: Invalid request
+</pre></noscript>
 <script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
 
 <p>It worked as designed.</p>
@@ -529,7 +535,7 @@ Hoping the community finds it useful.</p>
 
 <p>Cheers,</p>
 
-<p>Rohit </p>
+<p>Rohit</p>
 
 </div>
 <br>
@@ -550,6 +556,15 @@ Hoping the community finds it useful.</p>
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -562,15 +577,6 @@ Hoping the community finds it useful.</p>
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

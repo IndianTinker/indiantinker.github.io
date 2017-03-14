@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/" />
+  <meta property="og:url" content="http://localhost:4000/2014/11/09/Nokia5510-lcd-with-MSP430/" />
 
 
   <meta content="2014-11-09T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" property="og:image"/>
@@ -409,6 +409,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -474,87 +478,88 @@ All Rights Reserved
 
 
 <br>
-  <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc. </p>
+  <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.</p>
 
 <p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
 
-<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code>2.7-3.3V</code> happy for our MSP430.</p>
+<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code class="highlighter-rouge">2.7-3.3V</code> happy for our MSP430.</p>
 
-<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a> </p>
+<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a></p>
 
-<p>For TL:DR; </p>
+<p>For TL:DR;</p>
 
-<p>The LCD has the following pins to interface to:
+<p>The LCD has the following pins to interface to:</p>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 </style>
-&lt;table class="tg"&gt;</p>
-<tr>
+
+<table class="tg">
+  <tr>
     <th class="tg-031e">Pin Number</th>
     <th class="tg-031e">Pin Label</th>
     <th class="tg-031e">Pin Function</th>
     <th class="tg-031e">Input/Output?</th>
     <th class="tg-031e">Notes</th>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">1</td>
     <td class="tg-031e">VCC</td>
     <td class="tg-031e">Positive power supply</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">2</td>
     <td class="tg-031e">GND</td>
     <td class="tg-031e">Ground</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e"></td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">3</td>
     <td class="tg-031e">SCE</td>
     <td class="tg-031e">Chip select</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e">Active low</td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">4</td>
     <td class="tg-031e">RST</td>
     <td class="tg-031e">Reset</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e">Active low</td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">5</td>
     <td class="tg-031e">D/C</td>
     <td class="tg-031e">Mode select</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">6</td>
     <td class="tg-031e">DN(MOSI)</td>
     <td class="tg-031e">Serial data in</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e"></td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">7</td>
     <td class="tg-031e">SCLK</td>
     <td class="tg-031e">Serial clock</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e"></td>
   </tr>
-<tr>
+  <tr>
     <td class="tg-031e">8</td>
     <td class="tg-031e">LED</td>
     <td class="tg-031e">LED backlight supply</td>
     <td class="tg-031e">Input</td>
     <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
   </tr>
-<p>&lt;/table&gt;</p>
+</table>
 
 <p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
 
@@ -580,6 +585,8 @@ All Rights Reserved
 <p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
 <br /></p>
 
+<noscript><pre>400: Invalid request
+</pre></noscript>
 <script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
 
 <p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
@@ -607,6 +614,15 @@ All Rights Reserved
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -619,15 +635,6 @@ All Rights Reserved
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>

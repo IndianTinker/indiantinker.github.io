@@ -43,11 +43,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2015/09/15/PiTuber/" />
+  <meta property="og:url" content="http://localhost:4000/2015/09/15/PiTuber/" />
 
 
   <meta content="2015-09-15T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
   <meta content="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Raspberry_Pi_Logo.svg/810px-Raspberry_Pi_Logo.svg.png" property="og:image"/>
@@ -411,6 +411,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -478,7 +482,7 @@ All Rights Reserved
 <br>
   <blockquote>
   <p><strong>DISCLAIMER</strong>
-This article is for exploratory and educational purposes only. Kindly use the code and project responsibly. </p>
+This article is for exploratory and educational purposes only. Kindly use the code and project responsibly.</p>
 </blockquote>
 
 <p>Happy Engineers Day !</p>
@@ -491,23 +495,23 @@ This article is for exploratory and educational purposes only. Kindly use the co
 
 <p>The system should read a couple of links from a file and then offline them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video like on the App. Once done watching, <strong>DELETE</strong> !</p>
 
-<p>It turned out to be a pretty easy task. Thanks to <code>pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file. </p>
+<p>It turned out to be a pretty easy task. Thanks to <code class="highlighter-rouge">pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file.</p>
 
 <p>The steps are pretty simple:</p>
 
 <ul>
   <li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
-  <li>Install <code>pafy</code> using pip the usual way</li>
+  <li>Install <code class="highlighter-rouge">pafy</code> using pip the usual way</li>
   <li>Change the urls in the txt file. Please do preserve the format.</li>
   <li>Edit the script for your preferred quality and storage location.</li>
   <li>Execute the script.</li>
 </ul>
 
-<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code>screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code class="highlighter-rouge">screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
 
 <p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
 
-<p>After you are finished, just <code>SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+<p>After you are finished, just <code class="highlighter-rouge">SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
 
 <p>There can be several extensions of the idea.We can also attach a small LED on one of the Pins to indicate when downloading ends.
 Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with other services to make Pi a Bandwidth Hogger and a mean downloading machine.</p>
@@ -535,6 +539,15 @@ Further a NAS can be configured instead of SFTP for easier file exchanges. Bette
     
       <li>
         <h3>
+          <a href="/2017/03/12/100kmmumbai/">
+            Me Dinojh and 100kms on cycle
+            <small>12 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2017/02/12/processingFluidsynth/">
             Making processing and fluidsynth talk
             <small>12 Feb 2017</small>
@@ -547,15 +560,6 @@ Further a NAS can be configured instead of SFTP for easier file exchanges. Bette
           <a href="/2017/02/12/InstallationReality/">
             Installation- Men and Three Worlds
             <small>12 Feb 2017</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/12/26/StoriesHowDoILook/">
-            How Do I Look Honey !
-            <small>26 Dec 2016</small>
           </a>
         </h3>
       </li>
