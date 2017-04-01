@@ -408,6 +408,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -461,71 +465,129 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/03/Library-for-MMA7361/">
-        Arduino Library for Freescale's MMA7361 3 axis accelerometer
+      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
+        Nokia 5110 LCDs and MSP430
       </a>
     </h1>
 
-    <span class="post-date">03 Nov 2014</span>
+    <span class="post-date">09 Nov 2014</span>
 
-    <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.</p>
+
+<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
+
+<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code class="highlighter-rouge">2.7-3.3V</code> happy for our MSP430.</p>
+
+<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a></p>
+
+<p>For TL:DR;</p>
+
+<p>The LCD has the following pins to interface to:</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Pin Number</th>
+    <th class="tg-031e">Pin Label</th>
+    <th class="tg-031e">Pin Function</th>
+    <th class="tg-031e">Input/Output?</th>
+    <th class="tg-031e">Notes</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">1</td>
+    <td class="tg-031e">VCC</td>
+    <td class="tg-031e">Positive power supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">2</td>
+    <td class="tg-031e">GND</td>
+    <td class="tg-031e">Ground</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">3</td>
+    <td class="tg-031e">SCE</td>
+    <td class="tg-031e">Chip select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">4</td>
+    <td class="tg-031e">RST</td>
+    <td class="tg-031e">Reset</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">5</td>
+    <td class="tg-031e">D/C</td>
+    <td class="tg-031e">Mode select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">6</td>
+    <td class="tg-031e">DN(MOSI)</td>
+    <td class="tg-031e">Serial data in</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">7</td>
+    <td class="tg-031e">SCLK</td>
+    <td class="tg-031e">Serial clock</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">8</td>
+    <td class="tg-031e">LED</td>
+    <td class="tg-031e">LED backlight supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
+  </tr>
+</table>
+
+<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
+
+<p>At a time you write to a single bank.</p>
+
+<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
+
+<p>The communication is done using SPI.</p>
+
+<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG’s post</a>.</p>
+
+<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
+
+<p>Connections are as follows(PORT1):</p>
 
 <ul>
-  <li>Analog which can be directly read by our friendly ADC</li>
-  <li>Digital which send data in values riding on I2C/SPI.</li>
+  <li>LCD5110_SCLK_PIN- BIT5</li>
+  <li>LCD5110_DN_PIN- BIT7</li>
+  <li>LCD5110_SCE_PIN- BIT0</li>
+  <li>LCD5110_DC_PIN- BIT1</li>
 </ul>
 
-<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale ‘s MMA7361 analog 3Axis Accelerometer</a>.</p>
-
-<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image" /></p>
-
-<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
-
-<ul>
-  <li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
-  <li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
-  <li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
-  <li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
-  <li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings</li>
-  <li><strong>ST</strong> - Self Test</li>
-</ul>
-
-<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
-
-<p>Just connect a <code class="highlighter-rouge">10k</code> resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
-
-<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg" /></p>
-
-<p>Now just:</p>
-
-<ul>
-  <li>read the analog values from the pin</li>
-  <li>convert them to voltages</li>
-  <li>apply sensitivity and correction</li>
-  <li>and get g value</li>
-</ul>
-
-<p>Simple as that!</p>
-
-<p>Having deciphered it, i wrote a test code:</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
+<br /></p>
 
 <noscript><pre>400: Invalid request
 </pre></noscript>
-<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
 
-<p>It worked as designed.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
 
-<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
-The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
+<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
 
-<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
-
-<p>Feel free to fork it and use it. 
-Hoping the community finds it useful.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
+<p>If you have any difficulties post here in comments</p>
 
   </div>
   

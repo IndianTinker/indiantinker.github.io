@@ -4,13 +4,210 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-01T16:36:12+05:30</updated>
+ <updated>2017-04-01T21:52:58+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Hacking with Bamboo in the Field</title>
+   <link href="http://localhost:4000/2017/04/01/bamboo/"/>
+   <updated>2017-04-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/04/01/bamboo</id>
+   <content type="html">&lt;p&gt;I am in a bit of dilemma writing this post. Should I write this one as a typical “portfolio” post or just the normal way ? Nevertheless, I will do chunking so, its easy to read.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Field Study and Design&lt;/strong&gt;. It involved students innovating while living in the context. Living in a village for a few weeks and building cool stuff. Sounds exciting.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;build-up&quot;&gt;Build Up&lt;/h2&gt;
+
+&lt;p&gt;It started with a poster, I saw when we had to choose our electives for this semester. Riding the segmentation feeling that this might be a product design course and hence, I should probably not take it, i took a course on Post modernism. But, the poster stayed there and triggered an interrupt in the mind. It had all the likable qualities of a course - Outdoor, Gujarat, Making and Freshness. It took a while for the intellectual capacitance to charge the gates of my decision gates ( &lt;em&gt;Shit&lt;/em&gt; that was good ) and I asked the course instructor, Prof. Nishant Sharma, in staircase one-day that i was interested in the course. He was open and asked me to mail him, which i promptly did.&lt;/p&gt;
+
+&lt;p&gt;We met and he approved me for the course. Thats not it. A great battle has to start. I unregistered myself from Post-modernism and the system wont allow me to register for this, on the last day of course registration. The course was capped at 8. I was the 8th student. I did all the &lt;em&gt;office - to- office&lt;/em&gt; to find where the problem was. No one knew. It was depressing. No one knew what the problem was. It turned out that the course would only accept “PD” or “MVD” guys. No one knew about this restriction. I was eventually given a 30 min window to register. Tada!&lt;/p&gt;
+
+&lt;h2 id=&quot;preparation&quot;&gt;Preparation&lt;/h2&gt;
+
+&lt;p&gt;The course involved students going in a village in Gujarat- Ambapada , known for its Bamboo crafts and then study the context and design products that the craftsmen could actually make using their current skill set and they should be modern and functional. Then later, we would &lt;em&gt;transfer&lt;/em&gt; the design to the craftsmen who could make it and sell it.&lt;/p&gt;
+
+&lt;p&gt;The course was partially supported by &lt;a href=&quot;http://www.baif.org.in/&quot;&gt;BAIF&lt;/a&gt; who offered us accommodation, workspace and access to the community at their campus and village.&lt;/p&gt;
+
+&lt;p&gt;We started with thinking about what we could do and things to take. I would take my electronics and I wanted to make something with electronics and also explore some forms. Before we left, we visited Kalbhadevi and Lamington to get stuff for our course.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32422170074/in/album-72157680969109736/&quot; title=&quot;DSC_1210&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2944/32422170074_5b033bbdab_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;DSC_1210&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;landing-and-prototyping&quot;&gt;Landing and Prototyping&lt;/h2&gt;
+
+&lt;p&gt;After about 6 hours of drive from IIT we reached the village &lt;a href=&quot;http://wikiedit.org/India/Lachhakadi/163258/&quot;&gt;Lachhakadi&lt;/a&gt;, where BAIF’s Dhruva campus is located.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33769581365/in/album-72157680969109736/&quot; title=&quot;BAIF&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2945/33769581365_f5b6d779a3_z.jpg&quot; width=&quot;640&quot; height=&quot;424&quot; alt=&quot;BAIF&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After reaching, we visited the craftsmen village of Ambapada and their shops in Gira waterfalls in Saputara. It was great to see the way the craftsmen work by using ingenuous techniques like this Belt Sander made by BAIF’s Anant .&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32422163944/in/album-72157680969109736/&quot; title=&quot;DSC_1219&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/694/32422163944_71f7552532_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;DSC_1219&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32926391724/in/album-72157680969109736/&quot; title=&quot;Craftsmen&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3692/32926391724_8407b95cdb_z.jpg&quot; width=&quot;640&quot; height=&quot;472&quot; alt=&quot;Craftsmen&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Marketplace at Gira falls. They sell stuff that they make , but mostly its the stuff from China.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32926391544/in/album-72157680969109736/&quot; title=&quot;Giragaun&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3789/32926391544_f938896ffa_z.jpg&quot; width=&quot;640&quot; height=&quot;481&quot; alt=&quot;Giragaun&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;We spent the next few days, brain storming, material storming and ideating on things that we could do. I lost my sketchbook :(&lt;/p&gt;
+
+&lt;p&gt;Not that It was any good. The ideas i had were torches, self watering pots, holders, running wind-mill that changes color when your run, audio curtains, power banks, radios, xylophones, Solar lamps and some random electronics .&lt;/p&gt;
+
+&lt;p&gt;I sketched a few and showed it for review and then made prototypes. So, the schedule was:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Wake up at 6:00-6:30am&lt;/li&gt;
+  &lt;li&gt;Walk to places around&lt;/li&gt;
+  &lt;li&gt;Play Badminton&lt;/li&gt;
+  &lt;li&gt;Have Breakfast till 8:30am&lt;/li&gt;
+  &lt;li&gt;Work in the shop till 12:30pm&lt;/li&gt;
+  &lt;li&gt;Lunch at 12:30pm&lt;/li&gt;
+  &lt;li&gt;Sleep for 20 mins&lt;/li&gt;
+  &lt;li&gt;Workshop at 1:15pm&lt;/li&gt;
+  &lt;li&gt;Tea at 4:00pm&lt;/li&gt;
+  &lt;li&gt;Workshop till 8:30pm&lt;/li&gt;
+  &lt;li&gt;Dinner at 8:30pm&lt;/li&gt;
+  &lt;li&gt;Workshop/Sleep/Bonfire/Mela Visit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The workshop was this space. It was currently a testing ground for a Bamboo pen manufacturing system, brainchild of Anant. Anant has his startup working with Bamboo products. He is a very interesting and brainy person. He helped us evaluate our ideas based on his knowledge of the locals and their biases.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32956522753/in/album-72157680969109736/&quot; title=&quot;Workshop&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3954/32956522753_59b28591fb_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;Workshop&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Anant sitting on a chair made by Rishabh.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33769579495/in/album-72157680969109736/&quot; title=&quot;Anant&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2840/33769579495_04b42f0f04.jpg&quot; width=&quot;368&quot; height=&quot;500&quot; alt=&quot;Anant&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Things we saw on walks and stuff would be like&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32926391224/in/album-72157680969109736/&quot; title=&quot;Upar&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3848/32926391224_2c3253a546_z.jpg&quot; width=&quot;640&quot; height=&quot;427&quot; alt=&quot;Upar&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33640469741/in/dateposted-public/&quot; title=&quot;gai&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2912/33640469741_f2624b9ab3_z.jpg&quot; width=&quot;640&quot; height=&quot;479&quot; alt=&quot;gai&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33385035210/in/dateposted-public/&quot; title=&quot;patte&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2949/33385035210_e82c3d993e_z.jpg&quot; width=&quot;640&quot; height=&quot;478&quot; alt=&quot;patte&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Food was like&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33680158466/in/album-72157680969109736/&quot; title=&quot;IMG_20170124_130147&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3741/33680158466_64c7a7051e_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20170124_130147&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lets get back to work&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Prototyping was done and then call was to be taken on what to do. I ended up making the running rotating wind-mill, holders, agarbatti holder cum packaging and power bank.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33265657455/in/album-72157680969109736/&quot; title=&quot;IMG_20170128_180502&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/696/33265657455_c991e84c5c_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;IMG_20170128_180502&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The products were designed studying the current craftsmen and their resource availability and the demands and trends in their possible markets like Gira Waterfalls and Surat. Products designed by everyone were fantastic and showed a great deal of craftsmanship.&lt;/p&gt;
+
+&lt;p&gt;To test how craftsmen would bring things and also to bring some magnets and hardware we also conducted a one day return journey to Mumbai by Flying Rani Express that stops at Bilimora Station. This journey alone is worth a blog post. Hashtags : #FreezingColdBikeRide #2xDDLJTrainScene #Fine #NoFood #MumbaiBhraman #DeadTired&lt;/p&gt;
+
+&lt;p&gt;We also visited Surat and Dandi on a day off. It was an amazing trip. Surat is an amazing city. We visited SVNIT, Diamond Museum, Science Center, Sasuji Thali, Public Aquarium (They have sharks) etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33223960096/in/album-72157680969109736/&quot; title=&quot;DSC_1315&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3674/33223960096_5cdf047c92_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;DSC_1315&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33109646042/in/album-72157680969109736/&quot; title=&quot;DSC_1314&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3709/33109646042_24833f75ca_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;DSC_1314&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33640714981/in/album-72157680969109736/&quot; title=&quot;shark&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3840/33640714981_50bb8c6b19_z.jpg&quot; width=&quot;640&quot; height=&quot;484&quot; alt=&quot;shark&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33613342302/in/album-72157680969109736/&quot; title=&quot;oops&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3935/33613342302_0b37cc18a5_z.jpg&quot; width=&quot;640&quot; height=&quot;476&quot; alt=&quot;oops&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33613342852/in/album-72157680969109736/&quot; title=&quot;thali&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3764/33613342852_914fc929e7_z.jpg&quot; width=&quot;640&quot; height=&quot;473&quot; alt=&quot;thali&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In Dandi we visited memorial and beach.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33137198861/in/album-72157680969109736/&quot; title=&quot;DSC_1306&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3802/33137198861_b9a0fba0ff_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;DSC_1306&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Beach&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33137208461/in/album-72157680969109736/&quot; title=&quot;DSC_1282&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/622/33137208461_af7978d5a0_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;DSC_1282&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;One day we had fun bon-fire too.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33109766552/in/album-72157680969109736/&quot; title=&quot;IMG_20170130_222425&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3917/33109766552_cfc5e9991f_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;IMG_20170130_222425&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;design-transfer-and-training&quot;&gt;Design Transfer and Training&lt;/h2&gt;
+
+&lt;p&gt;The next step was to train the local craftsmen to produce the things that we had designed. This part was rather interesting part of the &lt;em&gt;design out of the studio&lt;/em&gt; theme of the course. The craftsman who chose to make my holder, Satish was from a nearby village. I used methods of contextual inquiry to learn more about his work. He is sufficiently technically literate. Has an Android phone, but carries a Nokia Asha. He has DTH TV system and uses Internet also. He showed me the photos of his previous exhibitions around the country. He travels with his elder brother and works on bamboo making things like whistles, peacocks and gifting materials. He also works on his land, but the yield was probably not much. He was introduced to this art by his father. They are not from Gujrat and are Maharashtrians. No wonder he could make sense of my &lt;em&gt;senseless&lt;/em&gt; Marathi.&lt;/p&gt;
+
+&lt;p&gt;To enable him replicate my design of a keychain/Toothbrush holder inspired from a shark’s jaw, i made a template that had to be used on a bamboo piece and then i gave him my version of it. We made two iterations.&lt;/p&gt;
+
+&lt;p&gt;First one was made using my template, But due to fact that he was more familiar with material, he could actually cut down the time and work required to make it. I took 4 hours to make it and he did it in 25 mins. Material Masters are a thing.&lt;/p&gt;
+
+&lt;p&gt;The next time he did not use the template. It was faster, but it was not as finished as it should be. He said it would be fine, if he could make a few more. This actually helps us understand the fundamental difference in which how we think we will teach them by handling them the plans and how they take it as an incremental addition to their “can-do” things.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33265654095/in/album-72157680969109736/&quot; title=&quot;IMG_20170203_113040&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3859/33265654095_65305d35c1.jpg&quot; width=&quot;375&quot; height=&quot;500&quot; alt=&quot;IMG_20170203_113040&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I did some electronics hacking too. We basically hacked a locally available Ni-Mh Solar Lantern to be charged with a USB charger. Recipe? Current Sources. It worked great. I frankly am in love with Current Sources since then.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33109768582/in/album-72157680969109736/&quot; title=&quot;IMG_20170131_184153&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3780/33109768582_d078b949b9.jpg&quot; width=&quot;500&quot; height=&quot;375&quot; alt=&quot;IMG_20170131_184153&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;exhibition-and-public-showcase&quot;&gt;Exhibition and Public Showcase&lt;/h2&gt;
+
+&lt;p&gt;The last part was to gauge public sentiments on the products we made and ask for feedback at the same place where these products are sold. This would also establish some faith in the products for the local craftsmen who were around, as they have to make them in the future. It was grand. Pictures follow.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33109765822/in/album-72157680969109736/&quot; title=&quot;IMG_2658&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3915/33109765822_2bcc9a85e8.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IMG_2658&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33109762182/in/album-72157680969109736/&quot; title=&quot;IMG_2702&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2926/33109762182_7eb44143d5.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IMG_2702&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33265664185/in/album-72157680969109736/&quot; title=&quot;IMG_2744&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2899/33265664185_b91e722e8b.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IMG_2744&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The feedback was great and this was later followed by an interactive session with local craftsmen who told us about the price to expect, markets and difficulty they might face.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33385995810/in/dateposted-public/&quot; title=&quot;Selection_020&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2812/33385995810_b70ce749f1.jpg&quot; width=&quot;500&quot; height=&quot;334&quot; alt=&quot;Selection_020&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;We left a copy of the products that we made at the campus itself bid them a heartfelt good-bye.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33265662005/in/album-72157680969109736/&quot; title=&quot;IMG_2823&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3904/33265662005_3d8bae9da9.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IMG_2823&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32878338904/in/dateposted-public/&quot; title=&quot;IMG_2642&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2828/32878338904_eaca57b3db.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IMG_2642&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;photo-shoot-and-idc-exhibition&quot;&gt;Photo shoot and IDC Exhibition&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Phone Stand plus Amplifier&lt;/strong&gt; - It was designed to be made in least time as possible and would appeal to the buyers to waterfalls. The product was designed to rest phone and also amplify audio.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32907462913/in/dateposted-public/&quot; title=&quot;Phone Stand&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3818/32907462913_62a2a3d89f.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;Phone Stand&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Agarbatti Stand and Holder&lt;/strong&gt; : Based on the user studies, many people buy this in cheap plastic , I carved one out of Bamboo. It has a lid that preserves the frangrance and the design allows you to fix th agarbatti/incense stick.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33336703710/in/dateposted-public/&quot; title=&quot;IncenseHolder&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3937/33336703710_3e0ccf084f.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IncenseHolder&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Power Bank&lt;/strong&gt; : #Electronics , detailed with Bamboo skin and elegantly charges your phone.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33564747522/in/dateposted-public/&quot; title=&quot;Power Bank&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2826/33564747522_bda9de2d3d.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;Power Bank&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Holders&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Magnetic Keychain Holder&lt;/em&gt; - Has strong magnets that catch keys when you throw them at it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33336734710/in/dateposted-public/&quot; title=&quot;MagKey&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3854/33336734710_43bc93bf7a.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;MagKey&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Claw Holder&lt;/em&gt; - Easy to manufacture holder
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33680212496/in/dateposted-public/&quot; title=&quot;Claw Key&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3669/33680212496_3cfda55e92.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;Claw Key&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Desktop Radio&lt;/strong&gt;
+The ring is used to change volume and we implemented a way to change channels using gestures like tap on the top surface. It was taken quite well by the visitors. Made in collaboration with Rishabh from PD.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33680243686/in/dateposted-public/&quot; title=&quot;FM_!!&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3856/33680243686_71f538de17.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;FM_!!&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33680256166/in/dateposted-public/&quot; title=&quot;IMG_1863&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3713/33680256166_811d169e88.jpg&quot; width=&quot;500&quot; height=&quot;333&quot; alt=&quot;IMG_1863&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Our exhibition picture:&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33770908025/in/dateposted-public/&quot; title=&quot;IDC Exhibition&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/4/3956/33770908025_bc9eba1704.jpg&quot; width=&quot;500&quot; height=&quot;384&quot; alt=&quot;IDC Exhibition&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;We would love to go back someday to see, how many of our products actually got made.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Beaches,Bicycles and Pagoda</title>
