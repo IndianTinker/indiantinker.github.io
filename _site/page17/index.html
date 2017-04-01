@@ -404,6 +404,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -457,53 +461,101 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/01/31/Hamrx/">
-        RXing into the HAM World using RTL-SDR
+      <a href="/2016/02/04/spectravulizer/">
+        SpectraVUlizer- Lights,Music and Magic
       </a>
     </h1>
 
-    <span class="post-date">31 Jan 2016</span>
+    <span class="post-date">04 Feb 2016</span>
 
-    <p>I have been intrigued by HAM ever since Prof.Gadre mentioned about it in one of his lectures. HAM has an amazing community and i have been fortunate to be included into one here in Pune. Special Thanks to <a href="http://amoghdesai.com/">VU3DES</a> and <a href="http://tinkertool.wordpress.com">VU2ASH</a>.</p>
+    <p>One day while chatting with my good friend <a href="https://twitter.com/mrrituparna">Rituparna</a> we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more <em>dhinchaak</em>. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.</p>
 
-<p>The HAM group in Pune is a group of <em>highly</em> motivated and dedicated HAM enthusiasts and regularly have conversations on the HAM frequencies. They open-heartedly encourage n00bs to get their feet wet in the HAM world..</p>
+<p>Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the <a href="http://tah.io/">Tah</a> as our number cruncher of choice.</p>
 
-<p>Frankly, the initial days were tough as the jargon used in HAM is intense and i could not make out many times what the conversations meant. Slowly with Amogh’s help I figured out most of it. For Example: DIYers are called Home Brewers.</p>
+<p>One fine afternoon we met at <a href="http://www.meetup.com/Doo-Things/">doo Things</a> to get the project up and running. We decided to use the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7</a> which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
+Reading it is similar to how you read a shift register.</p>
 
-<p>As Amogh suggested, i started with building a 2M Band (140MHz) antenna and using it with my <a href="/2015/10/12/RTLSDR1/">RTL SDR Dongle</a>.
-The process involved severing my already working cable that connects to the tiny antenna using which i can do lots of cool things like tracking flying objects using ADSb, A post my hands are itching to write but looking at the growing <em>intolerance</em>, a few friends have cautioned me into not exploring stuff in the grey area more. If anyone with a better understanding of the grey value in this area reads it, please do tell me. Nevertheless, Cool things have to be risked to achieve cooler things. There you go, nice cable.</p>
+<p>We followed the standard circuit from the datasheet and programmed the <strong>Tah</strong> to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.</p>
 
-<p>Well, 2M is the n00bs band. Listening stuff is pretty easy with basic components costing less than a <em>Vada Pao</em> . RXing to most things (not all) is legal and this was quite relieving.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/" title="WP_20150321_004"><img src="https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg" width="640" height="359" alt="WP_20150321_004" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>BTW, the easiest antenna i plan to build was a <strong>Vertical Dipole</strong>. It largely has two(dipole) elements/wires/conductors that have a strict length and are (as the name suggests) oriented vertical to the ground. There is a simple equation that governs the length of the antenna elements.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/" title="WP_20150321_006"><img src="https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg" width="640" height="359" alt="WP_20150321_006" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The band is 2M, hence, the minimum antenna length should be lamda/4 . So, it is about 2/4=0.5m or 50cm or roughly 19.6 inches. So, we need two pieces of wire of 19.6 inches in length each and wired to our SDR cable. Amogh sent me a very detailed picture at the time of construction, which i lost. :(</p>
+<p>The test code we used is as follows:</p>
 
-<p>The SDR cable is essentially like those old RF in Co-Ax cables we receive cable TV from in our houses. The outer part is negative or shield and the centre part is signal or positive. I got the cheap iron wire that is used to tie re-bars in construction; they were frankly very sturdy and held shape. I measured and cut 19.6 inch elements with a little room of bending it.</p>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cm">/*
+Released under MIT License
+A project by Rituparna and Rohit
+*/</span>
 
-<p>The frame (well sort of) was made using a T junction and  pipe segments with Tinned nut and bolts to the ends as they can be soldered.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23586681329/in/dateposted-public/" title="IMG_20151222_192951"><img src="https://farm2.staticflickr.com/1482/23586681329_7ff69b2556_z.jpg" width="640" height="480" alt="IMG_20151222_192951" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;
+#define NEOPIXELPIN 4
+</span>
+<span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="n">NEOPIXELPIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
 
-<p>Soldered</p>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">analogPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">strobePin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">resetPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23327760413/in/dateposted-public/" title="IMG_20151222_193021"><img src="https://farm2.staticflickr.com/1445/23327760413_ef36ffc9c9_z.jpg" width="480" height="640" alt="IMG_20151222_193021" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<span class="kt">int</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span> <span class="c1">// to hold a2d values
+</span><span class="kt">int</span> <span class="n">doubledSpectrumValue</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<p>I hot-glued one end and kept the other end free. This allowed me to fold the antenna and take it out of the cramped window and re-open it again outside.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23327760983/in/dateposted-public/" title="IMG_20151222_194750"><img src="https://farm2.staticflickr.com/1454/23327760983_c15f7745b6_z.jpg" width="640" height="480" alt="IMG_20151222_194750" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span> <span class="c1">// Initialize all pixels to 'off'
+</span>  
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
+  
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p>Now it was time to search for a open space. Since most people talk using Handies (Hand-held radios) with too low power(5W is my guess) and i am apparently the farthest from them. Most of them are in Pune, while I am pretty far away in PCMC . Also, the height at which they transmit also matter a lot. The only open place was a little used balcony. I made my base there and fixed the antenna with my Safety shoe. The SDR settings are 145.1Mhz and modulation is NFM.</p>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+ 
+  <span class="c1">//Measure the magnitudes of the 7 frequency bins
+</span>  <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// to allow the output to settle
+</span>    <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">);</span>
+    <span class="n">avg</span> <span class="o">+=</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23872027191/in/dateposted-public/" title="IMG_20151222_215517"><img src="https://farm6.staticflickr.com/5735/23872027191_1a1f2e7094_z.jpg" width="480" height="640" alt="IMG_20151222_215517" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>We have a active group and i requested for anyone to transmit on 145.1 MHz. A session was planned at 10pm. I guess i had to wait till then. Even at 10pm, i was getting nothing, just noise. I fiddled with the bandwidth on the SDR console and voila i could hear Rachit talking. He was probably on a Handy and hence his signal was weak. Then when VU2ASH talked it was like WoW. I literally had moist eyes, as if i had intercepted an alien signal or something. He stays at a high place and has a great antenna. I had to increase bandwidth to be able to hear him clearly. So, the whole time i was fiddling with Bandwidth controls and could hear the entire thing and yeah the <em>other</em> things still work :D</p>
+  <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span>
 
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_x4EYHvUMG/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#HAM #Rxing #Pune #DIY #2m #vhf</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-27T02:57:34+00:00">Dec 26, 2015 at 6:57pm PST</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+  <span class="c1">//Clear out the NeoPixel String
+</span>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">144</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+  <span class="p">}</span>
+  
+  <span class="c1">//Draw the meter on the NeoPixel string
+</span>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">map</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">144</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">60</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">map</span><span class="p">(</span><span class="n">spectrumValue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)));</span> <span class="c1">//Added blue flash for bass hit
+</span>  <span class="p">}</span>
+  
+  <span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">125</span><span class="p">);</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>Next up? I will probably use my not-in-active-use raspberry pi to make an always ON HAM receiver tagged to our frequency and also improve the antenna.
-Do you have any leads on things that can be done? Please do share in the comments section below.</p>
+<p>
+So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
+</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/xV4zOYUQKfM" frameborder="0" allowfullscreen=""></iframe>
+
+<p>The song is by Adiba Parveen just in case you like it. Its <a href="https://www.youtube.com/watch?v=h0EoMozYWSs">here</a>.</p>
 
 <p>Cheers,</p>
 
