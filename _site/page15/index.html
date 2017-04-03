@@ -412,6 +412,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -465,78 +473,97 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/04/11/WIOLink/">
-        Getting started with WIO Link
+      <a href="/2016/07/27/Vac/">
+        DIY Vacuum Pickup tool
       </a>
     </h1>
 
-    <span class="post-date">11 Apr 2016</span>
+    <span class="post-date">27 Jul 2016</span>
 
-    <p><a href="https://github.com/anujdeshpande/">Anuj</a> recently gave me one of the few <em>WIO Links</em> he got as a <s>serial</s> Kickstarter backer to try them out. The Wio Link are</p>
+    <p>Recently, I started venturing into making electronic boards in some numbers starting with <a href="/2016/01/01/MakersRule/">Maker’s Rule</a>. Placing nominal sized SMDs like 1206 or even 0805 is not much of a work when you are doing a prototype. But assembling say 100s of them in one sitting is quite a task especially for people who get bored too easily. There comes the need for a Pickup tool.</p>
 
 <blockquote>
-  <p>No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides <strong>Grove</strong> sensors a Web API kind of look.</p>
+  <p>A Pickup Tool creates a suction force that pulls/lifts the component from the reel so that you can place it on a PCB. Most PCB assemblers use that in their high speed pick and place machines.</p>
 </blockquote>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097749300/in/dateposted-public/" title="20160409_192105"><img src="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" width="640" height="360" alt="20160409_192105" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Here obviously we will do things manually. But instead of  using tweezers we will use a hacked Aquarium Pump. Does not seem much of an upgrade?</p>
 
-<p>So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with <em>API Endpoints</em> to control the devices using basic HTTP urls in curl for example.</p>
+<p>Well, it certainly is. The amount of dexterity required is fairly reduced and so is the frustration of tapping SMD components to have their <em>sunny side up</em> :P</p>
 
-<p>In this post, i walk you through the steps, just in case you got the Wio Link as well and we control an LED connected to the WIO link through the App itself. 
-You start with downloading the app from the <a href="https://play.google.com/store/apps/details?id=cc.seeed.iot.ap">Playstore</a>. The App starts with a sign-in process. Outside China, you have to choose the international server. Login and make an account. The app has a tour in which it asks you to press a button on the WioLink that basically turns the WioLink in an AP so, you can identify it and share the login credentials for your Wifi. I got this error.</p>
+<p>As a matter of fact the components are placed on a PCB after manual/stencil application of solder paste. But you can try the tack soldering technique too.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304355621/in/dateposted-public/" title="Error1"><img src="https://farm2.staticflickr.com/1708/26304355621_d442b22c84_z.jpg" width="360" height="640" alt="Error1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Now on the topic:</p>
 
-<p>Errors are good omens. Retrying i saw the Wio Link.</p>
+<p>There has been quite a lot of those <strong>Aquarium Pump Pickup Tool</strong> around anyway and this thing will probably be worth the try. Many of the tutorials available online use almost the same kind of Aquarium Pump which is difficult to find around here. After searching a lot, my patience gave in and i ordered <a href="http://www.amazon.in/SOBO-Aquarium-Airpump-SB-548-A/dp/B00VE37JYM/">this</a>, hoping i wont have to work a lot to reverse the air flow as Aquarium pumps blow air out but the whole point of a suction pump is to suck air in.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852413/in/dateposted-public/" title="1"><img src="https://farm2.staticflickr.com/1704/25767852413_1131d7c1ba_z.jpg" width="360" height="640" alt="1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27501428912/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c1.staticflickr.com/8/7230/27501428912_e78145b578_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The App is not the best designed one for the purpose. It is not that user friendly and maybe Seeed will improve upon it. Next the App asks you to give the credentials to the Wifi that will be used by the Wio Link to talk.</p>
+<p>Inline with my expectations, it was a different construction being used here.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852363/in/dateposted-public/" title="2"><img src="https://farm2.staticflickr.com/1633/25767852363_b6c6bbbe17_z.jpg" width="360" height="640" alt="2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27566955066/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c3.staticflickr.com/8/7298/27566955066_44e93be22e_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Once thats done. You get the Visual WioLink to Add Groves to.</p>
+<p>In the picture above, you have an injection moulded white plastic piece with the valves that open and close to create an airflow. On the right is a transformer close to which is an arm on which a rubber bellow is mounted that vibrates due to reluctance, which makes the air flow out.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852273/in/dateposted-public/" title="4"><img src="https://farm2.staticflickr.com/1579/25767852273_599022c3d3_z.jpg" width="360" height="640" alt="4" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26990738014/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c7.staticflickr.com/8/7390/26990738014_e735f4a421_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Now here’s a thing. If at this point you click API or Click Update and then click API you get the following error.</p>
+<p>To reverse the air flow two things can be done :</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278225372/in/dateposted-public/" title="Error2"><img src="https://farm2.staticflickr.com/1535/26278225372_caac01d812_z.jpg" width="360" height="640" alt="Error2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ol>
+  <li>
+    <p>Reverse mount the white part - Tried it, the thing <em>sort of</em> works with almost no usable pressure generated.</p>
+  </li>
+  <li>
+    <p>Reverse the valves/flaps - Tedious to do. Required a bit of a fiddling with valves interestingly made out of a material similar to those keyboard skins we get. Works like charm. Used rubber glue like <em>FeviBond</em> and the black part in the photos is a rubber piece that keeps the valve in place.</p>
+  </li>
+</ol>
 
-<p>This action should be restricted in the App.The groves are not very well organised making to difficult to find things. I could not find the LED one that i have. So, went for the Relay as in the end i needed a digital output. Also added a switch just in case.</p>
+<p>By reversing i mean that suppose a valve is mounted on side A covering a hole. We mount it on the other side forcibly covering the same hole. By doing this the sequence of valves changes and so does the airflow.</p>
 
-<p>PS: Ignore the Infrared Emitter. I thought it was an LED at the time of taking the screen shot. Only to figure it out later :p</p>
+<p>You see there is a way and then there is an <strong>Indian</strong> way !</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097737210/in/dateposted-public/" title="6"><img src="https://farm2.staticflickr.com/1693/26097737210_f129470123_z.jpg" width="360" height="640" alt="6" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Please follow the images below:</p>
 
-<p>Now once you click <strong>Update</strong> the App configures the Wio Link and enables a set of API to control the groves. I am not sure what it does here. Uploading the code from phone to the grove does not seem to be happening, maybe they enable/update some flags or a look-up table. Just Guessing !<br />
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304354631/in/dateposted-public/" title="Upload"><img src="https://farm2.staticflickr.com/1665/26304354631_14b9334f97_z.jpg" width="360" height="640" alt="Upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Before</p>
 
-<p>Once this is done, on the home screen you see this :</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26990736824/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c1.staticflickr.com/8/7207/26990736824_4bc476bb8d_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26344667386/in/dateposted-public/" title="FINAL"><img src="https://farm2.staticflickr.com/1656/26344667386_a9e0a13aa6_z.jpg" width="360" height="640" alt="FINAL" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>After</p>
 
-<p>Now Lets see how the <strong>API</strong> looks like.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27528135591/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c8.staticflickr.com/8/7042/27528135591_a7094b88a0_z.jpg" width="480" height="640" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736540/in/dateposted-public/" title="LEDApi"><img src="https://farm2.staticflickr.com/1715/26097736540_c47cba5c70_z.jpg" width="360" height="640" alt="LEDApi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Doing just the above, the airflow was reversed enough to pick most parts like resistors, caps and even SOT 223 regulators.</p>
 
-<p>The best thing is that they provide the ability to make requests from the App itself. This comes handy to test things quickly. Here i send 1 to the Wio Link in hopes to turn the LED on.</p>
+<p>Now for the syringe end. I just bought the smallest syringe available around that could easily fit the tube that the pump supports. Did a small hole at an ergonomic enough point to modulate the airflow. The size of the hole is important as a smaller hole would allow some air to always flow via the needle causing issues when dropping parts.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278224872/in/dateposted-public/" title="LED On APi"><img src="https://farm2.staticflickr.com/1555/26278224872_0cbe5679e8_z.jpg" width="360" height="640" alt="LED On APi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Used Hot Glue to seal the thing up.</p>
 
-<p>Wohoo! Works the very first time. :D</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27600893225/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c2.staticflickr.com/8/7573/27600893225_e9b0bde412_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767855573/in/dateposted-public/" title="LED ON"><img src="https://farm2.staticflickr.com/1667/25767855573_e7edc6994f_z.jpg" width="640" height="360" alt="LED ON" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The catch is with the needle. The usual needle a chemist has is made for epidermal use and hence has a chiselled sort of tip, which is useless for picking components. I wanted to get an “applicator” needle with a blunt tip usually stocked by ink fillers of ink-jet printers. Nobody gave me one. Dremel prevailed and i sanded the needle to flatness. Then bent it a bit for an easier angle.</p>
 
-<p>Now the LED Off Case. I send 0.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26991835973/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c6.staticflickr.com/8/7625/26991835973_6e2f95f594_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736430/in/dateposted-public/" title="LED Off api"><img src="https://farm2.staticflickr.com/1534/26097736430_2ab9c03492_z.jpg" width="360" height="640" alt="LED Off api" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>In Action:</p>
 
-<p>Voila.</p>
+<p>With Sharp tip and wrong bleeder hole size</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097744790/in/dateposted-public/" title="LED Off"><img src="https://farm2.staticflickr.com/1463/26097744790_26c971e90e_z.jpg" width="640" height="360" alt="LED Off" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BE9fx0AvUPB/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#DIY #PicknPlace #electronics #latenight #Hack #Smd</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-05-03T21:53:11+00:00">May 3, 2016 at 2:53pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>I just love the simplicity and fun of working with the WioLink. Truly fantastic what Seeed is offering at this price. They have to work a bit on the App as it crashes often. Rest all is in place. Lets see what more can we build with this !</p>
+<p>With everything fixed, Assembling first prototypes of <a href="https://makerville.io/knit/">Knit</a> .</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BFIl7NjsPXR/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Human pick and place machine - 1 @rohit7gupta - 1 syringe - 1 aquarium air pump</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Anuj Deshpande (@anujdeshpande) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-05-08T05:18:32+00:00">May 7, 2016 at 10:18pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p><em>References</em></p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=YhavXauuWqY">Felix is an inspiration</a></li>
+  <li><a href="https://www.youtube.com/watch?v=z7Tu8NXu5UA">Awesome SMD Soldering Tutorial</a></li>
+  <li><a href="https://www.youtube.com/watch?v=pdGSFc7VjBE">Mikeselectricstuff’s quick tips</a></li>
+</ul>
+
+<p>If you have any questions/suggestions etc please reach me via the comments section \m/</p>
 
 <p>Cheers,</p>
 

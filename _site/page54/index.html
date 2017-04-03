@@ -412,6 +412,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -465,129 +473,74 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
-        Nokia 5110 LCDs and MSP430
+      <a href="/2014/12/14/Tinker-Rule/">
+        TinkerRule- The Maker's Swiss Army Knife
       </a>
     </h1>
 
-    <span class="post-date">09 Nov 2014</span>
+    <span class="post-date">14 Dec 2014</span>
 
-    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.</p>
+    <p>This project was done during my time at <a href="http://www.cedtnsit.in/">TI-CEPD,NSIT,Delhi</a>. They have an awesome Winter Internship program going on, Be sure to have a look.</p>
 
-<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
+<p>I source a lot of my components from Local Markets in Delhi like <em>Lajpat Rai Market</em> etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate.</p>
 
-<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code class="highlighter-rouge">2.7-3.3V</code> happy for our MSP430.</p>
+<p>There are two ways to overcome this issue (assuming that the package is not standard) :</p>
 
-<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a></p>
+<ol>
+  <li>Measure each and every thing using a vernier and then make a part for it in eagle.
+    <blockquote>
+      <p>I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that <strong>most</strong> leaded parts can be resolved in a 0.1inch grid.</p>
+    </blockquote>
+  </li>
+  <li>Make a reference and then use that to make parts without picking up the vernier.
+    <blockquote>
+      <p>In this we make a reference for most common footprints and use them as a reference. What’s better is that the known reference helps in finding out packages of some component you found lying in the parts bin.</p>
+    </blockquote>
+  </li>
+</ol>
 
-<p>For TL:DR;</p>
+<p>So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on <em>Eagle</em> that can be etched. Nothing could offer me better precison than that.</p>
 
-<p>The LCD has the following pins to interface to:</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
+<p>After a few hours of designing, i etched the board (which took quite an effort), then selectively tinned a few pads and applied protective lacquer on the board.</p>
 
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Pin Number</th>
-    <th class="tg-031e">Pin Label</th>
-    <th class="tg-031e">Pin Function</th>
-    <th class="tg-031e">Input/Output?</th>
-    <th class="tg-031e">Notes</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">1</td>
-    <td class="tg-031e">VCC</td>
-    <td class="tg-031e">Positive power supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">2</td>
-    <td class="tg-031e">GND</td>
-    <td class="tg-031e">Ground</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">3</td>
-    <td class="tg-031e">SCE</td>
-    <td class="tg-031e">Chip select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">4</td>
-    <td class="tg-031e">RST</td>
-    <td class="tg-031e">Reset</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">5</td>
-    <td class="tg-031e">D/C</td>
-    <td class="tg-031e">Mode select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">6</td>
-    <td class="tg-031e">DN(MOSI)</td>
-    <td class="tg-031e">Serial data in</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">7</td>
-    <td class="tg-031e">SCLK</td>
-    <td class="tg-031e">Serial clock</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">8</td>
-    <td class="tg-031e">LED</td>
-    <td class="tg-031e">LED backlight supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
-  </tr>
-</table>
+<p>Here’s what i mananged.</p>
 
-<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
+<ol>
+  <li>
+    <p><strong>Continuity Tester</strong> : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
+<a href="https://www.flickr.com/photos/94411929@N06/15831125987" title="Tinker Rule Continuity by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
+  </li>
+  <li>
+    <p><strong>Standard Packages</strong> : Some standard packages used, good to compare them and match.
+<a href="https://www.flickr.com/photos/94411929@N06/16016173942" title="Tinker Rule Footprints by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8570/16016173942_aff8aefc2f_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
+  </li>
+  <li><strong>0.1 inch grid</strong> : This is the best one and used most of the times. Makes it easy to simulate breadboard/perfboard behaviour.
+<a href="https://www.flickr.com/photos/94411929@N06/16016646101" title="0.1inch Grid by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8581/16016646101_8945045d09_z.jpg" width="640" height="359" alt="0.1inch Grid" /></a></li>
+  <li>
+    <p><strong>Common Drills</strong> : Most common drill sizes(bits) , just see what inserts easily and voila, we have a good enough drill size. 
+<a href="https://www.flickr.com/photos/94411929@N06/15396343364" title="Standard Drills by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7465/15396343364_a16d3cea16_z.jpg" width="640" height="359" alt="Standard Drills" /></a></p>
+  </li>
+  <li>
+    <p><strong>Track Widths</strong> : Compare track widths on the go.
+<a href="https://www.flickr.com/photos/94411929@N06/16017936652" title="Tracks by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8603/16017936652_40ce3d6217_z.jpg" width="640" height="359" alt="Tracks" /></a></p>
+  </li>
+  <li>
+    <p><strong>Right angled rule with both inch and cm scale</strong> : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
+<a href="https://www.flickr.com/photos/94411929@N06/15992846056" title="CM Scale by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg" width="640" height="359" alt="CM Scale" /></a>
+<a href="https://www.flickr.com/photos/94411929@N06/15832394669" title="Complete by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="WP_20140511_00_36_03_Pro" /></a></p>
+  </li>
+  <li><strong>Rust Buster</strong> : A fine sandpaper to rust off those parts that just dont solder .
+<a href="https://www.flickr.com/photos/94411929@N06/15397629893" title="TinkerRule SandPaper by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8622/15397629893_70cf484542_z.jpg" width="640" height="359" alt="TinkerRule" /></a></li>
+</ol>
 
-<p>At a time you write to a single bank.</p>
+<p>I have now been using it for quite sometime and its really useful and serves the purpose.</p>
 
-<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
+<p>If you are interested in this i can mail you the file , just drop me an email at indiantinker [at] gmail [dot] com.</p>
 
-<p>The communication is done using SPI.</p>
+<p>Cheers!</p>
 
-<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG’s post</a>.</p>
+<p>Rohit</p>
 
-<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
-
-<p>Connections are as follows(PORT1):</p>
-
-<ul>
-  <li>LCD5110_SCLK_PIN- BIT5</li>
-  <li>LCD5110_DN_PIN- BIT7</li>
-  <li>LCD5110_SCE_PIN- BIT0</li>
-  <li>LCD5110_DC_PIN- BIT1</li>
-</ul>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
-<br /></p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
-
-<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
-
-<p>If you have any difficulties post here in comments</p>
 
   </div>
   

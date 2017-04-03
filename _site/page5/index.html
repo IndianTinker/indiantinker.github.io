@@ -412,6 +412,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -465,72 +473,101 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/02/12/InstallationReality/">
-        Installation- Men and Three Worlds
+      <a href="/2017/03/12/100kmmumbai/">
+        Me Dinojh and 100kms on cycle
       </a>
     </h1>
 
-    <span class="post-date">12 Feb 2017</span>
+    <span class="post-date">12 Mar 2017</span>
 
-    <p>Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI conference at IIT Bombay.</p>
+    <p>Crazy things happen , <em>sometimes</em>. This was one of those crazy things. Cycling has recently been my favorite sport and medium of geographical exploration. Over-complicating isn’t it. I love to cycle around the campus. In the morning you have this cool breeze that wakes your lethargic body up from within when you cycle around.</p>
 
-<p>The idea initially was to ask people solve a rotating puzzle using in air gestures. In-air, gestures, Low tech ? Does it ring something to the occasional hacker? Yes we zeroed it on the ultrasonics for it. They work great but they are like pigeons you see. They don’t work well when a lot of them are around. They cause errors due to proximity with other sensors, angles etc.</p>
+<p>My good friend (Dinojh) who is also an amazing maker, a Product Designer and a cyclist helps me and essentially ignites the wacky cycling plans, I make. He has never said <strong>No</strong>. But this time after our last trip that was planned for Matunga ended up in an almost Dadar Darshan, I was cautious.</p>
 
-<blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:47.5462962962963% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-07T08:47:49+00:00">Dec 7, 2016 at 12:47pm PST</time> को <a href="https://www.instagram.com/p/BNtbMWwlrxD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Rohit Gupta (@rohit7gupta) posted</a></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<p>I wanted to cycle in South Bombay, especially the Marine Drive. So, the plan was to lug the cycle in the Local and reach CST and then cycle around, have breakfast and come back via Train preferably or if possible we can cycle back.</p>
 
-<p>We further had pin number issues as to connect 10 of these we would need at-least 20 pins (Trig and Echo) on each. This is not so exciting on an UNO. I experimented with the idea of multiplexing the trig pin. Just made the trig pin common to all. Then we had drive issues. Next we had a combination of 5 triggers clubbed together. It improved but occasionally a sensor or something would just go off. We tried trouble-shooting with a logic analyser. Nothing got shot though. The problem was zero-ed down to the fact that there is a propagation delay and also the current is not enough for the meters of wire we are dealing with. Maybe we could have tried using a MOSFET to drive the trigger pin. But well these <strong>Maybes</strong>.</p>
+<p>By (Safety Officer) Dinojh has other plans always. He is the one who hates public transport and would cycle anywhere. The only line of reason being , “Why not?”.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32726543801/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/3/2501/32726543801_2766dc7d06.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>We ended ditching the Train out of the plan altogether. It ended up a 101.2km ride to and fro from IIT Bombay. Back breaking, mind numbing but we did quite a lot of exploration, actually most of South Bombay was peddled.</p>
 
-<p>As its the case always, we were terribly short of time. We decided keep the core idea intact and changed the interaction to the world’s most democratic way of doing things - <em>The Switch</em></p>
+<p>Phew. Lets start from the beginning.</p>
 
-<p>Now electronically we were, pressing switches and moving motors. I <strong>made</strong> motor drivers using TIP122 darling-ton transistors. I have my ears plugged if your ask me whether I used free-wheeling diodes or not. The arduino is redundant now though. We did not use it.</p>
+<p>We started from IIT around 6:45am in the morning. It was cold. The supplies to the canteen were coming in. We knew we wont be having any breakfast till CST so, ate up energy bars to help us fueled up. We carry 5litres of water as Dinojh always insists that he runs on water.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32726504561/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/1/288/32726504561_677c071241.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>We took the eastern expressway all the way till CST. Stopping multiple times and having been lured into a few <em>detours</em> thanks to those escher-ed flyovers Bombay has.</p>
 
-<p>The motors and the baffling wires. We had a volunteer (Rishabh) with us to help us.</p>
+<p>We reached CST. It felt great. Actually we were peddling under a highway and it was CST all of a sudden.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32696598642/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/4/3803/32696598642_7ef62c024d.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33222373636/in/dateposted-public/" title="IMG_20170226_083422"><img src="https://c1.staticflickr.com/1/669/33222373636_1d416229d0_z.jpg" width="640" height="480" alt="IMG_20170226_083422" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Now, if you are wondering what puzzle ? There were several ideas we played with like a three faced puzzle that have a common element so every state of the puzzle made some sense and only the completed one made most sense, or we could have a generative story puzzle which had constant fun at every state of the puzzle, or we could have a <em>cards against humanity</em> kind of gameplay . Since, it was desired to keep it more visual rather than cerebral. We gave to using pictures. Thanks to <strong>Salik</strong> from senior VC with some help from Malay we had an amazing eye puzzle.</p>
+<p>We had breakfast at the Legendary Kyani Bakery. I really love the idea of hanging stair supports that they have.I had already tasted the place the last week in a cheese craving trance. Decent is my verdict. Lets not wake up the foodie inside. Ummmm.</p>
 
-<p>The art was printed on a HP sheet and was hand cut to make those triangles.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32624876730/in/dateposted-public/" title="2017-02-19 03.07.15 1"><img src="https://c1.staticflickr.com/3/2357/32624876730_02d91911be_z.jpg" width="640" height="640" alt="2017-02-19 03.07.15 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32035519643/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/3/2474/32035519643_a2b5fda13d.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33263983785/in/dateposted-public/" title="IMG_20170226_084833"><img src="https://c1.staticflickr.com/1/656/33263983785_153eb1dcbf_z.jpg" width="640" height="480" alt="IMG_20170226_084833" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The frame looked like :</p>
+<p>Look what we found in the parking lot</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32696619622/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/1/292/32696619622_934a5420b5.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33107954492/in/dateposted-public/" title="IMG_20170226_091636"><img src="https://c1.staticflickr.com/3/2819/33107954492_b7c20878d2_z.jpg" width="640" height="480" alt="IMG_20170226_091636" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The puzzle represents reality. There are tons of realities that we are exposed to. Some we like, some we make and some we live in. There is a constant struggle to make our reality the way we see. But its difficult, chaotic and challenging. Then you <strong>see</strong> the reality and try to change it but its not entirely in your control.</p>
+<p>Next up was Nariman Point which would set the starting point of our Marine Drive Adventure Lap.</p>
 
-<p>This was the final idea of our installation titled - <em>Men and Three Worlds</em> .</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32337276544/in/dateposted-public/" title="2017-02-26 09.38.22 1"><img src="https://c1.staticflickr.com/3/2820/32337276544_79d01e0fd6_z.jpg" width="640" height="480" alt="2017-02-26 09.38.22 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32850126965/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/1/436/32850126965_681d9b81e9.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" align="center"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32800326320/in/dateposted-public/" title="2017-02-26 09.35.59 1"><img src="https://c1.staticflickr.com/4/3877/32800326320_a4681a0d1f_z.jpg" width="640" height="480" alt="2017-02-26 09.35.59 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<blockquote>
-  <p>The above image was clicked at 4am and has historical and emotional relevance to me , my amazing seniors Herold and Abhijith . #RaatKePathar</p>
-</blockquote>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32800330350/in/dateposted-public/" title="2017-02-26 09.18.52 1"><img src="https://c1.staticflickr.com/4/3724/32800330350_ca57f58f36_z.jpg" width="512" height="640" alt="2017-02-26 09.18.52 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The participants will be presented with a console to adjust the puzzle state and they have to align the entire matrix to make an image. The catch is that the mapping is <em>real</em>. There is a two stage randomness. Some of the sections move clockwise while others move anticlockwise. The second layer is that the buttons are not mapped to the sections. So, the first button does not move the first section, it moves the third section (suppose). These things make the installation a real reflection. The best part was when there was just one piece left and people fail to remember which switch would move what section and they end up messing it all over again.</p>
+<p>Now we cycled from Nariman point till we lost our breath, guess where? Bandganga, near Malabar Hills.</p>
 
-<p>We later found out the message was a bit heavy for the place and people were rather happy with virtual and augmented realities.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33135629431/in/dateposted-public/" title="IMG_20170226_100757"><img src="https://c1.staticflickr.com/1/698/33135629431_583eeae020_z.jpg" width="640" height="480" alt="IMG_20170226_100757" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>My seniors Herold and Abhijith testing the thing in the lab.</p>
+<p>The place looked nice for cycling. So, we cycled criss cross in the area. I could not manage some of the climbs though. Lured by the decent, we came down to Marine Drive. Boooo.. We missed Hanging Gardens it seems. No point of coming this far and not visiting Hanging Gardens, said Dinojh.</p>
 
-<blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-09T05:28:37+00:00">Dec 8, 2016 at 9:28 am PST</time> को <a href="https://www.instagram.com/p/BNyN_ONFOXi/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Rohit Gupta (@rohit7gupta) posted it</a></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<p>Okay Then!</p>
 
-<p>Abhijith filling stones and perfecting the weight distribution.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33135626571/in/dateposted-public/" title="IMG_20170226_104614"><img src="https://c1.staticflickr.com/1/570/33135626571_352307ba9e_z.jpg" width="640" height="480" alt="IMG_20170226_104614" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32007148244/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/3/2417/32007148244_432a1b8da7_z.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>We also planned to learn more about the <em>Tower of Silence</em>. But it turned out to be a private property. No Entry la !</p>
 
-<p>Testing once again.</p>
+<p>But here is the cliched point to click the queen’s necklace. Yeah Yeah! The shoe house was still there.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32726504811/in/dateposted-public/" title="Project"><img src="https://c1.staticflickr.com/1/262/32726504811_c0cf7c870d.jpg" width="640" height="480" alt="Project" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33025980422/in/dateposted-public/" title="2017-02-26 11.04.15 1"><img src="https://c1.staticflickr.com/1/699/33025980422_74d07db0db_z.jpg" width="640" height="480" alt="2017-02-26 11.04.15 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The project was made successful by Herold, Abhijith, Chinmay, Rishabh, Salik, Silpa, Malay, me and amazing volunteers of India HCI .</p>
+<p>Hungry again, we went back to Kyani and had some food. The place has for me temporarily crossed its marginal utility.</p>
+
+<p>Next, we visited JJ School of Art to check out the amazing Fine Art exhibition. Thanks Avinash for the tip. Some pictures.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33025984352/in/dateposted-public/" title="2017-02-26 01.46.11 1"><img src="https://c1.staticflickr.com/4/3826/33025984352_c8aff0c3b4_z.jpg" width="480" height="640" alt="2017-02-26 01.46.11 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32800327660/in/dateposted-public/" title="2017-02-26 12.49.32 2"><img src="https://c1.staticflickr.com/1/663/32800327660_3daac16439_z.jpg" width="480" height="640" alt="2017-02-26 12.49.32 2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33025978642/in/dateposted-public/" title="2017-02-26 01.45.53 1"><img src="https://c1.staticflickr.com/3/2844/33025978642_36aa6850e8_z.jpg" width="640" height="480" alt="2017-02-26 01.45.53 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33054742441/in/dateposted-public/" title="2017-02-26 12.47.50 1"><img src="https://c1.staticflickr.com/3/2812/33054742441_2d2001b9d2_z.jpg" width="480" height="640" alt="2017-02-26 12.47.50 1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33394872755/in/dateposted-public/" title="IMG-20170227-WA0026"><img src="https://c1.staticflickr.com/1/568/33394872755_6275ddd54a_z.jpg" width="640" height="359" alt="IMG-20170227-WA0026" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Photography was restricted inside and we are law abiding citizens. So, yeah ! This is what we could capture.</p>
+
+<p>Next what?
+Well lots of it. Lets go to Fashion street. Why? Because its there and Dinojh has not seen it. Same for Gateway, NGMA, Price of Wales Museum and then back to CST.</p>
+
+<p>We got ourselves clicked an instant photo at Gateway. The photographer was a part time working student and taught us some cool street photography tricks especially in sun.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32580676763/in/dateposted-public/" title="2017-03-12_05-45-12"><img src="https://c1.staticflickr.com/4/3734/32580676763_bf4f84d663_z.jpg" width="640" height="480" alt="2017-03-12_05-45-12" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>From CST we started our deadman’s crawl back home. I barely managed to be back. One should <strong>always</strong> buy those cycling shorts and not just go. Be like Dinojh.</p>
+
+<p>I remember this particular instance when I almost gave up around Dadar and was pissed off at the traffic condition there. You had these Taxi’s on the road side, they dont have a hazard switch or its very difficult to operate. Then as you would be passing by, like a dormant land mine he would come in your path and you apply those discy drum brakes.</p>
+
+<p>Now imagine to do this multiple times in the next 1km. Takes the fun out. I dislodged from the cycle and walked a while. Dinoj like a horse would just go until he would realize that he is not riding alone. I walked and asked Dinojh, “ Dudeh (h is mandatory to make it sound like mallu), I wont be able to make it, my back hurts and blah..blah..” He said , “just smile (plus some random convincing stat about muscles)  and  change the posture to this”.</p>
+
+<p>That actually helped, i mean the posture part. As we made it to the Eastern Highway, we had a smooth journey post that. We we entered campus back, it was as if some refugees came back to their motherland. We cycled faster and reached hostel. Puffff.</p>
+
+<p>Mission Accomplished.</p>
+
+<p>Thank Youh Dinojh :)</p>
 
 <p>Cheers,</p>
 

@@ -412,6 +412,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -465,45 +473,93 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/10/12/RTLSDR1/">
-        Getting Started with RTL SDR- Playing some old school FM
+      <a href="/2015/10/22/OpenBadge/">
+        Open Badge:You'da Maker
       </a>
     </h1>
 
-    <span class="post-date">12 Oct 2015</span>
+    <span class="post-date">22 Oct 2015</span>
 
-    <p><em>This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online</em></p>
+    <p>Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.</p>
 
-<p>SDR ? 
-Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those ‘virtual’ components. Sounds Expensive?</p>
+<p>For the LED array we could use the usual LED Matrix,5x7 seemed to be a good size comfortable for both the pins and programmer.But..</p>
 
-<p>SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like <a href="http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html">this</a> or <a href="http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820">this</a> .</p>
+<p>The LED Matrix available in stores nearby had a lot of issues:</p>
 
-<p>The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">link</a> for more. But many folks have mentioned R820T being much more stable than E4000.</p>
+<ul>
+  <li>Profile was too thick</li>
+  <li>The sizes available were either too big or too small for a 5x7 size.</li>
+  <li>Came with no datasheet, which meant bull work required to find out all the R and C values. Dahh!</li>
+</ul>
 
-<p>I bought one of these a while back. I comes with a small antenna, a remote and the main dongle.</p>
+<p>So, I had to make a <strong>tough</strong> choice of soldering 35 LEDs which meant the PCB was going to be <em>Dou.Double Sided</em> (Literal stammering). I had never done double sided at home. But it was never too late and that difficult. <strong>Basically</strong> you have to align two sides and just slip in the copper clad , tape it , iron it and  etch it and then <em>Hope is all you need</em> !</p>
 
-<p>Since, more ‘easy to dive in’ stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.</p>
+<p>FYI, that ‘basically’ came after i spoilt one full PCB.</p>
 
-<p>There are lots of cool software tools available to get started. The most common being <a href="http://airspy.com/download/">SDR#</a> probably written in C#. An amazing getting started post is written <a href="http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/">here</a>.</p>
+<blockquote>
+  <p>PRO-TIP: You can have some alignment marks out of the scope of PCB in different directions in the dimension layer. Now when you align the front and back you just align the marks. Check this <a href="http://www.instructables.com/id/Two-sided-PCB-using-toner-method/">instructable</a> i used as a reference.</p>
+</blockquote>
 
-<p>Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up <a href="http://1drv.ms/1LoLvdn">here</a> or by Adafruit <a href="http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip">here</a>.</p>
+<p>The major elements on the PCB were:</p>
 
-<p>After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.</p>
+<ul>
+  <li>LED Matrix</li>
+  <li>A MSP430G2553 microcontroller brain</li>
+  <li>A ULN2803 Darlington Driver to sink the current</li>
+  <li>A USB connector to charge the battery</li>
+  <li>A SBW connector to program the MSP430</li>
+  <li>A Switch to change the message</li>
+  <li>A Li-Ion battery from a Discarded Phone</li>
+  <li>Current limiting and Pull up resistors</li>
+  <li>Decoupling Capacitors</li>
+  <li>A REG1117 Regulator for MSP430</li>
+</ul>
 
-<p>As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..</p>
+<p>Schematics and PCBs took 3 days of part-time work. Etching,Drilling and Soldering took a nighter.I had a provision to use the PCB directly as the badge with two big drill holes on the top.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/" title="fm1"><img src="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" width="640" height="360" alt="fm1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Check out the images below:</p>
 
-<p>You can also check out another great software called <a href="http://sdr-radio.com/Software">SDR Console</a>. Its a much more ‘Pro-ish’ SDR receiver available. This again wont work out of the box. You can follow this <a href="http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html">link</a> for more instruction on getting RTLSDR USB support on SDR Console.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736425093/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5823/20736425093_7349c070f7_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21346949492/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/737/21346949492_c5295449cb_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/" title="sdrconsole"><img src="https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg" width="640" height="360" alt="sdrconsole" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736678943/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5800/20736678943_11ac529978_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Hope you found this useful! Next? Maybe we should check out the planes or satellites ?</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21365927401/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/612/21365927401_052a3bfdef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Cheers !</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736053114/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/575/20736053114_bf0ed32bef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21171876949/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/676/21171876949_394ce34d21_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21169357760/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/568/21169357760_4dc214b3f0_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>After experimenting with readability, i found out that the display was a dud in bright light. So, i repurposed an already cut-out heart shaped Red Diffuser for the display. It was a game changer.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21510455275/in/dateposted-public/" title="P_20150917_110935"><img src="https://farm1.staticflickr.com/567/21510455275_37e0e33463_z.jpg" width="360" height="640" alt="P_20150917_110935" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The basic code is available <a href="https://github.com/IndianTinker/OpenBadge">here</a> for people who wish to build it.
+The final version could do:</p>
+
+<ul>
+  <li>5 Strings scrolling</li>
+  <li>Temperature Display (MSP430s have a temperature sensor in-built)</li>
+  <li>Static Display</li>
+</ul>
+
+<p>Things that the hardware allowed but i didnt get the time to program:</p>
+
+<ul>
+  <li>Battery state sensing</li>
+  <li>Animations</li>
+</ul>
+
+<p>When i showed it to <a href="https://twitter.com/anool">@anool</a> at Maker Fest, he liked it and gave me a <a href="http://wyolum.com/projects/badger/">BadgEr</a> which was even cooler.</p>
+
+<p>Please check out the video below:</p>
+
+<iframe width="480" height="360" src="https://www.youtube.com/embed/KU9X9qTaQvg" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Cheers !!</p>
 
 <p>Rohit</p>
 

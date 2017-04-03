@@ -4,13 +4,70 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-01T22:04:58+05:30</updated>
+ <updated>2017-04-03T15:47:47+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>How does this city sound ?</title>
+   <link href="http://localhost:4000/2017/04/03/Soundsofcity/"/>
+   <updated>2017-04-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/04/03/Soundsofcity</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;sensory&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We explored the possible ways to experience at city by just sounds and ended up creating a system that maps these sounds as well. The system can be seen in action &lt;a href=&quot;http://rohitg.in/soundsofcity.html&quot;&gt;here&lt;/a&gt;. It uses Mapbox flavoured openstreet maps with soundcloud to embed the recorded sounds.&lt;/p&gt;
+
+&lt;p&gt;We experimented with things like :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Binaural Recording&lt;/li&gt;
+  &lt;li&gt;Storytelling with sound&lt;/li&gt;
+  &lt;li&gt;Spatial augmentation of sound using 3 axis sensors and openAL. (To be replaced by Unity or SFML)&lt;/li&gt;
+  &lt;li&gt;Geospatial Mapping of Sound (prototyped using processing and implemented using MapBox)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33678280611/in/dateposted-public/&quot; title=&quot;Sounds&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg&quot; width=&quot;500&quot; height=&quot;421&quot; alt=&quot;Sounds&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The project is documented in the video below: ( I will add a one page TL;dr version soon )&lt;/p&gt;
+
+&lt;iframe src=&quot;https://drive.google.com/file/d/0B-2TEMdgVwl4RHNJcXJLd1IwYUU/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The presentation is as follows:&lt;/p&gt;
+
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/1OpqOCdbN_42WugLY2KXdvVErJ96BkXanpejnTeZJ0Kg/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;389&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>City Bot, may i take your order please</title>
+   <link href="http://localhost:4000/2017/04/03/CityBot/"/>
+   <updated>2017-04-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/04/03/CityBot</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;cognitive&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The project is documented in the presentation below: ( I will add a one page TL;dr version soon )&lt;/p&gt;
+
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/1R_1AwR01hkvMXGEM0lOZI4ewORzedBSGex8VZe0hKAc/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;389&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Hacking with Bamboo in the Field</title>

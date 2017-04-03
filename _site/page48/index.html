@@ -412,6 +412,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -465,95 +473,89 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/04/12/NoobsGuide/">
-        The Noob's Guide to Pune Relocation
+      <a href="/2015/05/01/RoomMote/">
+        RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia
       </a>
     </h1>
 
-    <span class="post-date">12 Apr 2015</span>
+    <span class="post-date">01 May 2015</span>
 
-    <p>It has almost been 8 months since i moved to Pune for Work from my hometown <em>Delhi</em> . Pune has a comparably benevolent weather as compared to Delhi. Summers are sweeter and so are winters. People of the city are great. They are quite helpful and humble. The city’s older areas have stark resemblance to Old Delhi and has lots of nice Forts, Temples, Museums and best of all eateries. Language is not a major issue as Marathi is somewhat similar to Hindi and most people understand Hindi but prefer to talk in Marathi. <em>Changla !</em></p>
+    <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .</p>
 
-<p>I am writing is post mostly in a log format and will keep adding information as an when I get more.</p>
+<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting?</p>
 
-<p>If google sent you here, then probably you too are interested/moving to Pune soon.I hope you find the information useful. The post is divided into several important sections that will be updated from time to time. Lots of unorganized info to follow so lets get started:</p>
+<p>Interesting !!</p>
 
-<p><strong>Shelter</strong></p>
+<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and “no mess visible”. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project.</p>
 
-<p><em>This section deals with housing related things</em></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box" /></a></p>
 
-<ul>
-  <li>If you are coming here for an IT company, most of them are concentrated in <em>Hinjewadi and Wakad</em> side of Pune, which geographically comes under Pimpri Chinchwad city of Pune Metropolitan Region. Then most popular housing locations will be Wakad, Hinjewadi, Vishal Nagar(Jagtap Dairy), Pimple Saudagar and Pimple Gurav.</li>
-  <li>Before you hit the land, searching for houses/flats , take note of the relocation policy of your company and make sure brokerage is covered.</li>
-  <li>Choose room-mates wisely. Initial judgements can be pretentious. You would certainly like to live with people on the same frequency as your’ s else, things could go wary.</li>
-  <li>Prefer searching online on sites like <a href="http://housing.com/">Housing.com</a>, <a href="http://www.magicbricks.com">MagicBricks</a> etc first and prefer ones that are listed by Owners themselves to avoid steep brokerage , which is usually 1 month rent for 11 months agreement and 2 months rent for more than 11 months.</li>
-  <li>Most societies have a board <em>Beware of Dogs</em> right below a board that says <strong>Bachelors Not Allowed</strong> that pretty much sets their priorities straight. Dont go looking for flats in them.</li>
-  <li>Prefer on <em>pakka</em> agreement which requires you to go to the municipality office against a Notary Agreement. This depends on the landlord entirely. A pakka agreement is useful when you wish to own a vehicle in Pune where a notorized one bites the dust.</li>
-  <li>In case you need furniture, the market has a rental based system. You can buy cheap and flimsy furniture and once you leave you can return it for 50-60% its value. Mattresses are also available for cheap.</li>
-  <li>Some flats come with a furnished status but are usually 10k more than normal. If you plan to stay about 11 months then evaluate the economics. 10k* 11 = 1,11,000 INR. So, if the facilities are worth that even after depreciation. Go for it! else negotiate.</li>
-  <li>Chalk out a <em>Room Mate Agreement</em> like Sheldon ! It helps in long run.</li>
-  <li>D Mart is the best place to shop here.</li>
-</ul>
+<p>So, the plan was   :</p>
 
-<p><strong>Transportation</strong></p>
+<blockquote>
+  <p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall).</p>
+</blockquote>
 
-<p><em>This section deals with Transportation related things</em></p>
+<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don’t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
 
-<h2 id="expect-nothing">Expect Nothing</h2>
+<p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
 
-<ul>
-  <li>The city’s transport is abysmal and has been so since ages. The Pune City is a bit better but PCMC is worse. Its like Noida of Pune. Auto walla’s make money on your sufferings.Prefer Ola Cabs !</li>
-  <li>You wont get a direct bus quite often. That was pretty irritating initially until i met Mr. Chaturvedi on the Rakshak Chowk Bus Stop one day. He his golden words were:  “Only a few buses go to your destination directly, but many go that way !” Saying so he boarded his bus to Vishrantwadi leaving me with ideas ! So, the trick is use <strong>Here Transit</strong> to find buses that go in the direction you want and board them and deboard at the point they divert from your path and then reboard. So, if you want to go to FC Road. Take a bus for PMC/Station and use the above algo.</li>
-  <li>Get a 2 wheeler (I don’t have one though) ! OLX is great place to find or go to Rasta Peth for second hand stuff. Again you have to pay more to the brokers here, and a notorized agreement wont work !</li>
-  <li>There is also a local train service in Pune but is not preferred unless you wish to travel out of the city like going to <em>Lonavala</em> or <em>Malavali</em> etc.</li>
-  <li>If you wish to go to Mumbai ! Trust only <strong>Shivneri</strong> , Neeta has a terrible service everywhere and even to Ahemadabad (Been there Done that). You can also take shared cabs from Chinchwad Station. They charge about 200 - 250 bucks based on demand.</li>
-</ul>
+<p>For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used <a href="http://www.ti.com/lit/ds/symlink/uln2803a.pdf">ULN2803</a> , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.</p>
 
-<p><strong>Food</strong></p>
+<p>For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged 100mA LDO .</p>
 
-<p><em>This section deals with Food related things</em></p>
+<p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
 
-<ul>
-  <li>Everything is awesome! There are lot of options here. Dosa’s and Vada Pao’s are like staple street foods. The Standard Price for Vada Pao is 10 bucks and Dosa is 20- 30 bucks .</li>
-  <li>There are lot of good places in the city. Try GoodLuck Cafe’s Fruit Fanny,La Plaisir Patisserie &amp; Bistro’s Chesse Cake, Garden Vada Pao , Marz-o-rin’s Sandwiches, Durvankur’s Thali or Sabutdana Wadi at Shaniwar Wada. Check Zomato for more listings. There is a <em>Burger King</em> as well in Koregaon Park where you get <em>gross</em> burgers and the infamous <em>German Bakery</em> is there too, near Osho Ashram</li>
-  <li>You can’t get on eating from these restaurants on daily basis so, for usual days you can either hire a cook. There is no dearth of them and they charge around 600-700 per head.</li>
-  <li>If cook is too much of a pain, go get a dabbawalla . He serves hot food in a tiffin at a reasonable price. Do ping me in the comments if you need any contacts. I have tried about 4 of them :P</li>
-</ul>
+<p>That’s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
 
-<p><strong>Internet</strong></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched" /></a></p>
 
-<p><em>This section deals with Connectivity related things</em></p>
+<p>Some soldering !</p>
 
-<ul>
-  <li>Internet Broadband service is a booming business here and there are tons and tons of them. To name a few Spectranet, iConnect, Reliance, Tikona, Tata Docomo, Airtel etc.</li>
-  <li>Tikona is Ok and there are several breakdowns, but customer service is good.</li>
-  <li>Docomo is great but limited to certain societies only.</li>
-  <li>Reliance s*#ks as usual ! No support and useless Helplines, but its the cheapest.</li>
-  <li>iConnect and Sprectranet are good too but again limited to some societies.</li>
-  <li>As far as cellular connectivity is concerned. Voda&gt;Idea&gt;Airtel&gt;Docomo</li>
-</ul>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side" /></a></p>
 
-<p><strong>POIs</strong></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled" /></a></p>
 
-<p><em>This section deals with Places to roam around</em></p>
+<p>and some Brain Implant ( aka Code Download )</p>
 
-<ul>
-  <li>Shaniwar Wada</li>
-  <li>Dagdu Shet Ganpati Temple</li>
-  <li>Raja Dinakar Museum</li>
-  <li>Lonavala</li>
-  <li>Karla Caves , Malavali</li>
-  <li>Sinhagad Fort</li>
-  <li>Bike ride through Pashan Area</li>
-  <li><em>will add more as i visit</em></li>
-</ul>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant" /></a></p>
 
-<p>Hope people find this useful!</p>
+<p>The Code :</p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script>
 
-<p>Cheers !!</p>
+<p>Then modifying the nice little box to suit the PCB  (That moment when you say, “If only i had a 3D Printer” )</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall" /></a></p>
+
+<p>Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say <strong>Manual Over-ride</strong> ?</p>
+
+<p>The wiring mess inside the switch-board.
+<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board" /></a></p>
+
+<p>All cleared up !
+<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out" /></a></p>
+
+<p>After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up.</p>
+
+<p>Now with a press of the button, Its all done ! I already feel so lazy!</p>
+
+<p>And yes here are the colors !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights" /></a></p>
+
+<p>Dont forget to watch the video below and if you have something to say, Please Comment Down here!</p>
+
+<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

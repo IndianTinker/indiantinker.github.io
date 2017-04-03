@@ -412,6 +412,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -465,106 +473,42 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/02/04/spectravulizer/">
-        SpectraVUlizer- Lights,Music and Magic
+      <a href="/2016/03/19/ARCards/">
+        Augmenting Reality with Visiting Cards
       </a>
     </h1>
 
-    <span class="post-date">04 Feb 2016</span>
+    <span class="post-date">19 Mar 2016</span>
 
-    <p>One day while chatting with my good friend <a href="https://twitter.com/mrrituparna">Rituparna</a> we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more <em>dhinchaak</em>. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.</p>
+    <p>Augmented Reality? Virtual Reality? Reality Intervention? Such Reality, Much Wow!</p>
 
-<p>Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the <a href="http://tah.io/">Tah</a> as our number cruncher of choice.</p>
+<p>We humans have always had the craving for <em>not-so-real</em> things. Books, Theatre, Movies embody the idea and use various mediums to present the cooked up reality. But the keyword <strong>Personal</strong> is IN. This word also has its own story whose value has decreased from the time of Personal Chauffeur to Uber. We now consume reality personally.</p>
 
-<p>One fine afternoon we met at <a href="http://www.meetup.com/Doo-Things/">doo Things</a> to get the project up and running. We decided to use the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7</a> which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
-Reading it is similar to how you read a shift register.</p>
+<p>So, instead of Tony,the Iron Man acting the same way for a billion earth inhabitants, we want him to be personal. Some don’t want him to hit the Hulk, some want him to probably not drive the R8 and rather drive the Lamborghini (I vehemently disagree to this one) .</p>
 
-<p>We followed the standard circuit from the datasheet and programmed the <strong>Tah</strong> to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.</p>
+<p>So, the crux is mediums are becoming personal and so is their content. Things will happen this way as these <em>“Things”</em> are getting more affordable.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/" title="WP_20150321_004"><img src="https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg" width="640" height="359" alt="WP_20150321_004" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>This time I thought of making some sense of the Augmented Reality. 
+With the growing trend of things that seem real but are not, I present to you ladies and gentlemen the <strong>AR Cards</strong>.
+These cards are basically pumped up visiting cards that enable users to project 3D models of their products/creations on their business cards using a Phone that has a camera. They can explain things in depth by moving the cards or phone relative to each other. I made one for myself with my favourite car , <em>Chevy Camaro</em> on it.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/" title="WP_20150321_006"><img src="https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg" width="640" height="359" alt="WP_20150321_006" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>I also added some value to the Vcard by adding a scale to measure things. I kind of like <a href="/2016/01/01/MakersRule/">scales</a>. There is the usual QR code.</p>
 
-<p>The test code we used is as follows:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25270472733/in/dateposted-public/" title="Front Side with a usable scale"><img src="https://farm2.staticflickr.com/1639/25270472733_53bae50a27_z.jpg" width="640" height="480" alt="Front Side with a usable scale" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cm">/*
-Released under MIT License
-A project by Rituparna and Rohit
-*/</span>
+<p>On the back we have the <em>marker</em> that is used by the App to gauge the position and orientation of the object to be placed. The marker is at an offset, so that makes enough space for a note which we usually scribble on the card <em>somewhere</em>. Now that somewhere as a space for it.</p>
 
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25778418582/in/dateposted-public/" title="Marker Image for AR"><img src="https://farm2.staticflickr.com/1524/25778418582_bbbafbf4cb_z.jpg" width="640" height="480" alt="Marker Image for AR" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;
-#define NEOPIXELPIN 4
-</span>
-<span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="n">NEOPIXELPIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
+<p>The screen-shots from the mobile app !</p>
 
-<span class="k">const</span> <span class="kt">int</span> <span class="n">analogPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">strobePin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">resetPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25899192545/in/dateposted-public/" title="3D Object mapped on the marker"><img src="https://farm2.staticflickr.com/1612/25899192545_375d9f0a32_z.jpg" width="640" height="360" alt="3D Object mapped on the marker" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<span class="kt">int</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span> <span class="c1">// to hold a2d values
-</span><span class="kt">int</span> <span class="n">doubledSpectrumValue</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
-<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span> <span class="c1">// Initialize all pixels to 'off'
-</span>  
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
-  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
-  
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
- 
-  <span class="c1">//Measure the magnitudes of the 7 frequency bins
-</span>  <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
-    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// to allow the output to settle
-</span>    <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">);</span>
-    <span class="n">avg</span> <span class="o">+=</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
-
-
-  <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span>
-
-  <span class="c1">//Clear out the NeoPixel String
-</span>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">144</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
-  <span class="p">}</span>
-  
-  <span class="c1">//Draw the meter on the NeoPixel string
-</span>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">map</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">144</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">60</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">map</span><span class="p">(</span><span class="n">spectrumValue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)));</span> <span class="c1">//Added blue flash for bass hit
-</span>  <span class="p">}</span>
-  
-  <span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">125</span><span class="p">);</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>
-So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
-</p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/xV4zOYUQKfM" frameborder="0" allowfullscreen=""></iframe>
-
-<p>The song is by Adiba Parveen just in case you like it. Its <a href="https://www.youtube.com/watch?v=h0EoMozYWSs">here</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25804236331/in/dateposted-public/" title="3D Object Mapped"><img src="https://farm2.staticflickr.com/1511/25804236331_d6ec513989_z.jpg" width="640" height="360" alt="3D Object Mapped" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   
