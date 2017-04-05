@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-03T15:47:47+05:30</updated>
+ <updated>2017-04-03T17:09:59+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -41,6 +41,22 @@
 &lt;p&gt;The presentation is as follows:&lt;/p&gt;
 
 &lt;iframe src=&quot;https://docs.google.com/presentation/d/1OpqOCdbN_42WugLY2KXdvVErJ96BkXanpejnTeZJ0Kg/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;389&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hey Happy !</title>
+   <link href="http://localhost:4000/2017/04/03/HeyHappy/"/>
+   <updated>2017-04-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/04/03/HeyHappy</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;social&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
