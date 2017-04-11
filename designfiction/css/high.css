@@ -1,0 +1,57 @@
+
+.green-highlight, .pink-highlight, .yellow-highlight {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+ }
+
+.green-highlight {
+    background-color:  rgb(0, 185, 231); /* Default color, all browsers */
+    color: black;
+    text-align: left;
+    font-style: normal;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.green-highlight::selection {
+    background:rgb(0, 185, 231);  /* Selection color, WebKit/Blink Browsers */
+}
+
+.green-highlight::-moz-selection {
+    background: #99CCCC; /* Selection color, Gecko Browsers */
+}
+
+.pink-highlight {
+    background: rgb(241, 84, 111) ;  /* Default color, all browsers */
+    color: black;
+    text-align: left;
+    font-style: normal;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pink-highlight::selection {
+    background: #FF99FF; /* Selection color, WebKit/Blink Browsers */
+}
+
+.pink-highlight::-moz-selection {
+    background: #FF99FF; /* Selection color, Gecko Browsers */
+}
+
+.yellow-highlight {
+    background: rgb(255, 215, 0); /* Default color, all browsers */
+    color: black;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.yellow-highlight::selection {
+    background: #FFFF66; /* Selection color, WebKit/Blink Browsers */
+}
+
+.yellow-highlight::-moz-selection {
+    background: #FFFF66; /* Selection color, Gecko Browsers */
+}
