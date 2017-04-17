@@ -9,7 +9,7 @@ tags:
 
 > This post describes the work done as a part of a course I took at *School of Design, IIT Bombay* . The name of the course is **Interaction Media and Senses**. The project was done during the *social* phase of the course that involved Sensory, Cognitive and Social parts. 
 
-
+The post is still in process of documentation.
 
 
 Cheers,
