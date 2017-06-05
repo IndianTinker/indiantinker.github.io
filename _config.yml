@@ -26,3 +26,7 @@ version:          0.0.1
 
 github:
   repo:           https://github.com/indiantinker
+
+kramdown:
+  input: GFM
+  hard_wrap: false
