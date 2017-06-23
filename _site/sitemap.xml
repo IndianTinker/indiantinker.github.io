@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://localhost:4000/2017/06/12/CHISVExp/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/2017/06/02/PoemSleeping/index.html</loc>
     </url>
     
@@ -883,6 +887,14 @@
     
     <url>
         <loc>http://localhost:4000/page70/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page71/index.html</loc>
     </url>
     
     

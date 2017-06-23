@@ -4,13 +4,137 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-06-05T14:14:57+05:30</updated>
+ <updated>2017-06-23T13:53:52+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>The CHI 17 Experience</title>
+   <link href="http://localhost:4000/2017/06/12/CHISVExp/"/>
+   <updated>2017-06-12T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/06/12/CHISVExp</id>
+   <content type="html">&lt;p&gt;I am just back from one of the most amazing conferences ever. Most of you might know but just to re-iterate, I was fortunate enough to be selected as a student volunteer at CHI 2017 conference in Denver, Colorado. Later we also made to the top 12 teams who were invited to present their work in the Student Design Competition. CHI stands for Computer-Human Interaction and is one of the oldest gatherings of Interaction Community in the world.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This post broadly describes the experience at the conference. Keep checking for more touristy and observation posts. I am happy to inform that a major part of the conference will be sponsored by &lt;a href=&quot;http://www.sigchi.org/conferences/funding/gary-marsden-student-development-fund&quot;&gt;Gary Marsden Student development fund&lt;/a&gt;.  I and my team members- Shilpa and Udayan are grateful to the committee members for considering us for the same.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We landed in Denver on 6th May late night. It was a long journey from Mumbai-New Delhi-London-New York- Denver. It was just in time to attend the SV briefing next day. The conference venue was the Colorado Convention Center, guarded by a giant Blue Bear. It was about 20min (of slow, exploratory) walk from our Hotel - 11th Avenue. The venue was fantastic and a mid-aged man would always greet you when you walked in like you were the chief guest. But he did that to everyone it seems.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384083486/in/album-72157682238049102/&quot; title=&quot;Denver Airport&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4248/35384083486_c4f540df0a_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;Denver Airport&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384083046/in/album-72157682238049102/&quot; title=&quot;RTD Bus&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4285/35384083046_d3c789bd22_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;RTD Bus&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384082076/in/album-72157682238049102/&quot; title=&quot;Night Street&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4256/35384082076_edd07cf478_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;Night Street&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384082576/in/album-72157682238049102/&quot; title=&quot;Reminds me of the Twin Peaks Black Lodge&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4229/35384082576_df395f8cec_z.jpg&quot; width=&quot;426&quot; height=&quot;640&quot; alt=&quot;Reminds me of the Twin Peaks Black Lodge&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384085746/in/album-72157682238049102/&quot; title=&quot;Convention Center&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4283/35384085746_c859ff29ca_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Convention Center&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293564261/in/album-72157682238049102/&quot; title=&quot;Convention Center&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4244/35293564261_0ed29f0537_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Convention Center&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384085436/in/album-72157682238049102/&quot; title=&quot;Streets of Denver - A memoir&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4244/35384085436_04e40afe4f_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Streets of Denver - A memoir&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35257013872/in/album-72157682238049102/&quot; title=&quot;Capitol&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4205/35257013872_1d3702569e_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Capitol&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;As a volunteer, I had to put in 20 hours in return for awesomeness. In the briefing, Anna and Patrick, the chairs, explained us the gravity and breadth of our work. An important line that kind of sticks was “ SVs are the interface of the conference”. The kind of efforts the chairs put in is commendable. They reply to each and every query any SVs have. Many SVs were not Locals and hence communication is the key to establishing confidence in such cases. After the briefing, a tour of the venue was given and we had to collect our IDs and Tshirts - Orange ones.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35257013242/in/album-72157682238049102/&quot; title=&quot;SV Briefing&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4226/35257013242_59f6864c78_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;SV Briefing&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35257017032/in/album-72157682238049102/&quot; title=&quot;Body Armour&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4263/35257017032_6bbebc268e_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;Body Armour&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Our competition was in the later half of the conference and I spent most of the time doing my SV tasks and attending sessions. The opening plenary was by Prof. Neri Oxman from Media Labs. It was an excellent session in which she presented her work. I was in charge of collecting the audience questions and presenting them for sorting. Neri’s work on reflecting how nature and modern technology can be used to express is amazing. I loved her presentation on the bee project and later the silkworm project. Her work the furthers the limits of modern fabrication is intriguing. She also gave us a sneak peek into some latest projects. Her talk was titled- “Material Ecology”&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/34581518644/in/album-72157682238049102/&quot; title=&quot;Neri Oxman&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4282/34581518644_9afe5ed6e0_z.jpg&quot; width=&quot;640&quot; height=&quot;481&quot; alt=&quot;Neri Oxman&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the course of the conference, I was allotted tasks like attending and managing paper sessions, courses, talks and galleries. I was able to attend many paper presentations that I had initially planned. Another great part about being an SV is that you get to attend SV Rockstar Lunches. There we meet industry experts and stars who interact openly with fellow SVs. I had the honour to meet Prof. Hiroshi and Prof. Pattie during these sessions.It was a great experience to talk to them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35036315460/in/album-72157682238049102/&quot; title=&quot;With Prof. Ishii&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4233/35036315460_a49f1dcd0b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;With Prof. Ishii&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35036316740/in/album-72157682238049102/&quot; title=&quot;With Prof. Pattie&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4257/35036316740_dc8cc68435_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;With Prof. Pattie&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Just in case, these are the tasks that were allocated.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35077430550/in/album-72157682238049102/&quot; title=&quot;SV Tasks&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4239/35077430550_86de3ec5c6_z.jpg&quot; width=&quot;519&quot; height=&quot;397&quot; alt=&quot;SV Tasks&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I would like to mention that the volunteers were served exceptional food during the conference. The inclusiveness of the menu is worth appreciating as it had plenty for almost all dietary inclinations. It was great having vegetarian food. I am told that this aspect of the volunteering is often envied by other participants.&lt;/p&gt;
+
+&lt;p&gt;CHI made it possible for remote attendees to have a first person experience of the conference using these telepresence robots called Beam. It was intriguing to see people with faces on the screen moving around and other people hugging them. Some Beams had personalizations that the original attendees had done. I personally liked one with the Tutu.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35257014962/in/album-72157682238049102/&quot; title=&quot;Two with the Beams&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4290/35257014962_6bbd060877_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Two with the Beams&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293560871/in/album-72157682238049102/&quot; title=&quot;Beams&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4254/35293560871_05635a9a9d_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;Beams&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;There were some great installations presented by participants in the Art Gallery too. It was interesting to see how art, design and technology were amalgamated in an artifact that presents a view point. Some were playful like the talking plants and some question the ways and represent it like the installation that would tear any racist tweet tweeted on the Internet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35257014542/in/album-72157682238049102/&quot; title=&quot;Talking Plant&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4283/35257014542_1cb7ac8554_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Talking Plant&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;There was also a gigantic structure made out of used plastic bottles with 3D printed joinery.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35036316920/in/album-72157682238049102/&quot; title=&quot;Giant Plastic Structures&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4234/35036316920_0a1f7dc9be_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;Giant Plastic Structures&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;CHI provides a great place to meet people from varied and similar backgrounds, that deepens and expands your perspective.&lt;/p&gt;
+
+&lt;p&gt;Now, to the main event, The Student Design Competition.&lt;/p&gt;
+
+&lt;p&gt;The theme this year was leveling the playing field. We chose the problem of adoption of modern payment methods like m-wallets and Credit cards in elderly and digitally illiterate users.Our entry to the competition was Paisa Stick. Paisa stick is a tangible interface that allows digitally illiterate users to operate cashless systems. We studied the conceptual model of money in the user group and made a small device called ‘Paisa stick’.The device is a tangible representation of an actual wallet and operates following the concepts familiar to the users. More on this can be read in the paper &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3049268&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was, in fact, the second round of the competition. The first round required us the submit a research paper and a video explaining the concept. We got great feedback at this stage from anonymous reviewers which helped us improve the project. Our entry was selected from 70 entries who submitted their work. Out of which 12 were called to visit Denver.&lt;/p&gt;
+
+&lt;p&gt;The day of the poster presentation came. We were working all night trying to concretize our poster presentation and practice the presentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35036317110/in/album-72157682238049102/&quot; title=&quot;Before the poster presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4278/35036317110_37baebfe1e_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;Before the poster presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384080946/in/album-72157682238049102/&quot; title=&quot;Team&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4258/35384080946_deb7974a12_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;Team&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;We made Mr.Roy, our stick puppet who we used to explain the concept to the judges.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/34635655164/in/album-72157682238049102/&quot; title=&quot;Mr. Roy&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4235/34635655164_dbf7b49bf4_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;Mr. Roy&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;We were very anxious and nervous. Such amazing projects around us from students around the globe. We explained our project, showed the process and prototype that we developed. The feedback was great. We were shortlisted for the final round of three which would happen next day.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293561151/in/album-72157682238049102/&quot; title=&quot;Poster Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4263/35293561151_23a762e48b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Poster Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384081436/in/album-72157682238049102/&quot; title=&quot;The Artefacts&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4259/35384081436_efe0eaf5fc_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;The Artefacts&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;More nervousness followed. We worked tirelessly on the presentation. We knew that we would have to explain the context in great detail for the audience to understand the solution. And we were going first!&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35077430450/in/album-72157682238049102/&quot; title=&quot;Final Day&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4206/35077430450_bf1c4bc1e2_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;Final Day&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The presentation went great. All the team presented their ideas in great depth and all were amazing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35436720756/in/album-72157682238049102/&quot; title=&quot;Final Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4258/35436720756_ca7ee8d441_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Final Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/34635516814/in/album-72157682238049102/&quot; title=&quot;Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4207/34635516814_e5812e262f_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I am delighted to inform that we were selected as the winners for this year’s CHI SDC.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35436721156/in/album-72157682238049102/&quot; title=&quot;Results&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4287/35436721156_f8c7178574_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Results&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks to Sir Peto a.k.a. Prof. Mario Moreno from Universidad Tecnológica De La Mixteca who encouraged and supported us throughout the conference. Special thanks to Prof. Anirudha and Prof. Girish Dalvi for the guidance and support in writing the paper. Super thanks to our seniors specifically Chandni, Chinmay and Shreya who presented at CHI last year and helped us throughout.&lt;/p&gt;
+
+&lt;p&gt;After the competition, my SV duties resumed. I was still quite behind my 20-hour target, but thanks to the allotment on the last day, I was able to put in the hours. The final task was to tear-down the exhibition area. We disassembled the giant plastic structure.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35257013672/in/album-72157682238049102/&quot; title=&quot;CHI Teardown time&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4206/35257013672_b83a21ae36_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;CHI Teardown time&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The closing plenary was by the celebrated author, Nicholas Carr. He talked about automation and its impact on the sensitivities of human life. It was titled “Computers, Automation and the Human Future”. The talk was interesting as it rekindled the dilemmas of involving computers to induce automation in tasks that were responsible for developing human sensitivities and skills. I think Nicholas was able to put the point in a very open way. The talk provided an interesting perspective to the HCI community and was a great way to end the conference. This was followed by handing over the baton to the CHI 2018 committee. I loved the overall enthusiasm of the moment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35036315060/in/album-72157682238049102/&quot; title=&quot;Nic Carr Closing Plenary&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4241/35036315060_0e6d77b526_z.jpg&quot; width=&quot;640&quot; height=&quot;482&quot; alt=&quot;Nic Carr Closing Plenary&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In the spirit of the brevity of this post, I would like to end by saying that I had a fabulous time at CHI as a volunteer and as a participant. It helped me a lot in understanding the work happening in the domain.&lt;/p&gt;
+
+&lt;p&gt;I will certainly try attending CHI whenever it is possible. If anyone has any queries please feel free to contact me via the comments below or via Twitter handle @rohit7gupta.&lt;/p&gt;
+
+&lt;p&gt;ありがとう&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Sleeping Dawn</title>
@@ -4041,9 +4165,7 @@ Lets name it Categories.md&lt;/p&gt;
 
 &lt;p&gt;Use the following snippet to display tags.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/3eddb75957eaf9f9b8e8.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/3eddb75957eaf9f9b8e8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Now&lt;/p&gt;
 
