@@ -9,12 +9,16 @@ tags:
 
 
 I am just back from one of the most amazing conferences ever. Most of you might know but just to re-iterate, I was fortunate enough to be selected as a student volunteer at CHI 2017 conference in Denver, Colorado. Later we also made to the top 12 teams who were invited to present their work in the Student Design Competition. CHI stands for Computer-Human Interaction and is one of the oldest gatherings of Interaction Community in the world.
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/35384083486/in/album-72157682238049102/" title="Denver Airport"><img src="https://c1.staticflickr.com/5/4248/35384083486_c4f540df0a_z.jpg" width="640" height="426" alt="Denver Airport"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
  
 >This post broadly describes the experience at the conference. Keep checking for more touristy and observation posts. I am happy to inform that a major part of the conference will be sponsored by [Gary Marsden Student development fund](http://www.sigchi.org/conferences/funding/gary-marsden-student-development-fund).  I and my team members- Shilpa and Udayan are grateful to the committee members for considering us for the same.
  
-We landed in Denver on 6th May late night. It was a long journey from Mumbai-New Delhi-London-New York- Denver. It was just in time to attend the SV briefing next day. The conference venue was the Colorado Convention Center, guarded by a giant Blue Bear. It was about 20min (of slow, exploratory) walk from our Hotel - 11th Avenue. The venue was fantastic and a mid-aged man would always greet you when you walked in like you were the chief guest. But he did that to everyone it seems.
+We landed in Denver on 6th May late night. It was a long journey from Mumbai-New Delhi-London-New York- Denver. It was just in time to attend the SV briefing next day. The conference venue was the Colorado Convention Center, guarded by a giant Blue Bear.
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/35384083486/in/album-72157682238049102/" title="Denver Airport"><img src="https://c1.staticflickr.com/5/4248/35384083486_c4f540df0a_z.jpg" width="640" height="426" alt="Denver Airport"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/35478177275/in/album-72157682238049102/" title="Giant Blue Bear"><img src="https://c1.staticflickr.com/5/4254/35478177275_c63f4c8058_z.jpg" width="640" height="360" alt="Giant Blue Bear"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+It was about 20min (of slow, exploratory) walk from our Hotel - 11th Avenue. The venue was fantastic and a mid-aged man would always greet you when you walked in like you were the chief guest. But he did that to everyone it seems.
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/35384083046/in/album-72157682238049102/" title="RTD Bus"><img src="https://c1.staticflickr.com/5/4285/35384083046_d3c789bd22_z.jpg" width="640" height="426" alt="RTD Bus"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
