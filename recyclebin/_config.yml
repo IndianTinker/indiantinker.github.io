@@ -22,6 +22,9 @@ url: "http://rohitg.in" # the base hostname & protocol for your site, e.g. http:
 twitter_username: rohit7gupta
 github_username:  indiantinker
 
+sass:
+    sass_dir: _sass
+
 lang: en
 timezone: UTC+0530
 exclude:
