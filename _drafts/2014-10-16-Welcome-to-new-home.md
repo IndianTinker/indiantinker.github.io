@@ -8,7 +8,7 @@ tags:
 - Blogging
 - web
 ---
-I am now in process of migrating my main blog on [wordpress](http://indiantinker.wordpress.com) to github pages for more contexual/design/layout freedom. This blog is built using [Jekyll](http://jekyllrb.com):<!--more-->
+I am now in process of migrating my main blog on [wordpress](http://indiantinker.wordpress.com) to github pages for more contexual/design/layout freedom. This blog is built using [Jekyll](http://jekyllrb.com).
 
   > Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.
 
@@ -20,4 +20,3 @@ Comments,widgets and Analytics work too with just a bit of playing required.
 The comments on this site are supported via Disqus !
 
 Hope this post compiles well ! :)
-

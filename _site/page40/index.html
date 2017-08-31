@@ -43,7 +43,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page40/" />
+  <meta property="og:url" content="http://localhost:4000/page40/" />
 
 
 
@@ -392,46 +392,6 @@
           
         
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
 
    <!--
     <a class="twitter-follow-button"
@@ -485,78 +445,52 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/09/26/FiddleMini/">
-        Fiddle Mini - The DIY 'Portable' Music System
+      <a href="/2015/09/15/PiTuber/">
+        PiTuber- The Low Power Raspberry Pi Youtube Offliner
       </a>
     </h1>
 
-    <span class="post-date">26 Sep 2015</span>
+    <span class="post-date">15 Sep 2015</span>
 
-    <p>Music and Portability ! These guys have a pretty long relationship ever since somebody thought of listening to his favorite tunes while wasting his time travelling in a train/bus or walking on the streets and even crossing roads or riding bikes ! It started with those shoulder mounted stereo sets until music became a bit disturbing to be heard publicly and we had our first personal music system the <strong>Sony Walkman</strong> ! I even have a functional one from 1995.</p>
-
-<p>Quite recently we have moved on again from the personal space to a public exhibition and we have those new JBLs and BOSEs taking up the market by a storm. The headphones are becoming increasing ergonomic to wear and we even have cranium ones available. So the next time you say it feels someone’s talking in my head ; It could quite well be literally taken.</p>
-
-<p>But nothing can beat the pleasure of hearing music as it amalgamates with the swish of the breeze, the chirp of the birds and the song of nature. I am probably from the clan that just dont fall in with headphones. There is a forced disconnect i believe unless people around you make insane noises that beg to be ignored or due to social niceties. So, I decided to build my own <em>Portable Wood Music Box</em> that could well play from any source on the go ! Yeah ! That means it runs off a battery.</p>
-
-<p>I had this in mind ever since i made <a href="/2014/11/13/Fiddle-Music-System/">Fiddle</a> ! The size of the speaker was too big to bring with me to Pune.</p>
-
-<p>I did a couple of attempts but the complexity of making one was too much and using the same Circuit i used on the Fiddle anyways seemed an overkill. While, i was in Mumbai earlier this year, I was searching for a handy small speaker box, so that i get an idea of the size of electronics to squeeze in. Lamington disappointed me terribly or probably i needed a better guide ?</p>
-
-<p>The idea was scraped until recently I went to a local eStore to check out some stuff and noticed a portable speaker i wanted to build. It was a JBL Flip kind of thing. Did A2DP only. Sounded fine ! Costed a bomb ! INR 4000 for that ! I better make my own than falling in to these marketing gimmicks !</p>
-
-<p>And yet again :</p>
-
-<blockquote>
-  <p>Why buy ? When it can be built !</p>
+    <blockquote>
+  <p><strong>DISCLAIMER</strong>
+This article is for exploratory and educational purposes only. Kindly use the code and project responsibly.</p>
 </blockquote>
 
-<p>While making some unrelated search on eBay (gob bless their algorithm) i stumbled upon <a href="http://www.ebay.in/itm/Can-Speaker-Mp3-Player-Supports-USB-Pen-Drive-Memory-Card-FM-Radio-Aux-/321874916228?hash=item4af13d7384">this</a> . This could be an ideal configuration. I was not sure about the claims though. But i made a point to buy one from Delhi which i was about to visit. It costed about the half in Delhi from the person i usually buy stuff. I got it for 200 bucks. I wonder why the form factor is like the CAN ?</p>
+<p>Happy Engineers Day !</p>
 
-<p>Following <em>Dave Jone</em>’s words, “Dont Turn it On, Take it Apart “.. The CAN had a very loud and “high on the Higher Fs” speaker ! Connected to a PCB with handful of passives and 3 ICs. 1 for amplification ( guessing its class D probably) , 1 seems to be a microcontroller that reads the switch and plays music from sources and one seems to be a tuner chip for FM reception. The broad feature set (get ready to be BLOWN) :</p>
+<p>Televison and Childhood… These things are inseparable. Remember waiting for your favourite TV show to come live. That experience was certainly unique.TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. It has changed and I would certainly refrain from using the word ‘evolved’. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather ‘evolved’ to avoid them.</p>
+
+<p>Being the ‘90’s Kid’, going by the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like “Byomkesh Bakshi” , “Recess” ,”Small Wonder”, “Shreeman Shreemati”, “TaleSpin”, “Captain Planet” etc.</p>
+
+<p>So, one fine day while struggling with streaming on my slow connection while watching my favourite show,it occurred to me that a Pi which can runs off my cellphone charger would be a great tool for offlin-ing. Sort of a physical Youtube App on a Pi. Nothing needs to be said about Youtube Experience on Windows Phone !</p>
+
+<p>The system should read a couple of links from a file and then offline them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video like on the App. Once done watching, <strong>DELETE</strong> !</p>
+
+<p>It turned out to be a pretty easy task. Thanks to <code class="highlighter-rouge">pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file.</p>
+
+<p>The steps are pretty simple:</p>
 
 <ul>
-  <li>Supports USB and microSD Cards ( I have tested and found my 8GB PD doesnt work while less than 4GB works )</li>
-  <li>Has an onboard battery , a repurposed Motorola 1150mAh battery</li>
-  <li>Has FM with Autostore functionality that works pretty well</li>
-  <li>Has Aux in and out</li>
-  <li>Can be charged with a MiniUSB connector</li>
-  <li>Has a Blue Red LED to show status. Red when charging and Blue when in use. Blinking blue when autostoring etc.</li>
-  <li>A control button - Long Press Up increases volume,Long Press Down decreases volume, Push changes source, single up/down toggles the track. Minimal and effective</li>
+  <li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
+  <li>Install <code class="highlighter-rouge">pafy</code> using pip the usual way</li>
+  <li>Change the urls in the txt file. Please do preserve the format.</li>
+  <li>Edit the script for your preferred quality and storage location.</li>
+  <li>Execute the script.</li>
 </ul>
 
-<p>Thats quite a value !</p>
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code class="highlighter-rouge">screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
 
-<p>I then started searching on Home turf for the <em>Classy</em> form i was looking for.</p>
+<p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
 
-<p>For the infrequent visitors of the place, if you enter LR from the Railway Station side, you can find a scrap market that sells off stuff that have some defect. Kind of a junk market.That’s where all the gold is.I found a wooden speaker being sold for about 50 bucks a pop ! The size and the form enamoured me. It was like someone scrapped them for me. The shopkeeper who was adamant to stick one to me and was not agreeing to allow a few electrons flow down to speaker coil, so that i can make sure that everything is fine. After a few minutes he budged and got an old amp from the back and the speaker i chose was fine. All the speakers he had were forcibly severed from the back in varied proportions probably to avoid reuse. I chose the least one that can be aptly covered by the CAN speaker parts with minimal changes.</p>
+<p>After you are finished, just <code class="highlighter-rouge">SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
 
-<p>I desoldered all wires and connected my own antenna to it. Then accommodated the battery and antenna inside the wooden box.</p>
+<p>There can be several extensions of the idea.We can also attach a small LED on one of the Pins to indicate when downloading ends.
+Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with other services to make Pi a Bandwidth Hogger and a mean downloading machine.</p>
 
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/7DZwuMvUJs/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-31T15:42:06+00:00">Aug 31, 2015 at 8:42am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p>This is what it looks before being glued and Msealed. The part is a cut out from the lower section of the CAN Speaker.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21233003405/in/dateposted-public/" title="P_20150830_232403"><img src="https://farm6.staticflickr.com/5663/21233003405_44877b817b_z.jpg" width="360" height="640" alt="P_20150830_232403" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The cut out has been oriented such that it fits the Fattest USB i have and the USB is always inside the periphery of the box to avoid accidental collision with other objects around. The control button is at the bottom for increased ergonomics and avoiding accidental operation. ON/OFF button on the top !</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21206733356/in/dateposted-public/" title="P_20150830_234246"><img src="https://farm6.staticflickr.com/5733/21206733356_d0dd00ff77_z.jpg" width="640" height="360" alt="P_20150830_234246" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>I next bought a collapsible handle from the hardware store and fitted it on top. Kind of serves like a makeshift dock sometimes.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21044805990/in/dateposted-public/" title="P_20150902_083120"><img src="https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg" width="640" height="360" alt="P_20150902_083120" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The sound quality is pretty nice thanks to the speaker cabinet and a few extra passives added. And Bluetooth and IR also works with <a href="/2015/05/29/TruPlay/">TruPlay</a> Project !</p>
-
-<p>I have noticed that the plastic does look a bit disjoint. So i chamfered it using Mseal ! Matches with the overall color theme too :D</p>
-
-<p>So, when are you building one ?</p>
-
-<p>Cheers !</p>
+<p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

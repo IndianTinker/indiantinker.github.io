@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Rohit Gupta</title>
- <link href="http://rohitg.in/atom.xml" rel="self"/>
- <link href="http://rohitg.in/"/>
- <updated>2017-06-25T17:50:45+05:30</updated>
- <id>http://rohitg.in</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2017-09-01T02:32:04+05:30</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
@@ -13,10 +13,102 @@
 
  
  <entry>
+   <title>Contributing to OSM using JOSM</title>
+   <link href="http://localhost:4000/2017/08/31/ContribOSM/"/>
+   <updated>2017-08-31T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/08/31/ContribOSM</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This is &lt;a href=&quot;https://en.wikipedia.org/wiki/Wikipedia:Stub&quot;&gt;Stub&lt;/a&gt; on contributing to OSM using JOSM. The post is meant to document to process of uploading data points gathered as a part of &lt;a href=&quot;https://info-design-lab.github.io/&quot;&gt;Interactive Data Viz&lt;/a&gt; course at IDC taught by Prof. Venkat. The article may be updated in the future.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;post-data-collection&quot;&gt;Post Data Collection&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Preparing data&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have your data points in KML or CSV or geoJson. You can proceed with the following process. It is advisable to have a geoJson file. It helps in running vizualization when using Mapbox. Helpful tools are :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mapbox.github.io/togeojson/&quot;&gt;KML/GPX to geoJson&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://geojson.io&quot;&gt;geoJson to CSV&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The process I followed was KML –&amp;gt; CSV –&amp;gt;geoJson&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Icons and OSM features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Like Mapbox’s Maki icons, OSM also has its own set of icons. They can be rendered on the map when you choose specific tags. The list of tags are mentioned &lt;a href=&quot;http://wiki.openstreetmap.org/wiki/Map_Features&quot;&gt;here&lt;/a&gt;. The icons column on the page shows the icons that will be shown on the map. For example : I chose to map sitting places in IIT Campus. The most semantically suitable choice was of a bench. I used the ‘field’ as ‘amenity’ and value as ‘bench’. You can choose appropriately. The features can be added to the points using the CSV file. Once you have the CSV file you can add a new ‘column’ as amenity (in my case) using your favorite spreadsheet software. Now, in every ‘row’ i.e. for each data point add the value. This would be ‘bench’ in my case. You can have additional fields as well. It is preffered not to have spaces in between the words of the field. Use an ‘_’ .&lt;/p&gt;
+
+&lt;p&gt;Once this is done, you should have a dataset in csv we can proceed to map them on OSM. As an additional step, I also generate a geoJSON file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OSM Contributing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As a class, we tried several methods. The following method uses the &lt;a href=&quot;https://josm.openstreetmap.de/&quot;&gt;JOSM IDE&lt;/a&gt; to import the data as a map layer and then contribute it to OSM database. &lt;strong&gt;Before proceeding&lt;/strong&gt;, check multiple times that your data fields are correctly rendered. You can test this &lt;a href=&quot;http://geojson.io&quot;&gt;here&lt;/a&gt;. Once you update, it &lt;em&gt;might&lt;/em&gt; be cubersome to update/edit them .&lt;/p&gt;
+
+&lt;p&gt;First, Download the &lt;a href=&quot;https://josm.openstreetmap.de/&quot;&gt;IDE&lt;/a&gt;  for the OS of your own choice.&lt;/p&gt;
+
+&lt;p&gt;I have documented it for Bindows.&lt;/p&gt;
+
+&lt;p&gt;Once, the software is installed, we need to install a plugin called &lt;em&gt;OpenData&lt;/em&gt; this enables JOSM to read csv files. Press F12 or Edit -&amp;gt; Pref and choose plugins and type opendata. You may want to do Download list before. Then check the box and click OK. This installs OpenData plugin.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36952326825/in/album-72157686030264413/&quot; title=&quot;opendata&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4410/36952326825_4062955f0f_z.jpg&quot; width=&quot;640&quot; height=&quot;621&quot; alt=&quot;opendata&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we need a map layer to work on. The preffered way is to use ‘open location’ option from ‘File’ menu option. You are presented with the following dialog.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36812725461/in/album-72157686030264413/&quot; title=&quot;FileDownload&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4367/36812725461_07f1def4bb_z.jpg&quot; width=&quot;590&quot; height=&quot;298&quot; alt=&quot;FileDownload&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In this dialog, paste the url of the map you wish JOSM to pull. In my case, it was this &lt;a href=&quot;http://www.openstreetmap.org/#map=15/19.1337/72.9126&quot;&gt;http://www.openstreetmap.org/#map=15/19.1337/72.9126&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36952326615/in/album-72157686030264413/&quot; title=&quot;osm&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4404/36952326615_fcddd6a18f_z.jpg&quot; width=&quot;640&quot; height=&quot;341&quot; alt=&quot;osm&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Once downloaded, I got this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36952326985/in/album-72157686030264413/&quot; title=&quot;result&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4337/36952326985_bd8d70a0a7_z.jpg&quot; width=&quot;640&quot; height=&quot;337&quot; alt=&quot;result&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;By the this point, we have a base layer ready. Now, I opened the csv file. The usual File –&amp;gt; Open way .&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36764737856/in/album-72157686030264413/&quot; title=&quot;openfiles&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4382/36764737856_5857da0a1e_z.jpg&quot; width=&quot;640&quot; height=&quot;411&quot; alt=&quot;openfiles&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;My file is ‘points.csv’.Click Open. In the popup while importing CSV. The default options worked.
+The file gets rendered correctly over the base layer as points. In my case the color of points was cyan.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36812725561/in/album-72157686030264413/&quot; title=&quot;bench local&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4437/36812725561_7f6556a133_z.jpg&quot; width=&quot;640&quot; height=&quot;343&quot; alt=&quot;bench local&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Please check the points before proceeding.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Uploading to OSM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once checked, you may proceed by clicking on the upload icon. I got this warning popup. I clicked continue as I had checked the data multiple times.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36764737376/in/album-72157686030264413/&quot; title=&quot;warning&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4335/36764737376_53d00d84ca_z.jpg&quot; width=&quot;640&quot; height=&quot;290&quot; alt=&quot;warning&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Next you get another warning. One of the fields had a space in between. I chose to ignore it as it was not a standard field anyway. But, I would recommend you use an ‘_’. Since, I did not document it when doing for the first time, I dont have those screenshots. But I will add them once some of the classmates attempt.&lt;/p&gt;
+
+&lt;p&gt;You need an OSM account to upload. The API uses OAuth. The method that worked for me is ‘Automatic’. You are likely to get OAuth credentials. JOSM stores them for you. After the authorization part, you are required to commit the changes.  You will be presented with the following dialog.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36764737336/in/album-72157686030264413/&quot; title=&quot;upload&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4346/36764737336_42cf629aa7_z.jpg&quot; width=&quot;640&quot; height=&quot;618&quot; alt=&quot;upload&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I chose the data source as ‘survey’. Now, press ‘Upload’!&lt;/p&gt;
+
+&lt;p&gt;Congratulations on contributing to OSM.&lt;/p&gt;
+
+&lt;p&gt;You can reopen the location to see your data. In my case, my benches are on the map.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36814389321/in/dateposted-public/&quot; title=&quot;markedbench&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4343/36814389321_6c90e0ab13_z.jpg&quot; width=&quot;640&quot; height=&quot;341&quot; alt=&quot;markedbench&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;You can pull the details by clicking on ‘History’ button.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/&quot; title=&quot;contributorInfo&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg&quot; width=&quot;640&quot; height=&quot;362&quot; alt=&quot;contributorInfo&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope that helps !&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>The CHI 17 Experience</title>
-   <link href="http://rohitg.in/2017/06/12/CHISVExp/"/>
+   <link href="http://localhost:4000/2017/06/12/CHISVExp/"/>
    <updated>2017-06-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/06/12/CHISVExp</id>
+   <id>http://localhost:4000/2017/06/12/CHISVExp</id>
    <content type="html">&lt;p&gt;I am just back from one of the most amazing conferences ever. Most of you might know but just to re-iterate, I was fortunate enough to be selected as a student volunteer at CHI 2017 conference in Denver, Colorado. Later we also made to the top 12 teams who were invited to present their work in the Student Design Competition. CHI stands for Computer-Human Interaction and is one of the oldest gatherings of Interaction Community in the world.&lt;/p&gt;
 
 &lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384083486/in/album-72157682238049102/&quot; title=&quot;Denver Airport&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4248/35384083486_c4f540df0a_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;Denver Airport&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
@@ -142,9 +234,9 @@
  
  <entry>
    <title>Sleeping Dawn</title>
-   <link href="http://rohitg.in/2017/06/02/PoemSleeping/"/>
+   <link href="http://localhost:4000/2017/06/02/PoemSleeping/"/>
    <updated>2017-06-02T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/06/02/PoemSleeping</id>
+   <id>http://localhost:4000/2017/06/02/PoemSleeping</id>
    <content type="html">&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/34974278651/in/dateposted-public/&quot; title=&quot;postpic&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4286/34974278651_da7402d3ca_z.jpg&quot; width=&quot;640&quot; height=&quot;426&quot; alt=&quot;postpic&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;I wake up the dawn, &lt;br /&gt;
@@ -196,9 +288,9 @@ Then I shall carry-on.&lt;/p&gt;
  
  <entry>
    <title>How does this city sound ?</title>
-   <link href="http://rohitg.in/2017/04/03/Soundsofcity/"/>
+   <link href="http://localhost:4000/2017/04/03/Soundsofcity/"/>
    <updated>2017-04-03T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/04/03/Soundsofcity</id>
+   <id>http://localhost:4000/2017/04/03/Soundsofcity</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;sensory&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -233,9 +325,9 @@ Then I shall carry-on.&lt;/p&gt;
  
  <entry>
    <title>Hey Happy !</title>
-   <link href="http://rohitg.in/2017/04/03/HeyHappy/"/>
+   <link href="http://localhost:4000/2017/04/03/HeyHappy/"/>
    <updated>2017-04-03T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/04/03/HeyHappy</id>
+   <id>http://localhost:4000/2017/04/03/HeyHappy</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;social&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -251,9 +343,9 @@ Then I shall carry-on.&lt;/p&gt;
  
  <entry>
    <title>City Bot, may i take your order please</title>
-   <link href="http://rohitg.in/2017/04/03/CityBot/"/>
+   <link href="http://localhost:4000/2017/04/03/CityBot/"/>
    <updated>2017-04-03T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/04/03/CityBot</id>
+   <id>http://localhost:4000/2017/04/03/CityBot</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;cognitive&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -271,9 +363,9 @@ Then I shall carry-on.&lt;/p&gt;
  
  <entry>
    <title>Hacking with Bamboo in the Field</title>
-   <link href="http://rohitg.in/2017/04/01/bamboo/"/>
+   <link href="http://localhost:4000/2017/04/01/bamboo/"/>
    <updated>2017-04-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/04/01/bamboo</id>
+   <id>http://localhost:4000/2017/04/01/bamboo</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Field Study and Design&lt;/strong&gt;. It involved students innovating while living in the context. Living in a village for a few weeks and building cool stuff. Sounds exciting.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -463,9 +555,9 @@ The ring is used to change volume and we implemented a way to change channels us
  
  <entry>
    <title>Beaches,Bicycles and Pagoda</title>
-   <link href="http://rohitg.in/2017/03/22/MarshyLands/"/>
+   <link href="http://localhost:4000/2017/03/22/MarshyLands/"/>
    <updated>2017-03-22T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/03/22/MarshyLands</id>
+   <id>http://localhost:4000/2017/03/22/MarshyLands</id>
    <content type="html">&lt;p&gt;Back from yet another cycling trip are we?
 This one was one of the recent best. Inspired by recent events of aimless discovery, we planned to go to &lt;strong&gt;Vipasana Pagoda&lt;/strong&gt; and obviously detours. This time we were 3 people. Thadu, an energetic , super entu junior from BDes course and guess what, he has the guts to carry a full framers while cycling &amp;gt;100k . So, as a story of our trips. We had a planned a route that we missed. I had bought &lt;em&gt;pebble&lt;/em&gt; specifically for these activities. Only to discover that Google maps does not push notifications to pebble anymore !! &lt;em&gt;Duh&lt;/em&gt; Anyone has options? I am all ears. Anyways &lt;em&gt;Endomondo&lt;/em&gt; works great and we averaged 2:50 min/km on most roads.&lt;/p&gt;
 
@@ -584,9 +676,9 @@ But we made it, I had my &lt;em&gt;dogs-after-me&lt;/em&gt; moment too. Somehow 
  
  <entry>
    <title>Me Dinojh and 100kms on cycle</title>
-   <link href="http://rohitg.in/2017/03/12/100kmmumbai/"/>
+   <link href="http://localhost:4000/2017/03/12/100kmmumbai/"/>
    <updated>2017-03-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/03/12/100kmmumbai</id>
+   <id>http://localhost:4000/2017/03/12/100kmmumbai</id>
    <content type="html">&lt;p&gt;Crazy things happen , &lt;em&gt;sometimes&lt;/em&gt;. This was one of those crazy things. Cycling has recently been my favorite sport and medium of geographical exploration. Over-complicating isn’t it. I love to cycle around the campus. In the morning you have this cool breeze that wakes your lethargic body up from within when you cycle around.&lt;/p&gt;
 
 &lt;p&gt;My good friend (Dinojh) who is also an amazing maker, a Product Designer and a cyclist helps me and essentially ignites the wacky cycling plans, I make. He has never said &lt;strong&gt;No&lt;/strong&gt;. But this time after our last trip that was planned for Matunga ended up in an almost Dadar Darshan, I was cautious.&lt;/p&gt;
@@ -685,9 +777,9 @@ Well lots of it. Lets go to Fashion street. Why? Because its there and Dinojh ha
  
  <entry>
    <title>Making processing and fluidsynth talk</title>
-   <link href="http://rohitg.in/2017/02/12/processingFluidsynth/"/>
+   <link href="http://localhost:4000/2017/02/12/processingFluidsynth/"/>
    <updated>2017-02-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/02/12/processingFluidsynth</id>
+   <id>http://localhost:4000/2017/02/12/processingFluidsynth</id>
    <content type="html">&lt;p&gt;Just a quick post if you are interested in triggering notes from Processing to Fluidsynth. It could be great if your works have a visual component and you need responsive notes in the background that you wish to play using your soundfont via Fluidsynth.&lt;/p&gt;
 
 &lt;p&gt;Fluidsynth listens to commands via a telnet socket on port 8888 (you can change this i guess) that you can write to using a processing sketch.&lt;/p&gt;
@@ -707,9 +799,9 @@ Well lots of it. Lets go to Fashion street. Why? Because its there and Dinojh ha
  
  <entry>
    <title>Installation- Men and Three Worlds</title>
-   <link href="http://rohitg.in/2017/02/12/InstallationReality/"/>
+   <link href="http://localhost:4000/2017/02/12/InstallationReality/"/>
    <updated>2017-02-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2017/02/12/InstallationReality</id>
+   <id>http://localhost:4000/2017/02/12/InstallationReality</id>
    <content type="html">&lt;p&gt;Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI conference at IIT Bombay.&lt;/p&gt;
 
 &lt;p&gt;The idea initially was to ask people solve a rotating puzzle using in air gestures. In-air, gestures, Low tech ? Does it ring something to the occasional hacker? Yes we zeroed it on the ultrasonics for it. They work great but they are like pigeons you see. They don’t work well when a lot of them are around. They cause errors due to proximity with other sensors, angles etc.&lt;/p&gt;
@@ -779,9 +871,9 @@ Well lots of it. Lets go to Fashion street. Why? Because its there and Dinojh ha
  
  <entry>
    <title>How Do I Look Honey !</title>
-   <link href="http://rohitg.in/2016/12/26/StoriesHowDoILook/"/>
+   <link href="http://localhost:4000/2016/12/26/StoriesHowDoILook/"/>
    <updated>2016-12-26T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/12/26/StoriesHowDoILook</id>
+   <id>http://localhost:4000/2016/12/26/StoriesHowDoILook</id>
    <content type="html">&lt;p&gt;Following is an email voice attachment, Sabine found in her draft today.&lt;/p&gt;
 
 &lt;p&gt;*VOICE STARTS *&lt;/p&gt;
@@ -838,9 +930,9 @@ They agreed for mass “modulation” of people at no costs, so that people can 
  
  <entry>
    <title>The Semester that was</title>
-   <link href="http://rohitg.in/2016/12/01/SemesterThatWas/"/>
+   <link href="http://localhost:4000/2016/12/01/SemesterThatWas/"/>
    <updated>2016-12-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/12/01/SemesterThatWas</id>
+   <id>http://localhost:4000/2016/12/01/SemesterThatWas</id>
    <content type="html">&lt;p&gt;So, recently my first semester got over at &lt;em&gt;IDC,School of Design&lt;/em&gt; at &lt;strong&gt;IIT Bombay&lt;/strong&gt; in the IxD Course. It has been quite a journey since July. I learnt a lot of new things and different intriguing ways to look at things. I met and still meet many tons of inspiring folks at the school. The profs are great and it a treat to listen them deliver lectures.&lt;/p&gt;
 
 &lt;p&gt;Germinating from an engineering background, I feel the ways of design to approach a problem are somewhat different and is apparently a lot holistic. Engineering approach is rather piece wise with blocks that “technically” fit together, which may be restrictive but will get things done. I feel in design, you are much more liberal and can imagine a wide variety of things which open up a lot of new possibilities but you may not have something that works, but the level of articulation that you can present on how the things will work and the deep thought put in together to make that decision to put “xyz” thing that way and not the other way is certainly very high. I speak this from a technically marinated mind trying to explore the ways of design.&lt;/p&gt;
@@ -924,9 +1016,9 @@ They agreed for mass “modulation” of people at no costs, so that people can 
  
  <entry>
    <title>Junior MDes Sem 1 Exhibitions</title>
-   <link href="http://rohitg.in/2016/12/01/JrExhibitions/"/>
+   <link href="http://localhost:4000/2016/12/01/JrExhibitions/"/>
    <updated>2016-12-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/12/01/JrExhibitions</id>
+   <id>http://localhost:4000/2016/12/01/JrExhibitions</id>
    <content type="html">&lt;p&gt;After every semester, we have an exhibition of sorts by various departments showcasing the excellent work they did during the course. Following is a rather utilitarian compilation of pictures of these exhibitions.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;PS: All rights are reserved to the respected content creators.&lt;/strong&gt;&lt;/p&gt;
@@ -990,9 +1082,9 @@ They agreed for mass “modulation” of people at no costs, so that people can 
  
  <entry>
    <title>Typesetting ePUBs in LaTex</title>
-   <link href="http://rohitg.in/2016/10/16/epubslatex/"/>
+   <link href="http://localhost:4000/2016/10/16/epubslatex/"/>
    <updated>2016-10-16T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/10/16/epubslatex</id>
+   <id>http://localhost:4000/2016/10/16/epubslatex</id>
    <content type="html">&lt;p&gt;In a recent class on Typesetting we were assigned a task to typeset an entire book, preferably an Open Book, using your favorite typesetting Program in a few days time. Typesetting is not &lt;em&gt;easy&lt;/em&gt; especially when you do it in &lt;strong&gt;LaTeX&lt;/strong&gt; and with the skill going rusty it was a hot pot of dilemmas that I think should not be a part of this post at all.&lt;/p&gt;
 
 &lt;p&gt;The book I choose was in ePub format and desperately needed to be converted to latex files so I can typeset them in &lt;a href=&quot;http://overleaf.com/&quot;&gt;overleaf&lt;/a&gt; or &lt;a href=&quot;http://sharelatex.com/&quot;&gt;sharelatex&lt;/a&gt; or &lt;em&gt;texworks&lt;/em&gt; as a matter of fact. I have moved in the favour of these online compilers as I no longer have to fiddle with searching the included &lt;code class=&quot;highlighter-rouge&quot;&gt;.sty&lt;/code&gt; that are so robotic to seek and use. I really wish there was some kind of package manager for latex too. Like pip for python. 
@@ -1021,9 +1113,9 @@ They agreed for mass “modulation” of people at no costs, so that people can 
  
  <entry>
    <title>Dapoli mein kya chalta hai?</title>
-   <link href="http://rohitg.in/2016/09/01/Dapoli/"/>
+   <link href="http://localhost:4000/2016/09/01/Dapoli/"/>
    <updated>2016-09-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/09/01/Dapoli</id>
+   <id>http://localhost:4000/2016/09/01/Dapoli</id>
    <content type="html">&lt;p&gt;So, this time around i went to Dapoli…..&lt;/p&gt;
 
 &lt;p&gt;Not the first time though, a better time nevertheless. I did not document my last trip which was a rather amazing one technically as it was my maiden bike trip with a friend.
@@ -1116,9 +1208,9 @@ That time when we went on a bike the weather was sultry bad and we had these sce
  
  <entry>
    <title>Making Dynamic Indicators for Ubuntu using pyGTK</title>
-   <link href="http://rohitg.in/2016/08/15/DynamicIndicators/"/>
+   <link href="http://localhost:4000/2016/08/15/DynamicIndicators/"/>
    <updated>2016-08-15T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/08/15/DynamicIndicators</id>
+   <id>http://localhost:4000/2016/08/15/DynamicIndicators</id>
    <content type="html">&lt;p&gt;One day, well on a not so busy one, I will try and make my own Indicators for my &lt;em&gt;Linux&lt;/em&gt; machine. Indicators in Unity Environment are a quick way to access the information or present info to the user. Things that take time like video encoding/code compiling can have a very intuitive interface with the taskbar icon which when clicked shows the progress.&lt;/p&gt;
 
 &lt;p&gt;For more info check &lt;a href=&quot;https://unity.ubuntu.com/projects/appindicators/&quot;&gt;this&lt;/a&gt; link.&lt;/p&gt;
@@ -1138,9 +1230,9 @@ app indicators that exit &lt;em&gt;gracefully&lt;/em&gt; and have an on click ev
  
  <entry>
    <title>DLogs-How to watch movies better</title>
-   <link href="http://rohitg.in/2016/08/09/DLog1Movie/"/>
+   <link href="http://localhost:4000/2016/08/09/DLog1Movie/"/>
    <updated>2016-08-09T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/08/09/DLog1Movie</id>
+   <id>http://localhost:4000/2016/08/09/DLog1Movie</id>
    <content type="html">&lt;p&gt;The content of this post was mostly derived during a course on &lt;em&gt;Visual Syntactics&lt;/em&gt; taught by Prof. Ravi Pooviah at IDC. The course is an amazing reflection of the thought, vision and ways in Ideas can be conveyed. As a part of the course we are shown a lot of movies,So many that i have never seen soo many in such a short span of time. But there are important aspects that defines the way films as a media are perceived. There is an art called “Cinematography” that probably most of us overlook in the consumerist consumption of the media. The general flow of what i think is : Book Tickets, CheckIn at the Cinema, Watch Movie, Spoilers/Rating/Egoistic Activity on Social Media, Forget.&lt;/p&gt;
 
 &lt;p&gt;Well ! There is an Art side. It has always been but differently weighted. Probably so transparent that it just flows and goes un-noticed by many except the &lt;strong&gt;Film Nerds&lt;/strong&gt; as I call them. So, here is a n00bs guide to enjoying movies better. FYI, It takes a lot of time and the food is only good movies.&lt;/p&gt;
@@ -1167,9 +1259,9 @@ app indicators that exit &lt;em&gt;gracefully&lt;/em&gt; and have an on click ev
  
  <entry>
    <title>DIY Vacuum Pickup tool</title>
-   <link href="http://rohitg.in/2016/07/27/Vac/"/>
+   <link href="http://localhost:4000/2016/07/27/Vac/"/>
    <updated>2016-07-27T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/07/27/Vac</id>
+   <id>http://localhost:4000/2016/07/27/Vac</id>
    <content type="html">&lt;p&gt;Recently, I started venturing into making electronic boards in some numbers starting with &lt;a href=&quot;/2016/01/01/MakersRule/&quot;&gt;Maker’s Rule&lt;/a&gt;. Placing nominal sized SMDs like 1206 or even 0805 is not much of a work when you are doing a prototype. But assembling say 100s of them in one sitting is quite a task especially for people who get bored too easily. There comes the need for a Pickup tool.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1263,9 +1355,9 @@ app indicators that exit &lt;em&gt;gracefully&lt;/em&gt; and have an on click ev
  
  <entry>
    <title>Exif Data on Linux</title>
-   <link href="http://rohitg.in/2016/06/18/Exif/"/>
+   <link href="http://localhost:4000/2016/06/18/Exif/"/>
    <updated>2016-06-18T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/06/18/Exif</id>
+   <id>http://localhost:4000/2016/06/18/Exif</id>
    <content type="html">&lt;p&gt;A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the &lt;em&gt;Shutter Count&lt;/em&gt; ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend &lt;a href=&quot;https://www.youtube.com/watch?v=1BxXPTIvtHA&quot;&gt;this&lt;/a&gt; video. PS: Language might not be suitable for younger audiences.&lt;/p&gt;
 
 &lt;p&gt;On Linux (other platforms too) there is a nice tool called &lt;strong&gt;ExifTool&lt;/strong&gt; which was, as of writing this post available in the package manager of &lt;em&gt;Ubuntu&lt;/em&gt; .&lt;/p&gt;
@@ -1289,9 +1381,9 @@ app indicators that exit &lt;em&gt;gracefully&lt;/em&gt; and have an on click ev
  
  <entry>
    <title>Getting started with WIO Link</title>
-   <link href="http://rohitg.in/2016/04/11/WIOLink/"/>
+   <link href="http://localhost:4000/2016/04/11/WIOLink/"/>
    <updated>2016-04-11T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/04/11/WIOLink</id>
+   <id>http://localhost:4000/2016/04/11/WIOLink</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/anujdeshpande/&quot;&gt;Anuj&lt;/a&gt; recently gave me one of the few &lt;em&gt;WIO Links&lt;/em&gt; he got as a &lt;s&gt;serial&lt;/s&gt; Kickstarter backer to try them out. The Wio Link are&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1366,9 +1458,9 @@ You start with downloading the app from the &lt;a href=&quot;https://play.google
  
  <entry>
    <title>Augmenting Reality with Visiting Cards</title>
-   <link href="http://rohitg.in/2016/03/19/ARCards/"/>
+   <link href="http://localhost:4000/2016/03/19/ARCards/"/>
    <updated>2016-03-19T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/03/19/ARCards</id>
+   <id>http://localhost:4000/2016/03/19/ARCards</id>
    <content type="html">&lt;p&gt;Augmented Reality? Virtual Reality? Reality Intervention? Such Reality, Much Wow!&lt;/p&gt;
 
 &lt;p&gt;We humans have always had the craving for &lt;em&gt;not-so-real&lt;/em&gt; things. Books, Theatre, Movies embody the idea and use various mediums to present the cooked up reality. But the keyword &lt;strong&gt;Personal&lt;/strong&gt; is IN. This word also has its own story whose value has decreased from the time of Personal Chauffeur to Uber. We now consume reality personally.&lt;/p&gt;
@@ -1403,9 +1495,9 @@ These cards are basically pumped up visiting cards that enable users to project 
  
  <entry>
    <title>ReactorX- The intuitive Arc Reactor from the movies</title>
-   <link href="http://rohitg.in/2016/03/12/arc/"/>
+   <link href="http://localhost:4000/2016/03/12/arc/"/>
    <updated>2016-03-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/03/12/arc</id>
+   <id>http://localhost:4000/2016/03/12/arc</id>
    <content type="html">&lt;p&gt;Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the &lt;em&gt;Iron Man&lt;/em&gt;. He is fundamentally the coolest engineer/maker around, at-least in the movies.&lt;/p&gt;
 
 &lt;p&gt;The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he &lt;em&gt;made&lt;/em&gt; it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)&lt;/p&gt;
@@ -1458,9 +1550,9 @@ These cards are basically pumped up visiting cards that enable users to project 
  
  <entry>
    <title>SpectraVUlizer- Lights,Music and Magic</title>
-   <link href="http://rohitg.in/2016/02/04/spectravulizer/"/>
+   <link href="http://localhost:4000/2016/02/04/spectravulizer/"/>
    <updated>2016-02-04T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/02/04/spectravulizer</id>
+   <id>http://localhost:4000/2016/02/04/spectravulizer</id>
    <content type="html">&lt;p&gt;One day while chatting with my good friend &lt;a href=&quot;https://twitter.com/mrrituparna&quot;&gt;Rituparna&lt;/a&gt; we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more &lt;em&gt;dhinchaak&lt;/em&gt;. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.&lt;/p&gt;
 
 &lt;p&gt;Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the &lt;a href=&quot;http://tah.io/&quot;&gt;Tah&lt;/a&gt; as our number cruncher of choice.&lt;/p&gt;
@@ -1559,9 +1651,9 @@ So basically when we notice a higher value in the lowest band which is basically
  
  <entry>
    <title>RXing into the HAM World using RTL-SDR</title>
-   <link href="http://rohitg.in/2016/01/31/Hamrx/"/>
+   <link href="http://localhost:4000/2016/01/31/Hamrx/"/>
    <updated>2016-01-31T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/01/31/Hamrx</id>
+   <id>http://localhost:4000/2016/01/31/Hamrx</id>
    <content type="html">&lt;p&gt;I have been intrigued by HAM ever since Prof.Gadre mentioned about it in one of his lectures. HAM has an amazing community and i have been fortunate to be included into one here in Pune. Special Thanks to &lt;a href=&quot;http://amoghdesai.com/&quot;&gt;VU3DES&lt;/a&gt; and &lt;a href=&quot;http://tinkertool.wordpress.com&quot;&gt;VU2ASH&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The HAM group in Pune is a group of &lt;em&gt;highly&lt;/em&gt; motivated and dedicated HAM enthusiasts and regularly have conversations on the HAM frequencies. They open-heartedly encourage n00bs to get their feet wet in the HAM world..&lt;/p&gt;
@@ -1612,9 +1704,9 @@ Do you have any leads on things that can be done? Please do share in the comment
  
  <entry>
    <title>Interactive Standies</title>
-   <link href="http://rohitg.in/2016/01/10/InteractiveStandie/"/>
+   <link href="http://localhost:4000/2016/01/10/InteractiveStandie/"/>
    <updated>2016-01-10T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/01/10/InteractiveStandie</id>
+   <id>http://localhost:4000/2016/01/10/InteractiveStandie</id>
    <content type="html">&lt;p&gt;Standies? They are everywhere. Every event. Every exhibition, Flying around, falling down numerous times, a pain to manage them and even get people to read it.&lt;/p&gt;
 
 &lt;p&gt;We had the opportunity to design a reactive standie for &lt;a href=&quot;http://saavn.com/&quot;&gt;Saavn&lt;/a&gt; that will be present at their stalls throughout NH7 2015 Music festival.&lt;/p&gt;
@@ -1637,9 +1729,9 @@ Do you have any leads on things that can be done? Please do share in the comment
  
  <entry>
    <title>Maker's Rule-The Feature Packed PCB Multi-Tool</title>
-   <link href="http://rohitg.in/2016/01/01/MakersRule/"/>
+   <link href="http://localhost:4000/2016/01/01/MakersRule/"/>
    <updated>2016-01-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2016/01/01/MakersRule</id>
+   <id>http://localhost:4000/2016/01/01/MakersRule</id>
    <content type="html">&lt;p&gt;It has been a while since i posted my &lt;a href=&quot;/2014/12/14/Tinker-Rule/&quot;&gt;Tinker Rule&lt;/a&gt; which i made during college days. I received a few requests for the ready to etch pdf which helped me gauge if this seemed to be useful to people. The response was somewhat positive and so, i decided to put in some extra effort and make it handy, portable and &lt;strong&gt;manufacturable&lt;/strong&gt; !&lt;/p&gt;
 
 &lt;p&gt;My initial scale was big and not handy, So, this one should be small and compact and must not miss a single feature from its ancestor.
@@ -1710,9 +1802,9 @@ This one has :&lt;/p&gt;
  
  <entry>
    <title>StarMAT-Star Wars Themed Interactive Doormat</title>
-   <link href="http://rohitg.in/2015/12/30/StarWars/"/>
+   <link href="http://localhost:4000/2015/12/30/StarWars/"/>
    <updated>2015-12-30T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/12/30/StarWars</id>
+   <id>http://localhost:4000/2015/12/30/StarWars</id>
    <content type="html">&lt;p&gt;This weekend, the new Star Wars movie got released. It might be ‘just’ another movie for the droids and gungans of the planet, but not for the Padawans like us.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Messa, Likes Star Wars!&lt;/em&gt;  - Jar Jar Binks&lt;/p&gt;
@@ -1754,9 +1846,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  
  <entry>
    <title>CNCs & Me 4 - Fume Extractor</title>
-   <link href="http://rohitg.in/2015/12/11/fumeex/"/>
+   <link href="http://localhost:4000/2015/12/11/fumeex/"/>
    <updated>2015-12-11T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/12/11/fumeex</id>
+   <id>http://localhost:4000/2015/12/11/fumeex</id>
    <content type="html">&lt;p&gt;Soldering generates some not so healthy lead fumes. A Fume extractor is a device that passes the fume through a charcoal foam which adsorbs the vapour particles and hence removes them from the air.&lt;/p&gt;
 
 &lt;p&gt;As a demonstration for my &lt;a href=&quot;/2015/12/10/karigar/&quot;&gt;CNC&lt;/a&gt;, i made this simple design that uses a PVC tube with slots cut for attaching a charcoal foam piece. I have a BLDC fan on at one end to create a suction force to suck the air with fumes. The entire frame was made from MDF and hot glued and snap-fitted in place.&lt;/p&gt;
@@ -1786,9 +1878,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  
  <entry>
    <title>CNCs & Me 3 - Karigar</title>
-   <link href="http://rohitg.in/2015/12/10/karigar/"/>
+   <link href="http://localhost:4000/2015/12/10/karigar/"/>
    <updated>2015-12-10T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/12/10/karigar</id>
+   <id>http://localhost:4000/2015/12/10/karigar</id>
    <content type="html">&lt;p&gt;Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a &lt;em&gt;Thumbs UP&lt;/em&gt; !&lt;/p&gt;
@@ -1850,9 +1942,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  
  <entry>
    <title>Doormate- Runner's Up at Intel IOT Roadshow</title>
-   <link href="http://rohitg.in/2015/11/20/Doormate/"/>
+   <link href="http://localhost:4000/2015/11/20/Doormate/"/>
    <updated>2015-11-20T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/11/20/Doormate</id>
+   <id>http://localhost:4000/2015/11/20/Doormate</id>
    <content type="html">&lt;p&gt;Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog &lt;a href=&quot;/2015/08/01/Intel/&quot;&gt;link&lt;/a&gt; that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did.&lt;/p&gt;
 
 &lt;p&gt;Basically, our Project was called the &lt;strong&gt;Doormate&lt;/strong&gt;. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.&lt;/p&gt;
@@ -1878,9 +1970,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  
  <entry>
    <title>PlantPal-Garden Light Watering Reminder</title>
-   <link href="http://rohitg.in/2015/11/16/Plantpal/"/>
+   <link href="http://localhost:4000/2015/11/16/Plantpal/"/>
    <updated>2015-11-16T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/11/16/Plantpal</id>
+   <id>http://localhost:4000/2015/11/16/Plantpal</id>
    <content type="html">&lt;p&gt;I had this very special plant-A &lt;em&gt;Neem&lt;/em&gt; sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.&lt;/p&gt;
 
 &lt;p&gt;Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched ‘Automatic System’, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.&lt;/p&gt;
@@ -1948,9 +2040,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  
  <entry>
    <title>Getting Started with ESP8266:AT-Commands and Wifi DataLogger</title>
-   <link href="http://rohitg.in/2015/11/15/GettingStartedwithESP1/"/>
+   <link href="http://localhost:4000/2015/11/15/GettingStartedwithESP1/"/>
    <updated>2015-11-15T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/11/15/GettingStartedwithESP1</id>
+   <id>http://localhost:4000/2015/11/15/GettingStartedwithESP1</id>
    <content type="html">&lt;p&gt;About a few months back, i ordered those viral ESP8266 Wifi Chips from AliEx, after travelling half of the country they landed up at my place in Delhi, from where i picked them up.&lt;/p&gt;
 
 &lt;p&gt;The Legend is as follows:&lt;/p&gt;
@@ -1989,9 +2081,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  
  <entry>
    <title>TI-CEPD Diaries:Reactive Wearable LED Heart</title>
-   <link href="http://rohitg.in/2015/11/14/hearty/"/>
+   <link href="http://localhost:4000/2015/11/14/hearty/"/>
    <updated>2015-11-14T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/11/14/hearty</id>
+   <id>http://localhost:4000/2015/11/14/hearty</id>
    <content type="html">&lt;p&gt;Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this &lt;strong&gt;Wearable LED heart&lt;/strong&gt; project to showcase at MakerFest 2014. This would be our team’s signature.&lt;/p&gt;
 
 &lt;p&gt;Basically, we have a small PCB milled in the shape of a heart and studded with LEDs that react to the ambient light and change their beating rate and whenever someone comes too close(basically a hand in most cases :P), the LEDs change the pattern to what Prof.Gadre calls the &lt;em&gt;Happy Mode&lt;/em&gt; !&lt;/p&gt;
@@ -2037,147 +2129,10 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  </entry>
  
  <entry>
-   <title>GreenWali Diwali:A social interactivity experiment</title>
-   <link href="http://rohitg.in/2015/11/11/GreenwaliDiwali/"/>
-   <updated>2015-11-11T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/11/11/GreenwaliDiwali</id>
-   <content type="html">&lt;p&gt;Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Lights/Sound to attract attention&lt;/li&gt;
-  &lt;li&gt;A unique randomness of explosion&lt;/li&gt;
-  &lt;li&gt;An Obnoxious Odour&lt;/li&gt;
-  &lt;li&gt;Fear of getting yourself hurt&lt;/li&gt;
-  &lt;li&gt;Fear of setting someone on fire&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a &lt;strong&gt;GreenWali Diwali&lt;/strong&gt; .&lt;/p&gt;
-
-&lt;p&gt;The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it &lt;em&gt;electronically&lt;/em&gt; .&lt;/p&gt;
-
-&lt;p&gt;For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search &lt;code class=&quot;highlighter-rouge&quot;&gt;Twitter&lt;/code&gt; for tweets that were supporting the cause for a green Diwali by tracking the hastag &lt;code class=&quot;highlighter-rouge&quot;&gt;#Diwali&lt;/code&gt; and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update :&lt;/strong&gt; Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is &lt;em&gt;happy&lt;/em&gt; ! Tweet Tweet! which means tweet with a &lt;strong&gt;#GreenDiwali&lt;/strong&gt; and there should be the word &lt;strong&gt;happy&lt;/strong&gt; in it.&lt;/p&gt;
-
-&lt;p&gt;Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !&lt;/p&gt;
-
-&lt;p&gt;That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet !&lt;/p&gt;
-
-&lt;p&gt;I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.&lt;/p&gt;
-
-&lt;p&gt;The code is available &lt;a href=&quot;https://github.com/IndianTinker/GreenwaliDiwali&quot;&gt;here&lt;/a&gt;. The only thing you will need are Twitter Outh Tokens.For them just  do the following :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sign In/Up on Twitter&lt;/li&gt;
-  &lt;li&gt;Go &lt;a href=&quot;https://apps.twitter.com/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Create &lt;strong&gt;New Application&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Fill the Yet-Another-Form and Create the Application.&lt;/li&gt;
-  &lt;li&gt;Now, Go to the &lt;strong&gt;Keys and Access Tokens&lt;/strong&gt; Tab.&lt;/li&gt;
-  &lt;li&gt;You will see your consumer keys there !&lt;/li&gt;
-  &lt;li&gt;There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These 4 keys are used for the Code above.&lt;/p&gt;
-
-&lt;p&gt;Then just install the dependencies based on the &lt;code class=&quot;highlighter-rouge&quot;&gt;README&lt;/code&gt; and use your PC/Mobile to run the App on a Headless Pi. &lt;strong&gt;JuiceSSH&lt;/strong&gt; is recommended for Android. If you wish to leave it for longer durations use &lt;code class=&quot;highlighter-rouge&quot;&gt;screen&lt;/code&gt; to send a SSH instance in the background and exit the SSH Client.&lt;/p&gt;
-
-&lt;p&gt;Check out the video of me testing it !&lt;/p&gt;
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/ZApn93KSoGY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Happy GreenWali Diwali !&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Nooby Sentiment Analysis using nodejs</title>
-   <link href="http://rohitg.in/2015/11/08/NoobSentiment/"/>
-   <updated>2015-11-08T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/11/08/NoobSentiment</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;News Flash&lt;/strong&gt;: Sentiments are now easy to quantify because there is soooo much data around to poke into. People eat,laugh,cry,sleep when they tweet, or maybe its the other way around.&lt;/p&gt;
-
-&lt;p&gt;So, we can derive loads of business and impact information based on these free streams of data and quantify them for our needs, which currently here is purely &lt;em&gt;exploratory&lt;/em&gt; !&lt;/p&gt;
-
-&lt;p&gt;For mere instance, Lets put our favorite sport into the picture, &lt;em&gt;Cricket&lt;/em&gt;! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what ‘I’ say somewhat &lt;strong&gt;elastic&lt;/strong&gt; in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the ‘played well’ stance and later become a neutral subject. There maybe some exceptions.&lt;/p&gt;
-
-&lt;p&gt;As wiki states it:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.&lt;/p&gt;
-
-&lt;p&gt;What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words.&lt;/p&gt;
-
-&lt;p&gt;So that most common dictionary is called &lt;a href=&quot;http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010&quot;&gt;AFINN-111&lt;/a&gt; by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality.&lt;/p&gt;
-
-&lt;p&gt;Now I used a nodejs package called &lt;a href=&quot;https://github.com/thisandagain/sentiment&quot;&gt;sentiment&lt;/a&gt; that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.&lt;/p&gt;
-
-&lt;p&gt;To install it: &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install sentiment&lt;/code&gt; . Check out the README on the page for a quick start.&lt;/p&gt;
-
-&lt;p&gt;Next we need a twitter API Client for node, It will be &lt;a href=&quot;https://github.com/ttezel/twit&quot;&gt;Twit&lt;/a&gt;. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .&lt;/p&gt;
-
-&lt;p&gt;The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.&lt;/p&gt;
-
-&lt;p&gt;With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library &lt;code class=&quot;highlighter-rouge&quot;&gt;fs&lt;/code&gt; that already comes with the package.&lt;/p&gt;
-
-&lt;p&gt;For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .&lt;/p&gt;
-
-&lt;p&gt;Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using &lt;a href=&quot;http://boundingbox.klokantech.com/&quot;&gt;this tool&lt;/a&gt; , choose the area and select CSV, then simply copy paste it in the script.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/5e64f03beb01b3dec3dd.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;After 500 Tweets the data is as follows:&lt;/p&gt;
-
-&lt;iframe width=&quot;700&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://plot.ly/~indiantinker/61.embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;iframe width=&quot;700&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://plot.ly/~indiantinker/57.embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;iframe width=&quot;700&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://plot.ly/~indiantinker/53.embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;iframe width=&quot;700&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://plot.ly/~indiantinker/55.embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;iframe width=&quot;700&quot; height=&quot;600&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://plot.ly/~indiantinker/59.embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;strong&gt;Notable Observations&lt;/strong&gt; :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Kolkata and Delhi are particularly sad&lt;/li&gt;
-  &lt;li&gt;Bengaluru&amp;gt;Pune&amp;gt;Mumbai is the way happiness goes.&lt;/li&gt;
-  &lt;li&gt;I found there are lots of twitter contest chasers as i kept on getting tons of similar tweets in Pune&lt;/li&gt;
-  &lt;li&gt;In Mumbai and Bengaluru, Tweets were mainly get togethers and parties.&lt;/li&gt;
-  &lt;li&gt;Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.&lt;/li&gt;
-  &lt;li&gt;The Cricket All Stars reasonably raised the happiness levels.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Caveats&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Most of the time when tweets are not in English they end up scoring zero, i should rather translate them and then analyze&lt;/li&gt;
-  &lt;li&gt;The AFINN approach does fail sometimes, i have seen a neutral score on a feel good post quite a number of times.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hoping to listen from some Data Gurus !&lt;/p&gt;
-
-&lt;p&gt;Cheers,&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
    <title>Open Badge:You'da Maker</title>
-   <link href="http://rohitg.in/2015/10/22/OpenBadge/"/>
+   <link href="http://localhost:4000/2015/10/22/OpenBadge/"/>
    <updated>2015-10-22T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/10/22/OpenBadge</id>
+   <id>http://localhost:4000/2015/10/22/OpenBadge</id>
    <content type="html">&lt;p&gt;Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.&lt;/p&gt;
 
 &lt;p&gt;For the LED array we could use the usual LED Matrix,5x7 seemed to be a good size comfortable for both the pins and programmer.But..&lt;/p&gt;
@@ -2266,9 +2221,9 @@ The final version could do:&lt;/p&gt;
  
  <entry>
    <title>CNCs & Me 2 - Sketchy:The TableTop Pen Artist</title>
-   <link href="http://rohitg.in/2015/10/14/CNCsnMe2/"/>
+   <link href="http://localhost:4000/2015/10/14/CNCsnMe2/"/>
    <updated>2015-10-14T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/10/14/CNCsnMe2</id>
+   <id>http://localhost:4000/2015/10/14/CNCsnMe2</id>
    <content type="html">&lt;p&gt;&lt;em&gt;This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff I have built! This post is about a Table Top Pen scribler called “Sketchy” made with junkyard stuff that lets you draw stuff on paper !&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I had proposed my guide that i intended to make a CNC for the final project. She didnt looked too confident that we will make it past the first stage neither were we. The image of a CNC that was in the mind was probably the one we had in our shops. Big Humongous !&lt;/p&gt;
@@ -2394,9 +2349,9 @@ For the extension.Open the .zip file  and copy all the contents to &lt;code clas
  
  <entry>
    <title>Getting Started with RTL SDR- Playing some old school FM</title>
-   <link href="http://rohitg.in/2015/10/12/RTLSDR1/"/>
+   <link href="http://localhost:4000/2015/10/12/RTLSDR1/"/>
    <updated>2015-10-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/10/12/RTLSDR1</id>
+   <id>http://localhost:4000/2015/10/12/RTLSDR1</id>
    <content type="html">&lt;p&gt;&lt;em&gt;This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;SDR ? 
@@ -2437,9 +2392,9 @@ Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning 
  
  <entry>
    <title>Tamhini Ghats</title>
-   <link href="http://rohitg.in/2015/10/06/Tamhini/"/>
+   <link href="http://localhost:4000/2015/10/06/Tamhini/"/>
    <updated>2015-10-06T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/10/06/Tamhini</id>
+   <id>http://localhost:4000/2015/10/06/Tamhini</id>
    <content type="html">&lt;p&gt;After a pretty busy and drenching week, it was time to escape into the wilderness of the Ghats surrounding Pune. These pictures were captured on the ride to Tamhini Ghat near Pune. Getting there is pretty straight forward. When coming from Pune, just reach Pirangut Crossing and take the turn to Tamhini. Then just ride and let yourself dissolve into the calm and cool gusts of air. You will notice some waterfalls on the way. Their vigor depends on the abundance of rain&lt;/p&gt;
 
 &lt;p&gt;The road quality is average and very bad in some parts and inviting in some. Ride carefully.&lt;/p&gt;
@@ -2474,83 +2429,10 @@ Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning 
  </entry>
  
  <entry>
-   <title>Fiddle Mini - The DIY 'Portable' Music System</title>
-   <link href="http://rohitg.in/2015/09/26/FiddleMini/"/>
-   <updated>2015-09-26T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/09/26/FiddleMini</id>
-   <content type="html">&lt;p&gt;Music and Portability ! These guys have a pretty long relationship ever since somebody thought of listening to his favorite tunes while wasting his time travelling in a train/bus or walking on the streets and even crossing roads or riding bikes ! It started with those shoulder mounted stereo sets until music became a bit disturbing to be heard publicly and we had our first personal music system the &lt;strong&gt;Sony Walkman&lt;/strong&gt; ! I even have a functional one from 1995.&lt;/p&gt;
-
-&lt;p&gt;Quite recently we have moved on again from the personal space to a public exhibition and we have those new JBLs and BOSEs taking up the market by a storm. The headphones are becoming increasing ergonomic to wear and we even have cranium ones available. So the next time you say it feels someone’s talking in my head ; It could quite well be literally taken.&lt;/p&gt;
-
-&lt;p&gt;But nothing can beat the pleasure of hearing music as it amalgamates with the swish of the breeze, the chirp of the birds and the song of nature. I am probably from the clan that just dont fall in with headphones. There is a forced disconnect i believe unless people around you make insane noises that beg to be ignored or due to social niceties. So, I decided to build my own &lt;em&gt;Portable Wood Music Box&lt;/em&gt; that could well play from any source on the go ! Yeah ! That means it runs off a battery.&lt;/p&gt;
-
-&lt;p&gt;I had this in mind ever since i made &lt;a href=&quot;/2014/11/13/Fiddle-Music-System/&quot;&gt;Fiddle&lt;/a&gt; ! The size of the speaker was too big to bring with me to Pune.&lt;/p&gt;
-
-&lt;p&gt;I did a couple of attempts but the complexity of making one was too much and using the same Circuit i used on the Fiddle anyways seemed an overkill. While, i was in Mumbai earlier this year, I was searching for a handy small speaker box, so that i get an idea of the size of electronics to squeeze in. Lamington disappointed me terribly or probably i needed a better guide ?&lt;/p&gt;
-
-&lt;p&gt;The idea was scraped until recently I went to a local eStore to check out some stuff and noticed a portable speaker i wanted to build. It was a JBL Flip kind of thing. Did A2DP only. Sounded fine ! Costed a bomb ! INR 4000 for that ! I better make my own than falling in to these marketing gimmicks !&lt;/p&gt;
-
-&lt;p&gt;And yet again :&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why buy ? When it can be built !&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;While making some unrelated search on eBay (gob bless their algorithm) i stumbled upon &lt;a href=&quot;http://www.ebay.in/itm/Can-Speaker-Mp3-Player-Supports-USB-Pen-Drive-Memory-Card-FM-Radio-Aux-/321874916228?hash=item4af13d7384&quot;&gt;this&lt;/a&gt; . This could be an ideal configuration. I was not sure about the claims though. But i made a point to buy one from Delhi which i was about to visit. It costed about the half in Delhi from the person i usually buy stuff. I got it for 200 bucks. I wonder why the form factor is like the CAN ?&lt;/p&gt;
-
-&lt;p&gt;Following &lt;em&gt;Dave Jone&lt;/em&gt;’s words, “Dont Turn it On, Take it Apart “.. The CAN had a very loud and “high on the Higher Fs” speaker ! Connected to a PCB with handful of passives and 3 ICs. 1 for amplification ( guessing its class D probably) , 1 seems to be a microcontroller that reads the switch and plays music from sources and one seems to be a tuner chip for FM reception. The broad feature set (get ready to be BLOWN) :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Supports USB and microSD Cards ( I have tested and found my 8GB PD doesnt work while less than 4GB works )&lt;/li&gt;
-  &lt;li&gt;Has an onboard battery , a repurposed Motorola 1150mAh battery&lt;/li&gt;
-  &lt;li&gt;Has FM with Autostore functionality that works pretty well&lt;/li&gt;
-  &lt;li&gt;Has Aux in and out&lt;/li&gt;
-  &lt;li&gt;Can be charged with a MiniUSB connector&lt;/li&gt;
-  &lt;li&gt;Has a Blue Red LED to show status. Red when charging and Blue when in use. Blinking blue when autostoring etc.&lt;/li&gt;
-  &lt;li&gt;A control button - Long Press Up increases volume,Long Press Down decreases volume, Push changes source, single up/down toggles the track. Minimal and effective&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thats quite a value !&lt;/p&gt;
-
-&lt;p&gt;I then started searching on Home turf for the &lt;em&gt;Classy&lt;/em&gt; form i was looking for.&lt;/p&gt;
-
-&lt;p&gt;For the infrequent visitors of the place, if you enter LR from the Railway Station side, you can find a scrap market that sells off stuff that have some defect. Kind of a junk market.That’s where all the gold is.I found a wooden speaker being sold for about 50 bucks a pop ! The size and the form enamoured me. It was like someone scrapped them for me. The shopkeeper who was adamant to stick one to me and was not agreeing to allow a few electrons flow down to speaker coil, so that i can make sure that everything is fine. After a few minutes he budged and got an old amp from the back and the speaker i chose was fine. All the speakers he had were forcibly severed from the back in varied proportions probably to avoid reuse. I chose the least one that can be aptly covered by the CAN speaker parts with minimal changes.&lt;/p&gt;
-
-&lt;p&gt;I desoldered all wires and connected my own antenna to it. Then accommodated the battery and antenna inside the wooden box.&lt;/p&gt;
-
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/7DZwuMvUJs/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-08-31T15:42:06+00:00&quot;&gt;Aug 31, 2015 at 8:42am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;This is what it looks before being glued and Msealed. The part is a cut out from the lower section of the CAN Speaker.&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21233003405/in/dateposted-public/&quot; title=&quot;P_20150830_232403&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5663/21233003405_44877b817b_z.jpg&quot; width=&quot;360&quot; height=&quot;640&quot; alt=&quot;P_20150830_232403&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;The cut out has been oriented such that it fits the Fattest USB i have and the USB is always inside the periphery of the box to avoid accidental collision with other objects around. The control button is at the bottom for increased ergonomics and avoiding accidental operation. ON/OFF button on the top !&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21206733356/in/dateposted-public/&quot; title=&quot;P_20150830_234246&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5733/21206733356_d0dd00ff77_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;P_20150830_234246&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;I next bought a collapsible handle from the hardware store and fitted it on top. Kind of serves like a makeshift dock sometimes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/21044805990/in/dateposted-public/&quot; title=&quot;P_20150902_083120&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;P_20150902_083120&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;The sound quality is pretty nice thanks to the speaker cabinet and a few extra passives added. And Bluetooth and IR also works with &lt;a href=&quot;/2015/05/29/TruPlay/&quot;&gt;TruPlay&lt;/a&gt; Project !&lt;/p&gt;
-
-&lt;p&gt;I have noticed that the plastic does look a bit disjoint. So i chamfered it using Mseal ! Matches with the overall color theme too :D&lt;/p&gt;
-
-&lt;p&gt;So, when are you building one ?&lt;/p&gt;
-
-&lt;p&gt;Cheers !&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
    <title>CNCs & Me 1 - Easy Peasy Stepper System Tester</title>
-   <link href="http://rohitg.in/2015/09/24/CNCsnMe1/"/>
+   <link href="http://localhost:4000/2015/09/24/CNCsnMe1/"/>
    <updated>2015-09-24T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/09/24/CNCsnMe1</id>
+   <id>http://localhost:4000/2015/09/24/CNCsnMe1</id>
    <content type="html">&lt;p&gt;&lt;em&gt;This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff i have built! This post is about a stepper system tester i built a while back.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Stepper motors are quite widely used for CNCs/3D Printers or other Electromechanical hacks like the polar plotter etc. ! There is as always a constant need to run the motor to check whether its aligned properly or not? Does the flex coupling has any issues? Is the driver dead or alive and the best one- whether the current setting is fine to generate enough torque to hold or move the lead screw/Belt.&lt;/p&gt;
@@ -2581,9 +2463,9 @@ I designed it myself based on reference designs by TI and had the PCBs made by S
  
  <entry>
    <title>PiTuber- The Low Power Raspberry Pi Youtube Offliner</title>
-   <link href="http://rohitg.in/2015/09/15/PiTuber/"/>
+   <link href="http://localhost:4000/2015/09/15/PiTuber/"/>
    <updated>2015-09-15T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/09/15/PiTuber</id>
+   <id>http://localhost:4000/2015/09/15/PiTuber</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt;
 This article is for exploratory and educational purposes only. Kindly use the code and project responsibly.&lt;/p&gt;
@@ -2628,9 +2510,9 @@ Further a NAS can be configured instead of SFTP for easier file exchanges. Bette
  
  <entry>
    <title>Unbricking a MotoX, Resurrecting Smiles</title>
-   <link href="http://rohitg.in/2015/08/08/MotoX/"/>
+   <link href="http://localhost:4000/2015/08/08/MotoX/"/>
    <updated>2015-08-08T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/08/08/MotoX</id>
+   <id>http://localhost:4000/2015/08/08/MotoX</id>
    <content type="html">&lt;p&gt;This didnt seem to be coming ! Some of us were travelling to Bedse Caves on a weekend. &lt;em&gt;[ZT]&lt;/em&gt; had the amazing MotoX -Ghost aka 2013 one that served as our primary camera and navigator since he was leading. The MotoX was (or rather is) a flagship phone that gave way for the present generation Moto G and E. But it had an AMOLED that usually steals the show.. If you know what i mean.&lt;/p&gt;
 
 &lt;p&gt;The essence of the trip was captured in the phone and we were to meet the next day to swap pictures. I was anticipating it even more as I wanted to write a short trip entry.&lt;/p&gt;
@@ -2700,9 +2582,9 @@ Follow them and make sure your USB is always connected. Mine got disconnected af
  
  <entry>
    <title>LIVE BLOG - Intel IOT Roadshow Pune</title>
-   <link href="http://rohitg.in/2015/08/01/Intel/"/>
+   <link href="http://localhost:4000/2015/08/01/Intel/"/>
    <updated>2015-08-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/08/01/Intel</id>
+   <id>http://localhost:4000/2015/08/01/Intel</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Day 1&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Reached a bit early at 6:59am after a minor slip on the bike. Rough start for the day !&lt;/p&gt;
@@ -2832,9 +2714,9 @@ Bummer!!&lt;/p&gt;
  
  <entry>
    <title>Kalam Sir</title>
-   <link href="http://rohitg.in/2015/07/27/Kalam-Sir/"/>
+   <link href="http://localhost:4000/2015/07/27/Kalam-Sir/"/>
    <updated>2015-07-27T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/07/27/Kalam-Sir</id>
+   <id>http://localhost:4000/2015/07/27/Kalam-Sir</id>
    <content type="html">&lt;p&gt;What happens when your childhood hero is no more? The person who inspired you to become someone who can question the ways to find answers or new ways.&lt;/p&gt;
 
 &lt;p&gt;The person who has done what others just dreamed of. Not by his inherited legacy or his maligned ways as people may generally perceive but by ways it should always be done. Humbly, Gently and Altruistically! :’(&lt;/p&gt;
@@ -2880,9 +2762,9 @@ I still remember that anecdote about Beryllium Diaphragms.&lt;/p&gt;
  
  <entry>
    <title>CricPi- The (probably) MOST Minimalistic Live Cricket Ever</title>
-   <link href="http://rohitg.in/2015/07/12/CrickPi/"/>
+   <link href="http://localhost:4000/2015/07/12/CrickPi/"/>
    <updated>2015-07-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/07/12/CrickPi</id>
+   <id>http://localhost:4000/2015/07/12/CrickPi</id>
    <content type="html">&lt;p&gt;Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old &lt;strong&gt;WebSense Blocked&lt;/strong&gt; page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times.&lt;/p&gt;
 
 &lt;p&gt;Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would’nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the &lt;strong&gt;SCORE&lt;/strong&gt;. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .&lt;/p&gt;
@@ -2959,9 +2841,9 @@ This too.
  
  <entry>
    <title>Juggad Supply- Saving a power supply from planned obsolescence</title>
-   <link href="http://rohitg.in/2015/07/05/JuggadSupply/"/>
+   <link href="http://localhost:4000/2015/07/05/JuggadSupply/"/>
    <updated>2015-07-05T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/07/05/JuggadSupply</id>
+   <id>http://localhost:4000/2015/07/05/JuggadSupply</id>
    <content type="html">&lt;p&gt;Next time your printer stops printing for no reason or changing the battery of your MP3 Player from &lt;strong&gt;Authorised Service Station&lt;/strong&gt; costs a major percentage of the original cost, Be informed this all is a part of an industrial design policy,Planned Obsolescence, to make goods last a bit shorter by tweaking the design.&lt;/p&gt;
 
 &lt;p&gt;Never mind a broken device is an opportunity to learn. That’s what i had in mind when i didnt throw away my 2004 ATX supply when it failed in 2010 probably due to some connection/connector issue. In a haste to get the PC working in summer break I installed a new supply on the PC and kept it with me to play with later.&lt;/p&gt;
@@ -3023,9 +2905,9 @@ This too.
  
  <entry>
    <title>LiTiny- A Tiny LiIon charger for most things battery</title>
-   <link href="http://rohitg.in/2015/06/29/LiTiny/"/>
+   <link href="http://localhost:4000/2015/06/29/LiTiny/"/>
    <updated>2015-06-29T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/06/29/LiTiny</id>
+   <id>http://localhost:4000/2015/06/29/LiTiny</id>
    <content type="html">&lt;p&gt;Lithium Batteries are indispensable. I have a few project like my own &lt;em&gt;DIY Badge [Post Soon]&lt;/em&gt; or a &lt;em&gt;Light Wand for Light Photography&lt;/em&gt; and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.&lt;/p&gt;
 
 &lt;p&gt;The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.&lt;/p&gt;
@@ -3096,241 +2978,10 @@ This too.
  </entry>
  
  <entry>
-   <title>TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430</title>
-   <link href="http://rohitg.in/2015/05/29/TruPlay/"/>
-   <updated>2015-05-29T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/05/29/TruPlay</id>
-   <content type="html">&lt;p&gt;I recently ordered &lt;a href=&quot;http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;amp;hash=item1a00397396&quot;&gt;this&lt;/a&gt; Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and &lt;strong&gt;Changing Songs&lt;/strong&gt;. Its more like getting chained to the speakers. Woof !!&lt;/p&gt;
-
-&lt;p&gt;After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the &lt;em&gt;Free Shipping&lt;/em&gt; fellas !&lt;/p&gt;
-
-&lt;p&gt;It worked as advertised. But the range was hardly 15feet &lt;strong&gt;LOS&lt;/strong&gt; and in a maze like house i live in , it would hardly go through the walls. So, the &lt;em&gt;Wireless&lt;/em&gt; problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , “Think out of the box !” my answer was inside the box.&lt;/p&gt;
-
-&lt;p&gt;It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads :&lt;/p&gt;
-
-&lt;center&gt;
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/0zeXPvvULI/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-03-29T08:06:06+00:00&quot;&gt;Mar 29, 2015 at 1:06am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
-&lt;/center&gt;
-
-&lt;p&gt;Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the &lt;em&gt;AT Commands&lt;/em&gt;).&lt;/p&gt;
-&lt;center&gt;
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://instagram.com/p/1n1xClPUD-/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_top&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-04-18T16:11:06+00:00&quot;&gt;Apr 18, 2015 at 9:11am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
- &lt;/center&gt;
-
-&lt;p&gt;Google helps !  I found &lt;a href=&quot;http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html&quot;&gt;this&lt;/a&gt; nice forum post detailing the adapter. Bingo its the &lt;strong&gt;OVC3860&lt;/strong&gt; Chip. And here are the &lt;a href=&quot;http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf&quot;&gt;commands&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Basically all commands are in a &lt;strong&gt;AT#CMD[cr][lf]&lt;/strong&gt; Format. The “CMD” for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.&lt;/p&gt;
-
-&lt;p&gt;The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a ‘115600’ one. This setting seems to be stored in the &lt;strong&gt;EEPROM&lt;/strong&gt; on the adapter. As &lt;a href=&quot;http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/&quot;&gt;this&lt;/a&gt; post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!&lt;/p&gt;
-
-&lt;p&gt;So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!&lt;/p&gt;
-
-&lt;iframe width=&quot;653&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/XGC1E0VE39Y&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Tested it for a few days ! I could now control my phone’s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB.&lt;/p&gt;
-
-&lt;p&gt;I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra &lt;strong&gt;SMD&lt;/strong&gt; tactile switch to further expand capabilities. 
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17148091553&quot; title=&quot;Dongle Tapping by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Dongle Tapping&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The connections are simple.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads !&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;After designing the board it was time for the best part : &lt;strong&gt;Etching&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here are the chronologically arranged pictures of PCB Etching using &lt;em&gt;Toner Transfer Method&lt;/em&gt; :&lt;/p&gt;
-
-&lt;p&gt;Making sure the TSSOP Pads got nicely transferred. Clicked using &lt;a href=&quot;http://rohitg.in/2015/02/26/The-MacroCase/&quot;&gt;MACROCase&lt;/a&gt; .
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768382545&quot; title=&quot;Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg&quot; width=&quot;640&quot; height=&quot;583&quot; alt=&quot;Making sure the tiny tracks got transferred&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;All set for the bath.
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768440115&quot; title=&quot;Toner Transfer by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Toner Transfer&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Rough times to follow.
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768864201&quot; title=&quot;Just Etched by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Just Etched&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After some sanding.
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17582193499&quot; title=&quot;Cleaned after ACID Bath by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Cleaned after ACID Bath&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Flashing the code after soldering.
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768419595&quot; title=&quot;Code Dump by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Code Dump&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Testing.
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17765735442&quot; title=&quot;First Test in Progress by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;First Test in Progress&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Ta Da !!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17768811751&quot; title=&quot;Unobstructing by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Unobstructing&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17742078846&quot; title=&quot;Looks Cool by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Looks Cool&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Check out the video for the project in action:&lt;/p&gt;
-
-&lt;iframe width=&quot;653&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/mrToz8M_BPQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Interested in building one? Grab the code here:&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/a35bf659325d0eac2ce5.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;Cheers,&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM</title>
-   <link href="http://rohitg.in/2015/05/17/FM430/"/>
-   <updated>2015-05-17T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/05/17/FM430</id>
-   <content type="html">&lt;p&gt;One fine day while i was rummaging through the part bin, I found an old project that probably was never completed ! &lt;strong&gt;FM Radio&lt;/strong&gt; !
-I tried to make one when i was in 7th grade, waiting at the counter of a dingy electronics repair shop for anyone to pay attention to the parts list gathered over the internet ( Dial up days ! ).&lt;/p&gt;
-
-&lt;p&gt;At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw ‘TEA5767 FM Receiver’ module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.voti.nl/docs/TEA5767.pdf&quot;&gt;TEA5767&lt;/a&gt; is a digital FM Receiver chip from NXP/Phillips that can be commanded over I2C to tune to various frequencies easily.&lt;/p&gt;
-
-&lt;p&gt;But alas ! The one i got never matched with any pictures online ! Where was the missing “crystal” responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen “TT-502X” i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to &lt;a href=&quot;http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio&quot;&gt;Dilshan&lt;/a&gt;, an amazing maker himself, I was able to get this done.&lt;/p&gt;
-
-&lt;p&gt;It turns out that the module is actually used in some Samsung Products and requires a &lt;em&gt;generic&lt;/em&gt; watch crystal.&lt;/p&gt;
-
-&lt;p&gt;The connections are similar to what &lt;em&gt;Dilshan&lt;/em&gt; mentions it in his post. I added a diode (Reverse Polarity. Ouch!) and a decoupling cap. And after a bit of work with the solder iron i was able to make my own FM Receiver Module.&lt;/p&gt;
-
-&lt;p&gt;Next step? Let others know about it… :D&lt;/p&gt;
-
-&lt;center&gt;
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;4&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://instagram.com/p/0nwlsDPUN1/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_top&quot;&gt;#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
-Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Rohit Gupta (@rohit7gupta) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-03-24T18:54:28+00:00&quot;&gt;Mar 24, 2015 at 11:54am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
-&lt;/center&gt;
-
-&lt;p&gt;FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17152069784&quot; title=&quot;Back side ! by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Back side !&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After doing the same! A commander was needed. Chose my workhorse, the MSP430 Launchpad for the extra switch they have on it that helps me change channels and doing that on arduino pro mini would require some breadboarding i was too lazy to try.&lt;/p&gt;
-
-&lt;p&gt;The code is pretty easy and shown below. It was coded using &lt;a href=&quot;http://energia.nu/&quot;&gt;Energia&lt;/a&gt; IDE.&lt;/p&gt;
-
-&lt;p&gt;Based on the datasheet the I2C address of the device is &lt;code class=&quot;highlighter-rouge&quot;&gt;0x60&lt;/code&gt; and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.&lt;/p&gt;
-
-&lt;p&gt;The other data bytes i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;0xB0&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;0x10&lt;/code&gt; are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.&lt;/p&gt;
-
-&lt;p&gt;I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/aa9a2a524853674807e6.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;If you need to check for signal quality and other things you can check out my github repo &lt;a href=&quot;https://github.com/IndianTinker/FM430&quot;&gt;here&lt;/a&gt; .&lt;/p&gt;
-
-&lt;p&gt;Here’s me explaining the whole setup in detail !&lt;/p&gt;
-
-&lt;iframe width=&quot;650&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/r3fGMu5iPY8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Cheers,&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia</title>
-   <link href="http://rohitg.in/2015/05/01/RoomMote/"/>
-   <updated>2015-05-01T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/05/01/RoomMote</id>
-   <content type="html">&lt;p&gt;Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .&lt;/p&gt;
-
-&lt;p&gt;So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting?&lt;/p&gt;
-
-&lt;p&gt;Interesting !!&lt;/p&gt;
-
-&lt;p&gt;Having the above in mind I thought of building my own &lt;em&gt;Room Automation and Mood Lighting controller&lt;/em&gt; and for this time make it look good and “no mess visible”. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16710796873&quot; title=&quot;The Box by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The Box&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So, the plan was   :&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;For the recipe, the main ingredient is &lt;strong&gt;MSP430&lt;/strong&gt; as I was able to get it in a desired TSSOP package from TI itself (The local sellers don’t seem to like SMDs), Its easy to play with thanks to &lt;em&gt;Energia&lt;/em&gt; and best of all - &lt;em&gt;Low Power&lt;/em&gt; .&lt;/p&gt;
-
-&lt;p&gt;I chose to use &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/msp430g2553.pdf&quot;&gt;MSP430G2553&lt;/a&gt; as i already had the chip in DIP to prototype with.&lt;/p&gt;
-
-&lt;p&gt;For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/uln2803a.pdf&quot;&gt;ULN2803&lt;/a&gt; , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.&lt;/p&gt;
-
-&lt;p&gt;For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/lp2951-n.pdf&quot;&gt;LP2950-3.3V&lt;/a&gt;, a TO92 packaged 100mA LDO .&lt;/p&gt;
-
-&lt;p&gt;Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.&lt;/p&gt;
-
-&lt;p&gt;That’s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after &lt;strong&gt;Toner Transfer&lt;/strong&gt; and some etching in my &lt;a href=&quot;http://rohitg.in/2014/04/07/OpenAgitator/&quot;&gt;OpenAgitator&lt;/a&gt; I got this sparkling PCB .&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17331055925&quot; title=&quot;Newly ETched by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Newly ETched&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some soldering !&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/16708584584&quot; title=&quot;Bottom Side by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Bottom Side&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17329162242&quot; title=&quot;Top Side - All assembled by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Top Side - All assembled&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;and some Brain Implant ( aka Code Download )&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17123607967&quot; title=&quot;Brain Implant by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Brain Implant&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The Code :&lt;/p&gt;
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/075a3fc4815eaa9d11af.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;Then modifying the nice little box to suit the PCB  (That moment when you say, “If only i had a 3D Printer” )&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17144793609&quot; title=&quot;Make space for the DC Jack by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Make space for the DC Jack&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17143469950&quot; title=&quot;All Snug? by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;All Snug?&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17144792019&quot; title=&quot;On the wall by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;On the wall&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say &lt;strong&gt;Manual Over-ride&lt;/strong&gt; ?&lt;/p&gt;
-
-&lt;p&gt;The wiring mess inside the switch-board.
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17305070826&quot; title=&quot;Wire mess inside the power board by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Wire mess inside the power board&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;All cleared up !
-&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17144797209&quot; title=&quot;Wires out by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Wires out&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up.&lt;/p&gt;
-
-&lt;p&gt;Now with a press of the button, Its all done ! I already feel so lazy!&lt;/p&gt;
-
-&lt;p&gt;And yes here are the colors !&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17305080226&quot; title=&quot;MoodLights by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg&quot; width=&quot;640&quot; height=&quot;453&quot; alt=&quot;MoodLights&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Dont forget to watch the video below and if you have something to say, Please Comment Down here!&lt;/p&gt;
-
-&lt;iframe width=&quot;650&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/hsQ9HEd14hQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Cheers,&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>BoardMerge- The command line single page PDF merge utility for PCBs</title>
-   <link href="http://rohitg.in/2015/04/17/BoardMerge/"/>
+   <link href="http://localhost:4000/2015/04/17/BoardMerge/"/>
    <updated>2015-04-17T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/04/17/BoardMerge</id>
+   <id>http://localhost:4000/2015/04/17/BoardMerge</id>
    <content type="html">&lt;p&gt;Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this &lt;a href=&quot;http://rohitg.in/2014/04/07/OpenAgitator/&quot;&gt;Open Agitator&lt;/a&gt; a while back to help me ease out the etching process.&lt;/p&gt;
 
 &lt;p&gt;I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.&lt;/p&gt;
@@ -3392,9 +3043,9 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt
  
  <entry>
    <title>The Noob's Guide to Pune Relocation</title>
-   <link href="http://rohitg.in/2015/04/12/NoobsGuide/"/>
+   <link href="http://localhost:4000/2015/04/12/NoobsGuide/"/>
    <updated>2015-04-12T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/04/12/NoobsGuide</id>
+   <id>http://localhost:4000/2015/04/12/NoobsGuide</id>
    <content type="html">&lt;p&gt;It has almost been 8 months since i moved to Pune for Work from my hometown &lt;em&gt;Delhi&lt;/em&gt; . Pune has a comparably benevolent weather as compared to Delhi. Summers are sweeter and so are winters. People of the city are great. They are quite helpful and humble. The city’s older areas have stark resemblance to Old Delhi and has lots of nice Forts, Temples, Museums and best of all eateries. Language is not a major issue as Marathi is somewhat similar to Hindi and most people understand Hindi but prefer to talk in Marathi. &lt;em&gt;Changla !&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I am writing is post mostly in a log format and will keep adding information as an when I get more.&lt;/p&gt;
@@ -3482,9 +3133,9 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt
  
  <entry>
    <title>Kindify- Making PDFs readable on the Kindle</title>
-   <link href="http://rohitg.in/2015/04/05/Kindify/"/>
+   <link href="http://localhost:4000/2015/04/05/Kindify/"/>
    <updated>2015-04-05T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/04/05/Kindify</id>
+   <id>http://localhost:4000/2015/04/05/Kindify</id>
    <content type="html">&lt;p&gt;Probably &lt;strong&gt;YOU&lt;/strong&gt; too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. &lt;strong&gt;YOU&lt;/strong&gt; too considered it would be fantastic to read them, a single device for only books. Consider this no calumny to the device. But PDFs are seriously not its cup of tea. Mercurial, &lt;strong&gt;YOU&lt;/strong&gt; might be seeing the way the PDF is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didn’t seem comfortable.&lt;/p&gt;
 
 &lt;p&gt;Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.&lt;/p&gt;
@@ -3535,9 +3186,9 @@ So, yet again Python saves the day!&lt;/p&gt;
  
  <entry>
    <title>MacroCASE- A DIY phone case to see, up close !</title>
-   <link href="http://rohitg.in/2015/02/26/The-MacroCase/"/>
+   <link href="http://localhost:4000/2015/02/26/The-MacroCase/"/>
    <updated>2015-02-26T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/02/26/The-MacroCase</id>
+   <id>http://localhost:4000/2015/02/26/The-MacroCase</id>
    <content type="html">&lt;p&gt;&lt;em&gt;A detailed build procedure of this is already posted on &lt;a href=&quot;http://www.instructables.com/id/MacroCase-A-DIY-Phone-Case-for-Macro-Photography/&quot;&gt;Instructables&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Last night while I was soldering a TSSOP Package on a home-etched board, i found it really difficult to see the joints whether they had soldered fine or whether i had a healthy track? I used my eye-loupe to see up close.The idea of using eye-loupe was initially introduced to my while my time at &lt;em&gt;CEPD,NSIT&lt;/em&gt; .Ah! That was a beautiful solder joint. Something worth saving and sharing. So, I just held the loupe in front of the phone to click a picture and save it. I figured this could be useful in taking macroshots too. 
@@ -3577,9 +3228,9 @@ umm.. Like this bajra seed&lt;/p&gt;
  
  <entry>
    <title>MakerFest 2015 Ahe !</title>
-   <link href="http://rohitg.in/2015/01/17/Makerfest/"/>
+   <link href="http://localhost:4000/2015/01/17/Makerfest/"/>
    <updated>2015-01-17T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2015/01/17/Makerfest</id>
+   <id>http://localhost:4000/2015/01/17/Makerfest</id>
    <content type="html">&lt;p&gt;Lets start with my amateurish &lt;em&gt;Haiku&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Dusty days and chilly Nights
@@ -3746,9 +3397,9 @@ This is an electric skate board which has a pressure sensor on the front. The mo
  
  <entry>
    <title>TinkerRule- The Maker's Swiss Army Knife</title>
-   <link href="http://rohitg.in/2014/12/14/Tinker-Rule/"/>
+   <link href="http://localhost:4000/2014/12/14/Tinker-Rule/"/>
    <updated>2014-12-14T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/12/14/Tinker-Rule</id>
+   <id>http://localhost:4000/2014/12/14/Tinker-Rule</id>
    <content type="html">&lt;p&gt;This project was done during my time at &lt;a href=&quot;http://www.cedtnsit.in/&quot;&gt;TI-CEPD,NSIT,Delhi&lt;/a&gt;. They have an awesome Winter Internship program going on, Be sure to have a look.&lt;/p&gt;
 
 &lt;p&gt;I source a lot of my components from Local Markets in Delhi like &lt;em&gt;Lajpat Rai Market&lt;/em&gt; etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate.&lt;/p&gt;
@@ -3814,287 +3465,10 @@ This is an electric skate board which has a pressure sensor on the front. The mo
  </entry>
  
  <entry>
-   <title>Fiddle - The DIYed Music System</title>
-   <link href="http://rohitg.in/2014/11/13/Fiddle-Music-System/"/>
-   <updated>2014-11-13T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/11/13/Fiddle-Music-System</id>
-   <content type="html">&lt;p&gt;&lt;em&gt;Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK&lt;/em&gt; Thats how my old ‘Phillips All in One’ failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed &lt;strong&gt;CD Player with a segmented Display&lt;/strong&gt;. But today most of the music is digital and hence &lt;em&gt;Upgrade was necessary&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I was planning to buy one and browsing the estores but then then &lt;em&gt;Makers Dilemma&lt;/em&gt; struck me.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Why Buy? When it can be Built!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Play MP3s&lt;/li&gt;
-  &lt;li&gt;Radio&lt;/li&gt;
-  &lt;li&gt;Aux -IN&lt;/li&gt;
-  &lt;li&gt;Take SD Cards&lt;/li&gt;
-  &lt;li&gt;Remotes will be good too.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fitting such things in a project would rather be heavenly. I searched online for references and &lt;em&gt;You have it boy!&lt;/em&gt; there is one ready to amplify (supply) module from our friends in China that does it all . See &lt;a href=&quot;http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg&quot;&gt;this&lt;/a&gt;  .&lt;/p&gt;
-
-&lt;p&gt;I had seen this in a Taxi (less formally called &lt;em&gt;Gramin Seva&lt;/em&gt;) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )&lt;/p&gt;
-
-&lt;p&gt;Now all i need to do is :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Decipher the connections&lt;/li&gt;
-  &lt;li&gt;Build a power supply and Amplifier&lt;/li&gt;
-  &lt;li&gt;Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box&lt;/li&gt;
-  &lt;li&gt;Modify the box to fit all in&lt;/li&gt;
-  &lt;li&gt;Enjoy&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Connections&lt;/strong&gt; were pretty easy as the silkscreen had some references. It basically needs a &lt;code class=&quot;highlighter-rouge&quot;&gt;5V DC&lt;/code&gt; supply that’s the two pin connected on the left for and give &lt;strong&gt;stereo&lt;/strong&gt; output using the 3 of 4 connectors on right (&lt;em&gt;Right, Left and GND&lt;/em&gt;) and the last one is for the FM Antenna&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606424407&quot; title=&quot;The Landscape by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The Landscape&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. &lt;em&gt;FingersCrossed&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;It worked fine and i was playing things off the USB straight away!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606417287&quot; title=&quot;USB Reading by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;USB Reading&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, the power supply and Amplifier. I used the omnipresent &lt;code class=&quot;highlighter-rouge&quot;&gt;7805 Regulator&lt;/code&gt; that could power the module easily as i estimated the current requirements to be around &lt;code class=&quot;highlighter-rouge&quot;&gt;250-300mA&lt;/code&gt; . The supply was going to be &lt;code class=&quot;highlighter-rouge&quot;&gt;12VDC&lt;/code&gt; due to the Amp i was building and hence, a heat sink was necessary.
-The Amp was build out of &lt;strong&gt;ST’s&lt;/strong&gt; &lt;a href=&quot;http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf&quot;&gt;TDA2030&lt;/a&gt; which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.&lt;/p&gt;
-
-&lt;p&gt;The Application circuit works charm.
-So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?&lt;/p&gt;
-
-&lt;p&gt;Demo runs showed &lt;code class=&quot;highlighter-rouge&quot;&gt;TDA2030&lt;/code&gt; needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the &lt;code class=&quot;highlighter-rouge&quot;&gt;TDA2030&lt;/code&gt; and made a makeshift heat sink for &lt;code class=&quot;highlighter-rouge&quot;&gt;7805&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15791566865&quot; title=&quot;Ortho View by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Ortho View&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15767878536&quot; title=&quot;Circuit -Front by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Circuit -Front&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606714790&quot; title=&quot;Circuit- Back by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Circuit- Back&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the &lt;code class=&quot;highlighter-rouge&quot;&gt;10k&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;0.1uF&lt;/code&gt; combination.&lt;/p&gt;
-
-&lt;p&gt;I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (&lt;em&gt;Oh! Yeah&lt;/em&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15767875046&quot; title=&quot;Look at that Woofer by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Look at that Woofer&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.&lt;/p&gt;
-
-&lt;p&gt;This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15789702321&quot; title=&quot;The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;The 2 hour , 2 broken blades cut&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now it was assembling time.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15789671841&quot; title=&quot;All Messed up by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;All Messed up&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After a few half hours, i got it all working.. No Buzz and all music!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15606708190&quot; title=&quot;Charm by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg&quot; width=&quot;359&quot; height=&quot;640&quot; alt=&quot;Charm&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Nokia 5110 LCDs and MSP430</title>
-   <link href="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/"/>
-   <updated>2014-11-09T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430</id>
-   <content type="html">&lt;p&gt;I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.&lt;/p&gt;
-
-&lt;p&gt;The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.&lt;/p&gt;
-
-&lt;p&gt;The LCD used a &lt;a href=&quot;https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf&quot;&gt;Phillips PCD 8544 Driver&lt;/a&gt; which communicates on SPI.The voltage levels are &lt;code class=&quot;highlighter-rouge&quot;&gt;2.7-3.3V&lt;/code&gt; happy for our MSP430.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;NYC&lt;/em&gt; has a pretty nice explanation on how it works and how to play with it with MSP430 over on his &lt;a href=&quot;http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;For TL:DR;&lt;/p&gt;
-
-&lt;p&gt;The LCD has the following pins to interface to:&lt;/p&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-&lt;/style&gt;
-
-&lt;table class=&quot;tg&quot;&gt;
-  &lt;tr&gt;
-    &lt;th class=&quot;tg-031e&quot;&gt;Pin Number&lt;/th&gt;
-    &lt;th class=&quot;tg-031e&quot;&gt;Pin Label&lt;/th&gt;
-    &lt;th class=&quot;tg-031e&quot;&gt;Pin Function&lt;/th&gt;
-    &lt;th class=&quot;tg-031e&quot;&gt;Input/Output?&lt;/th&gt;
-    &lt;th class=&quot;tg-031e&quot;&gt;Notes&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;1&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;VCC&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Positive power supply&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Supply range is between 2.7V and 3.3V&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;2&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;GND&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Ground&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;3&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;SCE&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Chip select&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Active low&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;4&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;RST&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Reset&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Active low&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;5&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;D/C&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Mode select&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Select between command mode (low) and data mode (high).&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;6&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;DN(MOSI)&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Serial data in&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;7&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;SCLK&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Serial clock&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;8&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;LED&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;LED backlight supply&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Input&lt;/td&gt;
-    &lt;td class=&quot;tg-031e&quot;&gt;Maximum voltage supply is 3.3V.&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .&lt;/p&gt;
-
-&lt;p&gt;At a time you write to a single bank.&lt;/p&gt;
-
-&lt;p&gt;And you can continue to update only a single bank just in case you have dynamic data in that particular bank.&lt;/p&gt;
-
-&lt;p&gt;The communication is done using SPI.&lt;/p&gt;
-
-&lt;p&gt;The code that i used is based on &lt;a href=&quot;http://forum.43oh.com/topic/1312-nokia-5110-display/&quot;&gt;RobG’s post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It displays the temperature (from the internal sensor ofcourse!) and some static text&lt;/p&gt;
-
-&lt;p&gt;Connections are as follows(PORT1):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;LCD5110_SCLK_PIN- BIT5&lt;/li&gt;
-  &lt;li&gt;LCD5110_DN_PIN- BIT7&lt;/li&gt;
-  &lt;li&gt;LCD5110_SCE_PIN- BIT0&lt;/li&gt;
-  &lt;li&gt;LCD5110_DC_PIN- BIT1&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15171730494&quot; title=&quot;WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg&quot; width=&quot;640&quot; height=&quot;372&quot; alt=&quot;WP_20140803_19_27_04_Pro&quot; /&gt;&lt;/a&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/72070b40befcf1417e2a.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/14631629150&quot; title=&quot;When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; alt=&quot;When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune&quot; align=&quot;center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Just incase you need to play more with graphics see this cool post by &lt;a href=&quot;https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide&quot;&gt;Sparkfun&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If you have any difficulties post here in comments&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Arduino Library for Freescale's MMA7361 3 axis accelerometer</title>
-   <link href="http://rohitg.in/2014/11/03/Library-for-MMA7361/"/>
-   <updated>2014-11-03T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/11/03/Library-for-MMA7361</id>
-   <content type="html">&lt;p&gt;Accelerometers huh! No new term these days! Every &lt;strong&gt;practical&lt;/strong&gt; phone these days has one! Accelerometers churn out data in two ways :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Analog which can be directly read by our friendly ADC&lt;/li&gt;
-  &lt;li&gt;Digital which send data in values riding on I2C/SPI.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The one that i had is an analog one and is probably the first one that comes when you search with keywords &lt;em&gt;Arduino Accelerometer&lt;/em&gt; on ebay/AliExpress. It(module) is based on &lt;a href=&quot;http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf&quot;&gt;Freescale ‘s MMA7361 analog 3Axis Accelerometer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done &lt;a href=&quot;http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf&quot;&gt;here&lt;/a&gt;) is as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;X,Y,Z&lt;/strong&gt; give Analog Voltage outputs based on the orientation&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;SL&lt;/strong&gt; - Sleep (needs to be Pulled up)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;0g&lt;/strong&gt; - It gives a signal when 0g is detected.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;5v,3v,GND&lt;/strong&gt; - Usual Power Connections 3V is produced internally if 5v is applied&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;GS&lt;/strong&gt; - Sensitivity select- the IC allows 1.5g and 6g settings&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ST&lt;/strong&gt; - Self Test&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Without doing the &lt;strong&gt;RTFD(D-Datasheet)&lt;/strong&gt; i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in &lt;em&gt;Sleep&lt;/em&gt; Mode and has to be awaken by &lt;em&gt;pulling-Up&lt;/em&gt; the Sleep pin.&lt;/p&gt;
-
-&lt;p&gt;Just connect a &lt;code class=&quot;highlighter-rouge&quot;&gt;10k&lt;/code&gt; resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg&quot; alt=&quot;IMg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now just:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;read the analog values from the pin&lt;/li&gt;
-  &lt;li&gt;convert them to voltages&lt;/li&gt;
-  &lt;li&gt;apply sensitivity and correction&lt;/li&gt;
-  &lt;li&gt;and get g value&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Simple as that!&lt;/p&gt;
-
-&lt;p&gt;Having deciphered it, i wrote a test code:&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/1d5402b9b3562345cc44.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;It worked as designed.&lt;/p&gt;
-
-&lt;p&gt;Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
-The process turned out to be easy thanks to the documentation by &lt;strong&gt;Arduino&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;My Library can be found here on &lt;a href=&quot;https://github.com/IndianTinker/MMA7361Library&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Feel free to fork it and use it. 
-Hoping the community finds it useful.&lt;/p&gt;
-
-&lt;p&gt;Cheers,&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>Inside a Cheap LED Bulb</title>
-   <link href="http://rohitg.in/2014/10/28/Dollar-LED-Bulb/"/>
+   <link href="http://localhost:4000/2014/10/28/Dollar-LED-Bulb/"/>
    <updated>2014-10-28T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/10/28/Dollar-LED-Bulb</id>
+   <id>http://localhost:4000/2014/10/28/Dollar-LED-Bulb</id>
    <content type="html">&lt;p&gt;I was recently on the visit to my hometown &lt;em&gt;Delhi&lt;/em&gt; this Diwali when i visited &lt;strong&gt;Lajpat Rai&lt;/strong&gt; market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.&lt;/p&gt;
 
 &lt;p&gt;It was pretty clear that the Bulbs wont have those &lt;em&gt;Chinese&lt;/em&gt; drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.&lt;/p&gt;
@@ -4132,90 +3506,10 @@ It did have a textbook transformerless design (&lt;a href=&quot;4.bp.blogspot.co
  </entry>
  
  <entry>
-   <title>Implementing Tags/Categories on Jekyll using Liquid !</title>
-   <link href="http://rohitg.in/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md-Welcome-to-new-home/"/>
-   <updated>2014-10-21T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md -Welcome-to-new-home</id>
-   <content type="html">&lt;p&gt;I have recently been working on my blog on using &lt;em&gt;Jekyll&lt;/em&gt; on &lt;strong&gt;Github Pages&lt;/strong&gt; and the experience has been wonderful.&lt;!--more--&gt; It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, Jekyll supports &lt;a href=&quot;liquidmarkup.org/&quot;&gt;Liquid&lt;/a&gt; a templating engine built on ruby that is developed by e commerce giant &lt;em&gt;Shopify&lt;/em&gt;.
-Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using &lt;strong&gt;Liquid&lt;/strong&gt; .&lt;/p&gt;
-
-&lt;p&gt;It essentially involves two steps:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Editing YML front matter (The thing between the 3 dashes)&lt;/li&gt;
-  &lt;li&gt;Creating a Category page to automatically accumulate all the tags you added&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!&lt;/p&gt;
-
-&lt;p&gt;Lets get started.&lt;/p&gt;
-
-&lt;p&gt;Add a &lt;code class=&quot;highlighter-rouge&quot;&gt;Tags&lt;/code&gt; variable to the frontmatter block and list the tags as shown the following example:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Tagging Jekyll
-tags:
-- Jekyll
-- Blogging
-- web
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say &lt;em&gt;Categories&lt;/em&gt; etc.
-Lets name it Categories.md&lt;/p&gt;
-
-&lt;p&gt;Use the following snippet to display tags.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/3eddb75957eaf9f9b8e8.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;Now&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
-jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;and see the changes in the blog on &lt;em&gt;http://localhost:4000&lt;/em&gt;.
-If you face any issues be sure to comment here .&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Welcome to the new home!</title>
-   <link href="http://rohitg.in/2014/10/16/Welcome-to-new-home/"/>
-   <updated>2014-10-16T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/10/16/Welcome-to-new-home</id>
-   <content type="html">&lt;p&gt;I am now in process of migrating my main blog on &lt;a href=&quot;http://indiantinker.wordpress.com&quot;&gt;wordpress&lt;/a&gt; to github pages for more contexual/design/layout freedom. This blog is built using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;:&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For those who have used &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt; in the past Jekyll is excellent as it (personally saying) generates a static website by compiling all the code you wrote in the post.Obviously, with the luxury of &lt;strong&gt;platforms&lt;/strong&gt; like wordpress,blogspot etc writing bare code is archaic. Jekyll has got your back here too, you never &lt;em&gt;write&lt;/em&gt; the html/css tags from scratch. The Jekyll engine takes standard markdown which it builds into a html code and once built gives you a complete website. You an obviously code in html too.&lt;/p&gt;
-
-&lt;p&gt;Comments,widgets and Analytics work too with just a bit of playing required.
-The comments on this site are supported via Disqus !&lt;/p&gt;
-
-&lt;p&gt;Hope this post compiles well ! :)&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
    <title>Mozilla Maker Party-Pune</title>
-   <link href="http://rohitg.in/2014/10/16/MakerParty/"/>
+   <link href="http://localhost:4000/2014/10/16/MakerParty/"/>
    <updated>2014-10-16T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/10/16/MakerParty</id>
+   <id>http://localhost:4000/2014/10/16/MakerParty</id>
    <content type="html">&lt;p&gt;CAUTION:This post might sound different. Writing gears need some oiling.
 &lt;!--more--&gt;
 I have moved to pune for work now and exploring the city has always been on my top agenda.  Pune has always been a happening city of makers. Mumbai is close-by and easily commutable. There are a lot of DIY/Maker start-ups here too and who doesnt know about IOTPune/DooThings. [A more detailed city review sometime later]&lt;/p&gt;
@@ -4308,9 +3602,9 @@ Rohit&lt;/p&gt;
  
  <entry>
    <title>The Hyderabad Quickie !</title>
-   <link href="http://rohitg.in/2014/07/24/Hyderabad/"/>
+   <link href="http://localhost:4000/2014/07/24/Hyderabad/"/>
    <updated>2014-07-24T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/07/24/Hyderabad</id>
+   <id>http://localhost:4000/2014/07/24/Hyderabad</id>
    <content type="html">&lt;p&gt;I was recently in South Indian city of Hyderabad, the capital of Andhra Pradesh (Now reorganized into two states called Telangana and Seemandhra ). The city is know for its Biryani and Char Minar.&lt;/p&gt;
 
 &lt;p&gt;Due the schedule , i could only get a day (rather a combination of one evening and one morning ) to explore  the Nawabi city. Thankfully, the city has an awesome public transportation system with buses and feeders plying to every nook and corner of the city. On the iteneary, we planned to visit Golconda Fort, Hussain Sagar, Char Minar and adjoining area and Banjara Hills.&lt;/p&gt;
@@ -4384,9 +3678,9 @@ Rohit&lt;/p&gt;
  
  <entry>
    <title>UberCubeX4- The portable LED Cube !</title>
-   <link href="http://rohitg.in/2014/07/22/UberCube/"/>
+   <link href="http://localhost:4000/2014/07/22/UberCube/"/>
    <updated>2014-07-22T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/07/22/UberCube</id>
+   <id>http://localhost:4000/2014/07/22/UberCube</id>
    <content type="html">&lt;p&gt;I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(&lt;del&gt;years&lt;/del&gt;). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.&lt;/p&gt;
 
 &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/8qF-NFmNIvc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -4447,9 +3741,9 @@ Rohit&lt;/p&gt;
  
  <entry>
    <title>Tiano- The Touchscreen Piano</title>
-   <link href="http://rohitg.in/2014/04/16/Tiano-Piano/"/>
+   <link href="http://localhost:4000/2014/04/16/Tiano-Piano/"/>
    <updated>2014-04-16T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/04/16/Tiano-Piano</id>
+   <id>http://localhost:4000/2014/04/16/Tiano-Piano</id>
    <content type="html">&lt;p&gt;Touchscreens..huh.. They are all around us..Phones ,tablets, phablets and now even laptops. Most of them have a capacitive touchscreen where the change in capacitance at a point is used to sense it and then perform the corresponding action. Capacitive ones are multi point sensing. They sense more than 2 points and hence we get those pinch to zoom features etc.&lt;/p&gt;
 
 &lt;p&gt;On the other hand , almost archaic version on touchscreen is the resistive version. That are pretty easy to interface with almost any microcontroller with an ADC. In this project i did over the weekend i tried to interface a touchscreen ( resistive one..) ,available at mobile repair shops in Delhi with a MSP430G2553 (Although MSP430G2231 would also do)  to make a piano.&lt;/p&gt;
@@ -4481,9 +3775,9 @@ Rohit&lt;/p&gt;
  
  <entry>
    <title>Open Agitator</title>
-   <link href="http://rohitg.in/2014/04/07/OpenAgitator/"/>
+   <link href="http://localhost:4000/2014/04/07/OpenAgitator/"/>
    <updated>2014-04-07T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/04/07/OpenAgitator</id>
+   <id>http://localhost:4000/2014/04/07/OpenAgitator</id>
    <content type="html">&lt;p&gt;After a somewhat woeful week at college that shook my belief in several sectors.. I mustered up my courage to realize an old project they knocked the door every time i used to Etch PCB boards. Since, the solution i use has already done close to 20 boards of small size one has to really keep shaking/stirring/Agitating the solution for a fairy long time.. ( ya 7-8 mins of man power is fairly long time :P )&lt;/p&gt;
 
 &lt;p&gt;The idea came to me when i visited my brother in &lt;a title=&quot;Travelogue: Bangalore&quot; href=&quot;http://indiantinker.wordpress.com/2013/05/24/travelogue-bangalore/&quot; target=&quot;_blank&quot;&gt;Bangalore&lt;/a&gt; earlier this year. He was generous enough to give us a tour of his world class Biotechnology lab in India.. He showed us stuff and things/instruments which were difficult to pronounce in one go but they all had a thing in common- They ended with syllables like -&lt;em&gt;‘-izer’,-‘ator’,’-ation’. &lt;/em&gt;&lt;/p&gt;
@@ -4586,9 +3880,9 @@ IndianTinker&lt;/p&gt;
  
  <entry>
    <title>Ahemdabad Che!</title>
-   <link href="http://rohitg.in/2014/03/31/Ahemdabad/"/>
+   <link href="http://localhost:4000/2014/03/31/Ahemdabad/"/>
    <updated>2014-03-31T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2014/03/31/Ahemdabad</id>
+   <id>http://localhost:4000/2014/03/31/Ahemdabad</id>
    <content type="html">&lt;p&gt;Gujrati Food.. Umm .If you love gujrati food in which ever part of the country you are and then go and visit Ahmadabad for some reason and eat those “Jalebi, Fafda” or Khandvi, I bet your entire “Gujrati Food here(at your place) is good” notion will be changed and you will abstain from eating Gujju Food anywhere else. It has been Months and i haven’t eaten my favorite Khandvi. Its also so pirated here in Delhi. Well.. Food Piracy !&lt;/p&gt;
 
 &lt;p&gt;In this travelogue I will go through my adventurous journey into the food and people of Amdavad (as they say there). We were recently there for &lt;a title=&quot;MakerFest 2014&quot; href=&quot;http://indiantinker.wordpress.com/2014/01/25/makerfest-2014-roundup/&quot; target=&quot;_blank&quot;&gt;MakerFest &lt;/a&gt; and in whatever time we got I and my group consisting Of Ishan and Saral sneaked into the city to explore be it late night (1am-ish) or early morning! What i am going to illustrate was done in bits and pieces , but surprisingly can be done in one full day! So, the below log can be done chronologically but was done in 2 days due to other important tasks :)&lt;/p&gt;
@@ -4721,9 +4015,9 @@ IndianTinker&lt;/p&gt;
  
  <entry>
    <title>TI-CEPD Diaries:The Electronic Inaugural Lamp</title>
-   <link href="http://rohitg.in/2013/04/29/InnaugLamp/"/>
+   <link href="http://localhost:4000/2013/04/29/InnaugLamp/"/>
    <updated>2013-04-29T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2013/04/29/InnaugLamp</id>
+   <id>http://localhost:4000/2013/04/29/InnaugLamp</id>
    <content type="html">&lt;p&gt;Inauguration Lamps.. They are just so mainstream. The same one candle lighting the others one by one. Pretty Bucolic ! But Prof.Gadre had something different in mind for the inauguration of Texas Instruments Analog Design Challenge Finals in Blore,2013.&lt;/p&gt;
 
 &lt;p&gt;I was glad to be the part of the team doing all the work for the project. The concept was to use a conventional usability model and introduce a different way to light things up. In brevity,&lt;/p&gt;
@@ -4751,9 +4045,9 @@ IndianTinker&lt;/p&gt;
  
  <entry>
    <title>Arduino Controlware- Play with your duino without frequent code uploads</title>
-   <link href="http://rohitg.in/2012/08/25/Arduino-Controlware/"/>
+   <link href="http://localhost:4000/2012/08/25/Arduino-Controlware/"/>
    <updated>2012-08-25T00:00:00+05:30</updated>
-   <id>http://rohitg.in/2012/08/25/Arduino-Controlware</id>
+   <id>http://localhost:4000/2012/08/25/Arduino-Controlware</id>
    <content type="html">&lt;p&gt;I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.&lt;/p&gt;
 
 &lt;p&gt;During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!&lt;/p&gt;

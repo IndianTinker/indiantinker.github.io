@@ -27,7 +27,7 @@ I bought it a while back and was curious to play with it. The pin description (t
 
 Without doing the **RTFD(D-Datasheet)** i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in *Sleep* Mode and has to be awaken by *pulling-Up* the Sleep pin.
 
-Just connect a `10k` resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.
+Just connect a 10k resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.
 
 ![IMg](https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg)
 

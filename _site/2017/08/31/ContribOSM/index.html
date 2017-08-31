@@ -34,8 +34,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="Implementing Tags/Categories on Jekyll using Liquid !"/>
-  <meta name="twitter:title" content="Implementing Tags/Categories on Jekyll using Liquid !"/>
+  <meta  property="og:title" content="Contributing to OSM using JOSM"/>
+  <meta name="twitter:title" content="Contributing to OSM using JOSM"/>
   
 
 
@@ -43,28 +43,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md-Welcome-to-new-home/" />
+  <meta property="og:url" content="http://localhost:4000/2017/08/31/ContribOSM/" />
 
 
-  <meta content="2014-10-21T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
+  <meta content="2017-08-31T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm6.staticflickr.com/5818/21418272493_57f79e5919_m.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm6.staticflickr.com/5818/21418272493_57f79e5919_m.jpg"/>
-
-
-  
+  <meta content="https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg"/>
 
 
   
-  <meta content="Jekyll" property="article:tag"/>
+
+
   
-  <meta content="Pune" property="article:tag"/>
-  
-  <meta content="Blogging" property="article:tag"/>
-  
-  <meta content="web" property="article:tag"/>
+  <meta content="tut" property="article:tag"/>
   
 
 
@@ -76,7 +70,7 @@
 
   <title>
     
-      Implementing Tags/Categories on Jekyll using Liquid ! &middot; Rohit Gupta
+      Contributing to OSM using JOSM &middot; Rohit Gupta
     
   </title>
 
@@ -407,46 +401,6 @@
           
         
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
 
    <!--
     <a class="twitter-follow-button"
@@ -497,13 +451,13 @@ All Rights Reserved
 
     </div>
       <div class="post">
-  <h1 class="post-title">Implementing Tags/Categories on Jekyll using Liquid !</h1>
-  <span class="post-date">21 Oct 2014</span>
+  <h1 class="post-title">Contributing to OSM using JOSM</h1>
+  <span class="post-date">31 Aug 2017</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Delhi,India">Delhi, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/IDC IIT Bombay India">IDC IIT Bombay India</a></span>
 
 
 <br>
@@ -512,53 +466,88 @@ All Rights Reserved
 
 
 <br>
-  <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful.<!--more--> It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it.</p>
+  <blockquote>
+  <p>This is <a href="https://en.wikipedia.org/wiki/Wikipedia:Stub">Stub</a> on contributing to OSM using JOSM. The post is meant to document to process of uploading data points gathered as a part of <a href="https://info-design-lab.github.io/">Interactive Data Viz</a> course at IDC taught by Prof. Venkat. The article may be updated in the future.</p>
+</blockquote>
 
-<p>Interestingly, Jekyll supports <a href="liquidmarkup.org/">Liquid</a> a templating engine built on ruby that is developed by e commerce giant <em>Shopify</em>.
-Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using <strong>Liquid</strong> .</p>
+<h2 id="post-data-collection">Post Data Collection</h2>
 
-<p>It essentially involves two steps:</p>
+<p><strong>Preparing data</strong></p>
 
-<ol>
-  <li>Editing YML front matter (The thing between the 3 dashes)</li>
-  <li>Creating a Category page to automatically accumulate all the tags you added</li>
-</ol>
+<p>Once you have your data points in KML or CSV or geoJson. You can proceed with the following process. It is advisable to have a geoJson file. It helps in running vizualization when using Mapbox. Helpful tools are :</p>
 
-<p>After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!</p>
+<ul>
+  <li><a href="https://mapbox.github.io/togeojson/">KML/GPX to geoJson</a></li>
+  <li><a href="http://geojson.io">geoJson to CSV</a></li>
+</ul>
 
-<p>Lets get started.</p>
+<p>The process I followed was KML –&gt; CSV –&gt;geoJson</p>
 
-<p>Add a <code class="highlighter-rouge">Tags</code> variable to the frontmatter block and list the tags as shown the following example:</p>
+<p><strong>Icons and OSM features</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
-layout: post
-title: Tagging Jekyll
-tags:
-- Jekyll
-- Blogging
-- web
----
-</code></pre>
-</div>
-<p>Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say <em>Categories</em> etc.
-Lets name it Categories.md</p>
+<p>Like Mapbox’s Maki icons, OSM also has its own set of icons. They can be rendered on the map when you choose specific tags. The list of tags are mentioned <a href="http://wiki.openstreetmap.org/wiki/Map_Features">here</a>. The icons column on the page shows the icons that will be shown on the map. For example : I chose to map sitting places in IIT Campus. The most semantically suitable choice was of a bench. I used the ‘field’ as ‘amenity’ and value as ‘bench’. You can choose appropriately. The features can be added to the points using the CSV file. Once you have the CSV file you can add a new ‘column’ as amenity (in my case) using your favorite spreadsheet software. Now, in every ‘row’ i.e. for each data point add the value. This would be ‘bench’ in my case. You can have additional fields as well. It is preffered not to have spaces in between the words of the field. Use an ‘_’ .</p>
 
-<p>Use the following snippet to display tags.</p>
+<p>Once this is done, you should have a dataset in csv we can proceed to map them on OSM. As an additional step, I also generate a geoJSON file.</p>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/3eddb75957eaf9f9b8e8.js"> </script>
+<p><strong>OSM Contributing</strong></p>
 
-<p>Now</p>
+<p>As a class, we tried several methods. The following method uses the <a href="https://josm.openstreetmap.de/">JOSM IDE</a> to import the data as a map layer and then contribute it to OSM database. <strong>Before proceeding</strong>, check multiple times that your data fields are correctly rendered. You can test this <a href="http://geojson.io">here</a>. Once you update, it <em>might</em> be cubersome to update/edit them .</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jekyll build
-jekyll serve
-</code></pre>
-</div>
-<p>and see the changes in the blog on <em>http://localhost:4000</em>.
-If you face any issues be sure to comment here .</p>
+<p>First, Download the <a href="https://josm.openstreetmap.de/">IDE</a>  for the OS of your own choice.</p>
 
-<p>Cheers!</p>
+<p>I have documented it for Bindows.</p>
+
+<p>Once, the software is installed, we need to install a plugin called <em>OpenData</em> this enables JOSM to read csv files. Press F12 or Edit -&gt; Pref and choose plugins and type opendata. You may want to do Download list before. Then check the box and click OK. This installs OpenData plugin.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326825/in/album-72157686030264413/" title="opendata"><img src="https://farm5.staticflickr.com/4410/36952326825_4062955f0f_z.jpg" width="640" height="621" alt="opendata" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Now we need a map layer to work on. The preffered way is to use ‘open location’ option from ‘File’ menu option. You are presented with the following dialog.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725461/in/album-72157686030264413/" title="FileDownload"><img src="https://farm5.staticflickr.com/4367/36812725461_07f1def4bb_z.jpg" width="590" height="298" alt="FileDownload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>In this dialog, paste the url of the map you wish JOSM to pull. In my case, it was this <a href="http://www.openstreetmap.org/#map=15/19.1337/72.9126">http://www.openstreetmap.org/#map=15/19.1337/72.9126</a>.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326615/in/album-72157686030264413/" title="osm"><img src="https://farm5.staticflickr.com/4404/36952326615_fcddd6a18f_z.jpg" width="640" height="341" alt="osm" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Once downloaded, I got this.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326985/in/album-72157686030264413/" title="result"><img src="https://farm5.staticflickr.com/4337/36952326985_bd8d70a0a7_z.jpg" width="640" height="337" alt="result" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>By the this point, we have a base layer ready. Now, I opened the csv file. The usual File –&gt; Open way .</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737856/in/album-72157686030264413/" title="openfiles"><img src="https://farm5.staticflickr.com/4382/36764737856_5857da0a1e_z.jpg" width="640" height="411" alt="openfiles" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>My file is ‘points.csv’.Click Open. In the popup while importing CSV. The default options worked.
+The file gets rendered correctly over the base layer as points. In my case the color of points was cyan.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725561/in/album-72157686030264413/" title="bench local"><img src="https://farm5.staticflickr.com/4437/36812725561_7f6556a133_z.jpg" width="640" height="343" alt="bench local" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Please check the points before proceeding.</p>
+
+<p><strong>Uploading to OSM</strong></p>
+
+<p>Once checked, you may proceed by clicking on the upload icon. I got this warning popup. I clicked continue as I had checked the data multiple times.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737376/in/album-72157686030264413/" title="warning"><img src="https://farm5.staticflickr.com/4335/36764737376_53d00d84ca_z.jpg" width="640" height="290" alt="warning" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Next you get another warning. One of the fields had a space in between. I chose to ignore it as it was not a standard field anyway. But, I would recommend you use an ‘_’. Since, I did not document it when doing for the first time, I dont have those screenshots. But I will add them once some of the classmates attempt.</p>
+
+<p>You need an OSM account to upload. The API uses OAuth. The method that worked for me is ‘Automatic’. You are likely to get OAuth credentials. JOSM stores them for you. After the authorization part, you are required to commit the changes.  You will be presented with the following dialog.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737336/in/album-72157686030264413/" title="upload"><img src="https://farm5.staticflickr.com/4346/36764737336_42cf629aa7_z.jpg" width="640" height="618" alt="upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I chose the data source as ‘survey’. Now, press ‘Upload’!</p>
+
+<p>Congratulations on contributing to OSM.</p>
+
+<p>You can reopen the location to see your data. In my case, my benches are on the map.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36814389321/in/dateposted-public/" title="markedbench"><img src="https://farm5.staticflickr.com/4343/36814389321_6c90e0ab13_z.jpg" width="640" height="341" alt="markedbench" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>You can pull the details by clicking on ‘History’ button.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/" title="contributorInfo"><img src="https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg" width="640" height="362" alt="contributorInfo" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Hope that helps !</p>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
 

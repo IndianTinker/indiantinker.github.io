@@ -43,7 +43,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page57/" />
+  <meta property="og:url" content="http://localhost:4000/page57/" />
 
 
 
@@ -392,46 +392,6 @@
           
         
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
 
    <!--
     <a class="twitter-follow-button"
@@ -485,74 +445,39 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/12/14/Tinker-Rule/">
-        TinkerRule- The Maker's Swiss Army Knife
+      <a href="/2014/04/16/Tiano-Piano/">
+        Tiano- The Touchscreen Piano
       </a>
     </h1>
 
-    <span class="post-date">14 Dec 2014</span>
+    <span class="post-date">16 Apr 2014</span>
 
-    <p>This project was done during my time at <a href="http://www.cedtnsit.in/">TI-CEPD,NSIT,Delhi</a>. They have an awesome Winter Internship program going on, Be sure to have a look.</p>
+    <p>Touchscreens..huh.. They are all around us..Phones ,tablets, phablets and now even laptops. Most of them have a capacitive touchscreen where the change in capacitance at a point is used to sense it and then perform the corresponding action. Capacitive ones are multi point sensing. They sense more than 2 points and hence we get those pinch to zoom features etc.</p>
 
-<p>I source a lot of my components from Local Markets in Delhi like <em>Lajpat Rai Market</em> etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate.</p>
+<p>On the other hand , almost archaic version on touchscreen is the resistive version. That are pretty easy to interface with almost any microcontroller with an ADC. In this project i did over the weekend i tried to interface a touchscreen ( resistive one..) ,available at mobile repair shops in Delhi with a MSP430G2553 (Although MSP430G2231 would also do)  to make a piano.</p>
 
-<p>There are two ways to overcome this issue (assuming that the package is not standard) :</p>
+<p><a href="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg"><img class="aligncenter size-full wp-image-339" alt="Touchscreen setup" src="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg" width="470" height="230" /></a></p>
 
-<ol>
-  <li>Measure each and every thing using a vernier and then make a part for it in eagle.
-    <blockquote>
-      <p>I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that <strong>most</strong> leaded parts can be resolved in a 0.1inch grid.</p>
-    </blockquote>
-  </li>
-  <li>Make a reference and then use that to make parts without picking up the vernier.
-    <blockquote>
-      <p>In this we make a reference for most common footprints and use them as a reference. What’s better is that the known reference helps in finding out packages of some component you found lying in the parts bin.</p>
-    </blockquote>
-  </li>
-</ol>
+<p><strong>Pre-requisites</strong>: The touchscreen may not be easier to get. I got mine from a mobile repair shop in LR. It is a 4-wire Touchscreen, pretty common with horribly thin contacts that took a lot of patience to solder.There is a lot of literature available on Touchscreens on the internet. I found two app notes that were best. First one from <a href="http://www.atmel.in/Images/doc8091.pdf" target="_blank">Atmel</a> , that explained the working of the touchsreen in a pretty clear way and one from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI</a> that some what helped in the software part.</p>
 
-<p>So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on <em>Eagle</em> that can be etched. Nothing could offer me better precison than that.</p>
+<p>You must read the atmel one ( atleast the first few pgs to get how it works). Its essentially a resistive voltage divider. The value of the touch point is determined by the ADC value read.</p>
 
-<p>After a few hours of designing, i etched the board (which took quite an effort), then selectively tinned a few pads and applied protective lacquer on the board.</p>
+<p><a href="http://indiantinker.files.wordpress.com/2013/04/post1.jpg"><img class="aligncenter size-full wp-image-338" alt="formula" src="http://indiantinker.files.wordpress.com/2013/04/post1.jpg" width="470" height="264" /></a></p>
 
-<p>Here’s what i mananged.</p>
+<p>From the illustration above(borrowed from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>). One can easily see how the co-ordinates are read. In order to find out, what wire on your touch sreen corresponds to X and Y meshes. You can use a multi-meter first to measure the resistance between pins ,usually the alternate pins belong to same axes. in my case it was X-,Y-,X+,Y+  then to differentiate between x and y , one probable method will be to power the touchscreen i.e. giving the drive voltage and then find out the voltage at any other terminal w.r.t. ground and see whether is changing horizontally or vertically in your reference plane.</p>
 
-<ol>
-  <li>
-    <p><strong>Continuity Tester</strong> : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
-<a href="https://www.flickr.com/photos/94411929@N06/15831125987" title="Tinker Rule Continuity by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
-  </li>
-  <li>
-    <p><strong>Standard Packages</strong> : Some standard packages used, good to compare them and match.
-<a href="https://www.flickr.com/photos/94411929@N06/16016173942" title="Tinker Rule Footprints by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8570/16016173942_aff8aefc2f_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
-  </li>
-  <li><strong>0.1 inch grid</strong> : This is the best one and used most of the times. Makes it easy to simulate breadboard/perfboard behaviour.
-<a href="https://www.flickr.com/photos/94411929@N06/16016646101" title="0.1inch Grid by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8581/16016646101_8945045d09_z.jpg" width="640" height="359" alt="0.1inch Grid" /></a></li>
-  <li>
-    <p><strong>Common Drills</strong> : Most common drill sizes(bits) , just see what inserts easily and voila, we have a good enough drill size. 
-<a href="https://www.flickr.com/photos/94411929@N06/15396343364" title="Standard Drills by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7465/15396343364_a16d3cea16_z.jpg" width="640" height="359" alt="Standard Drills" /></a></p>
-  </li>
-  <li>
-    <p><strong>Track Widths</strong> : Compare track widths on the go.
-<a href="https://www.flickr.com/photos/94411929@N06/16017936652" title="Tracks by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8603/16017936652_40ce3d6217_z.jpg" width="640" height="359" alt="Tracks" /></a></p>
-  </li>
-  <li>
-    <p><strong>Right angled rule with both inch and cm scale</strong> : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
-<a href="https://www.flickr.com/photos/94411929@N06/15992846056" title="CM Scale by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg" width="640" height="359" alt="CM Scale" /></a>
-<a href="https://www.flickr.com/photos/94411929@N06/15832394669" title="Complete by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="WP_20140511_00_36_03_Pro" /></a></p>
-  </li>
-  <li><strong>Rust Buster</strong> : A fine sandpaper to rust off those parts that just dont solder .
-<a href="https://www.flickr.com/photos/94411929@N06/15397629893" title="TinkerRule SandPaper by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8622/15397629893_70cf484542_z.jpg" width="640" height="359" alt="TinkerRule" /></a></li>
-</ol>
+<p><em>CAUTION: Be careful about the current while powering the touchscreen externally!</em></p>
 
-<p>I have now been using it for quite sometime and its really useful and serves the purpose.</p>
+<p>After this coding part is pretty simple. For the algo refer to page no.7 on the <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>. If you plan to run your end application on a battery and you have hard-coded the co-ordinates and the Vdrive is sourced externally i suggest that you sample the Vdrive as well . If you are using  microcontroller pins to supply Vdrive then this can be neglected.</p>
 
-<p>If you are interested in this i can mail you the file , just drop me an email at indiantinker [at] gmail [dot] com.</p>
+<p>I have a desire to learn to play music but unfortunately due to my low patience levels , i have failed to keep up. :D</p>
 
-<p>Cheers!</p>
+<p>So, i made this Piano using the MSP430 Launchpad and a touchscreen along with a speaker. The code algo is pretty same as TI App Note Suggests and i encourage the reader to code it himself . Any difficulties can be discussed. It uses the<a href="http://indiantinker.wordpress.com/2012/11/29/tone-library-for-msp430/" target="_blank"> tone library</a> i posted earlier to generate the <a href="http://en.wikipedia.org/wiki/Solf%C3%A8ge" target="_blank">solfeggio</a>.</p>
+<h1 id="firstHeading"><span style="font-size:13px;">Here is the shaky and horrible video i made:</span><b></b></h1>
 
-<p>Rohit</p>
+<iframe width="640" height="480" src="//www.youtube.com/embed/Aw63-2rYthY" frameborder="0" allowfullscreen=""></iframe>
 
+<p>Cheers! :D</p>
 
   </div>
   

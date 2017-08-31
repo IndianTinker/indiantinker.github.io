@@ -43,7 +43,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://rohitg.in/page44/" />
+  <meta property="og:url" content="http://localhost:4000/page44/" />
 
 
 
@@ -392,46 +392,6 @@
           
         
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
 
    <!--
     <a class="twitter-follow-button"
@@ -485,132 +445,79 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/08/01/Intel/">
-        LIVE BLOG - Intel IOT Roadshow Pune
+      <a href="/2015/07/12/CrickPi/">
+        CricPi- The (probably) MOST Minimalistic Live Cricket Ever
       </a>
     </h1>
 
-    <span class="post-date">01 Aug 2015</span>
+    <span class="post-date">12 Jul 2015</span>
 
-    <p><strong>Day 1</strong></p>
+    <p>Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old <strong>WebSense Blocked</strong> page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times.</p>
 
-<p>Reached a bit early at 6:59am after a minor slip on the bike. Rough start for the day !</p>
+<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would’nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
 
-<p>A crowd of 60 odd people were waiting in the queue at the event. Amazing response !</p>
+<p>I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score <em>always</em> during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.</p>
 
-<p>Hanged out with a couple of folks from VIT university ! They plan to make a universal controller for Home automation.</p>
+<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What’s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
 
-<p>The queue kept on getting bigger and bigger and wilder !</p>
+<p>Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.</p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Indian?src=hash">#Indian</a> <a href="https://twitter.com/hashtag/Queue?src=hash">#Queue</a> is an highly flexible <a href="https://twitter.com/hashtag/stack?src=hash">#stack</a> with multiple entry points and governed by rules of brotherhood and childhood friendships</p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/627307207554564096">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The first thing required was a data source like a website/API that has all the data we need to display. We will anyway display it at 1 refresh per minute so rocket-science precision is not required. I stumbled upon <a href="https://developers.litzscore.com/plans/">this</a> which unfortunately was not free and beyond my budget.</p>
 
-<p>My friend @rituparna Joins . We plan to do a LiveBlog! The network is hogged!! Hopefully its makes it on the outside. No pics sorry!</p>
+<p>I thought best way is to make an API myself when there is none that suits me.</p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Awesomeness <a href="https://twitter.com/intel">@intel</a> <a href="https://twitter.com/hashtag/IOTRoadShow?src=hash">#IOTRoadShow</a> <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> with <a href="https://twitter.com/mrrituparna">@mrrituparna</a> ! LiveBLOG to follow.. Battling a hogged network here !</p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/627352897487925249">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote>
+  <p><em>I’ll scrape</em> !</p>
+</blockquote>
 
-<p>Aaron from @INTEL explains the IOT setup intel has in Mind and company’s vision on being a part of the maker movement! Its huge.. We will get our kits soon.</p>
+<p>So, i wrote a <em>python</em> script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out.</p>
 
-<p>We did an Unbox !!</p>
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/51ck7GPUNj/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">@random.pics.everyday with #Edison #StarterKit #IntelMaker #IOTRoadshow #Pune</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-01T09:05:57+00:00">Aug 1, 2015 at 2:05am PDT</time></p></div></blockquote>
+<p>I used the adorable <code class="highlighter-rouge">beautifulsoup</code> for scraping !</p>
+
+<p>Next based on the observations, I sat down and made an interface for the info gathered be displayed.I choose my old and trusted <a href="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/">Nokia 5510 Graphic Display</a>.</p>
+
+<p>Many thanks to <a href="http://www.adafruit.com/">Adafruit</a> for their amazing Python Library for the LCD already available that made things easy.</p>
+
+<p>Here is the first visual of a World Cup match on my project :</p>
+
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0CfR7pPUHD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-10T07:31:20+00:00">Mar 10, 2015 at 12:31am PDT</time></p></div></blockquote>
 <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">At the <a href="https://twitter.com/hashtag/intelmakers?src=hash">#intelmakers</a> with <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> ... who just unboxed his edison. <a href="http://t.co/baMEeg2Hpj">pic.twitter.com/baMEeg2Hpj</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627345570009624576">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><br />
+This too.
+<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup" />&lt;/a&gt;</p>
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Unboxed?src=hash">#Unboxed</a> and Ready to get the feet ! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="https://twitter.com/hashtag/IOTRoadshow?src=hash">#IOTRoadshow</a> with <a href="https://twitter.com/mrrituparna">@mrrituparna</a> <a href="http://t.co/y9cSgg6lCj">pic.twitter.com/y9cSgg6lCj</a></p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/627372418047184900">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>As you can see we have the following parts of score displayed:</p>
 
-<p>The session starts now.</p>
+<ul>
+  <li>Teams playing</li>
+  <li>Currently batting team with overs underneath it</li>
+  <li>The score in the largest font</li>
+  <li>4s/6s and Run Rate</li>
+  <li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
+  <li>Match Status - Rains, Ended,In Progress etc</li>
+</ul>
 
-<p>In the session several speakers covered cool ways to play with the #Edison. We spent most of our time trying to configure it @rituparna’s MacBook. After several failed attempts we gave up on the Mac. Tried with My Dualbooted windows box. In windows we are not comfortable at all. They advised us to tether Laptop’s Wifi to Edison over USB via the RNDIS which works well with WIndows but not with others.</p>
+<p>Here is the picture of the setup:</p>
+<center>
+<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup" />
+</center>
+<p>A Laser cut case and we could go wall mount.</p>
 
-<p>We went back to Ubuntu and voila it seems to do some stuff over ssh via serial. We were able to toggle LEDs.</p>
+<p>I then made the script executable and queued it as a <code class="highlighter-rouge">cron-job</code> to be run every minute.  <em>BLISS</em></p>
 
-<p>Next we installed Pip and other required python stuff and broke for Lunch</p>
+<p>Now I could watch(over) cricket matches in a non-intrusive and minimalistic way .</p>
 
-<p><em>ALERT:</em> Won a bluetooth headset for social blogging! Thanks Intel.</p>
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Surprise! <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> wins a pair of Intel powered smartearbuds for LIVE blogging. Great job! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/waNgTpBzEc">pic.twitter.com/waNgTpBzEc</a></p>&mdash; Intel Software India (@IntelSoftwareIn) <a href="https://twitter.com/IntelSoftwareIn/status/627383667145355264">August 1, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>If you too are interested you can grab the code <a href="https://github.com/IndianTinker/CricPI">here</a> to check out on the process.</p>
 
-<p>Here is the blinky on Edison! Note the LED is off. Windows Phone does not support videos on official app. We used <a href="https://github.com/intel-iot-devkit/mraa">mraa</a> and <strong>vi</strong> as the IDE. Long time to learn VI and never to late to start. <em>:wq</em></p>
+<p>Here is how i kept a track of IPL :</p>
 
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/51ck1CvUNi/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-01T09:05:56+00:00">Aug 1, 2015 at 2:05am PDT</time></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/14Z6-PvUD3/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-25T02:34:53+00:00">Apr 24, 2015 at 7:34pm PDT</time></p></div></blockquote>
 <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>After messing around MPlayer compiles we dropped the idea of playing sound via BT. That would be actually pretty cool.</p>
+<p><br /></p>
 
-<p>Next was thingspeak integration. We made it working using requests and you can track the channel <a href="https://thingspeak.com/channels/49681">here</a></p>
-
-<p>The further part of the day we faced a major internet outage..
-Bummer!!</p>
-
-<p>After having the sumptuous dinner we went home.</p>
-
-<p>I tried compiling the Mplayer as mentioned on Ghanashyam sir’s <a href="https://scratchbuffer.wordpress.com/">blog</a> at night but i turned out it would just not compile. We followed similar instruction and got ALSA to play our trolltones over USB DAC!</p>
-
-<p>SWEET !</p>
-
-<p><strong>Day 2</strong></p>
-
-<p>With a lot of work pending I mostly got working my python framework for the controlling i/os and a cron job to update our thingspeak channel every 5 mins.</p>
-
-<p>Ritu was working on the <a href="http://doormate.github.io/website/">door’s website</a> and Twitter integration.</p>
-
-<p>We did a few tweets during the time.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/mQQ6rAgsIP">pic.twitter.com/mQQ6rAgsIP</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627666066475384832">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Updating using OAuth authentication via Tweepy!</p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627671710356013056">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="https://twitter.com/hashtag/doothings?src=hash">#doothings</a> <a href="https://twitter.com/doo">@doo</a> <a href="https://twitter.com/io">@io</a> <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> <a href="https://twitter.com/jasveer2589">@jasveer2589</a> When Doors Tweet <a href="https://twitter.com/hashtag/LOL?src=hash">#LOL</a> <a href="https://twitter.com/hashtag/DIY?src=hash">#DIY</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627683336991870976">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>With some work to do we broke for lunch.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/lunch?src=hash">#lunch</a> <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/4PJV8yqLoS">pic.twitter.com/4PJV8yqLoS</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627774541327011840">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>We hastily submitted the project without the video. Twitter had blocked our api due to excessive calls.</p>
-
-<p>We implemented TTS and an alternative script to show the other use case.</p>
-
-<p>Judging starts <em>Anxious!!</em></p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Team 7 .. Presenting to judges <a href="https://twitter.com/hashtag/intelmaker?src=hash">#intelmaker</a> <a href="http://t.co/ICmf0tVtfo">pic.twitter.com/ICmf0tVtfo</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627783108167766018">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>This is our awesome door!</p>
-
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/54UVbpsh7t/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#IntelMakers checkout what I made ... From yesterday to today.</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rituparna Matkar (@random.pics.everyday) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-02T11:51:39+00:00">Aug 2, 2015 at 4:51am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p>Check out the video in the tweet.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://t.co/k49JgXCmdF">https://t.co/k49JgXCmdF</a> <a href="https://twitter.com/IntelSoftwareIn">@IntelSoftwareIn</a> <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a> <a href="https://twitter.com/DooThings">@DooThings</a> <a href="https://twitter.com/hashtag/intelmaker?src=hash">#intelmaker</a> Team 41 - We make doors awesome! <a href="https://twitter.com/hashtag/iotroadshow?src=hash">#iotroadshow</a> <a href="https://twitter.com/hashtag/iot?src=hash">#iot</a></p>&mdash; rituparna matkar (@mrrituparna) <a href="https://twitter.com/mrrituparna/status/627798093786824704">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>The prize distribution is on ! <em>Super Anxious</em></p>
-
-<strike>All three 3rd Prizes gone !</strike>
-<p>I and ritu look at each other.. I call it a wrap and start packing stuff up. Ritu is reluctant and says there is still some hope.</p>
-
-<strike>1st Runner Up -I Gone</strike>
-<p>Laptop Shutdown. Edsion <code class="highlighter-rouge">shutdown -h now</code> ! Disconnecting the grove connectors…</p>
-
-<p>BUT wait.. Did we hear <strong>Door Mate</strong> ?</p>
-
-<p><strong>LOL</strong></p>
-
-<p>We won the 1st Runner UP ! OMG !!</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">2nd place winners: Smart city plugin &amp; Doormate. They win $1000 cash prize! <a href="https://twitter.com/hashtag/IntelMaker?src=hash">#IntelMaker</a> <a href="http://t.co/ztKeilDPOi">pic.twitter.com/ztKeilDPOi</a></p>&mdash; Intel Software India (@IntelSoftwareIn) <a href="https://twitter.com/IntelSoftwareIn/status/627835693511761920">August 2, 2015</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Thanks a ton <a href="https://twitter.com/Tersteeg">Aaron</a> , <a href="https://twitter.com/preethy">Preethi</a> , <a href="https://scratchbuffer.wordpress.com/">Ghanashyam</a> and Team. 2  Days of Awesomeness !</p>
+<p><strong>NOTE :</strong> The project was not performed/made at the workplace. Only the use case was inspired from there.</p>
 
 <p>Cheers,</p>
 

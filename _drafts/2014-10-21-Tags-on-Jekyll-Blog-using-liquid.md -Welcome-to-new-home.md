@@ -24,7 +24,7 @@ After this the changes will be reflected on compilation. And Voila! You would ha
    
 Lets get started.
 
-Add a `Tags` variable to the frontmatter block and list the tags as shown the following example:
+Add a Tags variable to the frontmatter block and list the tags as shown the following example:
 
 ```
 ---
@@ -45,10 +45,10 @@ Use the following snippet to display tags.
 
 Now
 
-```
 jekyll build
 jekyll serve
-```
+
+
 and see the changes in the blog on *http://localhost:4000*.
 If you face any issues be sure to comment here .
 
