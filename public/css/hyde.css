@@ -36,16 +36,32 @@ color: #d84315;
  */
 
 html {
-  font-family: "Roboto", Noto, PT Sans, Helvetica, Arial, sans-serif;
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+  font-weight: 400;
 }
+
+.post-title,.page-title{
+  font-size: 2.2rem;
+}
+
+
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 12px;
+  }
+  .post-title,.post-date,.page-title
+  {
+    font-family: "Karla",sans-serif;
   }
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .post-title,.post-date,.page-title
+  {
+    font-family: "Karla",sans-serif;
   }
 }
 img
@@ -53,7 +69,7 @@ img
  float:center;
 }
 
-body 
+body
 {
 background: #FAFAFA;
 }
@@ -68,8 +84,7 @@ background: #FAFAFA;
 .sidebar {
   text-align: center;
   padding: 1rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #1976d2;
+  background: #FAFAFA;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -84,16 +99,16 @@ background: #FAFAFA;
 
 /* Sidebar links */
 .sidebar a {
-  color: #ffffff;
+  color: black;
 }
 
 
 /* About section */
 .sidebar-about h1 {
-  color: #224687;
+  color: black;
   margin-top: 1rem;
-  font-family: "Abril Fatface", serif;
-  font-size: 2.20rem;
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
 }
 
 /* Sidebar nav */
@@ -107,10 +122,12 @@ background: #FAFAFA;
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
+  background-color: yellow;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
-  font-size:1.3rem
+  font-size:1.3rem;
+  background-color: pink;
 }
 
 /* Sticky sidebar
@@ -180,7 +197,7 @@ a.sidebar-nav-item:focus {
   }
 }
 /*
- * 
+ *
 */
 .project {
   font-size: 12px;

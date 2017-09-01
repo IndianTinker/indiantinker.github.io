@@ -6,20 +6,20 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
 <!--->
-<script type="text/javascript"> 
-	
-				
-		     
+<script type="text/javascript">
+
+
+
 			// get the data with a webservice call
 			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-					    					
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';  
-				//alert(data.field1)    
-  
+
+				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
+				//alert(data.field1)
+
 			});
-			
-		
-	
+
+
+
 	</script>
 <!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
@@ -80,7 +80,8 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -107,12 +108,11 @@
 
   
     <div class="sidebar">
-
  </b>
   <div class="container sidebar-sticky">
-	
+
     <div class="sidebar-about">
-      <h1 color="#303F9F">
+    <h1 color="#303F9F">
         <a href="/">
           Rohit Gupta
         </a>
@@ -423,17 +423,16 @@ window.twttr = (function (d, s, id) {
 </script> -->
 <br>
 
-<p style="font-size:175% ;color:#eceff1;">
+<p style="font-size:1.75rem ;color:#eceff1;">
 <a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
-<a class="list-group-item" href="https://www.instagram.com/rohit7gupta"><i class="fa fa-instagram"></i></a>
 <a class="list-group-item" href="https://www.flickr.com/photos/94411929@N06/"><i class="fa fa-flickr"></i></a>
 <a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
 </p>      </span>
     </nav>
-<p style="font-size:75% ;color:#eceff1;">Made with <i class="fa fa-heart"></i> in India</a><br>
+<p style="font-size:0.5rem ;color:black;">Made with <i class="fa fa-heart"></i> in India</a><br>
 All Rights Reserved
 </p>
-    
+
   </div>
 </div>
 
