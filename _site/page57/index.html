@@ -392,6 +392,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -444,39 +448,68 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/04/16/Tiano-Piano/">
-        Tiano- The Touchscreen Piano
+      <a href="/2014/07/22/UberCube/">
+        UberCubeX4- The portable LED Cube !
       </a>
     </h1>
 
-    <span class="post-date">16 Apr 2014</span>
+    <span class="post-date">22 Jul 2014</span>
 
-    <p>Touchscreens..huh.. They are all around us..Phones ,tablets, phablets and now even laptops. Most of them have a capacitive touchscreen where the change in capacitance at a point is used to sense it and then perform the corresponding action. Capacitive ones are multi point sensing. They sense more than 2 points and hence we get those pinch to zoom features etc.</p>
+    <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
 
-<p>On the other hand , almost archaic version on touchscreen is the resistive version. That are pretty easy to interface with almost any microcontroller with an ADC. In this project i did over the weekend i tried to interface a touchscreen ( resistive one..) ,available at mobile repair shops in Delhi with a MSP430G2553 (Although MSP430G2231 would also do)  to make a piano.</p>
+<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen=""></iframe>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg"><img class="aligncenter size-full wp-image-339" alt="Touchscreen setup" src="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg" width="470" height="230" /></a></p>
+<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
 
-<p><strong>Pre-requisites</strong>: The touchscreen may not be easier to get. I got mine from a mobile repair shop in LR. It is a 4-wire Touchscreen, pretty common with horribly thin contacts that took a lot of patience to solder.There is a lot of literature available on Touchscreens on the internet. I found two app notes that were best. First one from <a href="http://www.atmel.in/Images/doc8091.pdf" target="_blank">Atmel</a> , that explained the working of the touchsreen in a pretty clear way and one from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI</a> that some what helped in the software part.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig" /></a></p>
 
-<p>You must read the atmel one ( atleast the first few pgs to get how it works). Its essentially a resistive voltage divider. The value of the touch point is determined by the ADC value read.</p>
+<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/04/post1.jpg"><img class="aligncenter size-full wp-image-338" alt="formula" src="http://indiantinker.files.wordpress.com/2013/04/post1.jpg" width="470" height="264" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac" /></a></p>
 
-<p>From the illustration above(borrowed from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>). One can easily see how the co-ordinates are read. In order to find out, what wire on your touch sreen corresponds to X and Y meshes. You can use a multi-meter first to measure the resistance between pins ,usually the alternate pins belong to same axes. in my case it was X-,Y-,X+,Y+  then to differentiate between x and y , one probable method will be to power the touchscreen i.e. giving the drive voltage and then find out the voltage at any other terminal w.r.t. ground and see whether is changing horizontally or vertically in your reference plane.</p>
+<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling.</p>
 
-<p><em>CAUTION: Be careful about the current while powering the touchscreen externally!</em></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard" /></a></p>
 
-<p>After this coding part is pretty simple. For the algo refer to page no.7 on the <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>. If you plan to run your end application on a battery and you have hard-coded the co-ordinates and the Vdrive is sourced externally i suggest that you sample the Vdrive as well . If you are using  microcontroller pins to supply Vdrive then this can be neglected.</p>
+<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
 
-<p>I have a desire to learn to play music but unfortunately due to my low patience levels , i have failed to keep up. :D</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping" /></a></p>
 
-<p>So, i made this Piano using the MSP430 Launchpad and a touchscreen along with a speaker. The code algo is pretty same as TI App Note Suggests and i encourage the reader to code it himself . Any difficulties can be discussed. It uses the<a href="http://indiantinker.wordpress.com/2012/11/29/tone-library-for-msp430/" target="_blank"> tone library</a> i posted earlier to generate the <a href="http://en.wikipedia.org/wiki/Solf%C3%A8ge" target="_blank">solfeggio</a>.</p>
-<h1 id="firstHeading"><span style="font-size:13px;">Here is the shaky and horrible video i made:</span><b></b></h1>
+<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
+<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST" /></a></p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/Aw63-2rYthY" frameborder="0" allowfullscreen=""></iframe>
+<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB.</p>
 
-<p>Cheers! :D</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB" /></a></p>
+
+<p>The Soldered one!
+<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB" /></a></p>
+
+<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm).</p>
+
+<p>Power Switch and DC Jack for power.
+<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1" /></a></p>
+
+<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
+
+<p>Cheers !
+Rohit</p>
+
+<p><strong>Update: </strong></p>
+<ul>
+	<li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
+	<li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
+	<li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
+	<li><strong>Won: University level "Open H/W" competition</strong></li>
+</ul>
+
+<p> </p>
+
+<p> </p>
 
   </div>
   

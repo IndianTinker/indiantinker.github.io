@@ -392,6 +392,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -444,78 +448,27 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/04/11/WIOLink/">
-        Getting started with WIO Link
+      <a href="/2016/06/18/Exif/">
+        Exif Data on Linux
       </a>
     </h1>
 
-    <span class="post-date">11 Apr 2016</span>
+    <span class="post-date">18 Jun 2016</span>
 
-    <p><a href="https://github.com/anujdeshpande/">Anuj</a> recently gave me one of the few <em>WIO Links</em> he got as a <s>serial</s> Kickstarter backer to try them out. The Wio Link are</p>
+    <p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences.</p>
 
-<blockquote>
-  <p>No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides <strong>Grove</strong> sensors a Web API kind of look.</p>
-</blockquote>
+<p>On Linux (other platforms too) there is a nice tool called <strong>ExifTool</strong> which was, as of writing this post available in the package manager of <em>Ubuntu</em> .</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097749300/in/dateposted-public/" title="20160409_192105"><img src="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" width="640" height="360" alt="20160409_192105" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>So, Simply 
+<code class="highlighter-rouge">sudo apt-get install exiftool</code></p>
 
-<p>So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with <em>API Endpoints</em> to control the devices using basic HTTP urls in curl for example.</p>
+<p>In order to use it, Simply go to the SD Card (generally) and <em>Right Click</em> to open terminal here. Then use the command.</p>
 
-<p>In this post, i walk you through the steps, just in case you got the Wio Link as well and we control an LED connected to the WIO link through the App itself. 
-You start with downloading the app from the <a href="https://play.google.com/store/apps/details?id=cc.seeed.iot.ap">Playstore</a>. The App starts with a sign-in process. Outside China, you have to choose the international server. Login and make an account. The app has a tour in which it asks you to press a button on the WioLink that basically turns the WioLink in an AP so, you can identify it and share the login credentials for your Wifi. I got this error.</p>
+<p><code class="highlighter-rouge">exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304355621/in/dateposted-public/" title="Error1"><img src="https://farm2.staticflickr.com/1708/26304355621_d442b22c84_z.jpg" width="360" height="640" alt="Error1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Shutter Count should be visible, But depends on the camera you use. Most <strong>Nikons</strong> we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.</p>
 
-<p>Errors are good omens. Retrying i saw the Wio Link.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852413/in/dateposted-public/" title="1"><img src="https://farm2.staticflickr.com/1704/25767852413_1131d7c1ba_z.jpg" width="360" height="640" alt="1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The App is not the best designed one for the purpose. It is not that user friendly and maybe Seeed will improve upon it. Next the App asks you to give the credentials to the Wifi that will be used by the Wio Link to talk.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852363/in/dateposted-public/" title="2"><img src="https://farm2.staticflickr.com/1633/25767852363_b6c6bbbe17_z.jpg" width="360" height="640" alt="2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Once thats done. You get the Visual WioLink to Add Groves to.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852273/in/dateposted-public/" title="4"><img src="https://farm2.staticflickr.com/1579/25767852273_599022c3d3_z.jpg" width="360" height="640" alt="4" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now here’s a thing. If at this point you click API or Click Update and then click API you get the following error.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278225372/in/dateposted-public/" title="Error2"><img src="https://farm2.staticflickr.com/1535/26278225372_caac01d812_z.jpg" width="360" height="640" alt="Error2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>This action should be restricted in the App.The groves are not very well organised making to difficult to find things. I could not find the LED one that i have. So, went for the Relay as in the end i needed a digital output. Also added a switch just in case.</p>
-
-<p>PS: Ignore the Infrared Emitter. I thought it was an LED at the time of taking the screen shot. Only to figure it out later :p</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097737210/in/dateposted-public/" title="6"><img src="https://farm2.staticflickr.com/1693/26097737210_f129470123_z.jpg" width="360" height="640" alt="6" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now once you click <strong>Update</strong> the App configures the Wio Link and enables a set of API to control the groves. I am not sure what it does here. Uploading the code from phone to the grove does not seem to be happening, maybe they enable/update some flags or a look-up table. Just Guessing !<br />
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304354631/in/dateposted-public/" title="Upload"><img src="https://farm2.staticflickr.com/1665/26304354631_14b9334f97_z.jpg" width="360" height="640" alt="Upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Once this is done, on the home screen you see this :</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26344667386/in/dateposted-public/" title="FINAL"><img src="https://farm2.staticflickr.com/1656/26344667386_a9e0a13aa6_z.jpg" width="360" height="640" alt="FINAL" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now Lets see how the <strong>API</strong> looks like.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736540/in/dateposted-public/" title="LEDApi"><img src="https://farm2.staticflickr.com/1715/26097736540_c47cba5c70_z.jpg" width="360" height="640" alt="LEDApi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The best thing is that they provide the ability to make requests from the App itself. This comes handy to test things quickly. Here i send 1 to the Wio Link in hopes to turn the LED on.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278224872/in/dateposted-public/" title="LED On APi"><img src="https://farm2.staticflickr.com/1555/26278224872_0cbe5679e8_z.jpg" width="360" height="640" alt="LED On APi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Wohoo! Works the very first time. :D</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767855573/in/dateposted-public/" title="LED ON"><img src="https://farm2.staticflickr.com/1667/25767855573_e7edc6994f_z.jpg" width="640" height="360" alt="LED ON" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now the LED Off Case. I send 0.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736430/in/dateposted-public/" title="LED Off api"><img src="https://farm2.staticflickr.com/1534/26097736430_2ab9c03492_z.jpg" width="360" height="640" alt="LED Off api" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Voila.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097744790/in/dateposted-public/" title="LED Off"><img src="https://farm2.staticflickr.com/1463/26097744790_26c971e90e_z.jpg" width="640" height="360" alt="LED Off" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>I just love the simplicity and fun of working with the WioLink. Truly fantastic what Seeed is offering at this price. They have to work a bit on the App as it crashes often. Rest all is in place. Lets see what more can we build with this !</p>
+<p>To know more about EXIF check out <a href="http://www.media.mit.edu/pia/Research/deepview/exif.html">this</a> resource .</p>
 
 <p>Cheers,</p>
 

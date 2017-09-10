@@ -4,13 +4,183 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-09-03T00:08:23+05:30</updated>
+ <updated>2017-09-10T16:27:22+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Visualizing the Indian Railways in 3D</title>
+   <link href="http://localhost:4000/2017/09/10/DataViz/"/>
+   <updated>2017-09-10T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/09/10/DataViz</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the concept, process, insights and extensions of a geovisualization project done as a part of Interactive Data Viz course at IDC.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In the end, I had this 3D visualization.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/5nMTnGP.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;concepts&quot;&gt;Concept(s)&lt;/h2&gt;
+&lt;p&gt;The concept was to visualize the trains that originate from every station on the Indian Railways network. This would allow users to compare the number and even draw conclusions based on their locations. The goal was to be able to make the viz insightful and must atleast follow William Cleveland’s Three Visual Operations i.e Detection, Assembly and Estimation. These were covered during the course. One can also look at this &lt;a href=&quot;https://www.slideshare.net/JohnRauser/how-humans-see-data&quot;&gt;presentation&lt;/a&gt; by &lt;a href=&quot;https://www.linkedin.com/in/jrauser/&quot;&gt;John Rauser&lt;/a&gt;. He covers very interesting aspects about perception of data. Cleveland’s model was mentioned on slide 115 of his presentation. I thought if i could make 3d bars at the location of the stations, such that the height would represent the number of source trains.&lt;/p&gt;
+
+&lt;p&gt;In short for the visualization these would be the parameters(based on description tags by Isabel Meirelles in &lt;a href=&quot;http://isabelmeirelles.com/book-design-for-information/&quot;&gt;Design for information&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;COUNTRY&lt;/strong&gt; India&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MEDIUM&lt;/strong&gt; Online Interactive application&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;DOMAIN&lt;/strong&gt; Transportation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TASK&lt;/strong&gt; To provide comparison of trains starting from stations&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;STRUCTURE&lt;/strong&gt; 3D extrusions on station location representing number of trains originating&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also thought if we could make a ‘coarse’ contour map that ‘encodes’ the ease of reaching a place. This would be based on an index derived from number of trains passing, stoppage time and time of the day of a particular station. The contour would be drawn inverted such that if a place has less trains passing, its height will be higher as it is difficult to reach. This, I feel, would give some physical property to the contour too. Imagine someone sitting on the ground and it is super difficult to reach a station say &lt;strong&gt;A&lt;/strong&gt; as only 1 train passes while its easy to go to say &lt;strong&gt;B&lt;/strong&gt; because 10 trains pass by. So, ‘A’ will be shown higher than ‘B’. An icing could be exploring it in VR. I could not figure out the tools to implement this in the short time we had.&lt;/p&gt;
+
+&lt;h2 id=&quot;process&quot;&gt;Process&lt;/h2&gt;
+&lt;p&gt;The process involved:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sourcing and cleaning data&lt;/li&gt;
+  &lt;li&gt;Deriving useful data&lt;/li&gt;
+  &lt;li&gt;Converting that data into geojson&lt;/li&gt;
+  &lt;li&gt;Presentation on a map&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The weapons of choice were : R, Python, Mapbox and Google Sheets&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sourcing and cleaning data&lt;/strong&gt;
+The data was provided by &lt;a href=&quot;https://data.gov.in/catalog/indian-railways-train-time-table-0&quot;&gt;data.gov.in&lt;/a&gt;. The format used was csv.
+I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d5832cb8c4c98bbc7f85d84de4ec9.html&quot;&gt;source&lt;/a&gt; of R codes for reference.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deriving useful data&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First I read the data in R using R Studio.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:/Users/my pc/Downloads/isl_wise_train_detail_03082015_v1.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Next,I made a subset of trains. Hence, I could capture trains that have reached destination.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;timetable.srs.dest&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`station Code`&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Destination station Code`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;using &lt;code class=&quot;highlighter-rouge&quot;&gt;dplyr&lt;/code&gt;  library, I grouped and summarized data. Then I wrote the file out as a CSV.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dplyr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;traingp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable.srs.dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`source Station Name`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainsfromStation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summarise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;traingp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainsfromStation&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainsfromStation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainsfromStation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;NumbOfTrainsoriginating.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgur.com/SI78wWt&quot;&gt;&lt;img src=&quot;https://i.imgur.com/SI78wWt.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I also did some other exploratory analysis like, trains passing per station.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;trainflux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Station Name`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainflux&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainfluxCount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summarise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainflux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainfluxCount&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainfluxCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainfluxCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainfluxCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;trainsstoppingperstation.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://imgur.com/D6cfV6H&quot;&gt;&lt;img src=&quot;https://i.imgur.com/D6cfV6H.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Halt times and Average halt times per station too. This would make give an idea of how busy a station is. This was not trivial as it seems, thanks to my n00by R skills. First, all source and destination stations were removed using &lt;code class=&quot;highlighter-rouge&quot;&gt;Distance !=0&lt;/code&gt;. Then because of the funny way times were mentioned, I had to remove ‘single’ quotes in all time vectors. I used &lt;code class=&quot;highlighter-rouge&quot;&gt;gsub&lt;/code&gt; for that. Then, I had to convert the char to POSIXlt date format. This would enable time computation using &lt;code class=&quot;highlighter-rouge&quot;&gt;difftime&lt;/code&gt;. Using difftime I made a new vector for HaltTime with a minute resolution. I am told, these steps are just a few clicks in excel.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Arrival time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Arrival time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Departure time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Departure time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Arrival time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strptime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Arrival time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%H:%M:%S&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Departure time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strptime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Departure time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%H:%M:%S&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Halt Time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;as.difftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Departure time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Arrival time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%H:%M:%S&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Next, I removed trains that had halt times less than 0 and grouped them by stations. I removed Arrival and Departure vectors. I then studied the average halt times.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Halt Time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Arrival time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Departure time`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_grpstation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Station Name`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summarise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_grpstation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;totalhalt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_grpstation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Halt Time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summarise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_grpstation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;totalhalt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`Halt Time`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;totalhalt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;`avgstop`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;totalhalt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'count'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;avgstop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainNoSource_haltTimes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;avgHaltTimeperstation.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgur.com/D6cfV6H&quot;&gt;&lt;img src=&quot;https://i.imgur.com/D6cfV6H.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Converting that data into geojson&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The csv file was uploaded on google sheets. I used the &lt;a href=&quot;https://chrome.google.com/webstore/detail/geocode-by-awesome-table/cnhboknahecjdnlkjnlodacdjelippfg?hl=en&quot;&gt;awesome tables&lt;/a&gt; google sheets plugin to convert station codes to lat and long values.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately there is very little documentation for extrusion using mapbox. Just &lt;a href=&quot;https://www.mapbox.com/mapbox-gl-js/example/3d-extrusion-floorplan/&quot;&gt;an example&lt;/a&gt;, which took me quite some time to get to work. From the example &lt;a href=&quot;https://www.mapbox.com/mapbox-gl-js/assets/data/indoor-3d-map.geojson&quot;&gt;geojson&lt;/a&gt;, it seems a &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;base height&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt; properties are required. I wanted less complications, so i went with a single color. I structured the the &lt;a href=&quot;https://docs.google.com/spreadsheets/d/11PcWeaLH1PImgipF80lmdjKiA19Tn-BFoyatt3i5hMg/edit?usp=sharing&quot;&gt;google sheet&lt;/a&gt; file as below.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://imgur.com/wR2tvOi&quot;&gt;&lt;img src=&quot;https://i.imgur.com/wR2tvOi.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I used &lt;a href=&quot;http://geojson.io&quot;&gt;geojson.io&lt;/a&gt; to convert the csv to a geojson file. One can also use the &lt;a href=&quot;https://www.mapbox.com/studio/&quot;&gt;mapbox studio&lt;/a&gt; for the same.&lt;/p&gt;
+
+&lt;p&gt;This might seem enough, but&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Little did i know&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The extrusion property can be applied only on polygons. How to convert a point to a polygon? This might not be the most relevant question to ask at 3:45 am in the morning. But unfortunately, it was ! &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt; to the rescue. Thanks to some &lt;a href=&quot;https://s3-us-west-2.amazonaws.com/rohitgupta/main.html&quot;&gt;previous work&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;In times when, ‘I wrote a script’ has become as common as ‘I took a bath’, I wrote a script.&lt;/p&gt;
+
+&lt;p&gt;The script would &lt;code class=&quot;highlighter-rouge&quot;&gt;simply&lt;/code&gt; take the points and convert it into a square of a fixed size. The &lt;a href=&quot;https://tools.ietf.org/html/rfc7946#section-3.1.6&quot;&gt;geoJSON spec sheet&lt;/a&gt; was helpful. The process was take the point as the center of the square and them compute the corners in a cyclic manner.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Presentation on a map&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By 6am, I had all polygons on the map in mapbox studio. To extrude the height, I had multiplied the train number by 7000 as it seemed to make a lot of effect on Visual detection and helped estimation. I later used the mapbox example and modified it to add tooltips too.&lt;/p&gt;
+
+&lt;p&gt;The result is hosted &lt;a href=&quot;http://rohitg.in/DataViz/index.html&quot;&gt;here&lt;/a&gt;. The project is in this &lt;a href=&quot;https://github.com/IndianTinker/DataViz&quot;&gt;repo&lt;/a&gt;. Feel free to correct me if I am wrong.&lt;/p&gt;
+
+&lt;h2 id=&quot;insights&quot;&gt;Insights&lt;/h2&gt;
+&lt;p&gt;Some insights we had during our class discussion were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vadodra has just one train originating but 298 passing through it
+&lt;a href=&quot;https://imgur.com/ltiPG0t&quot;&gt;&lt;img src=&quot;https://i.imgur.com/ltiPG0t.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;There are ‘international’ trains originating from Dhaka
+&lt;a href=&quot;https://imgur.com/rhdnM7z&quot;&gt;&lt;img src=&quot;https://i.imgur.com/rhdnM7z.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Howrah has the most trains starting
+&lt;a href=&quot;https://imgur.com/fVqVIft&quot;&gt;&lt;img src=&quot;https://i.imgur.com/fVqVIft.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Trains move from outside to inside as more trains originate at boundaries.
+&lt;a href=&quot;https://imgur.com/u6F0xPr&quot;&gt;&lt;img src=&quot;https://i.imgur.com/u6F0xPr.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extensions&quot;&gt;Extensions&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Employ redundancy using color channel to allow users know what range of trains originate. A color for say 1-10, 10-20 etc .&lt;/li&gt;
+  &lt;li&gt;Add another layer of passing by trains&lt;/li&gt;
+  &lt;li&gt;See if insights could be found if trains could be visualized with population.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope this helps !&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Contributing to OSM using JOSM</title>
