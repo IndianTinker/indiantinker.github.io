@@ -9,6 +9,24 @@ tags:
 
 > This is [Stub](https://en.wikipedia.org/wiki/Wikipedia:Stub) on contributing to OSM using JOSM. The post is meant to document to process of uploading data points gathered as a part of [Interactive Data Viz](https://info-design-lab.github.io/) course at IDC taught by Prof. Venkat. The article may be updated in the future.
 
+Goal
+-----
+The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to [openstreetmaps](https://www.openstreetmap.org). This would allow the class to perform a **data mash-up**. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.
+
+
+Data Collection
+---------------
+
+There are several ways to collect data:
+
+- **Manual method** : It involves taking a printout of your area under exploration using [Field papers](http://fieldpapers.org/) and then once in the field, one marks places on the map. These positions are then manually plotted on the OSM map using their online editors or JOSM. The drawback of this methods is the accuracy. Since, the marking is relative, missile accuracy is often difficult to achieve. The advantage is that it allows more freedom and can work without phones. Hence, if a mapathon is organized then it would be better to use such a method that reduces the dependency on phones. There could be a specific group of people who would collect these sheets and mark these points on OSM later. Thanks for the tip, [Rasagy](https://www.mapbox.com/about/team/rasagy-sharma/).
+- **Apps** : There are several Apps for *Android*. The goal is to essentially get a KML file. Most people used [Google MyMaps](https://play.google.com/store/apps/details?id=com.google.android.apps.m4b&hl=en). Other options are [SWMaps](https://play.google.com/store/apps/details?id=np.com.softwel.swmaps&hl=en) and [Maps.me](https://play.google.com/store/apps/details?id=com.mapswithme.maps.pro&hl=en). iPhone users can use the web version of Google MyMaps and plot the data manually on it. It gets stored in gDrive. Then export the kml out of gDrive. This method was followed by Shilpa. If anyone knows of a better way, please be sure to suggest.
+
+In conclusion, I think if the data is less (< 20 points say) and precision is not required, then field paper method would be faster. This reduces the time wasted in converting formats. The data can then be replicated on the map using [iD](http://wiki.openstreetmap.org/wiki/ID) or [Potlatch2](http://wiki.openstreetmap.org/wiki/Potlatch_2)(Flash alert!!). These editors are available online and many of my classmates with less number of points used them.
+
+
+For a larger number of points we will proceed with JOSM method.
+
 Post Data Collection
 ---------------------
 
@@ -26,6 +44,22 @@ The process I followed was KML --> CSV -->geoJson
 Like Mapbox's Maki icons, OSM also has its own set of icons. They can be rendered on the map when you choose specific tags. The list of tags are mentioned [here](http://wiki.openstreetmap.org/wiki/Map_Features). The icons column on the page shows the icons that will be shown on the map. For example : I chose to map sitting places in IIT Campus. The most semantically suitable choice was of a bench. I used the 'field' as 'amenity' and value as 'bench'. You can choose appropriately. The features can be added to the points using the CSV file. Once you have the CSV file you can add a new 'column' as amenity (in my case) using your favorite spreadsheet software. Now, in every 'row' i.e. for each data point add the value. This would be 'bench' in my case. You can have additional fields as well. It is preffered not to have spaces in between the words of the field. Use an '_' .
 
 Once this is done, you should have a dataset in csv we can proceed to map them on OSM. As an additional step, I also generate a geoJSON file.
+
+Rasagy suggested some *pro-tips* like :
+
+- [Tagging for the renderer](http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer): The point is to collect the data and not have icons marked on the map. As many features might not have icons for them, it is suggested to mark real data.
+
+- [One feature, one element](http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element) : This point should be considered when adding details to already existing features. Instead of adding a new node/point for some area, it is better to include that detail in the existing polygon itself.
+
+- [Operator- Key](http://wiki.openstreetmap.org/wiki/Key:operator): Since, facilities in IIT will probably be run by IIT. It is worthwhile to include an *operator* key in the data. For example: The staff canteen could have an "operator: IIT Bombay" tag.
+
+Some other tips i found [here](http://wiki.openstreetmap.org/wiki/Good_practice) that deserve a mention are:
+
+- [Refrain from Armchair mapping](http://wiki.openstreetmap.org/wiki/Armchair_mapping)
+- Do not add temporary events on the OSM map. These could include things like Ganpati Pandals. One can use the *geojson on map* approach for this.
+- Map for verifiability. Hence, mapping historical events on OSM is not a good practise.
+- If you find that your data needs a new tag on OSM, then follow this [new features](http://wiki.openstreetmap.org/wiki/New_Features) page .
+
 
 **OSM Contributing**
 
@@ -83,7 +117,28 @@ You can reopen the location to see your data. In my case, my benches are on the 
 You can pull the details by clicking on 'History' button.
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/" title="contributorInfo"><img src="https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg" width="640" height="362" alt="contributorInfo"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-Hope that helps !
+Data contributed in the course
+-----
+
+Following are the details of features marked by my classmates:
+
+| Sno.  |      Feature Marked      |  Number | Contributor | tags|
+|----------|-------------|------|
+| 1 |  Police Posts | 56  | Udayan | amenity=police    |
+| 2 | Ladies Restroom| 205  | Shilpa| amenity=toilets;access=customers;female=yes;level=0; repeat_on=(floors) |
+| 3 | Fire Hydrants  | 95 | Amit   | emergency: fire_hydrant |
+|4| Dustbins|115| Manasi | amenity=waste_basket|
+|5| Tea Shops| 20| Pallavi | shop=tea|
+|6| Auto Stops| 14| Raagul |amenity=taxi|
+|7| Print Shops|16|Vineet| shop=copyshop;service:copy=yes;service:print=yes;service:generalitems=yes;operator: name of the shop|
+|8| Benches| 54 | Rohit |amenity=bench;covered=(state);seats=(number)|
+
+
+
+
+
+
+
 
 
 Cheers,

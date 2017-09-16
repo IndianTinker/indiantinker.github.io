@@ -463,6 +463,22 @@ All Rights Reserved
   <p>This is <a href="https://en.wikipedia.org/wiki/Wikipedia:Stub">Stub</a> on contributing to OSM using JOSM. The post is meant to document to process of uploading data points gathered as a part of <a href="https://info-design-lab.github.io/">Interactive Data Viz</a> course at IDC taught by Prof. Venkat. The article may be updated in the future.</p>
 </blockquote>
 
+<h2 id="goal">Goal</h2>
+<p>The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to <a href="https://www.openstreetmap.org">openstreetmaps</a>. This would allow the class to perform a <strong>data mash-up</strong>. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.</p>
+
+<h2 id="data-collection">Data Collection</h2>
+
+<p>There are several ways to collect data:</p>
+
+<ul>
+  <li><strong>Manual method</strong> : It involves taking a printout of your area under exploration using <a href="http://fieldpapers.org/">Field papers</a> and then once in the field, one marks places on the map. These positions are then manually plotted on the OSM map using their online editors or JOSM. The drawback of this methods is the accuracy. Since, the marking is relative, missile accuracy is often difficult to achieve. The advantage is that it allows more freedom and can work without phones. Hence, if a mapathon is organized then it would be better to use such a method that reduces the dependency on phones. There could be a specific group of people who would collect these sheets and mark these points on OSM later. Thanks for the tip, <a href="https://www.mapbox.com/about/team/rasagy-sharma/">Rasagy</a>.</li>
+  <li><strong>Apps</strong> : There are several Apps for <em>Android</em>. The goal is to essentially get a KML file. Most people used <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.m4b&amp;hl=en">Google MyMaps</a>. Other options are <a href="https://play.google.com/store/apps/details?id=np.com.softwel.swmaps&amp;hl=en">SWMaps</a> and <a href="https://play.google.com/store/apps/details?id=com.mapswithme.maps.pro&amp;hl=en">Maps.me</a>. iPhone users can use the web version of Google MyMaps and plot the data manually on it. It gets stored in gDrive. Then export the kml out of gDrive. This method was followed by Shilpa. If anyone knows of a better way, please be sure to suggest.</li>
+</ul>
+
+<p>In conclusion, I think if the data is less (&lt; 20 points say) and precision is not required, then field paper method would be faster. This reduces the time wasted in converting formats. The data can then be replicated on the map using <a href="http://wiki.openstreetmap.org/wiki/ID">iD</a> or <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch2</a>(Flash alert!!). These editors are available online and many of my classmates with less number of points used them.</p>
+
+<p>For a larger number of points we will proceed with JOSM method.</p>
+
 <h2 id="post-data-collection">Post Data Collection</h2>
 
 <p><strong>Preparing data</strong></p>
@@ -481,6 +497,29 @@ All Rights Reserved
 <p>Like Mapbox’s Maki icons, OSM also has its own set of icons. They can be rendered on the map when you choose specific tags. The list of tags are mentioned <a href="http://wiki.openstreetmap.org/wiki/Map_Features">here</a>. The icons column on the page shows the icons that will be shown on the map. For example : I chose to map sitting places in IIT Campus. The most semantically suitable choice was of a bench. I used the ‘field’ as ‘amenity’ and value as ‘bench’. You can choose appropriately. The features can be added to the points using the CSV file. Once you have the CSV file you can add a new ‘column’ as amenity (in my case) using your favorite spreadsheet software. Now, in every ‘row’ i.e. for each data point add the value. This would be ‘bench’ in my case. You can have additional fields as well. It is preffered not to have spaces in between the words of the field. Use an ‘_’ .</p>
 
 <p>Once this is done, you should have a dataset in csv we can proceed to map them on OSM. As an additional step, I also generate a geoJSON file.</p>
+
+<p>Rasagy suggested some <em>pro-tips</em> like :</p>
+
+<ul>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the renderer</a>: The point is to collect the data and not have icons marked on the map. As many features might not have icons for them, it is suggested to mark real data.</p>
+  </li>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one element</a> : This point should be considered when adding details to already existing features. Instead of adding a new node/point for some area, it is better to include that detail in the existing polygon itself.</p>
+  </li>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/Key:operator">Operator- Key</a>: Since, facilities in IIT will probably be run by IIT. It is worthwhile to include an <em>operator</em> key in the data. For example: The staff canteen could have an “operator: IIT Bombay” tag.</p>
+  </li>
+</ul>
+
+<p>Some other tips i found <a href="http://wiki.openstreetmap.org/wiki/Good_practice">here</a> that deserve a mention are:</p>
+
+<ul>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Armchair_mapping">Refrain from Armchair mapping</a></li>
+  <li>Do not add temporary events on the OSM map. These could include things like Ganpati Pandals. One can use the <em>geojson on map</em> approach for this.</li>
+  <li>Map for verifiability. Hence, mapping historical events on OSM is not a good practise.</li>
+  <li>If you find that your data needs a new tag on OSM, then follow this <a href="http://wiki.openstreetmap.org/wiki/New_Features">new features</a> page .</li>
+</ul>
 
 <p><strong>OSM Contributing</strong></p>
 
@@ -538,7 +577,79 @@ The file gets rendered correctly over the base layer as points. In my case the c
 <p>You can pull the details by clicking on ‘History’ button.
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/" title="contributorInfo"><img src="https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg" width="640" height="362" alt="contributorInfo" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Hope that helps !</p>
+<h2 id="data-contributed-in-the-course">Data contributed in the course</h2>
+
+<p>Following are the details of features marked by my classmates:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sno.</th>
+      <th>Feature Marked</th>
+      <th>Number</th>
+      <th>Contributor</th>
+      <th>tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Police Posts</td>
+      <td>56</td>
+      <td>Udayan</td>
+      <td>amenity=police</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ladies Restroom</td>
+      <td>205</td>
+      <td>Shilpa</td>
+      <td>amenity=toilets;access=customers;female=yes;level=0; repeat_on=(floors)</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Fire Hydrants</td>
+      <td>95</td>
+      <td>Amit</td>
+      <td>emergency: fire_hydrant</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Dustbins</td>
+      <td>115</td>
+      <td>Manasi</td>
+      <td>amenity=waste_basket</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Tea Shops</td>
+      <td>20</td>
+      <td>Pallavi</td>
+      <td>shop=tea</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Auto Stops</td>
+      <td>14</td>
+      <td>Raagul</td>
+      <td>amenity=taxi</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Print Shops</td>
+      <td>16</td>
+      <td>Vineet</td>
+      <td>shop=copyshop;service:copy=yes;service:print=yes;service:generalitems=yes;operator: name of the shop</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Benches</td>
+      <td>54</td>
+      <td>Rohit</td>
+      <td>amenity=bench;covered=(state);seats=(number)</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Cheers,</p>
 
