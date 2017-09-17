@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-09-17T15:44:03+05:30</updated>
+ <updated>2017-09-17T22:47:43+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -192,7 +192,7 @@ I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;goal&quot;&gt;Goal&lt;/h2&gt;
-&lt;p&gt;The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to &lt;a href=&quot;https://www.openstreetmap.org&quot;&gt;openstreetmaps&lt;/a&gt;. This would allow the class to perform a &lt;strong&gt;data mash-up&lt;/strong&gt;. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.&lt;/p&gt;
+&lt;p&gt;The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to &lt;a href=&quot;https://www.openstreetmap.org&quot;&gt;openstreetmaps&lt;/a&gt;. This would allow the class to cperform a &lt;strong&gt;data mash-up&lt;/strong&gt;. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.&lt;/p&gt;
 
 &lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
 
@@ -377,6 +377,13 @@ The file gets rendered correctly over the base layer as points. In my case the c
       &lt;td&gt;54&lt;/td&gt;
       &lt;td&gt;Rohit&lt;/td&gt;
       &lt;td&gt;amenity=bench;covered=(state);seats=(number)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;Drinking Water Spots&lt;/td&gt;
+      &lt;td&gt;56&lt;/td&gt;
+      &lt;td&gt;Manoj&lt;/td&gt;
+      &lt;td&gt;amenity=drinking_water&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

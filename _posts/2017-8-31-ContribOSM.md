@@ -11,7 +11,7 @@ tags:
 
 Goal
 -----
-The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to [openstreetmaps](https://www.openstreetmap.org). This would allow the class to perform a **data mash-up**. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.
+The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to [openstreetmaps](https://www.openstreetmap.org). This would allow the class to cperform a **data mash-up**. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.
 
 
 Data Collection
@@ -134,6 +134,7 @@ Following are the details of features marked by my classmates:
 |6| Auto Stops| 14| Raagul |amenity=taxi|
 |7| Print Shops|16|Vineet| shop=copyshop;service:copy=yes;service:print=yes;service:generalitems=yes;operator: name of the shop|
 |8| Benches| 54 | Rohit |amenity=bench;covered=(state);seats=(number)|
+|9   |Drinking Water Spots   |56   |Manoj   |amenity=drinking_water   |
 
 **Links**
 
