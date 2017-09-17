@@ -7,7 +7,7 @@ tags:
 - tut
 ---
 
-> This is [Stub](https://en.wikipedia.org/wiki/Wikipedia:Stub) on contributing to OSM using JOSM. The post is meant to document to process of uploading data points gathered as a part of [Interactive Data Viz](https://info-design-lab.github.io/) course at IDC taught by Prof. Venkat. The article may be updated in the future.
+> This post is meant to document to process of uploading data points gathered as a part of [Interactive Data Viz](https://info-design-lab.github.io/) course at IDC taught by Prof. Venkat.
 
 Goal
 -----
@@ -67,7 +67,7 @@ As a class, we tried several methods. The following method uses the [JOSM IDE](h
 
 First, Download the [IDE](https://josm.openstreetmap.de/)  for the OS of your own choice.
 
-I have documented it for Bindows.
+I have documented it for windows that came [bunduru](https://www.youtube.com/watch?v=wF_vKXrOtY8)-ed with my machine.
 
 Once, the software is installed, we need to install a plugin called *OpenData* this enables JOSM to read csv files. Press F12 or Edit -> Pref and choose plugins and type opendata. You may want to do Download list before. Then check the box and click OK. This installs OpenData plugin.
 
@@ -101,7 +101,7 @@ Please check the points before proceeding.
 Once checked, you may proceed by clicking on the upload icon. I got this warning popup. I clicked continue as I had checked the data multiple times.
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/36764737376/in/album-72157686030264413/" title="warning"><img src="https://farm5.staticflickr.com/4335/36764737376_53d00d84ca_z.jpg" width="640" height="290" alt="warning"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-Next you get another warning. One of the fields had a space in between. I chose to ignore it as it was not a standard field anyway. But, I would recommend you use an '_'. Since, I did not document it when doing for the first time, I dont have those screenshots. But I will add them once some of the classmates attempt.
+Next you get another warning. One of the fields had a space in between. I chose to ignore it as it was not a standard field anyway. But, I would strictly advice that you use only features mentioned in [wiki](http://wiki.openstreetmap.org/wiki/Map_Features). One should never mark outside the wiki, this would make your contributions virtually indiscoverable as the standard parsers/scrapers/crawlers would only use standard tags. If none of the tags fit the feature, you should request that particular tag to be added to the wiki."This prevents everyone from tagging similar kind of features in their own way before a standard is set, and therefore OSM discourages using tags outside of what is currently listed on the wiki", adds Rasagy.
 
 You need an OSM account to upload. The API uses OAuth. The method that worked for me is 'Automatic'. You are likely to get OAuth credentials. JOSM stores them for you. After the authorization part, you are required to commit the changes.  You will be presented with the following dialog.
 
@@ -116,6 +116,8 @@ You can reopen the location to see your data. In my case, my benches are on the 
 
 You can pull the details by clicking on 'History' button.
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/" title="contributorInfo"><img src="https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg" width="640" height="362" alt="contributorInfo"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+I hope this guide will be helpful.
 
 Data contributed in the course
 -----
@@ -133,13 +135,18 @@ Following are the details of features marked by my classmates:
 |7| Print Shops|16|Vineet| shop=copyshop;service:copy=yes;service:print=yes;service:generalitems=yes;operator: name of the shop|
 |8| Benches| 54 | Rohit |amenity=bench;covered=(state);seats=(number)|
 
+**Links**
 
+Some useful links :
 
+- [OSM wiki](http://wiki.openstreetmap.org/wiki/Main_Page)
+- [Beginner’s guide on the OSMwiki](http://wiki.openstreetmap.org/wiki/Beginners%27_guide)
+- [LearnOSM](http://learnosm.org/en/)
+- [Mapbox’s Mapping guides](https://www.mapbox.com/mapping/)
 
+**Acknowledgements**
 
-
-
-
+I acknowledge my classmates, Prof. Venkat and Rasagy for their contributions to this post.
 
 Cheers,
 
