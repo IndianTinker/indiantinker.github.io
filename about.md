@@ -25,8 +25,4 @@ and..
 * Travel
 * Food
 
-umm...
-
-Have questions or suggestions? Feel free to [ask me on Twitter](https://twitter.com/rohit7gupta).
-
 Thanks for reading!
