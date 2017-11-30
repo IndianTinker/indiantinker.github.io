@@ -396,6 +396,58 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -440,39 +492,58 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/04/16/Tiano-Piano/">
-        Tiano- The Touchscreen Piano
+      <a href="/2015/04/05/Kindify/">
+        Kindify- Making PDFs readable on the Kindle
       </a>
     </h1>
 
-    <span class="post-date">16 Apr 2014</span>
+    <span class="post-date">05 Apr 2015</span>
 
-    <p>Touchscreens..huh.. They are all around us..Phones ,tablets, phablets and now even laptops. Most of them have a capacitive touchscreen where the change in capacitance at a point is used to sense it and then perform the corresponding action. Capacitive ones are multi point sensing. They sense more than 2 points and hence we get those pinch to zoom features etc.</p>
+    <p>Probably <strong>YOU</strong> too bought the kindle to read those pdfs that you having been stashing in your hard drive and wondering when you will get to read them. <strong>YOU</strong> too considered it would be fantastic to read them, a single device for only books. Consider this no calumny to the device. But PDFs are seriously not its cup of tea. Mercurial, <strong>YOU</strong> might be seeing the way the PDF is rendered on the crisp screen. All those toggling and finger gymnastics to get to the line. Dah! I too didn’t seem comfortable.</p>
 
-<p>On the other hand , almost archaic version on touchscreen is the resistive version. That are pretty easy to interface with almost any microcontroller with an ADC. In this project i did over the weekend i tried to interface a touchscreen ( resistive one..) ,available at mobile repair shops in Delhi with a MSP430G2553 (Although MSP430G2231 would also do)  to make a piano.</p>
+<p>Next came the fever of converting them to funny formats like .mobi etc that made a nicely indented book look like a unorganised vomit of words.</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg"><img class="aligncenter size-full wp-image-339" alt="Touchscreen setup" src="http://indiantinker.files.wordpress.com/2013/04/touchscreen-setup.jpg" width="470" height="230" /></a></p>
+<p>I tried assiduously to somehow read and lost interest until I stumbled upon a slick python library <em>pyPDF</em> while solving a problem with printing PDFs.</p>
 
-<p><strong>Pre-requisites</strong>: The touchscreen may not be easier to get. I got mine from a mobile repair shop in LR. It is a 4-wire Touchscreen, pretty common with horribly thin contacts that took a lot of patience to solder.There is a lot of literature available on Touchscreens on the internet. I found two app notes that were best. First one from <a href="http://www.atmel.in/Images/doc8091.pdf" target="_blank">Atmel</a> , that explained the working of the touchsreen in a pretty clear way and one from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI</a> that some what helped in the software part.</p>
+<blockquote>
+  <p>Clip the borders and Light you shall see !</p>
+</blockquote>
 
-<p>You must read the atmel one ( atleast the first few pgs to get how it works). Its essentially a resistive voltage divider. The value of the touch point is determined by the ADC value read.</p>
+<p>Kindle does automatically clip borders but it retains the primordial page number which limits the usability and since, it also indexes the page number anyway, even if I remove it using some python script it wont hurt.</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/04/post1.jpg"><img class="aligncenter size-full wp-image-338" alt="formula" src="http://indiantinker.files.wordpress.com/2013/04/post1.jpg" width="470" height="264" /></a></p>
+<p>So, This is what kindify does. Its a command line python utility that simply takes the pdf you intent to read and returns a PDF with the same name but -kindified appended to its file name to be read on the Kindle.</p>
 
-<p>From the illustration above(borrowed from <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>). One can easily see how the co-ordinates are read. In order to find out, what wire on your touch sreen corresponds to X and Y meshes. You can use a multi-meter first to measure the resistance between pins ,usually the alternate pins belong to same axes. in my case it was X-,Y-,X+,Y+  then to differentiate between x and y , one probable method will be to power the touchscreen i.e. giving the drive voltage and then find out the voltage at any other terminal w.r.t. ground and see whether is changing horizontally or vertically in your reference plane.</p>
+<p>The only dependency is <em>pyPDF</em> .</p>
 
-<p><em>CAUTION: Be careful about the current while powering the touchscreen externally!</em></p>
+<p>Install PyPDF using pip :
+<code class="highlighter-rouge">pip install pypdf</code></p>
 
-<p>After this coding part is pretty simple. For the algo refer to page no.7 on the <a href="http://www.ti.com/lit/an/slaa384a/slaa384a.pdf" target="_blank">TI App Note</a>. If you plan to run your end application on a battery and you have hard-coded the co-ordinates and the Vdrive is sourced externally i suggest that you sample the Vdrive as well . If you are using  microcontroller pins to supply Vdrive then this can be neglected.</p>
+<p>Now clone the github repository:</p>
 
-<p>I have a desire to learn to play music but unfortunately due to my low patience levels , i have failed to keep up. :D</p>
+<p><code class="highlighter-rouge">git clone https://github.com/IndianTinker/kindify.git</code></p>
 
-<p>So, i made this Piano using the MSP430 Launchpad and a touchscreen along with a speaker. The code algo is pretty same as TI App Note Suggests and i encourage the reader to code it himself . Any difficulties can be discussed. It uses the<a href="http://indiantinker.wordpress.com/2012/11/29/tone-library-for-msp430/" target="_blank"> tone library</a> i posted earlier to generate the <a href="http://en.wikipedia.org/wiki/Solf%C3%A8ge" target="_blank">solfeggio</a>.</p>
-<h1 id="firstHeading"><span style="font-size:13px;">Here is the shaky and horrible video i made:</span><b></b></h1>
+<p>Now, paste the PDF in the kindify directory and run the command:</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/Aw63-2rYthY" frameborder="0" allowfullscreen=""></iframe>
+<p><code class="highlighter-rouge">python kindify.py yourPdfName.pdf</code></p>
 
-<p>Cheers! :D</p>
+<p>An interactive menu will pop up with list of some famous book houses that have predefined cropping parameters. You can always choose the custom one to suit your needs or edit the predefined ones to suit your needs.</p>
+
+<p>Lets see the magic in this sample from Orielly.
+Before the script the PDF renders as follows:</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16834820407" title="Pre Script by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8752/16834820407_9c9be5a74e_z.jpg" width="385" height="640" alt="Pre Script" /></a></p>
+
+<p>And after the script</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16854436058" title="Post Script by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg" width="423" height="640" alt="Post Script" /></a></p>
+
+<p>There is a difference between the two images. Clearly the second one is a <em>bit</em> more clear.
+So, yet again Python saves the day!</p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+
 
   </div>
   

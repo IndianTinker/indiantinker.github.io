@@ -396,6 +396,58 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -440,68 +492,95 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/07/22/UberCube/">
-        UberCubeX4- The portable LED Cube !
+      <a href="/2015/04/12/NoobsGuide/">
+        The Noob's Guide to Pune Relocation
       </a>
     </h1>
 
-    <span class="post-date">22 Jul 2014</span>
+    <span class="post-date">12 Apr 2015</span>
 
-    <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
+    <p>It has almost been 8 months since i moved to Pune for Work from my hometown <em>Delhi</em> . Pune has a comparably benevolent weather as compared to Delhi. Summers are sweeter and so are winters. People of the city are great. They are quite helpful and humble. The city’s older areas have stark resemblance to Old Delhi and has lots of nice Forts, Temples, Museums and best of all eateries. Language is not a major issue as Marathi is somewhat similar to Hindi and most people understand Hindi but prefer to talk in Marathi. <em>Changla !</em></p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen=""></iframe>
+<p>I am writing is post mostly in a log format and will keep adding information as an when I get more.</p>
 
-<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
+<p>If google sent you here, then probably you too are interested/moving to Pune soon.I hope you find the information useful. The post is divided into several important sections that will be updated from time to time. Lots of unorganized info to follow so lets get started:</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig" /></a></p>
+<p><strong>Shelter</strong></p>
 
-<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
+<p><em>This section deals with housing related things</em></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac" /></a></p>
-
-<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard" /></a></p>
-
-<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping" /></a></p>
-
-<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
-<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST" /></a></p>
-
-<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB" /></a></p>
-
-<p>The Soldered one!
-<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB" /></a></p>
-
-<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm).</p>
-
-<p>Power Switch and DC Jack for power.
-<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1" /></a></p>
-
-<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
-
-<p>Cheers !
-Rohit</p>
-
-<p><strong>Update: </strong></p>
 <ul>
-	<li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
-	<li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
-	<li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
-	<li><strong>Won: University level "Open H/W" competition</strong></li>
+  <li>If you are coming here for an IT company, most of them are concentrated in <em>Hinjewadi and Wakad</em> side of Pune, which geographically comes under Pimpri Chinchwad city of Pune Metropolitan Region. Then most popular housing locations will be Wakad, Hinjewadi, Vishal Nagar(Jagtap Dairy), Pimple Saudagar and Pimple Gurav.</li>
+  <li>Before you hit the land, searching for houses/flats , take note of the relocation policy of your company and make sure brokerage is covered.</li>
+  <li>Choose room-mates wisely. Initial judgements can be pretentious. You would certainly like to live with people on the same frequency as your’ s else, things could go wary.</li>
+  <li>Prefer searching online on sites like <a href="http://housing.com/">Housing.com</a>, <a href="http://www.magicbricks.com">MagicBricks</a> etc first and prefer ones that are listed by Owners themselves to avoid steep brokerage , which is usually 1 month rent for 11 months agreement and 2 months rent for more than 11 months.</li>
+  <li>Most societies have a board <em>Beware of Dogs</em> right below a board that says <strong>Bachelors Not Allowed</strong> that pretty much sets their priorities straight. Dont go looking for flats in them.</li>
+  <li>Prefer on <em>pakka</em> agreement which requires you to go to the municipality office against a Notary Agreement. This depends on the landlord entirely. A pakka agreement is useful when you wish to own a vehicle in Pune where a notorized one bites the dust.</li>
+  <li>In case you need furniture, the market has a rental based system. You can buy cheap and flimsy furniture and once you leave you can return it for 50-60% its value. Mattresses are also available for cheap.</li>
+  <li>Some flats come with a furnished status but are usually 10k more than normal. If you plan to stay about 11 months then evaluate the economics. 10k* 11 = 1,11,000 INR. So, if the facilities are worth that even after depreciation. Go for it! else negotiate.</li>
+  <li>Chalk out a <em>Room Mate Agreement</em> like Sheldon ! It helps in long run.</li>
+  <li>D Mart is the best place to shop here.</li>
 </ul>
 
-<p> </p>
+<p><strong>Transportation</strong></p>
 
-<p> </p>
+<p><em>This section deals with Transportation related things</em></p>
+
+<h2 id="expect-nothing">Expect Nothing</h2>
+
+<ul>
+  <li>The city’s transport is abysmal and has been so since ages. The Pune City is a bit better but PCMC is worse. Its like Noida of Pune. Auto walla’s make money on your sufferings.Prefer Ola Cabs !</li>
+  <li>You wont get a direct bus quite often. That was pretty irritating initially until i met Mr. Chaturvedi on the Rakshak Chowk Bus Stop one day. He his golden words were:  “Only a few buses go to your destination directly, but many go that way !” Saying so he boarded his bus to Vishrantwadi leaving me with ideas ! So, the trick is use <strong>Here Transit</strong> to find buses that go in the direction you want and board them and deboard at the point they divert from your path and then reboard. So, if you want to go to FC Road. Take a bus for PMC/Station and use the above algo.</li>
+  <li>Get a 2 wheeler (I don’t have one though) ! OLX is great place to find or go to Rasta Peth for second hand stuff. Again you have to pay more to the brokers here, and a notorized agreement wont work !</li>
+  <li>There is also a local train service in Pune but is not preferred unless you wish to travel out of the city like going to <em>Lonavala</em> or <em>Malavali</em> etc.</li>
+  <li>If you wish to go to Mumbai ! Trust only <strong>Shivneri</strong> , Neeta has a terrible service everywhere and even to Ahemadabad (Been there Done that). You can also take shared cabs from Chinchwad Station. They charge about 200 - 250 bucks based on demand.</li>
+</ul>
+
+<p><strong>Food</strong></p>
+
+<p><em>This section deals with Food related things</em></p>
+
+<ul>
+  <li>Everything is awesome! There are lot of options here. Dosa’s and Vada Pao’s are like staple street foods. The Standard Price for Vada Pao is 10 bucks and Dosa is 20- 30 bucks .</li>
+  <li>There are lot of good places in the city. Try GoodLuck Cafe’s Fruit Fanny,La Plaisir Patisserie &amp; Bistro’s Chesse Cake, Garden Vada Pao , Marz-o-rin’s Sandwiches, Durvankur’s Thali or Sabutdana Wadi at Shaniwar Wada. Check Zomato for more listings. There is a <em>Burger King</em> as well in Koregaon Park where you get <em>gross</em> burgers and the infamous <em>German Bakery</em> is there too, near Osho Ashram</li>
+  <li>You can’t get on eating from these restaurants on daily basis so, for usual days you can either hire a cook. There is no dearth of them and they charge around 600-700 per head.</li>
+  <li>If cook is too much of a pain, go get a dabbawalla . He serves hot food in a tiffin at a reasonable price. Do ping me in the comments if you need any contacts. I have tried about 4 of them :P</li>
+</ul>
+
+<p><strong>Internet</strong></p>
+
+<p><em>This section deals with Connectivity related things</em></p>
+
+<ul>
+  <li>Internet Broadband service is a booming business here and there are tons and tons of them. To name a few Spectranet, iConnect, Reliance, Tikona, Tata Docomo, Airtel etc.</li>
+  <li>Tikona is Ok and there are several breakdowns, but customer service is good.</li>
+  <li>Docomo is great but limited to certain societies only.</li>
+  <li>Reliance s*#ks as usual ! No support and useless Helplines, but its the cheapest.</li>
+  <li>iConnect and Sprectranet are good too but again limited to some societies.</li>
+  <li>As far as cellular connectivity is concerned. Voda&gt;Idea&gt;Airtel&gt;Docomo</li>
+</ul>
+
+<p><strong>POIs</strong></p>
+
+<p><em>This section deals with Places to roam around</em></p>
+
+<ul>
+  <li>Shaniwar Wada</li>
+  <li>Dagdu Shet Ganpati Temple</li>
+  <li>Raja Dinakar Museum</li>
+  <li>Lonavala</li>
+  <li>Karla Caves , Malavali</li>
+  <li>Sinhagad Fort</li>
+  <li>Bike ride through Pashan Area</li>
+  <li><em>will add more as i visit</em></li>
+</ul>
+
+<p>Hope people find this useful!</p>
+
+<p>Cheers !!</p>
+
+<p>Rohit</p>
+
 
   </div>
   

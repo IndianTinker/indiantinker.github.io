@@ -396,6 +396,58 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -440,71 +492,92 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/12/14/Tinker-Rule/">
-        TinkerRule- The Maker's Swiss Army Knife
+      <a href="/2015/05/29/TruPlay/">
+        TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430
       </a>
     </h1>
 
-    <span class="post-date">14 Dec 2014</span>
+    <span class="post-date">29 May 2015</span>
 
-    <p>This project was done during my time at <a href="http://www.cedtnsit.in/">TI-CEPD,NSIT,Delhi</a>. They have an awesome Winter Internship program going on, Be sure to have a look.</p>
+    <p>I recently ordered <a href="http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;hash=item1a00397396">this</a> Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and <strong>Changing Songs</strong>. Its more like getting chained to the speakers. Woof !!</p>
 
-<p>I source a lot of my components from Local Markets in Delhi like <em>Lajpat Rai Market</em> etc. The problem was that when buying stuff from such places we dont always get a part number, datasheet or footprint details with it, this is very bad when you want to use it in a board that you want to etch or fabricate.</p>
+<p>After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the <em>Free Shipping</em> fellas !</p>
 
-<p>There are two ways to overcome this issue (assuming that the package is not standard) :</p>
+<p>It worked as advertised. But the range was hardly 15feet <strong>LOS</strong> and in a maze like house i live in , it would hardly go through the walls. So, the <em>Wireless</em> problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , “Think out of the box !” my answer was inside the box.</p>
 
-<ol>
-  <li>Measure each and every thing using a vernier and then make a part for it in eagle.
-    <blockquote>
-      <p>I used to do it for a long time, until i made this. This is a bit more labourious approach and it involves too much measuring. But , i noticed that <strong>most</strong> leaded parts can be resolved in a 0.1inch grid.</p>
-    </blockquote>
-  </li>
-  <li>Make a reference and then use that to make parts without picking up the vernier.
-    <blockquote>
-      <p>In this we make a reference for most common footprints and use them as a reference. What’s better is that the known reference helps in finding out packages of some component you found lying in the parts bin.</p>
-    </blockquote>
-  </li>
-</ol>
+<p>It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads :</p>
 
-<p>So, i kept on collecting ideas on what can be made into a tool that helps during the entire cycle from designing the part to etching the board comparing the parts and checking PCBs. Finally i had a list of things to do and started designing the Tool as a PCB on <em>Eagle</em> that can be etched. Nothing could offer me better precison than that.</p>
+<center>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0zeXPvvULI/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-29T08:06:06+00:00">Mar 29, 2015 at 1:06am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+</center>
 
-<p>After a few hours of designing, i etched the board (which took quite an effort), then selectively tinned a few pads and applied protective lacquer on the board.</p>
+<p>Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the <em>AT Commands</em>).</p>
+<center>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/1n1xClPUD-/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-18T16:11:06+00:00">Apr 18, 2015 at 9:11am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+ </center>
 
-<p>Here’s what i mananged.</p>
+<p>Google helps !  I found <a href="http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html">this</a> nice forum post detailing the adapter. Bingo its the <strong>OVC3860</strong> Chip. And here are the <a href="http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf">commands</a>.</p>
 
-<ol>
-  <li>
-    <p><strong>Continuity Tester</strong> : Built in basic continuity tester to check whether the tracks are correctly etched or whether there is any under cutting. Just plug those alligator clips on the exposed pads and see the LED light up incase of continuity.
-<a href="https://www.flickr.com/photos/94411929@N06/15831125987" title="Tinker Rule Continuity by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7502/15831125987_63af0bf9b0_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
-  </li>
-  <li>
-    <p><strong>Standard Packages</strong> : Some standard packages used, good to compare them and match.
-<a href="https://www.flickr.com/photos/94411929@N06/16016173942" title="Tinker Rule Footprints by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8570/16016173942_aff8aefc2f_z.jpg" width="640" height="359" alt="Tinker Rule" /></a></p>
-  </li>
-  <li><strong>0.1 inch grid</strong> : This is the best one and used most of the times. Makes it easy to simulate breadboard/perfboard behaviour.
-<a href="https://www.flickr.com/photos/94411929@N06/16016646101" title="0.1inch Grid by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8581/16016646101_8945045d09_z.jpg" width="640" height="359" alt="0.1inch Grid" /></a></li>
-  <li>
-    <p><strong>Common Drills</strong> : Most common drill sizes(bits) , just see what inserts easily and voila, we have a good enough drill size. 
-<a href="https://www.flickr.com/photos/94411929@N06/15396343364" title="Standard Drills by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7465/15396343364_a16d3cea16_z.jpg" width="640" height="359" alt="Standard Drills" /></a></p>
-  </li>
-  <li>
-    <p><strong>Track Widths</strong> : Compare track widths on the go.
-<a href="https://www.flickr.com/photos/94411929@N06/16017936652" title="Tracks by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8603/16017936652_40ce3d6217_z.jpg" width="640" height="359" alt="Tracks" /></a></p>
-  </li>
-  <li>
-    <p><strong>Right angled rule with both inch and cm scale</strong> : Right angled makes it easy while cutting PCBs and marking them and cm and inch scales help in measuring.
-<a href="https://www.flickr.com/photos/94411929@N06/15992846056" title="CM Scale by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7561/15992846056_9a2864f6ef_z.jpg" width="640" height="359" alt="CM Scale" /></a>
-<a href="https://www.flickr.com/photos/94411929@N06/15832394669" title="Complete by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7523/15832394669_86dc282a7f_z.jpg" width="640" height="359" alt="WP_20140511_00_36_03_Pro" /></a></p>
-  </li>
-  <li><strong>Rust Buster</strong> : A fine sandpaper to rust off those parts that just dont solder .
-<a href="https://www.flickr.com/photos/94411929@N06/15397629893" title="TinkerRule SandPaper by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8622/15397629893_70cf484542_z.jpg" width="640" height="359" alt="TinkerRule" /></a></li>
-</ol>
+<p>Basically all commands are in a <strong>AT#CMD[cr][lf]</strong> Format. The “CMD” for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.</p>
 
-<p>I have now been using it for quite sometime and its really useful and serves the purpose.</p>
+<p>The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a ‘115600’ one. This setting seems to be stored in the <strong>EEPROM</strong> on the adapter. As <a href="http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/">this</a> post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!</p>
 
-<p>If you are interested in this i can mail you the file , just drop me an email at indiantinker [at] gmail [dot] com.</p>
+<p>So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!</p>
 
-<p>Cheers!</p>
+<iframe width="653" height="380" src="https://www.youtube.com/embed/XGC1E0VE39Y" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Tested it for a few days ! I could now control my phone’s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB.</p>
+
+<p>I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra <strong>SMD</strong> tactile switch to further expand capabilities. 
+<a href="https://www.flickr.com/photos/94411929@N06/17148091553" title="Dongle Tapping by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg" width="640" height="359" alt="Dongle Tapping" /></a></p>
+
+<p>The connections are simple.</p>
+
+<blockquote>
+  <p>The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads !</p>
+</blockquote>
+
+<p>After designing the board it was time for the best part : <strong>Etching</strong></p>
+
+<p>Here are the chronologically arranged pictures of PCB Etching using <em>Toner Transfer Method</em> :</p>
+
+<p>Making sure the TSSOP Pads got nicely transferred. Clicked using <a href="http://rohitg.in/2015/02/26/The-MacroCase/">MACROCase</a> .
+<a href="https://www.flickr.com/photos/94411929@N06/17768382545" title="Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg" width="640" height="583" alt="Making sure the tiny tracks got transferred" /></a></p>
+
+<p>All set for the bath.
+<a href="https://www.flickr.com/photos/94411929@N06/17768440115" title="Toner Transfer by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg" width="640" height="359" alt="Toner Transfer" /></a></p>
+
+<p>Rough times to follow.
+<a href="https://www.flickr.com/photos/94411929@N06/17768864201" title="Just Etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg" width="640" height="359" alt="Just Etched" /></a></p>
+
+<p>After some sanding.
+<a href="https://www.flickr.com/photos/94411929@N06/17582193499" title="Cleaned after ACID Bath by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg" width="640" height="359" alt="Cleaned after ACID Bath" /></a></p>
+
+<p>Flashing the code after soldering.
+<a href="https://www.flickr.com/photos/94411929@N06/17768419595" title="Code Dump by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg" width="640" height="359" alt="Code Dump" /></a></p>
+
+<p>Testing.
+<a href="https://www.flickr.com/photos/94411929@N06/17765735442" title="First Test in Progress by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg" width="640" height="359" alt="First Test in Progress" /></a></p>
+
+<p>Ta Da !!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17768811751" title="Unobstructing by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg" width="640" height="359" alt="Unobstructing" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17742078846" title="Looks Cool by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg" width="640" height="359" alt="Looks Cool" /></a></p>
+
+<p>Check out the video for the project in action:</p>
+
+<iframe width="653" height="380" src="https://www.youtube.com/embed/mrToz8M_BPQ" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Interested in building one? Grab the code here:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/a35bf659325d0eac2ce5.js"> </script>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
 

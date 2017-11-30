@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+</script>
+<!--->
+<script type="text/javascript">
+
+
+
+			// get the data with a webservice call
+			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
+
+				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
+				//alert(data.field1)
+
+			});
+
+
+
+	</script>
+<!--->
+  <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="twitter:site" content="@rohit7gupta"/>
+<meta name="twitter:creator" content="@rohit7gupta"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta content="Rohit Gupta" property="og:site_name"/>
+
+
+  <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
+
+
+  <meta  property="og:title" content="Nooby Sentiment Analysis using nodejs"/>
+  <meta name="twitter:title" content="Nooby Sentiment Analysis using nodejs"/>
+  
+
+
+  <meta property="og:type" content="article"/>
+  <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
+
+
+  <meta property="og:url" content="http://localhost:4000/2015/11/08/NoobSentiment/" />
+
+
+  <meta content="2015-11-08T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+
+
+  <meta content="https://g.twimg.com/Twitter_logo_blue.png" property="og:image"/>
+  <meta name="twitter:image:src" content="https://g.twimg.com/Twitter_logo_blue.png"/>
+
+
+  
+
+
+  
+  <meta content="iot" property="article:tag"/>
+  
+
+
+
+
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Nooby Sentiment Analysis using nodejs &middot; Rohit Gupta
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55965373-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+
+    <div class="sidebar">
+ </b>
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-about">
+    <h1 color="#303F9F">
+        <a href="/">
+          Rohit Gupta
+        </a>
+      </h1>
+      <p class="lead">A blog by <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+   <!--
+    <a class="twitter-follow-button"
+  href="https://twitter.com/rohit7gupta"
+  data-show-count="false"
+  data-lang="en">
+Follow @rohit7gupta
+</a>
+<script type="text/javascript">
+window.twttr = (function (d, s, id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src= "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+}(document, "script", "twitter-wjs"));
+</script> -->
+<br>
+
+<!-- <p style="font-size:1.75rem ;color:#eceff1;">
+<a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
+<a class="list-group-item" href="https://www.flickr.com/photos/94411929@N06/"><i class="fa fa-flickr"></i></a>
+<a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
+</p>       -->
+
+</span>
+    </nav>
+<p style="font-size:0.5rem ;color:black;">Made with <i class="fa fa-heart"></i> in India</a><br>
+All Rights Reserved
+</p>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+    <div class="post">
+  
+    </div>
+      <div class="post">
+  <h1 class="post-title">Nooby Sentiment Analysis using nodejs</h1>
+  <span class="post-date">08 Nov 2015</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
+
+
+<br>
+
+
+
+
+<br>
+  <p><strong>News Flash</strong>: Sentiments are now easy to quantify because there is soooo much data around to poke into. People eat,laugh,cry,sleep when they tweet, or maybe its the other way around.</p>
+
+<p>So, we can derive loads of business and impact information based on these free streams of data and quantify them for our needs, which currently here is purely <em>exploratory</em> !</p>
+
+<p>For mere instance, Lets put our favorite sport into the picture, <em>Cricket</em>! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what ‘I’ say somewhat <strong>elastic</strong> in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the ‘played well’ stance and later become a neutral subject. There maybe some exceptions.</p>
+
+<p>As wiki states it:</p>
+<blockquote>
+  <p>Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
+</blockquote>
+
+<p>Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.</p>
+
+<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words.</p>
+
+<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality.</p>
+
+<p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
+
+<p>To install it: <code class="highlighter-rouge">npm install sentiment</code> . Check out the README on the page for a quick start.</p>
+
+<p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
+
+<p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.</p>
+
+<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code class="highlighter-rouge">fs</code> that already comes with the package.</p>
+
+<p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
+
+<p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
+
+<p>After 500 Tweets the data is as follows:</p>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/61.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/57.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/53.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/55.embed"></iframe>
+
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/59.embed"></iframe>
+
+<p><strong>Notable Observations</strong> :</p>
+
+<ul>
+  <li>Kolkata and Delhi are particularly sad</li>
+  <li>Bengaluru&gt;Pune&gt;Mumbai is the way happiness goes.</li>
+  <li>I found there are lots of twitter contest chasers as i kept on getting tons of similar tweets in Pune</li>
+  <li>In Mumbai and Bengaluru, Tweets were mainly get togethers and parties.</li>
+  <li>Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.</li>
+  <li>The Cricket All Stars reasonably raised the happiness levels.</li>
+</ul>
+
+<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities.</p>
+
+<p><strong>Caveats</strong>:</p>
+
+<ul>
+  <li>Most of the time when tweets are not in English they end up scoring zero, i should rather translate them and then analyze</li>
+  <li>The AFINN approach does fail sometimes, i have seen a neutral score on a feel good post quite a number of times.</li>
+</ul>
+
+<p>Hoping to listen from some Data Gurus !</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+</div>
+<br>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/09/10/DataViz/">
+            Visualizing the Indian Railways in 3D
+            <small>10 Sep 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/08/31/ContribOSM/">
+            Contributing to OSM using JOSM
+            <small>31 Aug 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/06/12/CHISVExp/">
+            The CHI 17 Experience
+            <small>12 Jun 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+<br>
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+</div>
+
+    </div>
+
+
+  </body>
+</html>

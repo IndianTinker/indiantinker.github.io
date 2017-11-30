@@ -110,6 +110,10 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/2016/01/02/HAMRTLRX/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/2016/01/01/MakersRule/index.html</loc>
     </url>
     
@@ -142,6 +146,18 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/2015/11/11/GreenwaliDiwali/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2015/11/08/NoobSentiment/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2015/10/23/Tiltstick/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/2015/10/22/OpenBadge/index.html</loc>
     </url>
     
@@ -155,6 +171,10 @@
     
     <url>
         <loc>http://localhost:4000/2015/10/06/Tamhini/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2015/09/26/FiddleMini/index.html</loc>
     </url>
     
     <url>
@@ -190,6 +210,18 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/2015/05/29/TruPlay/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2015/05/17/FM430/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2015/05/01/RoomMote/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/2015/04/17/BoardMerge/index.html</loc>
     </url>
     
@@ -214,7 +246,27 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/2014/11/13/Fiddle-Music-System/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2014/11/09/Nokia5510-lcd-with-MSP430/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2014/11/03/Library-for-MMA7361/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/2014/10/28/Dollar-LED-Bulb/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md-Welcome-to-new-home/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2014/10/16/Welcome-to-new-home/index.html</loc>
     </url>
     
     <url>
@@ -787,6 +839,110 @@
     
     <url>
         <loc>http://localhost:4000/page62/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page63/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page64/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page65/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page66/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page67/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page68/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page69/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page70/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page71/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page72/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page73/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page74/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page75/index.html</loc>
     </url>
     
     

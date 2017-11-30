@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nooby Sentiment Analysis using nodejs
-image: https://g.twimg.com/Twitter_logo_blue.png 
+image: https://g.twimg.com/Twitter_logo_blue.png
 location: Pune, India
 tags:
 - iot
@@ -18,9 +18,9 @@ As wiki states it:
 
 Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.
 
-What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words. 
+What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words.
 
-So that most common dictionary is called [AFINN-111](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality. 
+So that most common dictionary is called [AFINN-111](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality.
 
 Now I used a nodejs package called [sentiment](https://github.com/thisandagain/sentiment) that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.
 
@@ -39,7 +39,7 @@ Here is the script that i ran simultaneous (2 at a time and exiting at a sample 
 {% gist 5e64f03beb01b3dec3dd %}
 
 After 500 Tweets the data is as follows:
-   
+
 
 <iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/61.embed"></iframe>
 
@@ -68,7 +68,7 @@ After 500 Tweets the data is as follows:
 - Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.
 - The Cricket All Stars reasonably raised the happiness levels.
 
-I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities. 
+I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities.
 
 
 **Caveats**:
@@ -82,9 +82,3 @@ Hoping to listen from some Data Gurus !
 Cheers,
 
 Rohit
-
-
-
-
-
- 

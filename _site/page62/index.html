@@ -396,6 +396,58 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -440,37 +492,92 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2012/08/25/Arduino-Controlware/">
-        Arduino Controlware- Play with your duino without frequent code uploads
+      <a href="/2014/11/13/Fiddle-Music-System/">
+        Fiddle - The DIYed Music System
       </a>
     </h1>
 
-    <span class="post-date">25 Aug 2012</span>
+    <span class="post-date">13 Nov 2014</span>
 
-    <p>I had a bit of an experience developing GUI`s and Data Visualization in Processing.Processing is very cool to work with and the designs are highly scale-able. There are tons and tons of separate examples and libraries available for processing especially the Serial Library which eases the task.</p>
+    <p><em>Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK</em> Thats how my old ‘Phillips All in One’ failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed <strong>CD Player with a segmented Display</strong>. But today most of the music is digital and hence <em>Upgrade was necessary</em>.</p>
 
-<p>During this week , i tried to make myself a GUI using Visual C#. It was a really great experience.Although you can make buttons in processing too..but its a lot easier in Visual C# Express.However, it seems not many DIY`ers use C# and its used mainly by hardcore coders and developers..but still i managed to find some cool references via MSDN and a demo(of his work) by my friend to put together a simple and easy way to talk to Arduino on a windows machine!</p>
+<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me.</p>
+<blockquote>
+  <p>Why Buy? When it can be Built!</p>
+</blockquote>
 
-<p>You can monitor Analog Inputs , control digital pins and connect to the COM Port of your choice.Since i am still building upon it.So i am leaving a gist of how the GUI/program currently looks.</p>
+<p>And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2012/08/controlware.png"><img class="aligncenter size-full wp-image-198" title="ControlWare" src="http://indiantinker.files.wordpress.com/2012/08/controlware.png" alt="" width="470" height="417" /></a></p>
+<ul>
+  <li>Play MP3s</li>
+  <li>Radio</li>
+  <li>Aux -IN</li>
+  <li>Take SD Cards</li>
+  <li>Remotes will be good too.</li>
+</ul>
 
-<p>You will see that the Digital Pin 13 is missing. Actually i have used it to indicate an Active Serial Session.This makes it a lot easier while debugging.</p>
-<iframe src="//player.vimeo.com/video/50615424" width="500" height="375" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<p>Fitting such things in a project would rather be heavenly. I searched online for references and <em>You have it boy!</em> there is one ready to amplify (supply) module from our friends in China that does it all . See <a href="http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg">this</a>  .</p>
 
-<p><em>Update-02 Oct’12</em> : Thank You Guys for appreciating my work!I gave the same to few of my folks at my college for beta testing. Here is the link to the final executable on Windows Only!</p>
-<p style="text-align:center;"><a title="ControlWare" href="http://1drv.ms/1FaBBZS" target="_blank">ControlWare.exe</a></p>
-<p style="text-align:left;">The Arduino sketch To be uploaded is :<a href="http://1drv.ms/1FtOSPY" target="_blank"> Source</a></p>
-<p style="text-align:left;">Some of FAQ`s are:</p>
+<p>I had seen this in a Taxi (less formally called <em>Gramin Seva</em>) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )</p>
+
+<p>Now all i need to do is :</p>
 
 <ol>
-	<li>There is no Digital13 on this as it is meant to signify an active Serial Connection.i.e whether the computer is communicating with Arduino or not.</li>
-	<li>You have to find out the correct COM Port from Device Manager and enter that with Caps On</li>
-	<li>This is a VegBurgerWare ( coz i dont drink beer).So if i find u using it.You owe me a burger :P</li>
-	<li>Its not Cross Compatible..works best on Windows Only</li>
+  <li>Decipher the connections</li>
+  <li>Build a power supply and Amplifier</li>
+  <li>Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box</li>
+  <li>Modify the box to fit all in</li>
+  <li>Enjoy</li>
 </ol>
 
-<p><em>Update-5th Apr’15</em>: Fixed broken links</p>
+<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code class="highlighter-rouge">5V DC</code> supply that’s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape" /></a></p>
+
+<p>The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. <em>FingersCrossed</em></p>
+
+<p>It worked fine and i was playing things off the USB straight away!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading" /></a></p>
+
+<p>Now, the power supply and Amplifier. I used the omnipresent <code class="highlighter-rouge">7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code class="highlighter-rouge">250-300mA</code> . The supply was going to be <code class="highlighter-rouge">12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
+The Amp was build out of <strong>ST’s</strong> <a href="http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf">TDA2030</a> which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.</p>
+
+<p>The Application circuit works charm.
+So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?</p>
+
+<p>Demo runs showed <code class="highlighter-rouge">TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code class="highlighter-rouge">TDA2030</code> and made a makeshift heat sink for <code class="highlighter-rouge">7805</code></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767878536" title="Circuit -Front by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg" width="640" height="359" alt="Circuit -Front" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back" /></a></p>
+
+<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code class="highlighter-rouge">10k</code> and <code class="highlighter-rouge">0.1uF</code> combination.</p>
+
+<p>I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (<em>Oh! Yeah</em>)</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer" /></a></p>
+
+<p>I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.</p>
+
+<p>This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut" /></a></p>
+
+<p>Now it was assembling time.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789671841" title="All Messed up by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" width="640" height="359" alt="All Messed up" /></a></p>
+
+<p>After a few half hours, i got it all working.. No Buzz and all music!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606708190" title="Charm by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg" width="359" height="640" alt="Charm" /></a></p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+
 
   </div>
   
@@ -478,7 +585,7 @@ All Rights Reserved
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page63">Older</a>
   
   
     
