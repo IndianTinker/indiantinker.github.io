@@ -6,11 +6,19 @@
     </url>
     
     <url>
+        <loc>http://localhost:4000/2017/09/03/whowe/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/2017/08/31/ContribOSM/index.html</loc>
     </url>
     
     <url>
         <loc>http://localhost:4000/2017/06/12/CHISVExp/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/2017/06/03/local/index.html</loc>
     </url>
     
     <url>
@@ -943,6 +951,22 @@
     
     <url>
         <loc>http://localhost:4000/page75/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page76/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page77/index.html</loc>
     </url>
     
     

@@ -448,6 +448,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -492,72 +500,66 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/16/Plantpal/">
-        PlantPal-Garden Light Watering Reminder
+      <a href="/2015/12/10/karigar/">
+        CNCs & Me 3 - Karigar
       </a>
     </h1>
 
-    <span class="post-date">16 Nov 2015</span>
+    <span class="post-date">10 Dec 2015</span>
 
-    <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
+    <p>Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.</p>
 
-<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched ‘Automatic System’, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
+<p>Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a <em>Thumbs UP</em> !</p>
 
-<p>Hence,<strong>PlantPal</strong> .</p>
+<p>Fortunately, few of my friends agreed to work with me on it and quite thankfully we put up a great show for everyone at the demos.</p>
 
-<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The ‘Chinese’ made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
+<p>I started with making the control circuits for the CNC first as opposed to the actual CNC first as the circuits were mostly trivial and had some stepper drivers and an Arduino brain with GRBL running on. I designed my own stepper drivers based on DRV8825 drivers from TI . With all things in place. I tested my electronics with Nadya Peek’s MTM SnapCNC available at TI-CEPD, NSIT.</p>
 
-<p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
+<p><em>Thanks to Prof. Gadre</em></p>
 
-<ul>
-  <li>A yet-another-no-datasheet chinese IC.</li>
-  <li>A axial resistor like inductor</li>
-  <li>An LED</li>
-  <li>A resistor for the LED.</li>
-  <li>The solar panel</li>
-  <li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
-</ul>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21328576476/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5835/21328576476_b1a24eb625_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21168959808/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5716/21168959808_44edd750be_z.jpg" width="640" height="360" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.</p>
-
-<p>So, the power issue was sorted. For the sensor, i used the usual <em>two-wires-in-gypsum</em> sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my <a href="http://www.ti.com/product/msp430g2230">MSP430G2230</a> used up. It was time to work on the code.</p>
-
-<p><em>With great power, comes greater responsibility</em>. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.</p>
-
-<p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
+<p>Now, came the difficult part. We need to learn a CAD package so that we can design our frugal machine. We opted for FreeCAD. If you are interested in learning, we used <a href="https://www.youtube.com/watch?v=xs1mFiJBYIo">this</a> and <a href="https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g">this</a>.</p>
 
 <blockquote>
-  <p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED’s blinking rate also acts like an indicator of sorts.</p>
+  <p>The entire project is explained elaborately in our thesis <a href="https://drive.google.com/file/d/0B8DZ3bqHurUVWlZ2a29TVnRONGtVZ2hsY3V4MkxubksxSG9R/view?usp=sharing">here</a>. CAUTION: PDF and LaTeX !</p>
 </blockquote>
 
-<p><strong>Problems and solutions</strong></p>
+<p>After months of work and several visits to <strong>Chawari Bazaar</strong> and <strong>Lajpat Rai</strong>, we were able to have a working one that did wood easily. Our frame was made with wood and as the CNC Thumb Rule goes !</p>
 
-<p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
+<blockquote>
+  <p>A CNC can only work with materials that are softer than the material of the structure.</p>
+</blockquote>
 
-<ul>
-  <li>
-    <p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon.</p>
-  </li>
-  <li>
-    <p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p>
-  </li>
-  <li>
-    <p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p>
-  </li>
-  <li>
-    <p>Even lower power, using the MSP430’s clock module i can certainly go below 1MHz until it affects other peripherals.</p>
-  </li>
-</ul>
+<p>The cutting head is made using the <strong>Dremel</strong> and the Z axis is made of re-purposed drawer slides. In fact basically everything is re-purposed except the linear rods and bearings. I still have countless memories of the shops we visited for our project, located in small dingy and cramped lanes of Old Delhi in places which must not be named. We had to talk a lot so they would sell us in low quantity.</p>
 
-<p>Check out the video of it in action:</p>
+<p>Check out the pictures of the project below.</p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen=""></iframe>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896935135/in/dateposted-public/" title="WP_20150308_007"><img src="https://farm2.staticflickr.com/1512/25896935135_c26c78503a_z.jpg" width="640" height="359" alt="WP_20150308_007" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Please do comment if you have any queries :D</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896933575/in/dateposted-public/" title="WP_20150308_010"><img src="https://farm2.staticflickr.com/1537/25896933575_7d74c62331_z.jpg" width="359" height="640" alt="WP_20150308_010" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Cheers !!</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211953/in/dateposted-public/" title="WP_20150308_008"><img src="https://farm2.staticflickr.com/1501/25268211953_d18a5c721b_z.jpg" width="640" height="359" alt="WP_20150308_008" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211923/in/dateposted-public/" title="WP_20150308_009"><img src="https://farm2.staticflickr.com/1668/25268211923_3a95218f4e_z.jpg" width="640" height="359" alt="WP_20150308_009" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21167775699/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/742/21167775699_c85d901429_z.jpg" width="359" height="640" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Here is a ARM we milled for a dear friend of our who happens to a serious gyming enthusiast.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736205563/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/666/20736205563_38466e2c14_z.jpg" width="612" height="612" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Looks like it wont work? Well it does work and cuts circles for the <a href="/2015/12/11/fumeex/">FumeEx</a>:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/FxMoRauk4EU" frameborder="0" allowfullscreen=""></iframe>
+
+<p>I recently de-commissioned the machine. I worked, but not very well (Its hard to acknowledge this fact). I am using the parts to build something.</p>
+
+<p>So, until next post …</p>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
 

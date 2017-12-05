@@ -448,6 +448,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -492,110 +500,68 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/04/07/OpenAgitator/">
-        Open Agitator
+      <a href="/2014/07/22/UberCube/">
+        UberCubeX4- The portable LED Cube !
       </a>
     </h1>
 
-    <span class="post-date">07 Apr 2014</span>
+    <span class="post-date">22 Jul 2014</span>
 
-    <p>After a somewhat woeful week at college that shook my belief in several sectors.. I mustered up my courage to realize an old project they knocked the door every time i used to Etch PCB boards. Since, the solution i use has already done close to 20 boards of small size one has to really keep shaking/stirring/Agitating the solution for a fairy long time.. ( ya 7-8 mins of man power is fairly long time :P )</p>
+    <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
 
-<p>The idea came to me when i visited my brother in <a title="Travelogue: Bangalore" href="http://indiantinker.wordpress.com/2013/05/24/travelogue-bangalore/" target="_blank">Bangalore</a> earlier this year. He was generous enough to give us a tour of his world class Biotechnology lab in India.. He showed us stuff and things/instruments which were difficult to pronounce in one go but they all had a thing in common- They ended with syllables like -<em>‘-izer’,-‘ator’,’-ation’. </em></p>
+<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen=""></iframe>
 
-<p>One thing that they used for not allowing things/particles to sediment was called a shaker. It would be great if i could get one for myself that will take the work out of etching. When i returned i made an over-killed 3D model of the agitator that i had in mind. It would just be a 1-axis CNC with a stepper motor and belt, That was doing a lot for the task..</p>
+<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
 
-<p>Here are some pics of the model:</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig" /></a></p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator2.jpg"><img class="size-full wp-image-488" alt="Looks Cool Though.. " src="http://indiantinker.files.wordpress.com/2013/09/etchinator2.jpg" width="570" height="514" /></a> Looks Cool Though..</p>
+<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg"><img class="size-full wp-image-487" alt="Freewheel mount and stepper motor" src="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg" width="633" height="466" /></a> Freewheel mount and stepper motor</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac" /></a></p>
 
-<p>Realizing the overkill design, I went on to an easier one earlier this month ( actually previous month ) when a relative who was ‘demolishing’ his old PC gave me some old CDROMs that didn`t work. The mechanics did work though..</p>
+<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling.</p>
 
-<p>So, I just ‘damaged’ the tracks around the main feed motor and attached my own custom circuit based around the MSP430 micro-controller and majority of TI parts as they can be shipped to anyone  with an address making it very easy to re build yourself.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard" /></a></p>
 
-<p>Here is a proof-of-concept video i posted a while back where the Etchinator ( now Open Agitator after i realized it could do a lot more like cooling hot milk  :D ) was etching its own control board  :</p>
+<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/wOFcjrQe-is" frameborder="0" allowfullscreen=""></iframe>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping" /></a></p>
 
-<p>I used a L293D H bridge motor controller to control the forward and backward movement of the cradle with an adjustable speed by giving a PWM on the Enable Pin . People who had made LFR’s in the first/second year know its a child`s play.</p>
+<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
+<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST" /></a></p>
 
-<p>After running the aforementioned set up for a while i noticed that  the cradle would shift to the farther end where the gear was slightly worn out. So, when loaded the cradle would :</p>
+<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB.</p>
 
-<ol>
-  <li>Latch on to that part and stay stuck.</li>
-  <li>The whole system would move a bit forward each time and latch on the wrong part.</li>
-</ol>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB" /></a></p>
 
-<p>So, an end-stop detection was required which would keep the cradle in the fixed portion.. some what similar to the ones i had seen in the CNC`s which tell them their legitimate playing fields.</p>
+<p>The Soldered one!
+<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB" /></a></p>
 
-<p>The answer was using the old mouse push button that came with the CD-ROM. Its softer and probably made to withstand greater number of press-cycles than a standard SPST Tactile switch.</p>
+<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm).</p>
 
-<p>So , now the logic would work like, whenever the button/EndStop is pressed, the direction will be reversed for a fixed time and then reversed again.. So, the cycle keeps on going.. .. .. ..</p>
+<p>Power Switch and DC Jack for power.
+<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4" /></a></p>
 
-<p>Here is the final  schematic i came up with:</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2" /></a></p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/sche.png"><img class="size-full wp-image-492" alt="Schematic" src="http://indiantinker.files.wordpress.com/2013/09/sche.png" width="700" height="482" /></a> Schematic</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1" /></a></p>
 
-<p>Since, i did’nt wanted to leave any pins un-used i included 3 LED`s which show the different states of the agitator.</p>
+<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
 
-<p>The power supply needs special mention as it converts from a standard 12V DC adapter to 5V for the logic of the bridge (L293D) and again an <a href="http://www.ti.com/product/lp2950-33" target="_blank">LDO LP2950-3.3V</a> for the MSP430. The LDO can be sampled from TI and 7805 is available locally with every tinkerer.</p>
+<p>Cheers !
+Rohit</p>
 
-<p>Even the driver i.e <a href="http://www.ti.com/product/l293d" target="_blank">L293D</a> can be sourced from Ti. The brain of the device is a <a href="http://www.ti.com/product/msp430g2231" target="_blank">MSP430G2231</a> also sampled from TI and programmed from the <a href="http://www.ti.com/tool/msp-exp430g2" target="_blank">MSP430 Launchpad</a>. So, This project was indirectly sponsored by TI :D</p>
-
-<p>The next came the board layout.. I designed it to have the least number of  vias (They can be a pain sometimes) while fitting at the back of the CD-ROM. Here is the one with just two vias.</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/brd.png"><img class="size-full wp-image-493" alt="Board!" src="http://indiantinker.files.wordpress.com/2013/09/brd.png" width="458" height="205" /></a> Board</p>
-
-<p>Since, the position of motor/EndStop switches were flexible they eased out the routing a bit. You can also add a DC Jack to it if you like. The files are available on github <a href="https://github.com/IndianTinker/OpenAgitator" target="_blank">here</a>.</p>
-
-<p>Here are pictures of the final build i managed to pull off.</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00522.jpg"><img class="size-full wp-image-497" alt="The EndStop" src="http://indiantinker.files.wordpress.com/2013/09/dsc00522.jpg" width="700" height="525" /></a> The EndStop</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00512.jpg"><img class="size-full wp-image-498" alt="Shiny Copper Board" src="http://indiantinker.files.wordpress.com/2013/09/dsc00512.jpg" width="700" height="420" /></a> Shiny Copper Board</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00515.jpg"><img class="size-full wp-image-499" alt="All in Place" src="http://indiantinker.files.wordpress.com/2013/09/dsc00515.jpg" width="700" height="444" /></a> All in Place</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00516.jpg"><img class="size-full wp-image-500" alt="Scratchy Soldering" src="http://indiantinker.files.wordpress.com/2013/09/dsc00516.jpg" width="700" height="476" /></a> Scratchy Soldering</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00517.jpg"><img class="size-full wp-image-501" alt="Power Test Complete" src="http://indiantinker.files.wordpress.com/2013/09/dsc00517.jpg" width="700" height="505" /></a> Power Test Complete</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg"><img class="size-full wp-image-503" alt="Fixed to the back of the CDROM" src="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg" width="700" height="525" /></a> Fixed to the back of the CDROM</p>
-
-<p>The next thing that was left was to give it a sturdy base. I choose two planks of wood that were lying around. It was essential to leave it without any base on the middle section as if ‘ever’ there is a chemical spill that can be cleaned without unscrewing the entire assembly!</p>
-
-<p>So, Here is the final build :</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg"><img class="size-full wp-image-502" alt="Final Build" src="http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg" width="700" height="525" /></a> Final Build</p>
-
-<p>You can fork the complete code and design from my<a href="https://github.com/IndianTinker/OpenAgitator" target="_blank"> github repo</a>.</p>
-
-<p>Here is a video of me explaining the build.. Please ignore the following :</p>
+<p><strong>Update: </strong></p>
 <ul>
-	<li>Bad camera quality</li>
-	<li>Some goof-ups with the IC names.. Keep an eye on the Sub Titles/Captions</li>
-	<li>Background Noise (if any)</li>
+	<li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
+	<li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
+	<li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
+	<li><strong>Won: University level "Open H/W" competition</strong></li>
 </ul>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/0nLpa1uPF_E" frameborder="0" allowfullscreen=""></iframe>
+<p> </p>
 
-<p>Hope you like it and build one for yourself..
-Cheers,
-IndianTinker</p>
-
-<p>:D</p>
-
-<p>Edit: Please vote for this project on instructables <a href="http://www.instructables.com/id/Open-Agitator-Your-Personal-Chemistry-Lab-Shaker/" target="_blank">here</a> !</p>
-
-<p>See another make of my project by a reader on instructable:</p>
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/zX0pGGTKSB0" frameborder="0" allowfullscreen=""></iframe>
-
-<p>(Thanks for sharing <a href="http://http://ales.kapun.org/" target="_blank">Aleš</a> )</p>
-
-<p><span style="line-height:1.5;"> </span></p>
+<p> </p>
 
   </div>
   

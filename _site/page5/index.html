@@ -448,6 +448,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -492,42 +500,89 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/04/03/Soundsofcity/">
-        How does this city sound ?
+      <a href="/2017/06/03/local/">
+        Local - Gamification in participatory GIS
       </a>
     </h1>
 
-    <span class="post-date">03 Apr 2017</span>
+    <span class="post-date">03 Jun 2017</span>
 
     <blockquote>
-  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Interaction Media and Senses</strong>. The project was done during the <em>sensory</em> phase of the course that involved Sensory, Cognitive and Social parts.</p>
+  <p>This project was done as a part of “Interaction Design - 1” course taught by Prof. Ravi Poovaiah at IDC. The team members were <a href="https://www.behance.net/silpa_murali">Silpa</a> and <a href="https://www.behance.net/udayanvidyanta">Udayan</a>. The live version is hosted <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
 </blockquote>
 
-<p>We explored the possible ways to experience at city by just sounds and ended up creating a system that maps these sounds as well. The system can be seen in action <a href="http://rohitg.in/soundsofcity.html">here</a>. It uses Mapbox flavoured openstreet maps with soundcloud to embed the recorded sounds.</p>
+<p><strong>Design Brief</strong></p>
 
-<p>We experimented with things like :</p>
+<p>The design brief was to come up with a design solution for a local problem. We are asked to come up with a <em>designerly response</em> to things we all face around us. We choose the context of streets and street vendors. In the search engine age, what is not searchable is not there. The street vendors and other microservice providers are often not aware of this ecosystem or do not have the means to do so. They also have a more legacy customer base, which they say is depleting due to online service providers. A shop on ground is better than a page on the cloud. But, these shops are difficult to find for non locals.</p>
 
-<ul>
-  <li>Binaural Recording</li>
-  <li>Storytelling with sound</li>
-  <li>Spatial augmentation of sound using 3 axis sensors and openAL. (To be replaced by Unity or SFML)</li>
-  <li>Geospatial Mapping of Sound (prototyped using processing and implemented using MapBox)</li>
-</ul>
+<p><strong>Secondary study</strong></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33678280611/in/dateposted-public/" title="Sounds"><img src="https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg" width="500" height="421" alt="Sounds" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>We studied various models of streets. There has not been enough work done in the domain of getting local shops online and the problem is of specific importance to Indian context where there is a transition happening as far as ICT is considered. Dominant means include: Sensors, People and Documents.Information may generate insights which can be used to create a feeback that can help sustain the systems. Data gathering is not of huge concern in the west due to already proliferation of phones etc.</p>
 
-<p>The project is documented in the video below: ( I will add a one page TL;dr version soon )</p>
+<p>Based on famous Stanford paper titled “Twitch Crowd sourcing:Crowd Contributions in Short Bursts of Time” The author argues about micro-contribution and channel factors He lays down his design based on availability, low time, low cog load, Value to the user,feedback, privacy and longevity of experience. Various engaging means of crowd-sourcing information that can be actively contributed or inferred by activities. It is needed to be aligned with users goals and hence a balance of incentive vs motivation should be used. Incentives are not sustainable and motivations are challenging to design.</p>
 
-<iframe src="https://drive.google.com/file/d/0B-2TEMdgVwl4RHNJcXJLd1IwYUU/preview" width="640" height="480"></iframe>
+<p>Gamification has huge possibilities in the domain of crowdsourcing. Several references show that using gamification models in the crowdsourcing domain can result in huge motivation like Pokemon Go and 4Sq have already done.</p>
 
-<p>The presentation is as follows:</p>
+<p><strong>Primary study</strong></p>
 
-<iframe src="https://docs.google.com/presentation/d/1OpqOCdbN_42WugLY2KXdvVErJ96BkXanpejnTeZJ0Kg/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<p>We tried to understand the activities on the street by conducting a field study in powai and kurla regions.
+<img src="https://i.imgur.com/WN2rHtj.png" alt="Imgur" /></p>
+
+<p>In our study we noticed how adoption of digital means is affecting sales. This is a street fruit vendor who accepts cards and has a website. He offers services like delivery and online shopping. He prices his goods higher than other vendors and still is able to make decent profits.
+<img src="https://i.imgur.com/2t2w9gs.png" alt="Imgur" /></p>
+
+<p>After the field study, we collected our findings in a mind-map.
+<img src="https://i.imgur.com/QZ8ntbQ.png" alt="Imgur" /></p>
+
+<p>We also asked ourselves some questions based on what we observed.
+<img src="https://i.imgur.com/B5Baq9S.png" alt="Imgur" /></p>
+
+<p>Finally, we came up with a problem concept map to crystallize the situation on the street.
+<img src="https://i.imgur.com/5Dhk5Kf.png" alt="Imgur" /></p>
+
+<p>We came up with the modified brief of “How might we help micro level data of local shops using principles of participatory GIS?”
+We planned on structuring the system such that we require less input from more users as opposed to asked more questions from less users. This would be our solution map.</p>
+
+<p><img src="https://i.imgur.com/WrDOrIl.png" alt="Imgur" /></p>
+
+<p>We imagined the following persona’s that would use our system.
+<img src="https://i.imgur.com/qdjkcdm.png" alt="Imgur" /></p>
+
+<p>Hence, our system was divided into two verticals. One vertical would concentrate on helping people search local data and other vertical would help gamify the collection of data points from crowd.</p>
+
+<p>The UI walkthrough for the web interface (by Udayan) is as follows:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4KZPoY2enfs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p>The UI walkthrough for the Local game app (by Silpa) is as follows:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4wsBIY4HUco" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p>We allowed multiple users to rate the same activity and asked multiple users different questions to ascertain attributes of a particular location.</p>
+
+<p><strong>Some UI samples</strong></p>
+
+<p><a href="https://imgur.com/vsgiNcc"><img src="https://i.imgur.com/vsgiNcc.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/VmNciRR"><img src="https://i.imgur.com/VmNciRR.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/yGm3ZAE"><img src="https://i.imgur.com/yGm3ZAE.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/fhypt0K"><img src="https://i.imgur.com/fhypt0K.png" title="source: imgur.com" /></a></p>
+
+<p><strong>Prototype</strong></p>
+
+<p>We went forward to create an implementation of the actual system. The architecture was as follows:
+<img src="https://i.imgur.com/kny2Yld.png" alt="Imgur" /></p>
+
+<p>We used a python based service that would scan accounts of particular members on instagram and classify tags. These tags were then used to plot the same as tool tips on a mapbox render. The same was updated realtime on an amazon s3 server <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
+
+<p><img src="https://i.imgur.com/Wan5h4o.png" alt="Imgur" /></p>
+
+<p><img src="https://i.imgur.com/dmPV2Zl.png" alt="Imgur" /></p>
+
+<p><strong>Contributions</strong> The project was done with Silpa and Udayan.</p>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

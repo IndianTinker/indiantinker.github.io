@@ -448,6 +448,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -492,90 +500,64 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/05/29/TruPlay/">
-        TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430
+      <a href="/2015/07/05/JuggadSupply/">
+        Juggad Supply- Saving a power supply from planned obsolescence
       </a>
     </h1>
 
-    <span class="post-date">29 May 2015</span>
+    <span class="post-date">05 Jul 2015</span>
 
-    <p>I recently ordered <a href="http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;hash=item1a00397396">this</a> Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and <strong>Changing Songs</strong>. Its more like getting chained to the speakers. Woof !!</p>
+    <p>Next time your printer stops printing for no reason or changing the battery of your MP3 Player from <strong>Authorised Service Station</strong> costs a major percentage of the original cost, Be informed this all is a part of an industrial design policy,Planned Obsolescence, to make goods last a bit shorter by tweaking the design.</p>
 
-<p>After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the <em>Free Shipping</em> fellas !</p>
+<p>Never mind a broken device is an opportunity to learn. That’s what i had in mind when i didnt throw away my 2004 ATX supply when it failed in 2010 probably due to some connection/connector issue. In a haste to get the PC working in summer break I installed a new supply on the PC and kept it with me to play with later.</p>
 
-<p>It worked as advertised. But the range was hardly 15feet <strong>LOS</strong> and in a maze like house i live in , it would hardly go through the walls. So, the <em>Wireless</em> problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , “Think out of the box !” my answer was inside the box.</p>
+<p>After saving it from the routine disposal drives of Diwali , I finally had some use of it when the WalWart 12V@1A supply i have was not capable of driving the stepper motors i used in my major project.</p>
 
-<p>It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads :</p>
+<p>Moding ATX to use it as a bench supply is not new.The power output is pretty stable and can provide high currents. DP has an amazing <a href="http://dangerousprototypes.com/2012/06/28/new-prototype-atx-breakout-board/">ATX to Power supply Board</a> too.</p>
+
+<p>I wanted one that i could carry around anywhere and should be in one piece and durable with no wires outside the case except the power cable of course .</p>
+
+<p>Lets see how that ATX Connector looks like.</p>
 
 <center>
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0zeXPvvULI/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-29T08:06:06+00:00">Mar 29, 2015 at 1:06am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<img src="http://etech.dyndns.org/images/vcr/atx.jpg" />
 </center>
 
-<p>Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the <em>AT Commands</em>).</p>
-<center>
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/1n1xClPUD-/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-18T16:11:06+00:00">Apr 18, 2015 at 9:11am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
- </center>
+<p>The important points are:</p>
 
-<p>Google helps !  I found <a href="http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html">this</a> nice forum post detailing the adapter. Bingo its the <strong>OVC3860</strong> Chip. And here are the <a href="http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf">commands</a>.</p>
+<ul>
+  <li>Shorting <code class="highlighter-rouge">PS_ON(14)</code> to <code class="highlighter-rouge">GND</code> will turn on the PSU and that is what actually the motherboard does.</li>
+  <li>By checking the voltage on <code class="highlighter-rouge">Power_ok or Power Good(8)</code> one can decide whether the power supply OUTPUT is ON (+5V when ON).</li>
+  <li>By checking the voltage on <code class="highlighter-rouge">+5vSB(9)</code> one can decide whether the Mains are ON or not (+5v when ON).</li>
+</ul>
 
-<p>Basically all commands are in a <strong>AT#CMD[cr][lf]</strong> Format. The “CMD” for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.</p>
+<p>So, I will connect LEDs to pin 8 and 9 and a switch between 14 and GND, thats pretty much it.</p>
 
-<p>The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a ‘115600’ one. This setting seems to be stored in the <strong>EEPROM</strong> on the adapter. As <a href="http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/">this</a> post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!</p>
+<p>Since I had the no wires outside clause and usual power supplies have more that one connector, I had to open the power supply and cut wires literally like a barber and then solder the same coloured ones together to bring them onto the front panel.</p>
 
-<p>So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!</p>
-
-<iframe width="653" height="380" src="https://www.youtube.com/embed/XGC1E0VE39Y" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Tested it for a few days ! I could now control my phone’s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB.</p>
-
-<p>I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra <strong>SMD</strong> tactile switch to further expand capabilities. 
-<a href="https://www.flickr.com/photos/94411929@N06/17148091553" title="Dongle Tapping by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg" width="640" height="359" alt="Dongle Tapping" /></a></p>
-
-<p>The connections are simple.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19435985395" title="Same Colour ,Same Voltage by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/469/19435985395_e8dde8d935_z.jpg" width="640" height="480" alt="Same Colour ,Same Voltage" /></a></p>
 
 <blockquote>
-  <p>The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads !</p>
+  <p>Most morden ATXs don’t need the load resistor on 5V bus as many posts mention. Phew ! One part less :D</p>
 </blockquote>
 
-<p>After designing the board it was time for the best part : <strong>Etching</strong></p>
+<p>I then drilled the holes @ CEDT for the Thumb Screw connectors i got from Lajpat Rai and also fixed a small handle to it for carrying it around.</p>
 
-<p>Here are the chronologically arranged pictures of PCB Etching using <em>Toner Transfer Method</em> :</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19248429460" title="Drilling the cover by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/523/19248429460_bc1a02963b_z.jpg" width="640" height="480" alt="Drilling the cover" /></a></p>
 
-<p>Making sure the TSSOP Pads got nicely transferred. Clicked using <a href="http://rohitg.in/2015/02/26/The-MacroCase/">MACROCase</a> .
-<a href="https://www.flickr.com/photos/94411929@N06/17768382545" title="Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg" width="640" height="583" alt="Making sure the tiny tracks got transferred" /></a></p>
+<p>Then connected the circuit as mentioned above to test it.</p>
 
-<p>All set for the bath.
-<a href="https://www.flickr.com/photos/94411929@N06/17768440115" title="Toner Transfer by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg" width="640" height="359" alt="Toner Transfer" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19429707752" title="Testing by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/302/19429707752_05839665a2_z.jpg" width="640" height="475" alt="Testing" /></a></p>
 
-<p>Rough times to follow.
-<a href="https://www.flickr.com/photos/94411929@N06/17768864201" title="Just Etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg" width="640" height="359" alt="Just Etched" /></a></p>
+<p>Carefully packed everything inside the original case.</p>
 
-<p>After some sanding.
-<a href="https://www.flickr.com/photos/94411929@N06/17582193499" title="Cleaned after ACID Bath by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg" width="640" height="359" alt="Cleaned after ACID Bath" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19429714392" title="Ready ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/354/19429714392_4a600b79fd_z.jpg" width="640" height="480" alt="Ready !" /></a></p>
 
-<p>Flashing the code after soldering.
-<a href="https://www.flickr.com/photos/94411929@N06/17768419595" title="Code Dump by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg" width="640" height="359" alt="Code Dump" /></a></p>
+<p>Printed some labels from my archaic inkjet and I had my ATX power Supply ready !</p>
 
-<p>Testing.
-<a href="https://www.flickr.com/photos/94411929@N06/17765735442" title="First Test in Progress by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg" width="640" height="359" alt="First Test in Progress" /></a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/19435982985" title="Labelled UP by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/317/19435982985_69fc1b1b18_z.jpg" width="640" height="480" alt="Labelled UP" /></a></p>
 
-<p>Ta Da !!</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768811751" title="Unobstructing by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg" width="640" height="359" alt="Unobstructing" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17742078846" title="Looks Cool by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg" width="640" height="359" alt="Looks Cool" /></a></p>
-
-<p>Check out the video for the project in action:</p>
-
-<iframe width="653" height="380" src="https://www.youtube.com/embed/mrToz8M_BPQ" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Interested in building one? Grab the code here:</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/a35bf659325d0eac2ce5.js"> </script>
+<p>Pretty simple and effective hack ! So, when are you making one ?</p>
 
 <p>Cheers,</p>
 

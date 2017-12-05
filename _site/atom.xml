@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-05T16:26:03+05:30</updated>
+ <updated>2017-12-05T21:28:11+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -175,6 +175,46 @@ I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630
 &lt;/ul&gt;
 
 &lt;p&gt;Hope this helps !&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Installation - Who you are is what you get</title>
+   <link href="http://localhost:4000/2017/09/03/whowe/"/>
+   <updated>2017-09-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/09/03/whowe</id>
+   <content type="html">&lt;p&gt;Information seems to have affected the pace of human evolution. Early humans could remember more information than the modern man. We today live in a world where information is ubiquitous and externalized. With ambient connectivity, this seems to have lead to a reduced information storage in biological memory. Hence, information is ambient. The ease and implementation of search engines has affected the inherent confirmation bias. This leads to a lack of objectivity in the information presented. Through the means of this installation, I intend to show the biased nature of modern pursuit of information. The mirror reflects what a user is and not what maybe true.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Installation Design&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The participant cannot interact with the screen in any way. However, the screen and the mirror make the overall design open to interpretation. Some participants may ignore the presence, but some may figure out the true metaphor.The mirror reflects the participant and the search results she expects are filled with ”you may  like”  items.  It  is  a  search  that  pleases  and  not  enlightens. The  search  is so personalized that it ’reflects’ your identity. But that metaphor is not a single authoritative interpretation but rather may lead to multiple heterogeneous interpretations as explored by Sengers et. al. The device was exhibited on an office table at the venue. I hope that this artifact can help trigger a sense of uneasiness and encourage the participants to think on issues like privacy and biased nature of information they consume.&lt;/p&gt;
+
+&lt;p&gt;In order to present the precious and dear nature of our engagement with search engines, I painted the monitor in gold.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prototyping&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Painting the monitor gold
+&lt;img src=&quot;https://i.imgur.com/teVTNtM.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Had some help from the paint studio after messing up the first coat.
+&lt;img src=&quot;https://i.imgur.com/x9ireNm.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Fixing the one way glass
+&lt;img src=&quot;https://i.imgur.com/gp38MXV.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Checking the reflection
+&lt;img src=&quot;https://i.imgur.com/N5ErrCV.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the conference
+&lt;img src=&quot;https://i.imgur.com/JnJgXkG.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/interact2017/37474673211/in/dateposted/&quot; title=&quot;DSC_3938&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4448/37474673211_ce60a32935_z.jpg&quot; width=&quot;640&quot; height=&quot;428&quot; alt=&quot;DSC_3938&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A published paper on the same can be read &lt;a href=&quot;http://ifip-tc13.org/wp-content/uploads/2017/09/INTERACT_2017_Adjunct_FINAL.pdf&quot;&gt;here&lt;/a&gt; on page 132.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -534,6 +574,90 @@ The file gets rendered correctly over the base layer as points. In my case the c
 
 &lt;p&gt;Rohit&lt;/p&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Local - Gamification in participatory GIS</title>
+   <link href="http://localhost:4000/2017/06/03/local/"/>
+   <updated>2017-06-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/06/03/local</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This project was done as a part of “Interaction Design - 1” course taught by Prof. Ravi Poovaiah at IDC. The team members were &lt;a href=&quot;https://www.behance.net/silpa_murali&quot;&gt;Silpa&lt;/a&gt; and &lt;a href=&quot;https://www.behance.net/udayanvidyanta&quot;&gt;Udayan&lt;/a&gt;. The live version is hosted &lt;a href=&quot;https://s3-us-west-2.amazonaws.com/rohitgupta/main.html&quot;&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Design Brief&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The design brief was to come up with a design solution for a local problem. We are asked to come up with a &lt;em&gt;designerly response&lt;/em&gt; to things we all face around us. We choose the context of streets and street vendors. In the search engine age, what is not searchable is not there. The street vendors and other microservice providers are often not aware of this ecosystem or do not have the means to do so. They also have a more legacy customer base, which they say is depleting due to online service providers. A shop on ground is better than a page on the cloud. But, these shops are difficult to find for non locals.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Secondary study&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We studied various models of streets. There has not been enough work done in the domain of getting local shops online and the problem is of specific importance to Indian context where there is a transition happening as far as ICT is considered. Dominant means include: Sensors, People and Documents.Information may generate insights which can be used to create a feeback that can help sustain the systems. Data gathering is not of huge concern in the west due to already proliferation of phones etc.&lt;/p&gt;
+
+&lt;p&gt;Based on famous Stanford paper titled “Twitch Crowd sourcing:Crowd Contributions in Short Bursts of Time” The author argues about micro-contribution and channel factors He lays down his design based on availability, low time, low cog load, Value to the user,feedback, privacy and longevity of experience. Various engaging means of crowd-sourcing information that can be actively contributed or inferred by activities. It is needed to be aligned with users goals and hence a balance of incentive vs motivation should be used. Incentives are not sustainable and motivations are challenging to design.&lt;/p&gt;
+
+&lt;p&gt;Gamification has huge possibilities in the domain of crowdsourcing. Several references show that using gamification models in the crowdsourcing domain can result in huge motivation like Pokemon Go and 4Sq have already done.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Primary study&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We tried to understand the activities on the street by conducting a field study in powai and kurla regions.
+&lt;img src=&quot;https://i.imgur.com/WN2rHtj.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In our study we noticed how adoption of digital means is affecting sales. This is a street fruit vendor who accepts cards and has a website. He offers services like delivery and online shopping. He prices his goods higher than other vendors and still is able to make decent profits.
+&lt;img src=&quot;https://i.imgur.com/2t2w9gs.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After the field study, we collected our findings in a mind-map.
+&lt;img src=&quot;https://i.imgur.com/QZ8ntbQ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We also asked ourselves some questions based on what we observed.
+&lt;img src=&quot;https://i.imgur.com/B5Baq9S.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, we came up with a problem concept map to crystallize the situation on the street.
+&lt;img src=&quot;https://i.imgur.com/5Dhk5Kf.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We came up with the modified brief of “How might we help micro level data of local shops using principles of participatory GIS?”
+We planned on structuring the system such that we require less input from more users as opposed to asked more questions from less users. This would be our solution map.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/WrDOrIl.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We imagined the following persona’s that would use our system.
+&lt;img src=&quot;https://i.imgur.com/qdjkcdm.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hence, our system was divided into two verticals. One vertical would concentrate on helping people search local data and other vertical would help gamify the collection of data points from crowd.&lt;/p&gt;
+
+&lt;p&gt;The UI walkthrough for the web interface (by Udayan) is as follows:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4KZPoY2enfs&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The UI walkthrough for the Local game app (by Silpa) is as follows:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4wsBIY4HUco&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We allowed multiple users to rate the same activity and asked multiple users different questions to ascertain attributes of a particular location.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some UI samples&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://imgur.com/vsgiNcc&quot;&gt;&lt;img src=&quot;https://i.imgur.com/vsgiNcc.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://imgur.com/VmNciRR&quot;&gt;&lt;img src=&quot;https://i.imgur.com/VmNciRR.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://imgur.com/yGm3ZAE&quot;&gt;&lt;img src=&quot;https://i.imgur.com/yGm3ZAE.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://imgur.com/fhypt0K&quot;&gt;&lt;img src=&quot;https://i.imgur.com/fhypt0K.png&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prototype&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We went forward to create an implementation of the actual system. The architecture was as follows:
+&lt;img src=&quot;https://i.imgur.com/kny2Yld.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We used a python based service that would scan accounts of particular members on instagram and classify tags. These tags were then used to plot the same as tool tips on a mapbox render. The same was updated realtime on an amazon s3 server &lt;a href=&quot;https://s3-us-west-2.amazonaws.com/rohitgupta/main.html&quot;&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Wan5h4o.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/dmPV2Zl.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contributions&lt;/strong&gt; The project was done with Silpa and Udayan.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
 </content>
  </entry>
  

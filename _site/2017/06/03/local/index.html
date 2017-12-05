@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+</script>
+<!--->
+<script type="text/javascript">
+
+
+
+			// get the data with a webservice call
+			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
+
+				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
+				//alert(data.field1)
+
+			});
+
+
+
+	</script>
+<!--->
+  <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="twitter:site" content="@rohit7gupta"/>
+<meta name="twitter:creator" content="@rohit7gupta"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta content="Rohit Gupta" property="og:site_name"/>
+
+
+  <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
+
+
+  <meta  property="og:title" content="Local - Gamification in participatory GIS"/>
+  <meta name="twitter:title" content="Local - Gamification in participatory GIS"/>
+  
+
+
+  <meta property="og:type" content="article"/>
+  <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
+
+
+  <meta property="og:url" content="http://localhost:4000/2017/06/03/local/" />
+
+
+  <meta content="2017-06-03T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+
+
+  <meta content="https://i.imgur.com/VmNciRR.png" property="og:image"/>
+  <meta name="twitter:image:src" content="https://i.imgur.com/VmNciRR.png"/>
+
+
+  
+
+
+  
+  <meta content="design" property="article:tag"/>
+  
+
+
+
+
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Local - Gamification in participatory GIS &middot; Rohit Gupta
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55965373-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+
+    <div class="sidebar">
+ </b>
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-about">
+    <h1 color="#303F9F">
+        <a href="/">
+          Rohit Gupta
+        </a>
+      </h1>
+      <p class="lead">A blog by <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+   <!--
+    <a class="twitter-follow-button"
+  href="https://twitter.com/rohit7gupta"
+  data-show-count="false"
+  data-lang="en">
+Follow @rohit7gupta
+</a>
+<script type="text/javascript">
+window.twttr = (function (d, s, id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src= "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+}(document, "script", "twitter-wjs"));
+</script> -->
+<br>
+
+<!-- <p style="font-size:1.75rem ;color:#eceff1;">
+<a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
+<a class="list-group-item" href="https://www.flickr.com/photos/94411929@N06/"><i class="fa fa-flickr"></i></a>
+<a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
+</p>       -->
+
+</span>
+    </nav>
+<p style="font-size:0.5rem ;color:black;">Made with <i class="fa fa-heart"></i> in India</a><br>
+All Rights Reserved
+</p>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+    <div class="post">
+  
+    </div>
+      <div class="post">
+  <h1 class="post-title">Local - Gamification in participatory GIS</h1>
+  <span class="post-date">03 Jun 2017</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/IDC IIT Bombay India">IDC IIT Bombay India</a></span>
+
+
+<br>
+
+
+
+
+<br>
+  <blockquote>
+  <p>This project was done as a part of “Interaction Design - 1” course taught by Prof. Ravi Poovaiah at IDC. The team members were <a href="https://www.behance.net/silpa_murali">Silpa</a> and <a href="https://www.behance.net/udayanvidyanta">Udayan</a>. The live version is hosted <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
+</blockquote>
+
+<p><strong>Design Brief</strong></p>
+
+<p>The design brief was to come up with a design solution for a local problem. We are asked to come up with a <em>designerly response</em> to things we all face around us. We choose the context of streets and street vendors. In the search engine age, what is not searchable is not there. The street vendors and other microservice providers are often not aware of this ecosystem or do not have the means to do so. They also have a more legacy customer base, which they say is depleting due to online service providers. A shop on ground is better than a page on the cloud. But, these shops are difficult to find for non locals.</p>
+
+<p><strong>Secondary study</strong></p>
+
+<p>We studied various models of streets. There has not been enough work done in the domain of getting local shops online and the problem is of specific importance to Indian context where there is a transition happening as far as ICT is considered. Dominant means include: Sensors, People and Documents.Information may generate insights which can be used to create a feeback that can help sustain the systems. Data gathering is not of huge concern in the west due to already proliferation of phones etc.</p>
+
+<p>Based on famous Stanford paper titled “Twitch Crowd sourcing:Crowd Contributions in Short Bursts of Time” The author argues about micro-contribution and channel factors He lays down his design based on availability, low time, low cog load, Value to the user,feedback, privacy and longevity of experience. Various engaging means of crowd-sourcing information that can be actively contributed or inferred by activities. It is needed to be aligned with users goals and hence a balance of incentive vs motivation should be used. Incentives are not sustainable and motivations are challenging to design.</p>
+
+<p>Gamification has huge possibilities in the domain of crowdsourcing. Several references show that using gamification models in the crowdsourcing domain can result in huge motivation like Pokemon Go and 4Sq have already done.</p>
+
+<p><strong>Primary study</strong></p>
+
+<p>We tried to understand the activities on the street by conducting a field study in powai and kurla regions.
+<img src="https://i.imgur.com/WN2rHtj.png" alt="Imgur" /></p>
+
+<p>In our study we noticed how adoption of digital means is affecting sales. This is a street fruit vendor who accepts cards and has a website. He offers services like delivery and online shopping. He prices his goods higher than other vendors and still is able to make decent profits.
+<img src="https://i.imgur.com/2t2w9gs.png" alt="Imgur" /></p>
+
+<p>After the field study, we collected our findings in a mind-map.
+<img src="https://i.imgur.com/QZ8ntbQ.png" alt="Imgur" /></p>
+
+<p>We also asked ourselves some questions based on what we observed.
+<img src="https://i.imgur.com/B5Baq9S.png" alt="Imgur" /></p>
+
+<p>Finally, we came up with a problem concept map to crystallize the situation on the street.
+<img src="https://i.imgur.com/5Dhk5Kf.png" alt="Imgur" /></p>
+
+<p>We came up with the modified brief of “How might we help micro level data of local shops using principles of participatory GIS?”
+We planned on structuring the system such that we require less input from more users as opposed to asked more questions from less users. This would be our solution map.</p>
+
+<p><img src="https://i.imgur.com/WrDOrIl.png" alt="Imgur" /></p>
+
+<p>We imagined the following persona’s that would use our system.
+<img src="https://i.imgur.com/qdjkcdm.png" alt="Imgur" /></p>
+
+<p>Hence, our system was divided into two verticals. One vertical would concentrate on helping people search local data and other vertical would help gamify the collection of data points from crowd.</p>
+
+<p>The UI walkthrough for the web interface (by Udayan) is as follows:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4KZPoY2enfs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p>The UI walkthrough for the Local game app (by Silpa) is as follows:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4wsBIY4HUco" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p>We allowed multiple users to rate the same activity and asked multiple users different questions to ascertain attributes of a particular location.</p>
+
+<p><strong>Some UI samples</strong></p>
+
+<p><a href="https://imgur.com/vsgiNcc"><img src="https://i.imgur.com/vsgiNcc.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/VmNciRR"><img src="https://i.imgur.com/VmNciRR.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/yGm3ZAE"><img src="https://i.imgur.com/yGm3ZAE.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/fhypt0K"><img src="https://i.imgur.com/fhypt0K.png" title="source: imgur.com" /></a></p>
+
+<p><strong>Prototype</strong></p>
+
+<p>We went forward to create an implementation of the actual system. The architecture was as follows:
+<img src="https://i.imgur.com/kny2Yld.png" alt="Imgur" /></p>
+
+<p>We used a python based service that would scan accounts of particular members on instagram and classify tags. These tags were then used to plot the same as tool tips on a mapbox render. The same was updated realtime on an amazon s3 server <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
+
+<p><img src="https://i.imgur.com/Wan5h4o.png" alt="Imgur" /></p>
+
+<p><img src="https://i.imgur.com/dmPV2Zl.png" alt="Imgur" /></p>
+
+<p><strong>Contributions</strong> The project was done with Silpa and Udayan.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+</div>
+<br>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/09/10/DataViz/">
+            Visualizing the Indian Railways in 3D
+            <small>10 Sep 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/09/03/whowe/">
+            Installation - Who you are is what you get
+            <small>03 Sep 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/08/31/ContribOSM/">
+            Contributing to OSM using JOSM
+            <small>31 Aug 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+<br>
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+</div>
+
+    </div>
+
+
+  </body>
+</html>
