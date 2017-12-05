@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-11-30T21:23:10+05:30</updated>
+ <updated>2017-12-05T16:26:03+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -634,15 +634,61 @@ Then I shall carry-on.&lt;/p&gt;
    <updated>2017-04-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/04/03/HeyHappy</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;social&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;social&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts with &lt;a href=&quot;https://www.behance.net/silpa_murali&quot;&gt;Silpa&lt;/a&gt; and &lt;a href=&quot;https://www.behance.net/pallavimon3e2c&quot;&gt;Pallavi&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The post is still in process of documentation.&lt;/p&gt;
+&lt;p&gt;The users we choose to represent were kids in the age group of 6-12 years. The project started with an initial primary studies in the social activities of school kids obtained using interviews from campus schools and anecdotes by relatives in the similar age group. We used design techniques like &lt;strong&gt;one day in the life of&lt;/strong&gt; and user-journeys to understand the ecosystem a child experiences today. We were certain enough to conclude that things have changed since we were kids. The kids these days are rather lonely due to changing family systems and less attention by busy parents.&lt;/p&gt;
+
+&lt;p&gt;We tried to understand the behavior of kids in terms of cognitive and social development. This helped scope the problem to the emotional development of kids.&lt;/p&gt;
+
+&lt;p&gt;We had several initial concepts like :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A tangible imaginary friend called Poko. The friend would keep the child company and engage in conversations.&lt;/li&gt;
+  &lt;li&gt;Multiplayer Jigsaw games that would require multiple kids to sit together. These games are known to increase social interaction, especially in introvert kids.&lt;/li&gt;
+  &lt;li&gt;A digital representation of the penpal system. This would simulate the behavior and experience of posting a letter and anticipating its reply. Artificial delays will be introduced in the system to enable the kids to understand how a letter typically travels geographically. Kids can draw and write on a parent’s tablet device. The kids in our survey had access to such devices. The penpals would be kids relatives or other grandparents.&lt;/li&gt;
+  &lt;li&gt;A sharable toy economy. In this system, kids share toys with other toys such that the number of games when played together increased. A specific set of games could be played with a particular toy. This could help increase interaction and sharing behavior in kids.&lt;/li&gt;
+  &lt;li&gt;An emotional calendar for kids. Kids in the study were found to live in an emotional vacuum. They found it difficult to express their feelings with parents as they were often not around and busy. The friends of the kid, curated by parents, give them notes/song/drawings when sad. The kid can pin some of their favorite ones on their pinboard. This could at-least allow the child to express herself. The parents would know and can then initial the conversation to understand the condition.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Out of the above, 5 concepts, emotional calender was chosen for further development as it seemed less intrusive and could bring the problems of the kids in the purview of their parents. This could increase the parents concern.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scenario- Hey Happy !&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A social interface that allows kids to share emotions on a minimal calendar like interface. Kids can make other kids happy by sending them creative artifacts made by them.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/243290586&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://vimeo.com/243290586&quot;&gt;HeyHappy!&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/thepensil&quot;&gt;Silpa Murali&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The concept map of the interface was as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Sp86FQm.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The information architecture for the above concept was
+&lt;img src=&quot;https://i.imgur.com/T1nPNxq.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some Low-Fid prototype screens were as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/v7eXnbf.png&quot; alt=&quot;img&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/L2hXXpu.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We moved to the high fidelity prototype screens:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/prFf8g3.png&quot; alt=&quot;!img&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/GySavOt.png&quot; alt=&quot;!img&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/VQ6r4J0.png&quot; alt=&quot;!img&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/LPTp6nS.png&quot; alt=&quot;!img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The click through is linked &lt;a href=&quot;https://marvelapp.com/14cd9e2/screen/16152300&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We even wrote a paper on the same that can be read &lt;a href=&quot;https://drive.google.com/file/d/1rg8e75RktpJFwHpr5XS6ZZg2uUXQ0MBk/view?usp=sharing&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contributions&lt;/strong&gt;
+The initial prototype screens were made by &lt;a href=&quot;https://www.behance.net/silpa_murali&quot;&gt;Silpa&lt;/a&gt;, the high fidelity screens were worked on by both &lt;a href=&quot;https://www.behance.net/pallavimon3e2c&quot;&gt;Pallavi&lt;/a&gt; and me. &lt;a href=&quot;https://www.behance.net/pallavimon3e2c&quot;&gt;Pallavi&lt;/a&gt; created the clickable.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
 &lt;p&gt;Rohit&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -652,17 +698,106 @@ Then I shall carry-on.&lt;/p&gt;
    <updated>2017-04-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/04/03/CityBot</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;cognitive&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;cognitive&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts with &lt;a href=&quot;https://www.behance.net/udayanvidyanta&quot;&gt;Udayan&lt;/a&gt; and &lt;a href=&quot;https://www.behance.net/vineetkamboj&quot;&gt;Vineet&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The project is documented in the presentation below: ( I will add a one page TL;dr version soon )&lt;/p&gt;
+&lt;p&gt;The concentration of the session was developing a solution around the idea of the smart city in Indian context. The idea of a smart city is quite relevant in the &lt;em&gt;data religious societies&lt;/em&gt; we live in today. We started by asking ourselves questions on the very basis of a smart city. What is the need? Who will benefit from it? Could it become a parallel data city? Can we pre-empt the behaviors while staying ethical? What are the ethics of using data? Why would the user share her data? Clouded with these questions, we had a slow but informed start in the project. We tried to understand the city better by travelling on the Mumbai local iteratively and talking to various people and their ideas about future, present and expectations.&lt;/p&gt;
 
-&lt;iframe src=&quot;https://docs.google.com/presentation/d/1R_1AwR01hkvMXGEM0lOZI4ewORzedBSGex8VZe0hKAc/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;389&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;We found two predominant views to the smart city systems:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Digitally instrumented devices embedded in the city fabric&lt;/li&gt;
+  &lt;li&gt;Building a city smarter by making the citizens&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first one is a more capitalist view point and may be useful in higher affording economies.It considers high affinity to technology with citizens. It can be a &lt;a href=&quot;https://www.theatlantic.com/daily-dish/archive/2010/10/western-educated-industrialized-rich-and-democratic/181667/&quot;&gt;W.E.I.R.D&lt;/a&gt; concept and is essentially top down. The second view is a bottoms up approach. It considers making a people smart would make a city smart. More sustainable and holistic in approach and is people driven.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Restructured Design Brief&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;How might we create an interface that enables Mumbai citizens to talk to the city ?&lt;/p&gt;
+
+&lt;p&gt;We concentrated on our efforts to make a city smarter by making its citizens more active about their responsibility towards the city. The design goals were :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Help citizens contribute as sensors&lt;/li&gt;
+  &lt;li&gt;Make reporting problems easy by preserving the emotional spur&lt;/li&gt;
+  &lt;li&gt;Present local insights and knowledge harnessed from the crowd&lt;/li&gt;
+  &lt;li&gt;Improve transparency between stakeholders in a city&lt;/li&gt;
+  &lt;li&gt;Provide a platform for citizens to discuss problems and share information.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of the concepts we explored were:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Nagrik App :Contextual Content pushed to user based on:
+    &lt;ul&gt;
+      &lt;li&gt;Type of User&lt;/li&gt;
+      &lt;li&gt;Behavior of user&lt;/li&gt;
+      &lt;li&gt;Place he is in (using Beacon Technology)
+ Crowd Management and Resofaurce monitoring
+ People can add more services&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;City Kiosks :
+    &lt;ul&gt;
+      &lt;li&gt;Low power KIOSKS provide basic computing to citizens&lt;/li&gt;
+      &lt;li&gt;Run on solar power; use an ARM CPU with custom mod&lt;/li&gt;
+      &lt;li&gt;Allow Citizens to interact with public services and data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gamification of City Life :
+    &lt;ul&gt;
+      &lt;li&gt;Encourage citizen participation by designing a game around the city&lt;/li&gt;
+      &lt;li&gt;Citizens explore city and make points&lt;/li&gt;
+      &lt;li&gt;Kind of like Farmville , Only Real. This would be a purposeful geo-location game.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Chat BOT
+    &lt;ul&gt;
+      &lt;li&gt;An embeddable chat bot that interacts with people as a friend&lt;/li&gt;
+      &lt;li&gt;Helps to map the city and report problems&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We decided with a concept of a &lt;em&gt;Chat bot&lt;/em&gt; on existing messaging apps like whatapp, messenger or telegram. The chatbot was chosen as users on these platforms are present in large numbers (Network effect), they are used to the interface and they in-general did not have interest in installing separate app for this purpose.&lt;/p&gt;
+
+&lt;p&gt;Let us understand this with a scenario by Udayan :&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/KskLTbo9X8c&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The overall concept map was as follows :
+&lt;img src=&quot;https://i.imgur.com/bEDUeLC.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The information architect was like:
+&lt;img src=&quot;https://i.imgur.com/3b0esnX.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We tried to understand the conversations with the chatbot. To do the same we made prototype flow charts.
+&lt;img src=&quot;https://i.imgur.com/uWdYMAg.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we moved on to the UI development. Initially rough sketches were done. They grayscale UI elements were prototyped and later final UI was made in sketch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OE9TIpV.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/UbgvXVj.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/UotcIud.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/krPZWsU.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/muCkDAw.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/ZK43v3j.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We later prototyped some of the functionality in the app using a telegram bot. We used the botAPI from telegram to generate responses to conversations. They bot could perform simple operations like marking a place on map using mapbox and engaging in a conversation with the user. This exercise helped us evaluate the ground truth on the feasibility of the app.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/4frDcLE.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Displayed on a map using a local server&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/jT4qW77.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contributions&lt;/strong&gt;
+The scenario was worked on by &lt;a href=&quot;https://www.behance.net/udayanvidyanta&quot;&gt;Udayan&lt;/a&gt; with some help from me on the script. The UI was worked upon by sketch-master ,&lt;a href=&quot;https://www.behance.net/vineetkamboj&quot;&gt;Vineet&lt;/a&gt; and Udayan. The final prototype with telegram app as surrogate was implemented by me.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
 &lt;p&gt;Rohit&lt;/p&gt;
-
 </content>
  </entry>
  
