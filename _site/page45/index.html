@@ -456,6 +456,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -500,38 +504,43 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/10/06/Tamhini/">
-        Tamhini Ghats
+      <a href="/2015/10/12/RTLSDR1/">
+        Getting Started with RTL SDR- Playing some old school FM
       </a>
     </h1>
 
-    <span class="post-date">06 Oct 2015</span>
+    <span class="post-date">12 Oct 2015</span>
 
-    <p>After a pretty busy and drenching week, it was time to escape into the wilderness of the Ghats surrounding Pune. These pictures were captured on the ride to Tamhini Ghat near Pune. Getting there is pretty straight forward. When coming from Pune, just reach Pirangut Crossing and take the turn to Tamhini. Then just ride and let yourself dissolve into the calm and cool gusts of air. You will notice some waterfalls on the way. Their vigor depends on the abundance of rain</p>
+    <p><em>This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online</em></p>
 
-<p>The road quality is average and very bad in some parts and inviting in some. Ride carefully.</p>
+<p>SDR ? 
+Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those ‘virtual’ components. Sounds Expensive?</p>
 
-<p>Some places to eat are Bashos and Paradise Cafe. You may also try some local foods on Dhabas on the road. The one that we went to served lightly spiced and watery Dal and ‘Lobiya’ with Rice and Chapatis.</p>
+<p>SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like <a href="http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html">this</a> or <a href="http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820">this</a> .</p>
 
-<p>Some pictures :</p>
+<p>The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">link</a> for more. But many folks have mentioned R820T being much more stable than E4000.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349596064/in/dateposted-public/" title="Roof"><img src="https://farm6.staticflickr.com/5658/21349596064_cdba549b93_z.jpg" width="640" height="474" alt="Roof" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>I bought one of these a while back. I comes with a small antenna, a remote and the main dongle.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21946135126/in/dateposted-public/" title="Edges"><img src="https://farm1.staticflickr.com/657/21946135126_72d540dd76_z.jpg" width="640" height="474" alt="Edges" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Since, more ‘easy to dive in’ stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349545174/in/dateposted-public/" title="Flow"><img src="https://farm6.staticflickr.com/5761/21349545174_664417f8c1_z.jpg" width="640" height="480" alt="Flow" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>There are lots of cool software tools available to get started. The most common being <a href="http://airspy.com/download/">SDR#</a> probably written in C#. An amazing getting started post is written <a href="http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/">here</a>.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21972284855/in/dateposted-public/" title="Sparkling Fall"><img src="https://farm6.staticflickr.com/5619/21972284855_6a25940a59_z.jpg" width="640" height="474" alt="Sparkling Fall" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up <a href="http://1drv.ms/1LoLvdn">here</a> or by Adafruit <a href="http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip">here</a>.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21785342979/in/dateposted-public/" title="Where is the rain ?"><img src="https://farm6.staticflickr.com/5806/21785342979_050f5ebc0b_z.jpg" width="640" height="556" alt="Where is the rain ?" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349410254/in/dateposted-public/" title="Wildcraft"><img src="https://farm6.staticflickr.com/5764/21349410254_62220d902e_z.jpg" width="640" height="480" alt="Wildcraft" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21945971976/in/dateposted-public/" title="Focused Colors"><img src="https://farm1.staticflickr.com/715/21945971976_3dc0191c16_z.jpg" width="640" height="480" alt="Focused Colors" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/" title="fm1"><img src="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" width="640" height="360" alt="fm1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21945948766/in/dateposted-public/" title="Hey! Fellas.."><img src="https://farm6.staticflickr.com/5644/21945948766_5ac8ebe018_z.jpg" width="640" height="640" alt="Hey! Fellas.." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>You can also check out another great software called <a href="http://sdr-radio.com/Software">SDR Console</a>. Its a much more ‘Pro-ish’ SDR receiver available. This again wont work out of the box. You can follow this <a href="http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html">link</a> for more instruction on getting RTLSDR USB support on SDR Console.</p>
 
-<p><strong>Please Note</strong>: Major part of the roads around Tamhini have little to no street lighting, which is especially dangerous when the road is filled with potholes. So better make it back on time.</p>
+<p>Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/" title="sdrconsole"><img src="https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg" width="640" height="360" alt="sdrconsole" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Hope you found this useful! Next? Maybe we should check out the planes or satellites ?</p>
 
 <p>Cheers !</p>
 

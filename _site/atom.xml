@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-05T21:28:11+05:30</updated>
+ <updated>2017-12-08T19:55:27+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -442,6 +442,56 @@ The file gets rendered correctly over the base layer as points. In my case the c
 &lt;p&gt;&lt;strong&gt;Acknowledgements&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I acknowledge my classmates, Prof. Venkat and Rasagy for their contributions to this post.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Paisa Stick- A tangible cashless payment interface</title>
+   <link href="http://localhost:4000/2017/08/03/paisa/"/>
+   <updated>2017-08-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/08/03/paisa</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This project was done during Masters at IDC. The project was selected as winner in student design category at CHI 2017 in Denver, Colorado. The paper on the same has been included in conference proceedings and can be read &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3049268&quot;&gt;here&lt;/a&gt;. The team members were &lt;a href=&quot;https://www.behance.net/udayanvidyanta&quot;&gt;Udayan&lt;/a&gt; and  &lt;a href=&quot;https://www.behance.net/silpa_murali&quot;&gt;Silpa&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The competition brief can be read &lt;a href=&quot;https://chi2017.acm.org/designcompetition.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We chose to work on how might we help the elderly and digitally illiterate perform cashless transactions. The recent events of demonetization helped in setting up the premise for such a solution. Our main contribution was conducting several studies to try and understand the conceptual model elderly have towards performing such transactions.&lt;/p&gt;
+
+&lt;p&gt;The design process is covered in the video below :&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/X6Q_KFUsPAY&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Product renders by &lt;a href=&quot;http://nikhilsingh.design/&quot;&gt;Nikhil&lt;/a&gt; with hopes to support braille
+&lt;img src=&quot;https://i.imgur.com/nOvtKKG.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Scenario of particular payment instance
+&lt;img src=&quot;https://i.imgur.com/CqGP4Mf.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What happens if the device value diminishes
+&lt;img src=&quot;https://i.imgur.com/FF6UAb4.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What happens if it gets lost
+&lt;img src=&quot;https://i.imgur.com/gc8QmbC.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Stages of prototyping
+&lt;img src=&quot;https://i.imgur.com/1CtO1ld.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Working prototype demonstration&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/BLEe330qfAQ&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;At CHI&lt;/strong&gt;
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293561151/in/album-72157682238049102/&quot; title=&quot;Poster Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4263/35293561151_23a762e48b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Poster Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384081436/in/album-72157682238049102/&quot; title=&quot;The Artefacts&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4259/35384081436_efe0eaf5fc_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;The Artefacts&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35436721156/in/album-72157682238049102/&quot; title=&quot;Results&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4287/35436721156_f8c7178574_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Results&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The detailed paper can be read &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3049268&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
