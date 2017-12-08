@@ -7,7 +7,7 @@ tags:
 - design
 ---
 
-> This post describes the work done as a part of a course I took at *School of Design, IIT Bombay* . The name of the course is **Interaction Media and Senses**. The project was done during the *sensory* phase of the course that involved Sensory, Cognitive and Social parts. 
+> This post describes the work done as a part of a course I took at *School of Design, IIT Bombay* . The name of the course is **Interaction Media and Senses**. The project was done during the *sensory* phase of the course that involved Sensory, Cognitive and Social parts with [Manasi](https://www.behance.net/m_mankad) and [Ankit](https://www.behance.net/ankit_bansod)
 
 We explored the possible ways to experience at city by just sounds and ended up creating a system that maps these sounds as well. The system can be seen in action [here](http://rohitg.in/soundsofcity.html). It uses Mapbox flavoured openstreet maps with soundcloud to embed the recorded sounds.
 
@@ -16,8 +16,17 @@ We experimented with things like :
 - Binaural Recording
 - Storytelling with sound
 - Spatial augmentation of sound using 3 axis sensors and openAL. (To be replaced by Unity or SFML)
-- Geospatial Mapping of Sound (prototyped using processing and implemented using MapBox)
 
+
+
+**User controlled spatial sound system**
+
+The data is read from the accelerometer and the spatial audio field is manipulated using pyOpenAL.
+
+![Imgur](https://i.imgur.com/4F5nXAu.png)
+![Imgur](https://i.imgur.com/1wNFze1.png)
+
+- Geospatial Mapping of Sound (prototyped using processing and implemented using MapBox)
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/33678280611/in/dateposted-public/" title="Sounds"><img src="https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg" width="500" height="421" alt="Sounds"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> 
 

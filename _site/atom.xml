@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-08T20:25:51+05:30</updated>
+ <updated>2017-12-08T20:42:36+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -775,7 +775,7 @@ Then I shall carry-on.&lt;/p&gt;
    <updated>2017-04-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/04/03/Soundsofcity</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;sensory&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts.&lt;/p&gt;
+  &lt;p&gt;This post describes the work done as a part of a course I took at &lt;em&gt;School of Design, IIT Bombay&lt;/em&gt; . The name of the course is &lt;strong&gt;Interaction Media and Senses&lt;/strong&gt;. The project was done during the &lt;em&gt;sensory&lt;/em&gt; phase of the course that involved Sensory, Cognitive and Social parts with &lt;a href=&quot;https://www.behance.net/m_mankad&quot;&gt;Manasi&lt;/a&gt; and &lt;a href=&quot;https://www.behance.net/ankit_bansod&quot;&gt;Ankit&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;We explored the possible ways to experience at city by just sounds and ended up creating a system that maps these sounds as well. The system can be seen in action &lt;a href=&quot;http://rohitg.in/soundsofcity.html&quot;&gt;here&lt;/a&gt;. It uses Mapbox flavoured openstreet maps with soundcloud to embed the recorded sounds.&lt;/p&gt;
@@ -786,6 +786,16 @@ Then I shall carry-on.&lt;/p&gt;
   &lt;li&gt;Binaural Recording&lt;/li&gt;
   &lt;li&gt;Storytelling with sound&lt;/li&gt;
   &lt;li&gt;Spatial augmentation of sound using 3 axis sensors and openAL. (To be replaced by Unity or SFML)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;User controlled spatial sound system&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The data is read from the accelerometer and the spatial audio field is manipulated using pyOpenAL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/4F5nXAu.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/1wNFze1.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;Geospatial Mapping of Sound (prototyped using processing and implemented using MapBox)&lt;/li&gt;
 &lt;/ul&gt;
 
