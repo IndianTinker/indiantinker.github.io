@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-08T19:55:27+05:30</updated>
+ <updated>2017-12-08T20:25:51+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -466,6 +466,8 @@ The file gets rendered correctly over the base layer as points. In my case the c
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/X6Q_KFUsPAY&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;p&gt;Product renders by &lt;a href=&quot;http://nikhilsingh.design/&quot;&gt;Nikhil&lt;/a&gt; with hopes to support braille
 &lt;img src=&quot;https://i.imgur.com/nOvtKKG.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
@@ -483,6 +485,8 @@ The file gets rendered correctly over the base layer as points. In my case the c
 
 &lt;p&gt;&lt;strong&gt;Working prototype demonstration&lt;/strong&gt;&lt;/p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/BLEe330qfAQ&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;At CHI&lt;/strong&gt;
 &lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293561151/in/album-72157682238049102/&quot; title=&quot;Poster Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4263/35293561151_23a762e48b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Poster Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
@@ -968,6 +972,51 @@ The initial prototype screens were made by &lt;a href=&quot;https://www.behance.
 
 &lt;p&gt;&lt;strong&gt;Contributions&lt;/strong&gt;
 The scenario was worked on by &lt;a href=&quot;https://www.behance.net/udayanvidyanta&quot;&gt;Udayan&lt;/a&gt; with some help from me on the script. The UI was worked upon by sketch-master ,&lt;a href=&quot;https://www.behance.net/vineetkamboj&quot;&gt;Vineet&lt;/a&gt; and Udayan. The final prototype with telegram app as surrogate was implemented by me.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How do I look honey?</title>
+   <link href="http://localhost:4000/2017/04/03/designfiction/"/>
+   <updated>2017-04-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/04/03/designfiction</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;My project How do I look, Honey? explores and challenges the fundamental human bias of visual beauty. What happens when technology can alter that? How will you define it? Will it become an asset that will be controlled by the rich?&lt;/p&gt;
+
+&lt;p&gt;The story is set in a time when people are no longer beautiful. A catastrophic solar flare makes everyone ugly. People in these days use eyeAL devices which augment their vision to show them a digital persona of the real person. This digital persona can be stylized with cosmetics as in the past, but today these cosmetics are digital.&lt;/p&gt;
+
+&lt;p&gt;People spend money to look good.They can things like fairness recharges or postpaid rental plans on beauty products. They can ensure they never age visually by paying for beauty insurance.&lt;/p&gt;
+
+&lt;p&gt;The advertisements have taken a huge leap. The ads at places recognize your intent to buy and pitch your products accordingly. People are known to rent their bodies to augment advertisements.Everything you see is personalized.&lt;/p&gt;
+
+&lt;p&gt;You also have digital furniture whose texture and color you can change without changing the sofa ever. Same goes for a lot of personalized things like cars.&lt;/p&gt;
+
+&lt;p&gt;The protagonist is a person who is a part of the team that designed this. He has been invited by his current self to explain the happenings of his day. In his days, the designers are not the one who design everything. Incremental designs are made by machines entirely and only when machines can’t rationalize the decision a human design debugger is looped in.&lt;/p&gt;
+
+&lt;p&gt;There are personality hackers that can digitally transplant your personality. Sometimes even the dead are known to commit crimes using transplanted personas. The government can block some people from being viewed by others as a formal of penalization.&lt;/p&gt;
+
+&lt;p&gt;How beautiful is such a world?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prototype&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The story revolves around the blog of one of the designers who re-tells the story of his world. The prototype can be seen  &lt;a href=&quot;http://rohitg.in/designfiction/index.html&quot;&gt;here&lt;/a&gt;.
+The course demonstration is hosted on this &lt;a href=&quot;https://rohit7gupta.github.io/explore/objects.html&quot;&gt;URL&lt;/a&gt;. To view the demonstration the compatible markers are uploaded &lt;a href=&quot;http://rohitg.in/designfiction/markers.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I considered several UI trends to design a tile based interface.&lt;/p&gt;
+
+&lt;p&gt;The technologies I used were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AR.js (which uses AFrame and Three.js)&lt;/li&gt;
+  &lt;li&gt;Processing and OpenCV for Blocked and Face Tracking demos&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
