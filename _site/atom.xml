@@ -4,13 +4,57 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-08T20:42:36+05:30</updated>
+ <updated>2017-12-09T19:44:40+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>FAND - shareable haptic foot interface device</title>
+   <link href="http://localhost:4000/2017/12/03/fand/"/>
+   <updated>2017-12-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2017/12/03/fand</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This was a pre final project done during Masters at IDC.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The video demonstrating the concept is shown below:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ByvJjlRdu9M&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The goal of the project was to improve the productivity of existing desktop usage using foot as a secondary modality. Several explorations and ideation were done in light of previous works and user studies conducted. The final report will be available &lt;a href=&quot;&quot;&gt;here&lt;/a&gt; by end of the semester.&lt;/p&gt;
+
+&lt;p&gt;The post only covers some parts of a rather long design process (~ 6 months). I tried several techniques to understand the design of gesture systems. I did a &lt;a href=&quot;https://faculty.washington.edu/wobbrock/&quot;&gt;Wobbrock&lt;/a&gt; style study to derive the guess-ability of certain guestures. The users were should de-contextualized prompts to certain interactions and were asked to come up with responses. I would encourage reading the paper by Wobbrock et al.&lt;/p&gt;
+
+&lt;p&gt;The prompts were like the below for zoom:
+&lt;img src=&quot;https://i.imgur.com/AfqMZQs.gif&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Based on my &lt;strong&gt;user set&lt;/strong&gt; the gesture set was as follows:
+&lt;img src=&quot;https://i.imgur.com/P87F5J1.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The gesture set was used with the following &lt;em&gt;design requirements&lt;/em&gt; to come up with several concepts.
+&lt;img src=&quot;https://i.imgur.com/1VtQrY4.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The most dominant concept was of a shareable foot accessory that was prototyped. The process of prototyping was done separately for both form and function.&lt;/p&gt;
+
+&lt;p&gt;Form variations considering sharing and multiple foot types
+&lt;img src=&quot;https://i.imgur.com/OuFxiwN.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/fokP6Um.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Functional Prototype made using Arduino running thresholding and a simple wave pattern recognizer algo on the data of a MPU6050 gyro sensor&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/TGOhCAQ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The prototype was tested with users using a true experiment design. The results showed that F(4,20) at p&amp;lt;0.05 the device when compared to a new type of hand device like trackpoint has statistical significance (repeated measures ANOVA).Hence, both devices have similar learnability.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Visualizing the Indian Railways in 3D</title>
@@ -3988,9 +4032,7 @@ This too.
 
 &lt;p&gt;Interested in building one? Grab the code here:&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/a35bf659325d0eac2ce5.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a35bf659325d0eac2ce5.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 

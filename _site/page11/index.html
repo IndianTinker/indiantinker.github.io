@@ -464,6 +464,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -508,46 +512,110 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/04/03/designfiction/">
-        How do I look honey?
+      <a href="/2017/04/03/CityBot/">
+        City Bot, may i take your order please
       </a>
     </h1>
 
     <span class="post-date">03 Apr 2017</span>
 
     <blockquote>
-  <p>This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.</p>
+  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Interaction Media and Senses</strong>. The project was done during the <em>cognitive</em> phase of the course that involved Sensory, Cognitive and Social parts with <a href="https://www.behance.net/udayanvidyanta">Udayan</a> and <a href="https://www.behance.net/vineetkamboj">Vineet</a></p>
 </blockquote>
 
-<p>My project How do I look, Honey? explores and challenges the fundamental human bias of visual beauty. What happens when technology can alter that? How will you define it? Will it become an asset that will be controlled by the rich?</p>
+<p>The concentration of the session was developing a solution around the idea of the smart city in Indian context. The idea of a smart city is quite relevant in the <em>data religious societies</em> we live in today. We started by asking ourselves questions on the very basis of a smart city. What is the need? Who will benefit from it? Could it become a parallel data city? Can we pre-empt the behaviors while staying ethical? What are the ethics of using data? Why would the user share her data? Clouded with these questions, we had a slow but informed start in the project. We tried to understand the city better by travelling on the Mumbai local iteratively and talking to various people and their ideas about future, present and expectations.</p>
 
-<p>The story is set in a time when people are no longer beautiful. A catastrophic solar flare makes everyone ugly. People in these days use eyeAL devices which augment their vision to show them a digital persona of the real person. This digital persona can be stylized with cosmetics as in the past, but today these cosmetics are digital.</p>
+<p>We found two predominant views to the smart city systems:</p>
 
-<p>People spend money to look good.They can things like fairness recharges or postpaid rental plans on beauty products. They can ensure they never age visually by paying for beauty insurance.</p>
+<ol>
+  <li>Digitally instrumented devices embedded in the city fabric</li>
+  <li>Building a city smarter by making the citizens</li>
+</ol>
 
-<p>The advertisements have taken a huge leap. The ads at places recognize your intent to buy and pitch your products accordingly. People are known to rent their bodies to augment advertisements.Everything you see is personalized.</p>
+<p>The first one is a more capitalist view point and may be useful in higher affording economies.It considers high affinity to technology with citizens. It can be a <a href="https://www.theatlantic.com/daily-dish/archive/2010/10/western-educated-industrialized-rich-and-democratic/181667/">W.E.I.R.D</a> concept and is essentially top down. The second view is a bottoms up approach. It considers making a people smart would make a city smart. More sustainable and holistic in approach and is people driven.</p>
 
-<p>You also have digital furniture whose texture and color you can change without changing the sofa ever. Same goes for a lot of personalized things like cars.</p>
+<p><strong>Restructured Design Brief</strong></p>
 
-<p>The protagonist is a person who is a part of the team that designed this. He has been invited by his current self to explain the happenings of his day. In his days, the designers are not the one who design everything. Incremental designs are made by machines entirely and only when machines can’t rationalize the decision a human design debugger is looped in.</p>
+<p>How might we create an interface that enables Mumbai citizens to talk to the city ?</p>
 
-<p>There are personality hackers that can digitally transplant your personality. Sometimes even the dead are known to commit crimes using transplanted personas. The government can block some people from being viewed by others as a formal of penalization.</p>
-
-<p>How beautiful is such a world?</p>
-
-<p><strong>Prototype</strong></p>
-
-<p>The story revolves around the blog of one of the designers who re-tells the story of his world. The prototype can be seen  <a href="http://rohitg.in/designfiction/index.html">here</a>.
-The course demonstration is hosted on this <a href="https://rohit7gupta.github.io/explore/objects.html">URL</a>. To view the demonstration the compatible markers are uploaded <a href="http://rohitg.in/designfiction/markers.pdf">here</a>.</p>
-
-<p>I considered several UI trends to design a tile based interface.</p>
-
-<p>The technologies I used were:</p>
+<p>We concentrated on our efforts to make a city smarter by making its citizens more active about their responsibility towards the city. The design goals were :</p>
 
 <ul>
-  <li>AR.js (which uses AFrame and Three.js)</li>
-  <li>Processing and OpenCV for Blocked and Face Tracking demos</li>
+  <li>Help citizens contribute as sensors</li>
+  <li>Make reporting problems easy by preserving the emotional spur</li>
+  <li>Present local insights and knowledge harnessed from the crowd</li>
+  <li>Improve transparency between stakeholders in a city</li>
+  <li>Provide a platform for citizens to discuss problems and share information.</li>
 </ul>
+
+<p>Some of the concepts we explored were:</p>
+
+<ol>
+  <li>Nagrik App :Contextual Content pushed to user based on:
+    <ul>
+      <li>Type of User</li>
+      <li>Behavior of user</li>
+      <li>Place he is in (using Beacon Technology)
+ Crowd Management and Resofaurce monitoring
+ People can add more services</li>
+    </ul>
+  </li>
+  <li>City Kiosks :
+    <ul>
+      <li>Low power KIOSKS provide basic computing to citizens</li>
+      <li>Run on solar power; use an ARM CPU with custom mod</li>
+      <li>Allow Citizens to interact with public services and data</li>
+    </ul>
+  </li>
+  <li>Gamification of City Life :
+    <ul>
+      <li>Encourage citizen participation by designing a game around the city</li>
+      <li>Citizens explore city and make points</li>
+      <li>Kind of like Farmville , Only Real. This would be a purposeful geo-location game.</li>
+    </ul>
+  </li>
+  <li>Chat BOT
+    <ul>
+      <li>An embeddable chat bot that interacts with people as a friend</li>
+      <li>Helps to map the city and report problems</li>
+    </ul>
+  </li>
+</ol>
+
+<p>We decided with a concept of a <em>Chat bot</em> on existing messaging apps like whatapp, messenger or telegram. The chatbot was chosen as users on these platforms are present in large numbers (Network effect), they are used to the interface and they in-general did not have interest in installing separate app for this purpose.</p>
+
+<p>Let us understand this with a scenario by Udayan :</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KskLTbo9X8c" frameborder="0" allowfullscreen=""></iframe>
+
+<p>The overall concept map was as follows :
+<img src="https://i.imgur.com/bEDUeLC.png" alt="img" /></p>
+
+<p>The information architect was like:
+<img src="https://i.imgur.com/3b0esnX.png" alt="Imgur" /></p>
+
+<p>We tried to understand the conversations with the chatbot. To do the same we made prototype flow charts.
+<img src="https://i.imgur.com/uWdYMAg.png" alt="Imgur" /></p>
+
+<p>Then we moved on to the UI development. Initially rough sketches were done. They grayscale UI elements were prototyped and later final UI was made in sketch.</p>
+
+<p><img src="https://i.imgur.com/OE9TIpV.png" alt="Imgur" />
+<img src="https://i.imgur.com/UbgvXVj.png" alt="Imgur" /></p>
+
+<p><img src="https://i.imgur.com/UotcIud.png" alt="Imgur" />
+<img src="https://i.imgur.com/krPZWsU.png" alt="Imgur" />
+<img src="https://i.imgur.com/muCkDAw.png" alt="Imgur" />
+<img src="https://i.imgur.com/ZK43v3j.png" alt="Imgur" /></p>
+
+<p>We later prototyped some of the functionality in the app using a telegram bot. We used the botAPI from telegram to generate responses to conversations. They bot could perform simple operations like marking a place on map using mapbox and engaging in a conversation with the user. This exercise helped us evaluate the ground truth on the feasibility of the app.</p>
+
+<p><img src="https://i.imgur.com/4frDcLE.png" alt="Imgur" /></p>
+
+<p>Displayed on a map using a local server</p>
+
+<p><img src="https://i.imgur.com/jT4qW77.png" alt="Imgur" /></p>
+
+<p><strong>Contributions</strong>
+The scenario was worked on by <a href="https://www.behance.net/udayanvidyanta">Udayan</a> with some help from me on the script. The UI was worked upon by sketch-master ,<a href="https://www.behance.net/vineetkamboj">Vineet</a> and Udayan. The final prototype with telegram app as surrogate was implemented by me.</p>
 
 <p>Cheers,</p>
 
