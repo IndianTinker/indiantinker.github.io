@@ -468,6 +468,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -512,101 +516,55 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/02/04/spectravulizer/">
-        SpectraVUlizer- Lights,Music and Magic
+      <a href="/2016/03/12/arc/">
+        ReactorX- The intuitive Arc Reactor from the movies
       </a>
     </h1>
 
-    <span class="post-date">04 Feb 2016</span>
+    <span class="post-date">12 Mar 2016</span>
 
-    <p>One day while chatting with my good friend <a href="https://twitter.com/mrrituparna">Rituparna</a> we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more <em>dhinchaak</em>. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.</p>
+    <p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
 
-<p>Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the <a href="http://tah.io/">Tah</a> as our number cruncher of choice.</p>
+<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
 
-<p>One fine afternoon we met at <a href="http://www.meetup.com/Doo-Things/">doo Things</a> to get the project up and running. We decided to use the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7</a> which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
-Reading it is similar to how you read a shift register.</p>
+<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
 
-<p>We followed the standard circuit from the datasheet and programmed the <strong>Tah</strong> to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.</p>
+<p>Features:</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/" title="WP_20150321_004"><img src="https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg" width="640" height="359" alt="WP_20150321_004" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+  <li>Small and light</li>
+  <li>Power efficient</li>
+  <li>Bright</li>
+  <li>Change-able modes using a switch</li>
+  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
+  <li>Morse Code for SOS</li>
+  <li>A mind blowing start-up sequence</li>
+  <li>Knight rider effect on LEDs</li>
+  <li>Breathing effect on the Middle high power LED</li>
+</ul>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/" title="WP_20150321_006"><img src="https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg" width="640" height="359" alt="WP_20150321_006" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>It also needs to be wearable and comfortable at the same time.</p>
 
-<p>The test code we used is as follows:</p>
+<p>The motion and the light helps attract attention.</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cm">/*
-Released under MIT License
-A project by Rituparna and Rohit
-*/</span>
+<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
 
+<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
+<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
 
-<span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;
-#define NEOPIXELPIN 4
-</span>
-<span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="n">NEOPIXELPIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
+<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
 
-<span class="k">const</span> <span class="kt">int</span> <span class="n">analogPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">strobePin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">resetPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
 
-<span class="kt">int</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span> <span class="c1">// to hold a2d values
-</span><span class="kt">int</span> <span class="n">doubledSpectrumValue</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
-<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
 
+<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span> <span class="c1">// Initialize all pixels to 'off'
-</span>  
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
-  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
-  
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
+<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
 
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
- 
-  <span class="c1">//Measure the magnitudes of the 7 frequency bins
-</span>  <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
-    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// to allow the output to settle
-</span>    <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">);</span>
-    <span class="n">avg</span> <span class="o">+=</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
 
-
-  <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span>
-
-  <span class="c1">//Clear out the NeoPixel String
-</span>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">144</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
-  <span class="p">}</span>
-  
-  <span class="c1">//Draw the meter on the NeoPixel string
-</span>  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">map</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">144</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">60</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">map</span><span class="p">(</span><span class="n">spectrumValue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)));</span> <span class="c1">//Added blue flash for bass hit
-</span>  <span class="p">}</span>
-  
-  <span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">125</span><span class="p">);</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>
-So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
-</p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/xV4zOYUQKfM" frameborder="0" allowfullscreen=""></iframe>
-
-<p>The song is by Adiba Parveen just in case you like it. Its <a href="https://www.youtube.com/watch?v=h0EoMozYWSs">here</a>.</p>
+<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>.</p>
 
 <p>Cheers,</p>
 

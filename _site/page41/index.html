@@ -468,6 +468,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -512,49 +516,41 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/14/hearty/">
-        TI-CEPD Diaries:Reactive Wearable LED Heart
+      <a href="/2015/11/15/GettingStartedwithESP1/">
+        Getting Started with ESP8266:AT-Commands and Wifi DataLogger
       </a>
     </h1>
 
-    <span class="post-date">14 Nov 2015</span>
+    <span class="post-date">15 Nov 2015</span>
 
-    <p>Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this <strong>Wearable LED heart</strong> project to showcase at MakerFest 2014. This would be our team’s signature.</p>
+    <p>About a few months back, i ordered those viral ESP8266 Wifi Chips from AliEx, after travelling half of the country they landed up at my place in Delhi, from where i picked them up.</p>
 
-<p>Basically, we have a small PCB milled in the shape of a heart and studded with LEDs that react to the ambient light and change their beating rate and whenever someone comes too close(basically a hand in most cases :P), the LEDs change the pattern to what Prof.Gadre calls the <em>Happy Mode</em> !</p>
-
-<p>I worked on the initial schematics and made the <em>first</em> working prototype of it involving the LDR as the sensor. The code that went inside worked as follows:</p>
+<p>The Legend is as follows:</p>
 <blockquote>
-  <p>It takes two snapshots of the LDR reading before and after the LED blinks, i.e. the ON state and OFF state and based on the delta the algorithm decides the lighting conditions and varies the beat rate. Once the Delta exceeds a point, it switches to happy mode !</p>
+  <p>While half the world was busy taming the rogue CC3000 (Mine never worked), the suddenly out of the darkest dungeons of the cloud clans of the east came the blue board. The Elders called it ESP8266. It was fast and swift. Easy to tame and it quickly befriended the world and gave rise to a new era on connected projects at 1/10 the gold!</p>
 </blockquote>
 
-<p>The PCB is a double sided one ; made after i made <a href="/2015/10/22/OpenBadge/">Open Badge</a> . So, most pitfalls were over. Without the temperature controlled soldering iron and LEDs mounted very close-by it was a pain to solder them. They would heat and sometimes blow away due to excess heat. Probably the best way was to reflow ?</p>
+<p>I was initially skeptical, So ordered just 2 ESP-01s. Next up in my cart is the NodeMCU board or rather i will make my own.</p>
 
-<p>Check out the pictures of the build in action !</p>
+<p>The first project was with AT Commands. The chip comes with the default firmware that offers limited but streamlined functionality using AT Commands. Check out these excellent resources for them:</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22262732850/in/dateposted-public/" title="Dumping some neurons"><img src="https://farm1.staticflickr.com/751/22262732850_b239316ce1_z.jpg" width="640" height="359" alt="Dumping some neurons" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+  <li><a href="http://rancidbacon.com/files/kiwicon8/ESP8266_WiFi_Module_Quick_Start_Guide_v_1.0.4.pdf">RancidBacon’s PDF guide</a></li>
+  <li><a href="https://nurdspace.nl/ESP8266">Nurdspace.nl</a></li>
+  <li><a href="http://electronut.in/an-iot-project-with-esp8266/">Mahesh’s Blog</a></li>
+</ul>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22424711966/in/dateposted-public/" title="Front side"><img src="https://farm6.staticflickr.com/5810/22424711966_e144c2f32a_z.jpg" width="640" height="359" alt="Front side" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Obviously, when using AT Commands, we need a master. An Arduino with a level shifter would do that easily. Next we needed some data-source and cloud service to blurt out the data. A <strong>BMP180</strong> I2C Pressure and Temperature sensor would do justice and help us produce 2 valuable weather data points and cloud service will be my favourite <strong>Thinkspeak</strong> (recently bought by Mathworks).</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263012308/in/dateposted-public/" title="Front"><img src="https://farm1.staticflickr.com/759/22263012308_5cbde5866a_z.jpg" width="640" height="359" alt="Front" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>In whatever i could rummage i made this:</p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="5" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/9hyc4hPUCO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">My #ESP8266 #gettingstarted  setup ! Uses a BMP180 Temperature and Pressure #sensor and #Arduino , A #MSP430 Launchpad casted as a 3.3V regulator ! #DIY</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-11-01T03:57:51+00:00">Oct 31, 2015 at 8:57pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21827990404/in/dateposted-public/" title="All LEDs survive the temperature"><img src="https://farm6.staticflickr.com/5718/21827990404_209e639397_z.jpg" width="640" height="359" alt="All LEDs survive the temperature" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The MSP430 Launchpad is just used as a voltage regulator. I couldnt find any thing else in the night. No matter how funny it looks, This thing worked and was able to update the Temperature and pressure feed after every 60 secs on thingspeak, without fail. The best part is even if there is an outage, the moment power comes back, the ESP will auto connect and work flawlessly again.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263867379/in/dateposted-public/" title="All soldered up"><img src="https://farm6.staticflickr.com/5763/22263867379_566a4080cc_z.jpg" width="640" height="359" alt="All soldered up" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The data was posted on my <a href="https://thingspeak.com/channels/6998">Thingspeak Channel</a>. After the acquisition, Mathworks added the capability to run Matlab scripts on the Thingspeak data channels to empower it on the Analytics front.</p>
 
-<p>The video of the heart in action:</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/dAfC-3cFSuY" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Final PCBs for MakerFest, all Hand Soldered :’)</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980555293/" title="All Hearts soldered just in time"><img src="https://farm3.staticflickr.com/2849/11980555293_daca4acaed_z.jpg" width="640" height="366" alt="All Hearts soldered just in time" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11981073356/in/photostream/" title="Final Piece Back"><img src="https://farm8.staticflickr.com/7366/11981073356_201a3d139d_z.jpg" width="359" height="640" alt="Final Piece Back" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980650274/in/photostream/" title="LED thru the eye loupe"><img src="https://farm4.staticflickr.com/3731/11980650274_53fc2083c5_z.jpg" width="640" height="597" alt="LED thru the eye loupe" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The mass manufactured version of the same was also presented to the participants of <em>Texas Instruments Analog Design Contest 2014</em> !</p>
+<p>Check out the code in this <a href="https://github.com/IndianTinker/ESP8266">repo</a> ! The code is based on Mahesh’s original post.</p>
 
 <p>Cheers !!</p>
 
