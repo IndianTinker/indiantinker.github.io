@@ -566,56 +566,51 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
 
 <p>First I read the data in R using R Studio.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">
 </span><span class="n">timetable</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"C:/Users/my pc/Downloads/isl_wise_train_detail_03082015_v1.csv"</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 <p>Next,I made a subset of trains. Hence, I could capture trains that have reached destination.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">timetable.srs.dest</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`station Code`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`Destination station Code`</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">timetable.srs.dest</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`station Code`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`Destination station Code`</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <p>using <code class="highlighter-rouge">dplyr</code>  library, I grouped and summarized data. Then I wrote the file out as a CSV.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
 </span><span class="n">traingp</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">timetable.srs.dest</span><span class="p">,</span><span class="n">`source Station Name`</span><span class="p">)</span><span class="w">
 </span><span class="n">trainsfromStation</span><span class="o">&lt;-</span><span class="n">summarise</span><span class="p">(</span><span class="n">traingp</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">())</span><span class="w">
 </span><span class="n">trainsfromStation</span><span class="w">
 </span><span class="n">arrange</span><span class="p">(</span><span class="n">trainsfromStation</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">count</span><span class="p">))</span><span class="w">
 </span><span class="n">write.csv</span><span class="p">(</span><span class="n">trainsfromStation</span><span class="p">,</span><span class="s2">"NumbOfTrainsoriginating.csv"</span><span class="p">)</span><span class="w">
 
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 <p><a href="https://imgur.com/SI78wWt"><img src="https://i.imgur.com/SI78wWt.png" title="source: imgur.com" /></a></p>
 
 <p>I also did some other exploratory analysis like, trains passing per station.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">trainflux</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">`Station Name`</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainflux</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">`Station Name`</span><span class="p">)</span><span class="w">
 </span><span class="n">trainflux</span><span class="w">
 </span><span class="n">trainfluxCount</span><span class="o">&lt;-</span><span class="n">summarise</span><span class="p">(</span><span class="n">trainflux</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">())</span><span class="w">
 </span><span class="n">trainfluxCount</span><span class="w">
 </span><span class="n">arrange</span><span class="p">(</span><span class="n">trainfluxCount</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">count</span><span class="p">))</span><span class="w">
 </span><span class="n">arrange</span><span class="p">(</span><span class="n">trainfluxCount</span><span class="p">,</span><span class="n">count</span><span class="p">)</span><span class="w">
 </span><span class="n">write.csv</span><span class="p">(</span><span class="n">trainfluxCount</span><span class="p">,</span><span class="s2">"trainsstoppingperstation.csv"</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <p><a href="https://imgur.com/D6cfV6H"><img src="https://i.imgur.com/D6cfV6H.png" title="source: imgur.com" /></a></p>
 
 <p>Halt times and Average halt times per station too. This would make give an idea of how busy a station is. This was not trivial as it seems, thanks to my n00by R skills. First, all source and destination stations were removed using <code class="highlighter-rouge">Distance !=0</code>. Then because of the funny way times were mentioned, I had to remove ‘single’ quotes in all time vectors. I used <code class="highlighter-rouge">gsub</code> for that. Then, I had to convert the char to POSIXlt date format. This would enable time computation using <code class="highlighter-rouge">difftime</code>. Using difftime I made a new vector for HaltTime with a minute resolution. I am told, these steps are just a few clicks in excel.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">dataset</span><span class="o">$</span><span class="n">Distance</span><span class="o">!=</span><span class="m">0</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">dataset</span><span class="o">$</span><span class="n">Distance</span><span class="o">!=</span><span class="m">0</span><span class="p">)</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"'"</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">)</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"'"</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="p">)</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="n">strptime</span><span class="p">(</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s2">"%H:%M:%S"</span><span class="p">))</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">&lt;-</span><span class="n">strptime</span><span class="p">(</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s2">"%H:%M:%S"</span><span class="p">))</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Halt Time`</span><span class="o">&lt;-</span><span class="n">as.difftime</span><span class="p">(</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">-</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"%H:%M:%S"</span><span class="p">,</span><span class="n">units</span><span class="o">=</span><span class="s2">"mins"</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 <p>Next, I removed trains that had halt times less than 0 and grouped them by stations. I removed Arrival and Departure vectors. I then studied the average halt times.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">trainNoSource</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Halt Time`</span><span class="o">&gt;=</span><span class="m">0</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">trainNoSource</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Halt Time`</span><span class="o">&gt;=</span><span class="m">0</span><span class="p">)</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="kc">NULL</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">&lt;-</span><span class="kc">NULL</span><span class="w">
 </span><span class="n">trainNoSource_grpstation</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">trainNoSource</span><span class="p">,</span><span class="n">`Station Name`</span><span class="p">)</span><span class="w">
@@ -627,8 +622,7 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
 </span><span class="n">trainNoSource_haltTimes</span><span class="o">$</span><span class="n">`avgstop`</span><span class="o">&lt;-</span><span class="n">trainNoSource_haltTimes</span><span class="o">$</span><span class="n">totalhalt</span><span class="o">/</span><span class="n">trainNoSource_haltTimes</span><span class="o">$</span><span class="s1">'count'</span><span class="w">
 </span><span class="n">arrange</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">avgstop</span><span class="p">))</span><span class="w">
 </span><span class="n">write.csv</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="s2">"avgHaltTimeperstation.csv"</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 <p><a href="https://imgur.com/D6cfV6H"><img src="https://i.imgur.com/D6cfV6H.png" title="source: imgur.com" /></a></p>
 
 <p><strong>Converting that data into geojson</strong></p>
