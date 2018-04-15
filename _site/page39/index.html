@@ -472,6 +472,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -516,30 +520,66 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/20/Doormate/">
-        Doormate- Runner's Up at Intel IOT Roadshow
+      <a href="/2015/12/10/karigar/">
+        CNCs & Me 3 - Karigar
       </a>
     </h1>
 
-    <span class="post-date">20 Nov 2015</span>
+    <span class="post-date">10 Dec 2015</span>
 
-    <p>Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog <a href="/2015/08/01/Intel/">link</a> that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did.</p>
+    <p>Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.</p>
 
-<p>Basically, our Project was called the <strong>Doormate</strong>. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.</p>
+<p>Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a <em>Thumbs UP</em> !</p>
 
-<p>The project uses the <strong>Intel edison</strong> and was built using whatever parts we could rummage at the event.</p>
+<p>Fortunately, few of my friends agreed to work with me on it and quite thankfully we put up a great show for everyone at the demos.</p>
 
-<p>The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka <em>The Bell Playlist</em> .</p>
+<p>I started with making the control circuits for the CNC first as opposed to the actual CNC first as the circuits were mostly trivial and had some stepper drivers and an Arduino brain with GRBL running on. I designed my own stepper drivers based on DRV8825 drivers from TI . With all things in place. I tested my electronics with Nadya Peek’s MTM SnapCNC available at TI-CEPD, NSIT.</p>
 
-<p>The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved <em>Mogambo</em> feels good and the door opens. (See video below to understand the context)</p>
+<p><em>Thanks to Prof. Gadre</em></p>
 
-<p>Here is what the dashboard <a href="http://doormate.github.io/website/">looks like</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21328576476/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5835/21328576476_b1a24eb625_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21168959808/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5716/21168959808_44edd750be_z.jpg" width="640" height="360" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/su8k2AwtbH0" frameborder="0" allowfullscreen=""></iframe>
+<p>Now, came the difficult part. We need to learn a CAD package so that we can design our frugal machine. We opted for FreeCAD. If you are interested in learning, we used <a href="https://www.youtube.com/watch?v=xs1mFiJBYIo">this</a> and <a href="https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g">this</a>.</p>
 
-<p>Cheers !!</p>
+<blockquote>
+  <p>The entire project is explained elaborately in our thesis <a href="https://drive.google.com/file/d/0B8DZ3bqHurUVWlZ2a29TVnRONGtVZ2hsY3V4MkxubksxSG9R/view?usp=sharing">here</a>. CAUTION: PDF and LaTeX !</p>
+</blockquote>
+
+<p>After months of work and several visits to <strong>Chawari Bazaar</strong> and <strong>Lajpat Rai</strong>, we were able to have a working one that did wood easily. Our frame was made with wood and as the CNC Thumb Rule goes !</p>
+
+<blockquote>
+  <p>A CNC can only work with materials that are softer than the material of the structure.</p>
+</blockquote>
+
+<p>The cutting head is made using the <strong>Dremel</strong> and the Z axis is made of re-purposed drawer slides. In fact basically everything is re-purposed except the linear rods and bearings. I still have countless memories of the shops we visited for our project, located in small dingy and cramped lanes of Old Delhi in places which must not be named. We had to talk a lot so they would sell us in low quantity.</p>
+
+<p>Check out the pictures of the project below.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896935135/in/dateposted-public/" title="WP_20150308_007"><img src="https://farm2.staticflickr.com/1512/25896935135_c26c78503a_z.jpg" width="640" height="359" alt="WP_20150308_007" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896933575/in/dateposted-public/" title="WP_20150308_010"><img src="https://farm2.staticflickr.com/1537/25896933575_7d74c62331_z.jpg" width="359" height="640" alt="WP_20150308_010" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211953/in/dateposted-public/" title="WP_20150308_008"><img src="https://farm2.staticflickr.com/1501/25268211953_d18a5c721b_z.jpg" width="640" height="359" alt="WP_20150308_008" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211923/in/dateposted-public/" title="WP_20150308_009"><img src="https://farm2.staticflickr.com/1668/25268211923_3a95218f4e_z.jpg" width="640" height="359" alt="WP_20150308_009" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21167775699/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/742/21167775699_c85d901429_z.jpg" width="359" height="640" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Here is a ARM we milled for a dear friend of our who happens to a serious gyming enthusiast.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736205563/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/666/20736205563_38466e2c14_z.jpg" width="612" height="612" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Looks like it wont work? Well it does work and cuts circles for the <a href="/2015/12/11/fumeex/">FumeEx</a>:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/FxMoRauk4EU" frameborder="0" allowfullscreen=""></iframe>
+
+<p>I recently de-commissioned the machine. I worked, but not very well (Its hard to acknowledge this fact). I am using the parts to build something.</p>
+
+<p>So, until next post …</p>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
 

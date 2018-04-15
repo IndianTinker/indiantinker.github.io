@@ -472,6 +472,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -516,69 +520,52 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/04/03/HeyHappy/">
-        Hey Happy !
+      <a href="/2017/04/03/Soundsofcity/">
+        How does this city sound ?
       </a>
     </h1>
 
     <span class="post-date">03 Apr 2017</span>
 
     <blockquote>
-  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Interaction Media and Senses</strong>. The project was done during the <em>social</em> phase of the course that involved Sensory, Cognitive and Social parts with <a href="https://www.behance.net/silpa_murali">Silpa</a> and <a href="https://www.behance.net/pallavimon3e2c">Pallavi</a></p>
+  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Interaction Media and Senses</strong>. The project was done during the <em>sensory</em> phase of the course that involved Sensory, Cognitive and Social parts with <a href="https://www.behance.net/m_mankad">Manasi</a> and <a href="https://www.behance.net/ankit_bansod">Ankit</a></p>
 </blockquote>
 
-<p>The users we choose to represent were kids in the age group of 6-12 years. The project started with an initial primary studies in the social activities of school kids obtained using interviews from campus schools and anecdotes by relatives in the similar age group. We used design techniques like <strong>one day in the life of</strong> and user-journeys to understand the ecosystem a child experiences today. We were certain enough to conclude that things have changed since we were kids. The kids these days are rather lonely due to changing family systems and less attention by busy parents.</p>
+<p>We explored the possible ways to experience at city by just sounds and ended up creating a system that maps these sounds as well. The system can be seen in action <a href="http://rohitg.in/soundsofcity.html">here</a>. It uses Mapbox flavoured openstreet maps with soundcloud to embed the recorded sounds.</p>
 
-<p>We tried to understand the behavior of kids in terms of cognitive and social development. This helped scope the problem to the emotional development of kids.</p>
+<p>We experimented with things like :</p>
 
-<p>We had several initial concepts like :</p>
+<ul>
+  <li>Binaural Recording</li>
+  <li>Storytelling with sound</li>
+  <li>Spatial augmentation of sound using 3 axis sensors and openAL. (To be replaced by Unity or SFML)</li>
+</ul>
 
-<ol>
-  <li>A tangible imaginary friend called Poko. The friend would keep the child company and engage in conversations.</li>
-  <li>Multiplayer Jigsaw games that would require multiple kids to sit together. These games are known to increase social interaction, especially in introvert kids.</li>
-  <li>A digital representation of the penpal system. This would simulate the behavior and experience of posting a letter and anticipating its reply. Artificial delays will be introduced in the system to enable the kids to understand how a letter typically travels geographically. Kids can draw and write on a parent’s tablet device. The kids in our survey had access to such devices. The penpals would be kids relatives or other grandparents.</li>
-  <li>A sharable toy economy. In this system, kids share toys with other toys such that the number of games when played together increased. A specific set of games could be played with a particular toy. This could help increase interaction and sharing behavior in kids.</li>
-  <li>An emotional calendar for kids. Kids in the study were found to live in an emotional vacuum. They found it difficult to express their feelings with parents as they were often not around and busy. The friends of the kid, curated by parents, give them notes/song/drawings when sad. The kid can pin some of their favorite ones on their pinboard. This could at-least allow the child to express herself. The parents would know and can then initial the conversation to understand the condition.</li>
-</ol>
+<p><strong>User controlled spatial sound system</strong></p>
 
-<p>Out of the above, 5 concepts, emotional calender was chosen for further development as it seemed less intrusive and could bring the problems of the kids in the purview of their parents. This could increase the parents concern.</p>
+<p>The data is read from the accelerometer and the spatial audio field is manipulated using pyOpenAL.</p>
 
-<p><strong>Scenario- Hey Happy !</strong></p>
+<p><img src="https://i.imgur.com/4F5nXAu.png" alt="Imgur" />
+<img src="https://i.imgur.com/1wNFze1.png" alt="Imgur" /></p>
 
-<p>A social interface that allows kids to share emotions on a minimal calendar like interface. Kids can make other kids happy by sending them creative artifacts made by them.</p>
+<ul>
+  <li>Geospatial Mapping of Sound (prototyped using processing and implemented using MapBox)</li>
+</ul>
 
-<iframe src="https://player.vimeo.com/video/243290586" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p><a href="https://vimeo.com/243290586">HeyHappy!</a> from <a href="https://vimeo.com/thepensil">Silpa Murali</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33678280611/in/dateposted-public/" title="Sounds"><img src="https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg" width="500" height="421" alt="Sounds" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The concept map of the interface was as follows:</p>
+<p>The project is documented in the video below: ( I will add a one page TL;dr version soon )</p>
 
-<p><img src="https://i.imgur.com/Sp86FQm.png" alt="img" /></p>
+<iframe src="https://drive.google.com/file/d/0B-2TEMdgVwl4RHNJcXJLd1IwYUU/preview" width="640" height="480"></iframe>
 
-<p>The information architecture for the above concept was
-<img src="https://i.imgur.com/T1nPNxq.png" alt="img" /></p>
+<p>The presentation is as follows:</p>
 
-<p>Some Low-Fid prototype screens were as follows:</p>
-
-<p><img src="https://i.imgur.com/v7eXnbf.png" alt="img" />
-<img src="https://i.imgur.com/L2hXXpu.png" alt="img" /></p>
-
-<p>We moved to the high fidelity prototype screens:</p>
-
-<p><img src="https://i.imgur.com/prFf8g3.png" alt="!img" />
-<img src="https://i.imgur.com/GySavOt.png" alt="!img" />
-<img src="https://i.imgur.com/VQ6r4J0.png" alt="!img" />
-<img src="https://i.imgur.com/LPTp6nS.png" alt="!img" /></p>
-
-<p>The click through is linked <a href="https://marvelapp.com/14cd9e2/screen/16152300">here</a>.</p>
-
-<p>We even wrote a paper on the same that can be read <a href="https://drive.google.com/file/d/1rg8e75RktpJFwHpr5XS6ZZg2uUXQ0MBk/view?usp=sharing">here</a>.</p>
-
-<p><strong>Contributions</strong>
-The initial prototype screens were made by <a href="https://www.behance.net/silpa_murali">Silpa</a>, the high fidelity screens were worked on by both <a href="https://www.behance.net/pallavimon3e2c">Pallavi</a> and me. <a href="https://www.behance.net/pallavimon3e2c">Pallavi</a> created the clickable.</p>
+<iframe src="https://docs.google.com/presentation/d/1OpqOCdbN_42WugLY2KXdvVErJ96BkXanpejnTeZJ0Kg/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
+
 
   </div>
   

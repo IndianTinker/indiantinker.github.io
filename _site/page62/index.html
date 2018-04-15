@@ -472,6 +472,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -516,69 +520,89 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/04/17/BoardMerge/">
-        BoardMerge- The command line single page PDF merge utility for PCBs
+      <a href="/2015/05/01/RoomMote/">
+        RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia
       </a>
     </h1>
 
-    <span class="post-date">17 Apr 2015</span>
+    <span class="post-date">01 May 2015</span>
 
-    <p>Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this <a href="http://rohitg.in/2014/04/07/OpenAgitator/">Open Agitator</a> a while back to help me ease out the etching process.</p>
+    <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .</p>
 
-<p>I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.</p>
+<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting?</p>
 
-<p>The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we <em>should</em> cut costs. Further the <em>several-times-on-a-page</em> approach had more issues:</p>
+<p>Interesting !!</p>
 
-<ul>
-  <li>Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers</li>
-  <li>The shop keeper usually charges for a single round in the printer and printing many times added to the costs.</li>
-  <li>I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)</li>
-  <li>You also need to set the no scaling option in <em>Acrobat</em> again and again.. duh..</li>
-</ul>
+<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and “no mess visible”. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project.</p>
 
-<p>Thats too much work specially after waiting in a queue to get to the printer !</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box" /></a></p>
 
-<p>I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a <strong>Single</strong> page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..</p>
+<p>So, the plan was   :</p>
 
-<p>Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to <em>re-etch (just imagine)</em> a whole board.</p>
+<blockquote>
+  <p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall).</p>
+</blockquote>
 
-<p><strong>The Process</strong></p>
+<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don’t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
 
-<ol>
-  <li>
-    <p>Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.</p>
-  </li>
-  <li>
-    <p>This way you will have many pdfs on the same folder. Now:
-<code class="highlighter-rouge">git clone https://github.com/IndianTinker/BoardMerge.git</code>  or download from <a href="https://github.com/IndianTinker/BoardMerge">here</a></p>
-  </li>
-  <li>
-    <p>You need to install pyPDF dependency. PIP is the boss here!
-<code class="highlighter-rouge">sudo pip install pypdf</code></p>
-  </li>
-  <li>
-    <p>Now paste the <code class="highlighter-rouge">merge.py</code> in the active eagle folder and run :
-<code class="highlighter-rouge">python merge.py file1.pdf file2.pdf .. .. ..</code></p>
-  </li>
-  <li>
-    <p>Wait till it gets completed and you shall see a file <code class="highlighter-rouge">Combine.pdf</code> with all the pdfs on a single page!</p>
-  </li>
-</ol>
+<p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
 
-<p>This a directory full of 17 pdfs !</p>
+<p>For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used <a href="http://www.ti.com/lit/ds/symlink/uln2803a.pdf">ULN2803</a> , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/16557649863" title="before by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg" width="640" height="402" alt="before" /></a></p>
+<p>For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged 100mA LDO .</p>
 
-<p>After some python-fu you get this:</p>
+<p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17151890736" title="final by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" width="640" height="366" alt="final" /></a></p>
+<p>That’s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
 
-<p>Hoping that fellow makers find it useful.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched" /></a></p>
 
-<p>Cheers!</p>
+<p>Some soldering !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled" /></a></p>
+
+<p>and some Brain Implant ( aka Code Download )</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant" /></a></p>
+
+<p>The Code :</p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script>
+
+<p>Then modifying the nice little box to suit the PCB  (That moment when you say, “If only i had a 3D Printer” )</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall" /></a></p>
+
+<p>Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say <strong>Manual Over-ride</strong> ?</p>
+
+<p>The wiring mess inside the switch-board.
+<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board" /></a></p>
+
+<p>All cleared up !
+<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out" /></a></p>
+
+<p>After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up.</p>
+
+<p>Now with a press of the button, Its all done ! I already feel so lazy!</p>
+
+<p>And yes here are the colors !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights" /></a></p>
+
+<p>Dont forget to watch the video below and if you have something to say, Please Comment Down here!</p>
+
+<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   
