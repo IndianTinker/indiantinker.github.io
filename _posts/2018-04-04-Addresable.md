@@ -4,7 +4,7 @@ title: Repurposing mass market addressable LEDs
 image: https://i.imgur.com/121xV90.jpg
 location:  IDC IIT Bombay India
 tags:
-- electronics 
+- arduino 
 ---
 
 > This post describes an hack that allows one to re-purpose commonly available "fighter LED strips" to work with standard Neopixel firmwares. Also, this is my first post written in VIM \m/ . I have been having a good time using it. 
