@@ -476,6 +476,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -520,64 +524,79 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/07/05/JuggadSupply/">
-        Juggad Supply- Saving a power supply from planned obsolescence
+      <a href="/2015/07/12/CrickPi/">
+        CricPi- The (probably) MOST Minimalistic Live Cricket Ever
       </a>
     </h1>
 
-    <span class="post-date">05 Jul 2015</span>
+    <span class="post-date">12 Jul 2015</span>
 
-    <p>Next time your printer stops printing for no reason or changing the battery of your MP3 Player from <strong>Authorised Service Station</strong> costs a major percentage of the original cost, Be informed this all is a part of an industrial design policy,Planned Obsolescence, to make goods last a bit shorter by tweaking the design.</p>
+    <p>Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old <strong>WebSense Blocked</strong> page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times.</p>
 
-<p>Never mind a broken device is an opportunity to learn. That’s what i had in mind when i didnt throw away my 2004 ATX supply when it failed in 2010 probably due to some connection/connector issue. In a haste to get the PC working in summer break I installed a new supply on the PC and kept it with me to play with later.</p>
+<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would’nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
 
-<p>After saving it from the routine disposal drives of Diwali , I finally had some use of it when the WalWart 12V@1A supply i have was not capable of driving the stepper motors i used in my major project.</p>
+<p>I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score <em>always</em> during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.</p>
 
-<p>Moding ATX to use it as a bench supply is not new.The power output is pretty stable and can provide high currents. DP has an amazing <a href="http://dangerousprototypes.com/2012/06/28/new-prototype-atx-breakout-board/">ATX to Power supply Board</a> too.</p>
+<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What’s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
 
-<p>I wanted one that i could carry around anywhere and should be in one piece and durable with no wires outside the case except the power cable of course .</p>
+<p>Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.</p>
 
-<p>Lets see how that ATX Connector looks like.</p>
+<p>The first thing required was a data source like a website/API that has all the data we need to display. We will anyway display it at 1 refresh per minute so rocket-science precision is not required. I stumbled upon <a href="https://developers.litzscore.com/plans/">this</a> which unfortunately was not free and beyond my budget.</p>
 
-<center>
-<img src="http://etech.dyndns.org/images/vcr/atx.jpg" />
-</center>
-
-<p>The important points are:</p>
-
-<ul>
-  <li>Shorting <code class="highlighter-rouge">PS_ON(14)</code> to <code class="highlighter-rouge">GND</code> will turn on the PSU and that is what actually the motherboard does.</li>
-  <li>By checking the voltage on <code class="highlighter-rouge">Power_ok or Power Good(8)</code> one can decide whether the power supply OUTPUT is ON (+5V when ON).</li>
-  <li>By checking the voltage on <code class="highlighter-rouge">+5vSB(9)</code> one can decide whether the Mains are ON or not (+5v when ON).</li>
-</ul>
-
-<p>So, I will connect LEDs to pin 8 and 9 and a switch between 14 and GND, thats pretty much it.</p>
-
-<p>Since I had the no wires outside clause and usual power supplies have more that one connector, I had to open the power supply and cut wires literally like a barber and then solder the same coloured ones together to bring them onto the front panel.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/19435985395" title="Same Colour ,Same Voltage by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/469/19435985395_e8dde8d935_z.jpg" width="640" height="480" alt="Same Colour ,Same Voltage" /></a></p>
+<p>I thought best way is to make an API myself when there is none that suits me.</p>
 
 <blockquote>
-  <p>Most morden ATXs don’t need the load resistor on 5V bus as many posts mention. Phew ! One part less :D</p>
+  <p><em>I’ll scrape</em> !</p>
 </blockquote>
 
-<p>I then drilled the holes @ CEDT for the Thumb Screw connectors i got from Lajpat Rai and also fixed a small handle to it for carrying it around.</p>
+<p>So, i wrote a <em>python</em> script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/19248429460" title="Drilling the cover by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/523/19248429460_bc1a02963b_z.jpg" width="640" height="480" alt="Drilling the cover" /></a></p>
+<p>I used the adorable <code class="highlighter-rouge">beautifulsoup</code> for scraping !</p>
 
-<p>Then connected the circuit as mentioned above to test it.</p>
+<p>Next based on the observations, I sat down and made an interface for the info gathered be displayed.I choose my old and trusted <a href="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/">Nokia 5510 Graphic Display</a>.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/19429707752" title="Testing by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/302/19429707752_05839665a2_z.jpg" width="640" height="475" alt="Testing" /></a></p>
+<p>Many thanks to <a href="http://www.adafruit.com/">Adafruit</a> for their amazing Python Library for the LCD already available that made things easy.</p>
 
-<p>Carefully packed everything inside the original case.</p>
+<p>Here is the first visual of a World Cup match on my project :</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/19429714392" title="Ready ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/354/19429714392_4a600b79fd_z.jpg" width="640" height="480" alt="Ready !" /></a></p>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0CfR7pPUHD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-10T07:31:20+00:00">Mar 10, 2015 at 12:31am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>Printed some labels from my archaic inkjet and I had my ATX power Supply ready !</p>
+<p><br />
+This too.
+<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup" />&lt;/a&gt;</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/19435982985" title="Labelled UP by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/317/19435982985_69fc1b1b18_z.jpg" width="640" height="480" alt="Labelled UP" /></a></p>
+<p>As you can see we have the following parts of score displayed:</p>
 
-<p>Pretty simple and effective hack ! So, when are you making one ?</p>
+<ul>
+  <li>Teams playing</li>
+  <li>Currently batting team with overs underneath it</li>
+  <li>The score in the largest font</li>
+  <li>4s/6s and Run Rate</li>
+  <li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
+  <li>Match Status - Rains, Ended,In Progress etc</li>
+</ul>
+
+<p>Here is the picture of the setup:</p>
+<center>
+<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup" />
+</center>
+<p>A Laser cut case and we could go wall mount.</p>
+
+<p>I then made the script executable and queued it as a <code class="highlighter-rouge">cron-job</code> to be run every minute.  <em>BLISS</em></p>
+
+<p>Now I could watch(over) cricket matches in a non-intrusive and minimalistic way .</p>
+
+<p>If you too are interested you can grab the code <a href="https://github.com/IndianTinker/CricPI">here</a> to check out on the process.</p>
+
+<p>Here is how i kept a track of IPL :</p>
+
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/14Z6-PvUD3/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-25T02:34:53+00:00">Apr 24, 2015 at 7:34pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p><br /></p>
+
+<p><strong>NOTE :</strong> The project was not performed/made at the workplace. Only the use case was inspired from there.</p>
 
 <p>Cheers,</p>
 
