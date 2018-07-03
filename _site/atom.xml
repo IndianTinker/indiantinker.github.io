@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-07-04T00:07:18+05:30</updated>
+ <updated>2018-07-04T00:19:10+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -23,7 +23,7 @@
 
 &lt;p&gt;I have tried to document the informal processes that often create confusion. There is a sort of a delight you get when you get past a patch of cloudy information and when you look back, its crystal clear. Hence, one should always try to document such processes so that human race does not spend more time that one human has already spent. Neglecting the superfluous grandeur, I often imagine myself like a miner on a night shift who is underground in the tunnels. One can either temporarily secure the tunnel and take the minerals or secure it permanently so the next miner can “further” the understanding of the mine. I advise choosing the later. It makes one a “responsible” miner.&lt;/p&gt;
 
-&lt;p&gt;The IDC clearance process may seem very hard, it is tough emotionally, but it is procedurally very straightforward. The way, I optimized it was by making a dependency map that helped me prioritize things. &lt;strong&gt;Dependancy Map&lt;/strong&gt; basically helps in identifying what is the relationship between various parameters like previous steps signatures, availability of staff and then come up with a sequence that minimizes redundancy of action. It is like a fishbone chart. Let us get started with your clearance.&lt;/p&gt;
+&lt;p&gt;The IDC clearance process may seem very hard, it is tough emotionally, but it is procedurally very straightforward. The way, I optimized it was by making a dependency map that helped me prioritize things. &lt;strong&gt;Dependency Map&lt;/strong&gt; basically helps in identifying what is the relationship between various parameters like previous steps signatures, availability of staff and then come up with a sequence that minimizes redundancy of action. It is like a fishbone chart. Let us get started with your clearance.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Part 1: Pre Jury thesis submission (skip if already done)&lt;/strong&gt;&lt;/p&gt;
 
@@ -40,55 +40,59 @@ The steps are :&lt;/p&gt;
 
 &lt;p&gt;1.Collect a form from the office on time. Our office staff is very helpful. The form has three sections:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Main Clearance Certificate - IDC specific ( Front page ) 
-- Final Clearance ( Page 2 )
-- IIT Bombay specific submissions - P2, P3
-- No dues from hostel, library, and department( Last page )
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Main Clearance Certificate - IDC specific ( Front page )&lt;/li&gt;
+  &lt;li&gt;Final Clearance ( Page 2 )&lt;/li&gt;
+  &lt;li&gt;IIT Bombay specific submissions - P2, P3&lt;/li&gt;
+  &lt;li&gt;No dues from hostel, library, and department( Last page )&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Fill in all the details you know. Things people leave out are Guide names, Thesis titles and their names on all sheets. There is a misspelled “Certificate from the Acdemic section” on both  P2 and P3 forms, and a No Dues from estate Office. They are usually not required.&lt;/p&gt;
+&lt;p&gt;Fill in all the details you know. Things people leave out are Guide names, Thesis titles and their names on all sheets. There is a misspelt “Certificate from the Acdemic section” on both  P2 and P3 forms, and a No Dues from estate Office. They are usually not required.&lt;/p&gt;
 
 &lt;p&gt;2.In Parallel,  start the process to submit the Convocation and Alumni Forms. Their details are as follows: 
 Convocation form :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Login to [ASC](https://portal.iitb.ac.in/asc/Login)
-- Pay Convocation Fee 
-- Fill Convocation Form carefully. Check your name in Hindi too. Press space if the last part of your name does not get converted.  
-- You may be asked to get a National Academic Depository (NAD) ID. It works for people with Adhaar linked to phone numbers. It is optional and it is Adhaar. 
-- Print the form and sign on it **with date**. 
-- Attach the copy of your bachelor's degree. Do not have one? Chill and skip and go to next step.
-- Submit the form to Ms. Ranjana in Academic Department. She will tell you the process if you do not have a degree yet.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;https://portal.iitb.ac.in/asc/Login&quot;&gt;ASC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pay Convocation Fee&lt;/li&gt;
+  &lt;li&gt;Fill Convocation Form carefully. Check your name in Hindi too. Press space if the last part of your name does not get converted.&lt;/li&gt;
+  &lt;li&gt;You may be asked to get a National Academic Depository (NAD) ID. It works for people with Adhaar linked to phone numbers. It is optional and it is Adhaar.&lt;/li&gt;
+  &lt;li&gt;Print the form and sign on it &lt;strong&gt;with date&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Attach the copy of your bachelor’s degree. Do not have one? Chill and skip and go to next step.&lt;/li&gt;
+  &lt;li&gt;Submit the form to Ms. Ranjana in Academic Department. She will tell you the process if you do not have a degree yet.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Alumni Form:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Login to [ASC](https://portal.iitb.ac.in/asc/Login)
-- Click on the misspelt &quot;Alumani&quot; form.
-- Fill the form to the best of your knowledge.
-- Print it and attach a photo to it.
-- Submit it in the Alumni Office in Gullu building
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;https://portal.iitb.ac.in/asc/Login&quot;&gt;ASC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Click on the misspelt “Alumani” form.&lt;/li&gt;
+  &lt;li&gt;Fill the form to the best of your knowledge.&lt;/li&gt;
+  &lt;li&gt;Print it and attach a photo to it.&lt;/li&gt;
+  &lt;li&gt;Submit it in the Alumni Office in Gullu building&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;The above two things can be done in parallel with the remaining process.&lt;/p&gt;
 
 &lt;p&gt;3.Thesis Mega Loop&lt;/p&gt;
 
 &lt;p&gt;This is the craziest part of the &lt;strong&gt;P4&lt;/strong&gt;. The majority of the signatures that are in the form and are difficult to get are related to the thesis. The reports should have an abstract and follow the guidelines &lt;a href=&quot;http://etd.library.iitb.ac.in/etd/faq_s.jsp&quot;&gt;here&lt;/a&gt;. Make sure you have the following in your report :&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- signatures of your guide, external/internal signatures in the reports. 
-- an abstract page ( Ideally before ToC )
-- your signature on the declaration
-- IIT Logo on the front page
-- Roman numbering to all pages before Introduction
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;signatures of your guide, external/internal signatures in the reports.&lt;/li&gt;
+  &lt;li&gt;an abstract page ( Ideally before ToC )&lt;/li&gt;
+  &lt;li&gt;your signature on the declaration&lt;/li&gt;
+  &lt;li&gt;IIT Logo on the front page&lt;/li&gt;
+  &lt;li&gt;Roman numbering to all pages before Introduction&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;When you get guide signature on report get signatures on Frontpage in P2, P3 columns and Respective P2 and P3 pages.  Let’s start with central library submissions :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Login to [ETD](http://etd.library.iitb.ac.in/etd/index.jsp)
-- Fill out the information/Alumni form.
-- Now select Project 2, fill that form and upload the pdf. Copy and paste the abstract as already directed. You should get a confirmation page. Download the abstract page and take a print out. Sometimes, things do not work due to browsers. Use Firefox or Chrome and ultimately Edge. 
-- Logout and do the same for P3 a.k.a Final Project. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;http://etd.library.iitb.ac.in/etd/index.jsp&quot;&gt;ETD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fill out the information/Alumni form.&lt;/li&gt;
+  &lt;li&gt;Now select Project 2, fill that form and upload the pdf. Copy and paste the abstract as already directed. You should get a confirmation page. Download the abstract page and take a print out. Sometimes, things do not work due to browsers. Use Firefox or Chrome and ultimately Edge.&lt;/li&gt;
+  &lt;li&gt;Logout and do the same for P3 a.k.a Final Project.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Now, print the abstract page and get guide signatures. Collect the uploaded P2 report and P3 report in a USB stick along with DRS report, P2 presentation, and P3 presentation. All should be in pdf format.&lt;/p&gt;
 
