@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-07-04T00:19:10+05:30</updated>
+ <updated>2018-07-05T20:19:48+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -120,6 +120,62 @@ Convocation form :&lt;/p&gt;
 &lt;p&gt;You are done !&lt;/p&gt;
 
 &lt;p&gt;CAUTION: The process mentioned above was prevalent in the year 2018. The article was written with whatever knowledge I could gather during my clearance process. Things may change for good.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Spreadmaker- A tool to generate spreads for hand binding</title>
+   <link href="http://localhost:4000/2018/05/30/Spreadmaker/"/>
+   <updated>2018-05-30T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/30/Spreadmaker</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;The post describes a handy python script to convert usual pdfs into spreads of 8. The printed pdf can be bound by hand.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Thanks to my project guide, &lt;a href=&quot;http://www.idc.iitb.ac.in/~girish/index_mr.html&quot;&gt;Prof. Girish&lt;/a&gt;, who inspired me to write this by asking me to read more stuff.&lt;/p&gt;
+
+&lt;p&gt;During my project days (and even now), I used to print papers from several journals to read and reflect upon. The tangibility of paper provides a far better reading experience than e-books. I have given up on e-reading as it strains my eyes, difficult to make notes on side and record keeping is difficult. If something is more than 25 pages, I usually print it and read it. But I do try to save as much as paper possible.&lt;/p&gt;
+
+&lt;p&gt;The common way to save paper was to print two pages on one sheet. But the manner in which the pages came out was very cumbersome to handle and did not give much joy while reading. While printing one of my favorite journals, &lt;a href=&quot;https://link.springer.com/journal/11023&quot;&gt;Mind and machines&lt;/a&gt;, I came up with an idea of making a script that would convert the pdf by re-arranging the pages to form an 8-page booklet. This booklet could later be bound into a book.&lt;/p&gt;
+
+&lt;p&gt;The art of bookbinding had already enticed me and I was binding my own books for almost a semester then (and now too). So, It would be easier to bind them using &lt;a href=&quot;https://www.youtube.com/watch?v=9O4kFTOEh6k&amp;amp;t=334s&quot;&gt;kettle stitch technique&lt;/a&gt; and I might end up having a readable journal/book.&lt;/p&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/BPSDTUhlEm0/&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/p/BPSDTUhlEm0/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_blank&quot;&gt;A post shared by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2017-01-15T10:42:20+00:00&quot;&gt;Jan 15, 2017 at 2:42am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//www.instagram.com/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;To prototype the script, I divided an A4 sheet into 4 parts and then folded them half. Then I numbered the pages as they usually are when you print them like two pages on one sheet. Next, I made a booklet out of the same and wrote the new page numbers as they should be for the booklet.&lt;/p&gt;
+
+&lt;p&gt;Some mathematical induction and we had a simple formula to make a 4 spread, 16-page block. Then, to generate the complete book, one has to add some blank pages to complete the 16-page blocks..&lt;/p&gt;
+
+&lt;p&gt;That is pretty much it. I have tested it at least 10 times and printed close to 1000 pages. It works. The script is available &lt;a href=&quot;https://github.com/IndianTinker/spreadmaker&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to use it&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Clone the &lt;a href=&quot;https://github.com/IndianTinker/spreadmaker&quot;&gt;git repo&lt;/a&gt;. Make sure you have the dependencies ‘pip’ed like pyPDF2. Try doing &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install pyPDF2&lt;/code&gt; to install it.&lt;/p&gt;
+
+&lt;p&gt;Then paste the pdf you wish to convert in the repo folder. Rename it as &lt;em&gt;in.pdf&lt;/em&gt; and then run the script from the terminal using &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo python spreadmaker.py&lt;/code&gt; . You should have an &lt;code class=&quot;highlighter-rouge&quot;&gt;out_final.pdf&lt;/code&gt;. That the file. Delete the other &lt;code class=&quot;highlighter-rouge&quot;&gt;out.pdf&lt;/code&gt; file. You can print the pages in two on one style and then grab the top 4 and fold it in half. You should see the numbers falling in place. Then bind it using the kettle stitch method.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Improvements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The script is ‘hacky’. Some obvious improvements are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GUI to do the same&lt;/li&gt;
+  &lt;li&gt;Not using the interim &lt;code class=&quot;highlighter-rouge&quot;&gt;out.pdf&lt;/code&gt; file.&lt;/li&gt;
+  &lt;li&gt;Using file at any location.&lt;/li&gt;
+  &lt;li&gt;Add custom blank pages to maintain pdf odd-even page formatting.&lt;/li&gt;
+  &lt;li&gt;A PDF preview&lt;/li&gt;
+  &lt;li&gt;Scaling option to zoom in dense books/journals&lt;/li&gt;
+  &lt;li&gt;Allowing the operation of encrypted files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I know this may be achievable using pdf software like acrobat. But since, I am on Linux, I seem to have no better option than to write one snippet for myself. Plus its lot of fun.&lt;/p&gt;
+
+&lt;p&gt;Hoping that someone finds it useful.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 

@@ -480,6 +480,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -524,60 +528,42 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/03/12/arc/">
-        ReactorX- The intuitive Arc Reactor from the movies
+      <a href="/2016/03/19/ARCards/">
+        Augmenting Reality with Visiting Cards
       </a>
     </h1>
 
-    <span class="post-date">12 Mar 2016</span>
+    <span class="post-date">19 Mar 2016</span>
 
-    <p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
+    <p>Augmented Reality? Virtual Reality? Reality Intervention? Such Reality, Much Wow!</p>
 
-<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
+<p>We humans have always had the craving for <em>not-so-real</em> things. Books, Theatre, Movies embody the idea and use various mediums to present the cooked up reality. But the keyword <strong>Personal</strong> is IN. This word also has its own story whose value has decreased from the time of Personal Chauffeur to Uber. We now consume reality personally.</p>
 
-<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
+<p>So, instead of Tony,the Iron Man acting the same way for a billion earth inhabitants, we want him to be personal. Some don’t want him to hit the Hulk, some want him to probably not drive the R8 and rather drive the Lamborghini (I vehemently disagree to this one) .</p>
 
-<p>Features:</p>
+<p>So, the crux is mediums are becoming personal and so is their content. Things will happen this way as these <em>“Things”</em> are getting more affordable.</p>
 
-<ul>
-  <li>Small and light</li>
-  <li>Power efficient</li>
-  <li>Bright</li>
-  <li>Change-able modes using a switch</li>
-  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
-  <li>Morse Code for SOS</li>
-  <li>A mind blowing start-up sequence</li>
-  <li>Knight rider effect on LEDs</li>
-  <li>Breathing effect on the Middle high power LED</li>
-</ul>
+<p>This time I thought of making some sense of the Augmented Reality. 
+With the growing trend of things that seem real but are not, I present to you ladies and gentlemen the <strong>AR Cards</strong>.
+These cards are basically pumped up visiting cards that enable users to project 3D models of their products/creations on their business cards using a Phone that has a camera. They can explain things in depth by moving the cards or phone relative to each other. I made one for myself with my favourite car , <em>Chevy Camaro</em> on it.</p>
 
-<p>It also needs to be wearable and comfortable at the same time.</p>
+<p>I also added some value to the Vcard by adding a scale to measure things. I kind of like <a href="/2016/01/01/MakersRule/">scales</a>. There is the usual QR code.</p>
 
-<p>The motion and the light helps attract attention.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25270472733/in/dateposted-public/" title="Front Side with a usable scale"><img src="https://farm2.staticflickr.com/1639/25270472733_53bae50a27_z.jpg" width="640" height="480" alt="Front Side with a usable scale" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
+<p>On the back we have the <em>marker</em> that is used by the App to gauge the position and orientation of the object to be placed. The marker is at an offset, so that makes enough space for a note which we usually scribble on the card <em>somewhere</em>. Now that somewhere as a space for it.</p>
 
-<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
-<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25778418582/in/dateposted-public/" title="Marker Image for AR"><img src="https://farm2.staticflickr.com/1524/25778418582_bbbafbf4cb_z.jpg" width="640" height="480" alt="Marker Image for AR" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
+<p>The screen-shots from the mobile app !</p>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25899192545/in/dateposted-public/" title="3D Object mapped on the marker"><img src="https://farm2.staticflickr.com/1612/25899192545_375d9f0a32_z.jpg" width="640" height="360" alt="3D Object mapped on the marker" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
-
-<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
-
-<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25804236331/in/dateposted-public/" title="3D Object Mapped"><img src="https://farm2.staticflickr.com/1511/25804236331_d6ec513989_z.jpg" width="640" height="360" alt="3D Object Mapped" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

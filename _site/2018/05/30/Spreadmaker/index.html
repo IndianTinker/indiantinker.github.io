@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+</script>
+<!--->
+<script type="text/javascript">
+
+
+
+			// get the data with a webservice call
+			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
+
+				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
+				//alert(data.field1)
+
+			});
+
+
+
+	</script>
+<!--->
+  <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="twitter:site" content="@rohit7gupta"/>
+<meta name="twitter:creator" content="@rohit7gupta"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta content="Rohit Gupta" property="og:site_name"/>
+
+
+  <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
+
+
+  <meta  property="og:title" content="Spreadmaker- A tool to generate spreads for hand binding"/>
+  <meta name="twitter:title" content="Spreadmaker- A tool to generate spreads for hand binding"/>
+  
+
+
+  <meta property="og:type" content="article"/>
+  <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
+
+
+  <meta property="og:url" content="http://localhost:4000/2018/05/30/Spreadmaker/" />
+
+
+  <meta content="2018-05-30T00:00:00+05:30" property="article:published_time"/>
+  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+
+
+  <meta content="https://images.freeimages.com/images/large-previews/76e/book-with-white-pages-1507326.jpg" property="og:image"/>
+  <meta name="twitter:image:src" content="https://images.freeimages.com/images/large-previews/76e/book-with-white-pages-1507326.jpg"/>
+
+
+  
+
+
+  
+  <meta content="python" property="article:tag"/>
+  
+
+
+
+
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Spreadmaker- A tool to generate spreads for hand binding &middot; Rohit Gupta
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55965373-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+
+    <div class="sidebar">
+ </b>
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-about">
+    <h1 color="#303F9F">
+        <a href="/">
+          Rohit Gupta
+        </a>
+      </h1>
+      <p class="lead">A blog by <a href="https://twitter.com/rohit7gupta">@rohit7gupta</a></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+   <!--
+    <a class="twitter-follow-button"
+  href="https://twitter.com/rohit7gupta"
+  data-show-count="false"
+  data-lang="en">
+Follow @rohit7gupta
+</a>
+<script type="text/javascript">
+window.twttr = (function (d, s, id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src= "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+}(document, "script", "twitter-wjs"));
+</script> -->
+<br>
+
+<!-- <p style="font-size:1.75rem ;color:#eceff1;">
+<a class="list-group-item" href="https://www.twitter.com/rohit7gupta"><i class="fa fa-twitter"></i></a>
+<a class="list-group-item" href="https://www.flickr.com/photos/94411929@N06/"><i class="fa fa-flickr"></i></a>
+<a class="list-group-item" href="https://www.github.com/indiantinker"><i class="fa fa-github"></i></a>
+</p>       -->
+
+</span>
+    </nav>
+<p style="font-size:0.5rem ;color:black;">Made with <i class="fa fa-heart"></i> in India</a><br>
+All Rights Reserved
+</p>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+    <div class="post">
+  
+    </div>
+      <div class="post">
+  <h1 class="post-title">Spreadmaker- A tool to generate spreads for hand binding</h1>
+  <span class="post-date">30 May 2018</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/IDC IIT Bombay India">IDC IIT Bombay India</a></span>
+
+
+<br>
+
+
+
+
+<br>
+  <blockquote>
+  <p>The post describes a handy python script to convert usual pdfs into spreads of 8. The printed pdf can be bound by hand.</p>
+</blockquote>
+
+<p>Thanks to my project guide, <a href="http://www.idc.iitb.ac.in/~girish/index_mr.html">Prof. Girish</a>, who inspired me to write this by asking me to read more stuff.</p>
+
+<p>During my project days (and even now), I used to print papers from several journals to read and reflect upon. The tangibility of paper provides a far better reading experience than e-books. I have given up on e-reading as it strains my eyes, difficult to make notes on side and record keeping is difficult. If something is more than 25 pages, I usually print it and read it. But I do try to save as much as paper possible.</p>
+
+<p>The common way to save paper was to print two pages on one sheet. But the manner in which the pages came out was very cumbersome to handle and did not give much joy while reading. While printing one of my favorite journals, <a href="https://link.springer.com/journal/11023">Mind and machines</a>, I came up with an idea of making a script that would convert the pdf by re-arranging the pages to form an 8-page booklet. This booklet could later be bound into a book.</p>
+
+<p>The art of bookbinding had already enticed me and I was binding my own books for almost a semester then (and now too). So, It would be easier to bind them using <a href="https://www.youtube.com/watch?v=9O4kFTOEh6k&amp;t=334s">kettle stitch technique</a> and I might end up having a readable journal/book.</p>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BPSDTUhlEm0/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BPSDTUhlEm0/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-01-15T10:42:20+00:00">Jan 15, 2017 at 2:42am PST</time></p></div></blockquote>
+<script async="" defer="" src="//www.instagram.com/embed.js"></script>
+
+<p>To prototype the script, I divided an A4 sheet into 4 parts and then folded them half. Then I numbered the pages as they usually are when you print them like two pages on one sheet. Next, I made a booklet out of the same and wrote the new page numbers as they should be for the booklet.</p>
+
+<p>Some mathematical induction and we had a simple formula to make a 4 spread, 16-page block. Then, to generate the complete book, one has to add some blank pages to complete the 16-page blocks..</p>
+
+<p>That is pretty much it. I have tested it at least 10 times and printed close to 1000 pages. It works. The script is available <a href="https://github.com/IndianTinker/spreadmaker">here</a>.</p>
+
+<p><strong>How to use it</strong></p>
+
+<p>Clone the <a href="https://github.com/IndianTinker/spreadmaker">git repo</a>. Make sure you have the dependencies ‘pip’ed like pyPDF2. Try doing <code class="highlighter-rouge">pip install pyPDF2</code> to install it.</p>
+
+<p>Then paste the pdf you wish to convert in the repo folder. Rename it as <em>in.pdf</em> and then run the script from the terminal using <code class="highlighter-rouge">sudo python spreadmaker.py</code> . You should have an <code class="highlighter-rouge">out_final.pdf</code>. That the file. Delete the other <code class="highlighter-rouge">out.pdf</code> file. You can print the pages in two on one style and then grab the top 4 and fold it in half. You should see the numbers falling in place. Then bind it using the kettle stitch method.</p>
+
+<p><strong>Future Improvements</strong></p>
+
+<p>The script is ‘hacky’. Some obvious improvements are:</p>
+
+<ul>
+  <li>GUI to do the same</li>
+  <li>Not using the interim <code class="highlighter-rouge">out.pdf</code> file.</li>
+  <li>Using file at any location.</li>
+  <li>Add custom blank pages to maintain pdf odd-even page formatting.</li>
+  <li>A PDF preview</li>
+  <li>Scaling option to zoom in dense books/journals</li>
+  <li>Allowing the operation of encrypted files.</li>
+</ul>
+
+<p>I know this may be achievable using pdf software like acrobat. But since, I am on Linux, I seem to have no better option than to write one snippet for myself. Plus its lot of fun.</p>
+
+<p>Hoping that someone finds it useful.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+
+</div>
+<br>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2018/06/30/ExitIDC/">
+            Clearance Processes at IDC
+            <small>30 Jun 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/04/04/Addresable/">
+            Repurposing mass market addressable LEDs
+            <small>04 Apr 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/12/03/fand/">
+            FAND - shareable haptic foot interface device
+            <small>03 Dec 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+<br>
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'indiantinker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+</div>
+
+    </div>
+
+
+  </body>
+</html>

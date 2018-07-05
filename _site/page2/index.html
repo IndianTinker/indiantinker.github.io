@@ -480,6 +480,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -524,59 +528,56 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2018/04/04/Addresable/">
-        Repurposing mass market addressable LEDs
+      <a href="/2018/05/30/Spreadmaker/">
+        Spreadmaker- A tool to generate spreads for hand binding
       </a>
     </h1>
 
-    <span class="post-date">04 Apr 2018</span>
+    <span class="post-date">30 May 2018</span>
 
     <blockquote>
-  <p>This post describes an hack that allows one to re-purpose commonly available “fighter LED strips” to work with standard Neopixel firmwares. Also, this is my first post written in VIM \m/ . I have been having a good time using it.</p>
+  <p>The post describes a handy python script to convert usual pdfs into spreads of 8. The printed pdf can be bound by hand.</p>
 </blockquote>
 
-<p>Recently, I was working on a design project that required me to produce illumination in different parts of a stair step and across different stairs. The obvious answer would be to use the WS2811/2812 LED strips. But, they can be very expensive and especially very difficult to procure in bulk quantities in India. The design was capped on the cost. The budget for LEDs was max 1000. I liked the idea, it satisfied the brief but only the cost variable was pushing it down.</p>
+<p>Thanks to my project guide, <a href="http://www.idc.iitb.ac.in/~girish/index_mr.html">Prof. Girish</a>, who inspired me to write this by asking me to read more stuff.</p>
 
-<p>It all changed on a recent trip to Pune. Pune has this power you see. I was half asleep in the bus when it stopped at the chikki corner in Lonanvala. Glancing outside with trivial expectations, I saw a “bhel corner” with Nyan cat type LEDs. I thought I was partially dreaming. I went outside and enquired. It was for real. The whole place was lit up with addressable LEDs. I looked around for signs of prosperity. None.</p>
+<p>During my project days (and even now), I used to print papers from several journals to read and reflect upon. The tangibility of paper provides a far better reading experience than e-books. I have given up on e-reading as it strains my eyes, difficult to make notes on side and record keeping is difficult. If something is more than 25 pages, I usually print it and read it. But I do try to save as much as paper possible.</p>
 
-<p>On enquiring, he says these strips cost him 850 rupees. They are available everywhere. Sceptically, I thought it might as well be available in Mumbai. The conversation ended with an extended Thank You and I was back to sleep, but planning my next trip to the worst electronics market i.e. Lamington . If its that cheap, there is tons of stuff that could be done, that was earlier rejected (like pixel walls)  due to budget constraints. These thoughts kept racing.</p>
+<p>The common way to save paper was to print two pages on one sheet. But the manner in which the pages came out was very cumbersome to handle and did not give much joy while reading. While printing one of my favorite journals, <a href="https://link.springer.com/journal/11023">Mind and machines</a>, I came up with an idea of making a script that would convert the pdf by re-arranging the pages to form an 8-page booklet. This booklet could later be bound into a book.</p>
 
-<blockquote>
-  <p>Next paragraph might seem to be a rant. Skip if you wish.</p>
-</blockquote>
+<p>The art of bookbinding had already enticed me and I was binding my own books for almost a semester then (and now too). So, It would be easier to bind them using <a href="https://www.youtube.com/watch?v=9O4kFTOEh6k&amp;t=334s">kettle stitch technique</a> and I might end up having a readable journal/book.</p>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BPSDTUhlEm0/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BPSDTUhlEm0/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-01-15T10:42:20+00:00">Jan 15, 2017 at 2:42am PST</time></p></div></blockquote>
+<script async="" defer="" src="//www.instagram.com/embed.js"></script>
 
-<p>I visited Lamington post 5pm today. But yeah, I hate Lamington. Rational arguments? I am from Delhi (partially Pune). Delhi has Lajpat Rai Market. You can get tons of stuff there. Shopkeepers are there to make money. Do dhanda. Even if its Mehta, he will sell you stuff. But in Mumbai, they just shoo you away. I had to convince, Vega to give me a soldering iron bit that I saw in his poster. Thats the thing I am talking about. Let alone going inside, rummaging and getting things for you. I usually prefer ebay over lamington. LR–ebay–Abort(if unnecessary)–Lamington. The market in Delhi is very well packed together and addressable. Shops have numbers and everybody knows stuff. In Mumbai, Lamington is a hybrid Nehru Place, Wazirpur, and LR. The most useful part is just one row with switch point. Vega and Gala are Mehta’s of this place.The electronics market is also quite scattered. Another important point is the lack of cross referencing. In Delhi, usually, if someone does not have anything, he will guide you to another shop. Even if you ask a random shop to help you with the list, he would help you. Here its toooo competitive. X will not tell you the name of Y. He will straight away ignore this request like a bot. “ I don’t know” . There has been instances, where I got stuff just in the adjacent shop. So, its a dead end. Reload. This hampers the generation of a map of a market i usually use to plan my trips. For example, initially, It used to take me about 3-4 hours to get stuff in LR. Now, I hardly takes me an hour. Yes, I visit LR every time I am in Delhi.</p>
+<p>To prototype the script, I divided an A4 sheet into 4 parts and then folded them half. Then I numbered the pages as they usually are when you print them like two pages on one sheet. Next, I made a booklet out of the same and wrote the new page numbers as they should be for the booklet.</p>
 
-<p>So, I got the soldering bit and went on to search for the addressable LEDs. No one is ready to understand what I am saying. I even drew a picture of it. After spending about 2 hours. I laid my guns and started back for the station. I noticed near the station an audio equipment vendor has the exact same LEDs. I, kind of, beg him to tell me where he got them. I was pointed to go to Lohar Chawl, Kalbhadevi. He advised me to take a cab to a lane there they sell light fittings. A few stores there have these LEDs. These LEDs are difficult to find here in Lamington. Bingo, I took a cab and wondered about Kalbhadevi and Chawri Bazaar. Mumbai wins here. Kalbhadevi is like a paradise. It has anything you need. Mechanical shops, good vendors and helpful people. I reached Lohar Chawl, moved around a few shops, no luck here. One final shop, I thought. I drew again and explained him what I want. He said, <em>“Oh! You need a fighter LED strip?”</em> . I said, Ok? Let me see. He showed me and my eyes were wet and I bought it irrationally without bargaining the price. The thing costed me 650 for 5m. I later found a vendor who sold it to me for 450 too. Both were identical. So, <strong>fighter LED</strong> is the street name for addressable LEDs.</p>
+<p>Some mathematical induction and we had a simple formula to make a 4 spread, 16-page block. Then, to generate the complete book, one has to add some blank pages to complete the 16-page blocks..</p>
 
-<p>The default roll looked like this :</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h5TnJSPjE-A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<p>That is pretty much it. I have tested it at least 10 times and printed close to 1000 pages. It works. The script is available <a href="https://github.com/IndianTinker/spreadmaker">here</a>.</p>
 
-<p>It has a WS2811 chip that drives 3 RGB 5050 LEDs per segment. 
-<img src="https://i.imgur.com/121xV90.jpg" alt="Imgur" /></p>
+<p><strong>How to use it</strong></p>
 
-<p>The strip is powered by a 3A, 12V adapter. 
-<img src="https://i.imgur.com/k41Rjgg.jpg?1" alt="Imgur" />
-<img src="https://i.imgur.com/IkkiIpH.jpg" alt="Imgur" /></p>
+<p>Clone the <a href="https://github.com/IndianTinker/spreadmaker">git repo</a>. Make sure you have the dependencies ‘pip’ed like pyPDF2. Try doing <code class="highlighter-rouge">pip install pyPDF2</code> to install it.</p>
 
-<p>The controller is built on the strip. This is the coolest part.
-<img src="https://i.imgur.com/lJBTUWH.jpg" alt="Imgur" /></p>
+<p>Then paste the pdf you wish to convert in the repo folder. Rename it as <em>in.pdf</em> and then run the script from the terminal using <code class="highlighter-rouge">sudo python spreadmaker.py</code> . You should have an <code class="highlighter-rouge">out_final.pdf</code>. That the file. Delete the other <code class="highlighter-rouge">out.pdf</code> file. You can print the pages in two on one style and then grab the top 4 and fold it in half. You should see the numbers falling in place. Then bind it using the kettle stitch method.</p>
 
-<p>The name etching on the controller chip was sanded off, as expected. There was a 5V Zener to regulate power to the uC with a generous capacitor. 
-<img src="https://i.imgur.com/33AqQ71.jpg?1" alt="Imgur" /></p>
+<p><strong>Future Improvements</strong></p>
 
-<p>I removed 4 segments of 3 LEDs each from the end of the strip and soldered a DC jack to it.
-<img src="https://i.imgur.com/OybKC3G.jpg" alt="Imgur" /></p>
+<p>The script is ‘hacky’. Some obvious improvements are:</p>
 
-<p>I used the Tah board to give the strip a try. Did the usual stuff, Neopixellibrary and using 4 as LED number instead of 12 is the key here.
-<img src="https://i.imgur.com/hJ5Dsnp.jpg" alt="Imgur" />
-You essentially have 4 segments. The defaults worked. The only issue is the Blue and Green commands are reversed. So, whenever the Blue command was initiated from the Arduino in Tah Avatar, the green leds were lit. 
-<img src="https://i.imgur.com/eOczHqg.jpg" alt="Imgur" />
-That is a minor issue. But the best part is I have an addressable LED strip that I can program for cheap and most importantly, available in bulk.</p>
+<ul>
+  <li>GUI to do the same</li>
+  <li>Not using the interim <code class="highlighter-rouge">out.pdf</code> file.</li>
+  <li>Using file at any location.</li>
+  <li>Add custom blank pages to maintain pdf odd-even page formatting.</li>
+  <li>A PDF preview</li>
+  <li>Scaling option to zoom in dense books/journals</li>
+  <li>Allowing the operation of encrypted files.</li>
+</ul>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4fw5S28d51I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<p>I know this may be achievable using pdf software like acrobat. But since, I am on Linux, I seem to have no better option than to write one snippet for myself. Plus its lot of fun.</p>
 
-<p>Do let me know if this was useful. I am building stuff using these LEDs now. Ok, Bye!</p>
+<p>Hoping that someone finds it useful.</p>
 
 <p>Cheers,</p>
 
