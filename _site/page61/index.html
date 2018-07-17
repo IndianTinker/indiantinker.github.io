@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,76 +548,40 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/06/29/LiTiny/">
-        LiTiny- A Tiny LiIon charger for most things battery
+      <a href="/2015/10/06/Tamhini/">
+        Tamhini Ghats
       </a>
     </h1>
 
-    <span class="post-date">29 Jun 2015</span>
+    <span class="post-date">06 Oct 2015</span>
 
-    <p>Lithium Batteries are indispensable. I have a few project like my own <em>DIY Badge [Post Soon]</em> or a <em>Light Wand for Light Photography</em> and an in-progress Mobile Rejuvenator which use lithium batteries ,usually those re-purposed ones that are sold in Local markets for Solar Lanterns with a capacity of 1100mAh.</p>
+    <p>After a pretty busy and drenching week, it was time to escape into the wilderness of the Ghats surrounding Pune. These pictures were captured on the ride to Tamhini Ghat near Pune. Getting there is pretty straight forward. When coming from Pune, just reach Pirangut Crossing and take the turn to Tamhini. Then just ride and let yourself dissolve into the calm and cool gusts of air. You will notice some waterfalls on the way. Their vigor depends on the abundance of rain</p>
 
-<p>The lazy me used to charge them with a diode drop of 0.7V from the USB Line making the constant charging voltage of 4.3-ish to get things done. Okay ! Okay ! I know this is the wrong way as there is a charging curve to be followed and over-voltage protection is required etc. and the most cumbersome part, you have to keep checking the battery voltage again and again to make sure its within the spec. Dahhh! To much work when you have a few of them to charge.</p>
+<p>The road quality is average and very bad in some parts and inviting in some. Ride carefully.</p>
 
-<p><strong>Li Ion Charger Required</strong></p>
+<p>Some places to eat are Bashos and Paradise Cafe. You may also try some local foods on Dhabas on the road. The one that we went to served lightly spiced and watery Dal and ‘Lobiya’ with Rice and Chapatis.</p>
 
-<p>There are tons of them available over ebay/dx/other maker sources but it all boils down to two chips :</p>
+<p>Some pictures :</p>
 
-<ul>
-  <li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903">MCP73831</a> Tiny SOT23-5 Pkg and promise of 550mA Charging current</li>
-  <li><a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf">TP4056</a> SOIC with T-Pad and 1A Charging Current</li>
-</ul>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349596064/in/dateposted-public/" title="Roof"><img src="https://farm6.staticflickr.com/5658/21349596064_cdba549b93_z.jpg" width="640" height="474" alt="Roof" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I went for the Easy to solder and higher charging current based TP4056 and turns out is was almost 40% cheaper too. Since both were linear (read as hot) so it might make SOIC better heat dissipater than SOT23-5 due to the area.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21946135126/in/dateposted-public/" title="Edges"><img src="https://farm1.staticflickr.com/657/21946135126_72d540dd76_z.jpg" width="640" height="474" alt="Edges" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>There are a lot of boards selling for 1.2$ a pop for this particular chip, ready to use. But,</p>
-<blockquote>
-  <p>Why buy, When it can be built.</p>
-</blockquote>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349545174/in/dateposted-public/" title="Flow"><img src="https://farm6.staticflickr.com/5761/21349545174_664417f8c1_z.jpg" width="640" height="480" alt="Flow" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Also none of the boards satisfied both my needs together:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21972284855/in/dateposted-public/" title="Sparkling Fall"><img src="https://farm6.staticflickr.com/5619/21972284855_6a25940a59_z.jpg" width="640" height="474" alt="Sparkling Fall" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<ul>
-  <li>Control I/F with a MCU</li>
-  <li>Micro USB</li>
-</ul>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21785342979/in/dateposted-public/" title="Where is the rain ?"><img src="https://farm6.staticflickr.com/5806/21785342979_050f5ebc0b_z.jpg" width="640" height="556" alt="Where is the rain ?" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>So, i went of to design my own based on the datasheet. The circuit is pretty easy and straight forward.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21349410254/in/dateposted-public/" title="Wildcraft"><img src="https://farm6.staticflickr.com/5764/21349410254_62220d902e_z.jpg" width="640" height="480" alt="Wildcraft" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<center>
-<img src="http://www.seekic.com/uploadfile/ic-circuit/2011620204447955.jpg" />
-</center>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21945971976/in/dateposted-public/" title="Focused Colors"><img src="https://farm1.staticflickr.com/715/21945971976_3dc0191c16_z.jpg" width="640" height="480" alt="Focused Colors" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>There were only the following changes:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21945948766/in/dateposted-public/" title="Hey! Fellas.."><img src="https://farm6.staticflickr.com/5644/21945948766_5ac8ebe018_z.jpg" width="640" height="640" alt="Hey! Fellas.." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<ul>
-  <li>I provided a jumper for <code class="highlighter-rouge">CE</code> pin to be connected either to a pin head (for MCU Control) or VCC (Auto)</li>
-  <li>Extended the <code class="highlighter-rouge">!CHRG</code> and <code class="highlighter-rouge">!STBY</code> to end to a pin head too.</li>
-  <li>Provided a common ground to i/f</li>
-  <li>Added microUSB and a 90degree pinheader for my batteries.</li>
-</ul>
+<p><strong>Please Note</strong>: Major part of the roads around Tamhini have little to no street lighting, which is especially dangerous when the road is filled with potholes. So better make it back on time.</p>
 
-<p>Here is the build process:</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768590175" title="Ready to be etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7725/17768590175_3550a199cd_z.jpg" width="640" height="359" alt="Ready to be etched" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765917222" title="Just from the Acid Bath by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8739/17765917222_2ebe37fa22_z.jpg" width="640" height="359" alt="Just from the Acid Bath" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17146111014" title="Drilled and Cleaned by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5329/17146111014_a6c13d9568_z.jpg" width="640" height="359" alt="Drilled and Cleaned" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17580781998" title="PCB by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17580781998_ecd6301856_z.jpg" width="640" height="359" alt="PCB" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17765876082" title="Checking if the uUSB is properly soldered by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5345/17765876082_d93f8bbbd1_z.jpg" width="640" height="537" alt="Checking if the uUSB is properly soldered" /></a></p>
-
-<p>During Charging:
-<a href="https://www.flickr.com/photos/94411929@N06/17765884992" title="Charging in progress by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7760/17765884992_4a0f9a0a45_z.jpg" width="640" height="359" alt="Charging in progress" /></a></p>
-
-<p>After charge Termination:
-<a href="https://www.flickr.com/photos/94411929@N06/17148219053" title="The Battery just got charged ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8881/17148219053_cebbaa92c7_z.jpg" width="640" height="359" alt="The Battery just got charged !" /></a></p>
-
-<p>In the end I had a LiIon charger capable of charging batteries @700mA restricted due to thermal dissipation limits of home made PCBs.</p>
-
-<p>Cheers,</p>
+<p>Cheers !</p>
 
 <p>Rohit</p>
 

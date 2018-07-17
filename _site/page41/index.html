@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,69 +548,42 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/12/10/karigar/">
-        CNCs & Me 3 - Karigar
+      <a href="/2016/03/19/ARCards/">
+        Augmenting Reality with Visiting Cards
       </a>
     </h1>
 
-    <span class="post-date">10 Dec 2015</span>
+    <span class="post-date">19 Mar 2016</span>
 
-    <p>Machines are beautiful. Building them is even more amazing. It was final project time at my undergrad school and we wanted a great project to close the 4 years of learning we had at DTU. I wanted to build a CNC. A cheap,working,POC CNC.</p>
+    <p>Augmented Reality? Virtual Reality? Reality Intervention? Such Reality, Much Wow!</p>
 
-<p>Unfortunately getting a team for demanding project is difficult as most people are preparing for exams for higher education and they seldom have time to sit down and build something. Hence, most projects are simulations in the virtual worlds of MATLAB, Labview etc. I dont hate simulations, they are required but making things is more satisfying. Hence only simulation is a no-go for me. Simulation + Actual things is always a <em>Thumbs UP</em> !</p>
+<p>We humans have always had the craving for <em>not-so-real</em> things. Books, Theatre, Movies embody the idea and use various mediums to present the cooked up reality. But the keyword <strong>Personal</strong> is IN. This word also has its own story whose value has decreased from the time of Personal Chauffeur to Uber. We now consume reality personally.</p>
 
-<p>Fortunately, few of my friends agreed to work with me on it and quite thankfully we put up a great show for everyone at the demos.</p>
+<p>So, instead of Tony,the Iron Man acting the same way for a billion earth inhabitants, we want him to be personal. Some don’t want him to hit the Hulk, some want him to probably not drive the R8 and rather drive the Lamborghini (I vehemently disagree to this one) .</p>
 
-<p>I started with making the control circuits for the CNC first as opposed to the actual CNC first as the circuits were mostly trivial and had some stepper drivers and an Arduino brain with GRBL running on. I designed my own stepper drivers based on DRV8825 drivers from TI . With all things in place. I tested my electronics with Nadya Peek’s MTM SnapCNC available at TI-CEPD, NSIT.</p>
+<p>So, the crux is mediums are becoming personal and so is their content. Things will happen this way as these <em>“Things”</em> are getting more affordable.</p>
 
-<p><em>Thanks to Prof. Gadre</em></p>
+<p>This time I thought of making some sense of the Augmented Reality. 
+With the growing trend of things that seem real but are not, I present to you ladies and gentlemen the <strong>AR Cards</strong>.
+These cards are basically pumped up visiting cards that enable users to project 3D models of their products/creations on their business cards using a Phone that has a camera. They can explain things in depth by moving the cards or phone relative to each other. I made one for myself with my favourite car , <em>Chevy Camaro</em> on it.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21328576476/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5835/21328576476_b1a24eb625_z.jpg" width="640" height="359" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>I also added some value to the Vcard by adding a scale to measure things. I kind of like <a href="/2016/01/01/MakersRule/">scales</a>. There is the usual QR code.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21168959808/in/dateposted-public/" title="Me and CNCs"><img src="https://farm6.staticflickr.com/5716/21168959808_44edd750be_z.jpg" width="640" height="360" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25270472733/in/dateposted-public/" title="Front Side with a usable scale"><img src="https://farm2.staticflickr.com/1639/25270472733_53bae50a27_z.jpg" width="640" height="480" alt="Front Side with a usable scale" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Now, came the difficult part. We need to learn a CAD package so that we can design our frugal machine. We opted for FreeCAD. If you are interested in learning, we used <a href="https://www.youtube.com/watch?v=xs1mFiJBYIo">this</a> and <a href="https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g">this</a>.</p>
+<p>On the back we have the <em>marker</em> that is used by the App to gauge the position and orientation of the object to be placed. The marker is at an offset, so that makes enough space for a note which we usually scribble on the card <em>somewhere</em>. Now that somewhere as a space for it.</p>
 
-<blockquote>
-  <p>The entire project is explained elaborately in our thesis <a href="https://drive.google.com/file/d/0B8DZ3bqHurUVWlZ2a29TVnRONGtVZ2hsY3V4MkxubksxSG9R/view?usp=sharing">here</a>. CAUTION: PDF and LaTeX !</p>
-</blockquote>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25778418582/in/dateposted-public/" title="Marker Image for AR"><img src="https://farm2.staticflickr.com/1524/25778418582_bbbafbf4cb_z.jpg" width="640" height="480" alt="Marker Image for AR" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>After months of work and several visits to <strong>Chawari Bazaar</strong> and <strong>Lajpat Rai</strong>, we were able to have a working one that did wood easily. Our frame was made with wood and as the CNC Thumb Rule goes !</p>
+<p>The screen-shots from the mobile app !</p>
 
-<blockquote>
-  <p>A CNC can only work with materials that are softer than the material of the structure.</p>
-</blockquote>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25899192545/in/dateposted-public/" title="3D Object mapped on the marker"><img src="https://farm2.staticflickr.com/1612/25899192545_375d9f0a32_z.jpg" width="640" height="360" alt="3D Object mapped on the marker" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The cutting head is made using the <strong>Dremel</strong> and the Z axis is made of re-purposed drawer slides. In fact basically everything is re-purposed except the linear rods and bearings. I still have countless memories of the shops we visited for our project, located in small dingy and cramped lanes of Old Delhi in places which must not be named. We had to talk a lot so they would sell us in low quantity.</p>
-
-<p>Check out the pictures of the project below.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896935135/in/dateposted-public/" title="WP_20150308_007"><img src="https://farm2.staticflickr.com/1512/25896935135_c26c78503a_z.jpg" width="640" height="359" alt="WP_20150308_007" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25896933575/in/dateposted-public/" title="WP_20150308_010"><img src="https://farm2.staticflickr.com/1537/25896933575_7d74c62331_z.jpg" width="359" height="640" alt="WP_20150308_010" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211953/in/dateposted-public/" title="WP_20150308_008"><img src="https://farm2.staticflickr.com/1501/25268211953_d18a5c721b_z.jpg" width="640" height="359" alt="WP_20150308_008" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25268211923/in/dateposted-public/" title="WP_20150308_009"><img src="https://farm2.staticflickr.com/1668/25268211923_3a95218f4e_z.jpg" width="640" height="359" alt="WP_20150308_009" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21167775699/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/742/21167775699_c85d901429_z.jpg" width="359" height="640" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Here is a ARM we milled for a dear friend of our who happens to a serious gyming enthusiast.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736205563/in/dateposted-public/" title="Me and CNCs"><img src="https://farm1.staticflickr.com/666/20736205563_38466e2c14_z.jpg" width="612" height="612" alt="Me and CNCs" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Looks like it wont work? Well it does work and cuts circles for the <a href="/2015/12/11/fumeex/">FumeEx</a>:</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/FxMoRauk4EU" frameborder="0" allowfullscreen=""></iframe>
-
-<p>I recently de-commissioned the machine. I worked, but not very well (Its hard to acknowledge this fact). I am using the parts to build something.</p>
-
-<p>So, until next post …</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25804236331/in/dateposted-public/" title="3D Object Mapped"><img src="https://farm2.staticflickr.com/1511/25804236331_d6ec513989_z.jpg" width="640" height="360" alt="3D Object Mapped" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

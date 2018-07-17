@@ -4,7 +4,7 @@ title: Making processing and fluidsynth talk
 image: https://blog.adafruit.com/wp-content/uploads/2012/09/256px-Processing_Logo_Clipped.svg_.jpg
 location: IDC IIT Bombay India
 tags:
-- design
+- python
 ---
 
 Just a quick post if you are interested in triggering notes from Processing to Fluidsynth. It could be great if your works have a visual component and you need responsive notes in the background that you wish to play using your soundfont via Fluidsynth. 

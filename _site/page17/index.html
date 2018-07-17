@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,197 +548,232 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/04/01/bamboo/">
-        Hacking with Bamboo in the Field
+      <a href="/2017/08/31/ContribOSM/">
+        Contributing to OSM using JOSM
       </a>
     </h1>
 
-    <span class="post-date">01 Apr 2017</span>
+    <span class="post-date">31 Aug 2017</span>
 
     <blockquote>
-  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Field Study and Design</strong>. It involved students innovating while living in the context. Living in a village for a few weeks and building cool stuff. Sounds exciting.</p>
+  <p>This post is meant to document to process of uploading data points gathered as a part of <a href="https://info-design-lab.github.io/">Interactive Data Viz</a> course at IDC taught by Prof. Venkat.</p>
 </blockquote>
 
-<h2 id="build-up">Build Up</h2>
-<p>It started with a poster, I saw when we had to choose our electives for this semester. Riding the segmentation feeling that this might be a product design course and hence, I should probably not take it, I took a course on Postmodernism. But, the poster stayed there and triggered an interrupt in the mind. It had all the likable qualities of a course - Outdoor, Gujarat, Making and Freshness. It took a while for the intellectual capacitance to charge the gates of my decision gates ( Shit that was good ) and I asked the course instructor, Prof. Nishant Sharma, in staircase one-day that I was interested in the course. He was open and asked me to mail him, which I promptly did.</p>
+<h2 id="goal">Goal</h2>
+<p>The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to <a href="https://www.openstreetmap.org">openstreetmaps</a>. This would allow the class to cperform a <strong>data mash-up</strong>. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.</p>
 
-<p>We met and he approved me for the course. That’s not it. A great battle has to start. I unregistered myself from Post-modernism and the system won’t allow me to register for this, on the last day of course registration. The course was capped at 8. I was the 8th student. I did all the office - to- office to find where the problem was. No one knew. It was depressing. No one knew what the problem was. It turned out that the course would only accept “PD” or “MVD” guys. No one knew about this restriction. I was eventually given a 30 min window to register. Tada!</p>
+<h2 id="data-collection">Data Collection</h2>
 
-<h2 id="preparation">Preparation</h2>
+<p>There are several ways to collect data:</p>
 
-<p>The course involved students going in a village in Gujarat- Ambapada , known for its Bamboo crafts and then study the context and design products that the craftsmen could actually make using their current skill set and they should be modern and functional. Then later, we would <em>transfer</em>the design to the craftsmen who could make it and sell it.</p>
+<ul>
+  <li><strong>Manual method</strong> : It involves taking a printout of your area under exploration using <a href="http://fieldpapers.org/">Field papers</a> and then once in the field, one marks places on the map. These positions are then manually plotted on the OSM map using their online editors or JOSM. The drawback of this methods is the accuracy. Since, the marking is relative, missile accuracy is often difficult to achieve. The advantage is that it allows more freedom and can work without phones. Hence, if a mapathon is organized then it would be better to use such a method that reduces the dependency on phones. There could be a specific group of people who would collect these sheets and mark these points on OSM later. Thanks for the tip, <a href="https://www.mapbox.com/about/team/rasagy-sharma/">Rasagy</a>.</li>
+  <li><strong>Apps</strong> : There are several Apps for <em>Android</em>. The goal is to essentially get a KML file. Most people used <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.m4b&amp;hl=en">Google MyMaps</a>. Other options are <a href="https://play.google.com/store/apps/details?id=np.com.softwel.swmaps&amp;hl=en">SWMaps</a> and <a href="https://play.google.com/store/apps/details?id=com.mapswithme.maps.pro&amp;hl=en">Maps.me</a>. iPhone users can use the web version of Google MyMaps and plot the data manually on it. It gets stored in gDrive. Then export the kml out of gDrive. This method was followed by Shilpa. If anyone knows of a better way, please be sure to suggest.</li>
+</ul>
 
-<p>The course was partially supported by <a href="http://www.baif.org.in/">BAIF</a> who offered us accommodation, workspace and access to the community at their campus and village.</p>
+<p>In conclusion, I think if the data is less (&lt; 20 points say) and precision is not required, then field paper method would be faster. This reduces the time wasted in converting formats. The data can then be replicated on the map using <a href="http://wiki.openstreetmap.org/wiki/ID">iD</a> or <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch2</a>(Flash alert!!). These editors are available online and many of my classmates with less number of points used them.</p>
 
-<p>We started with thinking about what we could do and things to take. I would take my electronics and I wanted to make something with electronics and also explore some forms. Before we left, we visited Kalbhadevi and Lamington to get stuff for our course.</p>
+<p>For a larger number of points we will proceed with JOSM method.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32422170074/in/album-72157680969109736/" title="DSC_1210"><img src="https://c1.staticflickr.com/3/2944/32422170074_5b033bbdab_z.jpg" width="640" height="426" alt="DSC_1210" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<h2 id="post-data-collection">Post Data Collection</h2>
 
-<h2 id="landing-and-prototyping">Landing and Prototyping</h2>
+<p><strong>Preparing data</strong></p>
 
-<p>After about 6 hours of drive from IIT, we reached the village <a href="http://wikiedit.org/India/Lachhakadi/163258/">Lachhakadi</a>, where BAIF’s Dhruva campus is located.</p>
+<p>Once you have your data points in KML or CSV or geoJson. You can proceed with the following process. It is advisable to have a geoJson file. It helps in running vizualization when using Mapbox. Helpful tools are :</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33769581365/in/album-72157680969109736/" title="BAIF"><img src="https://c1.staticflickr.com/3/2945/33769581365_f5b6d779a3_z.jpg" width="640" height="424" alt="BAIF" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+  <li><a href="https://mapbox.github.io/togeojson/">KML/GPX to geoJson</a></li>
+  <li><a href="http://geojson.io">geoJson to CSV</a></li>
+</ul>
 
-<p>After reaching, we visited the craftsmen village of Ambapada and their shops in Gira waterfalls in Saputara. It was great to see the way the craftsmen work by using ingenuous techniques like this Belt Sander made by BAIF’s Anant .</p>
+<p>The process I followed was KML –&gt; CSV –&gt;geoJson</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32422163944/in/album-72157680969109736/" title="DSC_1219"><img src="https://c1.staticflickr.com/1/694/32422163944_71f7552532_z.jpg" width="640" height="426" alt="DSC_1219" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><strong>Icons and OSM features</strong></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32926391724/in/album-72157680969109736/" title="Craftsmen"><img src="https://c1.staticflickr.com/4/3692/32926391724_8407b95cdb_z.jpg" width="640" height="472" alt="Craftsmen" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Like Mapbox’s Maki icons, OSM also has its own set of icons. They can be rendered on the map when you choose specific tags. The list of tags are mentioned <a href="http://wiki.openstreetmap.org/wiki/Map_Features">here</a>. The icons column on the page shows the icons that will be shown on the map. For example : I chose to map sitting places in IIT Campus. The most semantically suitable choice was of a bench. I used the ‘field’ as ‘amenity’ and value as ‘bench’. You can choose appropriately. The features can be added to the points using the CSV file. Once you have the CSV file you can add a new ‘column’ as amenity (in my case) using your favorite spreadsheet software. Now, in every ‘row’ i.e. for each data point add the value. This would be ‘bench’ in my case. You can have additional fields as well. It is preffered not to have spaces in between the words of the field. Use an ‘_’ .</p>
 
-<p>Marketplace at Gira falls. They sell stuff that they make , but mostly its the stuff from China.
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32926391544/in/album-72157680969109736/" title="Giragaun"><img src="https://c1.staticflickr.com/4/3789/32926391544_f938896ffa_z.jpg" width="640" height="481" alt="Giragaun" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Once this is done, you should have a dataset in csv we can proceed to map them on OSM. As an additional step, I also generate a geoJSON file.</p>
 
-<p>We spent the next few days, brain storming, material storming and ideating on things that we could do. I lost my sketchbook :(</p>
+<p>Rasagy suggested some <em>pro-tips</em> like :</p>
 
-<p>Not that It was any good. The ideas I had were torches, self-watering pots, holders, running windmill that changes color when your run, audio curtains, power banks, radios, xylophones, Solar lamps and some random electronics.</p>
+<ul>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the renderer</a>: The point is to collect the data and not have icons marked on the map. As many features might not have icons for them, it is suggested to mark real data.</p>
+  </li>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one element</a> : This point should be considered when adding details to already existing features. Instead of adding a new node/point for some area, it is better to include that detail in the existing polygon itself.</p>
+  </li>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/Key:operator">Operator- Key</a>: Since, facilities in IIT will probably be run by IIT. It is worthwhile to include an <em>operator</em> key in the data. For example: The staff canteen could have an “operator: IIT Bombay” tag.</p>
+  </li>
+</ul>
 
-<p>I sketched a few and showed it for review and then made prototypes. So, the schedule was:</p>
+<p>Some other tips i found <a href="http://wiki.openstreetmap.org/wiki/Good_practice">here</a> that deserve a mention are:</p>
 
-<ol>
-  <li>Wake up at 6:00-6:30 am</li>
-  <li>Walk to places around</li>
-  <li>Play Badminton</li>
-  <li>Have Breakfast till 8:30 am</li>
-  <li>Work in the shop till 12:30 pm</li>
-  <li>Lunch at 12:30 pm</li>
-  <li>Sleep for 20 mins</li>
-  <li>Workshop at 1:15 pm</li>
-  <li>Tea at 4:00 pm</li>
-  <li>Workshop till 8:30 pm</li>
-  <li>Dinner at 8:30 pm</li>
-  <li>Workshop/Sleep/Bonfire/Mela Visit</li>
-</ol>
+<ul>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Armchair_mapping">Refrain from Armchair mapping</a></li>
+  <li>Do not add temporary events on the OSM map. These could include things like Ganpati Pandals. One can use the <em>geojson on map</em> approach for this.</li>
+  <li>Map for verifiability. Hence, mapping historical events on OSM is not a good practise.</li>
+  <li>If you find that your data needs a new tag on OSM, then follow this <a href="http://wiki.openstreetmap.org/wiki/New_Features">new features</a> page .</li>
+</ul>
 
-<p>The workshop was this space. It was currently a testing ground for a Bamboo pen manufacturing system, a brainchild of Anant. Anant has his startup working with Bamboo products. He is a very interesting and brainy person. He helped us evaluate our ideas based on his knowledge of the locals and their biases.</p>
+<p><strong>OSM Contributing</strong></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32956522753/in/album-72157680969109736/" title="Workshop"><img src="https://c1.staticflickr.com/4/3954/32956522753_59b28591fb_z.jpg" width="640" height="426" alt="Workshop" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>As a class, we tried several methods. The following method uses the <a href="https://josm.openstreetmap.de/">JOSM IDE</a> to import the data as a map layer and then contribute it to OSM database. <strong>Before proceeding</strong>, check multiple times that your data fields are correctly rendered. You can test this <a href="http://geojson.io">here</a>. Once you update, it <em>might</em> be cubersome to update/edit them .</p>
 
-<p>Anant sitting on a chair made by Rishabh.
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33769579495/in/album-72157680969109736/" title="Anant"><img src="https://c1.staticflickr.com/3/2840/33769579495_04b42f0f04.jpg" width="368" height="500" alt="Anant" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>First, Download the <a href="https://josm.openstreetmap.de/">IDE</a>  for the OS of your own choice.</p>
 
-<p>Things we saw on walks and stuff would be like</p>
+<p>I have documented it for windows that came <a href="https://www.youtube.com/watch?v=wF_vKXrOtY8">bunduru</a>-ed with my machine.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32926391224/in/album-72157680969109736/" title="Upar"><img src="https://c1.staticflickr.com/4/3848/32926391224_2c3253a546_z.jpg" width="640" height="427" alt="Upar" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Once, the software is installed, we need to install a plugin called <em>OpenData</em> this enables JOSM to read csv files. Press F12 or Edit -&gt; Pref and choose plugins and type opendata. You may want to do Download list before. Then check the box and click OK. This installs OpenData plugin.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33640469741/in/dateposted-public/" title="gai"><img src="https://c1.staticflickr.com/3/2912/33640469741_f2624b9ab3_z.jpg" width="640" height="479" alt="gai" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326825/in/album-72157686030264413/" title="opendata"><img src="https://farm5.staticflickr.com/4410/36952326825_4062955f0f_z.jpg" width="640" height="621" alt="opendata" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33385035210/in/dateposted-public/" title="patte"><img src="https://c1.staticflickr.com/3/2949/33385035210_e82c3d993e_z.jpg" width="640" height="478" alt="patte" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Now we need a map layer to work on. The preffered way is to use ‘open location’ option from ‘File’ menu option. You are presented with the following dialog.</p>
 
-<p>Food was like</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725461/in/album-72157686030264413/" title="FileDownload"><img src="https://farm5.staticflickr.com/4367/36812725461_07f1def4bb_z.jpg" width="590" height="298" alt="FileDownload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33680158466/in/album-72157680969109736/" title="IMG_20170124_130147"><img src="https://c1.staticflickr.com/4/3741/33680158466_64c7a7051e_z.jpg" width="640" height="480" alt="IMG_20170124_130147" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>In this dialog, paste the url of the map you wish JOSM to pull. In my case, it was this <a href="http://www.openstreetmap.org/#map=15/19.1337/72.9126">http://www.openstreetmap.org/#map=15/19.1337/72.9126</a>.</p>
 
-<blockquote>
-  <p>Lets get back to work</p>
-</blockquote>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326615/in/album-72157686030264413/" title="osm"><img src="https://farm5.staticflickr.com/4404/36952326615_fcddd6a18f_z.jpg" width="640" height="341" alt="osm" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Prototyping was done and then call was to be taken on what to do. I ended up making the running rotating windmill, holders, agarbatti holder cum packaging and power bank.</p>
+<p>Once downloaded, I got this.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33265657455/in/album-72157680969109736/" title="IMG_20170128_180502"><img src="https://c1.staticflickr.com/1/696/33265657455_c991e84c5c_z.jpg" width="480" height="640" alt="IMG_20170128_180502" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326985/in/album-72157686030264413/" title="result"><img src="https://farm5.staticflickr.com/4337/36952326985_bd8d70a0a7_z.jpg" width="640" height="337" alt="result" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The products were designed studying the current craftsmen and their resource availability and the demands and trends in their possible markets like Gira Waterfalls and Surat. Products designed by everyone were fantastic and showed a great deal of craftsmanship.</p>
+<p>By the this point, we have a base layer ready. Now, I opened the csv file. The usual File –&gt; Open way .</p>
 
-<p>To test how craftsmen would bring things and also to bring some magnets and hardware we also conducted a one-day return journey to Mumbai by Flying Rani Express that stops at Bilimora Station. This journey alone is worth a blog post. Hashtags : #FreezingColdBikeRide #2xDDLJTrainScene #Fine #NoFood #MumbaiBhraman #DeadTired</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737856/in/album-72157686030264413/" title="openfiles"><img src="https://farm5.staticflickr.com/4382/36764737856_5857da0a1e_z.jpg" width="640" height="411" alt="openfiles" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>We also visited Surat and Dandi on a day off. It was an amazing trip. Surat is an amazing city. We visited SVNIT, Diamond Museum, Science Center, Sasuji Thali, Public Aquarium (They have sharks) etc.</p>
+<p>My file is ‘points.csv’.Click Open. In the popup while importing CSV. The default options worked.
+The file gets rendered correctly over the base layer as points. In my case the color of points was cyan.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33223960096/in/album-72157680969109736/" title="DSC_1315"><img src="https://c1.staticflickr.com/4/3674/33223960096_5cdf047c92_z.jpg" width="640" height="426" alt="DSC_1315" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33109646042/in/album-72157680969109736/" title="DSC_1314"><img src="https://c1.staticflickr.com/4/3709/33109646042_24833f75ca_z.jpg" width="640" height="426" alt="DSC_1314" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33640714981/in/album-72157680969109736/" title="shark"><img src="https://c1.staticflickr.com/4/3840/33640714981_50bb8c6b19_z.jpg" width="640" height="484" alt="shark" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33613342302/in/album-72157680969109736/" title="oops"><img src="https://c1.staticflickr.com/4/3935/33613342302_0b37cc18a5_z.jpg" width="640" height="476" alt="oops" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33613342852/in/album-72157680969109736/" title="thali"><img src="https://c1.staticflickr.com/4/3764/33613342852_914fc929e7_z.jpg" width="640" height="473" alt="thali" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>In Dandi, we visited memorial and beach.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33137198861/in/album-72157680969109736/" title="DSC_1306"><img src="https://c1.staticflickr.com/4/3802/33137198861_b9a0fba0ff_z.jpg" width="640" height="426" alt="DSC_1306" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Beach</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33137208461/in/album-72157680969109736/" title="DSC_1282"><img src="https://c1.staticflickr.com/1/622/33137208461_af7978d5a0_z.jpg" width="640" height="426" alt="DSC_1282" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>One day we had fun bonfire too.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33109766552/in/album-72157680969109736/" title="IMG_20170130_222425"><img src="https://c1.staticflickr.com/4/3917/33109766552_cfc5e9991f_z.jpg" width="640" height="480" alt="IMG_20170130_222425" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<h2 id="design-transfer-and-training">Design Transfer and Training</h2>
-
-<p>The next step was to train the local craftsmen to produce the things that we had designed. This part was rather interesting part of the design out of the studio theme of the course. The craftsman who chose to make my holder, Satish was from a nearby village. I used methods of contextual inquiry to learn more about his work. He is sufficiently technically literate. Has an Android phone, but carries a Nokia Asha. He has DTH TV system and uses the Internet also. He showed me the photos of his previous exhibitions around the country. He travels with his elder brother and works on bamboo making things like whistles, peacocks and gifting materials. He also works on his land, but the yield was probably not much. He was introduced to this art by his father. They are not from Gujrat and are Maharashtrians. No wonder he could make sense of my senseless Marathi.</p>
-
-<p>To enable him to replicate my design of a keychain/Toothbrush holder inspired from a shark’s jaw, I made a template that had to be used on a bamboo piece and then I gave him my version of it. We made two iterations.</p>
-
-<p>First one was made using my template, But due to fact that he was more familiar with the material, he could actually cut down the time and work required to make it. I took 4 hours to make it and he did it in 25 mins. Material Masters are a thing.</p>
-
-<p>The next time he did not use the template. It was faster, but it was not as finished as it should be. He said it would be fine if he could make a few more. This actually helps us understand the fundamental difference in which how we think we will teach them by handling them the plans and how they take it as an incremental addition to their “can-do” things.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33265654095/in/album-72157680969109736/" title="IMG_20170203_113040"><img src="https://c1.staticflickr.com/4/3859/33265654095_65305d35c1.jpg" width="375" height="500" alt="IMG_20170203_113040" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>I did some electronics hacking too. We basically hacked a locally available Ni-Mh Solar Lantern to be charged with a USB charger. Recipe? Current Sources. It worked great. I frankly am in love with Current Sources since then.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33109768582/in/album-72157680969109736/" title="IMG_20170131_184153"><img src="https://c1.staticflickr.com/4/3780/33109768582_d078b949b9.jpg" width="500" height="375" alt="IMG_20170131_184153" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<h2 id="exhibition-and-public-showcase">Exhibition and Public Showcase</h2>
-
-<p>The last part was to gauge public sentiments on the products we made and ask for feedback at the same place where these products are sold. This would also establish some faith in the products for the local craftsmen who were around, as they have to make them in the future. It was grand. Pictures follow.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33109765822/in/album-72157680969109736/" title="IMG_2658"><img src="https://c1.staticflickr.com/4/3915/33109765822_2bcc9a85e8.jpg" width="500" height="333" alt="IMG_2658" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33109762182/in/album-72157680969109736/" title="IMG_2702"><img src="https://c1.staticflickr.com/3/2926/33109762182_7eb44143d5.jpg" width="500" height="333" alt="IMG_2702" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33265664185/in/album-72157680969109736/" title="IMG_2744"><img src="https://c1.staticflickr.com/3/2899/33265664185_b91e722e8b.jpg" width="500" height="333" alt="IMG_2744" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The feedback was great and this was later followed by an interactive session with local craftsmen who told us about the price to expect, markets and difficulty they might face.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33385995810/in/dateposted-public/" title="Selection_020"><img src="https://c1.staticflickr.com/3/2812/33385995810_b70ce749f1.jpg" width="500" height="334" alt="Selection_020" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>We left a copy of the products that we made at the campus itself bid them a heartfelt good-bye.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33265662005/in/album-72157680969109736/" title="IMG_2823"><img src="https://c1.staticflickr.com/4/3904/33265662005_3d8bae9da9.jpg" width="500" height="333" alt="IMG_2823" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32878338904/in/dateposted-public/" title="IMG_2642"><img src="https://c1.staticflickr.com/3/2828/32878338904_eaca57b3db.jpg" width="500" height="333" alt="IMG_2642" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<h2 id="photo-shoot-and-idc-exhibition">Photo shoot and IDC Exhibition</h2>
-
-<p><strong>Phone Stand plus Amplifier</strong> - It was designed to be made in least time as possible and would appeal to the buyers to waterfalls. The product was designed to rest phone and also amplify audio.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32907462913/in/dateposted-public/" title="Phone Stand"><img src="https://c1.staticflickr.com/4/3818/32907462913_62a2a3d89f.jpg" width="500" height="333" alt="Phone Stand" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><strong>Agarbatti Stand and Holder</strong> : Based on the user studies, many people buy this in cheap plastic , I carved one out of Bamboo. It has a lid that preserves the frangrance and the design allows you to fix th agarbatti/incense stick.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33336703710/in/dateposted-public/" title="IncenseHolder"><img src="https://c1.staticflickr.com/4/3937/33336703710_3e0ccf084f.jpg" width="500" height="333" alt="IncenseHolder" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><strong>Power Bank</strong> : #Electronics , detailed with Bamboo skin and elegantly charges your phone.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33564747522/in/dateposted-public/" title="Power Bank"><img src="https://c1.staticflickr.com/3/2826/33564747522_bda9de2d3d.jpg" width="500" height="333" alt="Power Bank" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><strong>Holders</strong></p>
-
-<p><em>Magnetic Keychain Holder</em> - Has strong magnets that catch keys when you throw them at it.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33336734710/in/dateposted-public/" title="MagKey"><img src="https://c1.staticflickr.com/4/3854/33336734710_43bc93bf7a.jpg" width="500" height="333" alt="MagKey" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><em>Claw Holder</em> - Easy to manufacture holder
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33680212496/in/dateposted-public/" title="Claw Key"><img src="https://c1.staticflickr.com/4/3669/33680212496_3cfda55e92.jpg" width="500" height="333" alt="Claw Key" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><strong>Desktop Radio</strong>
-The ring is used to change volume and we implemented a way to change channels using gestures like tap on the top surface. It was taken quite well by the visitors. Made in collaboration with Rishabh from PD.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33680243686/in/dateposted-public/" title="FM_!!"><img src="https://c1.staticflickr.com/4/3856/33680243686_71f538de17.jpg" width="500" height="333" alt="FM_!!" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Our exhibition picture:</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33770908025/in/dateposted-public/" title="IDC Exhibition"><img src="https://c1.staticflickr.com/4/3956/33770908025_bc9eba1704.jpg" width="500" height="384" alt="IDC Exhibition" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>We would love to go back someday to see, how many of our products actually got made.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725561/in/album-72157686030264413/" title="bench local"><img src="https://farm5.staticflickr.com/4437/36812725561_7f6556a133_z.jpg" width="640" height="343" alt="bench local" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Please check the points before proceeding.</p>
+
+<p><strong>Uploading to OSM</strong></p>
+
+<p>Once checked, you may proceed by clicking on the upload icon. I got this warning popup. I clicked continue as I had checked the data multiple times.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737376/in/album-72157686030264413/" title="warning"><img src="https://farm5.staticflickr.com/4335/36764737376_53d00d84ca_z.jpg" width="640" height="290" alt="warning" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Next you get another warning. One of the fields had a space in between. I chose to ignore it as it was not a standard field anyway. But, I would strictly advice that you use only features mentioned in <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki</a>. One should never mark outside the wiki, this would make your contributions virtually indiscoverable as the standard parsers/scrapers/crawlers would only use standard tags. If none of the tags fit the feature, you should request that particular tag to be added to the wiki.”This prevents everyone from tagging similar kind of features in their own way before a standard is set, and therefore OSM discourages using tags outside of what is currently listed on the wiki”, adds Rasagy.</p>
+
+<p>You need an OSM account to upload. The API uses OAuth. The method that worked for me is ‘Automatic’. You are likely to get OAuth credentials. JOSM stores them for you. After the authorization part, you are required to commit the changes.  You will be presented with the following dialog.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737336/in/album-72157686030264413/" title="upload"><img src="https://farm5.staticflickr.com/4346/36764737336_42cf629aa7_z.jpg" width="640" height="618" alt="upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I chose the data source as ‘survey’. Now, press ‘Upload’!</p>
+
+<p>Congratulations on contributing to OSM.</p>
+
+<p>You can reopen the location to see your data. In my case, my benches are on the map.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36814389321/in/dateposted-public/" title="markedbench"><img src="https://farm5.staticflickr.com/4343/36814389321_6c90e0ab13_z.jpg" width="640" height="341" alt="markedbench" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>You can pull the details by clicking on ‘History’ button.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/" title="contributorInfo"><img src="https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg" width="640" height="362" alt="contributorInfo" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I hope this guide will be helpful.</p>
+
+<h2 id="data-contributed-in-the-course">Data contributed in the course</h2>
+
+<p>Following are the details of features marked by my classmates:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sno.</th>
+      <th>Feature Marked</th>
+      <th>Number</th>
+      <th>Contributor</th>
+      <th>tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Police Posts</td>
+      <td>56</td>
+      <td>Udayan</td>
+      <td>amenity=police</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ladies Restroom</td>
+      <td>205</td>
+      <td>Shilpa</td>
+      <td>amenity=toilets;access=customers;female=yes;level=0; repeat_on=(floors)</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Fire Hydrants</td>
+      <td>95</td>
+      <td>Amit</td>
+      <td>emergency: fire_hydrant</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Dustbins</td>
+      <td>115</td>
+      <td>Manasi</td>
+      <td>amenity=waste_basket</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Tea Shops</td>
+      <td>20</td>
+      <td>Pallavi</td>
+      <td>shop=tea</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Auto Stops</td>
+      <td>14</td>
+      <td>Raagul</td>
+      <td>amenity=taxi</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Print Shops</td>
+      <td>16</td>
+      <td>Vineet</td>
+      <td>shop=copyshop;service:copy=yes;service:print=yes;service:generalitems=yes;operator: name of the shop</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Benches</td>
+      <td>54</td>
+      <td>Rohit</td>
+      <td>amenity=bench;covered=(state);seats=(number)</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Drinking Water Spots</td>
+      <td>56</td>
+      <td>Manoj</td>
+      <td>amenity=drinking_water</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Links</strong></p>
+
+<p>Some useful links :</p>
+
+<ul>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Main_Page">OSM wiki</a></li>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner’s guide on the OSMwiki</a></li>
+  <li><a href="http://learnosm.org/en/">LearnOSM</a></li>
+  <li><a href="https://www.mapbox.com/mapping/">Mapbox’s Mapping guides</a></li>
+</ul>
+
+<p><strong>Acknowledgements</strong></p>
+
+<p>I acknowledge my classmates, Prof. Venkat and Rasagy for their contributions to this post.</p>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

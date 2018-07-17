@@ -4,13 +4,29 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-07-05T20:19:48+05:30</updated>
+ <updated>2018-07-17T09:32:23+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>The change of design</title>
+   <link href="http://localhost:4000/2018/07/04/deltadesign/"/>
+   <updated>2018-07-04T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/07/04/deltadesign</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Clearance Processes at IDC</title>
@@ -176,6 +192,134 @@ Convocation form :&lt;/p&gt;
 &lt;p&gt;I know this may be achievable using pdf software like acrobat. But since, I am on Linux, I seem to have no better option than to write one snippet for myself. Plus its lot of fun.&lt;/p&gt;
 
 &lt;p&gt;Hoping that someone finds it useful.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Pinchphone- Exertoys for kids affected by cerebral palsy</title>
+   <link href="http://localhost:4000/2018/05/04/PinchPhone/"/>
+   <updated>2018-05-04T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/04/PinchPhone</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents a small project that explores use of a no-tech device to increase water consumption by a user.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jalajap- A band to encourage water drinking behaviour</title>
+   <link href="http://localhost:4000/2018/05/04/Jalajap/"/>
+   <updated>2018-05-04T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/04/Jalajap</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents a small project that explores use of a no-tech device to increase water consumption by a user.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Togetherness</title>
+   <link href="http://localhost:4000/2018/05/02/TogethernessRepublic/"/>
+   <updated>2018-05-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/02/TogethernessRepublic</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Points of View</title>
+   <link href="http://localhost:4000/2018/05/02/PointsOfView/"/>
+   <updated>2018-05-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/02/PointsOfView</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Playful surfaces in a hackathon</title>
+   <link href="http://localhost:4000/2018/05/02/HackU/"/>
+   <updated>2018-05-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/02/HackU</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Blowables</title>
+   <link href="http://localhost:4000/2018/05/02/Blowables/"/>
+   <updated>2018-05-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/02/Blowables</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Birds on a Wire</title>
+   <link href="http://localhost:4000/2018/05/02/BirdsOnWire/"/>
+   <updated>2018-05-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/02/BirdsOnWire</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Day and Night</title>
+   <link href="http://localhost:4000/2018/05/01/DayNight/"/>
+   <updated>2018-05-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2018/05/01/DayNight</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -579,7 +723,7 @@ I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630
  </entry>
  
  <entry>
-   <title>Installation - Who you are is what you get</title>
+   <title>Who you are is what you get</title>
    <link href="http://localhost:4000/2017/09/03/whowe/"/>
    <updated>2017-09-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/09/03/whowe</id>
@@ -1867,7 +2011,7 @@ Well lots of it. Lets go to Fashion street. Why? Because its there and Dinojh ha
  </entry>
  
  <entry>
-   <title>Installation- Men and Three Worlds</title>
+   <title>Men and Three Worlds</title>
    <link href="http://localhost:4000/2017/02/12/InstallationReality/"/>
    <updated>2017-02-12T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/02/12/InstallationReality</id>

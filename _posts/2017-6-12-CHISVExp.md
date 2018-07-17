@@ -4,7 +4,7 @@ title: The CHI 17 Experience
 image: https://c1.staticflickr.com/5/4263/35257017032_6bbebc268e_z.jpg
 location:  IDC IIT Bombay India
 tags:
-- design
+- travel
 ---
 
 

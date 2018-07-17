@@ -3,7 +3,6 @@ layout: post
 title: Arduino Controlware- Play with your duino without frequent code uploads
 image: http://indiantinker.files.wordpress.com/2012/08/controlware.png
 tags:
-- arduino
 - python
 ---
 

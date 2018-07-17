@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,77 +548,85 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/08/08/MotoX/">
-        Unbricking a MotoX, Resurrecting Smiles
+      <a href="/2015/11/08/NoobSentiment/">
+        Nooby Sentiment Analysis using nodejs
       </a>
     </h1>
 
-    <span class="post-date">08 Aug 2015</span>
+    <span class="post-date">08 Nov 2015</span>
 
-    <p>This didnt seem to be coming ! Some of us were travelling to Bedse Caves on a weekend. <em>[ZT]</em> had the amazing MotoX -Ghost aka 2013 one that served as our primary camera and navigator since he was leading. The MotoX was (or rather is) a flagship phone that gave way for the present generation Moto G and E. But it had an AMOLED that usually steals the show.. If you know what i mean.</p>
+    <p><strong>News Flash</strong>: Sentiments are now easy to quantify because there is soooo much data around to poke into. People eat,laugh,cry,sleep when they tweet, or maybe its the other way around.</p>
 
-<p>The essence of the trip was captured in the phone and we were to meet the next day to swap pictures. I was anticipating it even more as I wanted to write a short trip entry.</p>
+<p>So, we can derive loads of business and impact information based on these free streams of data and quantify them for our needs, which currently here is purely <em>exploratory</em> !</p>
 
-<p>The next day <em>[ZT]</em> didnt have the same phone. His hands were graced by a crappy qwerty from the time Texts became cheaper than an alpenliebe.</p>
+<p>For mere instance, Lets put our favorite sport into the picture, <em>Cricket</em>! Its pretty easy to find out a quite strong co-relation between the tweets on both sides as they win or loose. Plus human emotions are what ‘I’ say somewhat <strong>elastic</strong> in nature; which means, if a person is sad due to his team losing, then after a bit of cribbing he will elastically get back to the ‘played well’ stance and later become a neutral subject. There maybe some exceptions.</p>
 
-<p>With profound grief he said, Dude it got bricked after installing an OTA for Lollipop. The worst part he had already tried clear memory.</p>
+<p>As wiki states it:</p>
+<blockquote>
+  <p>Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.</p>
+</blockquote>
 
-<p>We discussed how to get it up and running. The obvious choice being service guys! He submitted the phone for repair.</p>
+<p>Seems too complex? Well it certainly is. If you need highly credible results so that you put your million marketing Dollars into that data. It sure is. But atleast we can be a NoOb at it and explore further.</p>
 
-<p>A week passed and he reverted saying the service guys say they cant figure what happened and are saying to change the motherboard costing around 15k INR ($235). Logically.. Its better to buy a new phone.</p>
+<p>What if we break a tweet into words then rate the words for their negativity and positivity ! Then add the scores up. If the score ends up to be positive the sentence is happy and if negative , the person is sad. Seem Legit? Well Sort of, maybe 60% sort of. Such rankings can be stored in a dictionary of words.</p>
 
-<p>But AMOLED !</p>
+<p>So that most common dictionary is called <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> by Finn Årup Nielsen,which is a list that has words and phrases rated between +5 and -5 to quantify sentimentality.</p>
 
-<p>As his search for a new phone began. I thought that since the phone is booting but is stuck in a loop. Maybe the hardware is fine. Its the software that has got hurt. Clueless as a noob, I asked him to give me the <em>brick</em> to play around. He gladly obliged. I searched places to find a solution to assess the gravity of the situation. It turns out, Bootloops are pretty common issues and videos like <a href="https://www.youtube.com/watch?v=2LjoFSgLlds">these</a> were surely encouraging.</p>
+<p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
 
-<p>Maintaining brevity of the topic, Most android phones have a fastboot mode which is like a BIOS thing that can be used to flash things (usually compiled codes/OS aka ROMs) to the internal memory sectors and then hoping they will all come together to work. This mode gets activated using a hardware trigger (like happens on PCs) which is usually a combination of lock and Volume button. Searching online one can get it for any device. In the X its Vol - + Pwr</p>
+<p>To install it: <code class="highlighter-rouge">npm install sentiment</code> . Check out the README on the page for a quick start.</p>
 
-<p>And if a device enters a fastboot it should be easy to heal it.
-Thankfully our did.</p>
+<p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20405991741/in/dateposted-public/" title="Fastboot mode"><img src="https://farm1.staticflickr.com/513/20405991741_b8e6f44db4_z.jpg" width="640" height="359" alt="Fastboot mode" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.</p>
 
-<p>Now the USB on the MotoX has some durability issues and it was not working on this device. <em>[ZT]</em> says it works when the time and physics are fine. Bummer.. It took me the whole night to connect it via USB to the PC. I turns out i have about 7 USB-micro cables. LOL</p>
+<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code class="highlighter-rouge">fs</code> that already comes with the package.</p>
 
-<p>At around 2am the space time matrix budged a bit and i was able to connect it using a micromax cable.</p>
+<p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
 
-<p>Now i started the process whats mentioned on several blogs around the web. Its a generic method to restore any phone via fastboot.</p>
+<p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
 
-<p>It works well on windows i reckon! All you need is a couple of drivers and the OS you wished to flash (obviously for ur device).</p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
 
-<p>Folks at <strong>XDA Developers</strong> have made a streamlined setup for that <a href="http://forum.xda-developers.com/showthread.php?t=2588979">here</a>. You should get that. Plus you need motorola drivers from motorola website i suggest you get the suite !</p>
+<p>After 500 Tweets the data is as follows:</p>
 
-<p>For Moto Devices you will need the <a href="https://drive.google.com/file/d/0B2c2Ms7szI99RkpiZWkyZGgyeTQ/edit">mfastboot</a></p>
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/61.embed"></iframe>
 
-<p>When you are all set. Go to the adb folder in C: and type <code class="highlighter-rouge">fastboot devices</code> . You should see your device or maybe check USB cable or the word connected written on fastboot screen.</p>
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/57.embed"></iframe>
 
-<p>Like this:</p>
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/53.embed"></iframe>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20213179149/in/dateposted-public/" title="FastBOOT"><img src="https://farm1.staticflickr.com/434/20213179149_5eb4a3748d_z.jpg" width="640" height="359" alt="FastBOOT" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/55.embed"></iframe>
 
-<p>Now download the ROM from a trusted source. I got the MotoX Kitkat Asia ROM from <a href="https://docs.google.com/file/d/0B5XNxZ2OcfKtdDROTk5kb21ObU0/edit">here</a> after 5 failed downloads.</p>
+<iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~indiantinker/59.embed"></iframe>
 
-<p>Now unzip the file and copy the contents of adb folder plus mfastboot exe into the unzipped folder. Rename it to give a short name.</p>
+<p><strong>Notable Observations</strong> :</p>
 
-<p>You will find a <code class="highlighter-rouge">.xml</code> file in the ROM that shows the commands for fastboot installation. You have to prefix <code class="highlighter-rouge">fastboot</code> before every command.  For Moto devices use the command <code class="highlighter-rouge">mfastboot flash system system.img</code> instead of  <code class="highlighter-rouge">fastboot flash system system.img</code>
-Follow them and make sure your USB is always connected. Mine got disconnected after much efforts that almost killed the excitement for me.I was up all night to get the USB connected after about 100 failed insertion and reinsertion cycles i  gave up to try with the last cable that i had but was in use - The Kindle cable.</p>
+<ul>
+  <li>Kolkata and Delhi are particularly sad</li>
+  <li>Bengaluru&gt;Pune&gt;Mumbai is the way happiness goes.</li>
+  <li>I found there are lots of twitter contest chasers as i kept on getting tons of similar tweets in Pune</li>
+  <li>In Mumbai and Bengaluru, Tweets were mainly get togethers and parties.</li>
+  <li>Delhi Tweet content was political and hence too much cribbing and cursing. Too bad for my home town.</li>
+  <li>The Cricket All Stars reasonably raised the happiness levels.</li>
+</ul>
 
-<p>Next Day! It got connected in one shot. Followed the commands but forgot the last one <code class="highlighter-rouge">fastboot oem fb_mode_clear</code>. It failed to boot. After much googling i found out the cure and wrote the command.</p>
+<p>I will plan to do this again in IPL, so that i can statistically establish a correlation between twitter tweets and the score cards in two cities.</p>
 
-<p>And it booted…. Yeah!! Victory!</p>
+<p><strong>Caveats</strong>:</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20211757430/in/dateposted-public/" title="Resurrected"><img src="https://farm1.staticflickr.com/265/20211757430_1fc13ecc39_z.jpg" width="359" height="640" alt="Resurrected" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+  <li>Most of the time when tweets are not in English they end up scoring zero, i should rather translate them and then analyze</li>
+  <li>The AFINN approach does fail sometimes, i have seen a neutral score on a feel good post quite a number of times.</li>
+</ul>
 
-<p>There was one problem. The camera was not working! I ran a couple of checks with <em>[ZT]</em> who quickly came to collect the phone ! I turned out that the Ribbon for camera had loosened. We just pressed it a bit and it was up and running again.</p>
-
-<p>One device saved !</p>
-
-<p>If you guys need any more info shoot the queries in the comment window.</p>
+<p>Hoping to listen from some Data Gurus !</p>
 
 <p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

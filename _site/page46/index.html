@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,58 +548,30 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/11/GreenwaliDiwali/">
-        GreenWali Diwali:A social interactivity experiment
+      <a href="/2016/01/02/HAMRTLRX/">
+        Doormate- Runner's Up at Intel IOT Roadshow
       </a>
     </h1>
 
-    <span class="post-date">11 Nov 2015</span>
+    <span class="post-date">02 Jan 2016</span>
 
-    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
+    <p>Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog <a href="/2015/08/01/Intel/">link</a> that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did.</p>
 
-<ul>
-  <li>Lights/Sound to attract attention</li>
-  <li>A unique randomness of explosion</li>
-  <li>An Obnoxious Odour</li>
-  <li>Fear of getting yourself hurt</li>
-  <li>Fear of setting someone on fire</li>
-</ul>
+<p>Basically, our Project was called the <strong>Doormate</strong>. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.</p>
 
-<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
+<p>The project uses the <strong>Intel edison</strong> and was built using whatever parts we could rummage at the event.</p>
 
-<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
+<p>The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka <em>The Bell Playlist</em> .</p>
 
-<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code class="highlighter-rouge">Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code class="highlighter-rouge">#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
+<p>The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved <em>Mogambo</em> feels good and the door opens. (See video below to understand the context)</p>
 
-<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
+<p>Here is what the dashboard <a href="http://doormate.github.io/website/">looks like</a>.</p>
 
-<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
+<p>The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:</p>
 
-<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet !</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/su8k2AwtbH0" frameborder="0" allowfullscreen=""></iframe>
 
-<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
-
-<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
-
-<ul>
-  <li>Sign In/Up on Twitter</li>
-  <li>Go <a href="https://apps.twitter.com/">here</a></li>
-  <li>Create <strong>New Application</strong></li>
-  <li>Fill the Yet-Another-Form and Create the Application.</li>
-  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
-  <li>You will see your consumer keys there !</li>
-  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
-</ul>
-
-<p>These 4 keys are used for the Code above.</p>
-
-<p>Then just install the dependencies based on the <code class="highlighter-rouge">README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code class="highlighter-rouge">screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
-
-<p>Check out the video of me testing it !</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Happy GreenWali Diwali !</p>
+<p>Cheers !!</p>
 
 <p>Rohit</p>
 

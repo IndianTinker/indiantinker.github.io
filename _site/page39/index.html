@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,49 +548,31 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/12/30/StarWars/">
-        StarMAT-Star Wars Themed Interactive Doormat
+      <a href="/2016/06/18/Exif/">
+        Exif Data on Linux
       </a>
     </h1>
 
-    <span class="post-date">30 Dec 2015</span>
+    <span class="post-date">18 Jun 2016</span>
 
-    <p>This weekend, the new Star Wars movie got released. It might be ‘just’ another movie for the droids and gungans of the planet, but not for the Padawans like us.</p>
+    <p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences.</p>
 
-<p><em>Messa, Likes Star Wars!</em>  - Jar Jar Binks</p>
+<p>On Linux (other platforms too) there is a nice tool called <strong>ExifTool</strong> which was, as of writing this post available in the package manager of <em>Ubuntu</em> .</p>
 
-<p>Now, As we learn to master the force !</p>
+<p>So, Simply 
+<code class="highlighter-rouge">sudo apt-get install exiftool</code></p>
 
-<p><em>To make something that reminds us of the saga we need!  Herh herh herh.</em> -Yoda</p>
+<p>In order to use it, Simply go to the SD Card (generally) and <em>Right Click</em> to open terminal here. Then use the command.</p>
 
-<p>What could be better than making a Doormat that senses a footstep (using capacitive methods) and plays a random star wars song like the opening theme or the imperial march or a famous phrase from the movie like “May the force be with you !” ?</p>
+<p><code class="highlighter-rouge">exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
 
-<p>Presenting the <strong>Star Wars Theme Interactive Doormat</strong>.</p>
+<p>Shutter Count should be visible, But depends on the camera you use. Most <strong>Nikons</strong> we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.</p>
 
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_gGyumvUIn/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">The #StarWars #Reactive #DoorMat is ready ! Plays random #StarWars jargon  when someone steps on the doormat. #Maker #DIY #Arduino #Electronics #Hack #WeekendHacks</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-20T05:19:54+00:00">Dec 19, 2015 at 9:19pm PST</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<p>To know more about EXIF check out <a href="http://www.media.mit.edu/pia/Research/deepview/exif.html">this</a> resource .</p>
 
-<p>I kept it at the entrance of my room and every time there is someone to meet me, He is greeted with a Random Star Wars Jargon !</p>
-
-<p>The setup is temporary and hence on the breadboard. For the brains i use the <em>Arduino</em> with a usual MP3 breakout that delivers the output to a pair of desktop USB Speakers. On the sensing front i have a capacitive wire loop under the mat and a tiny self-calibrating Capacitive sensor specially tuned to the mat size wire. The LED on the <em>Arduino</em> blinks to show that its ready to read the sensor. The sensor i am using is this <a href="http://www.seeedstudio.com/depot/datasheet/TTP223_SPEC.pdf">one</a>.I have used a big PLCC2 Pkg LED with a reference capacitance that matches the electrode length. I tried a few available caps. Then forgot the once i used. Argh!! SMD. The PCB is shown below. (Yeah! I know there is no bottom ground plane)</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/24062427081/in/dateposted-public/" title="Touch Sensor"><img src="https://farm2.staticflickr.com/1507/24062427081_43cb82aaed_z.jpg" width="480" height="640" alt="Touch Sensor" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now, when some-one (except Darth Vader/Droids) steps on the mat. The relative capacitance changes and the sensor grounds its output which is pulled up by default. This is detected by the Arduino which commands the MP3 player to play a random song/phrase from the assorted collection stored on the SD Card . And Yes! The whole setup is powered by a power bank (the black PVC Tube in the video above) that i made for my CX-10 pocket-Quad recharging, which powers the setup for about 6-7 hours easily. To split power between the USB Speakers and the Arduino, i use the USB Hub (in white with blue LED) .</p>
-
-<p>Interested in the complete setup. Check out this video :D 
-Sorry for the dull voice tone. I had the dark side messing up with me :P</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/A_ZnKR84uk4" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Any questions or suggestion, have you, use the comment section below!</p>
-
-<p>Seek Advice, You must!</p>
-
-<p>May the force be with you ! :D</p>
+<p>Cheers,</p>
 
 <p>Rohit</p>
-
 
   </div>
   

@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,110 +548,129 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/04/07/OpenAgitator/">
-        Open Agitator
+      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
+        Nokia 5110 LCDs and MSP430
       </a>
     </h1>
 
-    <span class="post-date">07 Apr 2014</span>
+    <span class="post-date">09 Nov 2014</span>
 
-    <p>After a somewhat woeful week at college that shook my belief in several sectors.. I mustered up my courage to realize an old project they knocked the door every time i used to Etch PCB boards. Since, the solution i use has already done close to 20 boards of small size one has to really keep shaking/stirring/Agitating the solution for a fairy long time.. ( ya 7-8 mins of man power is fairly long time :P )</p>
+    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.</p>
 
-<p>The idea came to me when i visited my brother in <a title="Travelogue: Bangalore" href="http://indiantinker.wordpress.com/2013/05/24/travelogue-bangalore/" target="_blank">Bangalore</a> earlier this year. He was generous enough to give us a tour of his world class Biotechnology lab in India.. He showed us stuff and things/instruments which were difficult to pronounce in one go but they all had a thing in common- They ended with syllables like -<em>‘-izer’,-‘ator’,’-ation’. </em></p>
+<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
 
-<p>One thing that they used for not allowing things/particles to sediment was called a shaker. It would be great if i could get one for myself that will take the work out of etching. When i returned i made an over-killed 3D model of the agitator that i had in mind. It would just be a 1-axis CNC with a stepper motor and belt, That was doing a lot for the task..</p>
+<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code class="highlighter-rouge">2.7-3.3V</code> happy for our MSP430.</p>
 
-<p>Here are some pics of the model:</p>
+<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a></p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator2.jpg"><img class="size-full wp-image-488" alt="Looks Cool Though.. " src="http://indiantinker.files.wordpress.com/2013/09/etchinator2.jpg" width="570" height="514" /></a> Looks Cool Though..</p>
+<p>For TL:DR;</p>
 
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg"><img class="size-full wp-image-487" alt="Freewheel mount and stepper motor" src="http://indiantinker.files.wordpress.com/2013/09/etchinator1.jpg" width="633" height="466" /></a> Freewheel mount and stepper motor</p>
+<p>The LCD has the following pins to interface to:</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
 
-<p>Realizing the overkill design, I went on to an easier one earlier this month ( actually previous month ) when a relative who was ‘demolishing’ his old PC gave me some old CDROMs that didn`t work. The mechanics did work though..</p>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Pin Number</th>
+    <th class="tg-031e">Pin Label</th>
+    <th class="tg-031e">Pin Function</th>
+    <th class="tg-031e">Input/Output?</th>
+    <th class="tg-031e">Notes</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">1</td>
+    <td class="tg-031e">VCC</td>
+    <td class="tg-031e">Positive power supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">2</td>
+    <td class="tg-031e">GND</td>
+    <td class="tg-031e">Ground</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">3</td>
+    <td class="tg-031e">SCE</td>
+    <td class="tg-031e">Chip select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">4</td>
+    <td class="tg-031e">RST</td>
+    <td class="tg-031e">Reset</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Active low</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">5</td>
+    <td class="tg-031e">D/C</td>
+    <td class="tg-031e">Mode select</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">6</td>
+    <td class="tg-031e">DN(MOSI)</td>
+    <td class="tg-031e">Serial data in</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">7</td>
+    <td class="tg-031e">SCLK</td>
+    <td class="tg-031e">Serial clock</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">8</td>
+    <td class="tg-031e">LED</td>
+    <td class="tg-031e">LED backlight supply</td>
+    <td class="tg-031e">Input</td>
+    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
+  </tr>
+</table>
 
-<p>So, I just ‘damaged’ the tracks around the main feed motor and attached my own custom circuit based around the MSP430 micro-controller and majority of TI parts as they can be shipped to anyone  with an address making it very easy to re build yourself.</p>
+<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
 
-<p>Here is a proof-of-concept video i posted a while back where the Etchinator ( now Open Agitator after i realized it could do a lot more like cooling hot milk  :D ) was etching its own control board  :</p>
+<p>At a time you write to a single bank.</p>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/wOFcjrQe-is" frameborder="0" allowfullscreen=""></iframe>
+<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
 
-<p>I used a L293D H bridge motor controller to control the forward and backward movement of the cradle with an adjustable speed by giving a PWM on the Enable Pin . People who had made LFR’s in the first/second year know its a child`s play.</p>
+<p>The communication is done using SPI.</p>
 
-<p>After running the aforementioned set up for a while i noticed that  the cradle would shift to the farther end where the gear was slightly worn out. So, when loaded the cradle would :</p>
+<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG’s post</a>.</p>
 
-<ol>
-  <li>Latch on to that part and stay stuck.</li>
-  <li>The whole system would move a bit forward each time and latch on the wrong part.</li>
-</ol>
+<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
 
-<p>So, an end-stop detection was required which would keep the cradle in the fixed portion.. some what similar to the ones i had seen in the CNC`s which tell them their legitimate playing fields.</p>
+<p>Connections are as follows(PORT1):</p>
 
-<p>The answer was using the old mouse push button that came with the CD-ROM. Its softer and probably made to withstand greater number of press-cycles than a standard SPST Tactile switch.</p>
-
-<p>So , now the logic would work like, whenever the button/EndStop is pressed, the direction will be reversed for a fixed time and then reversed again.. So, the cycle keeps on going.. .. .. ..</p>
-
-<p>Here is the final  schematic i came up with:</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/sche.png"><img class="size-full wp-image-492" alt="Schematic" src="http://indiantinker.files.wordpress.com/2013/09/sche.png" width="700" height="482" /></a> Schematic</p>
-
-<p>Since, i did’nt wanted to leave any pins un-used i included 3 LED`s which show the different states of the agitator.</p>
-
-<p>The power supply needs special mention as it converts from a standard 12V DC adapter to 5V for the logic of the bridge (L293D) and again an <a href="http://www.ti.com/product/lp2950-33" target="_blank">LDO LP2950-3.3V</a> for the MSP430. The LDO can be sampled from TI and 7805 is available locally with every tinkerer.</p>
-
-<p>Even the driver i.e <a href="http://www.ti.com/product/l293d" target="_blank">L293D</a> can be sourced from Ti. The brain of the device is a <a href="http://www.ti.com/product/msp430g2231" target="_blank">MSP430G2231</a> also sampled from TI and programmed from the <a href="http://www.ti.com/tool/msp-exp430g2" target="_blank">MSP430 Launchpad</a>. So, This project was indirectly sponsored by TI :D</p>
-
-<p>The next came the board layout.. I designed it to have the least number of  vias (They can be a pain sometimes) while fitting at the back of the CD-ROM. Here is the one with just two vias.</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/brd.png"><img class="size-full wp-image-493" alt="Board!" src="http://indiantinker.files.wordpress.com/2013/09/brd.png" width="458" height="205" /></a> Board</p>
-
-<p>Since, the position of motor/EndStop switches were flexible they eased out the routing a bit. You can also add a DC Jack to it if you like. The files are available on github <a href="https://github.com/IndianTinker/OpenAgitator" target="_blank">here</a>.</p>
-
-<p>Here are pictures of the final build i managed to pull off.</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00522.jpg"><img class="size-full wp-image-497" alt="The EndStop" src="http://indiantinker.files.wordpress.com/2013/09/dsc00522.jpg" width="700" height="525" /></a> The EndStop</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00512.jpg"><img class="size-full wp-image-498" alt="Shiny Copper Board" src="http://indiantinker.files.wordpress.com/2013/09/dsc00512.jpg" width="700" height="420" /></a> Shiny Copper Board</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00515.jpg"><img class="size-full wp-image-499" alt="All in Place" src="http://indiantinker.files.wordpress.com/2013/09/dsc00515.jpg" width="700" height="444" /></a> All in Place</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00516.jpg"><img class="size-full wp-image-500" alt="Scratchy Soldering" src="http://indiantinker.files.wordpress.com/2013/09/dsc00516.jpg" width="700" height="476" /></a> Scratchy Soldering</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00517.jpg"><img class="size-full wp-image-501" alt="Power Test Complete" src="http://indiantinker.files.wordpress.com/2013/09/dsc00517.jpg" width="700" height="505" /></a> Power Test Complete</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg"><img class="size-full wp-image-503" alt="Fixed to the back of the CDROM" src="http://indiantinker.files.wordpress.com/2013/09/dsc00521.jpg" width="700" height="525" /></a> Fixed to the back of the CDROM</p>
-
-<p>The next thing that was left was to give it a sturdy base. I choose two planks of wood that were lying around. It was essential to leave it without any base on the middle section as if ‘ever’ there is a chemical spill that can be cleaned without unscrewing the entire assembly!</p>
-
-<p>So, Here is the final build :</p>
-
-<p><a href="http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg"><img class="size-full wp-image-502" alt="Final Build" src="http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg" width="700" height="525" /></a> Final Build</p>
-
-<p>You can fork the complete code and design from my<a href="https://github.com/IndianTinker/OpenAgitator" target="_blank"> github repo</a>.</p>
-
-<p>Here is a video of me explaining the build.. Please ignore the following :</p>
 <ul>
-	<li>Bad camera quality</li>
-	<li>Some goof-ups with the IC names.. Keep an eye on the Sub Titles/Captions</li>
-	<li>Background Noise (if any)</li>
+  <li>LCD5110_SCLK_PIN- BIT5</li>
+  <li>LCD5110_DN_PIN- BIT7</li>
+  <li>LCD5110_SCE_PIN- BIT0</li>
+  <li>LCD5110_DC_PIN- BIT1</li>
 </ul>
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/0nLpa1uPF_E" frameborder="0" allowfullscreen=""></iframe>
+<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
+<br /></p>
 
-<p>Hope you like it and build one for yourself..
-Cheers,
-IndianTinker</p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
 
-<p>:D</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
 
-<p>Edit: Please vote for this project on instructables <a href="http://www.instructables.com/id/Open-Agitator-Your-Personal-Chemistry-Lab-Shaker/" target="_blank">here</a> !</p>
+<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
 
-<p>See another make of my project by a reader on instructable:</p>
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/zX0pGGTKSB0" frameborder="0" allowfullscreen=""></iframe>
-
-<p>(Thanks for sharing <a href="http://http://ales.kapun.org/" target="_blank">Aleš</a> )</p>
-
-<p><span style="line-height:1.5;"> </span></p>
+<p>If you have any difficulties post here in comments</p>
 
   </div>
   

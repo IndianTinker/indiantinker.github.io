@@ -4,7 +4,7 @@ title:  Contributing to OSM using JOSM
 image: https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg
 location:  IDC IIT Bombay India
 tags:
-- tut
+- writing
 ---
 
 > This post is meant to document to process of uploading data points gathered as a part of [Interactive Data Viz](https://info-design-lab.github.io/) course at IDC taught by Prof. Venkat.

@@ -3,7 +3,7 @@ layout: post
 title: Typesetting ePUBs in LaTex
 image: https://c5.staticflickr.com/9/8021/28773220604_90b61a421e.jpg
 tags:
-- design
+- python
 ---
 
 In a recent class on Typesetting we were assigned a task to typeset an entire book, preferably an Open Book, using your favorite typesetting Program in a few days time. Typesetting is not *easy* especially when you do it in **LaTeX** and with the skill going rusty it was a hot pot of dilemmas that I think should not be a part of this post at all. 

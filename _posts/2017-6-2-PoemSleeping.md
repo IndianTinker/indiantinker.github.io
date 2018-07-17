@@ -4,7 +4,7 @@ title:  Sleeping Dawn
 image: https://c1.staticflickr.com/5/4286/34974278651_da7402d3ca_b.jpg
 location:  IDC IIT Bombay India
 tags:
-- others
+- writing
 ---
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/34974278651/in/dateposted-public/" title="postpic"><img src="https://c1.staticflickr.com/5/4286/34974278651_da7402d3ca_z.jpg" width="640" height="426" alt="postpic"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

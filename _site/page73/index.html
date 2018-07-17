@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,67 +548,85 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/03/Library-for-MMA7361/">
-        Arduino Library for Freescale's MMA7361 3 axis accelerometer
+      <a href="/2015/05/01/RoomMote/">
+        RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia
       </a>
     </h1>
 
-    <span class="post-date">03 Nov 2014</span>
+    <span class="post-date">01 May 2015</span>
 
-    <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+    <p>Buzz..Buzzzz..buzzzzzzzz .. That is how a lone mosquito irritates you in the middle of the night trying to convince you that his lullaby is helpful. Insignificant or not, But truly that is the underlying inspiration for this project. The Mosquito repellents have this obnoxious smell that I would not like to sleep in and these loner mosquitoes who just piss me off by buzzing in the ear, you have to choose a lesser evil. Obviously, I turned ON the repellent and in a while it goes off but the smell starts building up and I am too lazy to turn it back OFF, leaving the warmed blanket on a chilly Delhi December Night. The nocturnal dilemma .</p>
 
-<ul>
-  <li>Analog which can be directly read by our friendly ADC</li>
-  <li>Digital which send data in values riding on I2C/SPI.</li>
-</ul>
+<p>So, why not just use a remote to turn it back off and maybe add some other things like Reading Light control, Mood Lighting?</p>
 
-<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale ‘s MMA7361 analog 3Axis Accelerometer</a>.</p>
+<p>Interesting !!</p>
 
-<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image" /></p>
+<p>Having the above in mind I thought of building my own <em>Room Automation and Mood Lighting controller</em> and for this time make it look good and “no mess visible”. I had bought some nice overpriced project enclosures a while back and the bigger one of them would be perfect for the project.</p>
 
-<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/16710796873" title="The Box by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7788/16710796873_8320541058_z.jpg" width="640" height="359" alt="The Box" /></a></p>
 
-<ul>
-  <li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
-  <li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
-  <li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
-  <li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
-  <li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings</li>
-  <li><strong>ST</strong> - Self Test</li>
-</ul>
+<p>So, the plan was   :</p>
 
-<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
+<blockquote>
+  <p>Use the old Sony Remote and with it try simply turn ON/OFF some relays for the light sockets and also dabble with a RGB LED strip to give the room a different tint at night. The system should be able to tell if a wrong action has been taken by itself. Above all it should look good (on the wall).</p>
+</blockquote>
 
-<p>Just connect a 10k resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+<p>For the recipe, the main ingredient is <strong>MSP430</strong> as I was able to get it in a desired TSSOP package from TI itself (The local sellers don’t seem to like SMDs), Its easy to play with thanks to <em>Energia</em> and best of all - <em>Low Power</em> .</p>
 
-<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg" /></p>
+<p>I chose to use <a href="http://www.ti.com/lit/ds/symlink/msp430g2553.pdf">MSP430G2553</a> as i already had the chip in DIP to prototype with.</p>
 
-<p>Now just:</p>
+<p>For driving the relays and the RGB LED strip ( a small part of the bigger strip with actually just 12 LEDs ) , I used <a href="http://www.ti.com/lit/ds/symlink/uln2803a.pdf">ULN2803</a> , the octa darlington chip. And Yes ! I didnt use opto isolation for the relays.</p>
 
-<ul>
-  <li>read the analog values from the pin</li>
-  <li>convert them to voltages</li>
-  <li>apply sensitivity and correction</li>
-  <li>and get g value</li>
-</ul>
+<p>For demodulating the 38kHz IR Pulse train, I used a locally available TSOP1738 IR Receiver and for regulating power to the MSP430 I used <a href="http://www.ti.com/lit/ds/symlink/lp2951-n.pdf">LP2950-3.3V</a>, a TO92 packaged 100mA LDO .</p>
 
-<p>Simple as that!</p>
+<p>Next, i needed some LEDs to tell which load is ON/OFF and a DC jack to mate the final module with my wall wart.</p>
 
-<p>Having deciphered it, i wrote a test code:</p>
+<p>That’s pretty much the circuit part. Once, i had all the components on my table. I designed a small PCB to fit the box and house all the components and a separate Relay board for the Sockets ! Next after <strong>Toner Transfer</strong> and some etching in my <a href="http://rohitg.in/2014/04/07/OpenAgitator/">OpenAgitator</a> I got this sparkling PCB .</p>
 
+<p><a href="https://www.flickr.com/photos/94411929@N06/17331055925" title="Newly ETched by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7707/17331055925_d4c5a2112a_z.jpg" width="359" height="640" alt="Newly ETched" /></a></p>
+
+<p>Some soldering !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16708584584" title="Bottom Side by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8728/16708584584_d6a822dd54_z.jpg" width="640" height="359" alt="Bottom Side" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17329162242" title="Top Side - All assembled by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7708/17329162242_4618d674f3_z.jpg" width="640" height="359" alt="Top Side - All assembled" /></a></p>
+
+<p>and some Brain Implant ( aka Code Download )</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17123607967" title="Brain Implant by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg" width="640" height="359" alt="Brain Implant" /></a></p>
+
+<p>The Code :</p>
 <noscript><pre>400: Invalid request
 </pre></noscript>
-<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+<script src="https://gist.github.com/075a3fc4815eaa9d11af.js"> </script>
 
-<p>It worked as designed.</p>
+<p>Then modifying the nice little box to suit the PCB  (That moment when you say, “If only i had a 3D Printer” )</p>
 
-<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
-The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144793609" title="Make space for the DC Jack by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7681/17144793609_526da4edcd_z.jpg" width="359" height="640" alt="Make space for the DC Jack" /></a></p>
 
-<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17143469950" title="All Snug? by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8874/17143469950_e0348fc4cd_z.jpg" width="640" height="359" alt="All Snug?" /></a></p>
 
-<p>Feel free to fork it and use it. 
-Hoping the community finds it useful.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17144792019" title="On the wall by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7694/17144792019_15b13b39ea_z.jpg" width="640" height="359" alt="On the wall" /></a></p>
+
+<p>Next, made amends for the switch board to be compatible with the project. Basically, just added wires in parallel to the switches. Did somebody say <strong>Manual Over-ride</strong> ?</p>
+
+<p>The wiring mess inside the switch-board.
+<a href="https://www.flickr.com/photos/94411929@N06/17305070826" title="Wire mess inside the power board by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7663/17305070826_77d1df1b6e_z.jpg" width="359" height="640" alt="Wire mess inside the power board" /></a></p>
+
+<p>All cleared up !
+<a href="https://www.flickr.com/photos/94411929@N06/17144797209" title="Wires out by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7783/17144797209_1722062b33_z.jpg" width="359" height="640" alt="Wires out" /></a></p>
+
+<p>After that, i simply wired the wires (!) to the relay board ( See the Video below ) and powered it up.</p>
+
+<p>Now with a press of the button, Its all done ! I already feel so lazy!</p>
+
+<p>And yes here are the colors !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17305080226" title="MoodLights by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7756/17305080226_e124b8a384_z.jpg" width="640" height="453" alt="MoodLights" /></a></p>
+
+<p>Dont forget to watch the video below and if you have something to say, Please Comment Down here!</p>
+
+<iframe width="650" height="380" src="https://www.youtube.com/embed/hsQ9HEd14hQ" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Cheers,</p>
 

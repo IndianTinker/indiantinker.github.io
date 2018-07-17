@@ -1,0 +1,19 @@
+---
+layout: post
+title: Birds on a Wire
+image: http://www.idc.iitb.ac.in/images/idc-logo_new2.png
+location:  IDC IIT Bombay India
+tags:
+- installation
+---
+
+> This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.  
+
+
+
+Cheers,
+
+Rohit
+
+
+      

@@ -4,7 +4,7 @@ title: TiltStick:Trinket Makes You a Driver
 image: https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg 
 location: Pune, India
 tags:
-- travel
+- arduino
 ---
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/94411929@N06/21328235676/in/dateposted-public/" title="TiltStick Agame stick built using the Adafruit Trinket and a 3 axis accelerometer. It uses the roll movement of the stick to simulate turns. The two buttons on the thumb are ergonomically placed for acceleration and braking. The Stick when connected to a"><img src="https://farm1.staticflickr.com/616/21328235676_d9f3f8f2f5_z.jpg" width="640" height="359" alt="TiltStick Agame stick built using the Adafruit Trinket and a 3 axis accelerometer. It uses the roll movement of the stick to simulate turns. The two buttons on the thumb are ergonomically placed for acceleration and braking. The Stick when connected to a"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

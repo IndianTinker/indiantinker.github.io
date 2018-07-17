@@ -23,6 +23,26 @@ title: Projects
 </div>
 
 <div class="projects">
+<h3>Installations and Mixed Media Art</h3>
+
+  {% for post in site.posts %}
+  {% for tag in post.tags %}
+  {% if tag == 'installation'%}
+ <div class="project">
+ <a href="{{post.url}}">
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <p>
+ {{post.title}}
+ </p></a>
+ </div>
+
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
+
+<h2>Electronics and Computing</h2>
+<div class="projects">
 <h3>Microcontrollers</h3>
 
   {% for post in site.posts %}
@@ -40,7 +60,24 @@ title: Projects
   {% endfor %}
   {% endfor %}
 </div>
+<div class="projects">
+<h3>Embedded Linux/IOT/SDR</h3>
 
+  {% for post in site.posts %}
+  {% for tag in post.tags %}
+  {% if tag == 'rpi' or tag =='raspberrypi' or tag =='beaglebone' or tag =='sdr' or tag =='iot' %}
+   <div class="project">
+ <a href="{{post.url}}">
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <p>
+ {{post.title}}
+ </p></a>
+ </div>
+	
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
 <div class="projects">
 <h3>General Electronics</h3>
 
@@ -61,7 +98,7 @@ title: Projects
   {% endfor %}
 </div>
 <div class="projects">
-<h3>Python/Visual C Sharp</h3>
+<h3>Life Saving Code Chips</h3>
 {% for post in site.posts %}
   {% for tag in post.tags %}
   {% if tag == 'python' or tag=='vcsharp' %}
@@ -119,24 +156,7 @@ title: Projects
 
 </div>
 
-<div class="projects">
-<h3>Embedded Linux/IOT/SDR/Misc</h3>
 
-  {% for post in site.posts %}
-  {% for tag in post.tags %}
-  {% if tag == 'rpi' or tag =='raspberrypi' or tag =='beaglebone' or tag =='sdr' or tag =='iot' %}
-   <div class="project">
- <a href="{{post.url}}">
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
- <p>
- {{post.title}}
- </p></a>
- </div>
-	
-  {% endif %}
-  {% endfor %}
-  {% endfor %}
-</div>
 
 
 

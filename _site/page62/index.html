@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,92 +548,75 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/05/29/TruPlay/">
-        TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430
+      <a href="/2015/09/26/FiddleMini/">
+        Fiddle Mini - The DIY 'Portable' Music System
       </a>
     </h1>
 
-    <span class="post-date">29 May 2015</span>
+    <span class="post-date">26 Sep 2015</span>
 
-    <p>I recently ordered <a href="http://www.ebay.com/itm/USB-Stereo-Bluetooth-Receiver-Adapter-for-Cell-Phone-Tablet-PC-Music-to-AUX-Car-/111672914838?pt=LH_DefaultDomain_0&amp;hash=item1a00397396">this</a> Bluetooth to Aux Adapter from eBay to put an end to tiny wires running down from my phone to the USB (powered) speakers. The aux (3.5mm) that came with my USB Speakers is too small to offer scope of considerable activity like picking phone up for texting or checking mail and <strong>Changing Songs</strong>. Its more like getting chained to the speakers. Woof !!</p>
+    <p>Music and Portability ! These guys have a pretty long relationship ever since somebody thought of listening to his favorite tunes while wasting his time travelling in a train/bus or walking on the streets and even crossing roads or riding bikes ! It started with those shoulder mounted stereo sets until music became a bit disturbing to be heard publicly and we had our first personal music system the <strong>Sony Walkman</strong> ! I even have a functional one from 1995.</p>
 
-<p>After ordering from China it comes home in about 30-35 days, not their fault,Its we who choose the <em>Free Shipping</em> fellas !</p>
+<p>Quite recently we have moved on again from the personal space to a public exhibition and we have those new JBLs and BOSEs taking up the market by a storm. The headphones are becoming increasing ergonomic to wear and we even have cranium ones available. So the next time you say it feels someone’s talking in my head ; It could quite well be literally taken.</p>
 
-<p>It worked as advertised. But the range was hardly 15feet <strong>LOS</strong> and in a maze like house i live in , it would hardly go through the walls. So, the <em>Wireless</em> problem was partly solved but still not very convenient as i still need to be near the phone to change songs. Unlike the conventional problem solving mantra , “Think out of the box !” my answer was inside the box.</p>
+<p>But nothing can beat the pleasure of hearing music as it amalgamates with the swish of the breeze, the chirp of the birds and the song of nature. I am probably from the clan that just dont fall in with headphones. There is a forced disconnect i believe unless people around you make insane noises that beg to be ignored or due to social niceties. So, I decided to build my own <em>Portable Wood Music Box</em> that could well play from any source on the go ! Yeah ! That means it runs off a battery.</p>
 
-<p>It was take-apart time. Opening the flimsy but nicely designed plastic case with an overgrown fingernail i found these inviting Test Pads :</p>
+<p>I had this in mind ever since i made <a href="/2014/11/13/Fiddle-Music-System/">Fiddle</a> ! The size of the speaker was too big to bring with me to Pune.</p>
 
-<center>
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0zeXPvvULI/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-29T08:06:06+00:00">Mar 29, 2015 at 1:06am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-</center>
+<p>I did a couple of attempts but the complexity of making one was too much and using the same Circuit i used on the Fiddle anyways seemed an overkill. While, i was in Mumbai earlier this year, I was searching for a handy small speaker box, so that i get an idea of the size of electronics to squeeze in. Lamington disappointed me terribly or probably i needed a better guide ?</p>
 
-<p>Clearly my job was half done:  we knew the Protocol (UART) and the points. I didnt knew the Chip i was talking too (the manufacturer had wiped off the name ) , the baud rate or any commands that it will work with (like the <em>AT Commands</em>).</p>
-<center>
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/1n1xClPUD-/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-18T16:11:06+00:00">Apr 18, 2015 at 9:11am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
- </center>
+<p>The idea was scraped until recently I went to a local eStore to check out some stuff and noticed a portable speaker i wanted to build. It was a JBL Flip kind of thing. Did A2DP only. Sounded fine ! Costed a bomb ! INR 4000 for that ! I better make my own than falling in to these marketing gimmicks !</p>
 
-<p>Google helps !  I found <a href="http://www.mp3car.com/hardware-development/156962-control-ovc3860-bluetooth-avrcp-with-arduino-and-bmw-ibus-1st-steps.html">this</a> nice forum post detailing the adapter. Bingo its the <strong>OVC3860</strong> Chip. And here are the <a href="http://www.electrodragon.com/w/images/4/4b/BLK-MD-SPK-B_AT_Commands_OVC3860_List.pdf">commands</a>.</p>
-
-<p>Basically all commands are in a <strong>AT#CMD[cr][lf]</strong> Format. The “CMD” for a particular action is mentioned on the sheet above. Thats pretty much all the code you need to control it.</p>
-
-<p>The baud rate was not known, so i tried a couple of them like 9600 etc and found that the particular one that i have is a ‘115600’ one. This setting seems to be stored in the <strong>EEPROM</strong> on the adapter. As <a href="http://waihung.net/bluetooth-audio-mod-on-car-cassette-player/">this</a> post suggests you can even change the device name by playing with the EEPROM ( Will Try later)!</p>
-
-<p>So, it was time to wire the MSP430 Launchpad to the adapter and get things talking. This is the first test video i made!</p>
-
-<iframe width="653" height="380" src="https://www.youtube.com/embed/XGC1E0VE39Y" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Tested it for a few days ! I could now control my phone’s audio tracks from the IR Remote. Now it was time to make it look nice. Convert the idea from a bunch of wires to a PCB.</p>
-
-<p>I wanted it to 3D Print a new case but couldn’t so, made a PCB that would sit on the Top of the adapter and command it. I was lucky to have a 3.3V Regulator inside the adapter so, an extra regulator was not required. For the project i used the MSP430G2553 microcontroller in a TSSOP20 package running @ 16Mhz and programmed using Energia! I added some standard condiments like a LED and an extra <strong>SMD</strong> tactile switch to further expand capabilities. 
-<a href="https://www.flickr.com/photos/94411929@N06/17148091553" title="Dongle Tapping by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17148091553_3a3a7dbf8a_z.jpg" width="640" height="359" alt="Dongle Tapping" /></a></p>
-
-<p>The connections are simple.</p>
+<p>And yet again :</p>
 
 <blockquote>
-  <p>The IR receiver is connected pin 11 and the adapter is interfaced over UART with crossed Rx and Tx lines. I have used decoupling caps on the controller and the receiver. Pull ups for the switch and RESET Line. Current limiting resistors for the LED. A solder jumper for Vcc just in case I dont turn ON the adapter while programming the MCU (You never know), and some programming pads !</p>
+  <p>Why buy ? When it can be built !</p>
 </blockquote>
 
-<p>After designing the board it was time for the best part : <strong>Etching</strong></p>
+<p>While making some unrelated search on eBay (gob bless their algorithm) i stumbled upon <a href="http://www.ebay.in/itm/Can-Speaker-Mp3-Player-Supports-USB-Pen-Drive-Memory-Card-FM-Radio-Aux-/321874916228?hash=item4af13d7384">this</a> . This could be an ideal configuration. I was not sure about the claims though. But i made a point to buy one from Delhi which i was about to visit. It costed about the half in Delhi from the person i usually buy stuff. I got it for 200 bucks. I wonder why the form factor is like the CAN ?</p>
 
-<p>Here are the chronologically arranged pictures of PCB Etching using <em>Toner Transfer Method</em> :</p>
+<p>Following <em>Dave Jone</em>’s words, “Dont Turn it On, Take it Apart “.. The CAN had a very loud and “high on the Higher Fs” speaker ! Connected to a PCB with handful of passives and 3 ICs. 1 for amplification ( guessing its class D probably) , 1 seems to be a microcontroller that reads the switch and plays music from sources and one seems to be a tuner chip for FM reception. The broad feature set (get ready to be BLOWN) :</p>
 
-<p>Making sure the TSSOP Pads got nicely transferred. Clicked using <a href="http://rohitg.in/2015/02/26/The-MacroCase/">MACROCase</a> .
-<a href="https://www.flickr.com/photos/94411929@N06/17768382545" title="Making sure the tiny tracks got transferred by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7695/17768382545_fecd7f269a_z.jpg" width="640" height="583" alt="Making sure the tiny tracks got transferred" /></a></p>
+<ul>
+  <li>Supports USB and microSD Cards ( I have tested and found my 8GB PD doesnt work while less than 4GB works )</li>
+  <li>Has an onboard battery , a repurposed Motorola 1150mAh battery</li>
+  <li>Has FM with Autostore functionality that works pretty well</li>
+  <li>Has Aux in and out</li>
+  <li>Can be charged with a MiniUSB connector</li>
+  <li>Has a Blue Red LED to show status. Red when charging and Blue when in use. Blinking blue when autostoring etc.</li>
+  <li>A control button - Long Press Up increases volume,Long Press Down decreases volume, Push changes source, single up/down toggles the track. Minimal and effective</li>
+</ul>
 
-<p>All set for the bath.
-<a href="https://www.flickr.com/photos/94411929@N06/17768440115" title="Toner Transfer by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5463/17768440115_800c98a122_z.jpg" width="640" height="359" alt="Toner Transfer" /></a></p>
+<p>Thats quite a value !</p>
 
-<p>Rough times to follow.
-<a href="https://www.flickr.com/photos/94411929@N06/17768864201" title="Just Etched by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7707/17768864201_a939e917d1_z.jpg" width="640" height="359" alt="Just Etched" /></a></p>
+<p>I then started searching on Home turf for the <em>Classy</em> form i was looking for.</p>
 
-<p>After some sanding.
-<a href="https://www.flickr.com/photos/94411929@N06/17582193499" title="Cleaned after ACID Bath by Rohit Gupta, on Flickr"><img src="https://c2.staticflickr.com/6/5333/17582193499_d777b921ca_z.jpg" width="640" height="359" alt="Cleaned after ACID Bath" /></a></p>
+<p>For the infrequent visitors of the place, if you enter LR from the Railway Station side, you can find a scrap market that sells off stuff that have some defect. Kind of a junk market.That’s where all the gold is.I found a wooden speaker being sold for about 50 bucks a pop ! The size and the form enamoured me. It was like someone scrapped them for me. The shopkeeper who was adamant to stick one to me and was not agreeing to allow a few electrons flow down to speaker coil, so that i can make sure that everything is fine. After a few minutes he budged and got an old amp from the back and the speaker i chose was fine. All the speakers he had were forcibly severed from the back in varied proportions probably to avoid reuse. I chose the least one that can be aptly covered by the CAN speaker parts with minimal changes.</p>
 
-<p>Flashing the code after soldering.
-<a href="https://www.flickr.com/photos/94411929@N06/17768419595" title="Code Dump by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7776/17768419595_f9b6db17ef_z.jpg" width="640" height="359" alt="Code Dump" /></a></p>
+<p>I desoldered all wires and connected my own antenna to it. Then accommodated the battery and antenna inside the wooden box.</p>
 
-<p>Testing.
-<a href="https://www.flickr.com/photos/94411929@N06/17765735442" title="First Test in Progress by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8812/17765735442_8389a6717d_z.jpg" width="640" height="359" alt="First Test in Progress" /></a></p>
+<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/7DZwuMvUJs/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-31T15:42:06+00:00">Aug 31, 2015 at 8:42am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>Ta Da !!</p>
+<p>This is what it looks before being glued and Msealed. The part is a cut out from the lower section of the CAN Speaker.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17768811751" title="Unobstructing by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7757/17768811751_2657081e27_z.jpg" width="640" height="359" alt="Unobstructing" /></a></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21233003405/in/dateposted-public/" title="P_20150830_232403"><img src="https://farm6.staticflickr.com/5663/21233003405_44877b817b_z.jpg" width="360" height="640" alt="P_20150830_232403" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/17742078846" title="Looks Cool by Rohit Gupta, on Flickr"><img src="https://c4.staticflickr.com/8/7696/17742078846_063d69336d_z.jpg" width="640" height="359" alt="Looks Cool" /></a></p>
+<p>The cut out has been oriented such that it fits the Fattest USB i have and the USB is always inside the periphery of the box to avoid accidental collision with other objects around. The control button is at the bottom for increased ergonomics and avoiding accidental operation. ON/OFF button on the top !</p>
 
-<p>Check out the video for the project in action:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21206733356/in/dateposted-public/" title="P_20150830_234246"><img src="https://farm6.staticflickr.com/5733/21206733356_d0dd00ff77_z.jpg" width="640" height="360" alt="P_20150830_234246" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<iframe width="653" height="380" src="https://www.youtube.com/embed/mrToz8M_BPQ" frameborder="0" allowfullscreen=""></iframe>
+<p>I next bought a collapsible handle from the hardware store and fitted it on top. Kind of serves like a makeshift dock sometimes.</p>
 
-<p>Interested in building one? Grab the code here:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21044805990/in/dateposted-public/" title="P_20150902_083120"><img src="https://farm6.staticflickr.com/5829/21044805990_503b12bec5_z.jpg" width="640" height="360" alt="P_20150902_083120" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/a35bf659325d0eac2ce5.js"> </script>
+<p>The sound quality is pretty nice thanks to the speaker cabinet and a few extra passives added. And Bluetooth and IR also works with <a href="/2015/05/29/TruPlay/">TruPlay</a> Project !</p>
 
-<p>Cheers,</p>
+<p>I have noticed that the plastic does look a bit disjoint. So i chamfered it using Mseal ! Matches with the overall color theme too :D</p>
+
+<p>So, when are you building one ?</p>
+
+<p>Cheers !</p>
 
 <p>Rohit</p>
 

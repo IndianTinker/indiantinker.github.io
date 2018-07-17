@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,82 +548,64 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/04/11/WIOLink/">
-        Getting started with WIO Link
+      <a href="/2016/12/26/StoriesHowDoILook/">
+        How Do I Look Honey !
       </a>
     </h1>
 
-    <span class="post-date">11 Apr 2016</span>
+    <span class="post-date">26 Dec 2016</span>
 
-    <p><a href="https://github.com/anujdeshpande/">Anuj</a> recently gave me one of the few <em>WIO Links</em> he got as a <s>serial</s> Kickstarter backer to try them out. The Wio Link are</p>
+    <p>Following is an email voice attachment, Sabine found in her draft today.</p>
 
-<blockquote>
-  <p>No programming required ESP8266 based grove compatible boards with on-board USB-Serial and Li-ion battery charger. It essentially provides <strong>Grove</strong> sensors a Web API kind of look.</p>
-</blockquote>
+<p>*VOICE STARTS *</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097749300/in/dateposted-public/" title="20160409_192105"><img src="https://farm2.staticflickr.com/1546/26097749300_6fd8a7a041_z.jpg" width="640" height="360" alt="20160409_192105" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><em>TV Advert starts</em></p>
 
-<p>So you have these methods that are associated with various sensors/devices based on its functionality. Like an LED will have ON/OFF methods etc and a switch will have its status and so on. They can be programmed with an App which later provides you with <em>API Endpoints</em> to control the devices using basic HTTP urls in curl for example.</p>
+<p>“How do I look,Honey?”, asked Jane.</p>
 
-<p>In this post, i walk you through the steps, just in case you got the Wio Link as well and we control an LED connected to the WIO link through the App itself. 
-You start with downloading the app from the <a href="https://play.google.com/store/apps/details?id=cc.seeed.iot.ap">Playstore</a>. The App starts with a sign-in process. Outside China, you have to choose the international server. Login and make an account. The app has a tour in which it asks you to press a button on the WioLink that basically turns the WioLink in an AP so, you can identify it and share the login credentials for your Wifi. I got this error.</p>
+<p>“Looks like the new upgrades you won suit you”, replied Frank.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304355621/in/dateposted-public/" title="Error1"><img src="https://farm2.staticflickr.com/1708/26304355621_d442b22c84_z.jpg" width="360" height="640" alt="Error1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>“Haha! So I do look good??”</p>
 
-<p>Errors are good omens. Retrying i saw the Wio Link.</p>
+<p>“Sure you do, Honey! You will always be”</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852413/in/dateposted-public/" title="1"><img src="https://farm2.staticflickr.com/1704/25767852413_1131d7c1ba_z.jpg" width="360" height="640" alt="1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><em>TV Advert ends</em></p>
 
-<p>The App is not the best designed one for the purpose. It is not that user friendly and maybe Seeed will improve upon it. Next the App asks you to give the credentials to the Wifi that will be used by the Wio Link to talk.</p>
+<p>This is 20XX. Not quite far away it seems. But very close to scare you. Philosophers have always debated on the idea of Utopia and humans have always dreamt of beauty and aesthete. Beautiful cars, beautiful people, beautiful homes.. Huh.. That visceral beauty, people die to project around them. What if this all is a simulation, or what if there was simulation. A simulation that makes you feel good because everybody here look good. Sounds good?</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852363/in/dateposted-public/" title="2"><img src="https://farm2.staticflickr.com/1633/25767852363_b6c6bbbe17_z.jpg" width="360" height="640" alt="2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Ah! Care for the story? Cool ! Lets me try to explain.</p>
 
-<p>Once thats done. You get the Visual WioLink to Add Groves to.</p>
+<p>So, As far as I am told, in 2018, There was advisory of a probable (they never trust their computers) <em>Solar Flare</em> that would happen in the late Septembers. It was said that there will be like a lot of sun and everyone in my city or rather most of the country was advised to apply this cream all over our body to protect us from radiation. It came without labels and was available from the local dispensary in dull,emotionless white bottles with a orifice on the top. Squeeze and apply kind of types. It only contained enough for a person. I kinda liked that squishy feeling.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767852273/in/dateposted-public/" title="4"><img src="https://farm2.staticflickr.com/1579/25767852273_599022c3d3_z.jpg" width="360" height="640" alt="4" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>BTW I am Sabrina. I live around here and I am one of the <em>Survivors</em>.</p>
 
-<p>Now here’s a thing. If at this point you click API or Click Update and then click API you get the following error.</p>
+<p>Yeah! Now back on track. 26th September was the date, I guess. We had applied it and were advised to stay indoors and people with those geeky eye implants that just connect to those screenless phones and they can see like everything inside them. Most jerks had them. Anyways they were asked to wear googles and stay in pure darkness or they can come to a particular location to stay protected. <em>Concentration camps,shelters?</em> You tell me.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278225372/in/dateposted-public/" title="Error2"><img src="https://farm2.staticflickr.com/1535/26278225372_caac01d812_z.jpg" width="360" height="640" alt="Error2" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>So, it felt normal and the flare did came, Blackout and nothing was working. “Stone Age Shit” . But no one died. Infact even those who did not apply that cream were not affected. Kinda funny? Well wait till you hear what happened on the next day. The “cool” ones who said that all the cream is a junk started having creepy boils all over their body. Their skin discoloured and they didnt feel any of the pain. They were a few of those in my county, I heard they were too costly to fix them and they started not leaving their houses.</p>
 
-<p>This action should be restricted in the App.The groves are not very well organised making to difficult to find things. I could not find the LED one that i have. So, went for the Relay as in the end i needed a digital output. Also added a switch just in case.</p>
+<p>It was now almost a month now. Nothing unusual but a lot of us including me complained of some itching. It grew as days passed by. No ointment could work and it was a total turmoil across the city. People screaming and taking sleep pills to avoid the pain. Fortunately, the pain did not grow for me as it did for many. I was Daddy’s stronger one always. But, It was painful to see Daddy suffer. People had started becoming more like those “cool” ones that did not take any cream earlier. After a few days of itching and scratching the itch was gone and everyone was looking horrible. Everyone had faces covered with boils and they looked.. ahem.. Ugly !</p>
 
-<p>PS: Ignore the Infrared Emitter. I thought it was an LED at the time of taking the screen shot. Only to figure it out later :p</p>
+<p>The scientists as I heard on a HAM Net one night, had found out that a particular chemical in that cream had reacted to the radiation that was even above the expected value and that has led to this mass allergy in the people. Gross!! They came up with another plan to correct their mistakes. They, the company behind those nerdy glasses called, “<em>Algol</em>” said that if they can implant their ocular modulators in the eyes of people they could see beauty everywhere. Also, Do you know who were not affected by the flares? Only the people with those implants and also ones with that rare antigen like me. So, like a lot of people really needed some beauty in life</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097737210/in/dateposted-public/" title="6"><img src="https://farm2.staticflickr.com/1693/26097737210_f129470123_z.jpg" width="360" height="640" alt="6" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>So, here is the breakdown of what the government, pressurized by the citizen’s gross reactions and (in)capability of its own scientists fell into: 
+They agreed for mass “modulation” of people at no costs, so that people can see what they want to in others. A totally utilitarian way to get out o this mess. So essentially they implant this ring in your eye, a quick cataract like op. Now, the company will simulate skin and other things in your eyes based on who you see. So, It detects who i see and will render the person in front of me in a pre-flare scenario. It is impossible to see what the person looks in real. Even we who did not have any effects, were forced to have it, to preserve harmony in the society. Beat that!!</p>
 
-<p>Now once you click <strong>Update</strong> the App configures the Wio Link and enables a set of API to control the groves. I am not sure what it does here. Uploading the code from phone to the grove does not seem to be happening, maybe they enable/update some flags or a look-up table. Just Guessing !<br />
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26304354631/in/dateposted-public/" title="Upload"><img src="https://farm2.staticflickr.com/1665/26304354631_14b9334f97_z.jpg" width="360" height="640" alt="Upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The plan seemed simple but intrusive, but the agony was huge and the government bent and gave into it all. Those wiz kids at “Algol” sure made tons of money exploiting what beauty creams and stuff have been doing since ages. They did it <em>Digitally</em> .</p>
 
-<p>Once this is done, on the home screen you see this :</p>
+<p>Now, It has been years since, it happened. Everyone looks beautiful. People are jealous as always of others beauty. But unlike the way they used to be jealous, this time they merely cant afford to be beautiful. Haha.. Looks like you didnt get the Pun? Its way beyond your time anyways.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26344667386/in/dateposted-public/" title="FINAL"><img src="https://farm2.staticflickr.com/1656/26344667386_a9e0a13aa6_z.jpg" width="360" height="640" alt="FINAL" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>We live in a society now where everything you see is digital manipulated to some extent. The spaces are real. But the beauty is not. The rich can afford beauty, like they always did. But now,only they could be beautiful. Why? Beauty comes with costs. Let me explain.</p>
 
-<p>Now Lets see how the <strong>API</strong> looks like.</p>
+<p>What time do you live in? Ahmm.. On this time window it states, 2016. Ohkay! So, remember you got those droid phones with themes. Now, you can put themes on yourself. So, all the brands in your time like Lak-meh , Gloriflame, Pondas etc have stopped making like actual creams and stuff. They just have these designers and software guys who code a layer on your rendering to the world and boom.. You have Lakmeh lipstick on your face. These things are all in their domain. So, you can apply a lipstick say for 100 times and pay 1 plic (that’s my currency) for it.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736540/in/dateposted-public/" title="LEDApi"><img src="https://farm2.staticflickr.com/1715/26097736540_c47cba5c70_z.jpg" width="360" height="640" alt="LEDApi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Now everyone who see’s you that day, will see your lipstick and you know, the usual Human things will happen. Same goes for most jewellery and other stuff. The software not only makes people beautiful but places too. A few set of newly launched houses, ofcourse by Algol allow people to make the house look and feel as they like. So, if you like say “green” the house has variation of green on the walls and when i enter, it seems blue to me cause I am blue person.</p>
 
-<p>The best thing is that they provide the ability to make requests from the App itself. This comes handy to test things quickly. Here i send 1 to the Wio Link in hopes to turn the LED on.</p>
+<p>Pretty neat system you see. Damn.. The ones with money always win you see.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26278224872/in/dateposted-public/" title="LED On APi"><img src="https://farm2.staticflickr.com/1555/26278224872_0cbe5679e8_z.jpg" width="360" height="640" alt="LED On APi" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>But, As I speak to you today, I would like to tell you about the horrific events of the day. Apparently there was another disastrous solar flare earlier today and all the Algol ocular modulators were affected. They no longer work. People are seeing themselves, others and . . . . .</p>
 
-<p>Wohoo! Works the very first time. :D</p>
+<p>*VOICE ENDS *</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/25767855573/in/dateposted-public/" title="LED ON"><img src="https://farm2.staticflickr.com/1667/25767855573_e7edc6994f_z.jpg" width="640" height="360" alt="LED ON" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now the LED Off Case. I send 0.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097736430/in/dateposted-public/" title="LED Off api"><img src="https://farm2.staticflickr.com/1534/26097736430_2ab9c03492_z.jpg" width="360" height="640" alt="LED Off api" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Voila.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26097744790/in/dateposted-public/" title="LED Off"><img src="https://farm2.staticflickr.com/1463/26097744790_26c971e90e_z.jpg" width="640" height="360" alt="LED Off" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>I just love the simplicity and fun of working with the WioLink. Truly fantastic what Seeed is offering at this price. They have to work a bit on the App as it crashes often. Rest all is in place. Lets see what more can we build with this !</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
 
   </div>
   

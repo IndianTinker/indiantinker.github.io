@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,129 +548,62 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
-        Nokia 5110 LCDs and MSP430
+      <a href="/2015/05/17/FM430/">
+        FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM
       </a>
     </h1>
 
-    <span class="post-date">09 Nov 2014</span>
+    <span class="post-date">17 May 2015</span>
 
-    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.</p>
+    <p>One fine day while i was rummaging through the part bin, I found an old project that probably was never completed ! <strong>FM Radio</strong> !
+I tried to make one when i was in 7th grade, waiting at the counter of a dingy electronics repair shop for anyone to pay attention to the parts list gathered over the internet ( Dial up days ! ).</p>
 
-<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
+<p>At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw ‘TEA5767 FM Receiver’ module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me.</p>
 
-<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code class="highlighter-rouge">2.7-3.3V</code> happy for our MSP430.</p>
+<p><a href="http://www.voti.nl/docs/TEA5767.pdf">TEA5767</a> is a digital FM Receiver chip from NXP/Phillips that can be commanded over I2C to tune to various frequencies easily.</p>
 
-<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a></p>
+<p>But alas ! The one i got never matched with any pictures online ! Where was the missing “crystal” responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen “TT-502X” i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to <a href="http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio">Dilshan</a>, an amazing maker himself, I was able to get this done.</p>
 
-<p>For TL:DR;</p>
+<p>It turns out that the module is actually used in some Samsung Products and requires a <em>generic</em> watch crystal.</p>
 
-<p>The LCD has the following pins to interface to:</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
+<p>The connections are similar to what <em>Dilshan</em> mentions it in his post. I added a diode (Reverse Polarity. Ouch!) and a decoupling cap. And after a bit of work with the solder iron i was able to make my own FM Receiver Module.</p>
 
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Pin Number</th>
-    <th class="tg-031e">Pin Label</th>
-    <th class="tg-031e">Pin Function</th>
-    <th class="tg-031e">Input/Output?</th>
-    <th class="tg-031e">Notes</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">1</td>
-    <td class="tg-031e">VCC</td>
-    <td class="tg-031e">Positive power supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">2</td>
-    <td class="tg-031e">GND</td>
-    <td class="tg-031e">Ground</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">3</td>
-    <td class="tg-031e">SCE</td>
-    <td class="tg-031e">Chip select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">4</td>
-    <td class="tg-031e">RST</td>
-    <td class="tg-031e">Reset</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">5</td>
-    <td class="tg-031e">D/C</td>
-    <td class="tg-031e">Mode select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">6</td>
-    <td class="tg-031e">DN(MOSI)</td>
-    <td class="tg-031e">Serial data in</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">7</td>
-    <td class="tg-031e">SCLK</td>
-    <td class="tg-031e">Serial clock</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">8</td>
-    <td class="tg-031e">LED</td>
-    <td class="tg-031e">LED backlight supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
-  </tr>
-</table>
+<p>Next step? Let others know about it… :D</p>
 
-<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
+<center>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0nwlsDPUN1/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
+Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-24T18:54:28+00:00">Mar 24, 2015 at 11:54am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+</center>
 
-<p>At a time you write to a single bank.</p>
+<p>FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.</p>
 
-<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
+<p><a href="https://www.flickr.com/photos/94411929@N06/17152069784" title="Back side ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg" width="359" height="640" alt="Back side !" /></a></p>
 
-<p>The communication is done using SPI.</p>
+<p>After doing the same! A commander was needed. Chose my workhorse, the MSP430 Launchpad for the extra switch they have on it that helps me change channels and doing that on arduino pro mini would require some breadboarding i was too lazy to try.</p>
 
-<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG’s post</a>.</p>
+<p>The code is pretty easy and shown below. It was coded using <a href="http://energia.nu/">Energia</a> IDE.</p>
 
-<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
+<p>Based on the datasheet the I2C address of the device is <code class="highlighter-rouge">0x60</code> and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.</p>
 
-<p>Connections are as follows(PORT1):</p>
+<p>The other data bytes i.e. <code class="highlighter-rouge">0xB0</code> and <code class="highlighter-rouge">0x10</code> are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.</p>
 
-<ul>
-  <li>LCD5110_SCLK_PIN- BIT5</li>
-  <li>LCD5110_DN_PIN- BIT7</li>
-  <li>LCD5110_SCE_PIN- BIT0</li>
-  <li>LCD5110_DC_PIN- BIT1</li>
-</ul>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
-<br /></p>
+<p>I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !</p>
 
 <noscript><pre>400: Invalid request
 </pre></noscript>
-<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
+<script src="https://gist.github.com/aa9a2a524853674807e6.js"> </script>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
+<p>If you need to check for signal quality and other things you can check out my github repo <a href="https://github.com/IndianTinker/FM430">here</a> .</p>
 
-<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
+<p>Here’s me explaining the whole setup in detail !</p>
 
-<p>If you have any difficulties post here in comments</p>
+<iframe width="650" height="380" src="https://www.youtube.com/embed/r3fGMu5iPY8" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
 
   </div>
   

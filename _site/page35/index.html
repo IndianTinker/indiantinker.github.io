@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,53 +548,95 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/01/31/Hamrx/">
-        RXing into the HAM World using RTL-SDR
+      <a href="/2016/09/01/Dapoli/">
+        Dapoli mein kya chalta hai?
       </a>
     </h1>
 
-    <span class="post-date">31 Jan 2016</span>
+    <span class="post-date">01 Sep 2016</span>
 
-    <p>I have been intrigued by HAM ever since Prof.Gadre mentioned about it in one of his lectures. HAM has an amazing community and i have been fortunate to be included into one here in Pune. Special Thanks to <a href="http://amoghdesai.com/">VU3DES</a> and <a href="http://tinkertool.wordpress.com">VU2ASH</a>.</p>
+    <p>So, this time around i went to Dapoli…..</p>
 
-<p>The HAM group in Pune is a group of <em>highly</em> motivated and dedicated HAM enthusiasts and regularly have conversations on the HAM frequencies. They open-heartedly encourage n00bs to get their feet wet in the HAM world..</p>
+<p>Not the first time though, a better time nevertheless. I did not document my last trip which was a rather amazing one technically as it was my maiden bike trip with a friend.
+We applied all kinds of constraints on us (some got applied automatically). We had to return on time as my friend had to catch this train back. Pretty hectic but memorable. As we kicked an age old Unicorn owned by my friend, travelled through the wet and windy Tamhini Ghats from Pune, we felt a unique sense of freedom. There were a few hiccups, particularly with the bike, one of the jets of the carb of the bike was malfunctioning, resulting in repeated kicking to start it. Yes! I would have loved ES. 
+That time when we went on a bike the weather was sultry bad and we had these scenes around us that resembled post-apocalyptic scenarios as if the whole place has been nuked the last night and only we were the one there. The fields around us were burned, nothing but the sweet Honda’s sound was heard. I was hopping nothing goes wrong ! It turns out people even in villages dont get up that early as elders told. There was limited crowd and since the fields were less bushy, the crowds did not prefer it for their morning acts.</p>
 
-<p>Frankly, the initial days were tough as the jargon used in HAM is intense and i could not make out many times what the conversations meant. Slowly with Amogh’s help I figured out most of it. For Example: DIYers are called Home Brewers.</p>
+<p>Nevertheless, first “Clichéd” bike ride. We went around 450km, got lost a few of times. Went to Ladhgar Beach. Bad beach, all rocky, dont go ! Also went to a Parshuram temple which had this enormous statue of Lord Parshuram. The view from that place was great. As we moved around, the clock said it was time to go back. Couldnt even have any food there just Bananas #BadPlanning .</p>
 
-<p>As Amogh suggested, i started with building a 2M Band (140MHz) antenna and using it with my <a href="/2015/10/12/RTLSDR1/">RTL SDR Dongle</a>.
-The process involved severing my already working cable that connects to the tiny antenna using which i can do lots of cool things like tracking flying objects using ADSb, A post my hands are itching to write but looking at the growing <em>intolerance</em>, a few friends have cautioned me into not exploring stuff in the grey area more. If anyone with a better understanding of the grey value in this area reads it, please do tell me. Nevertheless, Cool things have to be risked to achieve cooler things. There you go, nice cable.</p>
+<p>But the scenes in Tamhini Ghats when its about to rain is fabulous, similar to the ones you get up north, only much approachable.</p>
 
-<p>Well, 2M is the n00bs band. Listening stuff is pretty easy with basic components costing less than a <em>Vada Pao</em> . RXing to most things (not all) is legal and this was quite relieving.</p>
+<p>Nevertheless, the trip in totality felt hasted and Dapoli needed a second trip for sure. But when was a question!</p>
 
-<p>BTW, the easiest antenna i plan to build was a <strong>Vertical Dipole</strong>. It largely has two(dipole) elements/wires/conductors that have a strict length and are (as the name suggests) oriented vertical to the ground. There is a simple equation that governs the length of the antenna elements.</p>
-
-<p>The band is 2M, hence, the minimum antenna length should be lamda/4 . So, it is about 2/4=0.5m or 50cm or roughly 19.6 inches. So, we need two pieces of wire of 19.6 inches in length each and wired to our SDR cable. Amogh sent me a very detailed picture at the time of construction, which i lost. :(</p>
-
-<p>The SDR cable is essentially like those old RF in Co-Ax cables we receive cable TV from in our houses. The outer part is negative or shield and the centre part is signal or positive. I got the cheap iron wire that is used to tie re-bars in construction; they were frankly very sturdy and held shape. I measured and cut 19.6 inch elements with a little room of bending it.</p>
-
-<p>The frame (well sort of) was made using a T junction and  pipe segments with Tinned nut and bolts to the ends as they can be soldered.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23586681329/in/dateposted-public/" title="IMG_20151222_192951"><img src="https://farm2.staticflickr.com/1482/23586681329_7ff69b2556_z.jpg" width="640" height="480" alt="IMG_20151222_192951" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Soldered</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23327760413/in/dateposted-public/" title="IMG_20151222_193021"><img src="https://farm2.staticflickr.com/1445/23327760413_ef36ffc9c9_z.jpg" width="480" height="640" alt="IMG_20151222_193021" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>I hot-glued one end and kept the other end free. This allowed me to fold the antenna and take it out of the cramped window and re-open it again outside.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23327760983/in/dateposted-public/" title="IMG_20151222_194750"><img src="https://farm2.staticflickr.com/1454/23327760983_c15f7745b6_z.jpg" width="640" height="480" alt="IMG_20151222_194750" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Now it was time to search for a open space. Since most people talk using Handies (Hand-held radios) with too low power(5W is my guess) and i am apparently the farthest from them. Most of them are in Pune, while I am pretty far away in PCMC . Also, the height at which they transmit also matter a lot. The only open place was a little used balcony. I made my base there and fixed the antenna with my Safety shoe. The SDR settings are 145.1Mhz and modulation is NFM.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23872027191/in/dateposted-public/" title="IMG_20151222_215517"><img src="https://farm6.staticflickr.com/5735/23872027191_1a1f2e7094_z.jpg" width="480" height="640" alt="IMG_20151222_215517" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>We have a active group and i requested for anyone to transmit on 145.1 MHz. A session was planned at 10pm. I guess i had to wait till then. Even at 10pm, i was getting nothing, just noise. I fiddled with the bandwidth on the SDR console and voila i could hear Rachit talking. He was probably on a Handy and hence his signal was weak. Then when VU2ASH talked it was like WoW. I literally had moist eyes, as if i had intercepted an alien signal or something. He stays at a high place and has a great antenna. I had to increase bandwidth to be able to hear him clearly. So, the whole time i was fiddling with Bandwidth controls and could hear the entire thing and yeah the <em>other</em> things still work :D</p>
-
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/_x4EYHvUMG/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#HAM #Rxing #Pune #DIY #2m #vhf</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-27T02:57:34+00:00">Dec 26, 2015 at 6:57pm PST</time></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BGXG85zPUIW/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-07T17:07:53+00:00">Jun 7, 2016 at 10:07am PDT</time></p></div></blockquote>
 <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>Next up? I will probably use my not-in-active-use raspberry pi to make an always ON HAM receiver tagged to our frequency and also improve the antenna.
-Do you have any leads on things that can be done? Please do share in the comments section below.</p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BGQw-6vvUPf/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Why your #friend wants to see the #beach and come back ASAP ! Rode 433kms #ladhgar #maharashtra #India #bike #endurance #saddlesore #Dapoli #tamhinighat #Honda</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-05T06:00:29+00:00">Jun 4, 2016 at 11:00pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:36.5277777778% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BGPMBYRPUBV/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#Nature has been #3DPrinting the world for a while now. #3DPrint #Dapoli #Stones #maharashtra #India #fdm</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-04T15:18:16+00:00">Jun 4, 2016 at 8:18am PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<hr />
+
+<p>The second trip came in next 4 months, I have now moved to Mumbai. This time i visited Dapoli as a User Studies student, trying to use my new found skills of contextual enquiry to probe around with the idea of taking stuff on credit. This was an amazing fun trip.</p>
+
+<p>The account that follows is emotionally and intellectually moderated one and any mentions are purely by chance and have no relation to anyone, intended or otherwise :P</p>
+
+<p>We were a group of 30 students who visited Dapoli using MSRTC buses plying from Maitri Park. The day was a rather gloomy one. Downpour was inevitable. We had chosen a noon bus so that we could reach Dapoli in light. MSRTC had other plans. There was no co-ordination among various bus stops. The bus was 4 hours late. This is an interesting design problem, how we traced buses, when the arrogant stop manager made all kinds of excuses. We called each and every bus stop where the bus had to pass to know its whereabouts, like a CPU polling the GPIO pins ! There is no centralized tracking, purely a human infected relay system. Many among us boasted of having “designed” such a system. Well, people doodle all the time.</p>
+
+<p>In a civil society, everyone has a seat number. But, when the bus came, it was pure chaos. First come first serve ! I felt that “self inflicted morality” is one of the worst human survival traits. I had booked the best seat, ended up getting least kinematic-ally favourable one ,in the corner with a rather ‘touchy’ alien co-passenger. This crowd behaviour raises important and sensitive issues like living the education or earning from the education?</p>
+
+<p><strong>But does it matter?</strong></p>
+
+<p>We reached Dapoli late in night, thanks to one of the students, we had a hostel booked in the local agri college. The place was absolute beauty. Such green, much wow !</p>
+
+<center>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773220604/in/dateposted-public/" title="DSC_0666"><img src="https://c5.staticflickr.com/9/8021/28773220604_90b61a421e.jpg" width="500" height="333" alt="DSC_0666" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/29317755271/in/dateposted-public/" title="DSC_0658"><img src="https://c8.staticflickr.com/9/8022/29317755271_5c2c51e0eb.jpg" width="500" height="375" alt="DSC_0658" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773220364/in/dateposted-public/" title="DSC_0676"><img src="https://c5.staticflickr.com/9/8435/28773220364_d6b18427ba.jpg" width="500" height="376" alt="DSC_0676" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+</center>
+
+<p>Majority of the time it was work, we talked to tons of people regarding their credit habits. We even met one of the oldest people to have ever lived in Dapoli, a 100yr old lady. A small town is a rather accepting territory. We made friends with people so fast. Since, we had to have a well weighted demographics we had to move beyond Dapoli into smaller corners. Overall, it was a fun trip.</p>
+
+<p>The itinerary was as follows:</p>
+
+<p>We visited Harne Village/Beach/Fort. It can be reached via Buses from Dapoli. The route is great. The view from the fort is also fantastic, being a rather non-touristy season, there was hardly anyone on the beach. The beach is rocky and hence <em>good-to-see</em> kinds.</p>
+
+<p>Then we visited Murud beach . This is the best beach around. Clean water, no rocks, nice sand. Due to monsoons, we couldn’t see the typical <em>beach-wala-sunset</em> but yeah it was good! People who have fish, can have fresh fish fished and fryed for them.</p>
+
+<p>There a limited culinary choices in Dapoli. We went to mainly a <strong>Jagdish Hotel</strong> who served ‘Okish’ Thali and <strong>KBC</strong> who served nice “international” cuisines.</p>
+
+<p>Once we were done with the course, it was time to leave. Its amazing how everyone knows everyone in Dapoli. When we boarded the bus, random people would ask others by names as to why they were visiting Mumbai. I even saw some random person cycling on the road in a different lane, wave to another in the bus ! Pure human beauty !</p>
+
+<p>As we travelled back, I tried to relive moments that were spent in Dapoli. Soon, I woke up too see crowds of people walking around, trying to find the way, Horns blowing, people shouting. Welcome to Mumbai it said !</p>
+
+<p>Now to leave you with some pictures clicked during the trip !</p>
+
+<center>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/29317753971/in/dateposted-public/" title="DSC_0698"><img src="https://c4.staticflickr.com/9/8863/29317753971_896244fa42.jpg" width="500" height="333" alt="DSC_0698" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773219934/in/dateposted-public/" title="DSC_0699"><img src="https://c7.staticflickr.com/8/7545/28773219934_593f3a346f.jpg" width="500" height="333" alt="DSC_0699" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773219524/in/dateposted-public/" title="DSC_0700"><img src="https://c5.staticflickr.com/9/8283/28773219524_7fe7734a1a.jpg" width="500" height="375" alt="DSC_0700" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773218864/in/dateposted-public/" title="DSC_0705"><img src="https://c1.staticflickr.com/9/8436/28773218864_3879f71ca6.jpg" width="500" height="375" alt="DSC_0705" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773217504/in/dateposted-public/" title="DSC_0751"><img src="https://c1.staticflickr.com/9/8174/28773217504_22dfd2d802.jpg" width="500" height="333" alt="DSC_0751" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/29317747421/in/dateposted-public/" title="DSC_0758"><img src="https://c6.staticflickr.com/9/8002/29317747421_61d5f2a908.jpg" width="500" height="333" alt="DSC_0758" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/28773216994/in/dateposted-public/" title="DSC_0789"><img src="https://c3.staticflickr.com/9/8475/28773216994_815f93719c.jpg" width="500" height="333" alt="DSC_0789" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/29317745541/in/dateposted-public/" title="DSC_0867"><img src="https://c6.staticflickr.com/9/8258/29317745541_634cdbae0e.jpg" width="500" height="333" alt="DSC_0867" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+</center>
+
+<p>PS: Sorry for the bad photography ! The camera is a pretty good one this time :)</p>
 
 <p>Cheers,</p>
 

@@ -36,7 +36,7 @@ color: #d84315;
  */
 
 html {
-  font-family: "Space Mono", monospace;
+  font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -52,7 +52,7 @@ html {
   }
   .post-title,.post-date,.page-title
   {
-    font-family: "Karla",sans-serif;
+    font-family: 'Roboto Mono', monospace;
   }
 }
 @media (min-width: 58em) {
@@ -61,7 +61,7 @@ html {
   }
   .post-title,.post-date,.page-title
   {
-    font-family: "Karla",sans-serif;
+    font-family: 'Roboto Mono', monospace;
   }
 }
 img
@@ -107,7 +107,7 @@ background: #FAFAFA;
 .sidebar-about h1 {
   color: black;
   margin-top: 1rem;
-  font-family: "Karla", sans-serif;
+ font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
 }
 

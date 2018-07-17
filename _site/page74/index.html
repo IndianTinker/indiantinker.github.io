@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,41 +548,64 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/10/28/Dollar-LED-Bulb/">
-        Inside a Cheap LED Bulb
+      <a href="/2015/04/17/BoardMerge/">
+        BoardMerge- The command line single page PDF merge utility for PCBs
       </a>
     </h1>
 
-    <span class="post-date">28 Oct 2014</span>
+    <span class="post-date">17 Apr 2015</span>
 
-    <p>I was recently on the visit to my hometown <em>Delhi</em> this Diwali when i visited <strong>Lajpat Rai</strong> market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.</p>
+    <p>Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this <a href="http://rohitg.in/2014/04/07/OpenAgitator/">Open Agitator</a> a while back to help me ease out the etching process.</p>
 
-<p>It was pretty clear that the Bulbs wont have those <em>Chinese</em> drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.</p>
+<p>I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align="center" /></a></p>
-
-<p>And Bingo!
-It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS, One can only gjnvg/s1600/transformerless+power+supply+circuit.png">like this</a>) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (<em>No Zener</em>)</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia" /></a></p>
-
-<p>The entire Bulb had:</p>
+<p>The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we <em>should</em> cut costs. Further the <em>several-times-on-a-page</em> approach had more issues:</p>
 
 <ul>
-  <li>2x <code class="highlighter-rouge">470k</code> resistors,</li>
-  <li>1 x <code class="highlighter-rouge">100uf</code> Electrolytic Capacitor,</li>
-  <li>1 x <code class="highlighter-rouge">0.1uf</code>(guess) Capacitor with severed markings</li>
-  <li>12 LEDs</li>
-  <li>4 Diodes in bridge rectifier configuration.</li>
+  <li>Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers</li>
+  <li>The shop keeper usually charges for a single round in the printer and printing many times added to the costs.</li>
+  <li>I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)</li>
+  <li>You also need to set the no scaling option in <em>Acrobat</em> again and again.. duh..</li>
 </ul>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003" /></a></p>
+<p>Thats too much work specially after waiting in a queue to get to the printer !</p>
 
-<p>The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.</p>
+<p>I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a <strong>Single</strong> page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005" /></a></p>
+<p>Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to <em>re-etch (just imagine)</em> a whole board.</p>
 
-<p>One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.</p>
+<p><strong>The Process</strong></p>
+
+<ol>
+  <li>
+    <p>Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.</p>
+  </li>
+  <li>
+    <p>This way you will have many pdfs on the same folder. Now:
+<code class="highlighter-rouge">git clone https://github.com/IndianTinker/BoardMerge.git</code>  or download from <a href="https://github.com/IndianTinker/BoardMerge">here</a></p>
+  </li>
+  <li>
+    <p>You need to install pyPDF dependency. PIP is the boss here!
+<code class="highlighter-rouge">sudo pip install pypdf</code></p>
+  </li>
+  <li>
+    <p>Now paste the <code class="highlighter-rouge">merge.py</code> in the active eagle folder and run :
+<code class="highlighter-rouge">python merge.py file1.pdf file2.pdf .. .. ..</code></p>
+  </li>
+  <li>
+    <p>Wait till it gets completed and you shall see a file <code class="highlighter-rouge">Combine.pdf</code> with all the pdfs on a single page!</p>
+  </li>
+</ol>
+
+<p>This a directory full of 17 pdfs !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16557649863" title="before by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg" width="640" height="402" alt="before" /></a></p>
+
+<p>After some python-fu you get this:</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17151890736" title="final by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" width="640" height="366" alt="final" /></a></p>
+
+<p>Hoping that fellow makers find it useful.</p>
 
 <p>Cheers!</p>
 

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Installation- Men and Three Worlds
+title: Men and Three Worlds
 image: https://c1.staticflickr.com/1/436/32850126965_681d9b81e9.jpg
 location: IDC IIT Bombay India
 tags:
 - stories
-- design
+- installation
 ---
 
 Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI conference at IIT Bombay.

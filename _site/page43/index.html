@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,72 +548,110 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/16/Plantpal/">
-        PlantPal-Garden Light Watering Reminder
+      <a href="/2016/02/04/spectravulizer/">
+        SpectraVUlizer- Lights,Music and Magic
       </a>
     </h1>
 
-    <span class="post-date">16 Nov 2015</span>
+    <span class="post-date">04 Feb 2016</span>
 
-    <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
+    <p>One day while chatting with my good friend <a href="https://twitter.com/mrrituparna">Rituparna</a> we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more <em>dhinchaak</em>. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.</p>
 
-<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched ‘Automatic System’, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
+<p>Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the <a href="http://tah.io/">Tah</a> as our number cruncher of choice.</p>
 
-<p>Hence,<strong>PlantPal</strong> .</p>
+<p>One fine afternoon we met at <a href="http://www.meetup.com/Doo-Things/">doo Things</a> to get the project up and running. We decided to use the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7</a> which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
+Reading it is similar to how you read a shift register.</p>
 
-<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The ‘Chinese’ made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
+<p>We followed the standard circuit from the datasheet and programmed the <strong>Tah</strong> to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.</p>
 
-<p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/" title="WP_20150321_004"><img src="https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg" width="640" height="359" alt="WP_20150321_004" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<ul>
-  <li>A yet-another-no-datasheet chinese IC.</li>
-  <li>A axial resistor like inductor</li>
-  <li>An LED</li>
-  <li>A resistor for the LED.</li>
-  <li>The solar panel</li>
-  <li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
-</ul>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/" title="WP_20150321_006"><img src="https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg" width="640" height="359" alt="WP_20150321_006" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
+<p>The test code we used is as follows:</p>
 
-<p>So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.</p>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cm">/*
+Released under MIT License
+A project by Rituparna and Rohit
+*/</span>
 
-<p>So, the power issue was sorted. For the sensor, i used the usual <em>two-wires-in-gypsum</em> sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my <a href="http://www.ti.com/product/msp430g2230">MSP430G2230</a> used up. It was time to work on the code.</p>
 
-<p><em>With great power, comes greater responsibility</em>. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.</p>
+<span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;
+#define NEOPIXELPIN 4
+</span>
+<span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="n">NEOPIXELPIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
 
-<p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">analogPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">strobePin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">resetPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
-<blockquote>
-  <p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED’s blinking rate also acts like an indicator of sorts.</p>
-</blockquote>
+<span class="kt">int</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span> <span class="c1">// to hold a2d values
+</span>
+<span class="kt">int</span> <span class="n">doubledSpectrumValue</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<p><strong>Problems and solutions</strong></p>
 
-<p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span> <span class="c1">// Initialize all pixels to 'off'
+</span>
+  
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
+  
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
 
-<ul>
-  <li>
-    <p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon.</p>
-  </li>
-  <li>
-    <p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p>
-  </li>
-  <li>
-    <p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p>
-  </li>
-  <li>
-    <p>Even lower power, using the MSP430’s clock module i can certainly go below 1MHz until it affects other peripherals.</p>
-  </li>
-</ul>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+ 
+  <span class="c1">//Measure the magnitudes of the 7 frequency bins
+</span>
+  <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// to allow the output to settle
+</span>
+    <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">);</span>
+    <span class="n">avg</span> <span class="o">+=</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p>Check out the video of it in action:</p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen=""></iframe>
+  <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span>
 
-<p>Please do comment if you have any queries :D</p>
+  <span class="c1">//Clear out the NeoPixel String
+</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">144</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+  <span class="p">}</span>
+  
+  <span class="c1">//Draw the meter on the NeoPixel string
+</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">map</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">144</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">60</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">map</span><span class="p">(</span><span class="n">spectrumValue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)));</span> <span class="c1">//Added blue flash for bass hit
+</span>
+  <span class="p">}</span>
+  
+  <span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">125</span><span class="p">);</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>Cheers !!</p>
+<p>
+So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
+</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/xV4zOYUQKfM" frameborder="0" allowfullscreen=""></iframe>
+
+<p>The song is by Adiba Parveen just in case you like it. Its <a href="https://www.youtube.com/watch?v=h0EoMozYWSs">here</a>.</p>
+
+<p>Cheers,</p>
 
 <p>Rohit</p>
 

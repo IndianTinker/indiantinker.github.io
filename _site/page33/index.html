@@ -5,23 +5,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
 </script>
-<!--->
-<script type="text/javascript">
 
-
-
-			// get the data with a webservice call
-			$.getJSON('http://api.thingspeak.com/channels/39502/feed/last.json?callback=?', function(data) {
-
-				document.getElementById("iot").innerHTML = 'Temperature[C]: ' +data.field1 +'<br>';
-				//alert(data.field1)
-
-			});
-
-
-
-	</script>
-<!--->
   <meta name="google-site-verification" content="jnyuLnp8Zt_h8SKLdZzI_qRZ1uOO24uww8-ucfKDbJM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -61,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Think,Design,Make,Repeat
+      Rohit Gupta &middot; Doer, Designer and Researcher
     
   </title>
 
@@ -69,7 +53,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-<link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono" rel="stylesheet"> 
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Icons -->
@@ -148,7 +132,43 @@
       
         
           
-            <a class="sidebar-nav-item" href="/travels/">Travel-o-graphy</a>
+            <a class="sidebar-nav-item" href="/travels/">Writings</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
           
         
       
@@ -528,55 +548,66 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/03/12/arc/">
-        ReactorX- The intuitive Arc Reactor from the movies
+      <a href="/2016/12/01/JrExhibitions/">
+        Junior MDes Sem 1 Exhibitions
       </a>
     </h1>
 
-    <span class="post-date">12 Mar 2016</span>
+    <span class="post-date">01 Dec 2016</span>
 
-    <p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
+    <p>After every semester, we have an exhibition of sorts by various departments showcasing the excellent work they did during the course. Following is a rather utilitarian compilation of pictures of these exhibitions.</p>
 
-<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
+<p><strong>PS: All rights are reserved to the respected content creators.</strong></p>
 
-<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
+<p><strong>Product Design</strong>
+<em>Photo Courtesy- ASV Arun Balaji</em></p>
 
-<p>Features:</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30547468423/in/dateposted-public/" title="IMG_0477"><img src="https://c8.staticflickr.com/6/5506/30547468423_1fc2a68715.jpg" width="500" height="333" alt="IMG_0477" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<ul>
-  <li>Small and light</li>
-  <li>Power efficient</li>
-  <li>Bright</li>
-  <li>Change-able modes using a switch</li>
-  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
-  <li>Morse Code for SOS</li>
-  <li>A mind blowing start-up sequence</li>
-  <li>Knight rider effect on LEDs</li>
-  <li>Breathing effect on the Middle high power LED</li>
-</ul>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31355308855/in/dateposted-public/" title="IMG_0486"><img src="https://c8.staticflickr.com/6/5786/31355308855_50d994992a.jpg" width="500" height="333" alt="IMG_0486" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>It also needs to be wearable and comfortable at the same time.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30547474643/in/dateposted-public/" title="IMG_0491"><img src="https://c4.staticflickr.com/6/5549/30547474643_c9a0e8a979.jpg" width="500" height="333" alt="IMG_0491" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The motion and the light helps attract attention.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31240102551/in/dateposted-public/" title="IMG_0623"><img src="https://c8.staticflickr.com/6/5338/31240102551_93526a0cd9.jpg" width="500" height="333" alt="IMG_0623" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31318775786/in/dateposted-public/" title="IMG_0503"><img src="https://c3.staticflickr.com/6/5680/31318775786_890627e7d1.jpg" width="500" height="333" alt="IMG_0503" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
-<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30986021560/in/dateposted-public/" title="IMG_0505"><img src="https://c1.staticflickr.com/6/5594/30986021560_e505170e61.jpg" width="500" height="333" alt="IMG_0505" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
+<p><strong>Interaction Design</strong></p>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31355179305/in/dateposted-public/" title="IMG_20161128_162327"><img src="https://c2.staticflickr.com/6/5655/31355179305_5988800416.jpg" width="500" height="375" alt="IMG_20161128_162327" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31239915661/in/dateposted-public/" title="IMG_20161128_162349"><img src="https://c6.staticflickr.com/6/5507/31239915661_76161f116b.jpg" width="500" height="375" alt="IMG_20161128_162349" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30985876020/in/dateposted-public/" title="IMG_20161128_162400"><img src="https://c5.staticflickr.com/6/5539/30985876020_2c8af69be4.jpg" width="500" height="375" alt="IMG_20161128_162400" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31239904851/in/dateposted-public/" title="IMG_20161128_162520"><img src="https://c4.staticflickr.com/6/5767/31239904851_9db66af4e0.jpg" width="375" height="500" alt="IMG_20161128_162520" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30985854780/in/dateposted-public/" title="IMG_20161128_162407"><img src="https://c5.staticflickr.com/6/5726/30985854780_1af076671d.jpg" width="500" height="375" alt="IMG_20161128_162407" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>.</p>
+<p><strong>Animation and Film Making</strong>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31318639426/in/dateposted-public/" title="IMG_20161128_163935"><img src="https://c3.staticflickr.com/6/5567/31318639426_b7a67d8248.jpg" width="500" height="375" alt="IMG_20161128_163935" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31355175985/in/dateposted-public/" title="IMG_20161128_163922"><img src="https://c2.staticflickr.com/6/5737/31355175985_ac4872b82c.jpg" width="500" height="375" alt="IMG_20161128_163922" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><strong>Communication Design</strong></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31210886672/in/dateposted-public/" title="IMG_20161129_153853"><img src="https://c1.staticflickr.com/6/5463/31210886672_2a43be602e.jpg" width="500" height="375" alt="IMG_20161129_153853" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30985860150/in/dateposted-public/" title="IMG_20161129_153643"><img src="https://c7.staticflickr.com/6/5506/30985860150_ace920f6d0.jpg" width="500" height="375" alt="IMG_20161129_153643" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31210877142/in/dateposted-public/" title="IMG_20161129_154750"><img src="https://c7.staticflickr.com/6/5766/31210877142_e6eefcf934.jpg" width="500" height="375" alt="IMG_20161129_154750" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><strong>Mobility and Vehicle Design</strong></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30547325233/in/dateposted-public/" title="IMG_20161130_145737-01"><img src="https://c2.staticflickr.com/6/5451/30547325233_3dd2a9a06b.jpg" width="500" height="375" alt="IMG_20161130_145737-01" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/30532648114/in/dateposted-public/" title="IMG_20161130_145837-01"><img src="https://c3.staticflickr.com/6/5442/30532648114_52a6e77efa.jpg" width="500" height="375" alt="IMG_20161130_145837-01" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/31318643716/in/dateposted-public/" title="IMG_20161130_145752"><img src="https://c5.staticflickr.com/6/5459/31318643716_52c0d45cee.jpg" width="500" height="375" alt="IMG_20161130_145752" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>This is a small collection. I will probably update it as and when i get more :)</p>
 
 <p>Cheers,</p>
 

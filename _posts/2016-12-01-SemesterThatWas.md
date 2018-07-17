@@ -4,7 +4,7 @@ title: The Semester that was
 image: https://c2.staticflickr.com/6/5662/31238013841_fc0a26ed87.jpg
 location: IDC IIT Bombay India
 tags:
-- design
+- travel
 ---
 
 So, recently my first semester got over at *IDC,School of Design* at **IIT Bombay** in the IxD Course. It has been quite a journey since July. I learnt a lot of new things and different intriguing ways to look at things. I met and still meet many tons of inspiring folks at the school. The profs are great and it a treat to listen them deliver lectures. 
