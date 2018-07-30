@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TiltStick:Trinket Makes You a Driver
-image: https://farm8.staticflickr.com/7620/16854436058_2968e35402_z.jpg 
+image: https://farm6.staticflickr.com/5627/21343647612_c7971997ce_z.jpg 
 location: Pune, India
 tags:
 - arduino

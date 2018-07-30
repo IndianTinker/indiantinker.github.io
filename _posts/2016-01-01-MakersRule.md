@@ -5,6 +5,7 @@ image: https://farm6.staticflickr.com/5725/23917001301_7f6116211a_z.jpg
 location: Pune, India
 tags:
 - hardware
+- select 
 ---
 
 It has been a while since i posted my [Tinker Rule]({% post_url 2014-12-14-Tinker-Rule %}) which i made during college days. I received a few requests for the ready to etch pdf which helped me gauge if this seemed to be useful to people. The response was somewhat positive and so, i decided to put in some extra effort and make it handy, portable and **manufacturable** !

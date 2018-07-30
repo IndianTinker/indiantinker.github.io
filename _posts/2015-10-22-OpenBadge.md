@@ -5,6 +5,7 @@ image: https://farm1.staticflickr.com/575/20736053114_bf0ed32bef_z.jpg
 location: Pune, India
 tags:
 - msp430
+- select 
 ---
  
 Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.

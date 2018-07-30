@@ -5,6 +5,7 @@ image: https://i.imgur.com/667g4d4.png
 location:  IDC IIT Bombay India
 tags:
 - design
+- select
 ---
 
 >This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.

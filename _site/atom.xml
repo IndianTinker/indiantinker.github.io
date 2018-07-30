@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-07-17T09:32:23+05:30</updated>
+ <updated>2018-07-30T17:19:14+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -2707,7 +2707,7 @@ These cards are basically pumped up visiting cards that enable users to project 
  </entry>
  
  <entry>
-   <title>ReactorX- The intuitive Arc Reactor from the movies</title>
+   <title>ReactorX- The Arc Reactor from the movies</title>
    <link href="http://localhost:4000/2016/03/12/arc/"/>
    <updated>2016-03-12T00:00:00+05:30</updated>
    <id>http://localhost:4000/2016/03/12/arc</id>
@@ -2944,34 +2944,6 @@ Do you have any leads on things that can be done? Please do share in the comment
 &lt;p&gt;Cheers,&lt;/p&gt;
 
 &lt;p&gt;Rohit&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Doormate- Runner's Up at Intel IOT Roadshow</title>
-   <link href="http://localhost:4000/2016/01/02/HAMRTLRX/"/>
-   <updated>2016-01-02T00:00:00+05:30</updated>
-   <id>http://localhost:4000/2016/01/02/HAMRTLRX</id>
-   <content type="html">&lt;p&gt;Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog &lt;a href=&quot;/2015/08/01/Intel/&quot;&gt;link&lt;/a&gt; that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did.&lt;/p&gt;
-
-&lt;p&gt;Basically, our Project was called the &lt;strong&gt;Doormate&lt;/strong&gt;. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.&lt;/p&gt;
-
-&lt;p&gt;The project uses the &lt;strong&gt;Intel edison&lt;/strong&gt; and was built using whatever parts we could rummage at the event.&lt;/p&gt;
-
-&lt;p&gt;The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka &lt;em&gt;The Bell Playlist&lt;/em&gt; .&lt;/p&gt;
-
-&lt;p&gt;The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved &lt;em&gt;Mogambo&lt;/em&gt; feels good and the door opens. (See video below to understand the context)&lt;/p&gt;
-
-&lt;p&gt;Here is what the dashboard &lt;a href=&quot;http://doormate.github.io/website/&quot;&gt;looks like&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:&lt;/p&gt;
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/su8k2AwtbH0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Cheers !!&lt;/p&gt;
-
-&lt;p&gt;Rohit&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -3287,7 +3259,7 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  </entry>
  
  <entry>
-   <title>Getting Started with ESP8266:AT-Commands and Wifi DataLogger</title>
+   <title>A Wifi DataLogger</title>
    <link href="http://localhost:4000/2015/11/15/GettingStartedwithESP1/"/>
    <updated>2015-11-15T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/11/15/GettingStartedwithESP1</id>
@@ -3328,7 +3300,7 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  </entry>
  
  <entry>
-   <title>TI-CEPD Diaries:Reactive Wearable LED Heart</title>
+   <title>Reactive Wearable LED Heart</title>
    <link href="http://localhost:4000/2015/11/14/hearty/"/>
    <updated>2015-11-14T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/11/14/hearty</id>
@@ -3433,7 +3405,7 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  </entry>
  
  <entry>
-   <title>Nooby Sentiment Analysis using nodejs</title>
+   <title>Cricket Sentiment Analysis using nodejs</title>
    <link href="http://localhost:4000/2015/11/08/NoobSentiment/"/>
    <updated>2015-11-08T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/11/08/NoobSentiment</id>
@@ -4457,7 +4429,7 @@ This too.
  </entry>
  
  <entry>
-   <title>TruPlay- Hacking into an OVC3860 based Bluetooth A2DP Adapter using the MSP430</title>
+   <title>TruPlay- Hacking an OVC3860 A2DP Adapter</title>
    <link href="http://localhost:4000/2015/05/29/TruPlay/"/>
    <updated>2015-05-29T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/05/29/TruPlay</id>
@@ -4547,7 +4519,7 @@ This too.
  </entry>
  
  <entry>
-   <title>FM430 - A MSP430 and TEA5767 Project that lets you listen to clear digital FM</title>
+   <title>FM430 - FM using MSP430</title>
    <link href="http://localhost:4000/2015/05/17/FM430/"/>
    <updated>2015-05-17T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/05/17/FM430</id>
@@ -4604,7 +4576,7 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt
  </entry>
  
  <entry>
-   <title>RoomMote- Control the color and sockets of your Room using a Remote, MSP430 and Energia</title>
+   <title>RoomMote- Control the color and sockets of your Room</title>
    <link href="http://localhost:4000/2015/05/01/RoomMote/"/>
    <updated>2015-05-01T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/05/01/RoomMote</id>
@@ -6078,7 +6050,7 @@ IndianTinker&lt;/p&gt;
  </entry>
  
  <entry>
-   <title>TI-CEPD Diaries:The Electronic Inaugural Lamp</title>
+   <title>The Electronic Inaugural Lamp</title>
    <link href="http://localhost:4000/2013/04/29/InnaugLamp/"/>
    <updated>2013-04-29T00:00:00+05:30</updated>
    <id>http://localhost:4000/2013/04/29/InnaugLamp</id>

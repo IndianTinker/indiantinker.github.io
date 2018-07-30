@@ -5,6 +5,7 @@ image: https://i.imgur.com/IWtPbik.jpg?1
 location:  IDC IIT Bombay India
 tags:
 - design
+- select
 ---
 
 > This post presents a small project that explores use of a no-tech device to increase water consumption by a user.

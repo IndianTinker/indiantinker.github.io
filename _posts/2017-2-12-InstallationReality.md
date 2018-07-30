@@ -6,6 +6,7 @@ location: IDC IIT Bombay India
 tags:
 - stories
 - installation
+- select 
 ---
 
 Installations are real fun. They are helpful in putting an idea across in an engaging way. This post describes the trials and tribulations we faced while working on an installation for IndiaHCI conference at IIT Bombay.

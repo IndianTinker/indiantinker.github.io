@@ -182,10 +182,6 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/2016/01/02/HAMRTLRX/index.html</loc>
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/2016/01/01/MakersRule/index.html</loc>
     </url>
     
@@ -413,6 +409,14 @@
     
     <url>
         <loc>http://localhost:4000/projects/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/publications/index.html</loc>
     </url>
     
     
@@ -1151,14 +1155,6 @@
     
     <url>
         <loc>http://localhost:4000/page92/index.html</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/page93/index.html</loc>
     </url>
     
     

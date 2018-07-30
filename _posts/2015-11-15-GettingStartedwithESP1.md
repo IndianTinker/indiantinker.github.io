@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with ESP8266:AT-Commands and Wifi DataLogger
+title: A Wifi DataLogger
 image: https://cdn4.iconfinder.com/data/icons/stash/128/computer-chip-512.png 
 location: Pune, India
 tags:

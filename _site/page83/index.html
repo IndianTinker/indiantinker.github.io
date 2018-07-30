@@ -129,14 +129,16 @@
         
       
         
+          
+            <a class="sidebar-nav-item" href="/publications/">Publications</a>
+          
+        
+      
+        
       
         
           
             <a class="sidebar-nav-item" href="/travels/">Writings</a>
-          
-        
-      
-        
           
         
       
@@ -548,46 +550,60 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/10/28/Dollar-LED-Bulb/">
-        Inside a Cheap LED Bulb
+      <a href="/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md-Welcome-to-new-home/">
+        Implementing Tags/Categories on Jekyll using Liquid !
       </a>
     </h1>
 
-    <span class="post-date">28 Oct 2014</span>
+    <span class="post-date">21 Oct 2014</span>
 
-    <p>I was recently on the visit to my hometown <em>Delhi</em> this Diwali when i visited <strong>Lajpat Rai</strong> market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.</p>
+    <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful.<!--more--> It a lot easier than wordpress where I have to login and do all kinds of formatting to churn out a decent looking post. Here its just Markdown and some pre configurations and I just need to update a github repo at the end of it.</p>
 
-<p>It was pretty clear that the Bulbs wont have those <em>Chinese</em> drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.</p>
+<p>Interestingly, Jekyll supports <a href="liquidmarkup.org/">Liquid</a> a templating engine built on ruby that is developed by e commerce giant <em>Shopify</em>.
+Using Liquid we can add some basic logic ( and maybe advance too) to the blog like categorization and tagging. Tagging is not available out of the box with Jekyll but can be implemented easily using <strong>Liquid</strong> .</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align="center" /></a></p>
+<p>It essentially involves two steps:</p>
 
-<p>And Bingo!
-It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS, One can only gjnvg/s1600/transformerless+power+supply+circuit.png">like this</a>) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (<em>No Zener</em>)</p>
+<ol>
+  <li>Editing YML front matter (The thing between the 3 dashes)</li>
+  <li>Creating a Category page to automatically accumulate all the tags you added</li>
+</ol>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia" /></a></p>
+<p>After this the changes will be reflected on compilation. And Voila! You would have added tags to your blog!</p>
 
-<p>The entire Bulb had:</p>
+<p>Lets get started.</p>
 
-<ul>
-  <li>2x <code class="highlighter-rouge">470k</code> resistors,</li>
-  <li>1 x <code class="highlighter-rouge">100uf</code> Electrolytic Capacitor,</li>
-  <li>1 x <code class="highlighter-rouge">0.1uf</code>(guess) Capacitor with severed markings</li>
-  <li>12 LEDs</li>
-  <li>4 Diodes in bridge rectifier configuration.</li>
-</ul>
+<p>Add a Tags variable to the frontmatter block and list the tags as shown the following example:</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003" /></a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: Tagging Jekyll
+tags:
+- Jekyll
+- Blogging
+- web
+---
+</code></pre></div></div>
+<p>Next, create a page in the root or in whatever way you have configured Jekyll to pick new page and create a page say <em>Categories</em> etc.
+Lets name it Categories.md</p>
 
-<p>The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.</p>
+<p>Use the following snippet to display tags.</p>
 
-<p><a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005" /></a></p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/3eddb75957eaf9f9b8e8.js"> </script>
 
-<p>One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.</p>
+<p>Now</p>
+
+<p>jekyll build
+jekyll serve</p>
+
+<p>and see the changes in the blog on <em>http://localhost:4000</em>.
+If you face any issues be sure to comment here .</p>
 
 <p>Cheers!</p>
 
 <p>Rohit</p>
-
 
   </div>
   

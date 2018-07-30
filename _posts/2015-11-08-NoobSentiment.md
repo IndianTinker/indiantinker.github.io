@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nooby Sentiment Analysis using nodejs
+title: Cricket Sentiment Analysis using nodejs
 image: https://g.twimg.com/Twitter_logo_blue.png
 location: Pune, India
 tags:

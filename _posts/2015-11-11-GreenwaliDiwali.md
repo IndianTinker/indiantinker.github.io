@@ -5,7 +5,8 @@ image: https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Raspberry_Pi_Logo.sv
 location: Pune, India
 tags:
 - rpi
-- python 
+- python
+- select  
 ---
 
 Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :

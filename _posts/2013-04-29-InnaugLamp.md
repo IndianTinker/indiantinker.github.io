@@ -1,10 +1,11 @@
 ---
 layout: post
-title: TI-CEPD Diaries:The Electronic Inaugural Lamp
+title: The Electronic Inaugural Lamp
 image: https://cdn4.iconfinder.com/data/icons/stash/128/computer-chip-512.png 
 location: Delhi, India
 tags:
 - msp430
+- select 
 ---
 
 Inauguration Lamps.. They are just so mainstream. The same one candle lighting the others one by one. Pretty Bucolic ! But Prof.Gadre had something different in mind for the inauguration of Texas Instruments Analog Design Challenge Finals in Blore,2013.

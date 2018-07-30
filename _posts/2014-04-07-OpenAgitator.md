@@ -4,7 +4,7 @@ title: Open Agitator
 image: http://indiantinker.files.wordpress.com/2013/09/dsc00520.jpg
 tags:
 - msp430
-- featured 
+- select 
 ---
 
 After a somewhat woeful week at college that shook my belief in several sectors.. I mustered up my courage to realize an old project they knocked the door every time i used to Etch PCB boards. Since, the solution i use has already done close to 20 boards of small size one has to really keep shaking/stirring/Agitating the solution for a fairy long time.. ( ya 7-8 mins of man power is fairly long time :P )
