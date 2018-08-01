@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-07-30T17:19:14+05:30</updated>
+ <updated>2018-08-01T16:45:42+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -206,8 +206,15 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-04T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/04/PinchPhone</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents a small project that explores use of a no-tech device to increase water consumption by a user.&lt;/p&gt;
+  &lt;p&gt;This post presents my final Masters project - An exertoy that helps kinds affected by cerebral palsy perform finger pinching action while learning basic concepts like shapes and colors.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/qJuySbw.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/y9y8Hyv.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/AfqqgsM.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/Q0Ee7UT.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/wzkc1wZ.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/XFA9Yxn.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -224,6 +231,9 @@ Convocation form :&lt;/p&gt;
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;This post presents a small project that explores use of a no-tech device to increase water consumption by a user.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/IWtPbik.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/wTYfqge.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -254,8 +264,67 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-02T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/02/PointsOfView</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+  &lt;p&gt;This installation, presented at National Gallery of Modern Art, Mumbai, was a part of the &lt;a href=&quot;http://www.dsource.in/events/naturembedded/&quot;&gt;“Nature Embedded”&lt;/a&gt; exhibition. The exhibition was inaugurated by &lt;a href=&quot;https://en.wikipedia.org/wiki/Paola_Antonelli&quot;&gt;Paola Antonelli&lt;/a&gt; .&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;“To develop an understanding one has to look at things from other’s perspectives”. Through the means of this exhibit we tried to recreate an experience for the visitor to see the world from the &lt;strong&gt;point of view&lt;/strong&gt; of a bird, dog and a fish. The view is not just a physical sensation but a perception of the world. In our design, we incorporated the unbiased, natural and permanent physical features of the eye like the shape of the vision cone and color sensitivity. Further, there was an attempt to showcase the world as perceived by a dog travelling down an alley, a fish inside a sea of pollution and a bird flying in the sky. These perceptions were biased human reflections which seem to affect these characters.&lt;/p&gt;
+
+&lt;p&gt;The narratives and visuals were precisely designed by experts. I am grateful to have worked with them.&lt;/p&gt;
+
+&lt;p&gt;My contribution was largely towards designing the interactions with the game and implementing them using electronics.&lt;/p&gt;
+
+&lt;h3 id=&quot;dog&quot;&gt;Dog&lt;/h3&gt;
+
+&lt;p&gt;The environment was designed similar to a traditional Indian street. We tried to capture the hustle bustle and festivities using audio and visuals.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656090720/in/dateposted-public/&quot; title=&quot;screen_3_dog&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1830/41656090720_4b49bc6e2e_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;screen_3_dog&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/42747419224/in/dateposted-public/&quot; title=&quot;screen_4_dog&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1804/42747419224_5ccbe83b46_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;screen_4_dog&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The physical device made using teak wood. It contains an IMU which computes the suggested gestures and moves the character in the games. 
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/29592643878/in/dateposted-public/&quot; title=&quot;wireddog&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/927/29592643878_4b1cca3c48_z.jpg&quot; width=&quot;640&quot; height=&quot;399&quot; alt=&quot;wireddog&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656291070/in/dateposted-public/&quot; title=&quot;dog&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1809/41656291070_5980a1d9d5_z.jpg&quot; width=&quot;640&quot; height=&quot;388&quot; alt=&quot;dog&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The interaction technique was found after conducting a small internal study. It was similar for all the characters to all quick, easy and intuituve transfer of control by the user at the site.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/43463408281/in/dateposted-public/&quot; title=&quot;launch&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1825/43463408281_107af3c041_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;launch&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fish&quot;&gt;Fish&lt;/h3&gt;
+
+&lt;p&gt;The environment of the fish showcased a narrative in which a fish explores the area.It finds pollution and garbage while moving along a path. Then a giant whale is seen being captured by hunters which the fish along with other smaller fishes sets free. There was a dreamy treatment given to the visuals. 
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/29592750548/in/dateposted-public/&quot; title=&quot;fish2&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/840/29592750548_0d7a04270d_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;fish2&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/43415458442/in/dateposted-public/&quot; title=&quot;fish3&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1821/43415458442_faf7d83609_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;fish3&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The physical controller.
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656281310/in/dateposted-public/&quot; title=&quot;fish&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/915/41656281310_ef6491717a_z.jpg&quot; width=&quot;640&quot; height=&quot;399&quot; alt=&quot;fish&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bird&quot;&gt;Bird&lt;/h3&gt;
+
+&lt;p&gt;The bird environment depicts a bird flying back from its quest to gather food to its nest. She sees chimneys, electric lines, fountains and lands from far above.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/42747465384/in/dateposted-public/&quot; title=&quot;bird4&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/841/42747465384_e41c0500d1_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;bird4&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/28577330437/in/dateposted-public/&quot; title=&quot;bird3&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1823/28577330437_1e6e58338c_z.jpg&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;bird3&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656293050/in/dateposted-public/&quot; title=&quot;bird5&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1809/41656293050_8789319338_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;bird5&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The physical controller
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/42747473044/in/dateposted-public/&quot; title=&quot;bird2&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1802/42747473044_5371f73b68_z.jpg&quot; width=&quot;640&quot; height=&quot;399&quot; alt=&quot;bird2&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;at-ngma&quot;&gt;At NGMA&lt;/h3&gt;
+
+&lt;p&gt;We received great response and feedback from kids and other audiences. People loved the quality of the visuals and idea of exploring the world through the “animals”. 
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656268040/in/dateposted-public/&quot; title=&quot;fish6&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/846/41656268040_afc2a64033_z.jpg&quot; width=&quot;640&quot; height=&quot;363&quot; alt=&quot;fish6&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656273190/in/dateposted-public/&quot; title=&quot;fish5&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/833/41656273190_d8429ffdfa_z.jpg&quot; width=&quot;640&quot; height=&quot;363&quot; alt=&quot;fish5&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/29592894038/in/dateposted-public/&quot; title=&quot;Exhibition&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/841/29592894038_3302eba4d3_z.jpg&quot; width=&quot;640&quot; height=&quot;363&quot; alt=&quot;Exhibition&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/41656292060/in/dateposted-public/&quot; title=&quot;bird6&quot;&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1788/41656292060_f5e0ce136c_z.jpg&quot; width=&quot;640&quot; height=&quot;363&quot; alt=&quot;bird6&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;team&quot;&gt;Team&lt;/h4&gt;
+
+&lt;p&gt;The project was a part of my work done under Prof. Ravi and Prof. Ajanta at IDC. The super talented team at dsource and ekalpa project made the project possible. They include Vajra, Pranisha, Deep, Shyam, Herold, Ravi, Malay, Swati, Vinaya, RamP (Audio) and other folks whose name I intermittently forgot.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -318,8 +387,32 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-01T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/01/DayNight</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+  &lt;p&gt;This installation, presented at National Gallery of Modern Art, Mumbai, was a part of the &lt;a href=&quot;http://www.dsource.in/events/naturembedded/&quot;&gt;“Nature Embedded”&lt;/a&gt; exhibition. The exhibition was inaugurated by &lt;a href=&quot;https://en.wikipedia.org/wiki/Paola_Antonelli&quot;&gt;Paola Antonelli&lt;/a&gt; .&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/knGm54b.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/91NQDM5.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/iOqCe3C.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/JxPVlUX.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8p7B8Pd.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/SCYV8k7.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/yKhrb6Q.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8EZnFqX.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/14VCYBO.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OHEAk7V.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;team&quot;&gt;Team&lt;/h4&gt;
+
+&lt;p&gt;The project was a part of my work done under Prof. Ravi and Prof. Ajanta at IDC. The super talented team at dsource and ekalpa project made the project possible. They include Vajra, Pranisha, Herold, Ravi, Malay,Deep, Shyam, Rajarshi, Swati, Vinaya, RamP (Audio) and other folks whose name I intermittently forgot.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
