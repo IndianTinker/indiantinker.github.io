@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-08-01T16:45:42+05:30</updated>
+ <updated>2018-08-02T19:12:14+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -248,8 +248,24 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-02T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/02/TogethernessRepublic</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+  &lt;p&gt;This post presents a commissioned public installation on the occasion of Republic Day. &lt;a href=&quot;https://mkrv.in/&quot;&gt;We&lt;/a&gt; worked a creating an abstract digital reflection of the visitors to evoke feeling of togetherness.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;We tried to understand the work in terms of a popular saying about India, “Unity in Diversity”. We aimed at exhibiting concepts that show how we as Indians, accommodate our diversity and stay united. A fundamental view was taken as it presents the visitor with an idea that essentially everyone is same and differences are ,as Harari says, fictional. Hence, a reflection was thought in terms of a shape and a structure.&lt;/p&gt;
+
+&lt;p&gt;We used a Kinect sensor with OpenNI to implement this project.&lt;/p&gt;
+
+&lt;h4 id=&quot;shape&quot;&gt;Shape&lt;/h4&gt;
+&lt;p&gt;The shape metaphor presents visitor with a enlarged silhouette of themselves. The colour of the silhouette varies between saffron,white and green. These are the colors from the national flag. When a lot of people come closer, they all merge into one band, symbolizing - oneness, unity&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/g808yxQ.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/YWw411x.jpg&quot; alt=&quot;Imgur&quot; /&gt; 
+&lt;img src=&quot;https://i.imgur.com/O81gOfC.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;structure&quot;&gt;Structure&lt;/h4&gt;
+&lt;p&gt;The structure metaphor was chosen to show abstract animated representations of self. These were inspired from human forms in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Warli&quot;&gt;Warli&lt;/a&gt; art style. The visitors would walk in front of the screen and notice their Warli representation. The forms react to the visitors motion. They are colored in the Indian tri-color.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OikQgSw.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -339,8 +355,29 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-02T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/02/HackU</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+  &lt;p&gt;48 hours to do something fun and then go to Japan ? Hai(はい)!! :)&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Let us make dancing passwords !&lt;/p&gt;
+
+&lt;p&gt;It was a funny moment when I and &lt;a href=&quot;https://www.facebook.com/rishabhmakes&quot;&gt;Rishabh&lt;/a&gt; decided to participate in this hackathon. Designers in an engineering hackathon. I packed all my electronics in a bag, I got at another hackathon and reported at the venue. It was though to decide what to make.&lt;/p&gt;
+
+&lt;p&gt;Boredom struck us hard and we decided to make something that you could use to dance and operate the computer. Dance moves as a password? It was pretty random. Wishful thinking, of sorts.&lt;/p&gt;
+
+&lt;p&gt;We started working on a mat kind of a thing that one could place under his/her feet when using a computer. Hopping on it, one could do some moves to login. The mat would double up as a foot controller to operate websites like Youtube to do things like- play/pause, volume +/- and next/prev. We even built a chrome app for that. The whole thing was driven by an Arduino Leonardo acting happily as a  USB-Keyboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33404978143/in/dateposted-public/&quot; title=&quot;2017-04-23_04-15-47&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4181/33404978143_fc90b5b632_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;2017-04-23_04-15-47&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33270723250/in/dateposted-public/&quot; title=&quot;2017-03-26_12-18-16&quot;&gt;&lt;img src=&quot;https://farm3.staticflickr.com/2931/33270723250_23db8f2657_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;2017-03-26_12-18-16&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32841106553/in/dateposted-public/&quot; title=&quot;Users&quot;&gt;&lt;img src=&quot;https://farm3.staticflickr.com/2857/32841106553_2b79022ff2_z.jpg&quot; width=&quot;480&quot; height=&quot;640&quot; alt=&quot;Users&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/32811584234/in/dateposted-public/&quot; title=&quot;2017-03-26_11-55-25&quot;&gt;&lt;img src=&quot;https://farm3.staticflickr.com/2941/32811584234_b3bf1591a4_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;2017-03-26_11-55-25&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;And yeah ! We won the hackathon and got a chance to visit Tokyo :)
+#TamasHack&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/33831664520/in/dateposted-public/&quot; title=&quot;Winner&quot;&gt;&lt;img src=&quot;https://farm3.staticflickr.com/2834/33831664520_aec56d5b59_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Winner&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -355,8 +392,22 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-02T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/02/Blowables</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+  &lt;p&gt;This post describes a commissioned installation on the occasion of Women’s Day. We use the metaphor of “being gentle” to create a series of breath driven interactive sketches.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The client came up with a requirement of quick turn around interactive installation for Women’s day to engage the audience while shopping. We wanted to explore the realm of love and socially undermined role of women in our lives. After some rounds of brainstorming, we decided to work on the idea of a “gentle love”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mkrv.in/&quot;&gt;We&lt;/a&gt; thought of connecting breath to gentleness. What is gentleness in nature? Feathers, Flowers, Bubbles, Vapour, Leaves. They all get aboard the gentle wind and spread their color and happiness wherever they go. Women do the same for us all. We wanted the depiction to be “as-is”. Further, breath based interfaces seem an interesting modality to experiment with.&lt;/p&gt;
+
+&lt;p&gt;So, we used several particles systems to make digitally manipulated flowers, flames and bubbles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/2NQUz6p.gif&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/jKWTQLQ.gif&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/I6anS1w.gif&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quite simple and effective ; the audiences seem to have liked the idea. :)&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -371,8 +422,29 @@ Convocation form :&lt;/p&gt;
    <updated>2018-05-02T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/02/BirdsOnWire</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine and represent the reality experienced by me.&lt;/p&gt;
+  &lt;p&gt;This post presents my work on creating an interactive musical installation called “Birds on wire” .It tries to explore the gap between the physical and digital. The work was done as a part of my TA duties under Prof. Ravi at IDC.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The idea came from seeing crows sitting on electric transmission lines or cloth drying wires. There is so much man-made symmetry in wires and  natural randomness in the movement of the crows. But we never ‘interact’ with these crows. We just shoo them away. Through this work, we wanted to bring the attention of the crowds to the subtleties of these crows and allow them to make music with them. Imagine the wires as strings from the guitar. :)&lt;/p&gt;
+
+&lt;p&gt;The installation allows users to tease virtual birds sitting on a series of wires and create music in the process. The music reflects the mood of the birds.&lt;/p&gt;
+
+&lt;p&gt;The architecture of the system was as shown. We had tried several approaches like minim, sound fonts and other ways of generating sound (but not ChuCK). The reason to choose SFML was due to the audio being mastered as loops by a “renowned” audio designer for each wire separately. So, the need was to play all of them in sync to make an ensemble of instruments that sound great together. We tried to manipulate the gains of each stream based on user’s interaction.
+&lt;img src=&quot;https://i.imgur.com/IezoWLL.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I fabricated the capacitive sensors and the frame in the size of a large TV. 
+&lt;img src=&quot;https://i.imgur.com/kSOxaV1.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/x3dZikv.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/Qi0ZRVm.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/GqnA3LV.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the final installation, we had processing handling the beautiful animations (rendered using sprite-sheets) by Vajra and Pranisha. The processing program communicates with a custom audio server written in python over telnet/OSC. One of the pre-final tests in shown in the below video.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/6U5nH8ukDLM&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The final video, unfortunately, cannot be released at the moment.&lt;/p&gt;
+
+&lt;p&gt;I had lots of fun working on the project. We experimented with tons of approaches. This was one of the earliest projects, I had done with Prof. Ravi and team. I learnt a lot about working at the intersection of design and technology. The ways of communicating with artists are things, I often recollect from this project. It taught me a great deal about system networking too.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -832,6 +904,8 @@ I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630
 
 &lt;p&gt;Painting the monitor gold
 &lt;img src=&quot;https://i.imgur.com/teVTNtM.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/dnAufVPr7P8&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Had some help from the paint studio after messing up the first coat.
 &lt;img src=&quot;https://i.imgur.com/x9ireNm.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
