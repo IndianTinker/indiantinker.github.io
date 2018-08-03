@@ -14,7 +14,10 @@ tags:
 ![Imgur](https://i.imgur.com/y9y8Hyv.png)
 ![Imgur](https://i.imgur.com/AfqqgsM.png)
 ![Imgur](https://i.imgur.com/Q0Ee7UT.png)
+![Imgur](https://i.imgur.com/W4ipYTu.jpg)
+![Imgur](https://i.imgur.com/aXjlc5C.jpg?1)
 ![Imgur](https://i.imgur.com/wzkc1wZ.jpg)
+![Imgur](https://i.imgur.com/XzVTSgU.jpg)
 ![Imgur](https://i.imgur.com/XFA9Yxn.jpg)
 
 
