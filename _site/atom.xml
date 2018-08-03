@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-08-03T20:32:03+05:30</updated>
+ <updated>2018-08-03T20:42:37+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -129,6 +129,8 @@ I recall it from &lt;a href=&quot;/2018/05/04/PinchPhone/&quot;&gt;my latest pro
 &lt;p&gt;While Hara talks about design as “Art is an expression of an individual’s will to society at large, one whose origin is very much of a personal nature. Design, on the other hand, is basically not self-expression. Instead, it originates in society. The essence of design lies in the process of discovering a problem shared by many people and trying to solve it.”&lt;/p&gt;
 
 &lt;p&gt;I would recommend anyone interested in reading these books. They helped me a lot in the middle of the course when I felt concerned about my actions. They were recommended by Prof. Rao and Prof. Girish.&lt;/p&gt;
+
+&lt;p&gt;I await feedback and suggestions. Please direct them to my &lt;a href=&quot;mailto:indiantinker@gmail.com&quot;&gt;mail&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -3719,7 +3721,9 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
 
 &lt;p&gt;Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using &lt;a href=&quot;http://boundingbox.klokantech.com/&quot;&gt;this tool&lt;/a&gt; , choose the area and select CSV, then simply copy paste it in the script.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5e64f03beb01b3dec3dd.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5e64f03beb01b3dec3dd.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;After 500 Tweets the data is as follows:&lt;/p&gt;
 
@@ -4784,7 +4788,9 @@ This too.
 
 &lt;p&gt;Interested in building one? Grab the code here:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a35bf659325d0eac2ce5.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a35bf659325d0eac2ce5.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -4833,7 +4839,9 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt
 
 &lt;p&gt;I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/aa9a2a524853674807e6.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/aa9a2a524853674807e6.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;If you need to check for signal quality and other things you can check out my github repo &lt;a href=&quot;https://github.com/IndianTinker/FM430&quot;&gt;here&lt;/a&gt; .&lt;/p&gt;
 
@@ -4893,8 +4901,10 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake&lt;/a&gt;&lt;/p&gt; &lt
 
 &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/17123607967&quot; title=&quot;Brain Implant by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7779/17123607967_c4afbddc0c_z.jpg&quot; width=&quot;640&quot; height=&quot;359&quot; alt=&quot;Brain Implant&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;The Code :
-true&lt;script src=&quot;https://gist.github.com/075a3fc4815eaa9d11af.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;The Code :&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/075a3fc4815eaa9d11af.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Then modifying the nice little box to suit the PCB  (That moment when you say, “If only i had a 3D Printer” )&lt;/p&gt;
 
@@ -5616,7 +5626,9 @@ So, i assembled them on a single perfboard and was short of one heat sink. I now
 &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/15171730494&quot; title=&quot;WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg&quot; width=&quot;640&quot; height=&quot;372&quot; alt=&quot;WP_20140803_19_27_04_Pro&quot; /&gt;&lt;/a&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/72070b40befcf1417e2a.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/72070b40befcf1417e2a.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/94411929@N06/14631629150&quot; title=&quot;When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr&quot;&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; alt=&quot;When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune&quot; align=&quot;center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -5672,7 +5684,9 @@ So, i assembled them on a single perfboard and was short of one heat sink. I now
 
 &lt;p&gt;Having deciphered it, i wrote a test code:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/1d5402b9b3562345cc44.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1d5402b9b3562345cc44.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;It worked as designed.&lt;/p&gt;
 
@@ -5768,7 +5782,9 @@ Lets name it Categories.md&lt;/p&gt;
 
 &lt;p&gt;Use the following snippet to display tags.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/3eddb75957eaf9f9b8e8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3eddb75957eaf9f9b8e8.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Now&lt;/p&gt;
 

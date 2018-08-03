@@ -98,6 +98,8 @@ While Hara talks about design as "Art is an expression of an individual’s will
 
 I would recommend anyone interested in reading these books. They helped me a lot in the middle of the course when I felt concerned about my actions. They were recommended by Prof. Rao and Prof. Girish. 
 
+I await feedback and suggestions. Please direct them to my [mail](mailto:indiantinker@gmail.com).
+
 
 Cheers,
 
