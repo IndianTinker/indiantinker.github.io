@@ -96,9 +96,9 @@ So, Cross talks about design as the *third area* apart from Arts and Science. He
 - employ abductive/productive/appositional thinking
 - use non-verbal, graphical/spatial modeling media
 
-While Hara talks about design as "Art is an expression of an individual’s will to society at large, one whose origin is very much of a personal nature. Design, on the other hand, is basically not self-expression. Instead, it originates in society. The essence of design lies in the process of discovering a problem shared by many people and trying to solve it.”
+While Hara talks about art and design as "Art is an expression of an individual’s will to society at large, one whose origin is very much of a personal nature. Design, on the other hand, is basically not self-expression. Instead, it originates in society. The essence of design lies in the process of discovering a problem shared by many people and trying to solve it.”
 
-I would recommend anyone interested in reading these books. They helped me a lot in the middle of the course when I felt concerned about my actions. They were recommended by Prof. Rao and Prof. Girish. 
+I would recommend these books to anyone interested in understanding design. They helped me a lot in the middle of the course when I felt concerned about my actions. They were recommended by Prof. Rao and Prof. Girish.
 
 I await feedback and suggestions. Please direct them to my [mail](mailto:indiantinker@gmail.com).
 
