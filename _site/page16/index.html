@@ -506,6 +506,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -550,43 +554,165 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/09/03/whowe/">
-        Who you are is what you get
+      <a href="/2017/09/10/DataViz/">
+        Visualizing the Indian Railways in 3D
       </a>
     </h1>
 
-    <span class="post-date">03 Sep 2017</span>
+    <span class="post-date">10 Sep 2017</span>
 
-    <p>Information seems to have affected the pace of human evolution. Early humans could remember more information than the modern man. We today live in a world where information is ubiquitous and externalized. With ambient connectivity, this seems to have lead to a reduced information storage in biological memory. Hence, information is ambient. The ease and implementation of search engines has affected the inherent confirmation bias. This leads to a lack of objectivity in the information presented. Through the means of this installation, I intend to show the biased nature of modern pursuit of information. The mirror reflects what a user is and not what maybe true.</p>
+    <blockquote>
+  <p>This post describes the concept, process, insights and extensions of a geovisualization project done as a part of Interactive Data Viz course at IDC.</p>
+</blockquote>
 
-<p><strong>Installation Design</strong></p>
+<p>In the end, I had this 3D visualization.</p>
 
-<p>The participant cannot interact with the screen in any way. However, the screen and the mirror make the overall design open to interpretation. Some participants may ignore the presence, but some may figure out the true metaphor.The mirror reflects the participant and the search results she expects are filled with ”you may  like”  items.  It  is  a  search  that  pleases  and  not  enlightens. The  search  is so personalized that it ’reflects’ your identity. But that metaphor is not a single authoritative interpretation but rather may lead to multiple heterogeneous interpretations as explored by Sengers et. al. The device was exhibited on an office table at the venue. I hope that this artifact can help trigger a sense of uneasiness and encourage the participants to think on issues like privacy and biased nature of information they consume.</p>
+<p><img src="https://i.imgur.com/5nMTnGP.png" title="source: imgur.com" /></p>
 
-<p>In order to present the precious and dear nature of our engagement with search engines, I painted the monitor in gold.</p>
+<h2 id="concepts">Concept(s)</h2>
+<p>The concept was to visualize the trains that originate from every station on the Indian Railways network. This would allow users to compare the number and even draw conclusions based on their locations. The goal was to be able to make the viz insightful and must atleast follow William Cleveland’s Three Visual Operations i.e Detection, Assembly and Estimation. These were covered during the course. One can also look at this <a href="https://www.slideshare.net/JohnRauser/how-humans-see-data">presentation</a> by <a href="https://www.linkedin.com/in/jrauser/">John Rauser</a>. He covers very interesting aspects about perception of data. Cleveland’s model was mentioned on slide 115 of his presentation. I thought if i could make 3d bars at the location of the stations, such that the height would represent the number of source trains.</p>
 
-<p><strong>Prototyping</strong></p>
+<p>In short for the visualization these would be the parameters(based on description tags by Isabel Meirelles in <a href="http://isabelmeirelles.com/book-design-for-information/">Design for information</a>):</p>
 
-<p>Painting the monitor gold
-<img src="https://i.imgur.com/teVTNtM.jpg" alt="Imgur" /></p>
+<ul>
+  <li><strong>COUNTRY</strong> India</li>
+  <li><strong>MEDIUM</strong> Online Interactive application</li>
+  <li><strong>DOMAIN</strong> Transportation</li>
+  <li><strong>TASK</strong> To provide comparison of trains starting from stations</li>
+  <li><strong>STRUCTURE</strong> 3D extrusions on station location representing number of trains originating</li>
+</ul>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dnAufVPr7P8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<p>I also thought if we could make a ‘coarse’ contour map that ‘encodes’ the ease of reaching a place. This would be based on an index derived from number of trains passing, stoppage time and time of the day of a particular station. The contour would be drawn inverted such that if a place has less trains passing, its height will be higher as it is difficult to reach. This, I feel, would give some physical property to the contour too. Imagine someone sitting on the ground and it is super difficult to reach a station say <strong>A</strong> as only 1 train passes while its easy to go to say <strong>B</strong> because 10 trains pass by. So, ‘A’ will be shown higher than ‘B’. An icing could be exploring it in VR. I could not figure out the tools to implement this in the short time we had.</p>
 
-<p>Had some help from the paint studio after messing up the first coat.
-<img src="https://i.imgur.com/x9ireNm.jpg" alt="Imgur" /></p>
+<h2 id="process">Process</h2>
+<p>The process involved:</p>
 
-<p>Fixing the one way glass
-<img src="https://i.imgur.com/gp38MXV.jpg" alt="Imgur" /></p>
+<ul>
+  <li>Sourcing and cleaning data</li>
+  <li>Deriving useful data</li>
+  <li>Converting that data into geojson</li>
+  <li>Presentation on a map</li>
+</ul>
 
-<p>Checking the reflection
-<img src="https://i.imgur.com/N5ErrCV.jpg" alt="Imgur" /></p>
+<p>The weapons of choice were : R, Python, Mapbox and Google Sheets</p>
 
-<p>At the conference
-<img src="https://i.imgur.com/JnJgXkG.jpg" alt="Imgur" /></p>
+<p><strong>Sourcing and cleaning data</strong>
+The data was provided by <a href="https://data.gov.in/catalog/indian-railways-train-time-table-0">data.gov.in</a>. The format used was csv.
+I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d5832cb8c4c98bbc7f85d84de4ec9.html">source</a> of R codes for reference.</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/interact2017/37474673211/in/dateposted/" title="DSC_3938"><img src="https://farm5.staticflickr.com/4448/37474673211_ce60a32935_z.jpg" width="640" height="428" alt="DSC_3938" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><strong>Deriving useful data</strong></p>
 
-<p>A published paper on the same can be read <a href="http://ifip-tc13.org/wp-content/uploads/2017/09/INTERACT_2017_Adjunct_FINAL.pdf">here</a> on page 132.</p>
+<p>First I read the data in R using R Studio.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">
+</span><span class="n">timetable</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"C:/Users/my pc/Downloads/isl_wise_train_detail_03082015_v1.csv"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>Next,I made a subset of trains. Hence, I could capture trains that have reached destination.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">timetable.srs.dest</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`station Code`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`Destination station Code`</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>using <code class="highlighter-rouge">dplyr</code>  library, I grouped and summarized data. Then I wrote the file out as a CSV.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
+</span><span class="n">traingp</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">timetable.srs.dest</span><span class="p">,</span><span class="n">`source Station Name`</span><span class="p">)</span><span class="w">
+</span><span class="n">trainsfromStation</span><span class="o">&lt;-</span><span class="n">summarise</span><span class="p">(</span><span class="n">traingp</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">())</span><span class="w">
+</span><span class="n">trainsfromStation</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainsfromStation</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">count</span><span class="p">))</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">trainsfromStation</span><span class="p">,</span><span class="s2">"NumbOfTrainsoriginating.csv"</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div></div>
+<p><a href="https://imgur.com/SI78wWt"><img src="https://i.imgur.com/SI78wWt.png" title="source: imgur.com" /></a></p>
+
+<p>I also did some other exploratory analysis like, trains passing per station.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainflux</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">`Station Name`</span><span class="p">)</span><span class="w">
+</span><span class="n">trainflux</span><span class="w">
+</span><span class="n">trainfluxCount</span><span class="o">&lt;-</span><span class="n">summarise</span><span class="p">(</span><span class="n">trainflux</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">())</span><span class="w">
+</span><span class="n">trainfluxCount</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainfluxCount</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">count</span><span class="p">))</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainfluxCount</span><span class="p">,</span><span class="n">count</span><span class="p">)</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">trainfluxCount</span><span class="p">,</span><span class="s2">"trainsstoppingperstation.csv"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="https://imgur.com/D6cfV6H"><img src="https://i.imgur.com/D6cfV6H.png" title="source: imgur.com" /></a></p>
+
+<p>Halt times and Average halt times per station too. This would make give an idea of how busy a station is. This was not trivial as it seems, thanks to my n00by R skills. First, all source and destination stations were removed using <code class="highlighter-rouge">Distance !=0</code>. Then because of the funny way times were mentioned, I had to remove ‘single’ quotes in all time vectors. I used <code class="highlighter-rouge">gsub</code> for that. Then, I had to convert the char to POSIXlt date format. This would enable time computation using <code class="highlighter-rouge">difftime</code>. Using difftime I made a new vector for HaltTime with a minute resolution. I am told, these steps are just a few clicks in excel.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">dataset</span><span class="o">$</span><span class="n">Distance</span><span class="o">!=</span><span class="m">0</span><span class="p">)</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"'"</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">)</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"'"</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="p">)</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="n">strptime</span><span class="p">(</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s2">"%H:%M:%S"</span><span class="p">))</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">&lt;-</span><span class="n">strptime</span><span class="p">(</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s2">"%H:%M:%S"</span><span class="p">))</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Halt Time`</span><span class="o">&lt;-</span><span class="n">as.difftime</span><span class="p">(</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">-</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"%H:%M:%S"</span><span class="p">,</span><span class="n">units</span><span class="o">=</span><span class="s2">"mins"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>Next, I removed trains that had halt times less than 0 and grouped them by stations. I removed Arrival and Departure vectors. I then studied the average halt times.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">trainNoSource</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Halt Time`</span><span class="o">&gt;=</span><span class="m">0</span><span class="p">)</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="kc">NULL</span><span class="w">
+</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Departure time`</span><span class="o">&lt;-</span><span class="kc">NULL</span><span class="w">
+</span><span class="n">trainNoSource_grpstation</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">trainNoSource</span><span class="p">,</span><span class="n">`Station Name`</span><span class="p">)</span><span class="w">
+</span><span class="n">trainNoSource_haltTimes</span><span class="o">&lt;-</span><span class="n">summarise</span><span class="p">(</span><span class="n">trainNoSource_grpstation</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">(),</span><span class="n">totalhalt</span><span class="o">=</span><span class="nf">sum</span><span class="p">(</span><span class="n">trainNoSource_grpstation</span><span class="o">$</span><span class="n">`Halt Time`</span><span class="p">))</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">count</span><span class="p">))</span><span class="w">
+</span><span class="n">trainNoSource_haltTimes</span><span class="o">&lt;-</span><span class="n">summarise</span><span class="p">(</span><span class="n">trainNoSource_grpstation</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">(),</span><span class="n">totalhalt</span><span class="o">=</span><span class="nf">sum</span><span class="p">(</span><span class="n">`Halt Time`</span><span class="p">))</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">count</span><span class="p">))</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">totalhalt</span><span class="p">))</span><span class="w">
+</span><span class="n">trainNoSource_haltTimes</span><span class="o">$</span><span class="n">`avgstop`</span><span class="o">&lt;-</span><span class="n">trainNoSource_haltTimes</span><span class="o">$</span><span class="n">totalhalt</span><span class="o">/</span><span class="n">trainNoSource_haltTimes</span><span class="o">$</span><span class="s1">'count'</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="n">desc</span><span class="p">(</span><span class="n">avgstop</span><span class="p">))</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">trainNoSource_haltTimes</span><span class="p">,</span><span class="s2">"avgHaltTimeperstation.csv"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p><a href="https://imgur.com/D6cfV6H"><img src="https://i.imgur.com/D6cfV6H.png" title="source: imgur.com" /></a></p>
+
+<p><strong>Converting that data into geojson</strong></p>
+
+<p>The csv file was uploaded on google sheets. I used the <a href="https://chrome.google.com/webstore/detail/geocode-by-awesome-table/cnhboknahecjdnlkjnlodacdjelippfg?hl=en">awesome tables</a> google sheets plugin to convert station codes to lat and long values.</p>
+
+<p>Unfortunately there is very little documentation for extrusion using mapbox. Just <a href="https://www.mapbox.com/mapbox-gl-js/example/3d-extrusion-floorplan/">an example</a>, which took me quite some time to get to work. From the example <a href="https://www.mapbox.com/mapbox-gl-js/assets/data/indoor-3d-map.geojson">geojson</a>, it seems a <code class="highlighter-rouge">height</code>, <code class="highlighter-rouge">base height</code> and <code class="highlighter-rouge">color</code> properties are required. I wanted less complications, so i went with a single color. I structured the the <a href="https://docs.google.com/spreadsheets/d/11PcWeaLH1PImgipF80lmdjKiA19Tn-BFoyatt3i5hMg/edit?usp=sharing">google sheet</a> file as below.</p>
+
+<p><a href="https://imgur.com/wR2tvOi"><img src="https://i.imgur.com/wR2tvOi.png" title="source: imgur.com" /></a></p>
+
+<p>Then, I used <a href="http://geojson.io">geojson.io</a> to convert the csv to a geojson file. One can also use the <a href="https://www.mapbox.com/studio/">mapbox studio</a> for the same.</p>
+
+<p>This might seem enough, but</p>
+
+<blockquote>
+  <p>Little did i know</p>
+</blockquote>
+
+<p>The extrusion property can be applied only on polygons. How to convert a point to a polygon? This might not be the most relevant question to ask at 3:45 am in the morning. But unfortunately, it was ! <code class="highlighter-rouge">Python</code> to the rescue. Thanks to some <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">previous work</a> .</p>
+
+<p>In times when, ‘I wrote a script’ has become as common as ‘I took a bath’, I wrote a script.</p>
+
+<p>The script would <code class="highlighter-rouge">simply</code> take the points and convert it into a square of a fixed size. The <a href="https://tools.ietf.org/html/rfc7946#section-3.1.6">geoJSON spec sheet</a> was helpful. The process was take the point as the center of the square and them compute the corners in a cyclic manner.</p>
+
+<p><strong>Presentation on a map</strong></p>
+
+<p>By 6am, I had all polygons on the map in mapbox studio. To extrude the height, I had multiplied the train number by 7000 as it seemed to make a lot of effect on Visual detection and helped estimation. I later used the mapbox example and modified it to add tooltips too.</p>
+
+<p>The result is hosted <a href="http://rohitg.in/DataViz/index.html">here</a>. The project is in this <a href="https://github.com/IndianTinker/DataViz">repo</a>. Feel free to correct me if I am wrong.</p>
+
+<h2 id="insights">Insights</h2>
+<p>Some insights we had during our class discussion were:</p>
+
+<ul>
+  <li>Vadodra has just one train originating but 298 passing through it
+<a href="https://imgur.com/ltiPG0t"><img src="https://i.imgur.com/ltiPG0t.png" title="source: imgur.com" /></a></li>
+  <li>There are ‘international’ trains originating from Dhaka
+<a href="https://imgur.com/rhdnM7z"><img src="https://i.imgur.com/rhdnM7z.png" title="source: imgur.com" /></a></li>
+  <li>Howrah has the most trains starting
+<a href="https://imgur.com/fVqVIft"><img src="https://i.imgur.com/fVqVIft.png" title="source: imgur.com" /></a></li>
+  <li>Trains move from outside to inside as more trains originate at boundaries.
+<a href="https://imgur.com/u6F0xPr"><img src="https://i.imgur.com/u6F0xPr.png" title="source: imgur.com" /></a></li>
+</ul>
+
+<h2 id="extensions">Extensions</h2>
+<ul>
+  <li>Employ redundancy using color channel to allow users know what range of trains originate. A color for say 1-10, 10-20 etc .</li>
+  <li>Add another layer of passing by trains</li>
+  <li>See if insights could be found if trains could be visualized with population.</li>
+</ul>
+
+<p>Hope this helps !</p>
 
 <p>Cheers,</p>
 
