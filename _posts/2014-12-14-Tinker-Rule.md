@@ -6,7 +6,7 @@ location: TI-CEPD, NSIT, Delhi, India
 tags:
 - hardware
 - projects
-- select
+
 ---
 
 This project was done during my time at [TI-CEPD,NSIT,Delhi](http://www.cedtnsit.in/). They have an awesome Winter Internship program going on, Be sure to have a look.

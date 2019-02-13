@@ -2,7 +2,29 @@
 layout: page
 title: Projects
 ---
-<p>The interesting/award-winning projects are <span class="select2">highlighted</span></p>
+
+<div class="projects">
+<h3>Notable Works</h3>
+<p>Works showing multidisciplinary, research-focussed approach to addressing design opportunities. I use my skills in prototyping and research to generate a negotiable and rational dialogue with the problem. The problem is usually addressed in the meantime. Projects show skills in Design Research, Creative Technology, and Interaction Design, with focus on design process</p>
+
+  {% for post in site.posts %}
+  {% for tag in post.tags %}
+  {% if tag == 'select'%}
+ <div class="project">
+ <a href="{{post.url}}">
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <p>
+ {{post.title}}
+ </p></a> 
+ </div>
+
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
+
+<h3>Other Projects</h3>
+<p>Over the years, I have worked with many people and on many problems. I document most of my projects carefully for archival and sharing purposes. Most projects are open-source. Feel free to explore the projects. The interesting/award-winning projects are <span class="select2">highlighted</span></p>
 <div class="projects">
 <h3>Design</h3>
 
@@ -48,7 +70,7 @@ title: Projects
   {% endfor %}
   {% endfor %}
 </div>
-
+<br>
 <h2>Electronics and Computing</h2>
 <div class="projects">
 <h3>Microcontrollers</h3>
