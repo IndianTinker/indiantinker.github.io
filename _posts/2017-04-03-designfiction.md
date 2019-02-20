@@ -6,6 +6,7 @@ location:  IDC IIT Bombay India
 tags:
 - design
 - select
+- note
 ---
 
 >This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.

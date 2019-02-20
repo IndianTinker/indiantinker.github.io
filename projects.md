@@ -9,10 +9,10 @@ title: Projects
 
   {% for post in site.posts %}
   {% for tag in post.tags %}
-  {% if tag == 'select'%}
+  {% if tag == 'note'%}
  <div class="project">
  <a href="{{post.url}}">
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_400,h_400,c_fill,g_auto/{{post.image}}">   
  <p>
  {{post.title}}
  </p></a> 

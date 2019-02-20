@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Points of View 
-image: https://farm1.staticflickr.com/922/29592692018_a8d0ab8f45_z.jpg
+image: https://farm1.staticflickr.com/927/29592643878_4b1cca3c48_z.jpg
 location:  IDC IIT Bombay India
 tags:
 - installation
 - select
+- note
 ---
 
 > This installation, presented at National Gallery of Modern Art, Mumbai, was a part of the ["Nature Embedded"](http://www.dsource.in/events/naturembedded/) exhibition. The exhibition was inaugurated by [Paola Antonelli](https://en.wikipedia.org/wiki/Paola_Antonelli) .

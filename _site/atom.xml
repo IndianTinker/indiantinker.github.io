@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-02-20T17:26:44+05:30</updated>
+ <updated>2019-02-20T18:05:33+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -3886,7 +3886,7 @@ Sorry for the dull voice tone. I had the dark side messing up with me :P&lt;/p&g
  </entry>
  
  <entry>
-   <title>Reactive Wearable LED Heart</title>
+   <title>Electronic Heart</title>
    <link href="http://localhost:4000/2015/11/14/hearty/"/>
    <updated>2015-11-14T00:00:00+05:30</updated>
    <id>http://localhost:4000/2015/11/14/hearty</id>
@@ -6798,9 +6798,17 @@ IndianTinker&lt;/p&gt;
 
 &lt;p&gt;We all worked for a few months on the project and the final versions demonstrated had two LEDs to indicate the state of the Lamps and were hand(routed-etched-drilled-soldered and assembled) at CEPD. The main diffuser was 3D printed in the Lab itself in the shape of a Flame.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/G7MglW2.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/oDZ4aB5.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/yOLikSo.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;The structure was made using industrially laser cut acrylic elements.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ENqtctj.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Check out &lt;a href=&quot;https://e2e.ti.com/blogs_/b/designproject/archive/2013/04/26/rub-the-lamp-and-make-a-wish&quot;&gt;this&lt;/a&gt; blog post by &lt;strong&gt;Ravikumar Sir&lt;/strong&gt; that details the project. The project also got covered in &lt;a href=&quot;http://www.timescrest.com/life/3d-printer-the-desi-dimension-10505&quot;&gt;Times Crest&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/tn888rA.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here is Prof. Gadre showing the project in action.&lt;/p&gt;
 
