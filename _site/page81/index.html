@@ -512,6 +512,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -556,129 +576,47 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
-        Nokia 5110 LCDs and MSP430
+      <a href="/2015/02/26/The-MacroCase/">
+        MacroCASE- A DIY phone case to see, up close !
       </a>
     </h1>
 
-    <span class="post-date">09 Nov 2014</span>
+    <span class="post-date">26 Feb 2015</span>
 
-    <p>I had this Nokia LCD i picked up a while back. It is perfect when you want to play with graphics on a tiny lcd that comes from the good old days of Nokia’s Monochome days. Several might have spent days playing space invaders/snakes etc.</p>
+    <p><em>A detailed build procedure of this is already posted on <a href="http://www.instructables.com/id/MacroCase-A-DIY-Phone-Case-for-Macro-Photography/">Instructables</a></em></p>
 
-<p>The time came when I was bored in my hotel room and I had it in my parts bin which i was carrying while moving from Delhi to Pune.</p>
+<p>Last night while I was soldering a TSSOP Package on a home-etched board, i found it really difficult to see the joints whether they had soldered fine or whether i had a healthy track? I used my eye-loupe to see up close.The idea of using eye-loupe was initially introduced to my while my time at <em>CEPD,NSIT</em> .Ah! That was a beautiful solder joint. Something worth saving and sharing. So, I just held the loupe in front of the phone to click a picture and save it. I figured this could be useful in taking macroshots too. 
+umm.. Like this bajra seed</p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/ymblBNvUJa/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Bajra Grain under my #MacroCase ! #Macro #Photography #Lumia #Nokia #DIY</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-02-02T13:28:51+00:00">Feb 2, 2015 at 5:28am PST</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>The LCD used a <a href="https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf">Phillips PCD 8544 Driver</a> which communicates on SPI.The voltage levels are <code class="highlighter-rouge">2.7-3.3V</code> happy for our MSP430.</p>
+<p>or this brush</p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/yT7jvUvUHq/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Results of my #own #Macro #Lens #Setup for #Phones ! These are bristles of a Brush ! #DIY #Optics #PhoneMods #Lumia</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-01-26T09:02:44+00:00">Jan 26, 2015 at 1:02am PST</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p><em>NYC</em> has a pretty nice explanation on how it works and how to play with it with MSP430 over on his <a href="http://www.msp430launchpad.com/2012/08/using-nokia-lcd-library.html">blog</a></p>
+<p>These instances started to occour more frequently. You know the feeling when you figure out that one <strong>Juggad</strong> has solved a problem and you keep on using it again and again. Sometimes, even when not quite necessary (But for fun!)</p>
 
-<p>For TL:DR;</p>
+<p>So, why not combine the phone and this eye-loupe (sadly but aptly broken due to its relocation from Delhi) and make something permanent and then the <em>MACROCase</em> was made and it gave purpose to that ready to throw back cover that i just made useful.</p>
 
-<p>The LCD has the following pins to interface to:</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
+<p>You wont need much stuff to make it, just almost everything in the picture below is enough.
+<img src="http://cdn.instructables.com/F74/UVMV/I5J54C54/F74UVMVI5J54C54.MEDIUM.jpg" /></p>
 
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Pin Number</th>
-    <th class="tg-031e">Pin Label</th>
-    <th class="tg-031e">Pin Function</th>
-    <th class="tg-031e">Input/Output?</th>
-    <th class="tg-031e">Notes</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">1</td>
-    <td class="tg-031e">VCC</td>
-    <td class="tg-031e">Positive power supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Supply range is between 2.7V and 3.3V</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">2</td>
-    <td class="tg-031e">GND</td>
-    <td class="tg-031e">Ground</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">3</td>
-    <td class="tg-031e">SCE</td>
-    <td class="tg-031e">Chip select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">4</td>
-    <td class="tg-031e">RST</td>
-    <td class="tg-031e">Reset</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Active low</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">5</td>
-    <td class="tg-031e">D/C</td>
-    <td class="tg-031e">Mode select</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Select between command mode (low) and data mode (high).</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">6</td>
-    <td class="tg-031e">DN(MOSI)</td>
-    <td class="tg-031e">Serial data in</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">7</td>
-    <td class="tg-031e">SCLK</td>
-    <td class="tg-031e">Serial clock</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-031e">8</td>
-    <td class="tg-031e">LED</td>
-    <td class="tg-031e">LED backlight supply</td>
-    <td class="tg-031e">Input</td>
-    <td class="tg-031e">Maximum voltage supply is 3.3V.</td>
-  </tr>
-</table>
+<p>Building is not very difficult (See this <a href="http://www.instructables.com/id/MacroCase-A-DIY-Phone-Case-for-Macro-Photography/">Instructable</a>). I also added a LED to precisely illuminate the scene just in case we went up too close. An assorted SMD switch was added near the camera button (Yes some Lumias have it :P). The whole wiring was done using copper tape. One can also use the wires. I preffered them as they are just stick.</p>
 
-<p>The display is divided into 6 horizontal bands of 8 bits each (48) and 84 columns .</p>
+<p>And there I have my own modded phone case that helps me take nice pictures of the smaller things in life and help me pick numbers of those small components like resistors and chips.</p>
 
-<p>At a time you write to a single bank.</p>
+<p><img src="http://cdn.instructables.com/FAG/NR1T/I5JHSC1G/FAGNR1TI5JHSC1G.LARGE.jpg" /></p>
 
-<p>And you can continue to update only a single bank just in case you have dynamic data in that particular bank.</p>
+<p>This is how a SOIC looks like:</p>
 
-<p>The communication is done using SPI.</p>
+<p><img src="http://cdn.instructables.com/F0Z/XZKQ/I5J54C94/F0ZXZKQI5J54C94.MEDIUM.jpg" /></p>
 
-<p>The code that i used is based on <a href="http://forum.43oh.com/topic/1312-nokia-5110-display/">RobG’s post</a>.</p>
+<p>Stay tuned for an upcoming tutorial series on umm.. Lets keep it a secret till then. ! Until next time, (as John Green says) ,  Dont Forget to be awesome!</p>
 
-<p>It displays the temperature (from the internal sensor ofcourse!) and some static text</p>
+<p>Cheers,</p>
 
-<p>Connections are as follows(PORT1):</p>
+<p>Rohit</p>
 
-<ul>
-  <li>LCD5110_SCLK_PIN- BIT5</li>
-  <li>LCD5110_DN_PIN- BIT7</li>
-  <li>LCD5110_SCE_PIN- BIT0</li>
-  <li>LCD5110_DC_PIN- BIT1</li>
-</ul>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15171730494" title="WP_20140803_19_27_04_Pro by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7583/15171730494_4b72e85970_z.jpg" width="640" height="372" alt="WP_20140803_19_27_04_Pro" /></a>
-<br /></p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/72070b40befcf1417e2a.js"> </script>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/14631629150" title="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5576/14631629150_4d33d536b4.jpg" width="500" height="500" alt="When u are #Bored in a #Hotel room, Its time to #play with new #Hardware #MSP430 #DIY #Pune" align="center" /></a></p>
-
-<p>Just incase you need to play more with graphics see this cool post by <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide">Sparkfun</a></p>
-
-<p>If you have any difficulties post here in comments</p>
 
   </div>
   

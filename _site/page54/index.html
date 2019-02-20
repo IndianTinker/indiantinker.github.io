@@ -512,6 +512,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -556,49 +576,70 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/14/hearty/">
-        Reactive Wearable LED Heart
+      <a href="/2015/11/16/Plantpal/">
+        PlantPal-Garden Light Watering Reminder
       </a>
     </h1>
 
-    <span class="post-date">14 Nov 2015</span>
+    <span class="post-date">16 Nov 2015</span>
 
-    <p>Blinking LEDs,Blinking Hearts, Enamouring Sight for any Nerd and a nice idea for getting people interested in the hobby of electronics. This is what we had in mind when we did this <strong>Wearable LED heart</strong> project to showcase at MakerFest 2014. This would be our team’s signature.</p>
+    <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
 
-<p>Basically, we have a small PCB milled in the shape of a heart and studded with LEDs that react to the ambient light and change their beating rate and whenever someone comes too close(basically a hand in most cases :P), the LEDs change the pattern to what Prof.Gadre calls the <em>Happy Mode</em> !</p>
+<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched ‘Automatic System’, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
 
-<p>I worked on the initial schematics and made the <em>first</em> working prototype of it involving the LDR as the sensor. The code that went inside worked as follows:</p>
+<p>Hence,<strong>PlantPal</strong> .</p>
+
+<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The ‘Chinese’ made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
+
+<p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
+
+<ul>
+  <li>A yet-another-no-datasheet chinese IC.</li>
+  <li>A axial resistor like inductor</li>
+  <li>An LED</li>
+  <li>A resistor for the LED.</li>
+  <li>The solar panel</li>
+  <li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
+</ul>
+
+<p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
+
+<p>So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.</p>
+
+<p>So, the power issue was sorted. For the sensor, i used the usual <em>two-wires-in-gypsum</em> sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my <a href="http://www.ti.com/product/msp430g2230">MSP430G2230</a> used up. It was time to work on the code.</p>
+
+<p><em>With great power, comes greater responsibility</em>. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.</p>
+
+<p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
+
 <blockquote>
-  <p>It takes two snapshots of the LDR reading before and after the LED blinks, i.e. the ON state and OFF state and based on the delta the algorithm decides the lighting conditions and varies the beat rate. Once the Delta exceeds a point, it switches to happy mode !</p>
+  <p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED’s blinking rate also acts like an indicator of sorts.</p>
 </blockquote>
 
-<p>The PCB is a double sided one ; made after i made <a href="/2015/10/22/OpenBadge/">Open Badge</a> . So, most pitfalls were over. Without the temperature controlled soldering iron and LEDs mounted very close-by it was a pain to solder them. They would heat and sometimes blow away due to excess heat. Probably the best way was to reflow ?</p>
+<p><strong>Problems and solutions</strong></p>
 
-<p>Check out the pictures of the build in action !</p>
+<p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22262732850/in/dateposted-public/" title="Dumping some neurons"><img src="https://farm1.staticflickr.com/751/22262732850_b239316ce1_z.jpg" width="640" height="359" alt="Dumping some neurons" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+  <li>
+    <p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon.</p>
+  </li>
+  <li>
+    <p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p>
+  </li>
+  <li>
+    <p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p>
+  </li>
+  <li>
+    <p>Even lower power, using the MSP430’s clock module i can certainly go below 1MHz until it affects other peripherals.</p>
+  </li>
+</ul>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22424711966/in/dateposted-public/" title="Front side"><img src="https://farm6.staticflickr.com/5810/22424711966_e144c2f32a_z.jpg" width="640" height="359" alt="Front side" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Check out the video of it in action:</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263012308/in/dateposted-public/" title="Front"><img src="https://farm1.staticflickr.com/759/22263012308_5cbde5866a_z.jpg" width="640" height="359" alt="Front" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen=""></iframe>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21827990404/in/dateposted-public/" title="All LEDs survive the temperature"><img src="https://farm6.staticflickr.com/5718/21827990404_209e639397_z.jpg" width="640" height="359" alt="All LEDs survive the temperature" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/22263867379/in/dateposted-public/" title="All soldered up"><img src="https://farm6.staticflickr.com/5763/22263867379_566a4080cc_z.jpg" width="640" height="359" alt="All soldered up" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The video of the heart in action:</p>
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/dAfC-3cFSuY" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Final PCBs for MakerFest, all Hand Soldered :’)</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980555293/" title="All Hearts soldered just in time"><img src="https://farm3.staticflickr.com/2849/11980555293_daca4acaed_z.jpg" width="640" height="366" alt="All Hearts soldered just in time" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11981073356/in/photostream/" title="Final Piece Back"><img src="https://farm8.staticflickr.com/7366/11981073356_201a3d139d_z.jpg" width="359" height="640" alt="Final Piece Back" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/11980650274/in/photostream/" title="LED thru the eye loupe"><img src="https://farm4.staticflickr.com/3731/11980650274_53fc2083c5_z.jpg" width="640" height="597" alt="LED thru the eye loupe" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The mass manufactured version of the same was also presented to the participants of <em>Texas Instruments Analog Design Contest 2014</em> !</p>
+<p>Please do comment if you have any queries :D</p>
 
 <p>Cheers !!</p>
 

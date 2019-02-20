@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-02-16T16:37:17+05:30</updated>
+ <updated>2019-02-20T17:26:44+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -3159,6 +3159,71 @@ You start with downloading the app from the &lt;a href=&quot;https://play.google
  </entry>
  
  <entry>
+   <title>ConnectNeXt App Ecosystem</title>
+   <link href="http://localhost:4000/2016/04/03/Connectnext/"/>
+   <updated>2016-04-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2016/04/03/Connectnext</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. I was a project lead for this project from my team. Here, I present my work on designing and testing the initial release of Tata Motors ConnectNeXt App Ecosystem.  Work in the post was done between 2015-Q1 2016. I was involved in system design, testing, and user evaluation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/aAW5nOh.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/Rj7j3nU.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/R6TXIZd.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;Context&lt;/h4&gt;
+&lt;p&gt;This is 2014, Vehicle infotainment systems are getting more and more computation heavy. The customer demands more connection and driving needs to be data-informed (driven). The competition has some derived solutions in the market. We needed to respond by building our own contextual telematics ecosystem. I was involved as a Lead from PAT side in the project when the dev and design already had some ideas and had some prototypes being tested. My task was to rethink and improve the project- ConnectNeXt, from a user-centric point of view.  It is one of those projects, you are on the team and have to fight for the user. Then not be lured by the cool technology that could possibly take too much attention while driving. Not making an App need attention was the task. Android auto was still very new.&lt;/p&gt;
+
+&lt;h4&gt;Work&lt;/h4&gt;
+&lt;p&gt;I worked with many designs and dev teams (across 3 companies) in my role as a design integrator for the project. We studied the designed screen and flows. We did reviews of iconography, typography, and information architecture. Nitpicking things and presenting the user’s point was the goal. There were experiments to make apps that would adjust the visuals to the time of the day. The interaction points in the app were designed to be operated in a road filled with potholes. We simulated this condition using a torture track. This helped us move critical/decision points outside the primary interface. We researched about in-vehicle safety. Safety is at the top while using such apps in vehicles. With some benchmarking data, our user studies, and simulations, we designed some rough guidelines for vehicle-based apps on TML platform.  The idea was to have a central app that auto-configures based on the vehicle it is connected. The app would suggest possible compatible apps from the ecosystem. Then, it configures them. This is the connectNeXt app. About 150+ use cases were to be designed, implemented, and tested. Once the interface layer of these apps was sorted as a system, we moved on scoping the feature matrix. The entire operation was based on the Smartlink protocol stack, and hence we worked with a lot of connection, reconnection, and disconnection use cases over Bluetooth and/or USB.  All these apps are now in playstore.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tml.drivepro&quot;&gt;DriveNeXt&lt;/a&gt; app gives driving behavior analysis and suggests improvements.
+&lt;br /&gt;&lt;img src=&quot;https://i.imgur.com/kTvjdZg.png&quot; height=&quot;350&quot; /&gt; 
+&lt;img src=&quot;https://i.imgur.com/YP5ETha.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/aAW5nOh.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tml.jukecar&quot;&gt;JukeCar&lt;/a&gt; is a music sharing app to make collaborative playlists when many people travel together in a car
+&lt;br /&gt;
+&lt;img src=&quot;https://i.imgur.com/pZ7MsP7.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/Rj7j3nU.png&quot; height=&quot;350&quot; /&gt;
+ &lt;img src=&quot;https://i.imgur.com/QVCCdIk.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tml.knowyourcar&quot;&gt;Smart Vehicle guides&lt;/a&gt; helps in making user manuals searchable and digitally accessible.
+&lt;br /&gt; &lt;img src=&quot;https://i.imgur.com/X9J9vH3.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/CkHrLrh.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/R6TXIZd.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tml.connectnextappone&amp;amp;hl=en_US&quot;&gt;ConnectNeXt&lt;/a&gt; is the mothership app. It configures other apps and manages the interactions with the infotainment system
+&lt;br /&gt; &lt;img src=&quot;https://i.imgur.com/uvEnZCG.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/j4am3CQ.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/AS1C3qb.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tml.emergencyapp&quot;&gt;Emergency Assist&lt;/a&gt; is a safety app that detects crashes and sends SOS messages to emergency contacts
+&lt;br /&gt; &lt;img src=&quot;https://i.imgur.com/l0oTVXx.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/7uUd01Q.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/vDGscbI.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tml.rca&quot;&gt;RCA-Remote Control App&lt;/a&gt; allows back seat riders to control music and ventilation through their phone.
+&lt;br /&gt; &lt;img src=&quot;https://i.imgur.com/GNEkXmu.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/UqJC1sP.png&quot; height=&quot;350&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/TtHJCev.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;Learnings&lt;/h4&gt;
+&lt;p&gt;This was one of the things, I am kind of proud of. A lot of things come to light when thinking as the process. The API calls, UI layers, car data, user privacy, variable in a car, no internet, failure cases, and finally edge cases. I learned things like JIRA, App Ecosystem, CAN Tools, Vehicle Diagnostics, Vehicle safety, process maps, and doing projects with a lot of different stakeholders. The testing part of the project was fun. Initially, we were all communicating by logging bugs in JIRA. I did not even know people by their faces, just by their JIRA user names. But later, It was getting difficult to explain some very typical use cases. So, we decided on doing extensive all day collaboration drives with stakeholders. I used to drive in Pune and neighboring cities. We were logging data and simulating events, with the app developer and infotainment developers sitting in the car. They were initially scared of sitting in a camouflaged car. But, we were fixing more than 20+ bugs a day. I won an award for my work with the project too.&lt;/p&gt;
+
+&lt;h4&gt;How it affected the company&lt;/h4&gt;
+&lt;p&gt;I feel, it laid the foundations of what connectneXt is today. The company position transformed from being competitive in the market to become market leaders. The best part was all the tech and design was in-house and the company can virtually do anything the customer needs without sticking to the excel-sheet approach of many suppliers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills&lt;/strong&gt;: User Research, UI, UX, Design Integration, Futuring/Trend forecasting, and Testing&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Augmenting Reality with Visiting Cards</title>
    <link href="http://localhost:4000/2016/03/19/ARCards/"/>
    <updated>2016-03-19T00:00:00+05:30</updated>
@@ -3354,6 +3419,38 @@ So basically when we notice a higher value in the lowest band which is basically
 &lt;p&gt;Cheers,&lt;/p&gt;
 
 &lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Incar Navigation</title>
+   <link href="http://localhost:4000/2016/02/02/tiagoNav/"/>
+   <updated>2016-02-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2016/02/02/tiagoNav</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I present my work on defining strategies to improve in-car navigation. The work was first used in Tata Tiago/Tigor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/XInwt0L.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;Context&lt;/h4&gt;
+&lt;p&gt;This project was done between Q2 2015- Q1 2016. Following the mobile navigation boom in India, it was observed that a lot of people used navigation in a car. Customers seem to have a behavior of pairing the audio of the phone to the infotainment and using the audio to navigate. Since road names are often not well represented in India, they still had to look at the mobile screen. This diverted their attention from the road. The need was to provide basic navigation features on the entry-level infotainment systems (Level A - now discontinued:/). The entire navigation instructions were to be rendered on the dot matrix panel. The partners were MapMyIndia, Harman, and Tata Motors. The project was challenging as the hardware resources on Level A were limited.&lt;/p&gt;
+
+&lt;h4&gt;Work&lt;/h4&gt;
+&lt;p&gt;Our work started with understanding how the system is working. We made process flows. The entire thing worked via Bluetooth on Android. Android, in general, is a heterogeneous platform. Every manufacturer tries something funny with Bluetooth. The BT stack, in general, is not very big to allow lots of information to be pushed to it. This is especially when two connections are handled by the infotainment- A2DP and SPP. The design required them to work simultaneously. The whole thing was very tight. We started by testing and defining (with whatever we could) the first use scenarios and then later moved into using the system with other infotainment functions. This activity may have been late in the whole process. After a few months of hard work, the sun was brighter again, and we moved to test, find, and fix mode. This time we found implementation bugs and UX issues with phone integration. A few more sunburns later, we have a pre-release which was rolled out to certain customers. A study was designed to understand how users get the system working and use it.  Because of such tests, the system improved and we had a month or two to perform regression testing to shape the product better. The regression testing helped find some edge cases and fix them. Until finally, before the launch, we had a working navigation system on a teeny tiny Level A system. Nobody expected that. However, the story does not end here. Even though we eased a lot of pinpoints, there could be some always. It was a trade-off or fill into Android Auto based products.&lt;/p&gt;
+
+&lt;h4&gt;Learnings&lt;/h4&gt;
+&lt;p&gt;I learned how to work on projects in which design integration is the key to match customer experience with technology and feature requests. The work involved working under technical constraints and provide the best experience. I learned how log bug reports in an easy to reproduce manner. The hybrid testing, design, and develop style was a thing, I still love. The work gave me a lot of sense of how scalable products are made in a fast-paced environment. It taught me a bit about hierarchy and how a big company works. Another thing, I learned was that design of such complex interconnected products may always have some rough edges even when in production. These rough edges or bugs are fixed over time.&lt;/p&gt;
+
+&lt;h4&gt;How it affected the company&lt;/h4&gt;
+&lt;p&gt;TML became the first company to offer navigation support to entry-level cars. Customer and media loved it, with the launch of Tiago. I have learned that since it is no longer economically viable to use the Level A system compared to other alternatives, it has been discontinued. But, I love my Level A.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills&lt;/strong&gt; Design Integration, UI/UX, Navigation, and Testing&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Media Coverage&lt;/strong&gt; : &lt;a href=&quot;https://www.zigwheels.com/reviews-advice/reviews/tata-tiago-hatchback-review/23820/#leadform&quot;&gt;Zigwheels&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Stories&lt;/strong&gt; : &lt;a href=&quot;https://www.youtube.com/watch?v=3Tth7RCsSjg&quot;&gt;User Uploaded - Walkthrough&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=NZL3Xd5ABY0&quot;&gt;User Feedback&lt;/a&gt;&lt;/p&gt;
 
 </content>
  </entry>
@@ -5356,6 +5453,96 @@ So, yet again Python saves the day!&lt;/p&gt;
  </entry>
  
  <entry>
+   <title>Improving UX of FM/AM Audio</title>
+   <link href="http://localhost:4000/2015/04/02/FMUX/"/>
+   <updated>2015-04-02T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2015/04/02/FMUX</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I present my work on defining strategies to improve FM/AM user experience and implementation of the same. The work was first used in Tata Tiago/Tigor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Good Design is as Little Design as Possible” — D. Rams&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4&gt;Context&lt;/h4&gt;
+&lt;p&gt;With a burst of highly “connected” media options available in cars, FM/AM or Radio still happens to be a widely used feature in infotainment units.  However, based on many field requests the experience of FM was not at par with other media options like USB/BT/SD and needed some rethinking. Further, there was a need to establish a more data-informed tuning process.&lt;/p&gt;
+
+&lt;h4&gt;Work&lt;/h4&gt;
+&lt;p&gt;The work started by understanding the entire signal reception flow from the antenna to the infotainment unit and the chip in infotainment. We explored to the level of the algorithms used in the RTOS to play channels. This helped us, as designers/engineers get a perspective on the scope of changes. We even studied the antenna cables and their routing. This helped us identify their vicinity with EM noise generating components like alternators and engine. Then we did a small exercise to find out possible conditions that might result in pain points. These were a sudden loss of reception (when entering an area with no coverage like a tunnel), reducing signal strength (when traveling outside the city), and system scanning for stations (auto store). We carried out several benchmarking sprints with our spectrum analyzer which gave us the ground truth. A comparison with other competitive cars was done. It was quite a hectic process. We had to often drive in places where there was not even a road and test reception. A customer can be anywhere, we should provide the best experience everywhere was the motivation.  A nice part was we could see some country and eat some local food. But we spent the whole day in hot weather in test cars.  After about 5-6 such exercises over a few months, we were able to suggest an FM algorithm that could be implemented. In the process, we figured out how to do spectrum analysis and find signal strength values. Then correlate it with readings of the infotainment, figure out leaks, and calibrate the system. &lt;br /&gt; The simulation exercises helped and we were able to detect conditions like tunnel entry, driving out of zone based on readings. We would dynamically adjust the volume curve/filters based on such events.&lt;/p&gt;
+
+&lt;h4&gt;Learnings&lt;/h4&gt;
+&lt;p&gt;The work was challenging and I read a lot on FM/AM. I learned to operate the spectrum analyzers as well. This sparked my interest in Audio based user experiences in a car environment. The whole exercise also taught me about the design of such a system. I was in a weird position in Tata Motors, I was doing the work of design to technology integration. I would know what users want and could understand what the engineering team was doing in the code. I had to work on aligning all these stakeholders together. BTW, I even made &lt;a href=&quot;/2015/05/17/FM430/&quot;&gt;my own FM receiver&lt;/a&gt; that could show vague signal strength, when I was finding it hard to understand that spectrum analyzer. :)&lt;/p&gt;
+
+&lt;h4&gt;How it affected the company&lt;/h4&gt;
+&lt;p&gt;The same FM/AM reception component was used in several other platforms. It seems to have improved the shape FM/AM was in the car. The experience was pushed as a part of Tiago/Tigor and may even have been pushed to others.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills&lt;/strong&gt;: Research Methodology, Design Integration, UX, and Spectrum analysis&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Vehicle Acoustics Strategy</title>
+   <link href="http://localhost:4000/2015/04/01/TMLAcoustics/"/>
+   <updated>2015-04-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2015/04/01/TMLAcoustics</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I describe my work on studying acoustics inside car and defining strategies to offer best possible audio experience to the user. The work was first used in Tata Tiago/Tigor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/nLyUr3Y.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Media reported :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/KPXAg4o.png&quot; alt=&quot;Cardekho&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;How did it happen?&lt;/h3&gt;
+&lt;h4&gt;Context&lt;/h4&gt;
+&lt;p&gt;I was assigned to the HMI-PAT in ODT division team at Tata Motors RnD in Pune. If the reader is familiar with automotive industry org maps: TML follows a ford style one with some variation due to the acquisition of JLR. This was after Zest and Bolt had launched. The department knew that acoustics needs “quantitative standards” for improvement and benchmarking. We already have instruments to measure spectrum signal strength and audio quality.&lt;/p&gt;
+&lt;h4&gt;Work&lt;/h4&gt;
+&lt;p&gt;I studied various ways to capture and rate the quality of audio output in a contained environment. This also introduced me to the sound chamber. I did several studies using specialized audio workstations used in the audio recording industry. Then I reworked on the testing procedures an used in the audio equipment market. So, I read audio reports and worked on a pipeline to get this data from a car environment. The process was:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get data (audio curves like spectrograms etc but with correlation to specific vehicle params) from the car. We used an ASIO compatible Audio Interface and 4 point microphones placed at audio centers of users in the car&lt;/li&gt;
+  &lt;li&gt;Normalize the data using the sound chamber in two cases (engine running and engine not running).&lt;/li&gt;
+  &lt;li&gt;Perform the tests on 5 competition cars&lt;/li&gt;
+  &lt;li&gt;Perform qualitative feedback tests on all 5 cars with users&lt;/li&gt;
+  &lt;li&gt;Correlate qualitative and quantitative data.&lt;/li&gt;
+  &lt;li&gt;Suggest improvements in audio curve (audio filter design PoV) and find dependent vehicle build parameters (speaker cavity size, speaker location, speaker size, speaker mounting style (3 bolt/4 bolt/press fit) or vibration absorption unit)&lt;/li&gt;
+  &lt;li&gt;The filter design was later tested and improved by audio experts once the baseline curve was approved.&lt;/li&gt;
+  &lt;li&gt;The dependent vehicle build parameters were suggested to design and cavity design teams for adoption in new cars (like Tiago/Tigor/Nexon/Harrier )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Learnings&lt;/h4&gt;
+&lt;p&gt;I learned a lot about org hierarchy and general social skills. On a design point, I was able to design a validated process to do such a kind of analysis for the system. I learned a lot about audio systems from a reproduction point of view. Further, I got acquainted with using ASIO based interfaces by the end of the assignment. I learned about features like SDVC (speed dependent volume control) and its underlying implementation.&lt;/p&gt;
+
+&lt;h4&gt;How it affected company &lt;/h4&gt;
+&lt;p&gt;The response of the activity was initially cold, but as we started working on details of correlation, we were shocked that our recommendations were adopted in the upcoming programs. A new category for audio analysis was added as a part of benchmarking activity. The detailed process is confidential and is published in the company as a “Work Guideline”.&lt;/p&gt;
+
+&lt;h4&gt;In Market&lt;/h4&gt;
+&lt;p&gt;The first vehicle to show this was Tiago. The audio system received a superb response. Especially the audio output which had some of Tata and HARMAN’s algorithmic magic. For a feature preferred segment, the audio system was “intelligently” designed to sound like a car from at-least mid-luxury segments. The sales of the car are one of the best in TML’s recent launches and continue to soar. My work may have affected the buying choice of about 6000 customers per month.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/rC0ZYyk.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/7MIvRDz.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Selected Media Reports&lt;/strong&gt; : &lt;a href=&quot;https://www.deccanchronicle.com/business/autos/280317/6-things-you-may-not-know-about-tata-tiago.html&quot;&gt;Deccan Chronicle&lt;/a&gt;, &lt;a href=&quot;https://www.carwale.com/tata-cars/tiago/userreviews/48115/&quot;&gt;Carwale-User Feedback&lt;/a&gt;, &lt;a href=&quot;https://www.digit.in/car-tech/tata-tiago-technology-inside-and-one-week-drive-analysis-32282.html&quot;&gt;digit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills&lt;/strong&gt;: Research Methodology, Benchmarking, Design Integration, Acoustics, and Engineering&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>MacroCASE- A DIY phone case to see, up close !</title>
    <link href="http://localhost:4000/2015/02/26/The-MacroCase/"/>
    <updated>2015-02-26T00:00:00+05:30</updated>
@@ -6400,6 +6587,64 @@ IndianTinker&lt;/p&gt;
 &lt;p&gt;(Thanks for sharing &lt;a href=&quot;http://http://ales.kapun.org/&quot; target=&quot;_blank&quot;&gt;Aleš&lt;/a&gt; )&lt;/p&gt;
 
 &lt;p&gt;&lt;span style=&quot;line-height:1.5;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Indian Solar Car Project</title>
+   <link href="http://localhost:4000/2014/04/01/Solaris/"/>
+   <updated>2014-04-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2014/04/01/Solaris</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post describes the work done during my time as Electrical Design Head at Team Solaris of Delhi Technological University. We participated in two global competitions and our cars were flagged off and parised by the President of India.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bjHEYckl8xI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h4&gt;Context&lt;/h4&gt;
+&lt;p&gt;Ten engineers passionate about making a robust vehicle that runs long distances on solar electric energy.  With almost no funds and no technical expertise in any areas on designing a car, we had to make a path of our own, amidst no support from industry.&lt;/p&gt;
+
+&lt;h4&gt;Work&lt;/h4&gt;
+&lt;p&gt;I was selected in the team in my first year. It was a cool feeling. We had to showcase the car and drive 3000km across Australia (Darwin—Adelaide). No amount of background is enough for the project, but I will try to keep it as concise as possible. In the initial year, I was responsible for working on telemetry and solar array fabrication of the car. I was a somehow a self-made in-charge of designing the logo, brochure, and posters for the car too. I still don’t know why did I choose those batman fonts. I guess we all are naive at some stage. The first car building was entirely funded by our college and ourselves. It was launched by the Chief Minister of the state and we received a lot of good reviews for our sleepless nights and misadventures. I had documented the process in my old blog. The stages were :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://indiantinker.wordpress.com/2012/03/11/the-wsc-story-chapter-1-buildup/&quot;&gt;Building&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://indiantinker.wordpress.com/2012/03/25/wsc-story-chapter-2-con-course/&quot;&gt;Shipping&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://indiantinker.wordpress.com/2012/06/14/the-wsc-story-chapter-3-assemble-royal-rumble/&quot;&gt;Running&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bjHEYckl8xI&quot;&gt;Finishing&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our goal was to learn how to make a car that runs on solar power. We built, failed, burned, and rebuilt our own converters and circuits. Learned by doing and breaking things. Our hands were always dirty and mind always busy solving some problems.  Finally, we did build a working car, certified to run on international roads.  The race in Australia was great. We had the lowest cost car in the competition. Or we did not know why things could be so expensive. The cost of competing was more than the cost of building the car for us. The rough estimate is about 10 times cheaper. We did complete the race, but our mileage was about 11%. Crossing the line mattered a lot to us, sweating it out to learn and without support from the industry. We built a parent-sourced car.  In the next year, we decided to build a more utilitarian passenger car. Our previous failures helped us and we were able to build one in record time. This time we used curved panels adapted to our body too. We learned this from friends from Germany, Singapore, and Iran while in Australia. The current car drew more attention and was inaugurated by the President of India, Pranab Mukherjee. It was faster and a bit conventional. I hope we furthered the thinking in this space with our work. In the end, we moved out of the team and the juniors carried it on. Some of the people in the team now work for good automotive companies like Tesla, Tata Motors, Hero, and Google.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ssQ2e0k.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/0PDbXMz.jpg&quot; width=&quot;325&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/WmL4JjD.jpg&quot; width=&quot;325&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/74vIv8q.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Learnings&lt;/strong&gt;: The learnings were immense. We traveled to Australia and camped in deserts, in forests and wherever we stopped. I have tons of stories to tell about these things. We had to manage a lot of finances ourselves. So, we learned cost analysis down to the component level. I learned a lot on DIY, making, and electronics in general. This helped me with my hobbies and work under Prof. Gadre. The experience made me realize the value of working in a team. We all slogged and made it through.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/j1YXM5t.jpg&quot; alt=&quot;Number Plate&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Media Coverage&lt;/strong&gt;: &lt;a href=&quot;https://www.oneindia.com/2012/09/04/prez-pranab-mukherjee-flags-off-dtu-passenger-solar-car-1064777.html&quot;&gt;One India&lt;/a&gt;, &lt;a href=&quot;https://economictimes.indiatimes.com/pranab-mukherjee-flags-off-eco-friendly-solar-car-codenamed-solaris/articleshow/16251837.cms&quot;&gt;Economic Times&lt;/a&gt;, &lt;a href=&quot;https://timesofindia.indiatimes.com/home/education/news/President-Pranab-Mukherjee-flags-off-DTUs-solar-passenger-car/articleshow/16257621.cms&quot;&gt;Time of India&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NGqWBJI3SjA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills&lt;/strong&gt;: Engineering, Sourcing, and Management&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
 </content>
  </entry>
  

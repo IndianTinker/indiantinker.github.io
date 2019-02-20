@@ -512,6 +512,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -556,58 +576,43 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/11/GreenwaliDiwali/">
-        GreenWali Diwali:A social interactivity experiment
+      <a href="/2015/11/15/GettingStartedwithESP1/">
+        A Wifi DataLogger
       </a>
     </h1>
 
-    <span class="post-date">11 Nov 2015</span>
+    <span class="post-date">15 Nov 2015</span>
 
-    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
+    <p>About a few months back, i ordered those viral ESP8266 Wifi Chips from AliEx, after travelling half of the country they landed up at my place in Delhi, from where i picked them up.</p>
 
-<ul>
-  <li>Lights/Sound to attract attention</li>
-  <li>A unique randomness of explosion</li>
-  <li>An Obnoxious Odour</li>
-  <li>Fear of getting yourself hurt</li>
-  <li>Fear of setting someone on fire</li>
-</ul>
+<p>The Legend is as follows:</p>
+<blockquote>
+  <p>While half the world was busy taming the rogue CC3000 (Mine never worked), the suddenly out of the darkest dungeons of the cloud clans of the east came the blue board. The Elders called it ESP8266. It was fast and swift. Easy to tame and it quickly befriended the world and gave rise to a new era on connected projects at 1/10 the gold!</p>
+</blockquote>
 
-<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
+<p>I was initially skeptical, So ordered just 2 ESP-01s. Next up in my cart is the NodeMCU board or rather i will make my own.</p>
 
-<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
-
-<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code class="highlighter-rouge">Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code class="highlighter-rouge">#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
-
-<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
-
-<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
-
-<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet !</p>
-
-<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
-
-<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
+<p>The first project was with AT Commands. The chip comes with the default firmware that offers limited but streamlined functionality using AT Commands. Check out these excellent resources for them:</p>
 
 <ul>
-  <li>Sign In/Up on Twitter</li>
-  <li>Go <a href="https://apps.twitter.com/">here</a></li>
-  <li>Create <strong>New Application</strong></li>
-  <li>Fill the Yet-Another-Form and Create the Application.</li>
-  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
-  <li>You will see your consumer keys there !</li>
-  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
+  <li><a href="http://rancidbacon.com/files/kiwicon8/ESP8266_WiFi_Module_Quick_Start_Guide_v_1.0.4.pdf">RancidBacon’s PDF guide</a></li>
+  <li><a href="https://nurdspace.nl/ESP8266">Nurdspace.nl</a></li>
+  <li><a href="http://electronut.in/an-iot-project-with-esp8266/">Mahesh’s Blog</a></li>
 </ul>
 
-<p>These 4 keys are used for the Code above.</p>
+<p>Obviously, when using AT Commands, we need a master. An Arduino with a level shifter would do that easily. Next we needed some data-source and cloud service to blurt out the data. A <strong>BMP180</strong> I2C Pressure and Temperature sensor would do justice and help us produce 2 valuable weather data points and cloud service will be my favourite <strong>Thinkspeak</strong> (recently bought by Mathworks).</p>
 
-<p>Then just install the dependencies based on the <code class="highlighter-rouge">README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code class="highlighter-rouge">screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
+<p>In whatever i could rummage i made this:</p>
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="5" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/9hyc4hPUCO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">My #ESP8266 #gettingstarted  setup ! Uses a BMP180 Temperature and Pressure #sensor and #Arduino , A #MSP430 Launchpad casted as a 3.3V regulator ! #DIY</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-11-01T03:57:51+00:00">Oct 31, 2015 at 8:57pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
 
-<p>Check out the video of me testing it !</p>
+<p>The MSP430 Launchpad is just used as a voltage regulator. I couldnt find any thing else in the night. No matter how funny it looks, This thing worked and was able to update the Temperature and pressure feed after every 60 secs on thingspeak, without fail. The best part is even if there is an outage, the moment power comes back, the ESP will auto connect and work flawlessly again.</p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
+<p>The data was posted on my <a href="https://thingspeak.com/channels/6998">Thingspeak Channel</a>. After the acquisition, Mathworks added the capability to run Matlab scripts on the Thingspeak data channels to empower it on the Analytics front.</p>
 
-<p>Happy GreenWali Diwali !</p>
+<p>Check out the code in this <a href="https://github.com/IndianTinker/ESP8266">repo</a> ! The code is based on Mahesh’s original post.</p>
+
+<p>Cheers !!</p>
 
 <p>Rohit</p>
 

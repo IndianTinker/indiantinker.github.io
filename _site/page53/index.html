@@ -512,6 +512,26 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -556,41 +576,28 @@ All Rights Reserved
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2015/11/15/GettingStartedwithESP1/">
-        A Wifi DataLogger
+      <a href="/2015/11/20/Doormate/">
+        Doormate- Runner's Up at Intel IOT Roadshow
       </a>
     </h1>
 
-    <span class="post-date">15 Nov 2015</span>
+    <span class="post-date">20 Nov 2015</span>
 
-    <p>About a few months back, i ordered those viral ESP8266 Wifi Chips from AliEx, after travelling half of the country they landed up at my place in Delhi, from where i picked them up.</p>
+    <p>Remember guys we participated in the Intel IOT Hackathon, Pune ? Well here is the live blog <a href="/2015/08/01/Intel/">link</a> that details the entire event in a live blog i wrote. I thought i would write a blogpost explaining what we did.</p>
 
-<p>The Legend is as follows:</p>
-<blockquote>
-  <p>While half the world was busy taming the rogue CC3000 (Mine never worked), the suddenly out of the darkest dungeons of the cloud clans of the east came the blue board. The Elders called it ESP8266. It was fast and swift. Easy to tame and it quickly befriended the world and gave rise to a new era on connected projects at 1/10 the gold!</p>
-</blockquote>
+<p>Basically, our Project was called the <strong>Doormate</strong>. It is what will make your doors awesome. The main idea was to never allow a person miss the events around his door like missed visitors and failed deliveries. Along with this, it will help courier companies to adopt a less intrusive way to find what buyers are not at home before hand so that they do not waste time ringing bells and waiting for an answer. There is also scope for an extensive API that could trigger events like opening a small entry to accept the parcel if authenticated properly.</p>
 
-<p>I was initially skeptical, So ordered just 2 ESP-01s. Next up in my cart is the NodeMCU board or rather i will make my own.</p>
+<p>The project uses the <strong>Intel edison</strong> and was built using whatever parts we could rummage at the event.</p>
 
-<p>The first project was with AT Commands. The chip comes with the default firmware that offers limited but streamlined functionality using AT Commands. Check out these excellent resources for them:</p>
+<p>The device has an occupancy indicator that can be set by the user using several source, both tangible and intangible. Based on this occupancy status the device behaves in the desired way. Like in the demonstration below, if the user is not present , The bell would play an automated message asking the visitor to call a number and at the same time send a notification to the user , that he has a missed visitor. The bell does not have the using ting tong or rings, but the user can customise it based on his needs aka <em>The Bell Playlist</em> .</p>
 
-<ul>
-  <li><a href="http://rancidbacon.com/files/kiwicon8/ESP8266_WiFi_Module_Quick_Start_Guide_v_1.0.4.pdf">RancidBacon’s PDF guide</a></li>
-  <li><a href="https://nurdspace.nl/ESP8266">Nurdspace.nl</a></li>
-  <li><a href="http://electronut.in/an-iot-project-with-esp8266/">Mahesh’s Blog</a></li>
-</ul>
+<p>The bell also has a couple of sensors that allow the user to monitor any gas leaks or other events from his comfort zone as each bell has its own dashboard website. The website provides useful analytics about the footmat use and bell presses which may be more useful in a more commercial setting like a shop.The footmat also encourages the visitors to wipe their feet by being interactive and if he wipes his feet about 3 times then the beloved <em>Mogambo</em> feels good and the door opens. (See video below to understand the context)</p>
 
-<p>Obviously, when using AT Commands, we need a master. An Arduino with a level shifter would do that easily. Next we needed some data-source and cloud service to blurt out the data. A <strong>BMP180</strong> I2C Pressure and Temperature sensor would do justice and help us produce 2 valuable weather data points and cloud service will be my favourite <strong>Thinkspeak</strong> (recently bought by Mathworks).</p>
+<p>Here is what the dashboard <a href="http://doormate.github.io/website/">looks like</a>.</p>
 
-<p>In whatever i could rummage i made this:</p>
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="5" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/9hyc4hPUCO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">My #ESP8266 #gettingstarted  setup ! Uses a BMP180 Temperature and Pressure #sensor and #Arduino , A #MSP430 Launchpad casted as a 3.3V regulator ! #DIY</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-11-01T03:57:51+00:00">Oct 31, 2015 at 8:57pm PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<p>The entire project was made using bare-bones linux and python as we missed the part where the Intel Representatives were explaining their amazing and limitless tool chain. Check out the video below explaining the project in detail:</p>
 
-<p>The MSP430 Launchpad is just used as a voltage regulator. I couldnt find any thing else in the night. No matter how funny it looks, This thing worked and was able to update the Temperature and pressure feed after every 60 secs on thingspeak, without fail. The best part is even if there is an outage, the moment power comes back, the ESP will auto connect and work flawlessly again.</p>
-
-<p>The data was posted on my <a href="https://thingspeak.com/channels/6998">Thingspeak Channel</a>. After the acquisition, Mathworks added the capability to run Matlab scripts on the Thingspeak data channels to empower it on the Analytics front.</p>
-
-<p>Check out the code in this <a href="https://github.com/IndianTinker/ESP8266">repo</a> ! The code is based on Mahesh’s original post.</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/su8k2AwtbH0" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Cheers !!</p>
 
