@@ -7,6 +7,7 @@ tags:
 - design
 - select
 - note
+field: design research <br>toy design
 ---
 
 > This post presents my final Master's project - An exertoy that helps kinds affected by cerebral palsy perform finger pinching action while learning basic concepts like shapes and colors. Although this project involved a lot of research, I have observed my friends talk a lot about my posts being very research oriented and having no visible design output. I am trying a new approach to communicate the idea in this post. I am choosing my audience by the content. I hope I can connect with more people this way. 
