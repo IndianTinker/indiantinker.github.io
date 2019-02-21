@@ -7,6 +7,7 @@ tags:
 - msp430
 - select 
 - note
+field: creative technology<br>engineering
 ---
 
 Inauguration Lamps.. They are just so mainstream. The same one candle lighting the others one by one. Pretty Bucolic ! But Prof.Gadre had something different in mind for the inauguration of Texas Instruments Analog Design Challenge Finals in Blore,2013.

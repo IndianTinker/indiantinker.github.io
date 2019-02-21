@@ -7,6 +7,7 @@ tags:
 - design
 - select 
 - note
+field: interaction design<br>product management
 ---
 
 > This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. I was a project lead for this project from my team. Here, I present my work on designing and testing the initial release of Tata Motors ConnectNeXt App Ecosystem.  Work in the post was done between 2015-Q1 2016. I was involved in system design, testing, and user evaluation. 

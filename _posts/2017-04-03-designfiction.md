@@ -7,6 +7,7 @@ tags:
 - design
 - select
 - note
+field: design fiction<br>creative technology
 ---
 
 >This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.
