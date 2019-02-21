@@ -16,7 +16,7 @@ tags:
 
 0. Appointment to the consulate
 1. Valid Passport
-2. Police Clearance Certificate (PCC)
+2. Police Clearance Certificate (PCC)<!--more-->
 3. Original documents in Spanish from the university with stamp and envelope posted to you from Spain
 
     - Enrolment form 

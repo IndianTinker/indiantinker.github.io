@@ -12,7 +12,7 @@ title: Projects
   {% if tag == 'note'%}
  <div class="projectNotable">
  <a href="{{post.url}}">
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_400,h_400,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_400,h_400,c_fill,g_auto/{{post.image}}" class="preview">   
  <p>
  {{post.title}}
  </p></a>
@@ -35,13 +35,14 @@ title: Projects
  <div class="project">
  <a href="{{post.url}}">
   {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
  </p></a>
+<p class="domain">{{post.field}}</p>
  </div>
 
   {% endif %}
@@ -58,13 +59,14 @@ title: Projects
  <div class="project">
  <a href="{{post.url}}">
  {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
  </p></a>
+<p class="domain">{{post.field}}</p>
  </div>
 
   {% endif %}
@@ -82,9 +84,9 @@ title: Projects
  <div class="project">
  <a href="{{post.url}}">
   {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
@@ -104,9 +106,9 @@ title: Projects
    <div class="project">
  <a href="{{post.url}}">
   {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
@@ -126,9 +128,9 @@ title: Projects
    <div class="project">
  <a href="{{post.url}}">
   {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
@@ -148,9 +150,9 @@ title: Projects
    <div class="project">
  <a href="{{post.url}}">
  {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
@@ -172,9 +174,9 @@ title: Projects
    <div class="project">
  <a href="{{post.url}}">
   {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}
@@ -196,9 +198,9 @@ title: Projects
    <div class="project">
  <a href="{{post.url}}">
  {% if post.tags contains 'select'%}  
- <img class="select" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
+ <img class="select preview" src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">
   {% else %}  
- <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}">   
+ <img src="http://res.cloudinary.com/indiantinker/image/fetch/w_200,h_200,c_fill,g_auto/{{post.image}}" class="preview">   
   {% endif %}
  <p>
  {{post.title}}

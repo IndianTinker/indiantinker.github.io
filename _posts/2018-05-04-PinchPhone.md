@@ -12,7 +12,7 @@ field: design research <br>toy design
 
 > This post presents my final Master's project - An exertoy that helps kinds affected by cerebral palsy perform finger pinching action while learning basic concepts like shapes and colors. Although this project involved a lot of research, I have observed my friends talk a lot about my posts being very research oriented and having no visible design output. I am trying a new approach to communicate the idea in this post. I am choosing my audience by the content. I hope I can connect with more people this way. 
 
-How can we make CP affected kids like more of what exercises they do?
+How can we make CP affected kids <!--more-->like more of what exercises they do?
 ---
 
 My siblings suffer from cerebral palsy. I have seen their therapy program ever since I was a child. In many ways, the therapy is experimental and may not be research-backed. Most therapists use a mix of stroke-centric approach with orthopedic rehabilitation to understand and improve the state of life. But, things are changing now as more and more people become aware of the condition. I started my work by going through the taxonomy of disease and various terms and concepts that would help me talk to doctors well. I made a therapy map to understand what therapy practices are being used and which of those are proven to be helpful in RCTs conducted by various researchers. This made me more aware of the current and suggested therapy in the domain.

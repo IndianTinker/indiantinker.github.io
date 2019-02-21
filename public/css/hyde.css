@@ -38,18 +38,22 @@ color: #d84315;
 html {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
-  font-weight: 360;
+  font-weight: 300;
+  font-size:16px;
+  line-height: 27px;  
+  
 }
 
 .post-title,.page-title{
-  font-size: 2.0rem;
+   margin-top:1.618rem;
+  font-size: 2.618rem;
 }
 
 
 .select
 { 
   padding: 1px;
-  border: 5px dashed #773df4;
+  border-top: 0.35rem dashed #773df4;
  
 }
 
@@ -61,7 +65,8 @@ html {
 
 @media (min-width: 48em) {
   html {
-    font-size: 12px;
+  font-size:16px;
+  line-height: 27px;
   }
   .post-title,.post-date,.page-title
   {
@@ -69,12 +74,14 @@ html {
   }
    .research
   {
-   font-size: 12px; 
+   font-size: 0.75rem; 
+   line-height: 1.375rem;
   }  
 }
 @media (min-width: 58em) {
   html {
     font-size: 18px;
+  line-height: 31px;
   }
   .post-title,.post-date,.page-title
   {
@@ -82,12 +89,29 @@ html {
   }
   .research
   {
-   font-size: 14px; 
+   font-size: 0.75rem; 
+   line-height: 1.375rem; 
   }  
 }
+
+.research
+  {
+   font-size: 0.75rem; 
+   line-height: 1.375rem; 
+  }  
 img
 {
  float:center;
+ max-width: 100%;
+ border-radius: 5px;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+img.preview
+{
+margin-top: 0.2rem;
+margin-bottom: 0.2rem;
 }
 
 body
@@ -174,7 +198,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  font-size: 1rem
   padding-bottom: 4rem;
 }
 
@@ -221,29 +245,37 @@ a.sidebar-nav-item:focus {
  *
 */
 .project {
-  font-size: 12px;
-  line-height: 24px;
+  font-size: 0.758rem;
+  line-height: 1.125rem;
   font-family: 'nunito', 'arial', 'sans';
   padding: 10px 10px 10px 10px;
   width: 160px;
-  height: 250px;
+  height: 285px;
   float: left;
 }
 
 .projectNotable {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.758rem;
+  line-height: 1.125rem;
   font-family: 'nunito', 'arial', 'sans';
-  padding: 10px 10px 10px 5px;
+  padding: 0.25rem;
   width: 200px;
   height: 300px;
   float: left;
+margin-top:0.5rem;
+margin-right:0.5rem;
+margin-bottom:0.618rem;
 }
+
 .projectNotable:hover
 {
 border:1px solid #F06; 
 }
 
+.project:hover
+{
+border:1px solid #F06; 
+}
 
 .domain
 {
