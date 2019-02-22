@@ -6,6 +6,8 @@ location: Tata Motors Research
 tags:
 - design
 - select 
+
+field: design research<br>engineering
 ---
 
 > This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I describe my work on studying acoustics inside car and defining strategies to offer best possible audio experience to the user. The work was first used in Tata Tiago/Tigor.

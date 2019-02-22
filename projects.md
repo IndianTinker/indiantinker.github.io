@@ -74,7 +74,8 @@ title: Projects
   {% endfor %}
 </div>
 <br>
-<h2>Electronics and Computing</h2>
+
+<h3 style="margin-top:1rem;">Electronics and Computing</h3>
 <div class="projects">
 <h3>Microcontrollers</h3>
 

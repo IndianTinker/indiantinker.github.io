@@ -5,6 +5,8 @@ image: https://c1.staticflickr.com/3/2906/33678280611_41bbeede72.jpg
 location:  IDC IIT Bombay India
 tags:
 - design
+
+field: design research<br>maps
 ---
 
 > This post describes the work done as a part of a course I took at *School of Design, IIT Bombay* . The name of the course is **Interaction Media and Senses**. The project was done during the *sensory* phase of the course that involved Sensory, Cognitive and Social parts with [Manasi](https://www.behance.net/m_mankad) and [Ankit](https://www.behance.net/ankit_bansod)

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Publications
+title: Research
 ---
 A regularly updated list of research papers published are presented on this page. 
 

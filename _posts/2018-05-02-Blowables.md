@@ -5,6 +5,8 @@ image: https://i.imgur.com/qLZc0b2.png
 location:  IDC IIT Bombay India
 tags:
 - installation
+
+field: creative technology<br>new media
 ---
 
 > This post describes a commissioned installation on the occasion of Women's Day. We use the metaphor of "being gentle" to create a series of breath driven interactive sketches. 

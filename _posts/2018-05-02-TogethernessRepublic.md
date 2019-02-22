@@ -5,6 +5,8 @@ image: https://i.imgur.com/YWw411x.jpg
 location:  IDC IIT Bombay India
 tags:
 - installation
+
+field: creative technology <br>mirrors
 ---
 
 > This post presents a commissioned public installation on the occasion of Republic Day. [We](https://mkrv.in/) worked a creating an abstract digital reflection of the visitors to evoke feeling of togetherness. 

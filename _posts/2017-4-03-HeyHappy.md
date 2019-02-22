@@ -5,6 +5,8 @@ image: https://i.imgur.com/prFf8g3.png
 location:  IDC IIT Bombay India
 tags:
 - design
+
+field: game design<br>UI/UX
 ---
 
 > This post describes the work done as a part of a course I took at *School of Design, IIT Bombay* . The name of the course is **Interaction Media and Senses**. The project was done during the *social* phase of the course that involved Sensory, Cognitive and Social parts with [Silpa](https://www.behance.net/silpa_murali) and [Pallavi](https://www.behance.net/pallavimon3e2c)

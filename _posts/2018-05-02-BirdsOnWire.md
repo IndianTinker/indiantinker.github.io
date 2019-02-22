@@ -5,6 +5,8 @@ image: https://i.imgur.com/GqnA3LV.jpg
 location:  IDC IIT Bombay India
 tags:
 - installation
+
+field: creative technology<br>new media
 ---
 
 > This post presents my work on creating an interactive musical installation called "Birds on wire" .It tries to explore the gap between the physical and digital. The work was done as a part of my TA duties under Prof. Ravi at IDC. 

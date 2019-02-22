@@ -250,7 +250,7 @@ a.sidebar-nav-item:focus {
   font-family: 'nunito', 'arial', 'sans';
   padding: 10px 10px 10px 10px;
   width: 160px;
-  height: 285px;
+  height: 295px;
   float: left;
 }
 
@@ -289,6 +289,16 @@ margin-top:2px;
 margin-bottom:3px;
 }
 
+.notice
+{
+margin-top:0.5rem;
+margin-bottom:0.5rem;
+margin-right:0.5rem;
+border:1px grey dashed;
+padding-top: 0.75rem;
+padding-right: 0.75rem;
+padding-left: 0.75rem;
+}
 
 
 @media only screen and (max-width : 599px) {

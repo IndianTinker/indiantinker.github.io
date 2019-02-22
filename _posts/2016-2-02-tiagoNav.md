@@ -5,6 +5,8 @@ image: https://i.imgur.com/h7vR258.png
 location: Tata Motors Research
 tags:
 - design
+
+field: system design <br>maps
 ---
 
 > This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I present my work on defining strategies to improve in-car navigation. The work was first used in Tata Tiago/Tigor.
