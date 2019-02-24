@@ -24,6 +24,8 @@
  * Themes
  */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 code
 {
 background : #eeeeee;
@@ -70,7 +72,7 @@ html {
   }
   .post-title,.post-date,.page-title
   {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'OpenSans', monospace;
   }
    .research
   {
@@ -85,7 +87,7 @@ html {
   }
   .post-title,.post-date,.page-title
   {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Open Sans', sans-serif;
   }
   .research
   {
@@ -152,7 +154,7 @@ background: #FAFAFA;
 .sidebar-about h1 {
   color: black;
   margin-top: 1rem;
- font-family: 'Roboto Mono', monospace;
+ font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
 }
 
@@ -315,6 +317,9 @@ padding-left: 0.75rem;
 {
 display: none;
 }
+#chart
+{
+display:none;
 }
 .projects
 {

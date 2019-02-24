@@ -5,7 +5,13 @@ title: Projects
 
 <div class="projects">
 <h3>Notable Works</h3>
-<p>Works showing multidisciplinary, research-focussed approach to addressing design opportunities. I use my skills in prototyping and research to generate a negotiable and rational dialogue with the problem. The problem is usually addressed in the meantime. Projects show skills in Design Research, Creative Technology, and Interaction Design, with focus on design process</p>
+<p>Works showing multidisciplinary, research-focussed approach to addressing design opportunities. I use my skills in prototyping and research to generate a negotiable and rational dialogue with the problem. The problem is usually addressed in the meantime. Projects show skills in Design Research, Creative Technology, and Interaction Design, with focus on design process
+
+<br>
+<div id="chart"></div>
+
+
+</p>
 
   {% for post in site.posts %}
   {% for tag in post.tags %}
@@ -22,7 +28,12 @@ title: Projects
   {% endif %}
   {% endfor %}
   {% endfor %}
+
+
+
 </div>
+
+
 
 <h3>Other Projects</h3>
 <p>Over the years, I have worked with many people and on many problems. I document most of my projects carefully for archival and sharing purposes. Most projects are open-source. Feel free to explore the projects. The interesting/award-winning projects are <span class="select2">highlighted</span></p>
@@ -214,9 +225,42 @@ title: Projects
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js"></script>
 
 
+<script>
+let chart = new frappe.Chart( "#chart", { // or DOM element
+    data: {
+      labels: ["Game/Toy Design", "Interaction Design", "Design Research", "Creative Technology",
+      "Speculative Design", "Engineering", "Project Management", "Maps and GeoViz"],
 
+      datasets: [
+        {
+          name: "Number of projects done", chartType: 'bar',
+          values: [6, 13, 8, 9, 2, 7, 3, 7]
+        }
+      ],
+
+    },
+  
+ barOptions: {
+    spaceRatio: 0.1 // default: 1
+    
+},
+  
+
+    title: "Project breakup based on skills",
+    type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
+    height: 300,
+    colors: ['purple', '#ffa3ef', 'light-blue'],
+    valuesOverPoints: 1,
+    tooltipOptions: {
+      formatTooltipX: d => (d + '<br>').toUpperCase(),
+      formatTooltipY: d => d + ' projects',
+    }
+  });
+
+</script>
 
 
 

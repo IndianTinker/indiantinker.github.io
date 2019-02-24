@@ -27,10 +27,9 @@ I am currently with the Digital Design Lab, Istituto Europeo di Design, Madrid w
 
 </div>
 
-If you are around, hit me up on twitter (@rohit7gupta) or check my CV for more contact information. I can understand about five languages so there is a high probability we could talk. :D
+If you are around, hit me up on twitter (@rohit7gupta) or check my CV for more contact information. Let us meet up and talk, I know a few good places :) 
 
 
-
-> About this website: This website is made using jekyll with some need specific plugins I wrote like location, open graph support, contextual photo crop, and others. If you noticed, the font is Nunito. I love it for its semi-serious feel. It is not too sharp and not at all comic. It resonates with me. I tried following good typography rules and use relative spacing. The website is mobile friendly. It is [88% greener](https://www.websitecarbon.com/website/rohitg-in/) in terms of environmental impact.
+> About this website: This website is made using jekyll with some need specific plugins I wrote like location, open graph support, contextual photo crop, and others. If you noticed, the font is Nunito. I love it for its semi-serious feel. It is not too sharp and not at all comic. It resonates with me. I tried following good typography rules and use relative spacing. The website is mobile friendly. It is [88% greener](https://www.websitecarbon.com/website/rohitg-in/) in terms of environmental impact. The website is designed to follow many Web Accessibility Guidelines. 
 
 
