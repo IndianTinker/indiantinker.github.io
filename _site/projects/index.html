@@ -314,15 +314,10 @@ window.twttr = (function (d, s, id) {
       <div class="page">
   <h1 class="page-title">Projects</h1>
  
-  <div class="projects">
-<h3>Notable Works</h3>
-<p>Works showing multidisciplinary, research-focussed approach to addressing design opportunities. I use my skills in prototyping and research to generate a negotiable and rational dialogue with the problem. The problem is usually addressed in the meantime. Projects show skills in Design Research, Creative Technology, and Interaction Design, with focus on design process
+  <h3>Notable Works</h3>
+<div class="projects">
 
-<br />
-<div id="chart"></div>
-
-
-</p>
+<p>Works showing multidisciplinary, research-focussed approach to addressing design opportunities. I use my skills in prototyping and research to generate a negotiable and rational dialogue with the problem. The problem is usually addressed in the meantime. Projects show skills in Design Research, Creative Technology, and Interaction Design, with focus on design process</p>
 
   
   
@@ -911,14 +906,11 @@ window.twttr = (function (d, s, id) {
   
   
   
-
-
-
 </div>
 
+<div class="projects">
 <h3>Other Projects</h3>
 <p>Over the years, I have worked with many people and on many problems. I document most of my projects carefully for archival and sharing purposes. Most projects are open-source. Feel free to explore the projects. The interesting/award-winning projects are <span class="select2">highlighted</span></p>
-<div class="projects">
 <h3>Design</h3>
 
   
@@ -5685,42 +5677,6 @@ window.twttr = (function (d, s, id) {
   
 
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js"></script>
-
-<script>
-let chart = new frappe.Chart( "#chart", { // or DOM element
-    data: {
-      labels: ["Game/Toy Design", "Interaction Design", "Design Research", "Creative Technology",
-      "Speculative Design", "Engineering", "Project Management", "Maps and GeoViz"],
-
-      datasets: [
-        {
-          name: "Number of projects done", chartType: 'bar',
-          values: [6, 13, 8, 9, 2, 7, 3, 7]
-        }
-      ],
-
-    },
-  
- barOptions: {
-    spaceRatio: 0.1 // default: 1
-    
-},
-  
-
-    title: "Project breakup based on skills",
-    type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
-    height: 300,
-    colors: ['purple', '#ffa3ef', 'light-blue'],
-    valuesOverPoints: 1,
-    tooltipOptions: {
-      formatTooltipX: d => (d + '<br>').toUpperCase(),
-      formatTooltipY: d => d + ' projects',
-    }
-  });
-
-</script>
 
 
 <br>

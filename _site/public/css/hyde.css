@@ -72,7 +72,7 @@ html {
   }
   .post-title,.post-date,.page-title
   {
-    font-family: 'OpenSans', monospace;
+    font-family: 'Open Sans', sans-serif;
   }
    .research
   {
@@ -321,10 +321,14 @@ display: none;
 {
 display:none;
 }
+}
+
+
 .projects
 {
 float: left;
 }
+
 
 .project a {
     color: #000;

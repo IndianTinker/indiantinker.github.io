@@ -27,9 +27,50 @@ I am currently with the Digital Design Lab, Istituto Europeo di Design, Madrid w
 
 </div>
 
+My projects and skills can be visualized as below. 
+
+<div id="chart"></div>
+
 If you are around, hit me up on twitter (@rohit7gupta) or check my CV for more contact information. Let us meet up and talk, I know a few good places :) 
 
 
 > About this website: This website is made using jekyll with some need specific plugins I wrote like location, open graph support, contextual photo crop, and others. If you noticed, the font is Nunito. I love it for its semi-serious feel. It is not too sharp and not at all comic. It resonates with me. I tried following good typography rules and use relative spacing. The website is mobile friendly. It is [88% greener](https://www.websitecarbon.com/website/rohitg-in/) in terms of environmental impact. The website is designed to follow many Web Accessibility Guidelines. 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js"></script>
+
+
+<script>
+let chart = new frappe.Chart( "#chart", { // or DOM element
+    data: {
+      labels: ["Game/Toy Design", "Interaction Design", "Design Research", "Creative Technology",
+      "Speculative Design", "Engineering", "Project Management", "Maps and GeoViz"],
+
+      datasets: [
+        {
+          name: "Number of projects done", chartType: 'bar',
+          values: [6, 13, 8, 9, 2, 7, 3, 7]
+        }
+      ],
+
+    },
+  
+ barOptions: {
+    spaceRatio: 0.1 // default: 1
+    
+},
+  
+
+    title: "Project breakup based on skills",
+    type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
+    height: 300,
+    colors: ['purple', '#ffa3ef', 'light-blue'],
+    valuesOverPoints: 1,
+    tooltipOptions: {
+      formatTooltipX: d => (d + '<br>').toUpperCase(),
+      formatTooltipY: d => d + ' projects',
+    }
+  });
+
+</script>
 
 
