@@ -16,6 +16,8 @@ field: interaction design<br>product management
 <img src="https://i.imgur.com/Rj7j3nU.png" height="350">
 <img src="https://i.imgur.com/R6TXIZd.png" height="350">
 
+Some user feedback for the app : Smart Manuals
+![Imgur](https://i.imgur.com/rt9IMFO.png)
 
 <h4>Context</h4>
 This is 2014, Vehicle infotainment systems are getting more and more computation heavy. The customer demands more connection and driving needs to be data-informed (driven). The competition has some derived solutions in the market. We needed to respond by building our own contextual telematics ecosystem. I was involved as a Lead from PAT side in the project when the dev and design already had some ideas and had some prototypes being tested. My task was to rethink and improve the project- ConnectNeXt, from a user-centric point of view.  It is one of those projects, you are on the team and have to fight for the user. Then not be lured by the cool technology that could possibly take too much attention while driving. Not making an App need attention was the task. Android auto was still very new.

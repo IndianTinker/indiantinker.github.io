@@ -5,16 +5,18 @@ image: https://i.imgur.com/GNZOdzj.png
 location: Tata Motors Research
 tags:
 - design
-- select 
+- select
+- note
 
 field: design research<br>engineering
 ---
 
 > This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I describe my work on studying acoustics inside car and defining strategies to offer best possible audio experience to the user. The work was first used in Tata Tiago/Tigor.
 
+ 
 ![Imgur](https://i.imgur.com/nLyUr3Y.jpg)
 
-Media reported :
+[Deccan Chronicle](https://www.deccanchronicle.com/business/autos/280317/6-things-you-may-not-know-about-tata-tiago.html) reporting about my work
 
 ![Cardekho](https://i.imgur.com/KPXAg4o.png)
 
@@ -46,9 +48,11 @@ The response of the activity was initially cold, but as we started working on de
 <h4>In Market</h4>
 The first vehicle to show this was Tiago. The audio system received a superb response. Especially the audio output which had some of Tata and HARMAN’s algorithmic magic. For a feature preferred segment, the audio system was “intelligently” designed to sound like a car from at-least mid-luxury segments. The sales of the car are one of the best in TML's recent launches and continue to soar. My work may have affected the buying choice of about 6000 customers per month.
 
-
+A user on a [popular car forum](https://www.carwale.com/tata-cars/tiago/userreviews/48115/), giving feedback on his purchase:
 ![Imgur](https://i.imgur.com/rC0ZYyk.png)
 
+
+[digit magazine](https://www.digit.in/car-tech/tata-tiago-technology-inside-and-one-week-drive-analysis-32282.html) liked the music and said: 
 ![Imgur](https://i.imgur.com/7MIvRDz.png)
 
 

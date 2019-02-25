@@ -12,6 +12,9 @@ field: interaction design<br>creative technology
 ---
 
 > This installation, presented at National Gallery of Modern Art, Mumbai, was a part of the ["Nature Embedded"](http://www.dsource.in/events/naturembedded/) exhibition. The exhibition was inaugurated by [Paola Antonelli](https://en.wikipedia.org/wiki/Paola_Antonelli) .
+
+[Mid Day](https://www.mid-day.com/articles/designs-by-nature/19036197) reports about the exhibition :
+![Imgur](https://i.imgur.com/BjwcGAW.png)
  
 "To develop an understanding one has to look at things from other's perspectives". Through the means of this exhibit we tried to recreate an experience for the visitor to see the world from the **point of view** of a bird, dog and a fish. The view is not just a physical sensation but a perception of the world. In our design, we incorporated the unbiased, natural and permanent physical features of the eye like the shape of the vision cone and color sensitivity. Further, there was an attempt to showcase the world as perceived by a dog travelling down an alley, a fish inside a sea of pollution and a bird flying in the sky. These perceptions were biased human reflections which seem to affect these characters.
 

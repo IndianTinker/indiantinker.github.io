@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-02-24T19:41:34+05:30</updated>
+ <updated>2019-02-25T03:41:42+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
@@ -541,15 +541,63 @@ The final idea was to build a wide spectrum toy to assist in pinching motion. It
    <updated>2018-05-04T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/04/Jalajap</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This post presents a small project that explores use of a no-tech device to increase water consumption by a user.&lt;/p&gt;
+  &lt;p&gt;This post presents a small project that explores use of a toy to encourage users (me) to drink more water. It was made in a time when I was medically advised to drink more water and I was reading play theory and behaviour change theory.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/IWtPbik.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;
-&lt;img src=&quot;https://i.imgur.com/wTYfqge.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/IWtPbik.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jalajap is behaviour change device that helps user keep a count of the number of times they have refilled a water bottle. The user drinks water from a standard 1l water bottle. He places this band of beads on the bottle and moves the bead from the grove to the other side of the band. The bead in the grove shows the active bottle and the beads on the left are the amount of water bottles consumed. It was designed by me during a time when I had started drinking less water and wanted a way to keep a tab on number of bottles left. The presence of the device creates a opportunity of play and induces novelty in the behaviour.&lt;/p&gt;
+
+&lt;p&gt;The name Jalajap is derived from two words - jal/जल , which is water and Jap/जाप , which is to count prayers. Hence, it poetically means water counter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Fipvenq.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This project was done at a time when I was exploring the topic of using &lt;strong&gt;toys for behaviour change&lt;/strong&gt; (&lt;em&gt;If you know anyone offering a PhD on this or related topics, please let me know&lt;/em&gt; 😎) .Coincidently, I was diagnosed with a kidney stone due to drinking less water and being kind of stressed due to project uncertainties. I thought of counting the number of water bottles, I could drink using matchsticks, but that did not work. The matchstick were not related to the behaviour. I needed something to carry with me. So, i used an app. But! I am not a “phone in a pocket guy”, so even that did not work for me. One day having recently bought new bottle from decathlon, I came up with a thought to use the bottle to visualize the consumption. Initially, I tried with some markers. But, they did not work on wet bottles. Then, while I was binding my monthly diary, I though of using beads on an elasti cord. Excited to make, I quickly ran to the studio and stationary shop to pick stuff. The first band was built in about 2 hours of some dremel wood crafting.&lt;/p&gt;
+
+&lt;p&gt;Then, to measure change, I would log water consumption (using beads) on a table before sleeping. I did it for about 10 days. The graph of my consumption is shown below :&lt;/p&gt;
+
+&lt;div id=&quot;chart&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Initially, I was excited to use the device. I would check the device at 8pm and there would be just 2 beads. Then before 12am, I would finish 2L of water. Slowly, I divided the bottles throughout the day, Two beads till evening cycling, one bead before dinner, and one bead after dinner.  That seemed to work out pretty well actually. At least, the average water consumption was increased to 3.5L .&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
 &lt;p&gt;Rohit&lt;/p&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+let chart = new frappe.Chart( &quot;#chart&quot;, { // or DOM element
+    data: {
+      labels: [&quot;Day 1&quot;, &quot;Day 2&quot;, &quot;Day 3&quot;, &quot;Day 4&quot;,
+      &quot;Day 5&quot;, &quot;Day 6&quot;, &quot;Day 7&quot;, &quot;Day 8&quot;, &quot;Day 9&quot;, &quot;Day 10&quot;],
+
+      datasets: [
+        {
+          name: &quot;Number of bottles consumed&quot;, chartType: 'line',
+          values: [2, 3, 4, 4, 3, 4, 4, 4,3,4]
+        }
+      ],
+
+    },
+  
+ barOptions: {
+    spaceRatio: 0.1 // default: 1
+    
+},
+  
+
+    title: &quot;Number of bottles consumed&quot;,
+    type: 'line', // or 'bar', 'line', 'pie', 'percentage'
+    height: 300,
+    colors: ['purple', '#ffa3ef', 'light-blue'],
+    valuesOverPoints: 1,
+    tooltipOptions: {
+      formatTooltipX: d =&gt; (d + '&lt;br&gt;').toUpperCase(),
+      formatTooltipY: d =&gt; d + ' bottles',
+    }
+  });
+&lt;/script&gt;
 
 </content>
  </entry>
@@ -594,6 +642,9 @@ The final idea was to build a wide spectrum toy to assist in pinching motion. It
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;This installation, presented at National Gallery of Modern Art, Mumbai, was a part of the &lt;a href=&quot;http://www.dsource.in/events/naturembedded/&quot;&gt;“Nature Embedded”&lt;/a&gt; exhibition. The exhibition was inaugurated by &lt;a href=&quot;https://en.wikipedia.org/wiki/Paola_Antonelli&quot;&gt;Paola Antonelli&lt;/a&gt; .&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mid-day.com/articles/designs-by-nature/19036197&quot;&gt;Mid Day&lt;/a&gt; reports about the exhibition :
+&lt;img src=&quot;https://i.imgur.com/BjwcGAW.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;“To develop an understanding one has to look at things from other’s perspectives”. Through the means of this exhibit we tried to recreate an experience for the visitor to see the world from the &lt;strong&gt;point of view&lt;/strong&gt; of a bird, dog and a fish. The view is not just a physical sensation but a perception of the world. In our design, we incorporated the unbiased, natural and permanent physical features of the eye like the shape of the vision cone and color sensitivity. Further, there was an attempt to showcase the world as perceived by a dog travelling down an alley, a fish inside a sea of pollution and a bird flying in the sky. These perceptions were biased human reflections which seem to affect these characters.&lt;/p&gt;
 
@@ -771,42 +822,68 @@ The final idea was to build a wide spectrum toy to assist in pinching motion. It
    <updated>2018-05-01T00:00:00+05:30</updated>
    <id>http://localhost:4000/2018/05/01/DayNight</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This installation, presented at National Gallery of Modern Art, Mumbai, was a part of the &lt;a href=&quot;http://www.dsource.in/events/naturembedded/&quot;&gt;“Nature Embedded”&lt;/a&gt; exhibition. The exhibition was inaugurated by &lt;a href=&quot;https://en.wikipedia.org/wiki/Paola_Antonelli&quot;&gt;Paola Antonelli&lt;/a&gt; .&lt;/p&gt;
+  &lt;p&gt;Day and Night presents a unique holographic experience of observing the day of an owl. The users can interact with the holographic owl using a constructed device. The device morphs the feeling of the owl into an earth like object. As the users touch the owl’s fur the owl playfully reacts to this sensation. On moving the globe, the time changes and it is day or night. Through this installation, we wished to draw attention to the changing circadian rhythms and the perceived control one has on it. Owl is a bird that wakes up in the night. Technology seems to have enabled us to become like owls.
+This installation was presented at National Gallery of Modern Art, Mumbai, was a part of the &lt;a href=&quot;http://www.dsource.in/events/naturembedded/&quot;&gt;“Nature Embedded”&lt;/a&gt; exhibition. The exhibition was inaugurated and visited by &lt;a href=&quot;https://en.wikipedia.org/wiki/Paola_Antonelli&quot;&gt;Paola Antonelli&lt;/a&gt; .&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Concept: Day and Night are mixing, Circadian Rhythm and Owl’s reaction to it&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.mid-day.com/articles/designs-by-nature/19036197&quot;&gt;Mid Day Times&lt;/a&gt; reports about the exhibition :
+&lt;img src=&quot;https://i.imgur.com/BjwcGAW.png?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Design of a interaction device that controls the animation (Hologram)&lt;/p&gt;
+&lt;h4&gt;The exhibit at the gallery &lt;/h4&gt;
 
-&lt;p&gt;Empathy towards the animal, feel the physical form, hybrid.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/14VCYBO.png&quot; alt=&quot;At event&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Using a brush ring based capacitive sensor with day and night detection&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OHEAk7V.png&quot; alt=&quot;People&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Allows interaction with owls and transition from Day to Night&lt;/p&gt;
+&lt;h4&gt;Concept&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/knGm54b.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We live seem to be living in a time when the day and night are mixing. No wonder a whole period of 24 hours is called a day. Technology has enabled us to live the day past the day. This situation has altered the circadian rhythm or the biological clock of the nature. We wanted to draw the attention of visitors, especially the kids, to this fact. That is why we chose Owls. Owls have an inverse circadian rhythm, they are up in night and sleep in the day. The metaphor of an owl draws attention and serves as a nice exploration of the chosen concept.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/91NQDM5.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We wanted to retain the mysterious and hidden nature of an owl and tried the medium of a hologram to show the owls. Through the hologram, we bring the owl from the jungle to the museum. They can be seen from all sides.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/iOqCe3C.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/knGm54b.png&quot; alt=&quot;Concept&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/JxPVlUX.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The story does not end here, we wanted the visitors to interact with the owls. The setting allows us to playfully answer questions like , “How does an owl feel?”, “What will it do when we touch it?”, “Can we touch it?” . Through this we wished to break the boundary and connect the man back to nature. This could be considered as a means to develop empathy towards the bird and our condition like the bird. The owl was to animated and interactive and controlled by an owl like object.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8p7B8Pd.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;Production&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/SCYV8k7.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The team led by Vajra explored many options for the owl. We made these playful owls and modelled them.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/yKhrb6Q.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/91NQDM5.png&quot; alt=&quot;Owl-1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8EZnFqX.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The models were used in Unity to design animations for owl’s reactions to touches and changing day and night.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/14VCYBO.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/iOqCe3C.png&quot; alt=&quot;Owl-2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OHEAk7V.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;After some projection headaches, we were able to produce consistent animated holograms :)
+&lt;img src=&quot;https://i.imgur.com/yKhrb6Q.png&quot; alt=&quot;Holo&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;Designing Interactions&lt;/h4&gt;
+
+&lt;p&gt;We used body storming to come up with possible ideas for interactions. The initial idea of a globe was not very semantic towards modelling a control focussed towards the owl. But the spherical shape was relevant as it showed time and earth. So, we designed a controller that had the tangible feel of an owl and offered the possibility to interact (not control) the owl by touching the fur on the sphere and change the environment of the owl by rotating the sphere.&lt;/p&gt;
+
+&lt;p&gt;So, the physical endpoints were touch and rotation. I started by prototyping a system with a ball and some touch sensors. As an electrical engineer, I love slip rings. So, we solved the problems of a moving contact touch sensor using a slip ring. The springs kept the ball in place and helped control the stiffness of the motion.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/JxPVlUX.jpg&quot; alt=&quot;Prototyping-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final version had modality to touch parts of a sphere that triggered various responses in the hologram. Touching on right caused the owl to move towards right side and scratch. Touching both sides made the owl feel loved. Tapping on the ball made the owl happy and several other emotions were mapped to the touches on ball.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8EZnFqX.jpg&quot; alt=&quot;Circuit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On rotating the ball covered with fur, the user can change the time of the day. Make it day and night. This was sensed using an IR sensor. A technique I learned while designing speed sensors for &lt;a href=&quot;/2014/04/01/Solaris/&quot;&gt;my solar car project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/SCYV8k7.png&quot; alt=&quot;GlobeSense&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final controller looked like an inverted fur mouse (like in the 90s)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8p7B8Pd.png&quot; alt=&quot;Final Globe&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final setup was placed in a dark place and users would often be amazed to find floating owls in the gallery.
+&lt;img src=&quot;https://i.imgur.com/14VCYBO.png&quot; alt=&quot;At event&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;team&quot;&gt;Team&lt;/h4&gt;
 
-&lt;p&gt;The project was a part of my work done under Prof. Ravi and Prof. Ajanta at IDC. The super talented team at dsource and ekalpa project made the project possible. They include Vajra, Pranisha, Herold, Ravi, Malay,Deep, Shyam, Rajarshi, Swati, Vinaya, RamP (Audio) and other folks whose name I intermittently forgot.&lt;/p&gt;
+&lt;p&gt;The project was a part of my work done under Prof. Ravi and Prof. Ajanta at IDC. The super talented team at dsource and ekalpa project made the project possible. They include Vajra, Pranisha, Herold, Ravi, Malay, Deep, Shyam, Rajarshi, Swati, Vinaya, RamP (Audio) and other folks whose name I intermittently forgot.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -880,7 +957,7 @@ That is a minor issue. But the best part is I have an addressable LED strip that
    <updated>2017-12-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/12/03/fand</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This was a pre final project done during Masters at IDC.&lt;/p&gt;
+  &lt;p&gt;The project research was presented at IEEE SeGAH 2018, Vienna in a paper published as &lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8401321&quot;&gt; Gupta,R. &amp;amp; Dalvi, G (2018, May). FAND: A shareable haptic foot interface device. &lt;/a&gt; .&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The video demonstrating the concept is shown below:&lt;/p&gt;
@@ -1214,15 +1291,19 @@ I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630
    <link href="http://localhost:4000/2017/09/03/whowe/"/>
    <updated>2017-09-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/09/03/whowe</id>
-   <content type="html">&lt;p&gt;Information seems to have affected the pace of human evolution. Early humans could remember more information than the modern man. We today live in a world where information is ubiquitous and externalized. With ambient connectivity, this seems to have lead to a reduced information storage in biological memory. Hence, information is ambient. The ease and implementation of search engines has affected the inherent confirmation bias. This leads to a lack of objectivity in the information presented. Through the means of this installation, I intend to show the biased nature of modern pursuit of information. The mirror reflects what a user is and not what maybe true.&lt;/p&gt;
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;A published paper on this work can be read &lt;a href=&quot;http://ifip-tc13.org/wp-content/uploads/2017/09/INTERACT_2017_Adjunct_FINAL.pdf&quot;&gt;here&lt;/a&gt; on page 132.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Installation Design&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Information seems to have affected the pace of human evolution. Early humans could remember more information than the modern man. We today live in a world where information is ubiquitous and externalized. With ambient connectivity, this seems to have lead to a reduced information storage in biological memory. Hence, information is ambient. The ease and implementation of search engines has affected the inherent confirmation bias. This leads to a lack of objectivity in the information presented. Through the means of this installation, I intend to show the biased nature of modern pursuit of information. The mirror reflects what a user is and not what maybe true.&lt;/p&gt;
+
+&lt;h4&gt;Installation Design&lt;/h4&gt;
 
 &lt;p&gt;The participant cannot interact with the screen in any way. However, the screen and the mirror make the overall design open to interpretation. Some participants may ignore the presence, but some may figure out the true metaphor.The mirror reflects the participant and the search results she expects are filled with ”you may  like”  items.  It  is  a  search  that  pleases  and  not  enlightens. The  search  is so personalized that it ’reflects’ your identity. But that metaphor is not a single authoritative interpretation but rather may lead to multiple heterogeneous interpretations as explored by Sengers et. al. The device was exhibited on an office table at the venue. I hope that this artifact can help trigger a sense of uneasiness and encourage the participants to think on issues like privacy and biased nature of information they consume.&lt;/p&gt;
 
 &lt;p&gt;In order to present the precious and dear nature of our engagement with search engines, I painted the monitor in gold.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Prototyping&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;Prototyping&lt;/h4&gt;
 
 &lt;p&gt;Painting the monitor gold
 &lt;img src=&quot;https://i.imgur.com/teVTNtM.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
@@ -1242,8 +1323,6 @@ I used this &lt;a href=&quot;https://rstudio-pubs-static.s3.amazonaws.com/105630
 &lt;img src=&quot;https://i.imgur.com/JnJgXkG.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/interact2017/37474673211/in/dateposted/&quot; title=&quot;DSC_3938&quot;&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4448/37474673211_ce60a32935_z.jpg&quot; width=&quot;640&quot; height=&quot;428&quot; alt=&quot;DSC_3938&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;A published paper on the same can be read &lt;a href=&quot;http://ifip-tc13.org/wp-content/uploads/2017/09/INTERACT_2017_Adjunct_FINAL.pdf&quot;&gt;here&lt;/a&gt; on page 132.&lt;/p&gt;
 
 &lt;p&gt;Cheers,&lt;/p&gt;
 
@@ -1487,6 +1566,11 @@ The file gets rendered correctly over the base layer as points. In my case the c
   &lt;p&gt;This project was done during Masters at IDC. The project was selected as winner in student design category at CHI 2017 in Denver, Colorado. The paper on the same has been included in conference proceedings and can be read &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3049268&quot;&gt;here&lt;/a&gt;. The team members were &lt;a href=&quot;https://www.behance.net/udayanvidyanta&quot;&gt;Udayan&lt;/a&gt; and  &lt;a href=&quot;https://www.behance.net/silpa_murali&quot;&gt;Silpa&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The winning moment 
+&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35436721156/in/album-72157682238049102/&quot; title=&quot;Results&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4287/35436721156_f8c7178574_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Results&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Let us explore backwards…&lt;/strong&gt;&lt;/p&gt;
+
 &lt;p&gt;The competition brief can be read &lt;a href=&quot;https://chi2017.acm.org/designcompetition.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We chose to work on how might we help the elderly and digitally illiterate perform cashless transactions. The recent events of demonetization helped in setting up the premise for such a solution. Our main contribution was conducting several studies to try and understand the conceptual model elderly have towards performing such transactions.&lt;/p&gt;
@@ -1512,17 +1596,21 @@ The file gets rendered correctly over the base layer as points. In my case the c
 &lt;p&gt;Stages of prototyping
 &lt;img src=&quot;https://i.imgur.com/1CtO1ld.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Working prototype demonstration&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;Working prototype demonstration&lt;/h4&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/BLEe330qfAQ&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;At CHI&lt;/strong&gt;
-&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293561151/in/album-72157682238049102/&quot; title=&quot;Poster Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4263/35293561151_23a762e48b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Poster Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h4&gt;At CHI 2017, Denver, CO&lt;/h4&gt;
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35293561151/in/album-72157682238049102/&quot; title=&quot;Poster Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4263/35293561151_23a762e48b_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Poster Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35384081436/in/album-72157682238049102/&quot; title=&quot;The Artefacts&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4259/35384081436_efe0eaf5fc_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;The Artefacts&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/34635516814/in/album-72157682238049102/&quot; title=&quot;Presentation&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4207/34635516814_e5812e262f_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Presentation&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/94411929@N06/35436721156/in/album-72157682238049102/&quot; title=&quot;Results&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/5/4287/35436721156_f8c7178574_z.jpg&quot; width=&quot;640&quot; height=&quot;480&quot; alt=&quot;Results&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Read more about my CHI 2017 Experience &lt;a href=&quot;/2017/06/12/CHISVExp/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The detailed paper can be read &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3049268&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -2024,31 +2112,34 @@ The scenario was worked on by &lt;a href=&quot;https://www.behance.net/udayanvid
    <updated>2017-04-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2017/04/03/designfiction</id>
    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.&lt;/p&gt;
+  &lt;p&gt;The project explores the social value of human beauty in a possible future (among many futures). In this imagined world, the society does not possess natural beauty due various genetic mutations triggered by solar flares. They live in a time where, beauty is simulated by technology. I explore many interactions in this future when a naturally occouring thing like human beauty, becomes manipulated and managed by technology, the kind of control, regulatory, market and misuse dialogues it generates. I presented the project as a solo act by developing prototype interactions that exist in the future. The vehicle to deliver the story was a log generated by a person who made such a technology. If someone knows about the &lt;em&gt;Judgement of Thamus&lt;/em&gt; from &lt;em&gt;Plato’s Phaedrus&lt;/em&gt; or/and &lt;em&gt;Neil Postman’s Technopoly&lt;/em&gt;, a similar rhetoric was used but inside a story. I discuss things like digital cosmetics (now filters), beauty as a service, and liquid personalities. This project was done during Masters at IDC during the course Trends in Interaction Design by Prof. Venkat and Jayesh.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;My project How do I look, Honey? explores and challenges the fundamental human bias of visual beauty. What happens when technology can alter that? How will you define it? Will it become an asset that will be controlled by the rich?&lt;/p&gt;
+&lt;p&gt;My project — &lt;strong&gt;How do I look, Honey?&lt;/strong&gt;, explores and challenges the fundamental human bias of visual beauty. What happens when technology can alter that? How will you define it? Will it become an asset that will be controlled by the rich?&lt;/p&gt;
 
-&lt;p&gt;The story is set in a time when people are no longer beautiful. A catastrophic solar flare makes everyone ugly. People in these days use eyeAL devices which augment their vision to show them a digital persona of the real person. This digital persona can be stylized with cosmetics as in the past, but today these cosmetics are digital.&lt;/p&gt;
+&lt;p&gt;The story is set in a time when people are no longer beautiful. A catastrophic solar flare makes everyone ugly. People in these days use eyeAL devices which augment their vision to show them a digital persona of the real person. This digital persona can be stylized with cosmetics as in the past, but today these cosmetics are digital.People spend money to look good. They can things like fairness recharges or postpaid rental plans on beauty products. They can ensure they never age visually by paying for beauty insurance.&lt;/p&gt;
 
-&lt;p&gt;People spend money to look good.They can things like fairness recharges or postpaid rental plans on beauty products. They can ensure they never age visually by paying for beauty insurance.&lt;/p&gt;
+&lt;p&gt;In this future, the advertisements have taken a huge leap. The ads at places recognize your intent to buy and pitch your products accordingly. People are known to rent their bodies to augment advertisements. Everything you see is personalized. You can also have digital furniture whose texture and color you can change without changing the sofa ever. Same goes for a lot of personalized things like cars. How will it be to look at such an augmented world?&lt;/p&gt;
 
-&lt;p&gt;The advertisements have taken a huge leap. The ads at places recognize your intent to buy and pitch your products accordingly. People are known to rent their bodies to augment advertisements.Everything you see is personalized.&lt;/p&gt;
-
-&lt;p&gt;You also have digital furniture whose texture and color you can change without changing the sofa ever. Same goes for a lot of personalized things like cars.&lt;/p&gt;
-
-&lt;p&gt;The protagonist is a person who is a part of the team that designed this. He has been invited by his current self to explain the happenings of his day. In his days, the designers are not the one who design everything. Incremental designs are made by machines entirely and only when machines can’t rationalize the decision a human design debugger is looped in.&lt;/p&gt;
+&lt;p&gt;The protagonist in my story is a person who is a part of the team that designed this device. He has been invited by his current self to explain the happenings of his day. In his days, the designers are not the one who design everything. Incremental designs are made by machines entirely and only when machines can’t rationalize the decision a human design debugger is looped in.&lt;/p&gt;
 
 &lt;p&gt;There are personality hackers that can digitally transplant your personality. Sometimes even the dead are known to commit crimes using transplanted personas. The government can block some people from being viewed by others as a formal of penalization.&lt;/p&gt;
 
 &lt;p&gt;How beautiful is such a world?&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Prototype&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;Prototype&lt;/h4&gt;
 
-&lt;p&gt;The story revolves around the blog of one of the designers who re-tells the story of his world. The prototype can be seen  &lt;a href=&quot;http://rohitg.in/designfiction/index.html&quot;&gt;here&lt;/a&gt;.
-The course demonstration is hosted on this &lt;a href=&quot;https://rohit7gupta.github.io/explore/objects.html&quot;&gt;URL&lt;/a&gt;. To view the demonstration the compatible markers are uploaded &lt;a href=&quot;http://rohitg.in/designfiction/markers.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the prototype, I acted out as a hologram from the future world, explaining the happening of the future using the presentation. The audiences, were asked to interact with the hologram (i.e me) using an AR app I made.&lt;/p&gt;
 
-&lt;p&gt;I considered several UI trends to design a tile based interface.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://rohitg.in/designfiction/index.html&quot;&gt;&lt;img src=&quot;https://i.imgur.com/667g4d4.png&quot; alt=&quot;Play&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The prototype blog can be seen  &lt;a href=&quot;http://rohitg.in/designfiction/index.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of the videos shows the scenario of video chatting with a person, who has not paid his rent.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MitBfqTiFBQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The course demonstration is hosted on this &lt;a href=&quot;https://rohit7gupta.github.io/explore/objects.html&quot;&gt;URL&lt;/a&gt;. To view the demonstration the compatible markers are uploaded &lt;a href=&quot;http://rohitg.in/designfiction/markers.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The technologies I used were:&lt;/p&gt;
 
@@ -3170,6 +3261,9 @@ You start with downloading the app from the &lt;a href=&quot;https://play.google
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/aAW5nOh.png&quot; height=&quot;350&quot; /&gt;
 &lt;img src=&quot;https://i.imgur.com/Rj7j3nU.png&quot; height=&quot;350&quot; /&gt;
 &lt;img src=&quot;https://i.imgur.com/R6TXIZd.png&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some user feedback for the app : Smart Manuals
+&lt;img src=&quot;https://i.imgur.com/rt9IMFO.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;h4&gt;Context&lt;/h4&gt;
 &lt;p&gt;This is 2014, Vehicle infotainment systems are getting more and more computation heavy. The customer demands more connection and driving needs to be data-informed (driven). The competition has some derived solutions in the market. We needed to respond by building our own contextual telematics ecosystem. I was involved as a Lead from PAT side in the project when the dev and design already had some ideas and had some prototypes being tested. My task was to rethink and improve the project- ConnectNeXt, from a user-centric point of view.  It is one of those projects, you are on the team and have to fight for the user. Then not be lured by the cool technology that could possibly take too much attention while driving. Not making an App need attention was the task. Android auto was still very new.&lt;/p&gt;
@@ -5497,7 +5591,7 @@ So, yet again Python saves the day!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/nLyUr3Y.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Media reported :&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.deccanchronicle.com/business/autos/280317/6-things-you-may-not-know-about-tata-tiago.html&quot;&gt;Deccan Chronicle&lt;/a&gt; reporting about my work&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/KPXAg4o.png&quot; alt=&quot;Cardekho&quot; /&gt;&lt;/p&gt;
 
@@ -5527,9 +5621,11 @@ So, yet again Python saves the day!&lt;/p&gt;
 &lt;h4&gt;In Market&lt;/h4&gt;
 &lt;p&gt;The first vehicle to show this was Tiago. The audio system received a superb response. Especially the audio output which had some of Tata and HARMAN’s algorithmic magic. For a feature preferred segment, the audio system was “intelligently” designed to sound like a car from at-least mid-luxury segments. The sales of the car are one of the best in TML’s recent launches and continue to soar. My work may have affected the buying choice of about 6000 customers per month.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/rC0ZYyk.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A user on a &lt;a href=&quot;https://www.carwale.com/tata-cars/tiago/userreviews/48115/&quot;&gt;popular car forum&lt;/a&gt;, giving feedback on his purchase:
+&lt;img src=&quot;https://i.imgur.com/rC0ZYyk.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/7MIvRDz.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.digit.in/car-tech/tata-tiago-technology-inside-and-one-week-drive-analysis-32282.html&quot;&gt;digit magazine&lt;/a&gt; liked the music and said: 
+&lt;img src=&quot;https://i.imgur.com/7MIvRDz.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Selected Media Reports&lt;/strong&gt; : &lt;a href=&quot;https://www.deccanchronicle.com/business/autos/280317/6-things-you-may-not-know-about-tata-tiago.html&quot;&gt;Deccan Chronicle&lt;/a&gt;, &lt;a href=&quot;https://www.carwale.com/tata-cars/tiago/userreviews/48115/&quot;&gt;Carwale-User Feedback&lt;/a&gt;, &lt;a href=&quot;https://www.digit.in/car-tech/tata-tiago-technology-inside-and-one-week-drive-analysis-32282.html&quot;&gt;digit&lt;/a&gt;&lt;/p&gt;
 
@@ -6599,7 +6695,11 @@ IndianTinker&lt;/p&gt;
   &lt;p&gt;This post describes the work done during my time as Electrical Design Head at Team Solaris of Delhi Technological University. We participated in two global competitions and our cars were flagged off and parised by the President of India.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bjHEYckl8xI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://timesofindia.indiatimes.com/city/delhi/DTUs-solar-car-goes-to-Australia/articleshow/10025011.cms&quot;&gt;Times of India&lt;/a&gt; reports : 
+&lt;img src=&quot;https://i.imgur.com/gSshu01.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://archive.indianexpress.com/news/dtu-students-develop-solar-car-for-race-in-oz/848142/&quot;&gt;Indian Express&lt;/a&gt; reports:
+&lt;img src=&quot;https://i.imgur.com/B1Lw36r.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;h4&gt;Context&lt;/h4&gt;
 &lt;p&gt;Ten engineers passionate about making a robust vehicle that runs long distances on solar electric energy.  With almost no funds and no technical expertise in any areas on designing a car, we had to make a path of our own, amidst no support from industry.&lt;/p&gt;
@@ -6622,12 +6722,14 @@ IndianTinker&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bjHEYckl8xI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
 &lt;p&gt;Our goal was to learn how to make a car that runs on solar power. We built, failed, burned, and rebuilt our own converters and circuits. Learned by doing and breaking things. Our hands were always dirty and mind always busy solving some problems.  Finally, we did build a working car, certified to run on international roads.  The race in Australia was great. We had the lowest cost car in the competition. Or we did not know why things could be so expensive. The cost of competing was more than the cost of building the car for us. The rough estimate is about 10 times cheaper. We did complete the race, but our mileage was about 11%. Crossing the line mattered a lot to us, sweating it out to learn and without support from the industry. We built a parent-sourced car.  In the next year, we decided to build a more utilitarian passenger car. Our previous failures helped us and we were able to build one in record time. This time we used curved panels adapted to our body too. We learned this from friends from Germany, Singapore, and Iran while in Australia. The current car drew more attention and was inaugurated by the President of India, Pranab Mukherjee. It was faster and a bit conventional. I hope we furthered the thinking in this space with our work. In the end, we moved out of the team and the juniors carried it on. Some of the people in the team now work for good automotive companies like Tesla, Tata Motors, Hero, and Google.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ssQ2e0k.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/0PDbXMz.jpg&quot; width=&quot;325&quot; /&gt;
-&lt;img src=&quot;https://i.imgur.com/WmL4JjD.jpg&quot; width=&quot;325&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/0PDbXMz.jpg&quot; width=&quot;310&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/WmL4JjD.jpg&quot; width=&quot;310&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/74vIv8q.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
@@ -6635,7 +6737,12 @@ IndianTinker&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/j1YXM5t.jpg&quot; alt=&quot;Number Plate&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Media Coverage&lt;/strong&gt;: &lt;a href=&quot;https://www.oneindia.com/2012/09/04/prez-pranab-mukherjee-flags-off-dtu-passenger-solar-car-1064777.html&quot;&gt;One India&lt;/a&gt;, &lt;a href=&quot;https://economictimes.indiatimes.com/pranab-mukherjee-flags-off-eco-friendly-solar-car-codenamed-solaris/articleshow/16251837.cms&quot;&gt;Economic Times&lt;/a&gt;, &lt;a href=&quot;https://timesofindia.indiatimes.com/home/education/news/President-Pranab-Mukherjee-flags-off-DTUs-solar-passenger-car/articleshow/16257621.cms&quot;&gt;Time of India&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Media Coverage&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oneindia.com/2012/09/04/prez-pranab-mukherjee-flags-off-dtu-passenger-solar-car-1064777.html&quot;&gt;One India reports “President flags off DTU passenger Solar Car”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://economictimes.indiatimes.com/pranab-mukherjee-flags-off-eco-friendly-solar-car-codenamed-solaris/articleshow/16251837.cms&quot;&gt;Economic Times says “Pranab Mukherjee flags of eco-friendly solar car”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://timesofindia.indiatimes.com/home/education/news/President-Pranab-Mukherjee-flags-off-DTUs-solar-passenger-car/articleshow/16257621.cms&quot;&gt;Time of India reports “President flags off DTU solar car”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NGqWBJI3SjA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
