@@ -391,18 +391,27 @@ That is a minor issue. But the best part is I have an addressable LED strip that
   <p>The project research was presented at IEEE SeGAH 2018, Vienna in a paper published as <a href="https://ieeexplore.ieee.org/abstract/document/8401321"> Gupta,R. &amp; Dalvi, G (2018, May). FAND: A shareable haptic foot interface device. </a> .</p>
 </blockquote>
 
+<p>FAND (Foot associated neural device) is a haptic interface device that allows users to operate a computer (or certain applications) using all four limbs. The device uses user trained motion gestures that are bound to actions on a compatible application. One may be surprised to know that foot is only 10% less accurate than the hand. The interaction model developed in the project divides a task in a primary action and a secondary action. The primary, high priority and accurate task is handled by the hand, while the secondary tasks are handled by the foot. Devices like these are useful in times when most of our interaction are performed by the hands. This has increased the physiological load on hands. The possible applications are in applications like creative apps, Walking in Place (WIP) interactions in VR, and gaming. I evaluated the device by comparing it with a novel hand interaction device. In the study it was found that the foot device offers comparable learning and may be considered as a possible modality.</p>
+
+<p><img src="https://i.imgur.com/Vxondpp.png" alt="Imgur" /></p>
+
 <p>The video demonstrating the concept is shown below:</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ByvJjlRdu9M" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
 
-<p>The goal of the project was to improve the productivity of existing desktop usage using foot as a secondary modality. Several explorations and ideation were done in light of previous works and user studies conducted. The final report will be available <a href="">here</a> by end of the semester.</p>
+<h4>User Persona</h4>
+<p><img src="https://i.imgur.com/N2sgquh.png" alt="Imgur" />
+<img src="https://i.imgur.com/W7SAryx.png" alt="Imgur" />
+<img src="https://i.imgur.com/v5pzbJk.png" alt="Imgur" /></p>
+
+<p>Several explorations and ideation were done in light of previous works and user studies conducted. The final report is be available <a href="https://drive.google.com/file/d/1CH4XgkzvzWaVjZDxJgtrWlma4ZTeb1hH/view?usp=sharing">here</a>. This report was made in Google Docs. ProTip: Do not use google docs of large documents. I never use google docs for more than 10 pages.</p>
 
 <p>The post only covers some parts of a rather long design process (~ 6 months). I tried several techniques to understand the design of gesture systems. I did a <a href="https://faculty.washington.edu/wobbrock/">Wobbrock</a> style study to derive the guess-ability of certain guestures. The users were should de-contextualized prompts to certain interactions and were asked to come up with responses. I would encourage reading the paper by Wobbrock et al.</p>
 
 <p>The prompts were like the below for zoom:
 <img src="https://i.imgur.com/AfqMZQs.gif" alt="Imgur" /></p>
 
-<p>Based on my <strong>user set</strong> the gesture set was as follows:
+<p>Based on my <strong>user set</strong> the gesture set was as follows. One can obviously spot the similarities between these interactions and interactions performed by hands. Many users agreed that they performed the most natural interactions they could think of.
 <img src="https://i.imgur.com/P87F5J1.png" alt="Imgur" /></p>
 
 <p>The gesture set was used with the following <em>design requirements</em> to come up with several concepts.
@@ -414,7 +423,7 @@ That is a minor issue. But the best part is I have an addressable LED strip that
 <img src="https://i.imgur.com/OuFxiwN.png" alt="Imgur" />
 <img src="https://i.imgur.com/fokP6Um.png" alt="Imgur" /></p>
 
-<p>Functional Prototype made using Arduino running thresholding and a simple wave pattern recognizer algo on the data of a MPU6050 gyro sensor</p>
+<p>Functional Prototype made using Arduino running thresholding and a simple wave pattern recognizer algorithm on the data of a MPU6050 gyro sensor</p>
 
 <p><img src="https://i.imgur.com/TGOhCAQ.png" alt="Imgur" /></p>
 
