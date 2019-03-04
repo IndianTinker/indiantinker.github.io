@@ -6,7 +6,7 @@ location: Delhi, India
 tags:
 - msp430
 - select 
-- note
+
 field: creative technology<br>engineering
 ---
 

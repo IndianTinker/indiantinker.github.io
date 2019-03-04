@@ -6,7 +6,7 @@ location:  IDC IIT Bombay India
 tags:
 - design
 - select
-- note
+
 field: design fiction<br>creative technology
 ---
 

@@ -432,6 +432,14 @@
     
     
     <url>
+        <loc>http://localhost:4000/otherProjects/index.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
         <loc>http://localhost:4000/projects/index.html</loc>
     </url>
     
