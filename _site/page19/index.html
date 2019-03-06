@@ -317,6 +317,82 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2015/11/16/Plantpal/">
+        PlantPal-Garden Light Watering Reminder
+      </a>
+    </h1>
+
+    <span class="post-date">16 Nov 2015</span>
+
+    <p>I had this very special plant-A <em>Neem</em> sapling i planted in 4th Grade. When i was in the school, I used to water it almost everyday before going to school. There was a connection. But as life caught up, I forgot watering it and it was at the mercy of the rains and occasional watering events. But it survived.</p>
+
+<p>Why not make something that would remind me to water it and literally piss me off if i dont water it? Obviously, we can make the cliched ‘Automatic System’, but its the bond that matters. Watering plants makes you feel good. Automatic system is like a plant with nobody to care. It belongs to the jungle and not my balcony.</p>
+
+<p>Hence,<strong>PlantPal</strong> .</p>
+
+<p>The idea was to have an independent-self-sustained-system to work with the plant and tell we using beep patterns and frequencies the moisture level of the plant and keep sounding these beeps until i water the plant. The ‘Chinese’ made 1 Dollar solar garden light that I picked up at Coles,Darwin,Australia while in the country racing an Indian made Solar car for World Solar Challenge,2011, seemed to be a good host;This is maximum globalization i can comfortably fit in a sentence. :D</p>
+
+<p>The garden light had a joule thief IC inside it. So, there were essentially 6 components:</p>
+
+<ul>
+  <li>A yet-another-no-datasheet chinese IC.</li>
+  <li>A axial resistor like inductor</li>
+  <li>An LED</li>
+  <li>A resistor for the LED.</li>
+  <li>The solar panel</li>
+  <li>The Battery (AAA,1.2V,120mAh,NiCd)</li>
+</ul>
+
+<p>The Solar panel if you are guessing is amorphous one. But manages to keep the whole thing powered up. The joule thief this connected to the battery to power the LED. The panel is directly connected to the battery and there seems to be an enable pin to joule thief IC. So, when it gets dark the panel voltage drops and the LED Turns ON. Probably a PNP Switch.</p>
+
+<p>So, I had to power my MSP430 based circuit with the 1.2V battery. The tinyBoost PCBs i got fabbed from SeedStudio seemed a good option. If anyone needs them be sure to email me. I have a few remaining. Will be more than happy to send them across. They are built around the TPS Series boost ICs from TI. Works pretty great! All you need is an inductor and a few caps. The output current is about 300mA and works till 0.8V.</p>
+
+<p>So, the power issue was sorted. For the sensor, i used the usual <em>two-wires-in-gypsum</em> sensor, it works as a variable resistor and with little adjustments, I was able to get repetitive linear readings. So, the Soil Humidity was proportional to the Resistance. The other ingredients were a Green LED and a tiny piezo speaker to annoy me if I forget to water it. With all the usable pins on my <a href="http://www.ti.com/product/msp430g2230">MSP430G2230</a> used up. It was time to work on the code.</p>
+
+<p><em>With great power, comes greater responsibility</em>. On the contrary , in Electronics, With little power in hand comes even more responsibility to conserve it.</p>
+
+<p>Thanks to the Low Power Modes of MSP430 it turned out to be a great boon. The code was designed in the following way:</p>
+
+<blockquote>
+  <p>If the humidity level is high the MSP430 will read the sensor less often like once in 20-30 minutes; precisely because humidity is a slow changing quantity and it is almost impossible to dry up a muddy-wet patch of soil to rock hard one in less than 30 minutes. Then as the humidity decreases the controller increases the sensing cycle and starts sounding the beeps at different frequencies to tell me what is the current state until i water it. The heart beat green LED’s blinking rate also acts like an indicator of sorts.</p>
+</blockquote>
+
+<p><strong>Problems and solutions</strong></p>
+
+<p>The main problem was <em>too little power</em>. Other auxiliary problems were:</p>
+
+<ul>
+  <li>
+    <p>The sensor was taking up lot of power when sensing. This is a peculiar problem with resistive sensors. The solution is to use capacitive sensing like <a href="https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/">this</a>. Its far too expensive after i heard about the 5$ Pi. It took around 100mA and considering that it was powered by a boost far greater amount of current was drawn from those tiny batteries. Will certainly build a capacitive one soon.</p>
+  </li>
+  <li>
+    <p>The solar power was just not enough to run the setup on sustainable basis. If the days are Sunny, its great, after a sunny day the setup runs for about 18-20hours and the moment you have cloudy days it dies after that and needs a physical charge. Probably using capacitive sensor would work.</p>
+  </li>
+  <li>
+    <p>Piezo sometimes draws power beyond what the battery can supply. So, i added more resistance that reduced the volume. The possible solution is to use a high capacity battery. Like the 2100mAh Ni-Mh in the video.</p>
+  </li>
+  <li>
+    <p>Even lower power, using the MSP430’s clock module i can certainly go below 1MHz until it affects other peripherals.</p>
+  </li>
+</ul>
+
+<p>Check out the video of it in action:</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/2O21kL86JAI" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Please do comment if you have any queries :D</p>
+
+<p>Cheers !!</p>
+
+<p>Rohit</p>
+
+<a href="/2015/11/16/Plantpal/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2015/11/15/GettingStartedwithESP1/">
         A Wifi DataLogger
       </a>
@@ -413,68 +489,6 @@ window.twttr = (function (d, s, id) {
 <p>Rohit</p>
 
 <a href="/2015/11/14/hearty/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/11/11/GreenwaliDiwali/">
-        GreenWali Diwali:A social interactivity experiment
-      </a>
-    </h1>
-
-    <span class="post-date">11 Nov 2015</span>
-
-    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
-
-<ul>
-  <li>Lights/Sound to attract attention</li>
-  <li>A unique randomness of explosion</li>
-  <li>An Obnoxious Odour</li>
-  <li>Fear of getting yourself hurt</li>
-  <li>Fear of setting someone on fire</li>
-</ul>
-
-<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
-
-<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
-
-<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code class="highlighter-rouge">Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code class="highlighter-rouge">#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
-
-<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
-
-<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
-
-<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet !</p>
-
-<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
-
-<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
-
-<ul>
-  <li>Sign In/Up on Twitter</li>
-  <li>Go <a href="https://apps.twitter.com/">here</a></li>
-  <li>Create <strong>New Application</strong></li>
-  <li>Fill the Yet-Another-Form and Create the Application.</li>
-  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
-  <li>You will see your consumer keys there !</li>
-  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
-</ul>
-
-<p>These 4 keys are used for the Code above.</p>
-
-<p>Then just install the dependencies based on the <code class="highlighter-rouge">README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code class="highlighter-rouge">screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
-
-<p>Check out the video of me testing it !</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Happy GreenWali Diwali !</p>
-
-<p>Rohit</p>
-
-<a href="/2015/11/11/GreenwaliDiwali/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

@@ -317,6 +317,59 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2015/09/15/PiTuber/">
+        PiTuber- The Low Power Raspberry Pi Youtube Offliner
+      </a>
+    </h1>
+
+    <span class="post-date">15 Sep 2015</span>
+
+    <blockquote>
+  <p><strong>DISCLAIMER</strong>
+This article is for exploratory and educational purposes only. Kindly use the code and project responsibly.</p>
+</blockquote>
+
+<p>Happy Engineers Day !</p>
+
+<p>Televison and Childhood… These things are inseparable. Remember waiting for your favourite TV show to come live. That experience was certainly unique.TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. It has changed and I would certainly refrain from using the word ‘evolved’. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather ‘evolved’ to avoid them.</p>
+
+<p>Being the ‘90’s Kid’, going by the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like “Byomkesh Bakshi” , “Recess” ,”Small Wonder”, “Shreeman Shreemati”, “TaleSpin”, “Captain Planet” etc.</p>
+
+<p>So, one fine day while struggling with streaming on my slow connection while watching my favourite show,it occurred to me that a Pi which can runs off my cellphone charger would be a great tool for offlin-ing. Sort of a physical Youtube App on a Pi. Nothing needs to be said about Youtube Experience on Windows Phone !</p>
+
+<p>The system should read a couple of links from a file and then offline them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video like on the App. Once done watching, <strong>DELETE</strong> !</p>
+
+<p>It turned out to be a pretty easy task. Thanks to <code class="highlighter-rouge">pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file.</p>
+
+<p>The steps are pretty simple:</p>
+
+<ul>
+  <li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
+  <li>Install <code class="highlighter-rouge">pafy</code> using pip the usual way</li>
+  <li>Change the urls in the txt file. Please do preserve the format.</li>
+  <li>Edit the script for your preferred quality and storage location.</li>
+  <li>Execute the script.</li>
+</ul>
+
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code class="highlighter-rouge">screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
+
+<p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
+
+<p>After you are finished, just <code class="highlighter-rouge">SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+
+<p>There can be several extensions of the idea.We can also attach a small LED on one of the Pins to indicate when downloading ends.
+Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with other services to make Pi a Bandwidth Hogger and a mean downloading machine.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2015/09/15/PiTuber/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2015/08/08/MotoX/">
         Unbricking a MotoX, Resurrecting Smiles
       </a>
@@ -527,60 +580,6 @@ Bummer!!</p>
 <p>Rohit</p>
 
 <a href="/2015/08/01/Intel/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/07/27/Kalam-Sir/">
-        Kalam Sir
-      </a>
-    </h1>
-
-    <span class="post-date">27 Jul 2015</span>
-
-    <p>What happens when your childhood hero is no more? The person who inspired you to become someone who can question the ways to find answers or new ways.</p>
-
-<p>The person who has done what others just dreamed of. Not by his inherited legacy or his maligned ways as people may generally perceive but by ways it should always be done. Humbly, Gently and Altruistically! :’(</p>
-
-<p>Today ! Is the day. The day that brings catastrophic damage to heart of young scientists and believers of Kalam Sir. He is no more there and was giving a lecture at IIM Shillong. This deep feeling of grief !</p>
-
-<p>He leaves behind something that may be undermined if called a void. The man who made India capable of launching missiles that no one could imagine.A national hero!</p>
-
-<p>His books on angelic ways of thinking about science and development of our nation are the light we all must follow.</p>
-
-<p>His humble beginnings to charismatic term as the president are inspiration to all. He probably is the most respected President the country ever had.</p>
-
-<p>He glorified the meaning of the word science and scientist and the change they could bring to the society. In his books particularly the <strong>Wings of Fire</strong> and <strong>Ignited Minds</strong> his plans, vision and stories for a better India and the India he wishes to have will all be with us till that vision is achieved.</p>
-
-<p>As children we grew up reading his stories in our textbooks and looked upon him as an inspiration. Science was particularly interesting and It became more interesting as we read about his journey in the epic “Wings Of Fire” in which he describes how India kick-started its missile programme using indigenous tools and techniques when the world’s greatest powers offered little support. His ideas ignited the spark many of us as a child to pursue science for its perennial joy of fun, discovery and amazement. For it is a fundamental key to a better future/nation/planet.Science and Technology can change everything!</p>
-
-<p>He was in fact the very first few of “Make-In-India” men! 
-I still remember that anecdote about Beryllium Diaphragms.</p>
-
-<blockquote>
-  <p>In 1975, ISRO needed Beryllium Diaphragms for a new device. Today, you can see this Diaphragm in high quality audio speakers. But, four decades back, a few nations had the ability to make them. Hence, we approached a US based company which agreed and the paperwork was readied. Just when we were about to complete the transaction, the US Government had blocked the sale as this material was being used in their strategic missiles.Denied of a critical product, we started learning more about it. The US diaphragms, were made from Beryllium rods produced in Japan. We further discovered something startling. Beryllium is a rare element, and only a few countries possess it. India was among top-4 producers of raw Beryllium. The Japanese company which produced the rod, imported Beryllium from us. We were dismayed to know that a product whose raw material we possessed, almost exclusively, was being denied to us. Then a committee of top research laboratories was constituted and given the challenge to make a Beryllium Diaphragm of our own. In four months, we triumphed.</p>
-</blockquote>
-
-<p>But what’s important is his ways that he has entrusted upon us to carry his path to lead our country and the world to glorious heights. His outlook is what he has taught us.</p>
-
-<p>He rose beyond the menial engulfments of religion, politics and wealth to enamour us with his ideas.</p>
-
-<p>He dreamed of a self-reliant India for it brings self-respect. Self-reliance, respect, dignity, power! Power Respects Power and fear has no space.</p>
-
-<p>We don’t have a x,y or z? We will make it! The very attitude the present Indian needs.</p>
-
-<blockquote>
-  <p>“Dream is not that which you see while sleeping it is something that does not let you sleep.” </p>
-</blockquote>
-
-<p>Today the dreamer has transcended sowing his seeds in our minds.</p>
-
-<p>RIP Kalam Sir!</p>
-
-<p><img src="http://media2.intoday.in/indiatoday/images/stories/ripkalam---story_647_072715101359.jpg" />&lt;/a&gt;</p>
-<a href="/2015/07/27/Kalam-Sir/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

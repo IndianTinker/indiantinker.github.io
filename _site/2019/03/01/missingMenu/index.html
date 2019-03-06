@@ -18,8 +18,8 @@
   <meta name="twitter:description" content="Regular Hacks, exploits, projects and tutorials by Rohit Gupta (IndianTinker)"/>
 
 
-  <meta  property="og:title" content="ReactorX- The Arc Reactor from the movies"/>
-  <meta name="twitter:title" content="ReactorX- The Arc Reactor from the movies"/>
+  <meta  property="og:title" content="missingMenu- Understanding food menus as a language"/>
+  <meta name="twitter:title" content="missingMenu- Understanding food menus as a language"/>
   
 
 
@@ -27,22 +27,22 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/2016/03/12/arc/" />
+  <meta property="og:url" content="http://localhost:4000/2019/03/01/missingMenu/" />
 
 
-  <meta content="2016-03-12T00:00:00+05:30" property="article:published_time"/>
+  <meta content="2019-03-01T00:00:00+05:30" property="article:published_time"/>
   <meta content="http://localhost:4000/about/index.html" property="article:author"/>
 
 
-  <meta content="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" property="og:image"/>
-  <meta name="twitter:image:src" content="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg"/>
+  <meta content="https://i.imgur.com/cnyBjuS.png" property="og:image"/>
+  <meta name="twitter:image:src" content="https://i.imgur.com/cnyBjuS.png"/>
 
 
   
 
 
   
-  <meta content="msp430" property="article:tag"/>
+  <meta content="design" property="article:tag"/>
   
   <meta content="select" property="article:tag"/>
   
@@ -56,7 +56,7 @@
 
   <title>
     
-      ReactorX- The Arc Reactor from the movies &middot; Rohit Gupta
+      missingMenu- Understanding food menus as a language &middot; Rohit Gupta
     
   </title>
 
@@ -325,13 +325,13 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="post">
-  <h1 class="post-title">ReactorX- The Arc Reactor from the movies</h1>
-  <span class="post-date">12 Mar 2016</span>
+  <h1 class="post-title">missingMenu- Understanding food menus as a language</h1>
+  <span class="post-date">01 Mar 2019</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="rohit7gupta">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Pune, India">Pune, India</a></span>
+  <span style="font-size:95% ;text-align:right;"><i class="fa fa-map-marker"></i>  <a href="https://www.google.com/maps/place/Madrid, Spain">Madrid, Spain</a></span>
 
 
 <br>
@@ -340,52 +340,68 @@ window.twttr = (function (d, s, id) {
 
 
 <br>
-  <p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
+  <p><a href="http://rohitg.in/missingMenu/">MissingMenu</a> is a project that generates possible combinations of food dishes from a learned menu. It does that by converting a menu to a linguistic model and then computationally generating new food dishes using Probabilistic Context-free grammar (PCFG).</p>
 
-<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
+<p>In other words, the menu is interpreted as a language and a new dish is just another sentence, a meaningful combination of words. So, if you teach it the Chinese menu and south Indian menu, it generates things like schezwan idli with egg fried rice. These combinations are essentially possible as they are made by understanding the morphology of the menu system. This project helped me look at the food menus as languages and languages as a group of morphological combinations driven by adopted norms.
+<!--more-->
+It must be noted that the generated combinations are valid extensions of the original menu and not entirely random. Hence, the project generates a missingMenu .</p>
 
-<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
+<p>I made it initially when I was a student at IIT-IDC and was curious how our tiny hostel cafés have a 5-page menus with so little ingredients on the cooking shelf. It made me curious about how these menus are generated. Remember the center fresh advert boasting about menus at a restaurant?</p>
 
-<p>Features:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9LkIFhc3ZkQ?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>So, one weekend, I asked my friend, Angela, to get me the menu of a hostel in IIT i.e. H10. I wrote the dishes on a piece of paper and started breaking them. These chunks would essentially make up the language I will use in my context-free grammar program.</p>
+
+<p><img src="https://i.imgur.com/hdGbwjL.jpg?1" alt="Scribbles" /></p>
+
+<p>The key points from my analysis are:</p>
 
 <ul>
-  <li>Small and light</li>
-  <li>Power efficient</li>
-  <li>Bright</li>
-  <li>Change-able modes using a switch</li>
-  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
-  <li>Morse Code for SOS</li>
-  <li>A mind blowing start-up sequence</li>
-  <li>Knight rider effect on LEDs</li>
-  <li>Breathing effect on the Middle high power LED</li>
+  <li>The menu results in a graph like structure. Several dishes were constructed just as a fusion from another cuisine. Schezwan Noodles made schezwan dosa</li>
+  <li>There were a few ingredients like Cheese, Egg, Chicken, and Schezwan which produced maximum divergence to the core dishes. They resulted in about 4! (4x3x2x1) multiplication to dishes. Like Fried Noodles, Egg Fried Noodles, Schezwan Egg Fried Noodles, Schezwan Chicken Noodles, Schezwan Dosa, Schezwan Cheese Dosa, Triple Rice which is kind of like Noodle + Rice. etc. I call them Maximizers.</li>
+  <li>Within the same cusine category, you have three Multipliers. These can be things like Plain (Lack of a multiplier), Veg, Egg, Chicken, and sometimes Masala. So, for South Indian food, we have Plain Dosa, Masala Dosa and that makes it possible to make Egg Dosa (Egg is a multiplier from Chinese Food Category — Obviously sold in Maddu Mess).</li>
 </ul>
 
-<p>It also needs to be wearable and comfortable at the same time.</p>
+<p>So essentially :
+Maggi (a cuisine in its own) has plain Maggi</p>
 
-<p>The motion and the light helps attract attention.</p>
+<p>Using Maximizers: Cheese Maggi, Schezwan Maggi, Egg Maggi, Egg Cheese Maggi, Schezwan Egg Maggi</p>
 
-<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
+<p>Using Multipliers: Masala Maggi</p>
 
-<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
-<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
+<p>Using both: Masala Egg Maggi</p>
 
-<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
+<p>The idea was to represent this system of Multipliers and Maximizers as a language and then generate possible combinations using this language model.
+A start phrase would be like:</p>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
+<blockquote>
+  <p>You <em>hedge</em> have <em>dishOne</em> with <em>SideDish</em> at <em>Hostel</em> and drink <em>liquid</em> .</p>
+</blockquote>
 
-<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
+<p>So, a possible iteration could be :
+You <strong>could</strong> have <strong>Shezwan Bhindi Fry</strong> with <strong>Plain Rice</strong> at <strong>H6</strong> and drink <strong>Chocolate milk shake</strong>.</p>
 
-<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
+<p>I used <a href="https://www.youtube.com/watch?v=lIPEvh8HbGQ">Dan Shifmann’s instructions</a> on using <a href="https://rednoise.org/rita/index.php">RiTA</a> as a PCFG generator and wrote a model based on the discussion presented above.</p>
 
-<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
+<h4 id="visual-design">Visual Design</h4>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
+<p>Once the logic was working, it was time to give it a decent aesthetic vehicle. 🚗</p>
 
-<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>.</p>
+<p>I chose a simple layout and designed a few iterations of the UI in Figma. I played with various colors that remind me of food.</p>
 
-<p>Cheers,</p>
+<p><img src="https://i.imgur.com/uTj7VDE.png" alt="Imgur" /></p>
 
-<p>Rohit</p>
+<p>The final color palette was derived from an image of Vada Pao. I love Vada Pao.</p>
+
+<p>I experimented with using CSS grids to layout the page. It was a challenge to translate things from UI to a working interface. The code generated by Figma is helpful but not dependable. So, I had to play around a lot. The cool part was making those magical underlines and follow Web accessibility guides.</p>
+
+<p><img src="https://i.imgur.com/rzDWfcC.png" alt="Imgur" /></p>
+
+<p>The final project is hosted <a href="http://rohitg.in/missingMenu/">here</a>. Do check it out and provide feedback. If you are in IIT Bombay, give it a try and let me know. Some beta-testers found it interesting.</p>
+
+<p>Through this project, I tried to scratch the surface of the field of computational linguistics. I am curious what other linguistic artefacts can be understood in these terms. The actual menu at the restaurant is probably a more constrained/time-tested output of these combinations, but through this tool, we can loosen the norms and try new things by generating a possible menu. Maybe you find your next favourite dish? Let me know :)</p>
+
+<p>Cheers !</p>
 
 
 </div>
@@ -393,15 +409,6 @@ window.twttr = (function (d, s, id) {
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2019/03/01/missingMenu/">
-            missingMenu- Understanding food menus as a language
-            <small>01 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -417,6 +424,15 @@ window.twttr = (function (d, s, id) {
           <a href="/2018/07/04/deltadesign/">
             The delta of design
             <small>04 Jul 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/06/30/ExitIDC/">
+            Clearance Processes at IDC
+            <small>30 Jun 2018</small>
           </a>
         </h3>
       </li>

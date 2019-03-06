@@ -4,13 +4,84 @@
  <title>Rohit Gupta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-03-04T07:29:00+05:30</updated>
+ <updated>2019-03-06T18:29:58+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rohit</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>missingMenu- Understanding food menus as a language</title>
+   <link href="http://localhost:4000/2019/03/01/missingMenu/"/>
+   <updated>2019-03-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2019/03/01/missingMenu</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://rohitg.in/missingMenu/&quot;&gt;MissingMenu&lt;/a&gt; is a project that generates possible combinations of food dishes from a learned menu. It does that by converting a menu to a linguistic model and then computationally generating new food dishes using Probabilistic Context-free grammar (PCFG).&lt;/p&gt;
+
+&lt;p&gt;In other words, the menu is interpreted as a language and a new dish is just another sentence, a meaningful combination of words. So, if you teach it the Chinese menu and south Indian menu, it generates things like schezwan idli with egg fried rice. These combinations are essentially possible as they are made by understanding the morphology of the menu system. This project helped me look at the food menus as languages and languages as a group of morphological combinations driven by adopted norms.
+&lt;!--more--&gt;
+It must be noted that the generated combinations are valid extensions of the original menu and not entirely random. Hence, the project generates a missingMenu .&lt;/p&gt;
+
+&lt;p&gt;I made it initially when I was a student at IIT-IDC and was curious how our tiny hostel cafés have a 5-page menus with so little ingredients on the cooking shelf. It made me curious about how these menus are generated. Remember the center fresh advert boasting about menus at a restaurant?&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9LkIFhc3ZkQ?start=25&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;So, one weekend, I asked my friend, Angela, to get me the menu of a hostel in IIT i.e. H10. I wrote the dishes on a piece of paper and started breaking them. These chunks would essentially make up the language I will use in my context-free grammar program.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/hdGbwjL.jpg?1&quot; alt=&quot;Scribbles&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The key points from my analysis are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The menu results in a graph like structure. Several dishes were constructed just as a fusion from another cuisine. Schezwan Noodles made schezwan dosa&lt;/li&gt;
+  &lt;li&gt;There were a few ingredients like Cheese, Egg, Chicken, and Schezwan which produced maximum divergence to the core dishes. They resulted in about 4! (4x3x2x1) multiplication to dishes. Like Fried Noodles, Egg Fried Noodles, Schezwan Egg Fried Noodles, Schezwan Chicken Noodles, Schezwan Dosa, Schezwan Cheese Dosa, Triple Rice which is kind of like Noodle + Rice. etc. I call them Maximizers.&lt;/li&gt;
+  &lt;li&gt;Within the same cusine category, you have three Multipliers. These can be things like Plain (Lack of a multiplier), Veg, Egg, Chicken, and sometimes Masala. So, for South Indian food, we have Plain Dosa, Masala Dosa and that makes it possible to make Egg Dosa (Egg is a multiplier from Chinese Food Category — Obviously sold in Maddu Mess).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So essentially :
+Maggi (a cuisine in its own) has plain Maggi&lt;/p&gt;
+
+&lt;p&gt;Using Maximizers: Cheese Maggi, Schezwan Maggi, Egg Maggi, Egg Cheese Maggi, Schezwan Egg Maggi&lt;/p&gt;
+
+&lt;p&gt;Using Multipliers: Masala Maggi&lt;/p&gt;
+
+&lt;p&gt;Using both: Masala Egg Maggi&lt;/p&gt;
+
+&lt;p&gt;The idea was to represent this system of Multipliers and Maximizers as a language and then generate possible combinations using this language model.
+A start phrase would be like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You &lt;em&gt;hedge&lt;/em&gt; have &lt;em&gt;dishOne&lt;/em&gt; with &lt;em&gt;SideDish&lt;/em&gt; at &lt;em&gt;Hostel&lt;/em&gt; and drink &lt;em&gt;liquid&lt;/em&gt; .&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, a possible iteration could be :
+You &lt;strong&gt;could&lt;/strong&gt; have &lt;strong&gt;Shezwan Bhindi Fry&lt;/strong&gt; with &lt;strong&gt;Plain Rice&lt;/strong&gt; at &lt;strong&gt;H6&lt;/strong&gt; and drink &lt;strong&gt;Chocolate milk shake&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I used &lt;a href=&quot;https://www.youtube.com/watch?v=lIPEvh8HbGQ&quot;&gt;Dan Shifmann’s instructions&lt;/a&gt; on using &lt;a href=&quot;https://rednoise.org/rita/index.php&quot;&gt;RiTA&lt;/a&gt; as a PCFG generator and wrote a model based on the discussion presented above.&lt;/p&gt;
+
+&lt;h4 id=&quot;visual-design&quot;&gt;Visual Design&lt;/h4&gt;
+
+&lt;p&gt;Once the logic was working, it was time to give it a decent aesthetic vehicle. 🚗&lt;/p&gt;
+
+&lt;p&gt;I chose a simple layout and designed a few iterations of the UI in Figma. I played with various colors that remind me of food.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uTj7VDE.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final color palette was derived from an image of Vada Pao. I love Vada Pao.&lt;/p&gt;
+
+&lt;p&gt;I experimented with using CSS grids to layout the page. It was a challenge to translate things from UI to a working interface. The code generated by Figma is helpful but not dependable. So, I had to play around a lot. The cool part was making those magical underlines and follow Web accessibility guides.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/rzDWfcC.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final project is hosted &lt;a href=&quot;http://rohitg.in/missingMenu/&quot;&gt;here&lt;/a&gt;. Do check it out and provide feedback. If you are in IIT Bombay, give it a try and let me know. Some beta-testers found it interesting.&lt;/p&gt;
+
+&lt;p&gt;Through this project, I tried to scratch the surface of the field of computational linguistics. I am curious what other linguistic artefacts can be understood in these terms. The actual menu at the restaurant is probably a more constrained/time-tested output of these combinations, but through this tool, we can loosen the norms and try new things by generating a possible menu. Maybe you find your next favourite dish? Let me know :)&lt;/p&gt;
+
+&lt;p&gt;Cheers !&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Getting a Spanish student visa</title>

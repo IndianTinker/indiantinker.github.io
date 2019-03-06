@@ -317,6 +317,88 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2018/05/01/DayNight/">
+        Day and Night
+      </a>
+    </h1>
+
+    <span class="post-date">01 May 2018</span>
+
+    <blockquote>
+  <p>Day and Night presents a unique holographic experience of observing the day of an owl. The users can interact with the holographic owl using a constructed device. The device morphs the feeling of the owl into an earth like object. As the users touch the owl’s fur the owl playfully reacts to this sensation. On moving the globe, the time changes and it is day or night. Through this installation, we wished to draw attention to the changing circadian rhythms and the perceived control one has on it. Owl is a bird that wakes up in the night. Technology seems to have enabled us to become like owls.
+This installation was presented at National Gallery of Modern Art, Mumbai, was a part of the <a href="http://www.dsource.in/events/naturembedded/">“Nature Embedded”</a> exhibition. The exhibition was inaugurated and visited by <a href="https://en.wikipedia.org/wiki/Paola_Antonelli">Paola Antonelli</a> .</p>
+</blockquote>
+
+<p><a href="https://www.mid-day.com/articles/designs-by-nature/19036197">Mid Day Times</a> reports about the exhibition :
+<img src="https://i.imgur.com/BjwcGAW.png?1" alt="Imgur" /></p>
+
+<h4>The exhibit at the gallery </h4>
+
+<p><img src="https://i.imgur.com/14VCYBO.png" alt="At event" /></p>
+
+<p><img src="https://i.imgur.com/OHEAk7V.png" alt="People" /></p>
+
+<h4>Concept</h4>
+
+<p>We live seem to be living in a time when the day and night are mixing. No wonder a whole period of 24 hours is called a day. Technology has enabled us to live the day past the day. This situation has altered the circadian rhythm or the biological clock of the nature. We wanted to draw the attention of visitors, especially the kids, to this fact. That is why we chose Owls. Owls have an inverse circadian rhythm, they are up in night and sleep in the day. The metaphor of an owl draws attention and serves as a nice exploration of the chosen concept.</p>
+
+<p>We wanted to retain the mysterious and hidden nature of an owl and tried the medium of a hologram to show the owls. Through the hologram, we bring the owl from the jungle to the museum. They can be seen from all sides.</p>
+
+<p><img src="https://i.imgur.com/knGm54b.png" alt="Concept" /></p>
+
+<p>The story does not end here, we wanted the visitors to interact with the owls. The setting allows us to playfully answer questions like , “How does an owl feel?”, “What will it do when we touch it?”, “Can we touch it?” . Through this we wished to break the boundary and connect the man back to nature. This could be considered as a means to develop empathy towards the bird and our condition like the bird. The owl was to animated and interactive and controlled by an owl like object.</p>
+
+<h4>Production</h4>
+
+<p>The team led by Vajra explored many options for the owl. We made these playful owls and modelled them.</p>
+
+<p><img src="https://i.imgur.com/91NQDM5.png" alt="Owl-1" /></p>
+
+<p>The models were used in Unity to design animations for owl’s reactions to touches and changing day and night.</p>
+
+<p><img src="https://i.imgur.com/iOqCe3C.png" alt="Owl-2" /></p>
+
+<p>After some projection headaches, we were able to produce consistent animated holograms :)
+<img src="https://i.imgur.com/yKhrb6Q.png" alt="Holo" /></p>
+
+<h4>Designing Interactions</h4>
+
+<p>We used body storming to come up with possible ideas for interactions. The initial idea of a globe was not very semantic towards modelling a control focussed towards the owl. But the spherical shape was relevant as it showed time and earth. So, we designed a controller that had the tangible feel of an owl and offered the possibility to interact (not control) the owl by touching the fur on the sphere and change the environment of the owl by rotating the sphere.</p>
+
+<p>So, the physical endpoints were touch and rotation. I started by prototyping a system with a ball and some touch sensors. As an electrical engineer, I love slip rings. So, we solved the problems of a moving contact touch sensor using a slip ring. The springs kept the ball in place and helped control the stiffness of the motion.</p>
+
+<p><img src="https://i.imgur.com/JxPVlUX.jpg" alt="Prototyping-1" /></p>
+
+<p>The final version had modality to touch parts of a sphere that triggered various responses in the hologram. Touching on right caused the owl to move towards right side and scratch. Touching both sides made the owl feel loved. Tapping on the ball made the owl happy and several other emotions were mapped to the touches on ball.</p>
+
+<p><img src="https://i.imgur.com/8EZnFqX.jpg" alt="Circuit" /></p>
+
+<p>On rotating the ball covered with fur, the user can change the time of the day. Make it day and night. This was sensed using an IR sensor. A technique I learned while designing speed sensors for <a href="/2014/04/01/Solaris/">my solar car project</a>.</p>
+
+<p><img src="https://i.imgur.com/SCYV8k7.png" alt="GlobeSense" /></p>
+
+<p>The final controller looked like an inverted fur mouse (like in the 90s)</p>
+
+<p><img src="https://i.imgur.com/8p7B8Pd.png" alt="Final Globe" /></p>
+
+<p>The final setup was placed in a dark place and users would often be amazed to find floating owls in the gallery.
+<img src="https://i.imgur.com/14VCYBO.png" alt="At event" /></p>
+
+<h4 id="team">Team</h4>
+
+<p>The project was a part of my work done under Prof. Ravi and Prof. Ajanta at IDC. The super talented team at dsource and ekalpa project made the project possible. They include Vajra, Pranisha, Herold, Ravi, Malay, Deep, Shyam, Rajarshi, Swati, Vinaya, RamP (Audio) and other folks whose name I intermittently forgot.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2018/05/01/DayNight/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2018/04/04/Addresable/">
         Repurposing mass market addressable LEDs
       </a>
@@ -435,139 +517,6 @@ That is a minor issue. But the best part is I have an addressable LED strip that
 
 <p>Rohit</p>
 <a href="/2017/12/03/fand/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/12/01/BeingDPC/">
-        Notes on being a department placement co-ordinator at IDC, IIT Bombay
-      </a>
-    </h1>
-
-    <span class="post-date">01 Dec 2017</span>
-
-    <p>This post was made to avoid me “replaying” the episodic events of placements to whoever comes in to do groundwork for the post of a Placement Manager. It feels more like interrogation from unknown individuals.</p>
-
-<p>The following is the “job description” for an IDC DPC. I hope that this would change in the future. Students, typically - IDCians and IDC DPCs would get more accountable to the work they signed up for. The point to remember is that everyone has work during those days and giving up on your position does not help in a highly connected system like the placements. It only increases the stress on other members.</p>
-
-<p>The list is (mostly chronological) :</p>
-
-<ol>
-  <li>Getting students to pay for the placements.</li>
-  <li>Ask them to join the “not-so-useful” google group</li>
-  <li>Help them make resumes and get it verified, iteratively.</li>
-  <li>Collect companies from various sources like:
-    <ul>
-      <li>Wishlists</li>
-      <li>Past recruiters</li>
-      <li>Organic converts</li>
-      <li>Internship</li>
-      <li>Engineering JAFS</li>
-      <li>Alumnus</li>
-      <li>CCL</li>
-    </ul>
-  </li>
-  <li>Collect preference list from students</li>
-  <li>Get contacts</li>
-  <li>Contact them reiteratively</li>
-  <li>Get them to Register or register them</li>
-  <li>Take JD from them and fill the JAF if HR is unable to do so.</li>
-  <li>Ask them iteratively to send the details for verification</li>
-  <li>Get the JAF verified from EO and EXO</li>
-  <li>Slot the companies</li>
-  <li>Negotiate slots with companies, PM and students</li>
-  <li>Open JAF for students for min 2 days</li>
-  <li>Put up a blog post for the same</li>
-  <li>Push JAF information on Whatsapp and contact some individual students who are not there on these platforms via email and phone</li>
-  <li>Solve student queries regarding JAFS and help them apply for the same</li>
-  <li>Push students to apply as they wont and wait for the last moment</li>
-  <li>Inform companies that the JAF has closed and assist them in downloading the resumes/portfolios</li>
-  <li>Push them to release shortlists, if any</li>
-  <li>Push shortlist on blog.</li>
-  <li>Inform students via Email/Whatsapp/phone calls</li>
-  <li>Get the tasks from companies, if any</li>
-  <li>Push the same on the blog</li>
-  <li>Assist students on logistics</li>
-  <li>Keep reminding late submitters</li>
-  <li>Collect tasks from all students and compile it</li>
-  <li>Send it to HR and push for another shortlist</li>
-  <li>Put the shortlist on blog</li>
-  <li>Inform students again about shortlists vis Whatsapp/ email/ phonecalls</li>
-  <li>Motivate and create hope</li>
-  <li>Keep converting companies and adding JAFS</li>
-  <li>Reopen JAFs if student to job probability falls or if companies want</li>
-  <li>Ask confirmed HRs to fill IRF and arrange/negotiate for logistics</li>
-  <li>co-ordinate with HRs about housing, food and travel</li>
-  <li>Make PPTs happen</li>
-  <li>Teach students how to fill preferences and get them filled</li>
-  <li>Search for SPOCs on the day of placement. Kids you have never met.</li>
-  <li>Get the floor plan made and SPOCs ready to turn up.</li>
-  <li>Mail the details to HRs. The HRs whom we mail often are not the same as visting or they do not check emails. So, text is a better option.</li>
-  <li>Solve queries regarding dress code and conduct</li>
-  <li>Prepare for your own placement and get rejected</li>
-  <li>Reach the venue as SPOCs wont reach on time.</li>
-  <li>Get the internet working</li>
-  <li>Serve water and tell them where tea is.</li>
-  <li>Be a pseudo SPOC for multiple companies till SPOCs turn up</li>
-  <li>Get print outs from control room to stick, if its open. If not, get it opened</li>
-  <li>Distribute kits from HRs</li>
-  <li>After 2 days, people give up. Encourage them to take it more positively</li>
-  <li>Push HRs to do the following:
-    <ul>
-      <li>Allow Walkins</li>
-      <li>Take more people</li>
-      <li>Give waitlist of atleast 3 people</li>
-    </ul>
-  </li>
-  <li>Ask students to not screw up for their friends</li>
-  <li>Sit for your own placement</li>
-  <li>Convert any last minute companies</li>
-  <li>Prevent Job loss</li>
-  <li>Serve or Ask for lunch</li>
-  <li>Share results with students on Whatsapp/email/phone/placementblog</li>
-  <li>co-ordinate with HRs:
-    <ul>
-      <li>to dole out offers</li>
-      <li>upgrade waitlist</li>
-      <li>send them student details repeatedly</li>
-    </ul>
-  </li>
-  <li>Prepare lists for phase 2</li>
-  <li>Make all video/audio interview happen if outside placement session</li>
-  <li>Maybe get blamed if students do not perform well in DRS/P3. Counting that as occupational hazard.</li>
-  <li>Phase 2 ?</li>
-</ol>
-
-<h2 id="suggestions-for-next-year">Suggestions for next year</h2>
-
-<ol>
-  <li>Unification of BDes and MDes placements</li>
-  <li>A CC from IDC + 2-3 DPC. One IC from each should ideally carry on.</li>
-  <li>Better communication with “legacy” companies</li>
-  <li>Process should start early. Team join by April end and Work start by July 1st week</li>
-  <li>Placement phase depends on BDes exchange timing.</li>
-  <li>Best is to intimate companies before Nov about dates and have it ideally before 2nd week of Feb to avoid clashes with M.Des P3 Process</li>
-  <li>Better division of work among all stakeholders- IDC DPCs, PMs, APCs and CCs</li>
-  <li>A small training session for IDCians would be great. It should teach some niceties of interviewing and how not to be gullible.</li>
-  <li>Japanese companies may be interested if, on-boarded early on</li>
-  <li>An improved slotting should be possible to avoid job loss</li>
-  <li>A placement team meet to introduce IDC DPCs/CC the process and people to contact as they usually end up bugging the PMs.</li>
-  <li>Placement Session that educates students about the process and things to say and not to say.</li>
-  <li>A category in type of companies as <em>Design</em> along with RnD/FMCG etc.</li>
-  <li>SPOCs should report on time and send a greeting message whenever they are alloted the company.</li>
-  <li>Automation of a lot of tasks like printing etc can be done from the portal.</li>
-  <li>A separate section on the JAF filling portal for Design as usually companies complain that they cannot find the MDes or what to choose.</li>
-  <li>Consider a paid placement for companies and free/reduced fee for students.</li>
-  <li>Scrap the idea of two phase placements. They do not work as students loose interest, have too much work, DPCs academics get affected and may be scolded and rebuked by authorities.</li>
-  <li>Smoothen the JAF verification process. It takes a lot of time to get JAFs verified.</li>
-</ol>
-
-<p>Best,</p>
-
-<p>Rohit</p>
-<a href="/2017/12/01/BeingDPC/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr
