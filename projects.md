@@ -2,6 +2,8 @@
 layout: page
 title: Projects
 ---
+<h3>Portfolio</h3>
+Sorry, The portfolio has moved. If you came from the CV, the new [link  is this](http://rohitg.in/portfolio/). 
 <h3>Notable Works</h3>
 <div class="projects">
 
