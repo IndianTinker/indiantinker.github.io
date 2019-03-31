@@ -274,6 +274,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -314,6 +318,65 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/12/03/fand/">
+        FAND - shareable haptic foot interface device
+      </a>
+    </h1>
+
+    <span class="post-date">03 Dec 2017</span>
+
+    <blockquote>
+  <p>The project research was presented at IEEE SeGAH 2018, Vienna in a paper published as <a href="https://ieeexplore.ieee.org/abstract/document/8401321"> Gupta,R. &amp; Dalvi, G (2018, May). FAND: A shareable haptic foot interface device. </a> .</p>
+</blockquote>
+
+<p>FAND (Foot associated neural device) is a haptic interface device that allows users to operate a computer (or certain applications) using all four limbs. The device uses user trained motion gestures that are bound to actions on a compatible application. One may be surprised to know that foot is only 10% less accurate than the hand. The interaction model developed in the project divides a task in a primary action and a secondary action. The primary, high priority and accurate task is handled by the hand, while the secondary tasks are handled by the foot. Devices like these are useful in times when most of our interaction are performed by the hands. This has increased the physiological load on hands. The possible applications are in applications like creative apps, Walking in Place (WIP) interactions in VR, and gaming. I evaluated the device by comparing it with a novel hand interaction device. In the study it was found that the foot device offers comparable learning and may be considered as a possible modality.</p>
+
+<p><img src="https://i.imgur.com/Vxondpp.png" alt="Imgur" /></p>
+
+<p>The video demonstrating the concept is shown below:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ByvJjlRdu9M" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<h4>User Persona</h4>
+<p><img src="https://i.imgur.com/N2sgquh.png" alt="Imgur" />
+<img src="https://i.imgur.com/W7SAryx.png" alt="Imgur" />
+<img src="https://i.imgur.com/v5pzbJk.png" alt="Imgur" /></p>
+
+<p>Several explorations and ideation were done in light of previous works and user studies conducted. The final report is be available <a href="https://drive.google.com/file/d/1CH4XgkzvzWaVjZDxJgtrWlma4ZTeb1hH/view?usp=sharing">here</a>. This report was made in Google Docs. ProTip: Do not use google docs of large documents. I never use google docs for more than 10 pages.</p>
+
+<p>The post only covers some parts of a rather long design process (~ 6 months). I tried several techniques to understand the design of gesture systems. I did a <a href="https://faculty.washington.edu/wobbrock/">Wobbrock</a> style study to derive the guess-ability of certain guestures. The users were should de-contextualized prompts to certain interactions and were asked to come up with responses. I would encourage reading the paper by Wobbrock et al.</p>
+
+<p>The prompts were like the below for zoom:
+<img src="https://i.imgur.com/AfqMZQs.gif" alt="Imgur" /></p>
+
+<p>Based on my <strong>user set</strong> the gesture set was as follows. One can obviously spot the similarities between these interactions and interactions performed by hands. Many users agreed that they performed the most natural interactions they could think of.
+<img src="https://i.imgur.com/P87F5J1.png" alt="Imgur" /></p>
+
+<p>The gesture set was used with the following <em>design requirements</em> to come up with several concepts.
+<img src="https://i.imgur.com/1VtQrY4.png" alt="Imgur" /></p>
+
+<p>The most dominant concept was of a shareable foot accessory that was prototyped. The process of prototyping was done separately for both form and function.</p>
+
+<p>Form variations considering sharing and multiple foot types
+<img src="https://i.imgur.com/OuFxiwN.png" alt="Imgur" />
+<img src="https://i.imgur.com/fokP6Um.png" alt="Imgur" /></p>
+
+<p>Functional Prototype made using Arduino running thresholding and a simple wave pattern recognizer algorithm on the data of a MPU6050 gyro sensor</p>
+
+<p><img src="https://i.imgur.com/TGOhCAQ.png" alt="Imgur" /></p>
+
+<p>The prototype was tested with users using a true experiment design. The results showed that F(4,20) at p&lt;0.05 the device when compared to a new type of hand device like trackpoint has statistical significance (repeated measures ANOVA).Hence, both devices have similar learnability.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2017/12/03/fand/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -614,56 +677,6 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
 
 <p>Rohit</p>
 <a href="/2017/09/10/DataViz/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/09/03/whowe/">
-        Who you are is what you get
-      </a>
-    </h1>
-
-    <span class="post-date">03 Sep 2017</span>
-
-    <blockquote>
-  <p>A published paper on this work can be read <a href="http://ifip-tc13.org/wp-content/uploads/2017/09/INTERACT_2017_Adjunct_FINAL.pdf">here</a> on page 132.</p>
-</blockquote>
-
-<p>Information seems to have affected the pace of human evolution. Early humans could remember more information than the modern man. We today live in a world where information is ubiquitous and externalized. With ambient connectivity, this seems to have lead to a reduced information storage in biological memory. Hence, information is ambient. The ease and implementation of search engines has affected the inherent confirmation bias. This leads to a lack of objectivity in the information presented. Through the means of this installation, I intend to show the biased nature of modern pursuit of information. The mirror reflects what a user is and not what maybe true.</p>
-
-<h4>Installation Design</h4>
-
-<p>The participant cannot interact with the screen in any way. However, the screen and the mirror make the overall design open to interpretation. Some participants may ignore the presence, but some may figure out the true metaphor.The mirror reflects the participant and the search results she expects are filled with ”you may  like”  items.  It  is  a  search  that  pleases  and  not  enlightens. The  search  is so personalized that it ’reflects’ your identity. But that metaphor is not a single authoritative interpretation but rather may lead to multiple heterogeneous interpretations as explored by Sengers et. al. The device was exhibited on an office table at the venue. I hope that this artifact can help trigger a sense of uneasiness and encourage the participants to think on issues like privacy and biased nature of information they consume.</p>
-
-<p>In order to present the precious and dear nature of our engagement with search engines, I painted the monitor in gold.</p>
-
-<h4>Prototyping</h4>
-
-<p>Painting the monitor gold
-<img src="https://i.imgur.com/teVTNtM.jpg" alt="Imgur" /></p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dnAufVPr7P8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-
-<p>Had some help from the paint studio after messing up the first coat.
-<img src="https://i.imgur.com/x9ireNm.jpg" alt="Imgur" /></p>
-
-<p>Fixing the one way glass
-<img src="https://i.imgur.com/gp38MXV.jpg" alt="Imgur" /></p>
-
-<p>Checking the reflection
-<img src="https://i.imgur.com/N5ErrCV.jpg" alt="Imgur" /></p>
-
-<p>At the conference
-<img src="https://i.imgur.com/JnJgXkG.jpg" alt="Imgur" /></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/interact2017/37474673211/in/dateposted/" title="DSC_3938"><img src="https://farm5.staticflickr.com/4448/37474673211_ce60a32935_z.jpg" width="640" height="428" alt="DSC_3938" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-<a href="/2017/09/03/whowe/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

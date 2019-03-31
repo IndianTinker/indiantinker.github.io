@@ -274,6 +274,10 @@
           
         
       
+        
+          
+        
+      
 
    <!--
     <a class="twitter-follow-button"
@@ -314,6 +318,75 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/07/22/UberCube/">
+        UberCubeX4- The portable LED Cube !
+      </a>
+    </h1>
+
+    <span class="post-date">22 Jul 2014</span>
+
+    <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen=""></iframe>
+
+<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig" /></a></p>
+
+<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac" /></a></p>
+
+<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard" /></a></p>
+
+<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping" /></a></p>
+
+<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
+<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST" /></a></p>
+
+<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB" /></a></p>
+
+<p>The Soldered one!
+<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB" /></a></p>
+
+<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm).</p>
+
+<p>Power Switch and DC Jack for power.
+<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1" /></a></p>
+
+<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
+
+<p>Cheers !
+Rohit</p>
+
+<p><strong>Update: </strong></p>
+<ul>
+	<li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
+	<li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
+	<li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
+	<li><strong>Won: University level "Open H/W" competition</strong></li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+<a href="/2014/07/22/UberCube/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -462,81 +535,6 @@ IndianTinker</p>
 
 <p><span style="line-height:1.5;"> </span></p>
 <a href="/2014/04/07/OpenAgitator/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/04/01/Solaris/">
-        Indian Solar Car Project
-      </a>
-    </h1>
-
-    <span class="post-date">01 Apr 2014</span>
-
-    <blockquote>
-  <p>This post describes the work done during my time as Electrical Design Head at Team Solaris of Delhi Technological University. We participated in two global competitions and our cars were flagged off and parised by the President of India.</p>
-</blockquote>
-
-<p><a href="https://timesofindia.indiatimes.com/city/delhi/DTUs-solar-car-goes-to-Australia/articleshow/10025011.cms">Times of India</a> reports : 
-<img src="https://i.imgur.com/gSshu01.png" alt="Imgur" /></p>
-
-<p><a href="http://archive.indianexpress.com/news/dtu-students-develop-solar-car-for-race-in-oz/848142/">Indian Express</a> reports:
-<img src="https://i.imgur.com/B1Lw36r.png" alt="Imgur" /></p>
-
-<h4>Context</h4>
-<p>Ten engineers passionate about making a robust vehicle that runs long distances on solar electric energy.  With almost no funds and no technical expertise in any areas on designing a car, we had to make a path of our own, amidst no support from industry.</p>
-
-<h4>Work</h4>
-<p>I was selected in the team in my first year. It was a cool feeling. We had to showcase the car and drive 3000km across Australia (Darwin—Adelaide). No amount of background is enough for the project, but I will try to keep it as concise as possible. In the initial year, I was responsible for working on telemetry and solar array fabrication of the car. I was a somehow a self-made in-charge of designing the logo, brochure, and posters for the car too. I still don’t know why did I choose those batman fonts. I guess we all are naive at some stage. The first car building was entirely funded by our college and ourselves. It was launched by the Chief Minister of the state and we received a lot of good reviews for our sleepless nights and misadventures. I had documented the process in my old blog. The stages were :</p>
-
-<ul>
-  <li>
-    <p><a href="https://indiantinker.wordpress.com/2012/03/11/the-wsc-story-chapter-1-buildup/">Building</a></p>
-  </li>
-  <li>
-    <p><a href="https://indiantinker.wordpress.com/2012/03/25/wsc-story-chapter-2-con-course/">Shipping</a></p>
-  </li>
-  <li>
-    <p><a href="https://indiantinker.wordpress.com/2012/06/14/the-wsc-story-chapter-3-assemble-royal-rumble/">Running</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.youtube.com/watch?v=bjHEYckl8xI">Finishing</a></p>
-  </li>
-</ul>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bjHEYckl8xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>Our goal was to learn how to make a car that runs on solar power. We built, failed, burned, and rebuilt our own converters and circuits. Learned by doing and breaking things. Our hands were always dirty and mind always busy solving some problems.  Finally, we did build a working car, certified to run on international roads.  The race in Australia was great. We had the lowest cost car in the competition. Or we did not know why things could be so expensive. The cost of competing was more than the cost of building the car for us. The rough estimate is about 10 times cheaper. We did complete the race, but our mileage was about 11%. Crossing the line mattered a lot to us, sweating it out to learn and without support from the industry. We built a parent-sourced car.  In the next year, we decided to build a more utilitarian passenger car. Our previous failures helped us and we were able to build one in record time. This time we used curved panels adapted to our body too. We learned this from friends from Germany, Singapore, and Iran while in Australia. The current car drew more attention and was inaugurated by the President of India, Pranab Mukherjee. It was faster and a bit conventional. I hope we furthered the thinking in this space with our work. In the end, we moved out of the team and the juniors carried it on. Some of the people in the team now work for good automotive companies like Tesla, Tata Motors, Hero, and Google.</p>
-
-<p><img src="https://i.imgur.com/ssQ2e0k.jpg" alt="Imgur" /></p>
-
-<p><img src="https://i.imgur.com/0PDbXMz.jpg" width="310" />
-<img src="https://i.imgur.com/WmL4JjD.jpg" width="310" /></p>
-
-<p><img src="https://i.imgur.com/74vIv8q.jpg" alt="Imgur" /></p>
-
-<p><strong>Learnings</strong>: The learnings were immense. We traveled to Australia and camped in deserts, in forests and wherever we stopped. I have tons of stories to tell about these things. We had to manage a lot of finances ourselves. So, we learned cost analysis down to the component level. I learned a lot on DIY, making, and electronics in general. This helped me with my hobbies and work under Prof. Gadre. The experience made me realize the value of working in a team. We all slogged and made it through.</p>
-
-<p><img src="https://i.imgur.com/j1YXM5t.jpg" alt="Number Plate" /></p>
-
-<p><strong>Media Coverage</strong>:</p>
-<ul>
-  <li><a href="https://www.oneindia.com/2012/09/04/prez-pranab-mukherjee-flags-off-dtu-passenger-solar-car-1064777.html">One India reports “President flags off DTU passenger Solar Car”</a></li>
-  <li><a href="https://economictimes.indiatimes.com/pranab-mukherjee-flags-off-eco-friendly-solar-car-codenamed-solaris/articleshow/16251837.cms">Economic Times says “Pranab Mukherjee flags of eco-friendly solar car”</a></li>
-  <li><a href="https://timesofindia.indiatimes.com/home/education/news/President-Pranab-Mukherjee-flags-off-DTUs-solar-passenger-car/articleshow/16257621.cms">Time of India reports “President flags off DTU solar car”</a></li>
-</ul>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NGqWBJI3SjA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p><strong>Skills</strong>: Engineering, Sourcing, and Management</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2014/04/01/Solaris/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr
