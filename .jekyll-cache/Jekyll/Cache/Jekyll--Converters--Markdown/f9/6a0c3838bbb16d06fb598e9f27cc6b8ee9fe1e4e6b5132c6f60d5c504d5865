@@ -1,0 +1,102 @@
+I"1$<blockquote>
+  <p>(I literally had to google the date to name this file. It is 2021 and not 2020. 🤭)</p>
+</blockquote>
+
+<p>Hello all,</p>
+
+<p>I dearly apologize for the delay in maintaining this piece of internet that I own. I have been a bad gardener and my flowers have wilted. Thanks to all those who came by in the past year to see things here. There is nothing to complain about for my absence. But, I will try to write more regularly in any case. This post describes what I have been up to for the past 2 years and my plans to keep this garden running.</p>
+
+<!--more-->
+
+<h2 id="where-this-blog-is-headed">Where this blog is headed</h2>
+
+<h3 id="style">Style</h3>
+<p>I plan to write shorter and more structure content, in general. The attention spans are on a drop and I tend to get carried away (Like I was about to .. ).  I will still keep the informal style as that who I am as a person. My english writing skills are a bit rusty so that might some oiling as well. (totally forgot the ‘need’)</p>
+
+<p>The use of graphics and hand-drawn imagery are planned to be introduced soon. (That is how coat people talk)</p>
+
+<p>The best of all, I will try experimenting writing in Spanish from Spain as well. Usually super short articles to get a hang of it.</p>
+
+<p>Also, some emoji, memes, and gif garnish is included.
+<img src="https://static.boredpanda.com/blog/wp-content/uploads/2020/05/5ece0a3116bf0_5nioqb03cp051-png__700.jpg" alt="image" /></p>
+
+<h3 id="content">Content</h3>
+
+<p>Rants, Rants and many more rants. Just kidding. The topics, I plan to cover are :</p>
+<ol>
+  <li>Creative Technology ― My usual hacks on getting things to talk to each other, crawler keywords : IoT, Processing, OSC, Generative Design, p5js, Web Development  etc</li>
+  <li>Critical Technology ―  Using technology as a medium to critique our human condition. Usually being reflective about things and using tech to express that. It involves use/abuse/misuse of technology. <a href="http://rohitg.in/equal/">This project</a> is an example.</li>
+  <li>Electronics ❤️ ― How to do this, blah..blah posts. Plus, 🥁, I have my own 3D printer now. So, something here and there</li>
+  <li>Reflections ― Usually about immigration, (de)colonization, design, thinking and post-modernity, Slavoj Žižek etc. I see things, I do things, Gotta be reflective about it, innit?</li>
+  <li>Poems ― Oh yes, sad stuff. But ya’ll are getting them. I usually ‘bundle’ a visual with my poems now like <a href="https://www.instagram.com/p/CHtSyxwK1EJ/?utm_source=ig_web_copy_link">this</a>.</li>
+  <li>Art  ― <a href="https://www.hicetnunc.xyz/tz/tz1WoP8aviKa6jgFnjKYnRjtYq3DHcxS9hZ6">NFTs</a> and not so NFT</li>
+</ol>
+
+<h3 id="technology-stack">Technology stack</h3>
+
+<p>Its a bummer. I am using Jekyll. Its good but I miss hot reloads and publishing on the go. So, my plan is :</p>
+<ul>
+  <li>Try to move to a headless CMS that uses GraphQL and markdown. I love JAMstack. It appeals to the person inside me. Currently testing things out with GraphCMS.</li>
+  <li>Redesign the page templates probably using tailwind and/or webflow.</li>
+  <li>Use Nuxt.js and deploy on Netlify using some CI/CD from Github.</li>
+  <li>Homogenize with my <a href="http://rohitg.in/portfolio/">portfolio</a></li>
+  <li>Keep writing here until then.</li>
+</ul>
+
+<h3 id="frequency">Frequency</h3>
+
+<p>Lets skip this. But, I will try.</p>
+
+<h2 id="how-have-i-been-doing">How have I been doing</h2>
+
+<p>… mostly losing hair, and</p>
+
+<h3 id="professionally">Professionally</h3>
+<p>I completed my internship and diploma at IED Madrid. I was grateful to have met so many cool people during that time. The way design is taught here and in India is a bit different. I am happy to have experienced that. Maybe, I will write about it someday.</p>
+
+<p>After my master, I decided to stay. But, the nature of the world, if you may say, does not allow that. You,a foreigner from a not-allowed country, cannot just decide to stay. Thankfully, my university helped and gave me a few months to get an extension filed and look for work. I eventually applied for 317 jobs and wrote 53 cover letters and appeared for 7-8 interviews. I was willing to work where I will do ‘my-kind-of’ work and not ‘their-kind-of’ work. Having learned this long time back and some parting tips from my design prof.</p>
+
+<p>It was a bit tough. But I kept being rejected,</p>
+<ul>
+  <li>either due to lack of experience (I had about 2 years of professional exp and 5 years if they consider my startup), or</li>
+  <li>or Skillset mismatch (‘How can one apply for an Experience Design position and not have designed apps?’)</li>
+  <li>or effort/uncertainty required on the company’s side to do paperwork for me (My friends in the US, Europe is a different ball game. Not sure exactly why though.)</li>
+  <li>Or due to both (Companies don’t usually hire a less experienced person from abroad. However, they do overestimate the organizational effort to do so. Let me know, if I can help.)</li>
+</ul>
+
+<p>So, after some frank calls with recruiters who asked me that it could be difficult as they have never recruited like that in Spain. I was pretty much in ruins. I remember sitting in <em>Casa de campo</em> nearby the <em>lago</em> and ruminating sadly. I then started applying to China as they are the center of what I call ‘downstream innovation’ (I should write about this lens of looking sometime). There was some interest but then maybe I was not so sure.</p>
+
+<p>I also started applying, but more strategically in EU. I got my work reviewed from friends and strangers on reddit who helped me zero in on the profiles. One day, when I was on a bus back from an interview, my buddy, Gustav, said that this cool company — Propelland was looking for someone. I checked the post and sent Sid, the co-founder, a message who asked me to apply right away. I got interviewed a few times and eventually got an internship. The team was amazing and very kind. I was client calling few days before I joined. They, however, still did not knew, how to hire a non EU foreigner, but were willing to take the leap of faith. After months of talking to other friends I was able to find good lawyers and managed to collect about 200 sheets of papers from India (Delhi, Pune, Mumbai) and Spain (Madrid, Barcelona).</p>
+
+<p>Then after 10 months of applying, I got a VISA to work for about 2 years (about 6 months late due to CoVID ). So, yeah. I work at <a href="https://www.propelland.com/">Propelland</a> in Spain as a designer and technologist. I spend days designing and building prototypes. Thanks to everyone who helped me and I am very grateful. The whole company is as big as my team in the last company (30 ppl tops) and I know all of them (unless someone joined last night). Its a big family. I work with cool and humble people based across 3 continents. We are also hiring in US and Mexico. So, lemme know.</p>
+
+<h3 id="emotionally">Emotionally</h3>
+
+<blockquote>
+  <p>Thanks for sticking till here</p>
+</blockquote>
+
+<p>Frankly, it has been very hard. I seem to be living at the edge, both as a person and sometimes even in terms of means. There has been this feeling of compression. I felt so compressed and mutated. It has been like going through a trauma. People in power underestimate the emotional cost a person has to pay to do things. I felt the whole process felt way harder than it seemed and drained me. I was entirely ignorant and being rational was painful. Plus, not many people really understand this. So much so, that when I got the permission to work, I was not really happy. Over the time,</p>
+<ul>
+  <li>the endless wait to get your paperwork so you can stand confidently</li>
+  <li>the passive racism and staring in the streets</li>
+  <li>a terrible romantic end</li>
+  <li>unending attempts to make friends and feel a part of the group</li>
+  <li>CoVID</li>
+</ul>
+
+<p>had lead to the erosion of myself. The annihilation of self leads to another rootless-manufactured self (very dialectical). There were several hidden breakdowns. I felt I needed some help to emotionally restructure myself rather keep iterating. Thankfully and gratefully, the few people I talk to were very receptive and helped me through it. It is hard, but I guess, that is what I signed up for. Things are better now and hence, I write. 🥳</p>
+
+<p>I would not really recommend someone going through this. 
+<br /><br />
+The bubble of a tech-worker my other friends abroad seem to live in a safer option than my bubble (in this bubble world 💬). But, I don’t value that personally as it is not intriguing enough. Plus, stoicism man! and also Mr. Taleb’s Anti-fragility are cool concepts to think about.
+<br /><br />
+Also, a new ritual. I will embed a tweet at the end of every article now.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Man, Design is hard. Design Thinking!? Not so much</p>&mdash; Rohit Gupta (@rohit7gupta) <a href="https://twitter.com/rohit7gupta/status/1367376933865082884?ref_src=twsrc%5Etfw">March 4, 2021</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Anyways, Cheers y <em>hasta luego</em></p>
+
+<p>— Rohit</p>
+
+:ET

@@ -2,6 +2,7 @@
 markdown:         kramdown
 highlighter:      rouge
 plugins:	[jekyll-paginate, jekyll-gist]
+theme: minima
 
 # Permalinks
 permalink:        pretty

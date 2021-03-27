@@ -27,7 +27,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/page9/" />
+  <meta property="og:url" content="http://rohitg.in/page9/" />
 
 
 
@@ -147,7 +147,7 @@
         
       
         
-          
+      
         
       
         
@@ -276,6 +276,12 @@
       
         
           
+        
+      
+        
+          
+        
+      
         
       
 
@@ -318,6 +324,156 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/06/03/local/">
+        Local - Gamification in participatory GIS
+      </a>
+    </h1>
+
+    <span class="post-date">03 Jun 2017</span>
+
+    <blockquote>
+  <p>This project was done as a part of “Interaction Design - 1” course taught by Prof. Ravi Poovaiah at IDC. The team members were <a href="https://www.behance.net/silpa_murali">Silpa</a> and <a href="https://www.behance.net/udayanvidyanta">Udayan</a>. The live version is hosted <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
+</blockquote>
+
+<p><strong>Design Brief</strong></p>
+
+<p>The design brief was to come up with a design solution for a local problem. We are asked to come up with a <em>designerly response</em> to things we all face around us. We choose the context of streets and street vendors. In the search engine age, what is not searchable is not there. The street vendors and other microservice providers are often not aware of this ecosystem or do not have the means to do so. They also have a more legacy customer base, which they say is depleting due to online service providers. A shop on ground is better than a page on the cloud. But, these shops are difficult to find for non locals.</p>
+
+<p><strong>Secondary study</strong></p>
+
+<p>We studied various models of streets. There has not been enough work done in the domain of getting local shops online and the problem is of specific importance to Indian context where there is a transition happening as far as ICT is considered. Dominant means include: Sensors, People and Documents.Information may generate insights which can be used to create a feeback that can help sustain the systems. Data gathering is not of huge concern in the west due to already proliferation of phones etc.</p>
+
+<p>Based on famous Stanford paper titled “Twitch Crowd sourcing:Crowd Contributions in Short Bursts of Time” The author argues about micro-contribution and channel factors He lays down his design based on availability, low time, low cog load, Value to the user,feedback, privacy and longevity of experience. Various engaging means of crowd-sourcing information that can be actively contributed or inferred by activities. It is needed to be aligned with users goals and hence a balance of incentive vs motivation should be used. Incentives are not sustainable and motivations are challenging to design.</p>
+
+<p>Gamification has huge possibilities in the domain of crowdsourcing. Several references show that using gamification models in the crowdsourcing domain can result in huge motivation like Pokemon Go and 4Sq have already done.</p>
+
+<p><strong>Primary study</strong></p>
+
+<p>We tried to understand the activities on the street by conducting a field study in powai and kurla regions.
+<img src="https://i.imgur.com/WN2rHtj.png" alt="Imgur" /></p>
+
+<p>In our study we noticed how adoption of digital means is affecting sales. This is a street fruit vendor who accepts cards and has a website. He offers services like delivery and online shopping. He prices his goods higher than other vendors and still is able to make decent profits.
+<img src="https://i.imgur.com/2t2w9gs.png" alt="Imgur" /></p>
+
+<p>After the field study, we collected our findings in a mind-map.
+<img src="https://i.imgur.com/QZ8ntbQ.png" alt="Imgur" /></p>
+
+<p>We also asked ourselves some questions based on what we observed.
+<img src="https://i.imgur.com/B5Baq9S.png" alt="Imgur" /></p>
+
+<p>Finally, we came up with a problem concept map to crystallize the situation on the street.
+<img src="https://i.imgur.com/5Dhk5Kf.png" alt="Imgur" /></p>
+
+<p>We came up with the modified brief of “How might we help micro level data of local shops using principles of participatory GIS?”
+We planned on structuring the system such that we require less input from more users as opposed to asked more questions from less users. This would be our solution map.</p>
+
+<p><img src="https://i.imgur.com/WrDOrIl.png" alt="Imgur" /></p>
+
+<p>We imagined the following persona’s that would use our system.
+<img src="https://i.imgur.com/qdjkcdm.png" alt="Imgur" /></p>
+
+<p>Hence, our system was divided into two verticals. One vertical would concentrate on helping people search local data and other vertical would help gamify the collection of data points from crowd.</p>
+
+<p>The UI walkthrough for the web interface (by Udayan) is as follows:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4KZPoY2enfs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p>The UI walkthrough for the Local game app (by Silpa) is as follows:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4wsBIY4HUco" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p>We allowed multiple users to rate the same activity and asked multiple users different questions to ascertain attributes of a particular location.</p>
+
+<p><strong>Some UI samples</strong></p>
+
+<p><a href="https://imgur.com/vsgiNcc"><img src="https://i.imgur.com/vsgiNcc.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/VmNciRR"><img src="https://i.imgur.com/VmNciRR.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/yGm3ZAE"><img src="https://i.imgur.com/yGm3ZAE.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/fhypt0K"><img src="https://i.imgur.com/fhypt0K.png" title="source: imgur.com" /></a></p>
+
+<p><strong>Prototype</strong></p>
+
+<p>We went forward to create an implementation of the actual system. The architecture was as follows:
+<img src="https://i.imgur.com/kny2Yld.png" alt="Imgur" /></p>
+
+<p>We used a python based service that would scan accounts of particular members on instagram and classify tags. These tags were then used to plot the same as tool tips on a mapbox render. The same was updated realtime on an amazon s3 server <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
+
+<p><img src="https://i.imgur.com/Wan5h4o.png" alt="Imgur" /></p>
+
+<p><img src="https://i.imgur.com/dmPV2Zl.png" alt="Imgur" /></p>
+
+<p><strong>Contributions</strong> The project was done with Silpa and Udayan.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2017/06/03/local/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/06/02/PoemSleeping/">
+        Sleeping Dawn
+      </a>
+    </h1>
+
+    <span class="post-date">02 Jun 2017</span>
+
+    <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/34974278651/in/dateposted-public/" title="postpic"><img src="https://c1.staticflickr.com/5/4286/34974278651_da7402d3ca_z.jpg" width="640" height="426" alt="postpic" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I wake up the dawn, <br />
+from its quiet shambles.<br />
+Like a wanderer on road,<br />
+With his screechy corners.</p>
+
+<p>The world lays lost,<br />
+in the dreams they believe .<br />
+I sit there awake,<br />
+dreaming to believe.</p>
+
+<p>The wind i feel,<br />
+sweeps me away.<br />
+In its gusts it follows me,<br />
+To the worlds i never foray.</p>
+
+<p>Sometimes i feel,<br />
+I should have said.<br />
+Those words i had,<br />
+she might have read.</p>
+
+<p>May be it was a sad,<br />
+that those winds never blew.<br />
+May be it was great,<br />
+those things i never drew.</p>
+
+<p>There will be a dawn soon,<br />
+to help us with the light.<br />
+To give us all the hope,<br />
+and bless us with the might.</p>
+
+<p>Until that dawn,<br />
+I have to wait.<br />
+Search in the world,<br />
+and try my fate.</p>
+
+<p>A day may come,<br />
+when I wake the dawn.<br />
+Welcoming a new world,<br />
+Then I shall carry-on.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2017/06/02/PoemSleeping/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -372,191 +528,7 @@ window.twttr = (function (d, s, id) {
 <hr>
   </divr
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/04/03/HeyHappy/">
-        Hey Happy !
-      </a>
-    </h1>
-
-    <span class="post-date">03 Apr 2017</span>
-
-    <blockquote>
-  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Interaction Media and Senses</strong>. The project was done during the <em>social</em> phase of the course that involved Sensory, Cognitive and Social parts with <a href="https://www.behance.net/silpa_murali">Silpa</a> and <a href="https://www.behance.net/pallavimon3e2c">Pallavi</a></p>
-</blockquote>
-
-<p>The users we choose to represent were kids in the age group of 6-12 years. The project started with an initial primary studies in the social activities of school kids obtained using interviews from campus schools and anecdotes by relatives in the similar age group. We used design techniques like <strong>one day in the life of</strong> and user-journeys to understand the ecosystem a child experiences today. We were certain enough to conclude that things have changed since we were kids. The kids these days are rather lonely due to changing family systems and less attention by busy parents.</p>
-
-<p>We tried to understand the behavior of kids in terms of cognitive and social development. This helped scope the problem to the emotional development of kids.</p>
-
-<p>We had several initial concepts like :</p>
-
-<ol>
-  <li>A tangible imaginary friend called Poko. The friend would keep the child company and engage in conversations.</li>
-  <li>Multiplayer Jigsaw games that would require multiple kids to sit together. These games are known to increase social interaction, especially in introvert kids.</li>
-  <li>A digital representation of the penpal system. This would simulate the behavior and experience of posting a letter and anticipating its reply. Artificial delays will be introduced in the system to enable the kids to understand how a letter typically travels geographically. Kids can draw and write on a parent’s tablet device. The kids in our survey had access to such devices. The penpals would be kids relatives or other grandparents.</li>
-  <li>A sharable toy economy. In this system, kids share toys with other toys such that the number of games when played together increased. A specific set of games could be played with a particular toy. This could help increase interaction and sharing behavior in kids.</li>
-  <li>An emotional calendar for kids. Kids in the study were found to live in an emotional vacuum. They found it difficult to express their feelings with parents as they were often not around and busy. The friends of the kid, curated by parents, give them notes/song/drawings when sad. The kid can pin some of their favorite ones on their pinboard. This could at-least allow the child to express herself. The parents would know and can then initial the conversation to understand the condition.</li>
-</ol>
-
-<p>Out of the above, 5 concepts, emotional calender was chosen for further development as it seemed less intrusive and could bring the problems of the kids in the purview of their parents. This could increase the parents concern.</p>
-
-<p><strong>Scenario- Hey Happy !</strong></p>
-
-<p>A social interface that allows kids to share emotions on a minimal calendar like interface. Kids can make other kids happy by sending them creative artifacts made by them.</p>
-
-<iframe src="https://player.vimeo.com/video/243290586" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p><a href="https://vimeo.com/243290586">HeyHappy!</a> from <a href="https://vimeo.com/thepensil">Silpa Murali</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-<p>The concept map of the interface was as follows:</p>
-
-<p><img src="https://i.imgur.com/Sp86FQm.png" alt="img" /></p>
-
-<p>The information architecture for the above concept was
-<img src="https://i.imgur.com/T1nPNxq.png" alt="img" /></p>
-
-<p>Some Low-Fid prototype screens were as follows:</p>
-
-<p><img src="https://i.imgur.com/v7eXnbf.png" alt="img" />
-<img src="https://i.imgur.com/L2hXXpu.png" alt="img" /></p>
-
-<p>We moved to the high fidelity prototype screens:</p>
-
-<p><img src="https://i.imgur.com/prFf8g3.png" alt="!img" />
-<img src="https://i.imgur.com/GySavOt.png" alt="!img" />
-<img src="https://i.imgur.com/VQ6r4J0.png" alt="!img" />
-<img src="https://i.imgur.com/LPTp6nS.png" alt="!img" /></p>
-
-<p>The click through is linked <a href="https://marvelapp.com/14cd9e2/screen/16152300">here</a>.</p>
-
-<p>We even wrote a paper on the same that can be read <a href="https://drive.google.com/file/d/1rg8e75RktpJFwHpr5XS6ZZg2uUXQ0MBk/view?usp=sharing">here</a>.</p>
-
-<p><strong>Contributions</strong>
-The initial prototype screens were made by <a href="https://www.behance.net/silpa_murali">Silpa</a>, the high fidelity screens were worked on by both <a href="https://www.behance.net/pallavimon3e2c">Pallavi</a> and me. <a href="https://www.behance.net/pallavimon3e2c">Pallavi</a> created the clickable.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-<a href="/2017/04/03/HeyHappy/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/04/03/CityBot/">
-        City Bot, may i take your order please
-      </a>
-    </h1>
-
-    <span class="post-date">03 Apr 2017</span>
-
-    <blockquote>
-  <p>This post describes the work done as a part of a course I took at <em>School of Design, IIT Bombay</em> . The name of the course is <strong>Interaction Media and Senses</strong>. The project was done during the <em>cognitive</em> phase of the course that involved Sensory, Cognitive and Social parts with <a href="https://www.behance.net/udayanvidyanta">Udayan</a> and <a href="https://www.behance.net/vineetkamboj">Vineet</a></p>
-</blockquote>
-
-<p>The concentration of the session was developing a solution around the idea of the smart city in Indian context. The idea of a smart city is quite relevant in the <em>data religious societies</em> we live in today. We started by asking ourselves questions on the very basis of a smart city. What is the need? Who will benefit from it? Could it become a parallel data city? Can we pre-empt the behaviors while staying ethical? What are the ethics of using data? Why would the user share her data? Clouded with these questions, we had a slow but informed start in the project. We tried to understand the city better by travelling on the Mumbai local iteratively and talking to various people and their ideas about future, present and expectations.</p>
-
-<p>We found two predominant views to the smart city systems:</p>
-
-<ol>
-  <li>Digitally instrumented devices embedded in the city fabric</li>
-  <li>Building a city smarter by making the citizens</li>
-</ol>
-
-<p>The first one is a more capitalist view point and may be useful in higher affording economies.It considers high affinity to technology with citizens. It can be a <a href="https://www.theatlantic.com/daily-dish/archive/2010/10/western-educated-industrialized-rich-and-democratic/181667/">W.E.I.R.D</a> concept and is essentially top down. The second view is a bottoms up approach. It considers making a people smart would make a city smart. More sustainable and holistic in approach and is people driven.</p>
-
-<p><strong>Restructured Design Brief</strong></p>
-
-<p>How might we create an interface that enables Mumbai citizens to talk to the city ?</p>
-
-<p>We concentrated on our efforts to make a city smarter by making its citizens more active about their responsibility towards the city. The design goals were :</p>
-
-<ul>
-  <li>Help citizens contribute as sensors</li>
-  <li>Make reporting problems easy by preserving the emotional spur</li>
-  <li>Present local insights and knowledge harnessed from the crowd</li>
-  <li>Improve transparency between stakeholders in a city</li>
-  <li>Provide a platform for citizens to discuss problems and share information.</li>
-</ul>
-
-<p>Some of the concepts we explored were:</p>
-
-<ol>
-  <li>Nagrik App :Contextual Content pushed to user based on:
-    <ul>
-      <li>Type of User</li>
-      <li>Behavior of user</li>
-      <li>Place he is in (using Beacon Technology)
- Crowd Management and Resofaurce monitoring
- People can add more services</li>
-    </ul>
-  </li>
-  <li>City Kiosks :
-    <ul>
-      <li>Low power KIOSKS provide basic computing to citizens</li>
-      <li>Run on solar power; use an ARM CPU with custom mod</li>
-      <li>Allow Citizens to interact with public services and data</li>
-    </ul>
-  </li>
-  <li>Gamification of City Life :
-    <ul>
-      <li>Encourage citizen participation by designing a game around the city</li>
-      <li>Citizens explore city and make points</li>
-      <li>Kind of like Farmville , Only Real. This would be a purposeful geo-location game.</li>
-    </ul>
-  </li>
-  <li>Chat BOT
-    <ul>
-      <li>An embeddable chat bot that interacts with people as a friend</li>
-      <li>Helps to map the city and report problems</li>
-    </ul>
-  </li>
-</ol>
-
-<p>We decided with a concept of a <em>Chat bot</em> on existing messaging apps like whatapp, messenger or telegram. The chatbot was chosen as users on these platforms are present in large numbers (Network effect), they are used to the interface and they in-general did not have interest in installing separate app for this purpose.</p>
-
-<p>Let us understand this with a scenario by Udayan :</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KskLTbo9X8c" frameborder="0" allowfullscreen=""></iframe>
-
-<p>The overall concept map was as follows :
-<img src="https://i.imgur.com/bEDUeLC.png" alt="img" /></p>
-
-<p>The information architect was like:
-<img src="https://i.imgur.com/3b0esnX.png" alt="Imgur" /></p>
-
-<p>We tried to understand the conversations with the chatbot. To do the same we made prototype flow charts.
-<img src="https://i.imgur.com/uWdYMAg.png" alt="Imgur" /></p>
-
-<p>Then we moved on to the UI development. Initially rough sketches were done. They grayscale UI elements were prototyped and later final UI was made in sketch.</p>
-
-<p><img src="https://i.imgur.com/OE9TIpV.png" alt="Imgur" />
-<img src="https://i.imgur.com/UbgvXVj.png" alt="Imgur" /></p>
-
-<p><img src="https://i.imgur.com/UotcIud.png" alt="Imgur" />
-<img src="https://i.imgur.com/krPZWsU.png" alt="Imgur" />
-<img src="https://i.imgur.com/muCkDAw.png" alt="Imgur" />
-<img src="https://i.imgur.com/ZK43v3j.png" alt="Imgur" /></p>
-
-<p>We later prototyped some of the functionality in the app using a telegram bot. We used the botAPI from telegram to generate responses to conversations. They bot could perform simple operations like marking a place on map using mapbox and engaging in a conversation with the user. This exercise helped us evaluate the ground truth on the feasibility of the app.</p>
-
-<p><img src="https://i.imgur.com/4frDcLE.png" alt="Imgur" /></p>
-
-<p>Displayed on a map using a local server</p>
-
-<p><img src="https://i.imgur.com/jT4qW77.png" alt="Imgur" /></p>
-
-<p><strong>Contributions</strong>
-The scenario was worked on by <a href="https://www.behance.net/udayanvidyanta">Udayan</a> with some help from me on the script. The UI was worked upon by sketch-master ,<a href="https://www.behance.net/vineetkamboj">Vineet</a> and Udayan. The final prototype with telegram app as surrogate was implemented by me.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-<a href="/2017/04/03/CityBot/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
+</div>
 </div>
 
 <div class="pagination">

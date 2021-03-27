@@ -27,11 +27,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/2015/09/15/PiTuber/" />
+  <meta property="og:url" content="http://rohitg.in/2015/09/15/PiTuber/" />
 
 
-  <meta content="2015-09-15T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+  <meta content="2015-09-15T00:00:00+02:00" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
   <meta content="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Raspberry_Pi_Logo.svg/810px-Raspberry_Pi_Logo.svg.png" property="og:image"/>
@@ -155,6 +155,10 @@
           
             <a class="sidebar-nav-item" href="/travels/">Writings</a>
           
+        
+      
+        
+      
         
       
         
@@ -359,23 +363,23 @@ This article is for exploratory and educational purposes only. Kindly use the co
 
 <p>The system should read a couple of links from a file and then offline them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video like on the App. Once done watching, <strong>DELETE</strong> !</p>
 
-<p>It turned out to be a pretty easy task. Thanks to <code class="highlighter-rouge">pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file.</p>
+<p>It turned out to be a pretty easy task. Thanks to <code class="language-plaintext highlighter-rouge">pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file.</p>
 
 <p>The steps are pretty simple:</p>
 
 <ul>
   <li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
-  <li>Install <code class="highlighter-rouge">pafy</code> using pip the usual way</li>
+  <li>Install <code class="language-plaintext highlighter-rouge">pafy</code> using pip the usual way</li>
   <li>Change the urls in the txt file. Please do preserve the format.</li>
   <li>Edit the script for your preferred quality and storage location.</li>
   <li>Execute the script.</li>
 </ul>
 
-<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code class="highlighter-rouge">screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code class="language-plaintext highlighter-rouge">screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
 
 <p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
 
-<p>After you are finished, just <code class="highlighter-rouge">SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+<p>After you are finished, just <code class="language-plaintext highlighter-rouge">SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
 
 <p>There can be several extensions of the idea.We can also attach a small LED on one of the Pins to indicate when downloading ends.
 Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with other services to make Pi a Bandwidth Hogger and a mean downloading machine.</p>
@@ -392,27 +396,27 @@ Further a NAS can be configured instead of SFTP for easier file exchanges. Bette
     
       <li>
         <h3>
+          <a href="/2021/03/27/Update/">
+            Personal Update and Restart
+            <small>27 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/03/26/BookRecs2/">
+            Suggested reading list for Masters students at IDC -II
+            <small>26 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2019/03/31/BookRecs1/">
             Suggested reading list for Masters students at IDC -I
             <small>31 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2019/03/01/missingMenu/">
-            missingMenu- Understanding food menus as a language
-            <small>01 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2018/11/04/spanishVisa/">
-            Getting a Spanish student visa
-            <small>04 Nov 2018</small>
           </a>
         </h3>
       </li>

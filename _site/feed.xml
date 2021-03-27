@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://rohitg.in/feed.xml" rel="self" type="application/atom+xml" /><link href="http://rohitg.in/" rel="alternate" type="text/html" /><updated>2021-03-27T15:33:04+01:00</updated><id>http://rohitg.in/feed.xml</id><title type="html">Rohit Gupta</title><subtitle>A blog by &lt;a href=&quot;https://twitter.com/rohit7gupta&quot;&gt;@rohit7gupta&lt;/a&gt;</subtitle><author><name>Rohit</name></author><entry><title type="html">Personal Update and Restart</title><link href="http://rohitg.in/2021/03/27/Update/" rel="alternate" type="text/html" title="Personal Update and Restart" /><published>2021-03-27T00:00:00+01:00</published><updated>2021-03-27T00:00:00+01:00</updated><id>http://rohitg.in/2021/03/27/Update</id><content type="html" xml:base="http://rohitg.in/2021/03/27/Update/">&lt;blockquote&gt;
+  &lt;p&gt;(I literally had to google the date to name this file. It is 2021 and not 2020. 🤭)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hello all,&lt;/p&gt;
+
+&lt;p&gt;I dearly apologize for the delay in maintaining this piece of internet that I own. I have been a bad gardener and my flowers have wilted. Thanks to all those who came by in the past year to see things here. There is nothing to complain about for my absence. But, I will try to write more regularly in any case. This post describes what I have been up to for the past 2 years and my plans to keep this garden running.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;where-this-blog-is-headed&quot;&gt;Where this blog is headed&lt;/h2&gt;
+
+&lt;h3 id=&quot;style&quot;&gt;Style&lt;/h3&gt;
+&lt;p&gt;I plan to write shorter and more structure content, in general. The attention spans are on a drop and I tend to get carried away (Like I was about to .. ).  I will still keep the informal style as that who I am as a person. My english writing skills are a bit rusty so that might some oiling as well. (totally forgot the ‘need’)&lt;/p&gt;
+
+&lt;p&gt;The use of graphics and hand-drawn imagery are planned to be introduced soon. (That is how coat people talk)&lt;/p&gt;
+
+&lt;p&gt;The best of all, I will try experimenting writing in Spanish from Spain as well. Usually super short articles to get a hang of it.&lt;/p&gt;
+
+&lt;p&gt;Also, some emoji, memes, and gif garnish is included.
+&lt;img src=&quot;https://static.boredpanda.com/blog/wp-content/uploads/2020/05/5ece0a3116bf0_5nioqb03cp051-png__700.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;content&quot;&gt;Content&lt;/h3&gt;
+
+&lt;p&gt;Rants, Rants and many more rants. Just kidding. The topics, I plan to cover are :&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Creative Technology ― My usual hacks on getting things to talk to each other, crawler keywords : IoT, Processing, OSC, Generative Design, p5js, Web Development  etc&lt;/li&gt;
+  &lt;li&gt;Critical Technology ―  Using technology as a medium to critique our human condition. Usually being reflective about things and using tech to express that. It involves use/abuse/misuse of technology. &lt;a href=&quot;http://rohitg.in/equal/&quot;&gt;This project&lt;/a&gt; is an example.&lt;/li&gt;
+  &lt;li&gt;Electronics ❤️ ― How to do this, blah..blah posts. Plus, 🥁, I have my own 3D printer now. So, something here and there&lt;/li&gt;
+  &lt;li&gt;Reflections ― Usually about immigration, (de)colonization, design, thinking and post-modernity, Slavoj Žižek etc. I see things, I do things, Gotta be reflective about it, innit?&lt;/li&gt;
+  &lt;li&gt;Poems ― Oh yes, sad stuff. But ya’ll are getting them. I usually ‘bundle’ a visual with my poems now like &lt;a href=&quot;https://www.instagram.com/p/CHtSyxwK1EJ/?utm_source=ig_web_copy_link&quot;&gt;this&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Art  ― &lt;a href=&quot;https://www.hicetnunc.xyz/tz/tz1WoP8aviKa6jgFnjKYnRjtYq3DHcxS9hZ6&quot;&gt;NFTs&lt;/a&gt; and not so NFT&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;technology-stack&quot;&gt;Technology stack&lt;/h3&gt;
+
+&lt;p&gt;Its a bummer. I am using Jekyll. Its good but I miss hot reloads and publishing on the go. So, my plan is :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Try to move to a headless CMS that uses GraphQL and markdown. I love JAMstack. It appeals to the person inside me. Currently testing things out with GraphCMS.&lt;/li&gt;
+  &lt;li&gt;Redesign the page templates probably using tailwind and/or webflow.&lt;/li&gt;
+  &lt;li&gt;Use Nuxt.js and deploy on Netlify using some CI/CD from Github.&lt;/li&gt;
+  &lt;li&gt;Homogenize with my &lt;a href=&quot;http://rohitg.in/portfolio/&quot;&gt;portfolio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Keep writing here until then.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;frequency&quot;&gt;Frequency&lt;/h3&gt;
+
+&lt;p&gt;Lets skip this. But, I will try.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-have-i-been-doing&quot;&gt;How have I been doing&lt;/h2&gt;
+
+&lt;p&gt;… mostly losing hair, and&lt;/p&gt;
+
+&lt;h3 id=&quot;professionally&quot;&gt;Professionally&lt;/h3&gt;
+&lt;p&gt;I completed my internship and diploma at IED Madrid. I was grateful to have met so many cool people during that time. The way design is taught here and in India is a bit different. I am happy to have experienced that. Maybe, I will write about it someday.&lt;/p&gt;
+
+&lt;p&gt;After my master, I decided to stay. But, the nature of the world, if you may say, does not allow that. You,a foreigner from a not-allowed country, cannot just decide to stay. Thankfully, my university helped and gave me a few months to get an extension filed and look for work. I eventually applied for 317 jobs and wrote 53 cover letters and appeared for 7-8 interviews. I was willing to work where I will do ‘my-kind-of’ work and not ‘their-kind-of’ work. Having learned this long time back and some parting tips from my design prof.&lt;/p&gt;
+
+&lt;p&gt;It was a bit tough. But I kept being rejected,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;either due to lack of experience (I had about 2 years of professional exp and 5 years if they consider my startup), or&lt;/li&gt;
+  &lt;li&gt;or Skillset mismatch (‘How can one apply for an Experience Design position and not have designed apps?’)&lt;/li&gt;
+  &lt;li&gt;or effort/uncertainty required on the company’s side to do paperwork for me (My friends in the US, Europe is a different ball game. Not sure exactly why though.)&lt;/li&gt;
+  &lt;li&gt;Or due to both (Companies don’t usually hire a less experienced person from abroad. However, they do overestimate the organizational effort to do so. Let me know, if I can help.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, after some frank calls with recruiters who asked me that it could be difficult as they have never recruited like that in Spain. I was pretty much in ruins. I remember sitting in &lt;em&gt;Casa de campo&lt;/em&gt; nearby the &lt;em&gt;lago&lt;/em&gt; and ruminating sadly. I then started applying to China as they are the center of what I call ‘downstream innovation’ (I should write about this lens of looking sometime). There was some interest but then maybe I was not so sure.&lt;/p&gt;
+
+&lt;p&gt;I also started applying, but more strategically in EU. I got my work reviewed from friends and strangers on reddit who helped me zero in on the profiles. One day, when I was on a bus back from an interview, my buddy, Gustav, said that this cool company — Propelland was looking for someone. I checked the post and sent Sid, the co-founder, a message who asked me to apply right away. I got interviewed a few times and eventually got an internship. The team was amazing and very kind. I was client calling few days before I joined. They, however, still did not knew, how to hire a non EU foreigner, but were willing to take the leap of faith. After months of talking to other friends I was able to find good lawyers and managed to collect about 200 sheets of papers from India (Delhi, Pune, Mumbai) and Spain (Madrid, Barcelona).&lt;/p&gt;
+
+&lt;p&gt;Then after 10 months of applying, I got a VISA to work for about 2 years (about 6 months late due to CoVID ). So, yeah. I work at &lt;a href=&quot;https://www.propelland.com/&quot;&gt;Propelland&lt;/a&gt; in Spain as a designer and technologist. I spend days designing and building prototypes. Thanks to everyone who helped me and I am very grateful. The whole company is as big as my team in the last company (30 ppl tops) and I know all of them (unless someone joined last night). Its a big family. I work with cool and humble people based across 3 continents. We are also hiring in US and Mexico. So, lemme know.&lt;/p&gt;
+
+&lt;h3 id=&quot;emotionally&quot;&gt;Emotionally&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Thanks for sticking till here&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Frankly, it has been very hard. I seem to be living at the edge, both as a person and sometimes even in terms of means. There has been this feeling of compression. I felt so compressed and mutated. It has been like going through a trauma. People in power underestimate the emotional cost a person has to pay to do things. I felt the whole process felt way harder than it seemed and drained me. I was entirely ignorant and being rational was painful. Plus, not many people really understand this. So much so, that when I got the permission to work, I was not really happy. Over the time,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the endless wait to get your paperwork so you can stand confidently&lt;/li&gt;
+  &lt;li&gt;the passive racism and staring in the streets&lt;/li&gt;
+  &lt;li&gt;a terrible romantic end&lt;/li&gt;
+  &lt;li&gt;unending attempts to make friends and feel a part of the group&lt;/li&gt;
+  &lt;li&gt;CoVID&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;had lead to the erosion of myself. The annihilation of self leads to another rootless-manufactured self (very dialectical). There were several hidden breakdowns. I felt I needed some help to emotionally restructure myself rather keep iterating. Thankfully and gratefully, the few people I talk to were very receptive and helped me through it. It is hard, but I guess, that is what I signed up for. Things are better now and hence, I write. 🥳&lt;/p&gt;
+
+&lt;p&gt;I would not really recommend someone going through this. 
+&lt;br /&gt;&lt;br /&gt;
+The bubble of a tech-worker my other friends abroad seem to live in a safer option than my bubble (in this bubble world 💬). But, I don’t value that personally as it is not intriguing enough. Plus, stoicism man! and also Mr. Taleb’s Anti-fragility are cool concepts to think about.
+&lt;br /&gt;&lt;br /&gt;
+Also, a new ritual. I will embed a tweet at the end of every article now.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Man, Design is hard. Design Thinking!? Not so much&lt;/p&gt;&amp;mdash; Rohit Gupta (@rohit7gupta) &lt;a href=&quot;https://twitter.com/rohit7gupta/status/1367376933865082884?ref_src=twsrc%5Etfw&quot;&gt;March 4, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Anyways, Cheers y &lt;em&gt;hasta luego&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;— Rohit&lt;/p&gt;</content><author><name>Rohit</name></author><category term="writing" /><summary type="html">(I literally had to google the date to name this file. It is 2021 and not 2020. 🤭) Hello all, I dearly apologize for the delay in maintaining this piece of internet that I own. I have been a bad gardener and my flowers have wilted. Thanks to all those who came by in the past year to see things here. There is nothing to complain about for my absence. But, I will try to write more regularly in any case. This post describes what I have been up to for the past 2 years and my plans to keep this garden running.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://images.gr-assets.com/books/1390624137l/2034402.jpg" /><media:content medium="image" url="https://images.gr-assets.com/books/1390624137l/2034402.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Suggested reading list for Masters students at IDC -II</title><link href="http://rohitg.in/2021/03/26/BookRecs2/" rel="alternate" type="text/html" title="Suggested reading list for Masters students at IDC -II" /><published>2021-03-26T00:00:00+01:00</published><updated>2021-03-26T00:00:00+01:00</updated><id>http://rohitg.in/2021/03/26/BookRecs2</id><content type="html" xml:base="http://rohitg.in/2021/03/26/BookRecs2/">&lt;blockquote&gt;
+  &lt;p&gt;[This post will be updated]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Design for the real world — Victor Papanek&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Siddhartha — Herman Hesse&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Design Methods — J. Christopher Jones&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Elements of style — Zinser&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every Tool’s a Hammer: Life Is What You Make It - Adam Savage&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Brave New World — Aldous Huxley&lt;/li&gt;
+  &lt;li&gt;Technopoly - Neil Postman&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Candide — Voltaire&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make a portfolio or Show Your Work : Austin Kleon&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Antifragile - Nassim Taleb&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Design Is a Job - Mike Monterio&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Spectacle Society — Guy Debord&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Extra :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wabi Sabi — Leonard Cohen&lt;/li&gt;
+  &lt;li&gt;44 letters from a liquid modern world — Zigmut Bauman&lt;/li&gt;
+  &lt;li&gt;Shaping Things — Bruce Sterling&lt;/li&gt;
+  &lt;li&gt;Amusing ourselves to death — Neil Postman&lt;/li&gt;
+  &lt;li&gt;How to Walk — T.N. Hann&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Rohit</name></author><category term="writing" /><summary type="html">[This post will be updated] Design for the real world — Victor Papanek Siddhartha — Herman Hesse Design Methods — J. Christopher Jones Elements of style — Zinser Every Tool’s a Hammer: Life Is What You Make It - Adam Savage Brave New World — Aldous Huxley Technopoly - Neil Postman Candide — Voltaire Make a portfolio or Show Your Work : Austin Kleon Antifragile - Nassim Taleb Design Is a Job - Mike Monterio Spectacle Society — Guy Debord Extra : Wabi Sabi — Leonard Cohen 44 letters from a liquid modern world — Zigmut Bauman Shaping Things — Bruce Sterling Amusing ourselves to death — Neil Postman How to Walk — T.N. Hann</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://images.gr-assets.com/books/1390624137l/2034402.jpg" /><media:content medium="image" url="https://images.gr-assets.com/books/1390624137l/2034402.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Suggested reading list for Masters students at IDC -I</title><link href="http://rohitg.in/2019/03/31/BookRecs1/" rel="alternate" type="text/html" title="Suggested reading list for Masters students at IDC -I" /><published>2019-03-31T00:00:00+01:00</published><updated>2019-03-31T00:00:00+01:00</updated><id>http://rohitg.in/2019/03/31/BookRecs1</id><content type="html" xml:base="http://rohitg.in/2019/03/31/BookRecs1/">&lt;p&gt;It has been almost an year. I have been out of IDC and working/studying here in Spain. As I continue to explore design, I often read books that I feel could answer many questions I had. I hope students still have a lot of questions. In this brief post, I present a collection of books I came across that could help design students perceive design better. I hope they keep you well insulated.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The list is arranged in order of possible things you could have in mind at a particular time in the course. So, I have structured them semester wise. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks to Malay, Chinmay, Rishabh, and Advait for their contributions and suggestions. Thanks to Prof. Girish, who named some of these books in conversations.
+This is the Part I, Part II comes in a week or so.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;semester-i&quot;&gt;Semester I&lt;/h3&gt;
+
+&lt;p&gt;If you were like me and read very little. It would be a good time to get started. This is also the time when you were asked to think about the definition of design. Is there one? Why should we define it?  The books I would say you could read are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Old Man and the Sea— Ernest Hemingway&lt;br /&gt;
+I am not joking. This book is a treat and in sometime who would relate to the old man in this sea. The line length is short and it is a nice beginner book.  Read it in a week or so.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Thoughts on Design — Paul Rand&lt;br /&gt;
+Another short book by Paul Rand on his works on design. He covers parts of his learnings mostly from a graphic design perspective. I like the part where he discusses the role of symbols to convey messages. It is a short book and could take a week. But take your time.&lt;/p&gt;
+
+    &lt;p&gt;He says,&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;“The designer is primarily confronted with three classes of material: a) the given material: product, copy, slogan, logotype, format, media, production process; b) the formal material: space, contrast, proportion, harmony, rhythm, repetition, line, mass, shape, color, weight, volume, value, texture; c) the psychological material: visual perception and optical illusion problems, the spectators’ instincts, intuitions, and emotions as well as the designer’s own needs.”&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Vignelli cannon — Massimo Vignelli &lt;br /&gt;
+The master whose graphic &amp;amp; product design speaks for it. He presents his ideas in probably the most condensed manner as well. You would hear words like Syntactic, Semantics and Pragmatics in the book and the course. It could help you make sense of the job of the designer. His tricks on using space, font and typography are superb.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;“Design without discipline is anarchy, an exercise of irresponsibility.”&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Design of everyday things — Don Norman &lt;br /&gt;
+Probably a lot of people who you talk to have already read this. So, you can discuss on the topics in the book and maybe make new friends. He talks about affordances and design in a very approachable way.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;longer-reads&quot;&gt;Longer Reads&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sapiens — Yuval Noah Harari&lt;/p&gt;
+
+    &lt;p&gt;Sapiens is an amazing book to get a sense of world we are living in. It makes you very curious and you could start seeing patterns in daily life. I like the part where he talks about agriculture and how power flows in the society.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Places to read : It would probably be raining when you start. I would go to Jalvihar and read there by the stairs (if it is not raining) or if you get a nice hostel room facing the lake, you are covered. If you prefer the nights, IDC is the best place if PD guys do not have any assignment to do.  If you prefer going outside campus, got to marine drive by train or cycle, near the restaurant— Pizza by the bay. Nice views and a good book. I am saying too much maybe, but you can buy some books around Flora Fountain, used or otherwise. In winters, Gullu and Descafe are nice places. Cutting, Vada Pao, and Entropy.&lt;/p&gt;
+
+&lt;h3 id=&quot;semester-2&quot;&gt;Semester 2&lt;/h3&gt;
+
+&lt;p&gt;Now, it is the second semester. You are already confused. Too many whys? There seems to be a dissonance between the perceived and the expected. The dream of cool jobs, sassy (why did I use this word) workplaces, you becoming the next Mistry have slowly started to become real. You are excited. Design seems amazing or maybe routine. But maybe you could think a bit.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Animal Farm— George Orwell&lt;/p&gt;
+
+    &lt;p&gt;Classic short novella by Orwell. Super fun to read when watching politics debates on TV. The satire is very sharp. If you project the book’s events, you can feel a bit uncomfortable about the current state of polity which shows some similar features since 1945. The novella was written to critique the politics around Russian Revolution.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;“The creatures outside looked from pig to man, and from man to pig, and from pig to man again; but already it was impossible to saywhich was which.”
+“All animals are equal, but some animals are more equal than others.”&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sapiens — Yuval Noah Harari&lt;/p&gt;
+
+    &lt;p&gt;If you didn’t read it last semester, you should read it now. If you read it, read Homo Deus.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lateral Thinking (with friends)&lt;/p&gt;
+
+    &lt;p&gt;This is a classic gem. I think many people may have read it, but it is quite helpful to read as a designer. I feel, as a designer it all boils down to ultimately finding connections in a problem space and then creating these “artefacts” to probe the connection and see what works. This book could be helpful. Debono’s - Six thinking hats is a good next book for ideation process.&lt;/p&gt;
+
+    &lt;p&gt;The way this book is written is probably meant for educators. The style is like a workbook. I always wanted to work through this book with friends. If you can convince friends to read it together, may be you could have a group and meet once a while to do exercises from the book.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Designing Design — Keyna Hara (MUJI)&lt;/p&gt;
+
+    &lt;p&gt;The physicality of this book, the paper, the layout and the content all are simply amazing. Kenya Hara is the art-director at Muji. You can almost feel the Mujiness of this book. He shows samples from his work that put forward his way of thinking about design. I like the tactile experience  of his products and packaging like the fruit containers. This book inspired me to visit Tokyo by participating in Yahoo !  HackU (with Rishabh). We did visit the Muji flagship in Ginza.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Art is an expression of an individual’s will to society at large, one 
+whose origin is very much of a personal nature. Design, on the other 
+hand, is basically not self-expression. Instead, it originates in 
+society. The essence of design lies in the process of discovering a 
+problem shared by many people and trying to solve it.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;The book is waiting for you in central library.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Catcher in the Rye— JD Salinger&lt;/p&gt;
+
+    &lt;p&gt;There are books and all. There is prose and all. It narrates the events from the three days Holden spent in New York after escaping from his hostel in Penn. I like the way the book is written. It feel like just a transcribed story you heard from someone at a cafe. It has no message , nothing. It just tries to bring out interesting things that could happen in a banal world and all.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;“I’d just be the catcher in the rye and all. I know it’s crazy, but 
+that’s the only thing I’d really like to be. I know it’s crazy.”&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Designerly ways of knowing — Nigel Cross&lt;/p&gt;
+
+    &lt;p&gt;If you were interested what designers do, what is design, what is the difference between design, and art and science? Or if you are troubled that you could end up/ended up making UIs that just do something, and want to know if that is design? Read this book. It was suggested by Prof. Rao in a Design Research module. This book has the ability to make you think about the practise of design especially if you come from either exact science — Engineers or inexact sciences — Fine Arts.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Resolve ill-defined problems&lt;/li&gt;
+        &lt;li&gt;adopt solution-focussing strategies&lt;/li&gt;
+        &lt;li&gt;employ abductive/productive/appositional thinking&lt;/li&gt;
+        &lt;li&gt;use non-verbal, graphical/spatial modeling media&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;“We are like that only” — Rama Bijapurkar*&lt;/p&gt;
+
+    &lt;p&gt;Suggested by Chinmay, It talks about the Indian context from a more market perspective but has many hidden gems that tell you about why we, as Indians, work like that and make such choices. It could help designers think about the social and cognitive environment their products could operate.  It gives you “real” idea who India users might be. This is a fix to a classic design pitfall. If we design for people similar to us, we kind of assume a lot. 
+I would rant and say, I did try reading the book but it needs some courage to read the same things again and again. But, Do you accept the challenge?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1984 — George Orwell&lt;/p&gt;
+
+    &lt;p&gt;Classic Orwellian Dystopia Novel. Watch out for Newspeak. Did you find some newspeak around you? If you have already read it, “Brave New World” by Huxley. What future do you think is happening?  Or are both ?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change by Design — Tim Brown&lt;/p&gt;
+
+    &lt;p&gt;It is a rather inspiring book on the impact of design. I read it before coming to IDC. It talks about the projects by IDEO. The book is more like a feel good narrative about the impact of design. It does not have a lot of design methods in it. But, yeah makes you feel good and strengthens your belief in power of design.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get a blog &lt;br /&gt;
+All reading and no writing makes Jack depressed. It is a good time to start writing what you feel about the work you see and do. I could be a weekly reflection or documentation of a project you do. Places you can make one is Medium (more people with read it there), Github pages (like this one) or Netlify (New kid on the block).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;longer-reads-1&quot;&gt;Longer Reads&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Thinking Fast and Slow — Daniel Kahneman
+Malay recommends it to expose you to “a behavioural angle to design”. It  is written by Nobel Prize winning economist. It could give to a nice peek into how people make decisions. This book is one of the most popular books on topics like behaviour change, behavioural economics, and social psychology.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;79 Essays on Design — Michael Bierut
+Another recommendation by our bookworm friend, Malay. The book is a collection of essays and reflections by Michael Bierut. Mr. Bierut was a student of Massimo Vignelli and is with Pentagram now. His work and process are amazing. Check out his new world symphony logo. Malay further recommends reading one essay a day for the faint hearted like me.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Places to read : The weather gets amazing in this sem.  Go to Gullu, Sit near the lake, Sameer hill, IDC at night or Hostel Roof. Carry a cup of tea.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Rohit</name></author><category term="writing" /><summary type="html">It has been almost an year. I have been out of IDC and working/studying here in Spain. As I continue to explore design, I often read books that I feel could answer many questions I had. I hope students still have a lot of questions. In this brief post, I present a collection of books I came across that could help design students perceive design better. I hope they keep you well insulated. The list is arranged in order of possible things you could have in mind at a particular time in the course. So, I have structured them semester wise. Thanks to Malay, Chinmay, Rishabh, and Advait for their contributions and suggestions. Thanks to Prof. Girish, who named some of these books in conversations. This is the Part I, Part II comes in a week or so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://images.gr-assets.com/books/1390624137l/2034402.jpg" /><media:content medium="image" url="https://images.gr-assets.com/books/1390624137l/2034402.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">missingMenu- Understanding food menus as a language</title><link href="http://rohitg.in/2019/03/01/missingMenu/" rel="alternate" type="text/html" title="missingMenu- Understanding food menus as a language" /><published>2019-03-01T00:00:00+01:00</published><updated>2019-03-01T00:00:00+01:00</updated><id>http://rohitg.in/2019/03/01/missingMenu</id><content type="html" xml:base="http://rohitg.in/2019/03/01/missingMenu/">&lt;p&gt;&lt;a href=&quot;http://rohitg.in/missingMenu/&quot;&gt;MissingMenu&lt;/a&gt; is a project that generates possible combinations of food dishes from a learned menu. It does that by converting a menu to a linguistic model and then computationally generating new food dishes using Probabilistic Context-free grammar (PCFG).&lt;/p&gt;
+
+&lt;p&gt;In other words, the menu is interpreted as a language and a new dish is just another sentence, a meaningful combination of words. So, if you teach it the Chinese menu and south Indian menu, it generates things like schezwan idli with egg fried rice. These combinations are essentially possible as they are made by understanding the morphology of the menu system. This project helped me look at the food menus as languages and languages as a group of morphological combinations driven by adopted norms.
+&lt;!--more--&gt;
+It must be noted that the generated combinations are valid extensions of the original menu and not entirely random. Hence, the project generates a missingMenu .&lt;/p&gt;
+
+&lt;p&gt;I made it initially when I was a student at IIT-IDC and was curious how our tiny hostel cafés have a 5-page menus with so little ingredients on the cooking shelf. It made me curious about how these menus are generated. Remember the center fresh advert boasting about menus at a restaurant?&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9LkIFhc3ZkQ?start=25&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;So, one weekend, I asked my friend, Angela, to get me the menu of a hostel in IIT i.e. H10. I wrote the dishes on a piece of paper and started breaking them. These chunks would essentially make up the language I will use in my context-free grammar program.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/hdGbwjL.jpg?1&quot; alt=&quot;Scribbles&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The key points from my analysis are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The menu results in a graph like structure. Several dishes were constructed just as a fusion from another cuisine. Schezwan Noodles made schezwan dosa&lt;/li&gt;
+  &lt;li&gt;There were a few ingredients like Cheese, Egg, Chicken, and Schezwan which produced maximum divergence to the core dishes. They resulted in about 4! (4x3x2x1) multiplication to dishes. Like Fried Noodles, Egg Fried Noodles, Schezwan Egg Fried Noodles, Schezwan Chicken Noodles, Schezwan Dosa, Schezwan Cheese Dosa, Triple Rice which is kind of like Noodle + Rice. etc. I call them Maximizers.&lt;/li&gt;
+  &lt;li&gt;Within the same cusine category, you have three Multipliers. These can be things like Plain (Lack of a multiplier), Veg, Egg, Chicken, and sometimes Masala. So, for South Indian food, we have Plain Dosa, Masala Dosa and that makes it possible to make Egg Dosa (Egg is a multiplier from Chinese Food Category — Obviously sold in Maddu Mess).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So essentially :
+Maggi (a cuisine in its own) has plain Maggi&lt;/p&gt;
+
+&lt;p&gt;Using Maximizers: Cheese Maggi, Schezwan Maggi, Egg Maggi, Egg Cheese Maggi, Schezwan Egg Maggi&lt;/p&gt;
+
+&lt;p&gt;Using Multipliers: Masala Maggi&lt;/p&gt;
+
+&lt;p&gt;Using both: Masala Egg Maggi&lt;/p&gt;
+
+&lt;p&gt;The idea was to represent this system of Multipliers and Maximizers as a language and then generate possible combinations using this language model.
+A start phrase would be like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You &lt;em&gt;hedge&lt;/em&gt; have &lt;em&gt;dishOne&lt;/em&gt; with &lt;em&gt;SideDish&lt;/em&gt; at &lt;em&gt;Hostel&lt;/em&gt; and drink &lt;em&gt;liquid&lt;/em&gt; .&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, a possible iteration could be :
+You &lt;strong&gt;could&lt;/strong&gt; have &lt;strong&gt;Shezwan Bhindi Fry&lt;/strong&gt; with &lt;strong&gt;Plain Rice&lt;/strong&gt; at &lt;strong&gt;H6&lt;/strong&gt; and drink &lt;strong&gt;Chocolate milk shake&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I used &lt;a href=&quot;https://www.youtube.com/watch?v=lIPEvh8HbGQ&quot;&gt;Dan Shifmann’s instructions&lt;/a&gt; on using &lt;a href=&quot;https://rednoise.org/rita/index.php&quot;&gt;RiTA&lt;/a&gt; as a PCFG generator and wrote a model based on the discussion presented above.&lt;/p&gt;
+
+&lt;h4 id=&quot;visual-design&quot;&gt;Visual Design&lt;/h4&gt;
+
+&lt;p&gt;Once the logic was working, it was time to give it a decent aesthetic vehicle. 🚗&lt;/p&gt;
+
+&lt;p&gt;I chose a simple layout and designed a few iterations of the UI in Figma. I played with various colors that remind me of food.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uTj7VDE.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final color palette was derived from an image of Vada Pao. I love Vada Pao.&lt;/p&gt;
+
+&lt;p&gt;I experimented with using CSS grids to layout the page. It was a challenge to translate things from UI to a working interface. The code generated by Figma is helpful but not dependable. So, I had to play around a lot. The cool part was making those magical underlines and follow Web accessibility guides.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/rzDWfcC.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final project is hosted &lt;a href=&quot;http://rohitg.in/missingMenu/&quot;&gt;here&lt;/a&gt;. Do check it out and provide feedback. If you are in IIT Bombay, give it a try and let me know. Some beta-testers found it interesting.&lt;/p&gt;
+
+&lt;p&gt;Through this project, I tried to scratch the surface of the field of computational linguistics. I am curious what other linguistic artefacts can be understood in these terms. The actual menu at the restaurant is probably a more constrained/time-tested output of these combinations, but through this tool, we can loosen the norms and try new things by generating a possible menu. Maybe you find your next favourite dish? Let me know :)&lt;/p&gt;
+
+&lt;p&gt;Cheers !&lt;/p&gt;</content><author><name>Rohit</name></author><category term="design" /><category term="select" /><summary type="html">MissingMenu is a project that generates possible combinations of food dishes from a learned menu. It does that by converting a menu to a linguistic model and then computationally generating new food dishes using Probabilistic Context-free grammar (PCFG). In other words, the menu is interpreted as a language and a new dish is just another sentence, a meaningful combination of words. So, if you teach it the Chinese menu and south Indian menu, it generates things like schezwan idli with egg fried rice. These combinations are essentially possible as they are made by understanding the morphology of the menu system. This project helped me look at the food menus as languages and languages as a group of morphological combinations driven by adopted norms.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.imgur.com/cnyBjuS.png" /><media:content medium="image" url="https://i.imgur.com/cnyBjuS.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Getting a Spanish student visa</title><link href="http://rohitg.in/2018/11/04/spanishVisa/" rel="alternate" type="text/html" title="Getting a Spanish student visa" /><published>2018-11-04T00:00:00+01:00</published><updated>2018-11-04T00:00:00+01:00</updated><id>http://rohitg.in/2018/11/04/spanishVisa</id><content type="html" xml:base="http://rohitg.in/2018/11/04/spanishVisa/">&lt;blockquote&gt;
+  &lt;p&gt;This post presents the working process to get a Spanish Visa to live in Spain as a student applying from Delhi in the end of 2018. I hope it helps people who need information and reduces confusion. I control my subjectivity/rant, I will write it as a science experiment. This is the best case scenario.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;AIM&lt;/strong&gt;: To receive a &lt;a href=&quot;http://www.exteriores.gob.es/Embajadas/NUEVADELHI/es/InformacionParaExtranjeros/Paginas/Information-on-residence-(national)-visas.aspx&quot;&gt;Residence VISA&lt;/a&gt; that enables me to travel to Spain (for more than 90 days) as a student/academic intern in Spanish university.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.exteriores.gob.es/Embajadas/NUEVADELHI/es/InformacionParaExtranjeros/Documents/study%20visa-for%20duration%20more%20than%20180%20days.pdf&quot;&gt;Documents&lt;/a&gt; Required (Order is important):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Appointment to the consulate&lt;/li&gt;
+  &lt;li&gt;Valid Passport&lt;/li&gt;
+  &lt;li&gt;Police Clearance Certificate (PCC)&lt;!--more--&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Original documents in Spanish from the university with stamp and envelope posted to you from Spain&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Enrolment form&lt;/li&gt;
+      &lt;li&gt;Student accommodation certificate&lt;/li&gt;
+      &lt;li&gt;Student enrolment certificate&lt;/li&gt;
+      &lt;li&gt;Program details document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Medical Certificate&lt;/li&gt;
+  &lt;li&gt;Documents of existence : Birth Certificate, Degrees, PAN Card&lt;/li&gt;
+  &lt;li&gt;Documents of economic validity: Loan papers, Bank statements, Income tax return, PAN Card&lt;/li&gt;
+  &lt;li&gt;VISA fees as a DD with “Embassy of Spain” written on it.&lt;/li&gt;
+  &lt;li&gt;Medical Insurance during the stay&lt;/li&gt;
+  &lt;li&gt;National Visa Form filled with blue pen, picture pasted and photocopied&lt;/li&gt;
+  &lt;li&gt;Apostille of Hague stamp on PCC and Medical certificate&lt;/li&gt;
+  &lt;li&gt;Photocopy of all pages in passport&lt;/li&gt;
+  &lt;li&gt;Cover Letter&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Pre-requisite Skills:&lt;/em&gt;
+Good purpose of going to Spain, patience, support from university, and time management&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Process&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;When you get acceptance, leave everything and just call &lt;a href=&quot;https://india.blsspainvisa.com/national_visa.php&quot;&gt;these guys&lt;/a&gt; on 0124-4556710. Book an appointment. It will usually be like 1-3 months ahead but that is why this is the first step. The whole process of getting other documents will take about 20 days. So, book the date accordingly.&lt;/li&gt;
+  &lt;li&gt;Send mail to the university to post/courier all documents on their letter head in Spanish, signed and stamped. They should be in the university envelope.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now dust off the passport and see if it is valid and then get ready to get a PCC. PCC is a document that just does the Police verification part of passport issuance once more and makes sure you stay where you say you stay and there are no criminal cases against you.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Book appointment at &lt;a href=&quot;https://portal2.passportindia.gov.in/AppOnlineProject/online/pccOnlineApp&quot;&gt;PSK&lt;/a&gt; and pay online .&lt;/li&gt;
+      &lt;li&gt;Go to PSK with &lt;a href=&quot;https://portal2.passportindia.gov.in/AppOnlineProject/docAdvisor/pccPassport&quot;&gt;required documents&lt;/a&gt; like your original passport and adhaar card&lt;/li&gt;
+      &lt;li&gt;Submit docs and do whatever they ask.&lt;/li&gt;
+      &lt;li&gt;Wait for police visit&lt;/li&gt;
+      &lt;li&gt;Be at home when police comes&lt;/li&gt;
+      &lt;li&gt;Keep a Adhaar copy ready&lt;/li&gt;
+      &lt;li&gt;Wait for the SMS from PSK to collect PCC (5-10 days)&lt;/li&gt;
+      &lt;li&gt;Go and get PCC- 2 copies, signed by passport officer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to the doctor and get yourself checked up. If doctor is satisfied, ask him to give a medical certificate on his letter pad with his registration number, name, address and phone visible. It should have this line, exactly -&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;_ is not suffering from any disease that can have repercussions any on the public health in accordance with the International Sanitary Act 2005.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Wait for PCC and in the meantime, you can start filling the &lt;a href=&quot;http://www.exteriores.gob.es/Embajadas/NUEVADELHI/es/InformacionParaExtranjeros/Documents/Application%20for%20National%20Visa%20-%20English.pdf&quot;&gt;National VISA form&lt;/a&gt;. The instructions are given &lt;a href=&quot;http://www.exteriores.gob.es/Embajadas/NUEVADELHI/es/InformacionParaExtranjeros/Documents/study%20visa-for%20duration%20more%20than%20180%20days.pdf&quot;&gt;here&lt;/a&gt; as well .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Your PCC has arrived and you have the medical certificate. It is now time to get Apostille stamps. Most people may forget this step altogether. This is the most monetized process by agents and hence, prices vary from 4000 - 2000 INR. I read the guidelines and figured out it should not cost more than 1500 INR. &lt;a href=&quot;https://en.wikipedia.org/wiki/Apostille_Convention&quot;&gt;Apostille&lt;/a&gt; is basically making your documents valid in countries who are on the convention. It is like VISA for your documents or international notary. I got it done from a &lt;a href=&quot;https://www.google.com/maps/place/IVS+Global+Service+Pvt.Ltd/@28.629057,77.2248241,19.25z/data=!4m12!1m6!3m5!1s0x390cfd33da02b2a3:0x9fb1599471f60cb7!2sBarakhamba+Metro+Station!8m2!3d28.6293547!4d77.225295!3m4!1s0x390cfd33e855a343:0x42afeaeaa35caad8!8m2!3d28.628857!4d77.2247069&quot;&gt;shop&lt;/a&gt; in Arunachal Bhavan in Barakhamba Road. I found the place while I had a long discussion with another agent who was charging a lot and I just walked around and found it on Google Maps. He takes a day to do everything. There is a coffee shop nearby. Do not drink coffee there, its very bad.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now you should have docs from university, Apostille (PCC, Medical Certificate), Appointment email printout, National Visa form filled with blue pen and photo stuck on it. Now it is time to spend some more money and know about it.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Buy an travel insurance policy of value more than $30,000. I prefer policybazaar . (15 mins)&lt;/li&gt;
+      &lt;li&gt;Get a DD/Banker’s Cheque made &lt;em&gt;physically&lt;/em&gt; in the branch of your choice (3-4 hours)&lt;/li&gt;
+      &lt;li&gt;Get bank statements and Income Tax return (1-2 days)&lt;/li&gt;
+      &lt;li&gt;You should be able to prove that you have enough money to stay in Spain apart from the university fee. It is around 450 EUR/month. I feel this is better than the german approach of opening up a block account.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fill the VISA form completely and get it checked by a well meaning friend. Photocopy everything. Forget about saving paper at the moment. Put in a glimpse of your CV as well, to redundantly prove your eligibility to the VISA.  PS: You do not need translations of documents for student visa process. It is now exempted. I have saved you 5000 INR at this step and about 7000 INR in total now. Say thanks by telling others as well :)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Carry all documents you have ever produced with you to the consulate. They can sometimes ask, its normal. Do not forget writing a cover letter explaining your state and purpose. To be super-nice, arrange all documents in &lt;a href=&quot;http://www.exteriores.gob.es/Embajadas/NUEVADELHI/es/InformacionParaExtranjeros/Documents/study%20visa-for%20duration%20more%20than%20180%20days.pdf&quot;&gt;this&lt;/a&gt; order. Be prepared to wait in a queue and face Indians already looking at you in an alienated sense. Get used to the feeling. Absorb it. Ignore it and act in an opposite way. The guards will help you. They are the kindest folks. If it is humid, carry water and some mosquito repellent gel.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enter the embassy and wait for your turn. As you wait, reflect on the reasons to go to Spain. Now, when your turn it is, be honest and confident. They will take your passport and call/email you in a month. Keep the counter copy of the form safely.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After a month, go to the embassy. They ask you to come once in the morning to see your face. Then they call you again in 3-4 hours. I wish I could write “why” somewhere. Now, come again after loitering in CP, if you can watch a play or two, and then you get your VISA.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Precautions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Never trust any agent. National VISA is issued by the embassy only.&lt;/li&gt;
+  &lt;li&gt;Get Apostille from a recognized place only. Like all things in life, there are fake stamps too.&lt;/li&gt;
+  &lt;li&gt;Carry all documents, you miss something and then you may miss the appointment.&lt;/li&gt;
+  &lt;li&gt;Try meditation everyday.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In this experiment, we observed that in-spite of the seemingly easy way to get a VISA, it is not very easy. The VISA guidelines do not seem to be very clear on ground. The problem is not by the embassy but the diverse range of information stimuli the user experiences.  The experimenters observed that a positive result is possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Result&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Through proper grit and determination, one can get National Visa to do internship in Spain.&lt;/p&gt;
+
+&lt;p&gt;Hope it helps! Wishing luck :)&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;</content><author><name>Rohit</name></author><summary type="html">This post presents the working process to get a Spanish Visa to live in Spain as a student applying from Delhi in the end of 2018. I hope it helps people who need information and reduces confusion. I control my subjectivity/rant, I will write it as a science experiment. This is the best case scenario. AIM: To receive a Residence VISA that enables me to travel to Spain (for more than 90 days) as a student/academic intern in Spanish university. Documents Required (Order is important): Appointment to the consulate Valid Passport Police Clearance Certificate (PCC)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/200px-Flag_of_Spain.svg.png" /><media:content medium="image" url="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/200px-Flag_of_Spain.svg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The delta of design</title><link href="http://rohitg.in/2018/07/04/deltadesign/" rel="alternate" type="text/html" title="The delta of design" /><published>2018-07-04T00:00:00+02:00</published><updated>2018-07-04T00:00:00+02:00</updated><id>http://rohitg.in/2018/07/04/deltadesign</id><content type="html" xml:base="http://rohitg.in/2018/07/04/deltadesign/">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my reflections on the design education I received at IDC. The views presented here are mine. 
+Caution: May contain rants.
+TL;DR, - There is no TL,DR in Design.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;why-design&quot;&gt;Why design?&lt;/h5&gt;
+&lt;p&gt;After my graduation in Electrical Engineering and partly in Electronics (from CEDT), I had joined Tata Motors, RnD at &lt;a href=&quot;/2015/04/12/NoobsGuide/&quot;&gt;Pune&lt;/a&gt;. My role was with the HMI group there. We worked on various things like control panels and their evaluation (subjective and objective), setting standards for various features, designing, implementing and strategies for various car features like Acoustics, PEPS, Infotainment, Apps, and Telemetry. If someone is familiar with the automotive industry, the organization structure at TML is similar to Ford or JLR. So, in technical terms, I was a part of PAT and ODT. In general, our group was the “internal customer” of the organization. Hence, we set targets for various things and design strategies to be implemented. These would go to the engineers/designers who would implement it based on our &lt;!--more--&gt; requirements. Then, we would test these systems objectively and subjectively and give a  Go-NoGo signal to the management. The range of exposure was huge. We dealt with things like tiny icons on the front fascia to larger transmission systems in the car. I think the work there, triggered a lot of inner aspirations and complemented my understanding as an &lt;em&gt;engineer&lt;/em&gt;. I developed an interest in minor details of things like the feedback of a button, the volume of the buzzer, the color of the screen under various lighting conditions, acoustics of the car and engine music. I thank my team and friends at TML - Vinit Sir, Priyanka, Mihir, Sachin, and Prem.&lt;/p&gt;
+
+&lt;p&gt;At TML, I worked on infotainment navigation systems for Bolt and Tiago/Tigor, then on acoustic measurement and audio-tuning and finally on the ConnectNeXt app ecosystem. We interacted with lots of people from various companies/institutes as we involved them in our work. The work was nice.&lt;/p&gt;
+
+&lt;p&gt;Apart from TML, I (as always, unfortunately) had a keen interest in “making”. The moment I reached Pune, In a few days, I was at &lt;a href=&quot;/2014/10/16/MakerParty/&quot;&gt;Mozilla Makerparty&lt;/a&gt;. I still remember the pains of commuting and the fun. Thanks to that, I made good friends like Anuj, Rituparna, Nishant and Sunil Sir. We did a few collab projects together. I, Ritu and Anuj still work together.&lt;/p&gt;
+
+&lt;p&gt;Before exiting college and working with CEPD, most of my projects were essentially &lt;em&gt;self-expression&lt;/em&gt;. They were my abrupt and rapid reactions to instantaneous thoughts and desires. I did not think them thoroughly. Post CEPD, thanks to some gathered skills in electronics and organizing, I was much more confident in executing things. The expression became fun and work at CEPD. But, what about the purpose? There was none outside, having fun and spreading the love. There was no user or customer. Hence, there was no solid problem. At Pune, I grazed grasses and worked a lot, building things like speaker systems, PCBs, HAM-RX and eventually worked with Anuj on the &lt;a href=&quot;https://makerville.io/knit/&quot;&gt;Knit&lt;/a&gt;. I was under the impression that I am becoming someone, who can do things but does not know what to do. This lead to a lot of stressed times. I wanted to join &lt;a href=&quot;https://www.media.mit.edu/&quot;&gt;*&lt;/a&gt; as I found their work pretty exciting. Little did I knew, I applied and got rejected. I was very sad that day. I am just an aimless maker?. Not an X under 25 or Y under 30. Who’s who of hollowness? Nosy talker at conventions. I did incinerate some silicon, for sure. I got over with that in time.&lt;/p&gt;
+
+&lt;p&gt;At work too, I realized that there could be a knowledge gap in my understanding of the design elements. I can feel the things to some extent, but to decipher the cause and fix it was challenging. I wanted to learn more about this. I was just not doing justice to the task. Therefore, I decided to try and pursue the higher education thread, rather than switching jobs . I researched about some courses abroad and in India that would help me understand the field better. After a lot of thought, I decided to probably do a degree in design as the curriculum and approach resonated with me. I did validate my interest in design by taking the &lt;a href=&quot;https://www.edx.org/course/product-design-the-delft-design-approach&quot;&gt;Delft Design course&lt;/a&gt; on edX. Even though it may not be an exhaustive representation of the design pedagogy, It may help me understand if it is for me or not. I really liked the course and hence, zeroed in on design as a future course. I applied to the two best colleges in India, NID and IIT-IDC, very selectively. I got through both and chose IDC. The reason, without being drawn into discussions on pedagogy, was exposure. I felt IDC would provide me with better view of both research and design.&lt;/p&gt;
+
+&lt;p&gt;I may have been biased because - It was IIT, so I could meet more geeks; I met a geek prof in the interview at IDC, who could see through my work; The IDC website had better information on things. Now, what did I expect?&lt;/p&gt;
+
+&lt;p&gt;I wished to :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Develop design sensitivities&lt;/li&gt;
+  &lt;li&gt;Explore my interests in HCI through electronics, creative coding etc&lt;/li&gt;
+  &lt;li&gt;Work on good projects and meet inspiring folks&lt;/li&gt;
+  &lt;li&gt;Do as much work as possible&lt;/li&gt;
+  &lt;li&gt;Develop thinking skills in terms of finding and understanding problems.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;what-is-design-circa-2016&quot;&gt;What is design? circa 2016&lt;/h5&gt;
+
+&lt;p&gt;When I came at IDC in 2016, I felt that design is essentially &lt;em&gt;out of the box, problem-solving&lt;/em&gt; . I recall, most of the &lt;em&gt;engineers&lt;/em&gt; replied something similar at the orientation. The dominant voices said things like &lt;em&gt;aesthetics&lt;/em&gt;, &lt;em&gt;visual&lt;/em&gt;, &lt;em&gt;functional&lt;/em&gt;, &lt;em&gt;User-centric&lt;/em&gt; and other similar ideas. Henceforth, I worked on my understanding of design.
+However,to what extent does the problem get solved ? The idea of affecting a problem and not essentially solving it?&lt;/p&gt;
+
+&lt;h5 id=&quot;perceived-changes-in-thinking-and-learnings&quot;&gt;Perceived changes in thinking and learnings?&lt;/h5&gt;
+
+&lt;p&gt;In this section, I summarize the changes in me that I noticed after doing the masters. To understand them, I have been carefully analysing my previous work, conversations with friends and visiting undergrad college. A little nostalgia helps. It took me about a month to come to this list and I stopped expanding when points started repeating and forming themes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Questioning the premise&lt;/strong&gt; - I think this is the most dominant change of all. As students and kids, we are made to forget the premise. In mathematics and science, the problems and values of variables are given. Engineering expects that we design the circuits we are asked to. But who would ask, &lt;em&gt;WHY?&lt;/em&gt;. The most important 3 characters. Many of my engineering folks, still act like this. This habit is a good thinking strategy and often results in &lt;em&gt;non-band aid&lt;/em&gt; type paths. It helps one understand the context. It has been a good addition, but with a few negatives- like I don’t usually make random things these days as I used to enjoy, there are lots of discussions/arguments when you question the premise in a social setting, some friends may not be very comfortable to get the answers like “ Why do you even need it?”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;System level thinking&lt;/strong&gt; - Systems are always taught to you as an engineer, but your position, ridiculed by the industry, is to seldom think in its terms. Design teaches you a macroscopic view of thinking followed by microscopic analysis. As &lt;a href=&quot;http://www.idc.iitb.ac.in/sumant/index.html&quot;&gt;Prof. Sumant&lt;/a&gt; says, mile wide and inch deep and then inch wide and mile deep. Nature is a system. Things are interconnected and affect each other. If one “makes” a thing/intervention, its effect is usually not localized. It impacts the whole system and hence, a designer has to work on all these facets of a problem. I did not use to think like this as most engineers often work on a small part of the problem has hence, may not think in these terms.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mindfulness&lt;/strong&gt; - Although mindfulness may seem to be a recurring keyword in self-help books. But design teaches you to be a lot mindful than you would normally be. One has to always check one’s choices against relevant biases. This is another “why?” that I ask myself. “Why?” am I reacting this way?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Endlessness of the problem&lt;/strong&gt; - Design problems are often different than engineering ones. This is the nature of design. Design never ends. It seems like a loop that slows down when the user’s expectations have met for the time being. A change in the state, calls for a designerly response and the loop restarts. This phenomenon is rare in engineering unless there is a designer involved.&lt;br /&gt;
+I recall it from &lt;a href=&quot;/2018/05/04/PinchPhone/&quot;&gt;my latest project&lt;/a&gt;. After about two iterations, the toy was given to the users for evaluation. I am currently working on the third version as user’s expectation has now increased from the time of showing the prototype. This is a great thing for a designer. If the user, is able to see the problem through my solution, one of the goals of design has achieved. His suggestions will improve the product in the longer run. The aim is to have the best solution to the problem in a predictable span of time. The way to reach that particular stage is often complex as the problem itself is complex.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Openness of pedagogy&lt;/strong&gt; - Design education, as experienced by me, is a lot different from technical education in the past. It is more exploratory in nature and not confined to a single track. Hence, I feel, it tries to expose an aspiring designer to various sensitivities. They would not mistake things like type, color,grids etc as simple elements rather take a conscious call on each and every aspect of it. Further, design (and design research) draws heavily from practices of different fields like sociology, psychology, art studies, media ecology and others. There is a curriculum, but fundamentally, its purpose is to channel the discussion. Design tries to inculcate a “lifelong learning” approach. The discussions with teachers are informal and wide-ranging. This was quite different from my BTech days.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;More than you can do?&lt;/strong&gt; - This was the hardest lesson for me to learn. I almost spent the first 7-8 months trying to overcome this bias of choosing electronics as a &lt;em&gt;material&lt;/em&gt; to realize the solution of problems. I would think, can I make a circuit that would solve this problem? This “circuitification” actually short-circuited my design process. I would hence, propose solutions that &lt;em&gt;I can build&lt;/em&gt; rather than ones that may be better. I had to separate the maker and engineer from the designer. Believe me, it felt like Hulk :P.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I feel that one tends to think in terms of one’s tools. It may lead to what &lt;a href=&quot;https://en.wikipedia.org/wiki/Marshall_McLuhan&quot;&gt;McLuhan&lt;/a&gt; says &lt;em&gt;Rear View Mirror Thinking&lt;/em&gt;. When one imagines the newer media through the older one. Luhan would not have liked “Web pages in VR”. However, there is a satisfying rational of “building upon things you already know”. Nobody can be blamed for this tendency. Continuity is appreciated by everyone, even by the recruiter.&lt;/p&gt;
+
+&lt;p&gt;I used to receive a lot of positive reinforcement when friends could see things on the table. But were they the best solutions? Maybe. I could have explored more. A wider solution space may result in a better solution. At least, it seems to be a better strategy. I am a recovering victim. Many are still there. Architects try to think of every solution in terms of spaces. Graphic designers tend to design interfaces similar to print. I think one needs to explore more. I cannot imagine the cool solutions an illustrator would bring if she/he tries to explore it from say form or electronics. We should try to take a risk and live it to the fullest.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;There is no single solution&lt;/strong&gt; - As engineers, we have a question, which we end by answering in singularity. There is a mathematical construct involved somewhere that results in that one answer. However, design tries to solve the problem through solutions. This is because we cannot algorithmically calculate the solution to these complex problems. I love the idea and analogy of &lt;a href=&quot;http://blog.media.mit.edu/2012/07/compasses-over-maps.html&quot;&gt;Compasses vs Maps&lt;/a&gt;. It says and I quote, “The idea is that in a world of massive complexity, speed, and diversity, the cost of mapping and planning details often exceeds the cost of just doing something–and the maps are often wrong.” Nigel Cross says something similar when he mentions about understanding a problem by means of possible solutions. In a ripe discussion, senior alumni once told me that his teachers had asked him to produce about 20-30 different variations of the same thing. &lt;a href=&quot;http://www.christophniemann.com/&quot;&gt;Niemann&lt;/a&gt; also talks about this in his episode of Abstract. He talks about the dot exercise. I have learned this rigor to be fundamental to design practice.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Know the material&lt;/strong&gt; - In our age of rapid “prototyping”, we tend to imagine our solutions in terms of the prototyping technique. Much of the “prototyping” happens in CAD while it could very easily be made by hand. Clean hands can never make great pots. This way we cannot experience what master craftsmen does. In my time at IDC, I worked with many materials like &lt;a href=&quot;/2017/04/01/bamboo/&quot;&gt;bamboo&lt;/a&gt;, clay, thermacol, biofoam, Acrylic, styrene, PoP and finally &lt;a href=&quot;/2018/05/04/PinchPhone/&quot;&gt;wood&lt;/a&gt;. The materials teach us that true finish comes after rigor. I remember sanding the wood through 6 levels of sanding paper to achieve the finish. I thank Samarth Sir for pushing me to it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Reading and Writing&lt;/strong&gt; - I am told, Good designers read a lot. Thanks to the nudges by Prof. Girish, I have tried to read as many interesting books as possible. I think I have read more books in the last two years than I did in the previous 10 years. But there are still a lot of shortcomings in my reading habit. I have to work a lot on this skill. Writing is a critical activity for designers. Design communication is an important design skill. There has been a small delta in my writing skills too. But I have a long way ahead.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ethics and Morality&lt;/strong&gt; - The scope of the design professions has expanded beyond what many could imagine a few years back. It will not be wrong to say if, the next profession to take the Hippocratic Oath would probably be design professionals. So, much of our life is controlled via systems and interfaces we as designers design. I try to think of designs in these terms as well. The need is even more profound in the Indian context. We as designers act as proxies of the users who rely on us as people who respect their context and trust us with their privacy, data, security and sometimes lives. Designers should not absent-mindedly sugar-coat technology for mass consumption. In an important discussion during &lt;a href=&quot;http://ddsidc.com/2018/&quot;&gt;our DDS&lt;/a&gt;, Prof. Udaya kuma₹ talked about responsibility towards our country as designers. It was an important point. Our education empowers us, but we should be responsible towards our users. I did my project involving kids affected by cerebral palsy under Prof. Girish. He advised me to make multiple copies of the product so, that we can present them as a token of participation in the project. I did likewise and was happy to get very good feedback. 
+If one is inclined to podcasts, &lt;a href=&quot;https://www.theguardian.com/technology/audio/2018/mar/02/who-needs-ethics-anyway-chips-with-everything-podcast&quot;&gt;this one&lt;/a&gt; talks about the need of &lt;a href=&quot;https://www.fastcompany.com/90138470/design-is-inherently-an-unethical-industry&quot;&gt;ethics in design&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Not being Reactionary&lt;/strong&gt;- Apart from design, one important skill that Prof. Alka taught us in her course was not being reactionary based on presented information. The media presents us with some facts focussing our attention on a particular side. We should always try and find the other side. It helps us in generating appropriate responses.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I hope, I have summarized the learning well. I will try to expand on them in the future.&lt;/p&gt;
+
+&lt;h5 id=&quot;influencers&quot;&gt;Influencers&lt;/h5&gt;
+
+&lt;p&gt;The major influencers in this journey were (including but not limited to) :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;My teachers - &lt;a href=&quot;http://www.idc.iitb.ac.in/~girish/index_mr.html&quot;&gt;Prof. Girish&lt;/a&gt;, &lt;a href=&quot;http://www.idc.iitb.ac.in/ravi/&quot;&gt;Prof. Ravi&lt;/a&gt;, &lt;a href=&quot;http://www.idc.iitb.ac.in/%7Eanirudha/&quot;&gt;Prof. Anirudha&lt;/a&gt;, &lt;a href=&quot;http://www.idc.iitb.ac.in/uaa/index.html#&quot;&gt;Prof. Attu&lt;/a&gt;, &lt;a href=&quot;http://www.agrao.in/&quot;&gt;Prof. AG Rao&lt;/a&gt;, &lt;a href=&quot;http://www.idc.iitb.ac.in/venkat/index.html&quot;&gt;Prof. Venkat&lt;/a&gt;, &lt;a href=&quot;https://www.jayeshpillai.com/&quot;&gt;Prof. Jayesh&lt;/a&gt;, &lt;a href=&quot;http://www.idc.iitb.ac.in/nishant/index.html&quot;&gt;Prof. Nishant&lt;/a&gt;, &lt;a href=&quot;http://www.idc.iitb.ac.in/alka/index.html&quot;&gt;Prof. Alka&lt;/a&gt; and &lt;a href=&quot;https://mrane.com/&quot;&gt;Prof. Mandar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My batchmates - Malay, Udayan, Dinojh, Siva, Ankit, Shilpa, Rishabh Singh and Jain, Suyog, Dada, Vineet, Tuhin, Manasi, Manoj, Mane, Ajin, Patle, Askaswa, Amey ++&lt;/li&gt;
+  &lt;li&gt;My seniors - Chinmay, Abhijit, Herold, Saloni, Anjana, Chandni, TallPaul, Salik&lt;/li&gt;
+  &lt;li&gt;Friends at IDC - Vajra, Shyam, Deep, Pranisha&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;what-is-design-now-circa-2018&quot;&gt;What is design now? circa 2018&lt;/h5&gt;
+
+&lt;p&gt;These days, the definition of design that I subscribe to is a convenient but tested combination of the definitions given in &lt;a href=&quot;https://www.goodreads.com/book/show/1878856.Designerly_Ways_of_Knowing&quot;&gt;Nigel Cross’s Designerly ways of knowing&lt;/a&gt; and &lt;a href=&quot;https://www.goodreads.com/book/show/2034402.Designing_Design&quot;&gt;Kenya Harra’s Designing Design&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, Cross talks about design as the &lt;em&gt;third area&lt;/em&gt; apart from Arts and Science. He summarizes (page 20) design to comprise of abilities to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Resolve ill-defined problems&lt;/li&gt;
+  &lt;li&gt;adopt solution-focussing strategies&lt;/li&gt;
+  &lt;li&gt;employ abductive/productive/appositional thinking&lt;/li&gt;
+  &lt;li&gt;use non-verbal, graphical/spatial modeling media&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While Hara talks about art and design as “Art is an expression of an individual’s will to society at large, one whose origin is very much of a personal nature. Design, on the other hand, is basically not self-expression. Instead, it originates in society. The essence of design lies in the process of discovering a problem shared by many people and trying to solve it.”&lt;/p&gt;
+
+&lt;p&gt;I would recommend these books to anyone interested in understanding design. They helped me a lot in the middle of the course when I felt concerned about my actions. They were recommended by Prof. Rao and Prof. Girish.&lt;/p&gt;
+
+&lt;p&gt;I await feedback and suggestions. Please direct them to my &lt;a href=&quot;mailto:indiantinker@gmail.com&quot;&gt;mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;</content><author><name>Rohit</name></author><category term="writing" /><summary type="html">This post presents my reflections on the design education I received at IDC. The views presented here are mine. Caution: May contain rants. TL;DR, - There is no TL,DR in Design. Why design? After my graduation in Electrical Engineering and partly in Electronics (from CEDT), I had joined Tata Motors, RnD at Pune. My role was with the HMI group there. We worked on various things like control panels and their evaluation (subjective and objective), setting standards for various features, designing, implementing and strategies for various car features like Acoustics, PEPS, Infotainment, Apps, and Telemetry. If someone is familiar with the automotive industry, the organization structure at TML is similar to Ford or JLR. So, in technical terms, I was a part of PAT and ODT. In general, our group was the “internal customer” of the organization. Hence, we set targets for various things and design strategies to be implemented. These would go to the engineers/designers who would implement it based on our</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.idc.iitb.ac.in/images/idc-logo_new2.png" /><media:content medium="image" url="http://www.idc.iitb.ac.in/images/idc-logo_new2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Clearance Processes at IDC</title><link href="http://rohitg.in/2018/06/30/ExitIDC/" rel="alternate" type="text/html" title="Clearance Processes at IDC" /><published>2018-06-30T00:00:00+02:00</published><updated>2018-06-30T00:00:00+02:00</updated><id>http://rohitg.in/2018/06/30/ExitIDC</id><content type="html" xml:base="http://rohitg.in/2018/06/30/ExitIDC/">&lt;blockquote&gt;
+  &lt;p&gt;This post documents and encapsulates the clearance process for IDC, IIT Bombay. Hope this could reduce hassles till things go completely digital. Dedicated to the coming batches. The guide was written as an IDC student in interaction design discipline.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I have tried to document the informal processes that often create confusion. There is a sort of a delight you get when you get past a patch of cloudy information and when you look back, its crystal clear. Hence, one should always try to document such processes so that human race does not spend more time that one human has already spent. Neglecting the superfluous grandeur, I often imagine myself like a miner on a night shift who is underground in the tunnels. One can either temporarily secure the&lt;!--more--&gt; tunnel and take the minerals or secure it permanently so the next miner can “further” the understanding of the mine. I advise choosing the later. It makes one a “responsible” miner.&lt;/p&gt;
+
+&lt;p&gt;The IDC clearance process may seem very hard, it is tough emotionally, but it is procedurally very straightforward. The way, I optimized it was by making a dependency map that helped me prioritize things. &lt;strong&gt;Dependency Map&lt;/strong&gt; basically helps in identifying what is the relationship between various parameters like previous steps signatures, availability of staff and then come up with a sequence that minimizes redundancy of action. It is like a fishbone chart. Let us get started with your clearance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 1: Pre Jury thesis submission (skip if already done)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Things required&lt;/em&gt;: Thesis Submission form from the office, Hostel Clearance, No Dues from Accounts Section&lt;/p&gt;
+
+&lt;p&gt;Hostel Clearance - Ask the warden for no dues till that date. Pay via UPI on spot, email screen shot and get the signatures. You get an A5 sheet to attach with the form, or the warden may sign on the form.&lt;/p&gt;
+
+&lt;p&gt;Accounts: Write your name on a register in the Accounts section. It is in the main building. Take the stairs from the Nescafe side. It takes a day to process the slip. So, get it done in advance. 
+Attach both the above with the Thesis form and get necessary signatures. Submit to the office with two copies of the report.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Part 2: Post Jury Clearance&lt;/strong&gt;
+Welcome to your P4, as it is said. With the paucity of time and this form in your hand, things might seem sad. But do not worry. This is the central goal of this post. The key is to prioritize and work on parallel independent parts.&lt;br /&gt;
+The steps are :&lt;/p&gt;
+
+&lt;p&gt;1.Collect a form from the office on time. Our office staff is very helpful. The form has three sections:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Main Clearance Certificate - IDC specific ( Front page )&lt;/li&gt;
+  &lt;li&gt;Final Clearance ( Page 2 )&lt;/li&gt;
+  &lt;li&gt;IIT Bombay specific submissions - P2, P3&lt;/li&gt;
+  &lt;li&gt;No dues from hostel, library, and department( Last page )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fill in all the details you know. Things people leave out are Guide names, Thesis titles and their names on all sheets. There is a misspelt “Certificate from the Acdemic section” on both  P2 and P3 forms, and a No Dues from estate Office. They are usually not required.&lt;/p&gt;
+
+&lt;p&gt;2.In Parallel,  start the process to submit the Convocation and Alumni Forms. Their details are as follows: 
+Convocation form :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;https://portal.iitb.ac.in/asc/Login&quot;&gt;ASC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pay Convocation Fee&lt;/li&gt;
+  &lt;li&gt;Fill Convocation Form carefully. Check your name in Hindi too. Press space if the last part of your name does not get converted.&lt;/li&gt;
+  &lt;li&gt;You may be asked to get a National Academic Depository (NAD) ID. It works for people with Adhaar linked to phone numbers. It is optional and it is Adhaar.&lt;/li&gt;
+  &lt;li&gt;Print the form and sign on it &lt;strong&gt;with date&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Attach the copy of your bachelor’s degree. Do not have one? Chill and skip and go to next step.&lt;/li&gt;
+  &lt;li&gt;Submit the form to Ms. Ranjana in Academic Department. She will tell you the process if you do not have a degree yet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Alumni Form:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;https://portal.iitb.ac.in/asc/Login&quot;&gt;ASC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Click on the misspelt “Alumani” form.&lt;/li&gt;
+  &lt;li&gt;Fill the form to the best of your knowledge.&lt;/li&gt;
+  &lt;li&gt;Print it and attach a photo to it.&lt;/li&gt;
+  &lt;li&gt;Submit it in the Alumni Office in Gullu building&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above two things can be done in parallel with the remaining process.&lt;/p&gt;
+
+&lt;p&gt;3.Thesis Mega Loop&lt;/p&gt;
+
+&lt;p&gt;This is the craziest part of the &lt;strong&gt;P4&lt;/strong&gt;. The majority of the signatures that are in the form and are difficult to get are related to the thesis. The reports should have an abstract and follow the guidelines &lt;a href=&quot;http://etd.library.iitb.ac.in/etd/faq_s.jsp&quot;&gt;here&lt;/a&gt;. Make sure you have the following in your report :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;signatures of your guide, external/internal signatures in the reports.&lt;/li&gt;
+  &lt;li&gt;an abstract page ( Ideally before ToC )&lt;/li&gt;
+  &lt;li&gt;your signature on the declaration&lt;/li&gt;
+  &lt;li&gt;IIT Logo on the front page&lt;/li&gt;
+  &lt;li&gt;Roman numbering to all pages before Introduction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you get guide signature on report get signatures on Frontpage in P2, P3 columns and Respective P2 and P3 pages.  Let’s start with central library submissions :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Login to &lt;a href=&quot;http://etd.library.iitb.ac.in/etd/index.jsp&quot;&gt;ETD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fill out the information/Alumni form.&lt;/li&gt;
+  &lt;li&gt;Now select Project 2, fill that form and upload the pdf. Copy and paste the abstract as already directed. You should get a confirmation page. Download the abstract page and take a print out. Sometimes, things do not work due to browsers. Use Firefox or Chrome and ultimately Edge.&lt;/li&gt;
+  &lt;li&gt;Logout and do the same for P3 a.k.a Final Project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, print the abstract page and get guide signatures. Collect the uploaded P2 report and P3 report in a USB stick along with DRS report, P2 presentation, and P3 presentation. All should be in pdf format.&lt;/p&gt;
+
+&lt;p&gt;Submit the five files to the IDC Library. Mohan sir may sign on item 1 (front page) and section 2.0 (page 2). Depending on the time of the day, you may get studio signatures or go to the central library. I assume you go to the Central Library. Arrive at the ETD office behind the reference section on the ground floor. Present the form with signed abstract sheets to the staff there. They will check the report format and stamp the P2 and P3 pages. In case, there is an issue with formatting, carry a laptop to make changes there itself.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ProTip: Do not make reports in google docs. You apparently cannot number pages in the way library demands. Use LaTeX, InDesign or Scribus.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now that completes the Thesis Mega Loop. Before exiting the library, get the signatures and stamp of staff on the library no dues section ( last page). PS: The central library has alumni membership plans too.&lt;/p&gt;
+
+&lt;p&gt;4.Workshop Hopper&lt;/p&gt;
+
+&lt;p&gt;The workshop staff is really kind to be available all the time during clearance days. Start with Mawade Sir in Paint studio, then Santosh Sir in Ceramics, Kini Sir in Plastic, Samarth Sir in Wood and Navale Sir in Metal. Patil Sir signs for laser cutting studio, Clay studio (for all students except MVD), and workshop in charge.&lt;/p&gt;
+
+&lt;p&gt;Progressing to the first floor, Kuldeep or Chakku sir sign for the sound studio, Divekar sir signs partly for Photo studio, the other part Mazhar sir signs. Now, on the second floor. Dhanashree Ma’am signs for Ergo Lab, seated in the same space, Prof. Sugandh will sign for CAID Lab. Finally, Prof. Purba signs for CNC and Cintiq studios.&lt;/p&gt;
+
+&lt;p&gt;5.Home Run&lt;/p&gt;
+
+&lt;p&gt;The only sections that remain are associated with Hostel, Faculty Co-ordinator, and IDC Office. For Hostel 13, you will need the pink form from the warden. Pay the amount you are asked (using UPI) and then get the signatures done on the form. Technically, you should vacate rooms by 30th, but in case of extensions, you may be excused for a few days by producing a letter from the office.&lt;/p&gt;
+
+&lt;p&gt;6.The Finisher&lt;/p&gt;
+
+&lt;p&gt;Approach the faculty coordinator for your discipline. She/He will verify the details and sign on the front page and section 1.0 of page 2. Now submit the form in IDC office.&lt;/p&gt;
+
+&lt;p&gt;You are done !&lt;/p&gt;
+
+&lt;p&gt;CAUTION: The process mentioned above was prevalent in the year 2018. The article was written with whatever knowledge I could gather during my clearance process. Things may change for good.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;</content><author><name>Rohit</name></author><category term="writing" /><summary type="html">This post documents and encapsulates the clearance process for IDC, IIT Bombay. Hope this could reduce hassles till things go completely digital. Dedicated to the coming batches. The guide was written as an IDC student in interaction design discipline. I have tried to document the informal processes that often create confusion. There is a sort of a delight you get when you get past a patch of cloudy information and when you look back, its crystal clear. Hence, one should always try to document such processes so that human race does not spend more time that one human has already spent. Neglecting the superfluous grandeur, I often imagine myself like a miner on a night shift who is underground in the tunnels. One can either temporarily secure the</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.idc.iitb.ac.in/images/idc-logo_new2.png" /><media:content medium="image" url="http://www.idc.iitb.ac.in/images/idc-logo_new2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Spreadmaker- A tool to generate spreads for hand binding</title><link href="http://rohitg.in/2018/05/30/Spreadmaker/" rel="alternate" type="text/html" title="Spreadmaker- A tool to generate spreads for hand binding" /><published>2018-05-30T00:00:00+02:00</published><updated>2018-05-30T00:00:00+02:00</updated><id>http://rohitg.in/2018/05/30/Spreadmaker</id><content type="html" xml:base="http://rohitg.in/2018/05/30/Spreadmaker/">&lt;blockquote&gt;
+  &lt;p&gt;The post describes a handy python script to convert usual pdfs into spreads of 8. The printed pdf can be bound by hand.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Thanks to my project guide, &lt;a href=&quot;http://www.idc.iitb.ac.in/~girish/index_mr.html&quot;&gt;Prof. Girish&lt;/a&gt;, who inspired me to write this by asking me to read more stuff.&lt;/p&gt;
+
+&lt;p&gt;During my project days (and even now), I used to print papers from several journals to read and reflect upon. The tangibility of paper provides a far better reading experience than e-books. I have given up on e-reading as it strains my eyes, difficult to make notes on side and record keeping is difficult. If something is more than 25 pages, I usually print it and read it. But I do try to save as much as paper possible.&lt;/p&gt;
+
+&lt;p&gt;The common way to &lt;!--more--&gt;save paper was to print two pages on one sheet. But the manner in which the pages came out was very cumbersome to handle and did not give much joy while reading. While printing one of my favorite journals, &lt;a href=&quot;https://link.springer.com/journal/11023&quot;&gt;Mind and machines&lt;/a&gt;, I came up with an idea of making a script that would convert the pdf by re-arranging the pages to form an 8-page booklet. This booklet could later be bound into a book.&lt;/p&gt;
+
+&lt;p&gt;The art of bookbinding had already enticed me and I was binding my own books for almost a semester then (and now too). So, It would be easier to bind them using &lt;a href=&quot;https://www.youtube.com/watch?v=9O4kFTOEh6k&amp;amp;t=334s&quot;&gt;kettle stitch technique&lt;/a&gt; and I might end up having a readable journal/book.&lt;/p&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/BPSDTUhlEm0/&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/p/BPSDTUhlEm0/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_blank&quot;&gt;A post shared by Rohit Gupta (@rohit7gupta)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2017-01-15T10:42:20+00:00&quot;&gt;Jan 15, 2017 at 2:42am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//www.instagram.com/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;To prototype the script, I divided an A4 sheet into 4 parts and then folded them half. Then I numbered the pages as they usually are when you print them like two pages on one sheet. Next, I made a booklet out of the same and wrote the new page numbers as they should be for the booklet.&lt;/p&gt;
+
+&lt;p&gt;Some mathematical induction and we had a simple formula to make a 4 spread, 16-page block. Then, to generate the complete book, one has to add some blank pages to complete the 16-page blocks..&lt;/p&gt;
+
+&lt;p&gt;That is pretty much it. I have tested it at least 10 times and printed close to 1000 pages. It works. The script is available &lt;a href=&quot;https://github.com/IndianTinker/spreadmaker&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to use it&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Clone the &lt;a href=&quot;https://github.com/IndianTinker/spreadmaker&quot;&gt;git repo&lt;/a&gt;. Make sure you have the dependencies ‘pip’ed like pyPDF2. Try doing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install pyPDF2&lt;/code&gt; to install it.&lt;/p&gt;
+
+&lt;p&gt;Then paste the pdf you wish to convert in the repo folder. Rename it as &lt;em&gt;in.pdf&lt;/em&gt; and then run the script from the terminal using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo python spreadmaker.py&lt;/code&gt; . You should have an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;out_final.pdf&lt;/code&gt;. That the file. Delete the other &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;out.pdf&lt;/code&gt; file. You can print the pages in two on one style and then grab the top 4 and fold it in half. You should see the numbers falling in place. Then bind it using the kettle stitch method.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Improvements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The script is ‘hacky’. Some obvious improvements are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GUI to do the same&lt;/li&gt;
+  &lt;li&gt;Not using the interim &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;out.pdf&lt;/code&gt; file.&lt;/li&gt;
+  &lt;li&gt;Using file at any location.&lt;/li&gt;
+  &lt;li&gt;Add custom blank pages to maintain pdf odd-even page formatting.&lt;/li&gt;
+  &lt;li&gt;A PDF preview&lt;/li&gt;
+  &lt;li&gt;Scaling option to zoom in dense books/journals&lt;/li&gt;
+  &lt;li&gt;Allowing the operation of encrypted files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I know this may be achievable using pdf software like acrobat. But since, I am on Linux, I seem to have no better option than to write one snippet for myself. Plus its lot of fun.&lt;/p&gt;
+
+&lt;p&gt;Hoping that someone finds it useful.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;</content><author><name>Rohit</name></author><category term="python" /><summary type="html">The post describes a handy python script to convert usual pdfs into spreads of 8. The printed pdf can be bound by hand. Thanks to my project guide, Prof. Girish, who inspired me to write this by asking me to read more stuff. During my project days (and even now), I used to print papers from several journals to read and reflect upon. The tangibility of paper provides a far better reading experience than e-books. I have given up on e-reading as it strains my eyes, difficult to make notes on side and record keeping is difficult. If something is more than 25 pages, I usually print it and read it. But I do try to save as much as paper possible. The common way to</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://images.freeimages.com/images/large-previews/76e/book-with-white-pages-1507326.jpg" /><media:content medium="image" url="https://images.freeimages.com/images/large-previews/76e/book-with-white-pages-1507326.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Pinchphone- Exertoys for kids affected by cerebral palsy</title><link href="http://rohitg.in/2018/05/04/PinchPhone/" rel="alternate" type="text/html" title="Pinchphone- Exertoys for kids affected by cerebral palsy" /><published>2018-05-04T00:00:00+02:00</published><updated>2018-05-04T00:00:00+02:00</updated><id>http://rohitg.in/2018/05/04/PinchPhone</id><content type="html" xml:base="http://rohitg.in/2018/05/04/PinchPhone/">&lt;blockquote&gt;
+  &lt;p&gt;This post presents my final Master’s project - An exertoy that helps kinds affected by cerebral palsy perform finger pinching action while learning basic concepts like shapes and colors. Although this project involved a lot of research, I have observed my friends talk a lot about my posts being very research oriented and having no visible design output. I am trying a new approach to communicate the idea in this post. I am choosing my audience by the content. I hope I can connect with more people this way.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;how-can-we-make-cp-affected-kids-like-more-of-what-exercises-they-do&quot;&gt;How can we make CP affected kids &lt;!--more--&gt;like more of what exercises they do?&lt;/h2&gt;
+
+&lt;p&gt;My siblings suffer from cerebral palsy. I have seen their therapy program ever since I was a child. In many ways, the therapy is experimental and may not be research-backed. Most therapists use a mix of stroke-centric approach with orthopedic rehabilitation to understand and improve the state of life. But, things are changing now as more and more people become aware of the condition. I started my work by going through the taxonomy of disease and various terms and concepts that would help me talk to doctors well. I made a therapy map to understand what therapy practices are being used and which of those are proven to be helpful in RCTs conducted by various researchers. This made me more aware of the current and suggested therapy in the domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/zAhObYR.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, I was unable to think from the point of view of a CP child. What would be his/her struggles? What would be their desires and goals? How did they see themselves and why? These emotional layers may not be easy to see via interviews. It may be said in pop design lingo, I sought to develop empathy. But, it was not empathy, it was a feeling of being. I researched a lot on what could be possible and came across acquired behavior methods used in marketing to develop a sense of nostalgia. Even more, reading made me learn about the process of learning without doing but just seeing/feeling/experiencing things done - Vicarious Learning. I tried some of the experiments mentioned in the paper by Bandura et.al. I read books and saw movies narrated by the person who is suffering from CP. I read- out of my mind by Sharon Draper and my left foot by Christy Brown. There is a good movie on the latter book as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/SjPD24k.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This helped me a bit about the various things a CP child may think of. Further, I moved on by visiting therapy centers. I approached therapy centers in Delhi and Mumbai. When I went there, I saw the ways therapy was being conducted and sat in the corner just listening and taking notes. I made plans of the centers to understand the structure and layout of various places. Only once, I had developed enough confidence and rapport, I was able to talk to parents. We talked about how they feel about therapy, things they wished or missed in the past. Further, I learned about the routines of children who attend therapy and their life’s in general.&lt;/p&gt;
+
+&lt;p&gt;Doctors were very helpful too. They helped me improve my therapy map and we discussed improvements and most relevant areas of the problem. In the research, I found that Fine motor skills are sometimes more important compared to locomotion. There are several options available in the area of locomotion like crutches, walkers and wheelchairs but none in fine motor. So, I decided to work on fine motors skills of hands. But, I will explore possibilities in areas like gait correction and walking as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;ideation&quot;&gt;Ideation&lt;/h2&gt;
+
+&lt;p&gt;This was the most difficult part of the process for me. I had a few ideas all from my bag of electronics. I knew from my research that batteries and electronics won’t go well with the users as it needs care and maintenance. The research on interventions performed in cerebral palsy seems to discount the maintenance factor often. Frankly, it’s like “hit and runs”. That got me stuck for a long time.&lt;/p&gt;
+
+&lt;p&gt;Whatever ideas I came with were like, lets put an LED here, a sensor and we shall be good. But alas! I feel this is a problem with me. I have been working on it as I move. Otherwise, I shall always suggest, what I can build. This does not play well in long run it seems. So, I turned to my friends for ideation. It was interesting to know their responses. They too seem to have the same issues. People who made apps ( or ahem.. UI/UX designers) tend to appify problems. A thing that works a lot, commercially. But, interestingly, I met &lt;a href=&quot;https://www.facebook.com/rupeshnath.u&quot;&gt;Rupesh&lt;/a&gt; one day during our Psychology class and that helped me shape the project better. He advised me about the importance of just sketching random and crazy ideas. Soon, we shared tales of his past works when profs at IDC would ask him if he had at least 10-20 concepts to show. He also told me about &lt;a href=&quot;http://arvindguptatoys.com/&quot;&gt;Arvind Gupta&lt;/a&gt;, whose pumps and toys I have been making as a child. Following that conversation, words of Prof. Nishant ringed in my head too, from the bamboo course. “Go crazy !”. I wondered what could go wrong. So, I started ideating things around pain-points identified in research and ideates on things like toys, game-controllers, therapy management systems, a service to send toys to kids and even therapy parks.&lt;/p&gt;
+
+&lt;p&gt;The idea was to break each identified therapy into exercises then identify components that related to &lt;a href=&quot;https://www.who.int/classifications/icf/en/&quot;&gt;ICF model&lt;/a&gt; and expand them using our interventions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/53r5c3q.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some concepts that were mocked up for feedback were :
+&lt;img src=&quot;https://i.imgur.com/qEelG5z.png&quot; alt=&quot;Imgur&quot; /&gt; 
+&lt;img src=&quot;https://i.imgur.com/jyThew0.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/Mx7KKMJ.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/qJuySbw.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;participatory-design-with-stakeholders&quot;&gt;Participatory Design with stakeholders&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For the sake of understanding, the levels of fidelity I work with are:
+Ideations(sketch and basic visualisation)&amp;gt;Concepts(some materiality but very raw) &amp;gt; Mock-ups (Ergonomic or form to scale)&amp;gt; Prototypes (Form, shape, material to product but with scope for improvement; useful to get feedback and test for short duration)&amp;gt; Test Prototypes (A prototype good as a product, can take wear and tear, not manufactured by mass-manufacturing process but by rapid prototyping methods, may mimic actual use over long durations).
+Thanks to Rupesh for explaining this to me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After the initial round of study, I planned a participatory design (pop word ATM) or co-design (getting pop slowly) study with parents and doctors to help me evaluate the mock-up. If one is intrigued by this method, I recommend watching &lt;a href=&quot;https://www.youtube.com/watch?v=oetj1RpSJrI&quot;&gt;this&lt;/a&gt;. But, it did not work out as I could not get the right mix of people together and hence, my method was an expert guided design process. If that is even a name. The mock-ups were shown to the experts (physiotherapists, dev psychologists, and child orthopedics) and users (Parents and Occupational therapists). The aim was not to get a number but rather to engage in a discussion around these prototypes. It was great. I got superb feedback and I moved into the next stage of prototyping. I did ask the experts to rate the mock-ups.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/VgEMzUX.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final Intervention&lt;/strong&gt;
+The final idea was to build a wide spectrum toy to assist in pinching motion. It had these different shapes, size, and color that could help in cognitive development. The pick and grab motion hit a key on the xylophone that helped in creating a distinct sound. The idea was to come up with an &lt;strong&gt;ExerToy&lt;/strong&gt; which could conform to a socially acceptable norm of products designed for CP affected kids. This could make the device non-alien to normal kids and acceptable to CP kids. This conformity could result in an increased social collaboration around the object.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://www.facebook.com/sudha.srinivasan.566&quot;&gt;Dr.Sudha&lt;/a&gt;,&lt;a href=&quot;http://www.idc.iitb.ac.in/ravi/&quot;&gt;Prof.Ravi&lt;/a&gt;,&lt;a href=&quot;http://www.icddelhi.org/contactus.html&quot;&gt;Dr.Alam&lt;/a&gt;, Dr.Rohit (not me) and many other parents and therapists who helped me come up with this.&lt;/p&gt;
+
+&lt;h2 id=&quot;prototyping&quot;&gt;Prototyping&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Design and Fabrication&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The prototyping was a rather smooth process. I convinced my friend, &lt;a href=&quot;https://www.behance.net/prabalnamdeo&quot;&gt;Prabal&lt;/a&gt; to model the design I made on paper in Alias. He is a pro. He did that before I could even finish my Tea and Parle G.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/AfqqgsM.png&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/Q0Ee7UT.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then started the process of making the first one. With my friend, &lt;a href=&quot;https://www.behance.net/siva493&quot;&gt;Siva’s&lt;/a&gt; help, I converted the model into slices and then generated gCodes for the shopbot for getting the model milled on fine rubberwood. The obvious place to go was the trusted- Tata Center. They had all the fablab tools I was comfortable with. But, they asked me to come late and later. I wished if people at &lt;strong&gt;MIT&lt;/strong&gt;-&lt;em&gt;Tata Center&lt;/em&gt; had more time these days as they were busy with video shooting the lab. This stopped the work in the lab as they did not want it to be dirty. Hence, three days passed in anticipation. I asked Siva again and he said he would send my files with their prototypes. But, I will have to travel to a place in Malad to deliver the rubberwood. I was more than happy. I know a good dosa shop there anyway.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/W4ipYTu.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Finishing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I have wounds that remind me of this stage. I spent days in the wood studio sanding the parts of the CNCed wood, which were milled on the wrong surface and along the wrong grain. This is typical to the things when they are in &lt;em&gt;sent to fab&lt;/em&gt; status.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/QAbrN0y.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The goal was to not use Dremel as much as possible and achieve a surface finish good enough for a toy. Samarth Sir, helped a lot. He even taught me how to lathe wood even though it was not required, but I just wanted to learn. But the process went like, sanding the 4 prototypes from 80, 100, 150, 220, 500, 700, 1200 grit papers. I learned a lot about materials too. The grain, texture, and curves of the wood. The next step was polishing. I did not want to use synthetic polish as they are usually not child safe. I was also not very confident of my spraying powers and hence, resorted to just using a wax polish on the wood. It worked very well. I would recommend this process if one is looking for a quick child and environment-friendly surface finish.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/4Oj5JXL.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I made four of these so, I can give it as a token of thanks to the parents and centers who participated in the study. A thing my guide, Prof. Girish taught me. I was happy to second this view. “No, Hit and Run” design.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final Prototype&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I will be very lazy and paste some slides from my &lt;a href=&quot;https://drive.google.com/file/d/0B-2TEMdgVwl4azA3S3NoS3VmaUFnYnNYckpTdENHcjdKSGtZ/view?usp=sharing&quot;&gt;pitch deck&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/BkUdZl8.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/qIiXlkV.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/YvyS9gz.jpg&quot; alt=&quot;Imgur&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/0PiyZh0.jpg&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;feedback&quot;&gt;Feedback&lt;/h2&gt;
+
+&lt;p&gt;The prototypes were presented to &lt;a href=&quot;http://www.adaptssi.org/home.html&quot;&gt;Adapt, Mumbai&lt;/a&gt;, &lt;a href=&quot;https://rmlh.nic.in/&quot;&gt;RML, Delhi&lt;/a&gt; and Dr. Mansoor for their feedback. I was not able to get permissions to test on the kids and hence, I resorted to the judgment of doctors and their experience to provide feedback. They could include it in the therapy, but that was not required. The feedback received from them was good. They wanted to know when they could buy it. Further, they advised to increase the size and improve the sound volume.&lt;/p&gt;
+
+&lt;p&gt;I, kind of, believe, in opening up my work. This was one of the goals. It would be great if any makerspace/fablab could make the toy for CP kids in their area. The designs are available &lt;a href=&quot;https://github.com/IndianTinker/pinchphone&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un Abrazo y Saludos,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;</content><author><name>Rohit</name></author><category term="design" /><category term="select" /><category term="note" /><summary type="html">This post presents my final Master’s project - An exertoy that helps kinds affected by cerebral palsy perform finger pinching action while learning basic concepts like shapes and colors. Although this project involved a lot of research, I have observed my friends talk a lot about my posts being very research oriented and having no visible design output. I am trying a new approach to communicate the idea in this post. I am choosing my audience by the content. I hope I can connect with more people this way. How can we make CP affected kids</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.imgur.com/LCyIo34.png" /><media:content medium="image" url="https://i.imgur.com/LCyIo34.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Jalajap- A band to encourage water drinking behaviour</title><link href="http://rohitg.in/2018/05/04/Jalajap/" rel="alternate" type="text/html" title="Jalajap- A band to encourage water drinking behaviour" /><published>2018-05-04T00:00:00+02:00</published><updated>2018-05-04T00:00:00+02:00</updated><id>http://rohitg.in/2018/05/04/Jalajap</id><content type="html" xml:base="http://rohitg.in/2018/05/04/Jalajap/">&lt;blockquote&gt;
+  &lt;p&gt;This post presents a small project that explores use of a toy to encourage users (me) to drink more water. It was made in a time when I was medically advised to drink more water and I was reading play theory and behaviour change theory.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/IWtPbik.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jalajap is behaviour change device that helps user keep a count of the number of times they have refilled a water bottle. The user drinks water from a standard 1l water bottle. He places this band of beads on the bottle and moves the bead from the grove to the other side of the band. The bead in the grove shows the active bottle and the beads on the left are the amount of water bottles consumed. It was designed by me during a time when I had started drinking less water and wanted a way to keep a tab on number of bottles left. The presence of the device creates a opportunity of play and induces novelty in the behaviour.&lt;/p&gt;
+
+&lt;p&gt;The name Jalajap is derived from two words - jal/जल , which is water and Jap/जाप , which is to count prayers. Hence, it poetically means water counter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Fipvenq.jpg?1&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This project was done at a time when I was exploring the topic of using &lt;strong&gt;toys for behaviour change&lt;/strong&gt; (&lt;em&gt;If you know anyone offering a PhD on this or related topics, please let me know&lt;/em&gt; 😎) .Coincidently, I was diagnosed with a kidney stone due to drinking less water and being kind of stressed due to project uncertainties. I thought of counting the number of water bottles, I could drink using matchsticks, but that did not work. The matchstick were not related to the behaviour. I needed something to carry with me. So, i used an app. But! I am not a “phone in a pocket guy”, so even that did not work for me. One day having recently bought new bottle from decathlon, I came up with a thought to use the bottle to visualize the consumption. Initially, I tried with some markers. But, they did not work on wet bottles. Then, while I was binding my monthly diary, I though of using beads on an elasti cord. Excited to make, I quickly ran to the studio and stationary shop to pick stuff. The first band was built in about 2 hours of some dremel wood crafting.&lt;/p&gt;
+
+&lt;p&gt;Then, to measure change, I would log water consumption (using beads) on a table before sleeping. I did it for about 10 days. The graph of my consumption is shown below :&lt;/p&gt;
+
+&lt;div id=&quot;chart&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Initially, I was excited to use the device. I would check the device at 8pm and there would be just 2 beads. Then before 12am, I would finish 2L of water. Slowly, I divided the bottles throughout the day, Two beads till evening cycling, one bead before dinner, and one bead after dinner.  That seemed to work out pretty well actually. At least, the average water consumption was increased to 3.5L .&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;Rohit&lt;/p&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+let chart = new frappe.Chart( &quot;#chart&quot;, { // or DOM element
+    data: {
+      labels: [&quot;Day 1&quot;, &quot;Day 2&quot;, &quot;Day 3&quot;, &quot;Day 4&quot;,
+      &quot;Day 5&quot;, &quot;Day 6&quot;, &quot;Day 7&quot;, &quot;Day 8&quot;, &quot;Day 9&quot;, &quot;Day 10&quot;],
+
+      datasets: [
+        {
+          name: &quot;Number of bottles consumed&quot;, chartType: 'line',
+          values: [2, 3, 4, 4, 3, 4, 4, 4,3,4]
+        }
+      ],
+
+    },
+  
+ barOptions: {
+    spaceRatio: 0.1 // default: 1
+    
+},
+  
+
+    title: &quot;Number of bottles consumed&quot;,
+    type: 'line', // or 'bar', 'line', 'pie', 'percentage'
+    height: 300,
+    colors: ['purple', '#ffa3ef', 'light-blue'],
+    valuesOverPoints: 1,
+    tooltipOptions: {
+      formatTooltipX: d =&gt; (d + '&lt;br&gt;').toUpperCase(),
+      formatTooltipY: d =&gt; d + ' bottles',
+    }
+  });
+&lt;/script&gt;</content><author><name>Rohit</name></author><category term="design" /><summary type="html">This post presents a small project that explores use of a toy to encourage users (me) to drink more water. It was made in a time when I was medically advised to drink more water and I was reading play theory and behaviour change theory. Jalajap is behaviour change device that helps user keep a count of the number of times they have refilled a water bottle. The user drinks water from a standard 1l water bottle. He places this band of beads on the bottle and moves the bead from the grove to the other side of the band. The bead in the grove shows the active bottle and the beads on the left are the amount of water bottles consumed. It was designed by me during a time when I had started drinking less water and wanted a way to keep a tab on number of bottles left. The presence of the device creates a opportunity of play and induces novelty in the behaviour. The name Jalajap is derived from two words - jal/जल , which is water and Jap/जाप , which is to count prayers. Hence, it poetically means water counter. This project was done at a time when I was exploring the topic of using toys for behaviour change (If you know anyone offering a PhD on this or related topics, please let me know 😎) .Coincidently, I was diagnosed with a kidney stone due to drinking less water and being kind of stressed due to project uncertainties. I thought of counting the number of water bottles, I could drink using matchsticks, but that did not work. The matchstick were not related to the behaviour. I needed something to carry with me. So, i used an app. But! I am not a “phone in a pocket guy”, so even that did not work for me. One day having recently bought new bottle from decathlon, I came up with a thought to use the bottle to visualize the consumption. Initially, I tried with some markers. But, they did not work on wet bottles. Then, while I was binding my monthly diary, I though of using beads on an elasti cord. Excited to make, I quickly ran to the studio and stationary shop to pick stuff. The first band was built in about 2 hours of some dremel wood crafting. Then, to measure change, I would log water consumption (using beads) on a table before sleeping. I did it for about 10 days. The graph of my consumption is shown below : Initially, I was excited to use the device. I would check the device at 8pm and there would be just 2 beads. Then before 12am, I would finish 2L of water. Slowly, I divided the bottles throughout the day, Two beads till evening cycling, one bead before dinner, and one bead after dinner. That seemed to work out pretty well actually. At least, the average water consumption was increased to 3.5L . Cheers, Rohit</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.imgur.com/IWtPbik.jpg?1" /><media:content medium="image" url="https://i.imgur.com/IWtPbik.jpg?1" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

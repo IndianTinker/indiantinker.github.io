@@ -1,0 +1,58 @@
+I"<p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+
+<ul>
+  <li>Analog which can be directly read by our friendly ADC</li>
+  <li>Digital which send data in values riding on I2C/SPI.</li>
+</ul>
+
+<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale ‘s MMA7361 analog 3Axis Accelerometer</a>.</p>
+
+<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image" /></p>
+
+<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
+
+<ul>
+  <li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
+  <li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
+  <li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
+  <li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
+  <li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings</li>
+  <li><strong>ST</strong> - Self Test</li>
+</ul>
+
+<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
+
+<p>Just connect a 10k resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+
+<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg" /></p>
+
+<p>Now just:</p>
+
+<ul>
+  <li>read the analog values from the pin</li>
+  <li>convert them to voltages</li>
+  <li>apply sensitivity and correction</li>
+  <li>and get g value</li>
+</ul>
+
+<p>Simple as that!</p>
+
+<p>Having deciphered it, i wrote a test code:</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+
+<p>It worked as designed.</p>
+
+<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
+The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
+
+<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
+
+<p>Feel free to fork it and use it. 
+Hoping the community finds it useful.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+:ET

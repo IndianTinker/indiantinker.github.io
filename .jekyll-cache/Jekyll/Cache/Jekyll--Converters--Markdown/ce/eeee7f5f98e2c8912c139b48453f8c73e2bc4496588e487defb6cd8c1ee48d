@@ -1,0 +1,27 @@
+I"�<blockquote>
+  <p>This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I present my work on defining strategies to improve FM/AM user experience and implementation of the same. The work was first used in Tata Tiago/Tigor.</p>
+</blockquote>
+
+<blockquote>
+  <p>“Good Design is as Little Design as Possible” — D. Rams</p>
+</blockquote>
+
+<h4>Context</h4>
+<p>With a burst of highly “connected” media options available in cars, FM/AM or Radio still happens to be a widely used feature in infotainment units.  However, based on many field requests the experience of FM was not at par with other media options like USB/BT/SD and needed some rethinking. Further, there was a need to establish a more data-informed tuning process.</p>
+
+<h4>Work</h4>
+<p>The work started by understanding the entire signal reception flow from the antenna to the infotainment unit and the chip in infotainment. We explored to the level of the algorithms used in the RTOS to play channels. This helped us, as designers/engineers get a perspective on the scope of changes. We even studied the antenna cables and their routing. This helped us identify their vicinity with EM noise generating components like alternators and engine. Then we did a small exercise to find out possible conditions that might result in pain points. These were a sudden loss of reception (when entering an area with no coverage like a tunnel), reducing signal strength (when traveling outside the city), and system scanning for stations (auto store). We carried out several benchmarking sprints with our spectrum analyzer which gave us the ground truth. A comparison with other competitive cars was done. It was quite a hectic process. We had to often drive in places where there was not even a road and test reception. A customer can be anywhere, we should provide the best experience everywhere was the motivation.  A nice part was we could see some country and eat some local food. But we spent the whole day in hot weather in test cars.  After about 5-6 such exercises over a few months, we were able to suggest an FM algorithm that could be implemented. In the process, we figured out how to do spectrum analysis and find signal strength values. Then correlate it with readings of the infotainment, figure out leaks, and calibrate the system. <br /> The simulation exercises helped and we were able to detect conditions like tunnel entry, driving out of zone based on readings. We would dynamically adjust the volume curve/filters based on such events.</p>
+
+<h4>Learnings</h4>
+<p>The work was challenging and I read a lot on FM/AM. I learned to operate the spectrum analyzers as well. This sparked my interest in Audio based user experiences in a car environment. The whole exercise also taught me about the design of such a system. I was in a weird position in Tata Motors, I was doing the work of design to technology integration. I would know what users want and could understand what the engineering team was doing in the code. I had to work on aligning all these stakeholders together. BTW, I even made <a href="/2015/05/17/FM430/">my own FM receiver</a> that could show vague signal strength, when I was finding it hard to understand that spectrum analyzer. :)</p>
+
+<h4>How it affected the company</h4>
+<p>The same FM/AM reception component was used in several other platforms. It seems to have improved the shape FM/AM was in the car. The experience was pushed as a part of Tiago/Tigor and may even have been pushed to others.</p>
+
+<p><strong>Skills</strong>: Research Methodology, Design Integration, UX, and Spectrum analysis</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+:ET

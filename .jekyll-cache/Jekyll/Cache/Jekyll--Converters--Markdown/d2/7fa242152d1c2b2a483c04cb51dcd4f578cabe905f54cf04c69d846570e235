@@ -1,0 +1,69 @@
+I"�<blockquote>
+  <p>Day and Night presents a unique holographic experience of observing the day of an owl. The users can interact with the holographic owl using a constructed device. The device morphs the feeling of the owl into an earth like object. As the users touch the owl’s fur the owl playfully reacts to this sensation. On moving the globe, the time changes and it is day or night. Through this installation, we wished to draw attention to the changing circadian rhythms and the perceived control one has on it. Owl is a bird that wakes up in the night. Technology seems to have enabled us to become like owls.
+This installation was presented at National Gallery of Modern Art, Mumbai, was a part of the <a href="http://www.dsource.in/events/naturembedded/">“Nature Embedded”</a> exhibition. The exhibition was inaugurated and visited by <a href="https://en.wikipedia.org/wiki/Paola_Antonelli">Paola Antonelli</a> .</p>
+</blockquote>
+
+<p><a href="https://www.mid-day.com/articles/designs-by-nature/19036197">Mid Day Times</a> reports about the exhibition :
+<img src="https://i.imgur.com/BjwcGAW.png?1" alt="Imgur" /></p>
+
+<h4>The exhibit at the gallery </h4>
+
+<p><img src="https://i.imgur.com/14VCYBO.png" alt="At event" /></p>
+
+<p><img src="https://i.imgur.com/OHEAk7V.png" alt="People" /></p>
+
+<h4>Concept</h4>
+
+<p>We live seem to be living in a time when the day and night are mixing. No wonder a whole period of 24 hours is called a day. Technology has enabled us to live the day past the day. This situation has altered the circadian rhythm or the biological clock of the nature. We wanted to draw the attention of visitors, especially the kids, to this fact. That is why we chose Owls. Owls have an inverse circadian rhythm, they are up in night and sleep in the day. The metaphor of an owl draws attention and serves as a nice exploration of the chosen concept.</p>
+
+<p>We wanted to retain the mysterious and hidden nature of an owl and tried the medium of a hologram to show the owls. Through the hologram, we bring the owl from the jungle to the museum. They can be seen from all sides.</p>
+
+<p><img src="https://i.imgur.com/knGm54b.png" alt="Concept" /></p>
+
+<p>The story does not end here, we wanted the visitors to interact with the owls. The setting allows us to playfully answer questions like , “How does an owl feel?”, “What will it do when we touch it?”, “Can we touch it?” . Through this we wished to break the boundary and connect the man back to nature. This could be considered as a means to develop empathy towards the bird and our condition like the bird. The owl was to animated and interactive and controlled by an owl like object.</p>
+
+<h4>Production</h4>
+
+<p>The team led by Vajra explored many options for the owl. We made these playful owls and modelled them.</p>
+
+<p><img src="https://i.imgur.com/91NQDM5.png" alt="Owl-1" /></p>
+
+<p>The models were used in Unity to design animations for owl’s reactions to touches and changing day and night.</p>
+
+<p><img src="https://i.imgur.com/iOqCe3C.png" alt="Owl-2" /></p>
+
+<p>After some projection headaches, we were able to produce consistent animated holograms :)
+<img src="https://i.imgur.com/yKhrb6Q.png" alt="Holo" /></p>
+
+<h4>Designing Interactions</h4>
+
+<p>We used body storming to come up with possible ideas for interactions. The initial idea of a globe was not very semantic towards modelling a control focussed towards the owl. But the spherical shape was relevant as it showed time and earth. So, we designed a controller that had the tangible feel of an owl and offered the possibility to interact (not control) the owl by touching the fur on the sphere and change the environment of the owl by rotating the sphere.</p>
+
+<p>So, the physical endpoints were touch and rotation. I started by prototyping a system with a ball and some touch sensors. As an electrical engineer, I love slip rings. So, we solved the problems of a moving contact touch sensor using a slip ring. The springs kept the ball in place and helped control the stiffness of the motion.</p>
+
+<p><img src="https://i.imgur.com/JxPVlUX.jpg" alt="Prototyping-1" /></p>
+
+<p>The final version had modality to touch parts of a sphere that triggered various responses in the hologram. Touching on right caused the owl to move towards right side and scratch. Touching both sides made the owl feel loved. Tapping on the ball made the owl happy and several other emotions were mapped to the touches on ball.</p>
+
+<p><img src="https://i.imgur.com/8EZnFqX.jpg" alt="Circuit" /></p>
+
+<p>On rotating the ball covered with fur, the user can change the time of the day. Make it day and night. This was sensed using an IR sensor. A technique I learned while designing speed sensors for <a href="/2014/04/01/Solaris/">my solar car project</a>.</p>
+
+<p><img src="https://i.imgur.com/SCYV8k7.png" alt="GlobeSense" /></p>
+
+<p>The final controller looked like an inverted fur mouse (like in the 90s)</p>
+
+<p><img src="https://i.imgur.com/8p7B8Pd.png" alt="Final Globe" /></p>
+
+<p>The final setup was placed in a dark place and users would often be amazed to find floating owls in the gallery.
+<img src="https://i.imgur.com/14VCYBO.png" alt="At event" /></p>
+
+<h4 id="team">Team</h4>
+
+<p>The project was a part of my work done under Prof. Ravi and Prof. Ajanta at IDC. The super talented team at dsource and ekalpa project made the project possible. They include Vajra, Pranisha, Herold, Ravi, Malay, Deep, Shyam, Rajarshi, Swati, Vinaya, RamP (Audio) and other folks whose name I intermittently forgot.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+:ET

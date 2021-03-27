@@ -1,0 +1,15 @@
+I"Ø<p>One day, well on a not so busy one, I will try and make my own Indicators for my <em>Linux</em> machine. Indicators in Unity Environment are a quick way to access the information or present info to the user. Things that take time like video encoding/code compiling can have a very intuitive interface with the taskbar icon which when clicked shows the progress.</p>
+
+<p>For more info check <a href="https://unity.ubuntu.com/projects/appindicators/">this</a> link.</p>
+
+<p><img src="https://c8.staticflickr.com/9/8884/28924622311_0d92a03741.jpg" width="380" height="46" alt="indicato" /></p>
+
+<p>Although good, but there is too little documentation to get you started. After a lot of explorations around the web, i was able to put together this template for building 
+app indicators that exit <em>gracefully</em> and have an on click event that updates the menu dynamically. I had made it to essentially track some parameters on a remote system. So, whenever i clicked, it fetched data and presented it. A bit better than running a parallel thread even when data is not required by the user.</p>
+
+<p>The basic code is <a href="https://github.com/IndianTinker/DynamicIndicators">here</a> in the git repo.</p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+:ET

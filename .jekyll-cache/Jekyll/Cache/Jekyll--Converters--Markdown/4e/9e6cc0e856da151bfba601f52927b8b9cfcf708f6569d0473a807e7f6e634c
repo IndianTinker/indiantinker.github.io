@@ -1,0 +1,49 @@
+I"N
+<p>Who does not like Iron Man? Who does not like to be like him? I wanted to do a gig at the ComicCon Delhi a while back and who else could i be, the <em>Iron Man</em>. He is fundamentally the coolest engineer/maker around, at-least in the movies.</p>
+
+<p>The defining thing with Iron Man is his “Arc Reactor” ; it gives him strength and he <em>made</em> it himself (Sorry Ivan Vanko). Obviously, to impersonate him, I would need one. So, I decided to build one using our friendly of-the-shelf micro-controller, the MSP430. I called it the ArcReactorX. (Probably because I like X-men too)</p>
+
+<p>The arcReactorX is a wearable arc reactor clone which runs on a Li-Ion Battery from an old cell phone! It has 8 Blue LEDs on the circumference and a bright white LED in the centre.</p>
+
+<p>Features:</p>
+
+<ul>
+  <li>Small and light</li>
+  <li>Power efficient</li>
+  <li>Bright</li>
+  <li>Change-able modes using a switch</li>
+  <li>Since, it has a battery, we need a battery indicator like a dial on the reactor.So if its 50% charged we light up only half of it. Follow the discharge graphs for more accuracy!</li>
+  <li>Morse Code for SOS</li>
+  <li>A mind blowing start-up sequence</li>
+  <li>Knight rider effect on LEDs</li>
+  <li>Breathing effect on the Middle high power LED</li>
+</ul>
+
+<p>It also needs to be wearable and comfortable at the same time.</p>
+
+<p>The motion and the light helps attract attention.</p>
+
+<p>I designed, etched and soldered the board around a TSSOP MSP430G2452. Complete and elaborate logs available on my <a href="https://hackaday.io/rohit">hackaday.io</a> profile.</p>
+
+<p><img src="https://cdn.hackaday.io/images/3053731397417432067.jpg" alt="Board" />
+<img src="https://cdn.hackaday.io/images/6659031397312403141.jpg" alt="Board soldered" /></p>
+
+<p>Added a test-code for the start-up sequence, i.e. when you turn it on for the first time</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/HKzWJtDY-tM" frameborder="0" allowfullscreen=""></iframe>
+
+<p>I added a velcro based strap on so i can just strap the reactor on my Tshirt and then wear another one on the top to hide it and turn it on.</p>
+
+<p><img src="https://farm3.staticflickr.com/2862/13887143286_a6dc1ed901.jpg" alt="Wearable" /></p>
+
+<p>The TL-DR; video is here (please pardon me for the weird psychedelic audio) :</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/NbuMJwMDaMo" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Interested in building one too ? Grab the schematics and code from <a href="https://github.com/IndianTinker/ArcReactorX">here</a>.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+:ET

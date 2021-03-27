@@ -27,11 +27,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/2015/11/08/NoobSentiment/" />
+  <meta property="og:url" content="http://rohitg.in/2015/11/08/NoobSentiment/" />
 
 
-  <meta content="2015-11-08T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+  <meta content="2015-11-08T00:00:00+01:00" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
   <meta content="https://g.twimg.com/Twitter_logo_blue.png" property="og:image"/>
@@ -153,6 +153,10 @@
           
             <a class="sidebar-nav-item" href="/travels/">Writings</a>
           
+        
+      
+        
+      
         
       
         
@@ -361,20 +365,19 @@ window.twttr = (function (d, s, id) {
 
 <p>Now I used a nodejs package called <a href="https://github.com/thisandagain/sentiment">sentiment</a> that takes in the phrase and tells you the sentiment of the phrase using the AFINN-111 dictionary.</p>
 
-<p>To install it: <code class="highlighter-rouge">npm install sentiment</code> . Check out the README on the page for a quick start.</p>
+<p>To install it: <code class="language-plaintext highlighter-rouge">npm install sentiment</code> . Check out the README on the page for a quick start.</p>
 
 <p>Next we need a twitter API Client for node, It will be <a href="https://github.com/ttezel/twit">Twit</a>. You will need to get the usual Outh Tokens to use this library. You will need to install Twit similarly .</p>
 
 <p>The Twit returns a JSON Object for the Tweet. So, extracting that is pretty easy with the ‘.’ operator.</p>
 
-<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code class="highlighter-rouge">fs</code> that already comes with the package.</p>
+<p>With all these bits and pieces we have some code gluing left. I intent to log the data as CSV so that i can analyze it later. This requires a basic file access (write) library <code class="language-plaintext highlighter-rouge">fs</code> that already comes with the package.</p>
 
 <p>For my little experiment, i would analyze prominent Indian cities for their sentiments and plot the same using Plotly later. The time was the party time when you expect people to be happy. Saturday,7th Nov and time around 10-11:30pm .</p>
 
 <p>Here is the script that i ran simultaneous (2 at a time and exiting at a sample size of 500 tweets). You can replace the co-ordinates of your city using <a href="http://boundingbox.klokantech.com/">this tool</a> , choose the area and select CSV, then simply copy paste it in the script.</p>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
+<noscript><pre>400: Invalid request</pre></noscript>
 <script src="https://gist.github.com/5e64f03beb01b3dec3dd.js"> </script>
 
 <p>After 500 Tweets the data is as follows:</p>
@@ -423,27 +426,27 @@ window.twttr = (function (d, s, id) {
     
       <li>
         <h3>
+          <a href="/2021/03/27/Update/">
+            Personal Update and Restart
+            <small>27 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/03/26/BookRecs2/">
+            Suggested reading list for Masters students at IDC -II
+            <small>26 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2019/03/31/BookRecs1/">
             Suggested reading list for Masters students at IDC -I
             <small>31 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2019/03/01/missingMenu/">
-            missingMenu- Understanding food menus as a language
-            <small>01 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2018/11/04/spanishVisa/">
-            Getting a Spanish student visa
-            <small>04 Nov 2018</small>
           </a>
         </h3>
       </li>

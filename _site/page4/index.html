@@ -27,7 +27,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/page4/" />
+  <meta property="og:url" content="http://rohitg.in/page4/" />
 
 
 
@@ -147,7 +147,7 @@
         
       
         
-          
+      
         
       
         
@@ -276,6 +276,12 @@
       
         
           
+        
+      
+        
+          
+        
+      
         
       
 
@@ -318,6 +324,98 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2018/05/04/Jalajap/">
+        Jalajap- A band to encourage water drinking behaviour
+      </a>
+    </h1>
+
+    <span class="post-date">04 May 2018</span>
+
+    <blockquote>
+  <p>This post presents a small project that explores use of a toy to encourage users (me) to drink more water. It was made in a time when I was medically advised to drink more water and I was reading play theory and behaviour change theory.</p>
+</blockquote>
+
+<p><img src="https://i.imgur.com/IWtPbik.jpg?1" alt="Imgur" /></p>
+
+<p>Jalajap is behaviour change device that helps user keep a count of the number of times they have refilled a water bottle. The user drinks water from a standard 1l water bottle. He places this band of beads on the bottle and moves the bead from the grove to the other side of the band. The bead in the grove shows the active bottle and the beads on the left are the amount of water bottles consumed. It was designed by me during a time when I had started drinking less water and wanted a way to keep a tab on number of bottles left. The presence of the device creates a opportunity of play and induces novelty in the behaviour.</p>
+
+<p>The name Jalajap is derived from two words - jal/जल , which is water and Jap/जाप , which is to count prayers. Hence, it poetically means water counter.</p>
+
+<p><img src="https://i.imgur.com/Fipvenq.jpg?1" alt="Imgur" /></p>
+
+<p>This project was done at a time when I was exploring the topic of using <strong>toys for behaviour change</strong> (<em>If you know anyone offering a PhD on this or related topics, please let me know</em> 😎) .Coincidently, I was diagnosed with a kidney stone due to drinking less water and being kind of stressed due to project uncertainties. I thought of counting the number of water bottles, I could drink using matchsticks, but that did not work. The matchstick were not related to the behaviour. I needed something to carry with me. So, i used an app. But! I am not a “phone in a pocket guy”, so even that did not work for me. One day having recently bought new bottle from decathlon, I came up with a thought to use the bottle to visualize the consumption. Initially, I tried with some markers. But, they did not work on wet bottles. Then, while I was binding my monthly diary, I though of using beads on an elasti cord. Excited to make, I quickly ran to the studio and stationary shop to pick stuff. The first band was built in about 2 hours of some dremel wood crafting.</p>
+
+<p>Then, to measure change, I would log water consumption (using beads) on a table before sleeping. I did it for about 10 days. The graph of my consumption is shown below :</p>
+
+<div id="chart"></div>
+
+<p>Initially, I was excited to use the device. I would check the device at 8pm and there would be just 2 beads. Then before 12am, I would finish 2L of water. Slowly, I divided the bottles throughout the day, Two beads till evening cycling, one bead before dinner, and one bead after dinner.  That seemed to work out pretty well actually. At least, the average water consumption was increased to 3.5L .</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js"></script>
+
+<script>
+let chart = new frappe.Chart( "#chart", { // or DOM element
+    data: {
+      labels: ["Day 1", "Day 2", "Day 3", "Day 4",
+      "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"],
+
+      datasets: [
+        {
+          name: "Number of bottles consumed", chartType: 'line',
+          values: [2, 3, 4, 4, 3, 4, 4, 4,3,4]
+        }
+      ],
+
+    },
+  
+ barOptions: {
+    spaceRatio: 0.1 // default: 1
+    
+},
+  
+
+    title: "Number of bottles consumed",
+    type: 'line', // or 'bar', 'line', 'pie', 'percentage'
+    height: 300,
+    colors: ['purple', '#ffa3ef', 'light-blue'],
+    valuesOverPoints: 1,
+    tooltipOptions: {
+      formatTooltipX: d => (d + '<br>').toUpperCase(),
+      formatTooltipY: d => d + ' bottles',
+    }
+  });
+</script>
+
+<a href="/2018/05/04/Jalajap/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2018/05/02/TogethernessRepublic/">
+        Togetherness
+      </a>
+    </h1>
+
+    <span class="post-date">02 May 2018</span>
+
+    <blockquote>
+  <p>This post presents a commissioned public installation on the occasion of Republic Day. <a href="https://mkrv.in/">We</a> worked a creating an abstract digital reflection of the visitors to evoke feeling of togetherness.</p>
+</blockquote>
+
+<p>We tried to understand the work in terms</p>
+<a href="/2018/05/02/TogethernessRepublic/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -403,85 +501,7 @@ window.twttr = (function (d, s, id) {
 <hr>
   </divr
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2018/05/02/HackU/">
-        Playful surfaces in a hackathon
-      </a>
-    </h1>
-
-    <span class="post-date">02 May 2018</span>
-
-    <blockquote>
-  <p>48 hours to do something fun and then go to Japan ? Hai(はい)!! :)</p>
-</blockquote>
-
-<p>Let us make dancing passwords !</p>
-
-<p>It was a funny moment when I and <a href="https://www.facebook.com/rishabhmakes">Rishabh</a> decided to participate in this hackathon. Designers in an engineering hackathon. I packed all my electronics in a bag, I got at another hackathon and reported at the venue. It was though to decide what to make.</p>
-
-<p>Boredom struck us hard and we decided to make something that you could use to dance and operate the computer. Dance moves as a password? It was pretty random. Wishful thinking, of sorts.</p>
-
-<p>We started working on a mat kind of a thing that one could place under his/her feet when using a computer. Hopping on it, one could do some moves to login. The mat would double up as a foot controller to operate websites like Youtube to do things like- play/pause, volume +/- and next/prev. We even built a chrome app for that. The whole thing was driven by an Arduino Leonardo acting happily as a  USB-Keyboard.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33404978143/in/dateposted-public/" title="2017-04-23_04-15-47"><img src="https://farm5.staticflickr.com/4181/33404978143_fc90b5b632_z.jpg" width="640" height="480" alt="2017-04-23_04-15-47" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33270723250/in/dateposted-public/" title="2017-03-26_12-18-16"><img src="https://farm3.staticflickr.com/2931/33270723250_23db8f2657_z.jpg" width="640" height="480" alt="2017-03-26_12-18-16" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32841106553/in/dateposted-public/" title="Users"><img src="https://farm3.staticflickr.com/2857/32841106553_2b79022ff2_z.jpg" width="480" height="640" alt="Users" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/32811584234/in/dateposted-public/" title="2017-03-26_11-55-25"><img src="https://farm3.staticflickr.com/2941/32811584234_b3bf1591a4_z.jpg" width="640" height="480" alt="2017-03-26_11-55-25" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>And yeah ! We won the hackathon and got a chance to visit Tokyo :)
-#TamasHack</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/33831664520/in/dateposted-public/" title="Winner"><img src="https://farm3.staticflickr.com/2834/33831664520_aec56d5b59_z.jpg" width="640" height="480" alt="Winner" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2018/05/02/HackU/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2018/05/02/Blowables/">
-        Blowables
-      </a>
-    </h1>
-
-    <span class="post-date">02 May 2018</span>
-
-    <blockquote>
-  <p>This post describes a commissioned installation on the occasion of Women’s Day. We use the metaphor of “being gentle” to create a series of breath driven interactive sketches.</p>
-</blockquote>
-
-<p>The client came up with a requirement of quick turn around interactive installation for Women’s day to engage the audience while shopping. We wanted to explore the realm of love and socially undermined role of women in our lives. After some rounds of brainstorming, we decided to work on the idea of a “gentle love”.</p>
-
-<p><a href="https://mkrv.in/">We</a> thought of connecting breath to gentleness. What is gentleness in nature? Feathers, Flowers, Bubbles, Vapour, Leaves. They all get aboard the gentle wind and spread their color and happiness wherever they go. Women do the same for us all. We wanted the depiction to be “as-is”. Further, breath based interfaces seem an interesting modality to experiment with.</p>
-
-<p>So, we used several particles systems to make digitally manipulated flowers, flames and bubbles.</p>
-
-<p><img src="https://i.imgur.com/2NQUz6p.gif" alt="Imgur" /></p>
-
-<p><img src="https://i.imgur.com/jKWTQLQ.gif" alt="Imgur" /></p>
-
-<p><img src="https://i.imgur.com/I6anS1w.gif" alt="Imgur" /></p>
-
-<p>Quite simple and effective ; the audiences seem to have liked the idea. :)</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2018/05/02/Blowables/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
+</div>
 </div>
 
 <div class="pagination">

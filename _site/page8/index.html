@@ -27,7 +27,7 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/page8/" />
+  <meta property="og:url" content="http://rohitg.in/page8/" />
 
 
 
@@ -147,7 +147,7 @@
         
       
         
-          
+      
         
       
         
@@ -276,6 +276,12 @@
       
         
           
+        
+      
+        
+          
+        
+      
         
       
 
@@ -318,6 +324,312 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/08/31/ContribOSM/">
+        Contributing to OSM using JOSM
+      </a>
+    </h1>
+
+    <span class="post-date">31 Aug 2017</span>
+
+    <blockquote>
+  <p>This post is meant to document to process of uploading data points gathered as a part of <a href="https://info-design-lab.github.io/">Interactive Data Viz</a> course at IDC taught by Prof. Venkat.</p>
+</blockquote>
+
+<h2 id="goal">Goal</h2>
+<p>The aim of the exercise was to experience the process of collecting, analyzing and contributing data points to <a href="https://www.openstreetmap.org">openstreetmaps</a>. This would allow the class to cperform a <strong>data mash-up</strong>. A data mash-up happens when a lot of data on various things is presented on a common -graphical- medium like maps. Data mash-ups can help us draw insights and suggest causality for certain occurrences. Through our experience, we learned that the density of data for a mash-up should be very high to draw interesting inferences.</p>
+
+<h2 id="data-collection">Data Collection</h2>
+
+<p>There are several ways to collect data:</p>
+
+<ul>
+  <li><strong>Manual method</strong> : It involves taking a printout of your area under exploration using <a href="http://fieldpapers.org/">Field papers</a> and then once in the field, one marks places on the map. These positions are then manually plotted on the OSM map using their online editors or JOSM. The drawback of this methods is the accuracy. Since, the marking is relative, missile accuracy is often difficult to achieve. The advantage is that it allows more freedom and can work without phones. Hence, if a mapathon is organized then it would be better to use such a method that reduces the dependency on phones. There could be a specific group of people who would collect these sheets and mark these points on OSM later. Thanks for the tip, <a href="https://www.mapbox.com/about/team/rasagy-sharma/">Rasagy</a>.</li>
+  <li><strong>Apps</strong> : There are several Apps for <em>Android</em>. The goal is to essentially get a KML file. Most people used <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.m4b&amp;hl=en">Google MyMaps</a>. Other options are <a href="https://play.google.com/store/apps/details?id=np.com.softwel.swmaps&amp;hl=en">SWMaps</a> and <a href="https://play.google.com/store/apps/details?id=com.mapswithme.maps.pro&amp;hl=en">Maps.me</a>. iPhone users can use the web version of Google MyMaps and plot the data manually on it. It gets stored in gDrive. Then export the kml out of gDrive. This method was followed by Shilpa. If anyone knows of a better way, please be sure to suggest.</li>
+</ul>
+
+<p>In conclusion, I think if the data is less (&lt; 20 points say) and precision is not required, then field paper method would be faster. This reduces the time wasted in converting formats. The data can then be replicated on the map using <a href="http://wiki.openstreetmap.org/wiki/ID">iD</a> or <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch2</a>(Flash alert!!). These editors are available online and many of my classmates with less number of points used them.</p>
+
+<p>For a larger number of points we will proceed with JOSM method.</p>
+
+<h2 id="post-data-collection">Post Data Collection</h2>
+
+<p><strong>Preparing data</strong></p>
+
+<p>Once you have your data points in KML or CSV or geoJson. You can proceed with the following process. It is advisable to have a geoJson file. It helps in running vizualization when using Mapbox. Helpful tools are :</p>
+
+<ul>
+  <li><a href="https://mapbox.github.io/togeojson/">KML/GPX to geoJson</a></li>
+  <li><a href="http://geojson.io">geoJson to CSV</a></li>
+</ul>
+
+<p>The process I followed was KML –&gt; CSV –&gt;geoJson</p>
+
+<p><strong>Icons and OSM features</strong></p>
+
+<p>Like Mapbox’s Maki icons, OSM also has its own set of icons. They can be rendered on the map when you choose specific tags. The list of tags are mentioned <a href="http://wiki.openstreetmap.org/wiki/Map_Features">here</a>. The icons column on the page shows the icons that will be shown on the map. For example : I chose to map sitting places in IIT Campus. The most semantically suitable choice was of a bench. I used the ‘field’ as ‘amenity’ and value as ‘bench’. You can choose appropriately. The features can be added to the points using the CSV file. Once you have the CSV file you can add a new ‘column’ as amenity (in my case) using your favorite spreadsheet software. Now, in every ‘row’ i.e. for each data point add the value. This would be ‘bench’ in my case. You can have additional fields as well. It is preffered not to have spaces in between the words of the field. Use an ‘_’ .</p>
+
+<p>Once this is done, you should have a dataset in csv we can proceed to map them on OSM. As an additional step, I also generate a geoJSON file.</p>
+
+<p>Rasagy suggested some <em>pro-tips</em> like :</p>
+
+<ul>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the renderer</a>: The point is to collect the data and not have icons marked on the map. As many features might not have icons for them, it is suggested to mark real data.</p>
+  </li>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one element</a> : This point should be considered when adding details to already existing features. Instead of adding a new node/point for some area, it is better to include that detail in the existing polygon itself.</p>
+  </li>
+  <li>
+    <p><a href="http://wiki.openstreetmap.org/wiki/Key:operator">Operator- Key</a>: Since, facilities in IIT will probably be run by IIT. It is worthwhile to include an <em>operator</em> key in the data. For example: The staff canteen could have an “operator: IIT Bombay” tag.</p>
+  </li>
+</ul>
+
+<p>Some other tips i found <a href="http://wiki.openstreetmap.org/wiki/Good_practice">here</a> that deserve a mention are:</p>
+
+<ul>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Armchair_mapping">Refrain from Armchair mapping</a></li>
+  <li>Do not add temporary events on the OSM map. These could include things like Ganpati Pandals. One can use the <em>geojson on map</em> approach for this.</li>
+  <li>Map for verifiability. Hence, mapping historical events on OSM is not a good practise.</li>
+  <li>If you find that your data needs a new tag on OSM, then follow this <a href="http://wiki.openstreetmap.org/wiki/New_Features">new features</a> page .</li>
+</ul>
+
+<p><strong>OSM Contributing</strong></p>
+
+<p>As a class, we tried several methods. The following method uses the <a href="https://josm.openstreetmap.de/">JOSM IDE</a> to import the data as a map layer and then contribute it to OSM database. <strong>Before proceeding</strong>, check multiple times that your data fields are correctly rendered. You can test this <a href="http://geojson.io">here</a>. Once you update, it <em>might</em> be cubersome to update/edit them .</p>
+
+<p>First, Download the <a href="https://josm.openstreetmap.de/">IDE</a>  for the OS of your own choice.</p>
+
+<p>I have documented it for windows that came <a href="https://www.youtube.com/watch?v=wF_vKXrOtY8">bunduru</a>-ed with my machine.</p>
+
+<p>Once, the software is installed, we need to install a plugin called <em>OpenData</em> this enables JOSM to read csv files. Press F12 or Edit -&gt; Pref and choose plugins and type opendata. You may want to do Download list before. Then check the box and click OK. This installs OpenData plugin.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326825/in/album-72157686030264413/" title="opendata"><img src="https://farm5.staticflickr.com/4410/36952326825_4062955f0f_z.jpg" width="640" height="621" alt="opendata" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Now we need a map layer to work on. The preffered way is to use ‘open location’ option from ‘File’ menu option. You are presented with the following dialog.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725461/in/album-72157686030264413/" title="FileDownload"><img src="https://farm5.staticflickr.com/4367/36812725461_07f1def4bb_z.jpg" width="590" height="298" alt="FileDownload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>In this dialog, paste the url of the map you wish JOSM to pull. In my case, it was this <a href="http://www.openstreetmap.org/#map=15/19.1337/72.9126">http://www.openstreetmap.org/#map=15/19.1337/72.9126</a>.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326615/in/album-72157686030264413/" title="osm"><img src="https://farm5.staticflickr.com/4404/36952326615_fcddd6a18f_z.jpg" width="640" height="341" alt="osm" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Once downloaded, I got this.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36952326985/in/album-72157686030264413/" title="result"><img src="https://farm5.staticflickr.com/4337/36952326985_bd8d70a0a7_z.jpg" width="640" height="337" alt="result" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>By the this point, we have a base layer ready. Now, I opened the csv file. The usual File –&gt; Open way .</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737856/in/album-72157686030264413/" title="openfiles"><img src="https://farm5.staticflickr.com/4382/36764737856_5857da0a1e_z.jpg" width="640" height="411" alt="openfiles" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>My file is ‘points.csv’.Click Open. In the popup while importing CSV. The default options worked.
+The file gets rendered correctly over the base layer as points. In my case the color of points was cyan.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725561/in/album-72157686030264413/" title="bench local"><img src="https://farm5.staticflickr.com/4437/36812725561_7f6556a133_z.jpg" width="640" height="343" alt="bench local" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Please check the points before proceeding.</p>
+
+<p><strong>Uploading to OSM</strong></p>
+
+<p>Once checked, you may proceed by clicking on the upload icon. I got this warning popup. I clicked continue as I had checked the data multiple times.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737376/in/album-72157686030264413/" title="warning"><img src="https://farm5.staticflickr.com/4335/36764737376_53d00d84ca_z.jpg" width="640" height="290" alt="warning" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Next you get another warning. One of the fields had a space in between. I chose to ignore it as it was not a standard field anyway. But, I would strictly advice that you use only features mentioned in <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki</a>. One should never mark outside the wiki, this would make your contributions virtually indiscoverable as the standard parsers/scrapers/crawlers would only use standard tags. If none of the tags fit the feature, you should request that particular tag to be added to the wiki.”This prevents everyone from tagging similar kind of features in their own way before a standard is set, and therefore OSM discourages using tags outside of what is currently listed on the wiki”, adds Rasagy.</p>
+
+<p>You need an OSM account to upload. The API uses OAuth. The method that worked for me is ‘Automatic’. You are likely to get OAuth credentials. JOSM stores them for you. After the authorization part, you are required to commit the changes.  You will be presented with the following dialog.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36764737336/in/album-72157686030264413/" title="upload"><img src="https://farm5.staticflickr.com/4346/36764737336_42cf629aa7_z.jpg" width="640" height="618" alt="upload" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I chose the data source as ‘survey’. Now, press ‘Upload’!</p>
+
+<p>Congratulations on contributing to OSM.</p>
+
+<p>You can reopen the location to see your data. In my case, my benches are on the map.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36814389321/in/dateposted-public/" title="markedbench"><img src="https://farm5.staticflickr.com/4343/36814389321_6c90e0ab13_z.jpg" width="640" height="341" alt="markedbench" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>You can pull the details by clicking on ‘History’ button.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/36812725511/in/dateposted-public/" title="contributorInfo"><img src="https://farm5.staticflickr.com/4364/36812725511_a9ee731fe2_z.jpg" width="640" height="362" alt="contributorInfo" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>I hope this guide will be helpful.</p>
+
+<h2 id="data-contributed-in-the-course">Data contributed in the course</h2>
+
+<p>Following are the details of features marked by my classmates:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sno.</th>
+      <th>Feature Marked</th>
+      <th>Number</th>
+      <th>Contributor</th>
+      <th>tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Police Posts</td>
+      <td>56</td>
+      <td>Udayan</td>
+      <td>amenity=police</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ladies Restroom</td>
+      <td>205</td>
+      <td>Shilpa</td>
+      <td>amenity=toilets;access=customers;female=yes;level=0; repeat_on=(floors)</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Fire Hydrants</td>
+      <td>95</td>
+      <td>Amit</td>
+      <td>emergency: fire_hydrant</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Dustbins</td>
+      <td>115</td>
+      <td>Manasi</td>
+      <td>amenity=waste_basket</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Tea Shops</td>
+      <td>20</td>
+      <td>Pallavi</td>
+      <td>shop=tea</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Auto Stops</td>
+      <td>14</td>
+      <td>Raagul</td>
+      <td>amenity=taxi</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Print Shops</td>
+      <td>16</td>
+      <td>Vineet</td>
+      <td>shop=copyshop;service:copy=yes;service:print=yes;service:generalitems=yes;operator: name of the shop</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Benches</td>
+      <td>54</td>
+      <td>Rohit</td>
+      <td>amenity=bench;covered=(state);seats=(number)</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Drinking Water Spots</td>
+      <td>56</td>
+      <td>Manoj</td>
+      <td>amenity=drinking_water</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Links</strong></p>
+
+<p>Some useful links :</p>
+
+<ul>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Main_Page">OSM wiki</a></li>
+  <li><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner’s guide on the OSMwiki</a></li>
+  <li><a href="http://learnosm.org/en/">LearnOSM</a></li>
+  <li><a href="https://www.mapbox.com/mapping/">Mapbox’s Mapping guides</a></li>
+</ul>
+
+<p><strong>Acknowledgements</strong></p>
+
+<p>I acknowledge my classmates, Prof. Venkat and Rasagy for their contributions to this post.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2017/08/31/ContribOSM/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/08/03/paisa/">
+        Paisa Stick- A tangible cashless payment interface
+      </a>
+    </h1>
+
+    <span class="post-date">03 Aug 2017</span>
+
+    <blockquote>
+  <p>This project was done during Masters at IDC. The project was selected as winner in student design category at CHI 2017 in Denver, Colorado. The paper on the same has been included in conference proceedings and can be read <a href="https://dl.acm.org/citation.cfm?id=3049268">here</a>. The team members were <a href="https://www.behance.net/udayanvidyanta">Udayan</a> and  <a href="https://www.behance.net/silpa_murali">Silpa</a>.</p>
+</blockquote>
+
+<p>Paisa stick is a tangible payment interface designed to perform cashless transactions. We designed it by understanding the conceptual model of senior members in the society. The device works as a remote and transfers value from one device to many other different types of devices like phones, IVRs, and android apps. User is always informed about the money he has and he can simply press the buttons to generate any required currency value. The device is not connected to internet and has actual value stored in the device. It can be recharged like a phone.</p>
+
+<p>In our field studies, the users described how they think about money. The metaphor of a wallet as a store of lower value was very dominant. They faced difficulties in using popular mediums like BHIM, PayTM, and even ATMs. However, the idea of telephone recharges was something they liked. So, we designed and prototyped a device that allows them perform cashless transactions while with the comfort and security of a wallet.</p>
+
+<p>The winning moment at CHI 2017, SDC, Denver, Colorado, USA
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/35436721156/in/album-72157682238049102/" title="Results"><img src="https://c1.staticflickr.com/5/4287/35436721156_f8c7178574_z.jpg" width="640" height="480" alt="Results" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<h5>Let us explore backwards..</h5>
+
+<p>The competition brief can be read <a href="https://chi2017.acm.org/designcompetition.html">here</a>. In the light of this brief, we chose to work on <em>how might we help the elderly and digitally illiterate perform cashless transactions</em>. The recent events of demonetization helped in setting up the premise for such a solution. Our main contribution was conducting several studies to try and understand the conceptual model elderly have towards performing such transactions.</p>
+
+<p>The design process is covered in this short video below :</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X6Q_KFUsPAY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p><br /></p>
+
+<h4>Key design details and artefacts</h4>
+
+<p>These product renders by <a href="http://nikhilsingh.design/">Nikhil</a> helped us understand the form and prototype features like support for braille.
+<img src="https://i.imgur.com/nOvtKKG.png" alt="Imgur" /></p>
+
+<p>The scenario explaining a particular payment instance
+<img src="https://i.imgur.com/CqGP4Mf.png" alt="Imgur" /></p>
+
+<p>The use case when the device needs recharge
+<img src="https://i.imgur.com/FF6UAb4.png" alt="Imgur" /></p>
+
+<p>What happens if it gets lost
+<img src="https://i.imgur.com/gc8QmbC.png" alt="Imgur" /></p>
+
+<h4>Stages of prototyping</h4>
+<p><img src="https://i.imgur.com/1CtO1ld.png" alt="Imgur" /></p>
+
+<h4>Working prototype demonstration</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BLEe330qfAQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+
+<p><br /></p>
+
+<h4>At CHI 2017, Denver, CO</h4>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/35293561151/in/album-72157682238049102/" title="Poster Presentation"><img src="https://c1.staticflickr.com/5/4263/35293561151_23a762e48b_z.jpg" width="640" height="480" alt="Poster Presentation" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/35384081436/in/album-72157682238049102/" title="The Artefacts"><img src="https://c1.staticflickr.com/5/4259/35384081436_efe0eaf5fc_z.jpg" width="640" height="480" alt="The Artefacts" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/34635516814/in/album-72157682238049102/" title="Presentation"><img src="https://c1.staticflickr.com/5/4207/34635516814_e5812e262f_z.jpg" width="640" height="480" alt="Presentation" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/35436721156/in/album-72157682238049102/" title="Results"><img src="https://c1.staticflickr.com/5/4287/35436721156_f8c7178574_z.jpg" width="640" height="480" alt="Results" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Read more about my CHI 2017 Experience <a href="/2017/06/12/CHISVExp/">here</a>.</p>
+
+<p>The detailed paper can be read <a href="https://dl.acm.org/citation.cfm?id=3049268">here</a>.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2017/08/03/paisa/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -453,156 +765,7 @@ window.twttr = (function (d, s, id) {
 <hr>
   </divr
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/06/03/local/">
-        Local - Gamification in participatory GIS
-      </a>
-    </h1>
-
-    <span class="post-date">03 Jun 2017</span>
-
-    <blockquote>
-  <p>This project was done as a part of “Interaction Design - 1” course taught by Prof. Ravi Poovaiah at IDC. The team members were <a href="https://www.behance.net/silpa_murali">Silpa</a> and <a href="https://www.behance.net/udayanvidyanta">Udayan</a>. The live version is hosted <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
-</blockquote>
-
-<p><strong>Design Brief</strong></p>
-
-<p>The design brief was to come up with a design solution for a local problem. We are asked to come up with a <em>designerly response</em> to things we all face around us. We choose the context of streets and street vendors. In the search engine age, what is not searchable is not there. The street vendors and other microservice providers are often not aware of this ecosystem or do not have the means to do so. They also have a more legacy customer base, which they say is depleting due to online service providers. A shop on ground is better than a page on the cloud. But, these shops are difficult to find for non locals.</p>
-
-<p><strong>Secondary study</strong></p>
-
-<p>We studied various models of streets. There has not been enough work done in the domain of getting local shops online and the problem is of specific importance to Indian context where there is a transition happening as far as ICT is considered. Dominant means include: Sensors, People and Documents.Information may generate insights which can be used to create a feeback that can help sustain the systems. Data gathering is not of huge concern in the west due to already proliferation of phones etc.</p>
-
-<p>Based on famous Stanford paper titled “Twitch Crowd sourcing:Crowd Contributions in Short Bursts of Time” The author argues about micro-contribution and channel factors He lays down his design based on availability, low time, low cog load, Value to the user,feedback, privacy and longevity of experience. Various engaging means of crowd-sourcing information that can be actively contributed or inferred by activities. It is needed to be aligned with users goals and hence a balance of incentive vs motivation should be used. Incentives are not sustainable and motivations are challenging to design.</p>
-
-<p>Gamification has huge possibilities in the domain of crowdsourcing. Several references show that using gamification models in the crowdsourcing domain can result in huge motivation like Pokemon Go and 4Sq have already done.</p>
-
-<p><strong>Primary study</strong></p>
-
-<p>We tried to understand the activities on the street by conducting a field study in powai and kurla regions.
-<img src="https://i.imgur.com/WN2rHtj.png" alt="Imgur" /></p>
-
-<p>In our study we noticed how adoption of digital means is affecting sales. This is a street fruit vendor who accepts cards and has a website. He offers services like delivery and online shopping. He prices his goods higher than other vendors and still is able to make decent profits.
-<img src="https://i.imgur.com/2t2w9gs.png" alt="Imgur" /></p>
-
-<p>After the field study, we collected our findings in a mind-map.
-<img src="https://i.imgur.com/QZ8ntbQ.png" alt="Imgur" /></p>
-
-<p>We also asked ourselves some questions based on what we observed.
-<img src="https://i.imgur.com/B5Baq9S.png" alt="Imgur" /></p>
-
-<p>Finally, we came up with a problem concept map to crystallize the situation on the street.
-<img src="https://i.imgur.com/5Dhk5Kf.png" alt="Imgur" /></p>
-
-<p>We came up with the modified brief of “How might we help micro level data of local shops using principles of participatory GIS?”
-We planned on structuring the system such that we require less input from more users as opposed to asked more questions from less users. This would be our solution map.</p>
-
-<p><img src="https://i.imgur.com/WrDOrIl.png" alt="Imgur" /></p>
-
-<p>We imagined the following persona’s that would use our system.
-<img src="https://i.imgur.com/qdjkcdm.png" alt="Imgur" /></p>
-
-<p>Hence, our system was divided into two verticals. One vertical would concentrate on helping people search local data and other vertical would help gamify the collection of data points from crowd.</p>
-
-<p>The UI walkthrough for the web interface (by Udayan) is as follows:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4KZPoY2enfs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
-
-<p>The UI walkthrough for the Local game app (by Silpa) is as follows:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4wsBIY4HUco" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
-
-<p>We allowed multiple users to rate the same activity and asked multiple users different questions to ascertain attributes of a particular location.</p>
-
-<p><strong>Some UI samples</strong></p>
-
-<p><a href="https://imgur.com/vsgiNcc"><img src="https://i.imgur.com/vsgiNcc.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/VmNciRR"><img src="https://i.imgur.com/VmNciRR.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/yGm3ZAE"><img src="https://i.imgur.com/yGm3ZAE.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/fhypt0K"><img src="https://i.imgur.com/fhypt0K.png" title="source: imgur.com" /></a></p>
-
-<p><strong>Prototype</strong></p>
-
-<p>We went forward to create an implementation of the actual system. The architecture was as follows:
-<img src="https://i.imgur.com/kny2Yld.png" alt="Imgur" /></p>
-
-<p>We used a python based service that would scan accounts of particular members on instagram and classify tags. These tags were then used to plot the same as tool tips on a mapbox render. The same was updated realtime on an amazon s3 server <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">here.</a></p>
-
-<p><img src="https://i.imgur.com/Wan5h4o.png" alt="Imgur" /></p>
-
-<p><img src="https://i.imgur.com/dmPV2Zl.png" alt="Imgur" /></p>
-
-<p><strong>Contributions</strong> The project was done with Silpa and Udayan.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-<a href="/2017/06/03/local/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/06/02/PoemSleeping/">
-        Sleeping Dawn
-      </a>
-    </h1>
-
-    <span class="post-date">02 Jun 2017</span>
-
-    <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/34974278651/in/dateposted-public/" title="postpic"><img src="https://c1.staticflickr.com/5/4286/34974278651_da7402d3ca_z.jpg" width="640" height="426" alt="postpic" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>I wake up the dawn, <br />
-from its quiet shambles.<br />
-Like a wanderer on road,<br />
-With his screechy corners.</p>
-
-<p>The world lays lost,<br />
-in the dreams they believe .<br />
-I sit there awake,<br />
-dreaming to believe.</p>
-
-<p>The wind i feel,<br />
-sweeps me away.<br />
-In its gusts it follows me,<br />
-To the worlds i never foray.</p>
-
-<p>Sometimes i feel,<br />
-I should have said.<br />
-Those words i had,<br />
-she might have read.</p>
-
-<p>May be it was a sad,<br />
-that those winds never blew.<br />
-May be it was great,<br />
-those things i never drew.</p>
-
-<p>There will be a dawn soon,<br />
-to help us with the light.<br />
-To give us all the hope,<br />
-and bless us with the might.</p>
-
-<p>Until that dawn,<br />
-I have to wait.<br />
-Search in the world,<br />
-and try my fate.</p>
-
-<p>A day may come,<br />
-when I wake the dawn.<br />
-Welcoming a new world,<br />
-Then I shall carry-on.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2017/06/02/PoemSleeping/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
+</div>
 </div>
 
 <div class="pagination">

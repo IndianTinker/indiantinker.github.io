@@ -1,0 +1,40 @@
+I"�<blockquote>
+  <p><strong>DISCLAIMER</strong>
+This article is for exploratory and educational purposes only. Kindly use the code and project responsibly.</p>
+</blockquote>
+
+<p>Happy Engineers Day !</p>
+
+<p>Televison and Childhood… These things are inseparable. Remember waiting for your favourite TV show to come live. That experience was certainly unique.TV used to be the bargain if someone had to get things done from kids. TV today is a bit different. It has changed and I would certainly refrain from using the word ‘evolved’. Indian TV is now filled with good-for-nothing ultra HD Home shows that could destroy any household ecosystem if followed. I have rather ‘evolved’ to avoid them.</p>
+
+<p>Being the ‘90’s Kid’, going by the parlance, TV we watched as kids used to have good, humble and light hearted shows. I loved the ones like “Byomkesh Bakshi” , “Recess” ,”Small Wonder”, “Shreeman Shreemati”, “TaleSpin”, “Captain Planet” etc.</p>
+
+<p>So, one fine day while struggling with streaming on my slow connection while watching my favourite show,it occurred to me that a Pi which can runs off my cellphone charger would be a great tool for offlin-ing. Sort of a physical Youtube App on a Pi. Nothing needs to be said about Youtube Experience on Windows Phone !</p>
+
+<p>The system should read a couple of links from a file and then offline them sequentially and store them on the SD Card. It should have a location and quality filter to set a requirements of the video like on the App. Once done watching, <strong>DELETE</strong> !</p>
+
+<p>It turned out to be a pretty easy task. Thanks to <code class="language-plaintext highlighter-rouge">pafy</code> python library. I integrated it to do the url read part from txt file and selecting the required location to save the file.</p>
+
+<p>The steps are pretty simple:</p>
+
+<ul>
+  <li>Clone <a href="https://github.com/IndianTinker/PiTUBEr">this</a> repo</li>
+  <li>Install <code class="language-plaintext highlighter-rouge">pafy</code> using pip the usual way</li>
+  <li>Change the urls in the txt file. Please do preserve the format.</li>
+  <li>Edit the script for your preferred quality and storage location.</li>
+  <li>Execute the script.</li>
+</ul>
+
+<p>If you intend to sleep and leave Pi do the work, you can check an awesome utility called <code class="language-plaintext highlighter-rouge">screen</code> . It just detaches the terminal instance you are on and opens up a new one. Which you can exit, So the task you were originally in the old instance runs. Then Login and restore the instance later.</p>
+
+<p>You can check this amazing tutorial about screen <a href="http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open">here</a>.</p>
+
+<p>After you are finished, just <code class="language-plaintext highlighter-rouge">SFTP</code> to the pi and copy/cut all the stuff and edit the url.txt file for further jobs.</p>
+
+<p>There can be several extensions of the idea.We can also attach a small LED on one of the Pins to indicate when downloading ends.
+Further a NAS can be configured instead of SFTP for easier file exchanges. Better we can combine it with other services to make Pi a Bandwidth Hogger and a mean downloading machine.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+:ET

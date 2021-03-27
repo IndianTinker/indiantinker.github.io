@@ -27,11 +27,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/2017/09/10/DataViz/" />
+  <meta property="og:url" content="http://rohitg.in/2017/09/10/DataViz/" />
 
 
-  <meta content="2017-09-10T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+  <meta content="2017-09-10T00:00:00+02:00" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
   <meta content="https://i.imgur.com/5nMTnGP.png" property="og:image"/>
@@ -155,6 +155,10 @@
           
             <a class="sidebar-nav-item" href="/travels/">Writings</a>
           
+        
+      
+        
+      
         
       
         
@@ -395,7 +399,7 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">timetable.srs.dest</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`station Code`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">timetable</span><span class="o">$</span><span class="n">`Destination station Code`</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>using <code class="highlighter-rouge">dplyr</code>  library, I grouped and summarized data. Then I wrote the file out as a CSV.</p>
+<p>using <code class="language-plaintext highlighter-rouge">dplyr</code>  library, I grouped and summarized data. Then I wrote the file out as a CSV.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
 </span><span class="n">traingp</span><span class="o">&lt;-</span><span class="n">group_by</span><span class="p">(</span><span class="n">timetable.srs.dest</span><span class="p">,</span><span class="n">`source Station Name`</span><span class="p">)</span><span class="w">
@@ -420,7 +424,7 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
 
 <p><a href="https://imgur.com/D6cfV6H"><img src="https://i.imgur.com/D6cfV6H.png" title="source: imgur.com" /></a></p>
 
-<p>Halt times and Average halt times per station too. This would make give an idea of how busy a station is. This was not trivial as it seems, thanks to my n00by R skills. First, all source and destination stations were removed using <code class="highlighter-rouge">Distance !=0</code>. Then because of the funny way times were mentioned, I had to remove ‘single’ quotes in all time vectors. I used <code class="highlighter-rouge">gsub</code> for that. Then, I had to convert the char to POSIXlt date format. This would enable time computation using <code class="highlighter-rouge">difftime</code>. Using difftime I made a new vector for HaltTime with a minute resolution. I am told, these steps are just a few clicks in excel.</p>
+<p>Halt times and Average halt times per station too. This would make give an idea of how busy a station is. This was not trivial as it seems, thanks to my n00by R skills. First, all source and destination stations were removed using <code class="language-plaintext highlighter-rouge">Distance !=0</code>. Then because of the funny way times were mentioned, I had to remove ‘single’ quotes in all time vectors. I used <code class="language-plaintext highlighter-rouge">gsub</code> for that. Then, I had to convert the char to POSIXlt date format. This would enable time computation using <code class="language-plaintext highlighter-rouge">difftime</code>. Using difftime I made a new vector for HaltTime with a minute resolution. I am told, these steps are just a few clicks in excel.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trainNoSource</span><span class="o">=</span><span class="n">subset</span><span class="p">(</span><span class="n">timetable</span><span class="p">,</span><span class="n">dataset</span><span class="o">$</span><span class="n">Distance</span><span class="o">!=</span><span class="m">0</span><span class="p">)</span><span class="w">
 </span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"'"</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">trainNoSource</span><span class="o">$</span><span class="n">`Arrival time`</span><span class="p">)</span><span class="w">
@@ -450,7 +454,7 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
 
 <p>The csv file was uploaded on google sheets. I used the <a href="https://chrome.google.com/webstore/detail/geocode-by-awesome-table/cnhboknahecjdnlkjnlodacdjelippfg?hl=en">awesome tables</a> google sheets plugin to convert station codes to lat and long values.</p>
 
-<p>Unfortunately there is very little documentation for extrusion using mapbox. Just <a href="https://www.mapbox.com/mapbox-gl-js/example/3d-extrusion-floorplan/">an example</a>, which took me quite some time to get to work. From the example <a href="https://www.mapbox.com/mapbox-gl-js/assets/data/indoor-3d-map.geojson">geojson</a>, it seems a <code class="highlighter-rouge">height</code>, <code class="highlighter-rouge">base height</code> and <code class="highlighter-rouge">color</code> properties are required. I wanted less complications, so i went with a single color. I structured the the <a href="https://docs.google.com/spreadsheets/d/11PcWeaLH1PImgipF80lmdjKiA19Tn-BFoyatt3i5hMg/edit?usp=sharing">google sheet</a> file as below.</p>
+<p>Unfortunately there is very little documentation for extrusion using mapbox. Just <a href="https://www.mapbox.com/mapbox-gl-js/example/3d-extrusion-floorplan/">an example</a>, which took me quite some time to get to work. From the example <a href="https://www.mapbox.com/mapbox-gl-js/assets/data/indoor-3d-map.geojson">geojson</a>, it seems a <code class="language-plaintext highlighter-rouge">height</code>, <code class="language-plaintext highlighter-rouge">base height</code> and <code class="language-plaintext highlighter-rouge">color</code> properties are required. I wanted less complications, so i went with a single color. I structured the the <a href="https://docs.google.com/spreadsheets/d/11PcWeaLH1PImgipF80lmdjKiA19Tn-BFoyatt3i5hMg/edit?usp=sharing">google sheet</a> file as below.</p>
 
 <p><a href="https://imgur.com/wR2tvOi"><img src="https://i.imgur.com/wR2tvOi.png" title="source: imgur.com" /></a></p>
 
@@ -462,11 +466,11 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
   <p>Little did i know</p>
 </blockquote>
 
-<p>The extrusion property can be applied only on polygons. How to convert a point to a polygon? This might not be the most relevant question to ask at 3:45 am in the morning. But unfortunately, it was ! <code class="highlighter-rouge">Python</code> to the rescue. Thanks to some <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">previous work</a> .</p>
+<p>The extrusion property can be applied only on polygons. How to convert a point to a polygon? This might not be the most relevant question to ask at 3:45 am in the morning. But unfortunately, it was ! <code class="language-plaintext highlighter-rouge">Python</code> to the rescue. Thanks to some <a href="https://s3-us-west-2.amazonaws.com/rohitgupta/main.html">previous work</a> .</p>
 
 <p>In times when, ‘I wrote a script’ has become as common as ‘I took a bath’, I wrote a script.</p>
 
-<p>The script would <code class="highlighter-rouge">simply</code> take the points and convert it into a square of a fixed size. The <a href="https://tools.ietf.org/html/rfc7946#section-3.1.6">geoJSON spec sheet</a> was helpful. The process was take the point as the center of the square and them compute the corners in a cyclic manner.</p>
+<p>The script would <code class="language-plaintext highlighter-rouge">simply</code> take the points and convert it into a square of a fixed size. The <a href="https://tools.ietf.org/html/rfc7946#section-3.1.6">geoJSON spec sheet</a> was helpful. The process was take the point as the center of the square and them compute the corners in a cyclic manner.</p>
 
 <p><strong>Presentation on a map</strong></p>
 
@@ -509,27 +513,27 @@ I used this <a href="https://rstudio-pubs-static.s3.amazonaws.com/105630_ac3d583
     
       <li>
         <h3>
+          <a href="/2021/03/27/Update/">
+            Personal Update and Restart
+            <small>27 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/03/26/BookRecs2/">
+            Suggested reading list for Masters students at IDC -II
+            <small>26 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2019/03/31/BookRecs1/">
             Suggested reading list for Masters students at IDC -I
             <small>31 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2019/03/01/missingMenu/">
-            missingMenu- Understanding food menus as a language
-            <small>01 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2018/11/04/spanishVisa/">
-            Getting a Spanish student visa
-            <small>04 Nov 2018</small>
           </a>
         </h3>
       </li>

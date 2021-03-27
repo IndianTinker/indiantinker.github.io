@@ -1,0 +1,19 @@
+I"‹<p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences.</p>
+
+<p>On Linux (other platforms too) there is a nice tool called <strong>ExifTool</strong> which was, as of writing this post available in the package manager of <em>Ubuntu</em> .</p>
+
+<p>So, Simply 
+<code class="language-plaintext highlighter-rouge">sudo apt-get install exiftool</code></p>
+
+<p>In order to use it, Simply go to the SD Card (generally) and <em>Right Click</em> to open terminal here. Then use the command.</p>
+
+<p><code class="language-plaintext highlighter-rouge">exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
+
+<p>Shutter Count should be visible, But depends on the camera you use. Most <strong>Nikons</strong> we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.</p>
+
+<p>To know more about EXIF check out <a href="http://www.media.mit.edu/pia/Research/deepview/exif.html">this</a> resource .</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+:ET

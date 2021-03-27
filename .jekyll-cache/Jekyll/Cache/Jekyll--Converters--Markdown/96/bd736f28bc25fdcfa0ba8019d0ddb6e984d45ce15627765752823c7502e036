@@ -1,0 +1,4 @@
+I"0<p><a href="http://rohitg.in/missingMenu/">MissingMenu</a> is a project that generates possible combinations of food dishes from a learned menu. It does that by converting a menu to a linguistic model and then computationally generating new food dishes using Probabilistic Context-free grammar (PCFG).</p>
+
+<p>In other words, the menu is interpreted as a language and a new dish is just another sentence, a meaningful combination of words. So, if you teach it the Chinese menu and south Indian menu, it generates things like schezwan idli with egg fried rice. These combinations are essentially possible as they are made by understanding the morphology of the menu system. This project helped me look at the food menus as languages and languages as a group of morphological combinations driven by adopted norms.</p>
+:ET

@@ -27,11 +27,11 @@
   <meta property="article:author" content="https://www.facebook.com/rohit7gupta" />
 
 
-  <meta property="og:url" content="http://localhost:4000/2015/05/17/FM430/" />
+  <meta property="og:url" content="http://rohitg.in/2015/05/17/FM430/" />
 
 
-  <meta content="2015-05-17T00:00:00+05:30" property="article:published_time"/>
-  <meta content="http://localhost:4000/about/index.html" property="article:author"/>
+  <meta content="2015-05-17T00:00:00+02:00" property="article:published_time"/>
+  <meta content="http://rohitg.in/about/index.html" property="article:author"/>
 
 
   <meta content="https://c1.staticflickr.com/9/8781/17774995701_214a351699_z.jpg" property="og:image"/>
@@ -153,6 +153,10 @@
           
             <a class="sidebar-nav-item" href="/travels/">Writings</a>
           
+        
+      
+        
+      
         
       
         
@@ -371,14 +375,13 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" colo
 
 <p>The code is pretty easy and shown below. It was coded using <a href="http://energia.nu/">Energia</a> IDE.</p>
 
-<p>Based on the datasheet the I2C address of the device is <code class="highlighter-rouge">0x60</code> and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.</p>
+<p>Based on the datasheet the I2C address of the device is <code class="language-plaintext highlighter-rouge">0x60</code> and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.</p>
 
-<p>The other data bytes i.e. <code class="highlighter-rouge">0xB0</code> and <code class="highlighter-rouge">0x10</code> are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.</p>
+<p>The other data bytes i.e. <code class="language-plaintext highlighter-rouge">0xB0</code> and <code class="language-plaintext highlighter-rouge">0x10</code> are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.</p>
 
 <p>I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !</p>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
+<noscript><pre>400: Invalid request</pre></noscript>
 <script src="https://gist.github.com/aa9a2a524853674807e6.js"> </script>
 
 <p>If you need to check for signal quality and other things you can check out my github repo <a href="https://github.com/IndianTinker/FM430">here</a> .</p>
@@ -400,27 +403,27 @@ Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" colo
     
       <li>
         <h3>
+          <a href="/2021/03/27/Update/">
+            Personal Update and Restart
+            <small>27 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/03/26/BookRecs2/">
+            Suggested reading list for Masters students at IDC -II
+            <small>26 Mar 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2019/03/31/BookRecs1/">
             Suggested reading list for Masters students at IDC -I
             <small>31 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2019/03/01/missingMenu/">
-            missingMenu- Understanding food menus as a language
-            <small>01 Mar 2019</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2018/11/04/spanishVisa/">
-            Getting a Spanish student visa
-            <small>04 Nov 2018</small>
           </a>
         </h3>
       </li>
