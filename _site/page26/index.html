@@ -45,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Doer, Designer and Researcher
+      Rohit Gupta &middot; Critical Technologist and Plural optimist
     
   </title>
 
@@ -283,6 +283,10 @@
         
       
         
+          
+        
+      
+        
       
 
    <!--
@@ -324,6 +328,76 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2015/07/05/JuggadSupply/">
+        Juggad Supply- Saving a power supply from planned obsolescence
+      </a>
+    </h1>
+
+    <span class="post-date">05 Jul 2015</span>
+
+    <p>Next time your printer stops printing for no reason or changing the battery of your MP3 Player from <strong>Authorised Service Station</strong> costs a major percentage of the original cost, Be informed this all is a part of an industrial design policy,Planned Obsolescence, to make goods last a bit shorter by tweaking the design.</p>
+
+<p>Never mind a broken device is an opportunity to learn. That’s what i had in mind when i didnt throw away my 2004 ATX supply when it failed in 2010 probably due to some connection/connector issue. In a haste to get the PC working in summer break I installed a new supply on the PC and kept it with me to play with later.</p>
+
+<p>After saving it from the routine disposal drives of Diwali , I finally had some use of it when the WalWart 12V@1A supply i have was not capable of driving the stepper motors i used in my major project.</p>
+
+<p>Moding ATX to use it as a bench supply is not new.The power output is pretty stable and can provide high currents. DP has an amazing <a href="http://dangerousprototypes.com/2012/06/28/new-prototype-atx-breakout-board/">ATX to Power supply Board</a> too.</p>
+
+<p>I wanted one that i could carry around anywhere and should be in one piece and durable with no wires outside the case except the power cable of course .</p>
+
+<p>Lets see how that ATX Connector looks like.</p>
+
+<center>
+<img src="http://etech.dyndns.org/images/vcr/atx.jpg" />
+</center>
+
+<p>The important points are:</p>
+
+<ul>
+  <li>Shorting <code class="language-plaintext highlighter-rouge">PS_ON(14)</code> to <code class="language-plaintext highlighter-rouge">GND</code> will turn on the PSU and that is what actually the motherboard does.</li>
+  <li>By checking the voltage on <code class="language-plaintext highlighter-rouge">Power_ok or Power Good(8)</code> one can decide whether the power supply OUTPUT is ON (+5V when ON).</li>
+  <li>By checking the voltage on <code class="language-plaintext highlighter-rouge">+5vSB(9)</code> one can decide whether the Mains are ON or not (+5v when ON).</li>
+</ul>
+
+<p>So, I will connect LEDs to pin 8 and 9 and a switch between 14 and GND, thats pretty much it.</p>
+
+<p>Since I had the no wires outside clause and usual power supplies have more that one connector, I had to open the power supply and cut wires literally like a barber and then solder the same coloured ones together to bring them onto the front panel.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19435985395" title="Same Colour ,Same Voltage by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/469/19435985395_e8dde8d935_z.jpg" width="640" height="480" alt="Same Colour ,Same Voltage" /></a></p>
+
+<blockquote>
+  <p>Most morden ATXs don’t need the load resistor on 5V bus as many posts mention. Phew ! One part less :D</p>
+</blockquote>
+
+<p>I then drilled the holes @ CEDT for the Thumb Screw connectors i got from Lajpat Rai and also fixed a small handle to it for carrying it around.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19248429460" title="Drilling the cover by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/523/19248429460_bc1a02963b_z.jpg" width="640" height="480" alt="Drilling the cover" /></a></p>
+
+<p>Then connected the circuit as mentioned above to test it.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19429707752" title="Testing by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/302/19429707752_05839665a2_z.jpg" width="640" height="475" alt="Testing" /></a></p>
+
+<p>Carefully packed everything inside the original case.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19429714392" title="Ready ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/354/19429714392_4a600b79fd_z.jpg" width="640" height="480" alt="Ready !" /></a></p>
+
+<p>Printed some labels from my archaic inkjet and I had my ATX power Supply ready !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/19435982985" title="Labelled UP by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/1/317/19435982985_69fc1b1b18_z.jpg" width="640" height="480" alt="Labelled UP" /></a></p>
+
+<p>Pretty simple and effective hack ! So, when are you making one ?</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2015/07/05/JuggadSupply/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -496,68 +570,6 @@ window.twttr = (function (d, s, id) {
 <p>Rohit</p>
 
 <a href="/2015/05/29/TruPlay/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/05/17/FM430/">
-        FM430 - FM using MSP430
-      </a>
-    </h1>
-
-    <span class="post-date">17 May 2015</span>
-
-    <p>One fine day while i was rummaging through the part bin, I found an old project that probably was never completed ! <strong>FM Radio</strong> !
-I tried to make one when i was in 7th grade, waiting at the counter of a dingy electronics repair shop for anyone to pay attention to the parts list gathered over the internet ( Dial up days ! ).</p>
-
-<p>At that time, i just jotted down all i could from the internet and went straight to the repair guy expecting some help. It never did work and i soon lost interest but it remained until recently when i was skimming ebay to get some stuff and i saw ‘TEA5767 FM Receiver’ module selling for 0.99 $ . Cheap is attractive specially in DIY world and the rest was involuntary . After 20 days the module was with me.</p>
-
-<p><a href="http://www.voti.nl/docs/TEA5767.pdf">TEA5767</a> is a digital FM Receiver chip from NXP/Phillips that can be commanded over I2C to tune to various frequencies easily.</p>
-
-<p>But alas ! The one i got never matched with any pictures online ! Where was the missing “crystal” responsible for all the PLL stuff? Where are all the other pins ? That was frustrating. Thanks to the cryptic words written on the silkscreen “TT-502X” i was able to find out that only one person except me happen to have posted about this and he apparently has documented it in a schematic! Thanks to <a href="http://elect.wikispaces.com/Digital+audio+amplifier+with+PLL+synthesized+FM+radio">Dilshan</a>, an amazing maker himself, I was able to get this done.</p>
-
-<p>It turns out that the module is actually used in some Samsung Products and requires a <em>generic</em> watch crystal.</p>
-
-<p>The connections are similar to what <em>Dilshan</em> mentions it in his post. I added a diode (Reverse Polarity. Ouch!) and a decoupling cap. And after a bit of work with the solder iron i was able to make my own FM Receiver Module.</p>
-
-<p>Next step? Let others know about it… :D</p>
-
-<center>
-<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0nwlsDPUN1/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Perfboarding the #TT-502X #FM #Module ! Its based on the common #TEA5767 SOC by #NXP !
-Commanded over #I2C ! #DIY #Arduino #FM #ShippingMistake</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-24T18:54:28+00:00">Mar 24, 2015 at 11:54am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-</center>
-
-<p>FYI that pigtail type antenna was useless ! I needed a 81cm long wire for (Wavelength/4) law to work for 87.5 Mhz.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17152069784" title="Back side ! by Rohit Gupta, on Flickr"><img src="https://c1.staticflickr.com/9/8820/17152069784_99f4e30138_z.jpg" width="359" height="640" alt="Back side !" /></a></p>
-
-<p>After doing the same! A commander was needed. Chose my workhorse, the MSP430 Launchpad for the extra switch they have on it that helps me change channels and doing that on arduino pro mini would require some breadboarding i was too lazy to try.</p>
-
-<p>The code is pretty easy and shown below. It was coded using <a href="http://energia.nu/">Energia</a> IDE.</p>
-
-<p>Based on the datasheet the I2C address of the device is <code class="language-plaintext highlighter-rouge">0x60</code> and we begin wire transmission using the wire library. Then we send the upper byte and lower byte of the frequency we wish to tune to based on the formula mentioned in to code and also on datasheet page 30 that depends on what clock you are using and whether you are using High side or low side injection. Since, we are using high side injection (Reason : Not known. Please share if you happen to know.) for superhetrodyne Receiver we used the formula mentioned in the code.</p>
-
-<p>The other data bytes i.e. <code class="language-plaintext highlighter-rouge">0xB0</code> and <code class="language-plaintext highlighter-rouge">0x10</code> are for setting the chip for enabling stereo ,disabling mute, use the watch crystal , pull some programmable pins low, enable High side injection etc. Check the page 14 Of Datasheet for more info.</p>
-
-<p>I made an array that has the channels available here in Pune and on the press of a button the global variable frequency is updated with the latest value and the function is called to set it inside the TEA5767 and Bam! It works !</p>
-
-<noscript><pre>400: Invalid request</pre></noscript>
-<script src="https://gist.github.com/aa9a2a524853674807e6.js"> </script>
-
-<p>If you need to check for signal quality and other things you can check out my github repo <a href="https://github.com/IndianTinker/FM430">here</a> .</p>
-
-<p>Here’s me explaining the whole setup in detail !</p>
-
-<iframe width="650" height="380" src="https://www.youtube.com/embed/r3fGMu5iPY8" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2015/05/17/FM430/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

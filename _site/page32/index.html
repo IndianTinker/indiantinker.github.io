@@ -45,7 +45,7 @@
 
   <title>
     
-      Rohit Gupta &middot; Doer, Designer and Researcher
+      Rohit Gupta &middot; Critical Technologist and Plural optimist
     
   </title>
 
@@ -283,6 +283,10 @@
         
       
         
+          
+        
+      
+        
       
 
    <!--
@@ -324,6 +328,34 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/16/Welcome-to-new-home/">
+        Welcome to the new home!
+      </a>
+    </h1>
+
+    <span class="post-date">16 Oct 2014</span>
+
+    <p>I am now in process of migrating my main blog on <a href="http://indiantinker.wordpress.com">wordpress</a> to github pages for more contexual/design/layout freedom. This blog is built using <a href="http://jekyllrb.com">Jekyll</a>.</p>
+
+<blockquote>
+  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
+</blockquote>
+
+<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+
+<p>For those who have used <a href="http://www.latex-project.org/">LaTeX</a> in the past Jekyll is excellent as it (personally saying) generates a static website by compiling all the code you wrote in the post.Obviously, with the luxury of <strong>platforms</strong> like wordpress,blogspot etc writing bare code is archaic. Jekyll has got your back here too, you never <em>write</em> the html/css tags from scratch. The Jekyll engine takes standard markdown which it builds into a html code and once built gives you a complete website. You an obviously code in html too.</p>
+
+<p>Comments,widgets and Analytics work too with just a bit of playing required.
+The comments on this site are supported via Disqus !</p>
+
+<p>Hope this post compiles well ! :)</p>
+<a href="/2014/10/16/Welcome-to-new-home/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -418,75 +450,6 @@ window.twttr = (function (d, s, id) {
 
 <p>Rohit</p>
 <a href="/2014/07/24/Hyderabad/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/07/22/UberCube/">
-        UberCubeX4- The portable LED Cube !
-      </a>
-    </h1>
-
-    <span class="post-date">22 Jul 2014</span>
-
-    <p>I recently made a led cube. It is a project i was dreaming to fiddle with for quite a while(<del>years</del>). I finally managed to make one. Here is the complete video of the demonstration.Its basically a 4x4x4 Led Cube with various patterns programmed into it. I made it during Diwali-The Indian Festival of lights. The entire build procedure is documented in the video.</p>
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/8qF-NFmNIvc" frameborder="0" allowfullscreen=""></iframe>
-
-<p>The process starts by arranging the LEDs in a uniformly spaced fashion. To do so, I used an old <em>TI Samples Box</em> and made a 2cm grid on it. The grid resolution depends on the length of the LED leads, the ones that i have are pretty small.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17032377895" title="UberCubeJig by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8748/17032377895_63b65458f0_z.jpg" width="640" height="359" alt="UberCubeJig" /></a></p>
-
-<p>Now once in the jig, you arrange them as shown. Until you finally get 8 such combinations to obtain 2x 4x4x2 Cuboid which will ultimately make up a 4x4x4 . <strong>Some Hard work Required.</strong></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16846178389" title="FinalStac by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8699/16846178389_5414d56de5_z.jpg" width="640" height="359" alt="FinalStac" /></a></p>
-
-<p>Now stack them up on a perfboard and remember to drill mounting holes before hand to avoid your castle being demolished by some wayward drilling.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17006413856" title="AssembledonPerfboard by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8704/17006413856_78dddce56b_z.jpg" width="640" height="359" alt="AssembledonPerfboard" /></a></p>
-
-<p>Since its always better to test the setup/circuit before going on the final assembling and play around with the code on the breadboard. We solder some headers to the Cube and embed them in the breadboard. The connections are such that all the steps of the two half-cubes 2X4 which are negatives are driven by the darlington and hence connected together on one header. The corresponding column of each half cube is connected and brought to the header.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412234233" title="Prototyping by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7633/16412234233_b0fc5f0876_z.jpg" width="640" height="359" alt="Prototyping" /></a></p>
-
-<p>The MCU enters the scene. The MCU of choice is TI MSP430g2553 which along with the ULN2803 driver will run the cube. 
-<a href="https://www.flickr.com/photos/94411929@N06/16846159069" title="TEST by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7622/16846159069_5825c500b6_z.jpg" width="640" height="359" alt="TEST" /></a></p>
-
-<p>Once the circuit and code is almost final. I designed the PCB (<em>All SMD ! Yeah \m/</em> ) using Eagle and etched the same to the PCB.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/17030954562" title="Etched PCB by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7588/17030954562_d9e44d203d_z.jpg" width="359" height="640" alt="Etched PCB" /></a></p>
-
-<p>The Soldered one!
-<a href="https://www.flickr.com/photos/94411929@N06/16844844580" title="SolderedPCB by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8684/16844844580_14a4fc1a3d_z.jpg" width="359" height="640" alt="SolderedPCB" /></a></p>
-
-<p>The PCB looked beautiful and the fragile project deserved the more stronger structure. So, I designed an outer cover for the base to be laser cut in a combination of wood(2.8mm) and acrylic(3mm).</p>
-
-<p>Power Switch and DC Jack for power.
-<a href="https://www.flickr.com/photos/94411929@N06/16824981487" title="LC4 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7596/16824981487_61eab098e4_z.jpg" width="640" height="359" alt="LC4" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16844603938" title="LC2 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7589/16844603938_5c70fa2ca8_z.jpg" width="359" height="640" alt="LC2" /></a></p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/16412245853" title="LC1 by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8729/16412245853_7c9c4f0909_z.jpg" width="359" height="640" alt="LC1" /></a></p>
-
-<p>The source code is available on <a href="https://github.com/IndianTinker/UberCubeX4">github</a> .</p>
-
-<p>Cheers !
-Rohit</p>
-
-<p><strong>Update: </strong></p>
-<ul>
-	<li><strong>Featured on </strong><a href="http://dangerousprototypes.com/2013/11/25/ubercubex4-the-msp430-based-benchtop-led-cube/">DP </a>and <a href="http://ledfreaks.net/ubercubex4-the-msp430-based-benchtop-led-cube/">LedFreaks</a></li>
-	<li><strong>See it on </strong><a href="http://www.instructables.com/id/UberCube-X4-The-benchtop-LED-Cube/">Instructables </a></li>
-	<li><strong>Won: TI India<a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> Diwali Contest</a></strong><a href="http://e2e.ti.com/blogs_/b/designproject/archive/2013/11/08/e-crackers-and-diwali-decorations.aspx"> </a></li>
-	<li><strong>Won: University level "Open H/W" competition</strong></li>
-</ul>
-
-<p> </p>
-
-<p> </p>
-<a href="/2014/07/22/UberCube/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr
