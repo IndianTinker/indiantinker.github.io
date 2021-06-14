@@ -331,6 +331,76 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2015/04/17/BoardMerge/">
+        BoardMerge- The command line single page PDF merge utility for PCBs
+      </a>
+    </h1>
+
+    <span class="post-date">17 Apr 2015</span>
+
+    <p>Toner Transfer Method.. is no doubt sheer Awesomeness. With just a few steps you can have your prototype in your hands without waiting for weeks for the fab house to deliver. Certainly relieves me of a lot of anxiety. I even made this <a href="http://rohitg.in/2014/04/07/OpenAgitator/">Open Agitator</a> a while back to help me ease out the etching process.</p>
+
+<p>I usually (used to) print my designs on the glossy photopaper near my college where there is a usual hub of shops catering to student needs. Carrying the photopapers from my house to the college in the crowded metro would often crumble them. I preferred buying them from the local stationary shops near the college itself who would sell it at varying prices anachronistically.</p>
+
+<p>The shop used to charge for a round of paper into the printer (actually one print) and if i printed multiple on the same sheet, if was charged more. As students we <em>should</em> cut costs. Further the <em>several-times-on-a-page</em> approach had more issues:</p>
+
+<ul>
+  <li>Printing on a sheet many times causes it to blacken due to the unhealthy state of drum on public printers</li>
+  <li>The shop keeper usually charges for a single round in the printer and printing many times added to the costs.</li>
+  <li>I had to always mark the point for the orientation of the print, else if the print goes the other way again, i can have the next file printed on the previous file , rendering the entire excercise useless. Actually that has happened twice :)</li>
+  <li>You also need to set the no scaling option in <em>Acrobat</em> again and again.. duh..</li>
+</ul>
+
+<p>Thats too much work specially after waiting in a queue to get to the printer !</p>
+
+<p>I actually never thought of getting out of this circle for a while until the last few semesters, which were less academically demanding. I then wrote a small python script to combine all the pages that i used to print seperately to a <strong>Single</strong> page and then go and just print one pdf. No worries about messing up the orientation/scaling etc..</p>
+
+<p>Well.. Why python when i could have used any photo-editing tool? Its simpler and automatic and I had once messed around the scale on a photo-editing tool and had to <em>re-etch (just imagine)</em> a whole board.</p>
+
+<p><strong>The Process</strong></p>
+
+<ol>
+  <li>
+    <p>Like usual ways instead of directly printing files to printer, print them to pdf and choose different locations like center, top, left etc or you may also manually do that using the margins.Make sure that they dont overlap.</p>
+  </li>
+  <li>
+    <p>This way you will have many pdfs on the same folder. Now:
+<code class="language-plaintext highlighter-rouge">git clone https://github.com/IndianTinker/BoardMerge.git</code>  or download from <a href="https://github.com/IndianTinker/BoardMerge">here</a></p>
+  </li>
+  <li>
+    <p>You need to install pyPDF dependency. PIP is the boss here!
+<code class="language-plaintext highlighter-rouge">sudo pip install pypdf</code></p>
+  </li>
+  <li>
+    <p>Now paste the <code class="language-plaintext highlighter-rouge">merge.py</code> in the active eagle folder and run :
+<code class="language-plaintext highlighter-rouge">python merge.py file1.pdf file2.pdf .. .. ..</code></p>
+  </li>
+  <li>
+    <p>Wait till it gets completed and you shall see a file <code class="language-plaintext highlighter-rouge">Combine.pdf</code> with all the pdfs on a single page!</p>
+  </li>
+</ol>
+
+<p>This a directory full of 17 pdfs !</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/16557649863" title="before by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8693/16557649863_6f433269af_z.jpg" width="640" height="402" alt="before" /></a></p>
+
+<p>After some python-fu you get this:</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/17151890736" title="final by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7587/17151890736_ee2f94d772_z.jpg" width="640" height="366" alt="final" /></a></p>
+
+<p>Hoping that fellow makers find it useful.</p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+
+<a href="/2015/04/17/BoardMerge/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2015/04/12/NoobsGuide/">
         The Noob's Guide to Pune Relocation
       </a>
@@ -480,46 +550,6 @@ So, yet again Python saves the day!</p>
 <p>Rohit</p>
 
 <a href="/2015/04/05/Kindify/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/04/02/FMUX/">
-        Improving UX of FM/AM Audio
-      </a>
-    </h1>
-
-    <span class="post-date">02 Apr 2015</span>
-
-    <blockquote>
-  <p>This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. Here, I present my work on defining strategies to improve FM/AM user experience and implementation of the same. The work was first used in Tata Tiago/Tigor.</p>
-</blockquote>
-
-<blockquote>
-  <p>“Good Design is as Little Design as Possible” — D. Rams</p>
-</blockquote>
-
-<h4>Context</h4>
-<p>With a burst of highly “connected” media options available in cars, FM/AM or Radio still happens to be a widely used feature in infotainment units.  However, based on many field requests the experience of FM was not at par with other media options like USB/BT/SD and needed some rethinking. Further, there was a need to establish a more data-informed tuning process.</p>
-
-<h4>Work</h4>
-<p>The work started by understanding the entire signal reception flow from the antenna to the infotainment unit and the chip in infotainment. We explored to the level of the algorithms used in the RTOS to play channels. This helped us, as designers/engineers get a perspective on the scope of changes. We even studied the antenna cables and their routing. This helped us identify their vicinity with EM noise generating components like alternators and engine. Then we did a small exercise to find out possible conditions that might result in pain points. These were a sudden loss of reception (when entering an area with no coverage like a tunnel), reducing signal strength (when traveling outside the city), and system scanning for stations (auto store). We carried out several benchmarking sprints with our spectrum analyzer which gave us the ground truth. A comparison with other competitive cars was done. It was quite a hectic process. We had to often drive in places where there was not even a road and test reception. A customer can be anywhere, we should provide the best experience everywhere was the motivation.  A nice part was we could see some country and eat some local food. But we spent the whole day in hot weather in test cars.  After about 5-6 such exercises over a few months, we were able to suggest an FM algorithm that could be implemented. In the process, we figured out how to do spectrum analysis and find signal strength values. Then correlate it with readings of the infotainment, figure out leaks, and calibrate the system. <br /> The simulation exercises helped and we were able to detect conditions like tunnel entry, driving out of zone based on readings. We would dynamically adjust the volume curve/filters based on such events.</p>
-
-<h4>Learnings</h4>
-<p>The work was challenging and I read a lot on FM/AM. I learned to operate the spectrum analyzers as well. This sparked my interest in Audio based user experiences in a car environment. The whole exercise also taught me about the design of such a system. I was in a weird position in Tata Motors, I was doing the work of design to technology integration. I would know what users want and could understand what the engineering team was doing in the code. I had to work on aligning all these stakeholders together. BTW, I even made <a href="/2015/05/17/FM430/">my own FM receiver</a> that could show vague signal strength, when I was finding it hard to understand that spectrum analyzer. :)</p>
-
-<h4>How it affected the company</h4>
-<p>The same FM/AM reception component was used in several other platforms. It seems to have improved the shape FM/AM was in the car. The experience was pushed as a part of Tiago/Tigor and may even have been pushed to others.</p>
-
-<p><strong>Skills</strong>: Research Methodology, Design Integration, UX, and Spectrum analysis</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2015/04/02/FMUX/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

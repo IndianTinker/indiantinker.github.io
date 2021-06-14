@@ -331,6 +331,84 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2015/08/08/MotoX/">
+        Unbricking a MotoX, Resurrecting Smiles
+      </a>
+    </h1>
+
+    <span class="post-date">08 Aug 2015</span>
+
+    <p>This didnt seem to be coming ! Some of us were travelling to Bedse Caves on a weekend. <em>[ZT]</em> had the amazing MotoX -Ghost aka 2013 one that served as our primary camera and navigator since he was leading. The MotoX was (or rather is) a flagship phone that gave way for the present generation Moto G and E. But it had an AMOLED that usually steals the show.. If you know what i mean.</p>
+
+<p>The essence of the trip was captured in the phone and we were to meet the next day to swap pictures. I was anticipating it even more as I wanted to write a short trip entry.</p>
+
+<p>The next day <em>[ZT]</em> didnt have the same phone. His hands were graced by a crappy qwerty from the time Texts became cheaper than an alpenliebe.</p>
+
+<p>With profound grief he said, Dude it got bricked after installing an OTA for Lollipop. The worst part he had already tried clear memory.</p>
+
+<p>We discussed how to get it up and running. The obvious choice being service guys! He submitted the phone for repair.</p>
+
+<p>A week passed and he reverted saying the service guys say they cant figure what happened and are saying to change the motherboard costing around 15k INR ($235). Logically.. Its better to buy a new phone.</p>
+
+<p>But AMOLED !</p>
+
+<p>As his search for a new phone began. I thought that since the phone is booting but is stuck in a loop. Maybe the hardware is fine. Its the software that has got hurt. Clueless as a noob, I asked him to give me the <em>brick</em> to play around. He gladly obliged. I searched places to find a solution to assess the gravity of the situation. It turns out, Bootloops are pretty common issues and videos like <a href="https://www.youtube.com/watch?v=2LjoFSgLlds">these</a> were surely encouraging.</p>
+
+<p>Maintaining brevity of the topic, Most android phones have a fastboot mode which is like a BIOS thing that can be used to flash things (usually compiled codes/OS aka ROMs) to the internal memory sectors and then hoping they will all come together to work. This mode gets activated using a hardware trigger (like happens on PCs) which is usually a combination of lock and Volume button. Searching online one can get it for any device. In the X its Vol - + Pwr</p>
+
+<p>And if a device enters a fastboot it should be easy to heal it.
+Thankfully our did.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20405991741/in/dateposted-public/" title="Fastboot mode"><img src="https://farm1.staticflickr.com/513/20405991741_b8e6f44db4_z.jpg" width="640" height="359" alt="Fastboot mode" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Now the USB on the MotoX has some durability issues and it was not working on this device. <em>[ZT]</em> says it works when the time and physics are fine. Bummer.. It took me the whole night to connect it via USB to the PC. I turns out i have about 7 USB-micro cables. LOL</p>
+
+<p>At around 2am the space time matrix budged a bit and i was able to connect it using a micromax cable.</p>
+
+<p>Now i started the process whats mentioned on several blogs around the web. Its a generic method to restore any phone via fastboot.</p>
+
+<p>It works well on windows i reckon! All you need is a couple of drivers and the OS you wished to flash (obviously for ur device).</p>
+
+<p>Folks at <strong>XDA Developers</strong> have made a streamlined setup for that <a href="http://forum.xda-developers.com/showthread.php?t=2588979">here</a>. You should get that. Plus you need motorola drivers from motorola website i suggest you get the suite !</p>
+
+<p>For Moto Devices you will need the <a href="https://drive.google.com/file/d/0B2c2Ms7szI99RkpiZWkyZGgyeTQ/edit">mfastboot</a></p>
+
+<p>When you are all set. Go to the adb folder in C: and type <code class="language-plaintext highlighter-rouge">fastboot devices</code> . You should see your device or maybe check USB cable or the word connected written on fastboot screen.</p>
+
+<p>Like this:</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20213179149/in/dateposted-public/" title="FastBOOT"><img src="https://farm1.staticflickr.com/434/20213179149_5eb4a3748d_z.jpg" width="640" height="359" alt="FastBOOT" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Now download the ROM from a trusted source. I got the MotoX Kitkat Asia ROM from <a href="https://docs.google.com/file/d/0B5XNxZ2OcfKtdDROTk5kb21ObU0/edit">here</a> after 5 failed downloads.</p>
+
+<p>Now unzip the file and copy the contents of adb folder plus mfastboot exe into the unzipped folder. Rename it to give a short name.</p>
+
+<p>You will find a <code class="language-plaintext highlighter-rouge">.xml</code> file in the ROM that shows the commands for fastboot installation. You have to prefix <code class="language-plaintext highlighter-rouge">fastboot</code> before every command.  For Moto devices use the command <code class="language-plaintext highlighter-rouge">mfastboot flash system system.img</code> instead of  <code class="language-plaintext highlighter-rouge">fastboot flash system system.img</code>
+Follow them and make sure your USB is always connected. Mine got disconnected after much efforts that almost killed the excitement for me.I was up all night to get the USB connected after about 100 failed insertion and reinsertion cycles i  gave up to try with the last cable that i had but was in use - The Kindle cable.</p>
+
+<p>Next Day! It got connected in one shot. Followed the commands but forgot the last one <code class="language-plaintext highlighter-rouge">fastboot oem fb_mode_clear</code>. It failed to boot. After much googling i found out the cure and wrote the command.</p>
+
+<p>And it booted…. Yeah!! Victory!</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20211757430/in/dateposted-public/" title="Resurrected"><img src="https://farm1.staticflickr.com/265/20211757430_1fc13ecc39_z.jpg" width="359" height="640" alt="Resurrected" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>There was one problem. The camera was not working! I ran a couple of checks with <em>[ZT]</em> who quickly came to collect the phone ! I turned out that the Ribbon for camera had loosened. We just pressed it a bit and it was up and running again.</p>
+
+<p>One device saved !</p>
+
+<p>If you guys need any more info shoot the queries in the comment window.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2015/08/08/MotoX/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2015/08/01/Intel/">
         LIVE BLOG - Intel IOT Roadshow Pune
       </a>
@@ -517,91 +595,6 @@ I still remember that anecdote about Beryllium Diaphragms.</p>
 
 <p><img src="http://media2.intoday.in/indiatoday/images/stories/ripkalam---story_647_072715101359.jpg" />&lt;/a&gt;</p>
 <a href="/2015/07/27/Kalam-Sir/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/07/12/CrickPi/">
-        CricPi- The (probably) MOST Minimalistic Live Cricket Ever
-      </a>
-    </h1>
-
-    <span class="post-date">12 Jul 2015</span>
-
-    <p>Cricket used to be awesome ! So did Maggie and Television Sitcoms (particularly Indian ones these days). But there is something with cricket that makes us nostalgic and still we watch it no matter how much time it kills. But what about Office (Sadly enough)? All the cricket sites that stream are blocked. Even the live updates page end up with the same old <strong>WebSense Blocked</strong> page. People resort to apps that make use of the feeble internet connectivity in the area and after almost five minutes elapsed after the brain triggered a craving for the latest score it gets satisfied but sad. We were three down in a important match. This adds to the interest and a chain reaction starts. We all have went through this multiple times.</p>
-
-<p>Being an amateurishly equipped designer(Thanks to many MOOCs for this feeling) i thought would’nt it be great if we get the score all time in the most minimalistic yet effective way without tapping of our phones and going through all those ads to get to the <strong>SCORE</strong>. Where ever there is a problem, there is a way ! Pi Way or rather Pi-Py Way .</p>
-
-<p>I did a little observational analysis to figure out how people want the score by listening to score queries that were hurled to the guy four cubicles away where the cell reception was better and he had the score <em>always</em> during the World Cup. Doing so i could tabulate the primary , secondary and tertiary parts of that instantaneous moment in wicket-cricket-time continuum.</p>
-
-<p>Most people wanted just the score as expected.Then it was Overs&gt; RR &gt; 4s/6s &gt;Who is batting team/players&gt; Who won/What’s Up? (mostly after meetings) &gt; Who the hell is playing ?</p>
-
-<p>Also the frequency was not that constant. There were mostly 10-20 requests an hour in the beginning of the match and very few in the middle and again more at the end. So it was sort of an inverse bell curve.</p>
-
-<p>The first thing required was a data source like a website/API that has all the data we need to display. We will anyway display it at 1 refresh per minute so rocket-science precision is not required. I stumbled upon <a href="https://developers.litzscore.com/plans/">this</a> which unfortunately was not free and beyond my budget.</p>
-
-<p>I thought best way is to make an API myself when there is none that suits me.</p>
-
-<blockquote>
-  <p><em>I’ll scrape</em> !</p>
-</blockquote>
-
-<p>So, i wrote a <em>python</em> script to scrape a popular and reliable website and display the score on the terminal. After a few days of part time labour i was able to extract the gold stuff i always wanted and then designed a logic to figure out who was playing and winning and what was the current state of the match. Then ran it on my Pi to make sure there were no dependencies were left out.</p>
-
-<p>I used the adorable <code class="language-plaintext highlighter-rouge">beautifulsoup</code> for scraping !</p>
-
-<p>Next based on the observations, I sat down and made an interface for the info gathered be displayed.I choose my old and trusted <a href="http://rohitg.in/2014/11/09/Nokia5510-lcd-with-MSP430/">Nokia 5510 Graphic Display</a>.</p>
-
-<p>Many thanks to <a href="http://www.adafruit.com/">Adafruit</a> for their amazing Python Library for the LCD already available that made things easy.</p>
-
-<p>Here is the first visual of a World Cup match on my project :</p>
-
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/0CfR7pPUHD/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-10T07:31:20+00:00">Mar 10, 2015 at 12:31am PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p><br />
-This too.
-<img src="https://farm4.staticflickr.com/3816/19440950239_a30060af0c_z.jpg" width="614" height="640" alt="WorldCup" />&lt;/a&gt;</p>
-
-<p>As you can see we have the following parts of score displayed:</p>
-
-<ul>
-  <li>Teams playing</li>
-  <li>Currently batting team with overs underneath it</li>
-  <li>The score in the largest font</li>
-  <li>4s/6s and Run Rate</li>
-  <li>1st Innings history if 2nd Innings is going on and 2nd innings PENDING if the first innings was underway.</li>
-  <li>Match Status - Rains, Ended,In Progress etc</li>
-</ul>
-
-<p>Here is the picture of the setup:</p>
-<center>
-<img src="https://farm4.staticflickr.com/3735/19004958164_9f8b274ff6_z.jpg" width="640" height="408" alt="Setup" />
-</center>
-<p>A Laser cut case and we could go wall mount.</p>
-
-<p>I then made the script executable and queued it as a <code class="language-plaintext highlighter-rouge">cron-job</code> to be run every minute.  <em>BLISS</em></p>
-
-<p>Now I could watch(over) cricket matches in a non-intrusive and minimalistic way .</p>
-
-<p>If you too are interested you can grab the code <a href="https://github.com/IndianTinker/CricPI">here</a> to check out on the process.</p>
-
-<p>Here is how i kept a track of IPL :</p>
-
-<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/14Z6-PvUD3/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Rohit Gupta (@rohit7gupta)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-04-25T02:34:53+00:00">Apr 24, 2015 at 7:34pm PDT</time></p></div></blockquote>
-<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
-
-<p><br /></p>
-
-<p><strong>NOTE :</strong> The project was not performed/made at the workplace. Only the use case was inspired from there.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2015/07/12/CrickPi/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

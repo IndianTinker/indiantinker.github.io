@@ -331,6 +331,34 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2016/08/15/DynamicIndicators/">
+        Making Dynamic Indicators for Ubuntu using pyGTK
+      </a>
+    </h1>
+
+    <span class="post-date">15 Aug 2016</span>
+
+    <p>One day, well on a not so busy one, I will try and make my own Indicators for my <em>Linux</em> machine. Indicators in Unity Environment are a quick way to access the information or present info to the user. Things that take time like video encoding/code compiling can have a very intuitive interface with the taskbar icon which when clicked shows the progress.</p>
+
+<p>For more info check <a href="https://unity.ubuntu.com/projects/appindicators/">this</a> link.</p>
+
+<p><img src="https://c8.staticflickr.com/9/8884/28924622311_0d92a03741.jpg" width="380" height="46" alt="indicato" /></p>
+
+<p>Although good, but there is too little documentation to get you started. After a lot of explorations around the web, i was able to put together this template for building 
+app indicators that exit <em>gracefully</em> and have an on click event that updates the menu dynamically. I had made it to essentially track some parameters on a remote system. So, whenever i clicked, it fetched data and presented it. A bit better than running a parallel thread even when data is not required by the user.</p>
+
+<p>The basic code is <a href="https://github.com/IndianTinker/DynamicIndicators">here</a> in the git repo.</p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+<a href="/2016/08/15/DynamicIndicators/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/08/09/DLog1Movie/">
         DLogs-How to watch movies better
       </a>
@@ -462,38 +490,6 @@ window.twttr = (function (d, s, id) {
 
 <p>Rohit</p>
 <a href="/2016/07/27/Vac/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/06/18/Exif/">
-        Exif Data on Linux
-      </a>
-    </h1>
-
-    <span class="post-date">18 Jun 2016</span>
-
-    <p>A friend was recently on a look-out for a camera (DSLR) for a project and was trying various options. Since the residual life of the camera depends on the <em>Shutter Count</em> ; its worth-while to check it before committing to it. BTW, If you need more pointers on evaluating a pre-owned Camera, I would sincerely recommend <a href="https://www.youtube.com/watch?v=1BxXPTIvtHA">this</a> video. PS: Language might not be suitable for younger audiences.</p>
-
-<p>On Linux (other platforms too) there is a nice tool called <strong>ExifTool</strong> which was, as of writing this post available in the package manager of <em>Ubuntu</em> .</p>
-
-<p>So, Simply 
-<code class="language-plaintext highlighter-rouge">sudo apt-get install exiftool</code></p>
-
-<p>In order to use it, Simply go to the SD Card (generally) and <em>Right Click</em> to open terminal here. Then use the command.</p>
-
-<p><code class="language-plaintext highlighter-rouge">exiftool DSC_0004.JPG |grep "Shutter Count"</code></p>
-
-<p>Shutter Count should be visible, But depends on the camera you use. Most <strong>Nikons</strong> we tested had this meta tag in the EXIF(Exchangeable image file format) data of the image, but the only Canon we tested was 1200D which did not show any data.</p>
-
-<p>To know more about EXIF check out <a href="http://www.media.mit.edu/pia/Research/deepview/exif.html">this</a> resource .</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-<a href="/2016/06/18/Exif/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr
