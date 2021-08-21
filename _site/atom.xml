@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2021-08-22T00:57:26+02:00</updated>
+ <updated>2021-08-22T01:01:18+02:00</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -141,8 +141,11 @@ For more info on getting started with Deta Micros, check &lt;a href=&quot;https:
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;After, if you deploying everything, Lets click the checkout button. Tadaaa 🎉! It shows Alipay as a possible payment option. 
-&lt;img src=&quot;https://i.imgur.com/f6aMVGH.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;After deploying everything, Let’s click the checkout button. 🥁&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/f6aMVGH.png&quot; alt=&quot;img&quot; /&gt;
+&lt;br /&gt;
+Tadaaa 🎉! It shows Alipay as a possible payment option.&lt;/p&gt;
 
 &lt;p&gt;Hope this helps someone on the internet. I &lt;strong&gt;must&lt;/strong&gt; stress again, I am not a front-end developer, I just did this for fun. If anyone has any constructive criticism, I am open to learn :-)
 &lt;br /&gt;
