@@ -331,6 +331,68 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2015/11/11/GreenwaliDiwali/">
+        GreenWali Diwali:A social interactivity experiment
+      </a>
+    </h1>
+
+    <span class="post-date">11 Nov 2015</span>
+
+    <p>Well we all know the catastrophic outcomes of burning crackers, its pollution (noise,material,air), killing those pigeons you probably have been feeding the whole year and nightmares for the pets. Crackers from where I see it, are a means of social exhibition to reflect your happiness about a cause. They have :</p>
+
+<ul>
+  <li>Lights/Sound to attract attention</li>
+  <li>A unique randomness of explosion</li>
+  <li>An Obnoxious Odour</li>
+  <li>Fear of getting yourself hurt</li>
+  <li>Fear of setting someone on fire</li>
+</ul>
+
+<p>So, This Diwali , I decided to mimic some of the above traits without causing any pollution, so this will be a <strong>GreenWali Diwali</strong> .</p>
+
+<p>The idea was to reiterate the experience of fire crackers by amalgamating the light,sound and randomness associated with it <em>electronically</em> .</p>
+
+<p>For the installation, i used the Rasperry Pi ( as it was in my Arm’s Reach :P ) and some Python to search <code class="language-plaintext highlighter-rouge">Twitter</code> for tweets that were supporting the cause for a green Diwali by tracking the hastag <code class="language-plaintext highlighter-rouge">#Diwali</code> and then parsing the tweets to check if they sounded ‘Green’ and if its true then a random firecracker audio file gets played on the Pi and a LED gets lit up / GPIO goes high so you can use another slave mcu to flicker some LEDs.</p>
+
+<p><strong>Update :</strong> Twitter has probably Rate Limited the streaming of the #Diwali and #HappyDiwali due to huge volumes, so the new Hash tag is #GreenDiwali and filter term is <em>happy</em> ! Tweet Tweet! which means tweet with a <strong>#GreenDiwali</strong> and there should be the word <strong>happy</strong> in it.</p>
+
+<p>Yeah ! We could also do sentiment analysis of the tweet and only proceed if the tweet has a positive sentiment !</p>
+
+<p>That’s pretty much it. So someone else would actually be blowing the cracker in your house. Hail the Internet !</p>
+
+<p>I would really like people to tweet with the word green and #Diwali as i have been using the installation and the only thing i see in the feeds in people retweeting a company’s GreenTea advert to win some green tea this Diwali . Some of my friends like RohitKsingh did tweet. Hoping to hear more tweets. It would also be awesome if makers around the world with a Pi (in Arm’s Length :P) could install/improve this in their community to raise awareness about not burning crackers.</p>
+
+<p>The code is available <a href="https://github.com/IndianTinker/GreenwaliDiwali">here</a>. The only thing you will need are Twitter Outh Tokens.For them just  do the following :</p>
+
+<ul>
+  <li>Sign In/Up on Twitter</li>
+  <li>Go <a href="https://apps.twitter.com/">here</a></li>
+  <li>Create <strong>New Application</strong></li>
+  <li>Fill the Yet-Another-Form and Create the Application.</li>
+  <li>Now, Go to the <strong>Keys and Access Tokens</strong> Tab.</li>
+  <li>You will see your consumer keys there !</li>
+  <li>There will be a Button that generates keys so that the app can access your a/c just in case. Click and you get your secret key</li>
+</ul>
+
+<p>These 4 keys are used for the Code above.</p>
+
+<p>Then just install the dependencies based on the <code class="language-plaintext highlighter-rouge">README</code> and use your PC/Mobile to run the App on a Headless Pi. <strong>JuiceSSH</strong> is recommended for Android. If you wish to leave it for longer durations use <code class="language-plaintext highlighter-rouge">screen</code> to send a SSH instance in the background and exit the SSH Client.</p>
+
+<p>Check out the video of me testing it !</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ZApn93KSoGY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Happy GreenWali Diwali !</p>
+
+<p>Rohit</p>
+
+<a href="/2015/11/11/GreenwaliDiwali/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2015/11/08/NoobSentiment/">
         Cricket Sentiment Analysis using nodejs
       </a>
@@ -438,103 +500,6 @@ window.twttr = (function (d, s, id) {
 <p>Rohit</p>
 
 <a href="/2015/10/23/Tiltstick/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/10/22/OpenBadge/">
-        Open Badge:You'da Maker
-      </a>
-    </h1>
-
-    <span class="post-date">22 Oct 2015</span>
-
-    <p>Badges are amazing things. Better when you make your own. I was about to attend the 1st MakerFest at NID, Ahmedabad and thought of taking something unique to the event. Badge was a great option and suited the maker theme of the event. So, sitting down with a pen and paper i drew what it would look like and came up something that could be retro-fitted to a usual boring office badge and would have a LED array to display text messages , the obvious a rechargeable battery ,light weight and of course infinitely hackable, just in-case people wish to remake it, which seldom is the case.</p>
-
-<p>For the LED array we could use the usual LED Matrix,5x7 seemed to be a good size comfortable for both the pins and programmer.But..</p>
-
-<p>The LED Matrix available in stores nearby had a lot of issues:</p>
-
-<ul>
-  <li>Profile was too thick</li>
-  <li>The sizes available were either too big or too small for a 5x7 size.</li>
-  <li>Came with no datasheet, which meant bull work required to find out all the R and C values. Dahh!</li>
-</ul>
-
-<p>So, I had to make a <strong>tough</strong> choice of soldering 35 LEDs which meant the PCB was going to be <em>Dou.Double Sided</em> (Literal stammering). I had never done double sided at home. But it was never too late and that difficult. <strong>Basically</strong> you have to align two sides and just slip in the copper clad , tape it , iron it and  etch it and then <em>Hope is all you need</em> !</p>
-
-<p>FYI, that ‘basically’ came after i spoilt one full PCB.</p>
-
-<blockquote>
-  <p>PRO-TIP: You can have some alignment marks out of the scope of PCB in different directions in the dimension layer. Now when you align the front and back you just align the marks. Check this <a href="http://www.instructables.com/id/Two-sided-PCB-using-toner-method/">instructable</a> i used as a reference.</p>
-</blockquote>
-
-<p>The major elements on the PCB were:</p>
-
-<ul>
-  <li>LED Matrix</li>
-  <li>A MSP430G2553 microcontroller brain</li>
-  <li>A ULN2803 Darlington Driver to sink the current</li>
-  <li>A USB connector to charge the battery</li>
-  <li>A SBW connector to program the MSP430</li>
-  <li>A Switch to change the message</li>
-  <li>A Li-Ion battery from a Discarded Phone</li>
-  <li>Current limiting and Pull up resistors</li>
-  <li>Decoupling Capacitors</li>
-  <li>A REG1117 Regulator for MSP430</li>
-</ul>
-
-<p>Schematics and PCBs took 3 days of part-time work. Etching,Drilling and Soldering took a nighter.I had a provision to use the PCB directly as the badge with two big drill holes on the top.</p>
-
-<p>Check out the images below:</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736425093/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5823/20736425093_7349c070f7_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21346949492/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/737/21346949492_c5295449cb_z.jpg" width="359" height="640" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736678943/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm6.staticflickr.com/5800/20736678943_11ac529978_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21365927401/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/612/21365927401_052a3bfdef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/20736053114/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/575/20736053114_bf0ed32bef_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21171876949/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/676/21171876949_394ce34d21_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21169357760/in/dateposted-public/" title="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery."><img src="https://farm1.staticflickr.com/568/21169357760_4dc214b3f0_z.jpg" width="640" height="359" alt="MakerBadge  A LED badge that stores custom messages that can be changed at a press of a button. USB Charged and Easy to make. Powered by a LiIon Battery." /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>After experimenting with readability, i found out that the display was a dud in bright light. So, i repurposed an already cut-out heart shaped Red Diffuser for the display. It was a game changer.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21510455275/in/dateposted-public/" title="P_20150917_110935"><img src="https://farm1.staticflickr.com/567/21510455275_37e0e33463_z.jpg" width="360" height="640" alt="P_20150917_110935" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The basic code is available <a href="https://github.com/IndianTinker/OpenBadge">here</a> for people who wish to build it.
-The final version could do:</p>
-
-<ul>
-  <li>5 Strings scrolling</li>
-  <li>Temperature Display (MSP430s have a temperature sensor in-built)</li>
-  <li>Static Display</li>
-</ul>
-
-<p>Things that the hardware allowed but i didnt get the time to program:</p>
-
-<ul>
-  <li>Battery state sensing</li>
-  <li>Animations</li>
-</ul>
-
-<p>When i showed it to <a href="https://twitter.com/anool">@anool</a> at Maker Fest, he liked it and gave me a <a href="http://wyolum.com/projects/badger/">BadgEr</a> which was even cooler.</p>
-
-<p>Please check out the video below:</p>
-
-<iframe width="480" height="360" src="https://www.youtube.com/embed/KU9X9qTaQvg" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Cheers !!</p>
-
-<p>Rohit</p>
-
-<a href="/2015/10/22/OpenBadge/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

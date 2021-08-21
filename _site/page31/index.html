@@ -331,6 +331,99 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2014/11/13/Fiddle-Music-System/">
+        Fiddle - The DIYed Music System
+      </a>
+    </h1>
+
+    <span class="post-date">13 Nov 2014</span>
+
+    <p><em>Zu ZU ZU ZU ZU UUUU ..BR.BR.CHIK</em> Thats how my old ‘Phillips All in One’ failed a couple of weeks back. It was a pretty archaic piece. All it could do was play Cassettes, Do Radio, Had an Aux In and offcourse the marketed <strong>CD Player with a segmented Display</strong>. But today most of the music is digital and hence <em>Upgrade was necessary</em>.</p>
+
+<p>I was planning to buy one and browsing the estores but then then <em>Makers Dilemma</em> struck me.</p>
+<blockquote>
+  <p>Why Buy? When it can be Built!</p>
+</blockquote>
+
+<p>And alas! I was fiddling with microcontrollers and SD Cards to make one. But couldnt get to the level i wanted. I wanted one that could:</p>
+
+<ul>
+  <li>Play MP3s</li>
+  <li>Radio</li>
+  <li>Aux -IN</li>
+  <li>Take SD Cards</li>
+  <li>Remotes will be good too.</li>
+</ul>
+
+<p>Fitting such things in a project would rather be heavenly. I searched online for references and <em>You have it boy!</em> there is one ready to amplify (supply) module from our friends in China that does it all . See <a href="http://www.dx.com/p/1-0-led-car-mp3-player-module-w-fm-usb-mini-usb-sd-remote-controller-black-12v-126115#.VGbgJ4X7sjg">this</a>  .</p>
+
+<p>I had seen this in a Taxi (less formally called <em>Gramin Seva</em>) while commuting to college once, which made me realise that this would certainly be available in India. The next day i was in the market looking for it and I did source it for about 9 $ (INR 500 )</p>
+
+<p>Now all i need to do is :</p>
+
+<ol>
+  <li>Decipher the connections</li>
+  <li>Build a power supply and Amplifier</li>
+  <li>Find/Repurpose/Build a 2-Component (1-Woof and 1-Tweeter) speaker box</li>
+  <li>Modify the box to fit all in</li>
+  <li>Enjoy</li>
+</ol>
+
+<p><strong>Connections</strong> were pretty easy as the silkscreen had some references. It basically needs a <code class="language-plaintext highlighter-rouge">5V DC</code> supply that’s the two pin connected on the left for and give <strong>stereo</strong> output using the 3 of 4 connectors on right (<em>Right, Left and GND</em>) and the last one is for the FM Antenna</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606424407" title="The Landscape by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5615/15606424407_8fb111d91a_z.jpg" width="640" height="359" alt="The Landscape" /></a></p>
+
+<p>The next part was testing if i will see the blue smoke of death as sometimes they can mess up with silkscreens too. <em>FingersCrossed</em></p>
+
+<p>It worked fine and i was playing things off the USB straight away!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606417287" title="USB Reading by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7579/15606417287_413275e9f6_z.jpg" width="640" height="359" alt="USB Reading" /></a></p>
+
+<p>Now, the power supply and Amplifier. I used the omnipresent <code class="language-plaintext highlighter-rouge">7805 Regulator</code> that could power the module easily as i estimated the current requirements to be around <code class="language-plaintext highlighter-rouge">250-300mA</code> . The supply was going to be <code class="language-plaintext highlighter-rouge">12VDC</code> due to the Amp i was building and hence, a heat sink was necessary.
+The Amp was build out of <strong>ST’s</strong> <a href="http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000128.pdf">TDA2030</a> which is a 14W,voltage friendly, High Fidelity (Correct Portrayl of sound without much loss in clarity), Class AB , Mono Amplifier.</p>
+
+<p>The Application circuit works charm.
+So, i assembled them on a single perfboard and was short of one heat sink. I now had to decide. Who needs the heat sink badly?</p>
+
+<p>Demo runs showed <code class="language-plaintext highlighter-rouge">TDA2030</code> needs it badly. Now using some thermal glue and nuts and bolts i screwed the heatsink to the <code class="language-plaintext highlighter-rouge">TDA2030</code> and made a makeshift heat sink for <code class="language-plaintext highlighter-rouge">7805</code></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15791566865" title="Ortho View by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5616/15791566865_6493f94454_z.jpg" width="640" height="359" alt="Ortho View" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767878536" title="Circuit -Front by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15767878536_fd9ff32190_z.jpg" width="640" height="359" alt="Circuit -Front" /></a></p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606714790" title="Circuit- Back by Rohit Gupta, on Flickr"><img src="https://farm9.staticflickr.com/8562/15606714790_8d4cc5518c_z.jpg" width="640" height="359" alt="Circuit- Back" /></a></p>
+
+<p>I heard a strange buzz sometimes in the background which was because of some filtering issues. Adding a snubber (filter) for AC frequencies (50Hz) that was almost gone. Used the <code class="language-plaintext highlighter-rouge">10k</code> and <code class="language-plaintext highlighter-rouge">0.1uF</code> combination.</p>
+
+<p>I had an Old but dis functional Column 2 component speaker, we had bought probably 12 years down the line. It was the ideal candidate for the purpose. Now opening and digging i found phenolic pcb with broken and corroded traces. I reworked them and the Woofer was working . (<em>Oh! Yeah</em>)</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15767875046" title="Look at that Woofer by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7520/15767875046_cb19326b8c_z.jpg" width="359" height="640" alt="Look at that Woofer" /></a></p>
+
+<p>I planned to fit the circuit inside the speaker box itself. For that i had to cut a small square pocket in the body for the module to peep out and the other electronics would be inside it.</p>
+
+<p>This was a bit more difficult than anticipated. After 2 hours and 2 broken saw blades , I was able to do this.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789702321" title="The 2 hour , 2 broken blades cut by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7554/15789702321_4841f0be61_z.jpg" width="640" height="359" alt="The 2 hour , 2 broken blades cut" /></a></p>
+
+<p>Now it was assembling time.</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15789671841" title="All Messed up by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7468/15789671841_36e4735275_z.jpg" width="640" height="359" alt="All Messed up" /></a></p>
+
+<p>After a few half hours, i got it all working.. No Buzz and all music!</p>
+
+<p><a href="https://www.flickr.com/photos/94411929@N06/15606708190" title="Charm by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5602/15606708190_e4c603c18e_z.jpg" width="359" height="640" alt="Charm" /></a></p>
+
+<p>Cheers!</p>
+
+<p>Rohit</p>
+
+<a href="/2014/11/13/Fiddle-Music-System/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2014/11/09/Nokia5510-lcd-with-MSP430/">
         Nokia 5110 LCDs and MSP430
       </a>
@@ -525,53 +618,6 @@ Hoping the community finds it useful.</p>
 
 <p>Rohit</p>
 <a href="/2014/11/03/Library-for-MMA7361/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/10/28/Dollar-LED-Bulb/">
-        Inside a Cheap LED Bulb
-      </a>
-    </h1>
-
-    <span class="post-date">28 Oct 2014</span>
-
-    <p>I was recently on the visit to my hometown <em>Delhi</em> this Diwali when i visited <strong>Lajpat Rai</strong> market, the sweet spot every maker in Delhi knows/visits. There while glancing through the tiny crowded streets i found a shop selling nice pretentious LED Bulbs at a pretty cheap price of about a Dollar (60 INR). The LED intensity was evenly spread, flicker of any sort was absent and 7W was promised. I bought a couple and went back home to take them apart.</p>
-
-<p>It was pretty clear that the Bulbs wont have those <em>Chinese</em> drivers that most Local Manufacturers use. They themselves cost around 20-25 INR and there is cost of LEDs, Metal PCB, Bulb casing and not to forget the labour. My next guess was it might contain those nicely tuned transformerless supplies that drain power across the resistor to get a lower voltage and the filter it to produce a not so clean DC Voltage.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15646628781" title="WP_20141026_004 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7507/15646628781_e2e377806e_z.jpg" width="359" height="640" alt="WP_20141026_004" align="center" /></a></p>
-
-<p>And Bingo!
-It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZue-ocJc/T6H5mhgB1BI/AAAAAAAABPU/Ith1NLS, One can only gjnvg/s1600/transformerless+power+supply+circuit.png">like this</a>) on the PCB with almost no isolation except a small piece of cardboard and literally no regulation (<em>No Zener</em>)</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15012068084" title="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia by Rohit Gupta, on Flickr"><img src="https://farm4.staticflickr.com/3935/15012068084_be8db3d3ca_n.jpg" width="320" height="320" alt="#Inside a #OneDollar #LED #Bulb ! A Transformerless supply that is tuned to deliver correct V/I value. Quite Catastrophic in case of major #Fluctuations that we face in #Delhi. But what more can one expect for that price ! #MadeInIndia" /></a></p>
-
-<p>The entire Bulb had:</p>
-
-<ul>
-  <li>2x <code class="language-plaintext highlighter-rouge">470k</code> resistors,</li>
-  <li>1 x <code class="language-plaintext highlighter-rouge">100uf</code> Electrolytic Capacitor,</li>
-  <li>1 x <code class="language-plaintext highlighter-rouge">0.1uf</code>(guess) Capacitor with severed markings</li>
-  <li>12 LEDs</li>
-  <li>4 Diodes in bridge rectifier configuration.</li>
-</ul>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15649322345" title="WP_20141026_003 by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5607/15649322345_a9bccfbe51.jpg" width="500" height="281" alt="WP_20141026_003" /></a></p>
-
-<p>The bulb inspite of its circuit was quite bright and infact brighter than my quality 5W LED bulb.</p>
-
-<p><a href="https://www.flickr.com/photos/94411929@N06/15028564094" title="WP_20141026_005 by Rohit Gupta, on Flickr"><img src="https://farm8.staticflickr.com/7494/15028564094_51bf7d42a9.jpg" width="281" height="500" alt="WP_20141026_005" /></a></p>
-
-<p>One can only guess how long will this last, If the bulb faces the intense voltage fluctuations that Delhi Faces during summers , it will fail with no doubt. But still its great for the cost and the light it offers for whatever time it may do so.</p>
-
-<p>Cheers!</p>
-
-<p>Rohit</p>
-
-<a href="/2014/10/28/Dollar-LED-Bulb/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

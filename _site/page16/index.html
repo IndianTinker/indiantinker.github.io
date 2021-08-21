@@ -331,6 +331,108 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2016/07/27/Vac/">
+        DIY Vacuum Pickup tool
+      </a>
+    </h1>
+
+    <span class="post-date">27 Jul 2016</span>
+
+    <p>Recently, I started venturing into making electronic boards in some numbers starting with <a href="/2016/01/01/MakersRule/">Maker’s Rule</a>. Placing nominal sized SMDs like 1206 or even 0805 is not much of a work when you are doing a prototype. But assembling say 100s of them in one sitting is quite a task especially for people who get bored too easily. There comes the need for a Pickup tool.</p>
+
+<blockquote>
+  <p>A Pickup Tool creates a suction force that pulls/lifts the component from the reel so that you can place it on a PCB. Most PCB assemblers use that in their high speed pick and place machines.</p>
+</blockquote>
+
+<p>Here obviously we will do things manually. But instead of  using tweezers we will use a hacked Aquarium Pump. Does not seem much of an upgrade?</p>
+
+<p>Well, it certainly is. The amount of dexterity required is fairly reduced and so is the frustration of tapping SMD components to have their <em>sunny side up</em> :P</p>
+
+<p>As a matter of fact the components are placed on a PCB after manual/stencil application of solder paste. But you can try the tack soldering technique too.</p>
+
+<p>Now on the topic:</p>
+
+<p>There has been quite a lot of those <strong>Aquarium Pump Pickup Tool</strong> around anyway and this thing will probably be worth the try. Many of the tutorials available online use almost the same kind of Aquarium Pump which is difficult to find around here. After searching a lot, my patience gave in and i ordered <a href="http://www.amazon.in/SOBO-Aquarium-Airpump-SB-548-A/dp/B00VE37JYM/">this</a>, hoping i wont have to work a lot to reverse the air flow as Aquarium pumps blow air out but the whole point of a suction pump is to suck air in.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27501428912/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c1.staticflickr.com/8/7230/27501428912_e78145b578_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Inline with my expectations, it was a different construction being used here.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27566955066/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c3.staticflickr.com/8/7298/27566955066_44e93be22e_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>In the picture above, you have an injection moulded white plastic piece with the valves that open and close to create an airflow. On the right is a transformer close to which is an arm on which a rubber bellow is mounted that vibrates due to reluctance, which makes the air flow out.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26990738014/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c7.staticflickr.com/8/7390/26990738014_e735f4a421_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>To reverse the air flow two things can be done :</p>
+
+<ol>
+  <li>
+    <p>Reverse mount the white part - Tried it, the thing <em>sort of</em> works with almost no usable pressure generated.</p>
+  </li>
+  <li>
+    <p>Reverse the valves/flaps - Tedious to do. Required a bit of a fiddling with valves interestingly made out of a material similar to those keyboard skins we get. Works like charm. Used rubber glue like <em>FeviBond</em> and the black part in the photos is a rubber piece that keeps the valve in place.</p>
+  </li>
+</ol>
+
+<p>By reversing i mean that suppose a valve is mounted on side A covering a hole. We mount it on the other side forcibly covering the same hole. By doing this the sequence of valves changes and so does the airflow.</p>
+
+<p>You see there is a way and then there is an <strong>Indian</strong> way !</p>
+
+<p>Please follow the images below:</p>
+
+<p>Before</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26990736824/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c1.staticflickr.com/8/7207/26990736824_4bc476bb8d_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>After</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27528135591/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c8.staticflickr.com/8/7042/27528135591_a7094b88a0_z.jpg" width="480" height="640" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Doing just the above, the airflow was reversed enough to pick most parts like resistors, caps and even SOT 223 regulators.</p>
+
+<p>Now for the syringe end. I just bought the smallest syringe available around that could easily fit the tube that the pump supports. Did a small hole at an ergonomic enough point to modulate the airflow. The size of the hole is important as a smaller hole would allow some air to always flow via the needle causing issues when dropping parts.</p>
+
+<p>Used Hot Glue to seal the thing up.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/27600893225/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c2.staticflickr.com/8/7573/27600893225_e9b0bde412_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The catch is with the needle. The usual needle a chemist has is made for epidermal use and hence has a chiselled sort of tip, which is useless for picking components. I wanted to get an “applicator” needle with a blunt tip usually stocked by ink fillers of ink-jet printers. Nobody gave me one. Dremel prevailed and i sanded the needle to flatness. Then bent it a bit for an easier angle.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/26991835973/in/dateposted-public/" title="Making a Homebrew Vacuum Pickup Tool"><img src="https://c6.staticflickr.com/8/7625/26991835973_6e2f95f594_z.jpg" width="640" height="480" alt="Making a Homebrew Vacuum Pickup Tool" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>In Action:</p>
+
+<p>With Sharp tip and wrong bleeder hole size</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BE9fx0AvUPB/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#DIY #PicknPlace #electronics #latenight #Hack #Smd</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Rohit Gupta (@rohit7gupta) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-05-03T21:53:11+00:00">May 3, 2016 at 2:53pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>With everything fixed, Assembling first prototypes of <a href="https://makerville.io/knit/">Knit</a> .</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BFIl7NjsPXR/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Human pick and place machine - 1 @rohit7gupta - 1 syringe - 1 aquarium air pump</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Anuj Deshpande (@anujdeshpande) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-05-08T05:18:32+00:00">May 7, 2016 at 10:18pm PDT</time></p></div></blockquote>
+<script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p><em>References</em></p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=YhavXauuWqY">Felix is an inspiration</a></li>
+  <li><a href="https://www.youtube.com/watch?v=z7Tu8NXu5UA">Awesome SMD Soldering Tutorial</a></li>
+  <li><a href="https://www.youtube.com/watch?v=pdGSFc7VjBE">Mikeselectricstuff’s quick tips</a></li>
+</ul>
+
+<p>If you have any questions/suggestions etc please reach me via the comments section \m/</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2016/07/27/Vac/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/06/18/Exif/">
         Exif Data on Linux
       </a>
@@ -440,80 +542,6 @@ You start with downloading the app from the <a href="https://play.google.com/sto
 
 <p>Rohit</p>
 <a href="/2016/04/11/WIOLink/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/04/03/Connectnext/">
-        ConnectNeXt App Ecosystem
-      </a>
-    </h1>
-
-    <span class="post-date">03 Apr 2016</span>
-
-    <blockquote>
-  <p>This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. I was a project lead for this project from my team. Here, I present my work on designing and testing the initial release of Tata Motors ConnectNeXt App Ecosystem.  Work in the post was done between 2015-Q1 2016. I was involved in system design, testing, and user evaluation.</p>
-</blockquote>
-
-<p><img src="https://i.imgur.com/aAW5nOh.png" height="350" />
-<img src="https://i.imgur.com/Rj7j3nU.png" height="350" />
-<img src="https://i.imgur.com/R6TXIZd.png" height="350" /></p>
-
-<p>Some user feedback for the app : Smart Manuals
-<img src="https://i.imgur.com/rt9IMFO.png" alt="Imgur" /></p>
-
-<h4>Context</h4>
-<p>This is 2014, Vehicle infotainment systems are getting more and more computation heavy. The customer demands more connection and driving needs to be data-informed (driven). The competition has some derived solutions in the market. We needed to respond by building our own contextual telematics ecosystem. I was involved as a Lead from PAT side in the project when the dev and design already had some ideas and had some prototypes being tested. My task was to rethink and improve the project- ConnectNeXt, from a user-centric point of view.  It is one of those projects, you are on the team and have to fight for the user. Then not be lured by the cool technology that could possibly take too much attention while driving. Not making an App need attention was the task. Android auto was still very new.</p>
-
-<h4>Work</h4>
-<p>I worked with many designs and dev teams (across 3 companies) in my role as a design integrator for the project. We studied the designed screen and flows. We did reviews of iconography, typography, and information architecture. Nitpicking things and presenting the user’s point was the goal. There were experiments to make apps that would adjust the visuals to the time of the day. The interaction points in the app were designed to be operated in a road filled with potholes. We simulated this condition using a torture track. This helped us move critical/decision points outside the primary interface. We researched about in-vehicle safety. Safety is at the top while using such apps in vehicles. With some benchmarking data, our user studies, and simulations, we designed some rough guidelines for vehicle-based apps on TML platform.  The idea was to have a central app that auto-configures based on the vehicle it is connected. The app would suggest possible compatible apps from the ecosystem. Then, it configures them. This is the connectNeXt app. About 150+ use cases were to be designed, implemented, and tested. Once the interface layer of these apps was sorted as a system, we moved on scoping the feature matrix. The entire operation was based on the Smartlink protocol stack, and hence we worked with a lot of connection, reconnection, and disconnection use cases over Bluetooth and/or USB.  All these apps are now in playstore.</p>
-
-<p><a href="https://play.google.com/store/apps/details?id=com.tml.drivepro">DriveNeXt</a> app gives driving behavior analysis and suggests improvements.
-<br /><img src="https://i.imgur.com/kTvjdZg.png" height="350" /> 
-<img src="https://i.imgur.com/YP5ETha.png" height="350" />
-<img src="https://i.imgur.com/aAW5nOh.png" height="350" /></p>
-
-<p><a href="https://play.google.com/store/apps/details?id=com.tml.jukecar">JukeCar</a> is a music sharing app to make collaborative playlists when many people travel together in a car
-<br />
-<img src="https://i.imgur.com/pZ7MsP7.png" height="350" />
-<img src="https://i.imgur.com/Rj7j3nU.png" height="350" />
- <img src="https://i.imgur.com/QVCCdIk.png" height="350" /></p>
-
-<p><a href="https://play.google.com/store/apps/details?id=com.tml.knowyourcar">Smart Vehicle guides</a> helps in making user manuals searchable and digitally accessible.
-<br /> <img src="https://i.imgur.com/X9J9vH3.png" height="350" />
-<img src="https://i.imgur.com/CkHrLrh.png" height="350" />
-<img src="https://i.imgur.com/R6TXIZd.png" height="350" /></p>
-
-<p><a href="https://play.google.com/store/apps/details?id=com.tml.connectnextappone&amp;hl=en_US">ConnectNeXt</a> is the mothership app. It configures other apps and manages the interactions with the infotainment system
-<br /> <img src="https://i.imgur.com/uvEnZCG.png" height="350" />
-<img src="https://i.imgur.com/j4am3CQ.png" height="350" />
-<img src="https://i.imgur.com/AS1C3qb.png" height="350" /></p>
-
-<p><a href="https://play.google.com/store/apps/details?id=com.tml.emergencyapp">Emergency Assist</a> is a safety app that detects crashes and sends SOS messages to emergency contacts
-<br /> <img src="https://i.imgur.com/l0oTVXx.png" height="350" />
-<img src="https://i.imgur.com/7uUd01Q.png" height="350" />
-<img src="https://i.imgur.com/vDGscbI.png" height="350" /></p>
-
-<p><a href="https://play.google.com/store/apps/details?id=com.tml.rca">RCA-Remote Control App</a> allows back seat riders to control music and ventilation through their phone.
-<br /> <img src="https://i.imgur.com/GNEkXmu.png" height="350" />
-<img src="https://i.imgur.com/UqJC1sP.png" height="350" />
-<img src="https://i.imgur.com/TtHJCev.png" height="350" /></p>
-
-<h4>Learnings</h4>
-<p>This was one of the things, I am kind of proud of. A lot of things come to light when thinking as the process. The API calls, UI layers, car data, user privacy, variable in a car, no internet, failure cases, and finally edge cases. I learned things like JIRA, App Ecosystem, CAN Tools, Vehicle Diagnostics, Vehicle safety, process maps, and doing projects with a lot of different stakeholders. The testing part of the project was fun. Initially, we were all communicating by logging bugs in JIRA. I did not even know people by their faces, just by their JIRA user names. But later, It was getting difficult to explain some very typical use cases. So, we decided on doing extensive all day collaboration drives with stakeholders. I used to drive in Pune and neighboring cities. We were logging data and simulating events, with the app developer and infotainment developers sitting in the car. They were initially scared of sitting in a camouflaged car. But, we were fixing more than 20+ bugs a day. I won an award for my work with the project too.</p>
-
-<h4>How it affected the company</h4>
-<p>I feel, it laid the foundations of what connectneXt is today. The company position transformed from being competitive in the market to become market leaders. The best part was all the tech and design was in-house and the company can virtually do anything the customer needs without sticking to the excel-sheet approach of many suppliers.</p>
-
-<p><strong>Skills</strong>: User Research, UI, UX, Design Integration, Futuring/Trend forecasting, and Testing</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2016/04/03/Connectnext/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

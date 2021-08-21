@@ -331,6 +331,80 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2016/04/03/Connectnext/">
+        ConnectNeXt App Ecosystem
+      </a>
+    </h1>
+
+    <span class="post-date">03 Apr 2016</span>
+
+    <blockquote>
+  <p>This post describes the work done during my time at Tata Motors Research Center in Pune. I worked as an Assistant Manager in Human Machine Interface department. I was a project lead for this project from my team. Here, I present my work on designing and testing the initial release of Tata Motors ConnectNeXt App Ecosystem.  Work in the post was done between 2015-Q1 2016. I was involved in system design, testing, and user evaluation.</p>
+</blockquote>
+
+<p><img src="https://i.imgur.com/aAW5nOh.png" height="350" />
+<img src="https://i.imgur.com/Rj7j3nU.png" height="350" />
+<img src="https://i.imgur.com/R6TXIZd.png" height="350" /></p>
+
+<p>Some user feedback for the app : Smart Manuals
+<img src="https://i.imgur.com/rt9IMFO.png" alt="Imgur" /></p>
+
+<h4>Context</h4>
+<p>This is 2014, Vehicle infotainment systems are getting more and more computation heavy. The customer demands more connection and driving needs to be data-informed (driven). The competition has some derived solutions in the market. We needed to respond by building our own contextual telematics ecosystem. I was involved as a Lead from PAT side in the project when the dev and design already had some ideas and had some prototypes being tested. My task was to rethink and improve the project- ConnectNeXt, from a user-centric point of view.  It is one of those projects, you are on the team and have to fight for the user. Then not be lured by the cool technology that could possibly take too much attention while driving. Not making an App need attention was the task. Android auto was still very new.</p>
+
+<h4>Work</h4>
+<p>I worked with many designs and dev teams (across 3 companies) in my role as a design integrator for the project. We studied the designed screen and flows. We did reviews of iconography, typography, and information architecture. Nitpicking things and presenting the user’s point was the goal. There were experiments to make apps that would adjust the visuals to the time of the day. The interaction points in the app were designed to be operated in a road filled with potholes. We simulated this condition using a torture track. This helped us move critical/decision points outside the primary interface. We researched about in-vehicle safety. Safety is at the top while using such apps in vehicles. With some benchmarking data, our user studies, and simulations, we designed some rough guidelines for vehicle-based apps on TML platform.  The idea was to have a central app that auto-configures based on the vehicle it is connected. The app would suggest possible compatible apps from the ecosystem. Then, it configures them. This is the connectNeXt app. About 150+ use cases were to be designed, implemented, and tested. Once the interface layer of these apps was sorted as a system, we moved on scoping the feature matrix. The entire operation was based on the Smartlink protocol stack, and hence we worked with a lot of connection, reconnection, and disconnection use cases over Bluetooth and/or USB.  All these apps are now in playstore.</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.tml.drivepro">DriveNeXt</a> app gives driving behavior analysis and suggests improvements.
+<br /><img src="https://i.imgur.com/kTvjdZg.png" height="350" /> 
+<img src="https://i.imgur.com/YP5ETha.png" height="350" />
+<img src="https://i.imgur.com/aAW5nOh.png" height="350" /></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.tml.jukecar">JukeCar</a> is a music sharing app to make collaborative playlists when many people travel together in a car
+<br />
+<img src="https://i.imgur.com/pZ7MsP7.png" height="350" />
+<img src="https://i.imgur.com/Rj7j3nU.png" height="350" />
+ <img src="https://i.imgur.com/QVCCdIk.png" height="350" /></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.tml.knowyourcar">Smart Vehicle guides</a> helps in making user manuals searchable and digitally accessible.
+<br /> <img src="https://i.imgur.com/X9J9vH3.png" height="350" />
+<img src="https://i.imgur.com/CkHrLrh.png" height="350" />
+<img src="https://i.imgur.com/R6TXIZd.png" height="350" /></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.tml.connectnextappone&amp;hl=en_US">ConnectNeXt</a> is the mothership app. It configures other apps and manages the interactions with the infotainment system
+<br /> <img src="https://i.imgur.com/uvEnZCG.png" height="350" />
+<img src="https://i.imgur.com/j4am3CQ.png" height="350" />
+<img src="https://i.imgur.com/AS1C3qb.png" height="350" /></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.tml.emergencyapp">Emergency Assist</a> is a safety app that detects crashes and sends SOS messages to emergency contacts
+<br /> <img src="https://i.imgur.com/l0oTVXx.png" height="350" />
+<img src="https://i.imgur.com/7uUd01Q.png" height="350" />
+<img src="https://i.imgur.com/vDGscbI.png" height="350" /></p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.tml.rca">RCA-Remote Control App</a> allows back seat riders to control music and ventilation through their phone.
+<br /> <img src="https://i.imgur.com/GNEkXmu.png" height="350" />
+<img src="https://i.imgur.com/UqJC1sP.png" height="350" />
+<img src="https://i.imgur.com/TtHJCev.png" height="350" /></p>
+
+<h4>Learnings</h4>
+<p>This was one of the things, I am kind of proud of. A lot of things come to light when thinking as the process. The API calls, UI layers, car data, user privacy, variable in a car, no internet, failure cases, and finally edge cases. I learned things like JIRA, App Ecosystem, CAN Tools, Vehicle Diagnostics, Vehicle safety, process maps, and doing projects with a lot of different stakeholders. The testing part of the project was fun. Initially, we were all communicating by logging bugs in JIRA. I did not even know people by their faces, just by their JIRA user names. But later, It was getting difficult to explain some very typical use cases. So, we decided on doing extensive all day collaboration drives with stakeholders. I used to drive in Pune and neighboring cities. We were logging data and simulating events, with the app developer and infotainment developers sitting in the car. They were initially scared of sitting in a camouflaged car. But, we were fixing more than 20+ bugs a day. I won an award for my work with the project too.</p>
+
+<h4>How it affected the company</h4>
+<p>I feel, it laid the foundations of what connectneXt is today. The company position transformed from being competitive in the market to become market leaders. The best part was all the tech and design was in-house and the company can virtually do anything the customer needs without sticking to the excel-sheet approach of many suppliers.</p>
+
+<p><strong>Skills</strong>: User Research, UI, UX, Design Integration, Futuring/Trend forecasting, and Testing</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2016/04/03/Connectnext/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/03/19/ARCards/">
         Augmenting Reality with Visiting Cards
       </a>
@@ -429,120 +503,6 @@ These cards are basically pumped up visiting cards that enable users to project 
 <p>Rohit</p>
 
 <a href="/2016/03/12/arc/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/02/04/spectravulizer/">
-        SpectraVUlizer- Lights,Music and Magic
-      </a>
-    </h1>
-
-    <span class="post-date">04 Feb 2016</span>
-
-    <p>One day while chatting with my good friend <a href="https://twitter.com/mrrituparna">Rituparna</a> we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more <em>dhinchaak</em>. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.</p>
-
-<p>Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the <a href="http://tah.io/">Tah</a> as our number cruncher of choice.</p>
-
-<p>One fine afternoon we met at <a href="http://www.meetup.com/Doo-Things/">doo Things</a> to get the project up and running. We decided to use the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7</a> which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
-Reading it is similar to how you read a shift register.</p>
-
-<p>We followed the standard circuit from the datasheet and programmed the <strong>Tah</strong> to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.</p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/" title="WP_20150321_004"><img src="https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg" width="640" height="359" alt="WP_20150321_004" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/" title="WP_20150321_006"><img src="https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg" width="640" height="359" alt="WP_20150321_006" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-
-<p>The test code we used is as follows:</p>
-
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cm">/*
-Released under MIT License
-A project by Rituparna and Rohit
-*/</span>
-
-
-<span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;
-#define NEOPIXELPIN 4
-</span>
-<span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="n">NEOPIXELPIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
-
-<span class="k">const</span> <span class="kt">int</span> <span class="n">analogPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">strobePin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">resetPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span> <span class="c1">// to hold a2d values
-</span>
-<span class="kt">int</span> <span class="n">doubledSpectrumValue</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
-<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span> <span class="c1">// Initialize all pixels to 'off'
-</span>
-  
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
-  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
-  
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
- 
-  <span class="c1">//Measure the magnitudes of the 7 frequency bins
-</span>
-  <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
-    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// to allow the output to settle
-</span>
-    <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">);</span>
-    <span class="n">avg</span> <span class="o">+=</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
-
-
-  <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span>
-
-  <span class="c1">//Clear out the NeoPixel String
-</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">144</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
-  <span class="p">}</span>
-  
-  <span class="c1">//Draw the meter on the NeoPixel string
-</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">map</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">144</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">60</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">map</span><span class="p">(</span><span class="n">spectrumValue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)));</span> <span class="c1">//Added blue flash for bass hit
-</span>
-  <span class="p">}</span>
-  
-  <span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">125</span><span class="p">);</span>
-  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>
-So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
-</p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/xV4zOYUQKfM" frameborder="0" allowfullscreen=""></iframe>
-
-<p>The song is by Adiba Parveen just in case you like it. Its <a href="https://www.youtube.com/watch?v=h0EoMozYWSs">here</a>.</p>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-
-<a href="/2016/02/04/spectravulizer/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

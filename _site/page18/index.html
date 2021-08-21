@@ -331,6 +331,120 @@ window.twttr = (function (d, s, id) {
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2016/02/04/spectravulizer/">
+        SpectraVUlizer- Lights,Music and Magic
+      </a>
+    </h1>
+
+    <span class="post-date">04 Feb 2016</span>
+
+    <p>One day while chatting with my good friend <a href="https://twitter.com/mrrituparna">Rituparna</a> we stumbled upon building a sound reactive light for Ritu’s Ritz Car. Amplitude based light would be too stale for his taste and we needed something that was more <em>dhinchaak</em>. So why not visualize music in the frequency domain as well. So, as the sound changes bands we could change the color of his car’s interiors.</p>
+
+<p>Hence we would certainly have to do some FFT so we have an idea of the relative amplitude of sound in different bands and then use the Neo Pixel strips to visualize the pattern. We planned to use the <a href="http://tah.io/">Tah</a> as our number cruncher of choice.</p>
+
+<p>One fine afternoon we met at <a href="http://www.meetup.com/Doo-Things/">doo Things</a> to get the project up and running. We decided to use the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7</a> which is a Seven Band Graphic Equalizer and produces analog voltages of the value of signal in a particular band. Its not difficult to interface and would help us update the strip real-time which could be difficult with software FFTs. Also it was directly capable of receiving signal from the standard 3.5mm line saving us with effort to make an amplifier if we used the standard FFT libraries.
+Reading it is similar to how you read a shift register.</p>
+
+<p>We followed the standard circuit from the datasheet and programmed the <strong>Tah</strong> to read the signal and reflect the same on the neo-pixels. The whole circuit was built on a perfboard and powered by a standard 5V Adapter.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863820191/in/dateposted-public/" title="WP_20150321_004"><img src="https://farm2.staticflickr.com/1523/23863820191_63d67d6a73_z.jpg" width="640" height="359" alt="WP_20150321_004" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/23863818761/in/dateposted-public/" title="WP_20150321_006"><img src="https://farm6.staticflickr.com/5725/23863818761_d3c884844d_z.jpg" width="640" height="359" alt="WP_20150321_006" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>The test code we used is as follows:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cm">/*
+Released under MIT License
+A project by Rituparna and Rohit
+*/</span>
+
+
+<span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;
+#define NEOPIXELPIN 4
+</span>
+<span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="n">NEOPIXELPIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">analogPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">strobePin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">resetPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span> <span class="c1">// to hold a2d values
+</span>
+<span class="kt">int</span> <span class="n">doubledSpectrumValue</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span> <span class="c1">// Initialize all pixels to 'off'
+</span>
+  
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
+  
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">resetPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+ 
+  <span class="c1">//Measure the magnitudes of the 7 frequency bins
+</span>
+  <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// to allow the output to settle
+</span>
+    <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">);</span>
+    <span class="n">avg</span> <span class="o">+=</span> <span class="n">spectrumValue</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobePin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+  <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span>
+
+  <span class="c1">//Clear out the NeoPixel String
+</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">144</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+  <span class="p">}</span>
+  
+  <span class="c1">//Draw the meter on the NeoPixel string
+</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">map</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">144</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">60</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">map</span><span class="p">(</span><span class="n">spectrumValue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)));</span> <span class="c1">//Added blue flash for bass hit
+</span>
+  <span class="p">}</span>
+  
+  <span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">125</span><span class="p">);</span>
+  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>
+So basically when we notice a higher value in the lowest band which is basically due to the percussion instruments used in the song. We make the whole strip flash. Check this out in the video below.
+</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/xV4zOYUQKfM" frameborder="0" allowfullscreen=""></iframe>
+
+<p>The song is by Adiba Parveen just in case you like it. Its <a href="https://www.youtube.com/watch?v=h0EoMozYWSs">here</a>.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2016/02/04/spectravulizer/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/02/02/tiagoNav/">
         Incar Navigation
       </a>
@@ -422,37 +536,6 @@ Do you have any leads on things that can be done? Please do share in the comment
 <p>Rohit</p>
 
 <a href="/2016/01/31/Hamrx/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/01/10/InteractiveStandie/">
-        Interactive Standies
-      </a>
-    </h1>
-
-    <span class="post-date">10 Jan 2016</span>
-
-    <p>Standies? They are everywhere. Every event. Every exhibition, Flying around, falling down numerous times, a pain to manage them and even get people to read it.</p>
-
-<p>We had the opportunity to design a reactive standie for <a href="http://saavn.com/">Saavn</a> that will be present at their stalls throughout NH7 2015 Music festival.</p>
-
-<p>Its apparently a XXL Sized phone with a UI that lists the artists playing at that festival and has their albums on the standie itself.</p>
-
-<p>So, like a big screen a person could walk and press/tap/touch their artist and enjoy the selected music for the festival.</p>
-
-<p><img src="https://interactive.makerville.io/images/Saavn.png" alt="image" /></p>
-
-<p>Checkout out the video of the standie in action.</p>
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/0B8PpkBpPBA" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Cheers,</p>
-
-<p>Rohit</p>
-<a href="/2016/01/10/InteractiveStandie/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

@@ -1,0 +1,143 @@
+I"�;<blockquote>
+  <p>This article talks about how to accept Alipay payments using Stripe. PS: I am not a front-end person. Heck, I don’t really know what is my discipline, but anyways, this is just a suggestive guide.</p>
+</blockquote>
+
+<h3 id="context">Context</h3>
+
+<p>One fine summer day, hanging out with my friend, <a href="https://www.instagram.com/creativemutation/">Aman</a> and playing with his Oculus, a problem surfaced. He is having troubles accepting payments from his chinese clients. Many of them use Alipay to pay, but unfortunately he is not able to accept that on his website.</p>
+
+<blockquote>
+  <p>BTW, he runs a <a href="https://www.cademy.xyz/">cool school</a> that teaches people computational design and how to use it in product design realm. Do check him out. His school is <strong>post paid</strong> as it is aimed at students. Very interesting model.. he screens and talks to each student to account for purchase power parity.</p>
+</blockquote>
+
+<p>He uses <a href="https://stripe.com/">Stripe</a> on his Squarespace website and everything is no-code (yeah! cool people things.). The power of these tools is pretty baffling.</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>Anyways, so, sipping some <em>tinto de verano</em> we had a problem that a Chinese student who has already attended one of his live classes needs to pay using Alipay. The conventional Stripe payment did not work. The customer care of Squarespace (that integrates Stripe) asked him to contact Stripe and Stripe’s documentation can be baffling sometimes. He was stuck 😔</p>
+
+<h3 id="solution">Solution</h3>
+
+<p>So, over the last weekend, we worked together to implement a way to accept alipay payments using Stripe. It is not yet integrated into squarespace . For the test, We used the direct session link. #NotBuiltForScale</p>
+
+<p><br />Hopefully, this write-up helps people integrate Alipay in their payment stacks and provides template code to do so. Surprisingly, this needs a simple server script that generates the payment session and hence, cannot be done entirely client-only. It beats me why, but as Old John says, this is what it is. 
+<br /></p>
+
+<p>For this example, I used <a href="https://nuxtjs.org/">Nuxtjs</a> (Like Next but for Vue 💚 ) with the <a href="https://vuestripe.com">vue-stripe</a> plugin. The Nuxt SPA calls a <a href="https://www.deta.sh">deta microservice endpoint</a> to generate a payment session on Stripe. The micro-service responds with sessionID generated. This session ID is used to redirect the customer to payment page. Our flow is based on the method described by stripe’s documentation <a href="https://stripe.com/docs/payments/alipay/accept-a-payment?platform=checkout">here</a>.</p>
+
+<p>I will only be sharing the code for the ‘glue’ micro-service and sample vue page.</p>
+
+<p>The schematic (drawn by yours truly) is as follows :
+<img src="https://i.imgur.com/kEV5cLC.png" alt="alt" /></p>
+
+<p>So, lets go step by step (<em>paso a paso</em>):</p>
+<h5 id="step-1-">Step 1 :</h5>
+<p>Nuxt and Axios are pretty common things as far as some front-end folks tell me. But to accept money, you need a payment partner. This payment partner will take our customer’s data to the payment handler (like VISA/ Mastercard) and make sure we get the money. Stripe is a service like that. <br /> Now to talk to stripe, from our webapp, I used a plugin called <a href="(https://vuestripe.com)">vue-stripe</a>. It is an official plugin for Vue/Nuxt and nicely documented. The plugin, helps package data and make calls in such a way that stripe standards are respected. If you are not doing something special (like us), the examples are just copy paste away from deploy. But…</p>
+<h5 id="step-2-">Step 2 :</h5>
+<p>In our case, we need to accept Alipay. Alipay (for reasons i do not know) cannot be accepted entirely using a client-only implementation. This took me a while to figure out. So, we need to write a server side script that takes in our data and generates a <a href="https://stripe.com/en-in/payments/payment-links">checkout session</a>. To do this, I used Deta.<br /> <a href="(https://www.deta.sh)">Deta</a> is a service that deploys and runs nodejs/python scripts on the cloud. It gives you an end-point to talk to. I have been playing with it for mostly useless things until now. <br /> Interestingly enough,  I have come to prefer it over netlify functions as :</p>
+<ul>
+  <li>Its entirely free</li>
+  <li>the deploy speed is very fast</li>
+  <li>The Toolchain is intuitive</li>
+  <li>The <a href="https://twitter.com/detahq">team</a> is adorable.</li>
+</ul>
+
+<p>The function shown below takes in our POST request from Nuxt front-end and passes it to stripe’s servers. We have added alipay as a payment method to support in this particular session. Then, it returns a checkout session ID as a response. The session ID is consumed by the nuxt app as explained in Step 3.</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<span class="kd">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cors</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">stripe</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">stripe</span><span class="dl">'</span><span class="p">)(</span><span class="dl">'</span><span class="s1">sk_xxxxxxx</span><span class="dl">'</span><span class="p">)</span> <span class="c1">//Your stripe key here, better get it as an env variable</span>
+
+<span class="c1">//Some CORS magic</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">({</span> <span class="na">origin</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}));</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">Access-Control-Allow-Origin</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/payments</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">session</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">stripe</span><span class="p">.</span><span class="nx">checkout</span><span class="p">.</span><span class="nx">sessions</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+
+    <span class="na">payment_method_types</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">card</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">alipay</span><span class="dl">'</span><span class="p">],</span>
+  
+    <span class="c1">// We added Alipay as show above</span>
+    <span class="na">line_items</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="na">price</span><span class="p">:</span> <span class="dl">'</span><span class="s1">price_xxxxxxxx</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// The id of the one-time price you created in your Stripe dashboard</span>
+          <span class="na">quantity</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+    <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">payment</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">success_url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://www.yoursite.xyz/paymentSuccess</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">cancel_url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://www.yoursite.xyz/paymentFailed</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">});</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">session</span><span class="p">);</span>
+  <span class="nx">sessionData</span><span class="o">=</span><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span><span class="nx">session</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="c1">// The ID we need</span>
+    <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span> <span class="p">:</span> <span class="nx">session</span><span class="p">.</span><span class="nx">url</span> <span class="c1">//If you wish you can directly redirect to this as well</span>
+  <span class="p">}</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">sessionData</span><span class="p">);</span>
+
+<span class="p">})</span>
+
+<span class="c1">// export 'app'</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">app</span></code></pre></figure>
+<p><br /> 
+For more info on getting started with Deta Micros, check <a href="https://docs.deta.sh/docs/micros/getting_started">this</a> page.</p>
+
+<h5 id="step-3-">Step 3 :</h5>
+<p>The checkout session ID is passed to the vue-stripe plugin (based on example <a href="https://vuestripe.com/stripe-checkout/sessions">here</a>) which redirects the client to the payment page. The vue-page can be constructed like shown below.</p>
+<figure class="highlight"><pre><code class="language-vue" data-lang="vue"><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;stripe-checkout</span>
+      <span class="na">ref=</span><span class="s">"checkoutRef"</span>
+      <span class="na">:pk=</span><span class="s">"publishableKey"</span>
+      <span class="na">:session-id=</span><span class="s">"sessionId"</span>
+    <span class="nt">/&gt;</span>
+    <span class="nt">&lt;button</span> <span class="err">@</span><span class="na">click=</span><span class="s">"getPaymentID"</span><span class="nt">&gt;</span>Checkout!<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">StripeCheckout</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@vue-stripe/vue-stripe</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">StripeCheckout</span>
+  <span class="p">},</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">publishableKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">pk_test_xxxxxxx</span><span class="dl">"</span><span class="p">;</span> <span class="c1">//Your publishable key from stripe, better to get it as an env variable</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">loading</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="na">sessionId</span><span class="p">:</span> <span class="kc">null</span> <span class="c1">// session id from backend</span>
+    <span class="p">};</span>
+  <span class="p">},</span>
+  <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+    <span class="k">async</span> <span class="nx">getPaymentID</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">sessionData</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">$post</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://something.deta.dev/payments</span><span class="dl">"</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">sessionId</span><span class="o">=</span> <span class="nx">sessionData</span><span class="p">.</span><span class="nx">id</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">checkoutRef</span><span class="p">.</span><span class="nx">redirectToCheckout</span><span class="p">();</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>Now, if you deploy the nuxt app and the deta micro and the checkout button is clicked. It shows Alipay as a possible payment option. Tadaaa 🎉
+<img src="https://i.imgur.com/f6aMVGH.png" alt="img" /></p>
+
+<p>Hope this helps someone on the internet. I <strong>must</strong> stress again, I am not a front-end developer, I just did this for fun. If anyone has any constructive criticism, I am open to learn :-)
+<br />
+With this hope,
+Cheers y un abrazo, <br />
+— Rohit</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+  <li>https://vuestripe.com/stripe-checkout/sessions</li>
+  <li>https://github.com/vue-stripe/vue-stripe-functions</li>
+  <li>https://randomcodetips.com/how-to-add-stripe-checkout-in-vue-js/</li>
+  <li>https://stripe.com/docs/payments/alipay/accept-a-payment?platform=checkout</li>
+</ol>
+
+:ET
