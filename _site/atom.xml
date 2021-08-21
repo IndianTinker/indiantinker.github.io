@@ -4,7 +4,7 @@
  <title>Rohit Gupta</title>
  <link href="http://rohitg.in/atom.xml" rel="self"/>
  <link href="http://rohitg.in/"/>
- <updated>2021-08-22T01:02:50+02:00</updated>
+ <updated>2021-08-22T01:06:53+02:00</updated>
  <id>http://rohitg.in</id>
  <author>
    <name>Rohit</name>
@@ -108,7 +108,7 @@
 For more info on getting started with Deta Micros, check &lt;a href=&quot;https://docs.deta.sh/docs/micros/getting_started&quot;&gt;this&lt;/a&gt; page.&lt;/p&gt;
 
 &lt;h5 id=&quot;step-3-&quot;&gt;Step 3 :&lt;/h5&gt;
-&lt;p&gt;The checkout session ID is passed to the vue-stripe plugin (based on example &lt;a href=&quot;https://vuestripe.com/stripe-checkout/sessions&quot;&gt;here&lt;/a&gt;) which redirects the client to the payment page. The vue-page can be constructed like shown below.&lt;/p&gt;
+&lt;p&gt;The checkout session ID is passed to the vue-stripe plugin (based on example &lt;a href=&quot;https://vuestripe.com/stripe-checkout/sessions&quot;&gt;here&lt;/a&gt;) which redirects the client to the payment page. The vue-page can be constructed as suggested below.&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-vue&quot; data-lang=&quot;vue&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;stripe-checkout&lt;/span&gt;
@@ -147,9 +147,9 @@ For more info on getting started with Deta Micros, check &lt;a href=&quot;https:
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/f6aMVGH.png&quot; alt=&quot;img&quot; /&gt;
 &lt;br /&gt;
-Tadaaa 🎉! It shows Alipay as a possible payment option.&lt;/p&gt;
-
-&lt;p&gt;Hope this helps someone on the internet. I &lt;strong&gt;must&lt;/strong&gt; stress again, I am not a front-end developer, I just did this for fun. If anyone has any constructive criticism, I am open to learn :-)
+Tadaaa 🎉 It shows Alipay as a possible payment option. 
+&lt;br /&gt;
+Hope this helps someone on the internet. I &lt;strong&gt;must&lt;/strong&gt; stress again, I am not a front-end developer, I just did this for fun. If anyone has any constructive criticism, I am open to learn :-)
 &lt;br /&gt;
 With this hope,
 Cheers y un abrazo, &lt;br /&gt;
