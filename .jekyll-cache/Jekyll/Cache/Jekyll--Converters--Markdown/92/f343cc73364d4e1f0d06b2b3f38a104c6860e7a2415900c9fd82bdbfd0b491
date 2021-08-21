@@ -1,0 +1,9 @@
+I"W<blockquote>
+  <p>This article talks about how to accept Alipay payments using Stripe. PS: I am not a front-end person. Heck, I don’t really know what is my discipline, but anyways, this is just a suggestive guide.</p>
+</blockquote>
+
+<h3 id="context">Context</h3>
+
+<p>One fine summer day, hanging out with my friend, <a href="https://www.instagram.com/creativemutation/">Aman</a> and playing with his Oculus, a problem surfaced. He is having troubles accepting payments from his chinese clients. Many of them use Alipay to pay, but unfortunately he is not able to accept that on his website.</p>
+
+:ET
