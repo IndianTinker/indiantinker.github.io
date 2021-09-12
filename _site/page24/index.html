@@ -287,6 +287,10 @@
         
       
         
+          
+        
+      
+        
       
 
    <!--
@@ -328,6 +332,55 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2015/10/12/RTLSDR1/">
+        Getting Started with RTL SDR- Playing some old school FM
+      </a>
+    </h1>
+
+    <span class="post-date">12 Oct 2015</span>
+
+    <p><em>This post consists of some noteworthy notes i used to getting up and started with those RTL SDR Dongles available online</em></p>
+
+<p>SDR ? 
+Ever made a crystal radio? Or a usual FM Receiver ? Remember the pain in tuning the inductors to get the correct frequency? With SDR all such passive components can be realised in software logic to make a software based radio that tunes to a particular frequency by changing the values of those ‘virtual’ components. Sounds Expensive?</p>
+
+<p>SDR is a cool technology made affordable thanks to interesting hack by Eric Fry that allows one to use those mass market DVB Receivers as SDR Receivers to listen to radio broadcasts over a defined frequency range which depends on what dongle you use. You can get them under 15USD from places like <a href="http://in.dhgate.com/product/wholesale-rtl-sdr-fm-dab-dvb-t-usb-stick/200697146.html">this</a> or <a href="http://www.ebay.com/itm/USB-2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-RTL2832U-R820T2-/181846951968?hash=item2a56ec4820">this</a> .</p>
+
+<p>The IC that fundamentally decides what will be the receiving range ( in terms of frequency ) is called the Tuner Chip. The tuner chip that is most commonly used is Rafael Micro R820T with effective range of 24 - 1766 MHz. Another common chip with a higher range is the Elonics E4000 with 52 - 2200 MHz but is a bit costly. Check out this <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">link</a> for more. But many folks have mentioned R820T being much more stable than E4000.</p>
+
+<p>I bought one of these a while back. I comes with a small antenna, a remote and the main dongle.</p>
+
+<p>Since, more ‘easy to dive in’ stuff is available for Windows, until further notice, Windows remains my primary platform for SDR Exploration.</p>
+
+<p>There are lots of cool software tools available to get started. The most common being <a href="http://airspy.com/download/">SDR#</a> probably written in C#. An amazing getting started post is written <a href="http://www.rtl-sdr.com/rtl-sdr-quick-start-guide/">here</a>.</p>
+
+<p>Unfortunately, the new SDR# does not work readily with the usual RTLUSB Dongles. You can alternatively download this old version i have backed up <a href="http://1drv.ms/1LoLvdn">here</a> or by Adafruit <a href="http://adafruit-download.s3.amazonaws.com/sdrsharp-5-19-2014.zip">here</a>.</p>
+
+<p>After you install/swap the dongle drivers and SDR# as mention in the post linked above. Its time to listen to some top quality FM Broadcast using the dongle.</p>
+
+<p>As shown below, change the source from the drop down list as RTL-SDR/USB and change the radio button on radio section (too much radio :P) to WFM, Dont fiddle with other settings as of now. Now adjust the frequency using the top display.If all goes well you will see some peaks on the graph display indication the presence of FM Channels. You can tune manually and accurately using the top frequency display or just click on the peaks. Ta da ! SDR FM..</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21971069906/in/dateposted-public/" title="fm1"><img src="https://farm6.staticflickr.com/5791/21971069906_43f3b66b35_z.jpg" width="640" height="360" alt="fm1" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>You can also check out another great software called <a href="http://sdr-radio.com/Software">SDR Console</a>. Its a much more ‘Pro-ish’ SDR receiver available. This again wont work out of the box. You can follow this <a href="http://m3ghe.blogspot.in/p/adding-support-for-rtl-sdr-usb-dongles.html">link</a> for more instruction on getting RTLSDR USB support on SDR Console.</p>
+
+<p>Listening is FM on SDR Console is pretty easy too. Check out the settings in the screen-shot below.</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/94411929@N06/21374483264/in/dateposted-public/" title="sdrconsole"><img src="https://farm6.staticflickr.com/5657/21374483264_f606ce4086_z.jpg" width="640" height="360" alt="sdrconsole" /></a><script async="" src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Hope you found this useful! Next? Maybe we should check out the planes or satellites ?</p>
+
+<p>Cheers !</p>
+
+<p>Rohit</p>
+
+<a href="/2015/10/12/RTLSDR1/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -448,45 +501,6 @@ window.twttr = (function (d, s, id) {
 <p>Rohit</p>
 
 <a href="/2015/09/26/FiddleMini/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/09/24/CNCsnMe1/">
-        CNCs & Me 1 - Easy Peasy Stepper System Tester
-      </a>
-    </h1>
-
-    <span class="post-date">24 Sep 2015</span>
-
-    <p><em>This post is a part of a series i plan to write periodically to document my exploits with CNC machines and other stuff i have built! This post is about a stepper system tester i built a while back.</em></p>
-
-<p>Stepper motors are quite widely used for CNCs/3D Printers or other Electromechanical hacks like the polar plotter etc. ! There is as always a constant need to run the motor to check whether its aligned properly or not? Does the flex coupling has any issues? Is the driver dead or alive and the best one- whether the current setting is fine to generate enough torque to hold or move the lead screw/Belt.</p>
-<p>Pestered by the same above questions i wanted to build my own driver/motor tester overnight and it 'must' be built ACAP (As cheap as possible) :D ! I stumbled open <a href="https://labitat.dk/wiki/Easy_Stepper_Motor_Controller">this</a> awesome project that i saw on Hack-A-Day.</p>
-<p>It uses an ATiny AVR microcontroller which I did'nt have and the least capable one i had was the MSP430G2230 which came in a SOIC pkg a bit difficult to go on the perfboard and my laziness propelled me away from etching a board for accommodating the same (I now feel the need though). I thought of building a microcontroller-less one as most modern stepper drivers like the ones from <a href="http://www.pololu.com/category/120/stepper-motor-drivers">Pololu</a>  need just two signal i.e STEP and DIR.</p>
-<p>A pulse on step pin will initiate a step to the internal indexer that handles what coil has to be energized based on the sequence and micro-stepping settings, while the DIR is a level signal whose level decides whether the internal indexer of the driver counts up or down!</p>
-<p>So, only two inputs i.e Pulsed input for STEP and level input for DIR. This can be achieved using the 555 timer in the <b>astable</b> mode. The Output of 555 i.e pin 3 will go into the step pin and the DIR pin is pulled up using a resistor and it is also connected to ground via switch.</p>
-<p>This gets the job done! We can also have a POT to vary the frequency since some motors don't respond to faster pulses due to rotor inertia.The driver i am using is based on DRV8825 from TI. It is slightly wider than the polulu one. (You might call me a TI fan boy).
-I designed it myself based on reference designs by TI and had the PCBs made by SeeedStudio's Fusion PCB Service. It took about 30 odd days to reach. The driver is two layer in-contrast the Pololu ones are 4 layer. I had to widen the PCB to provide enough dissipating area for the inbuilt heatsink on the the HTSSOP pkg of the DRV8825. Also the SMD resistor cousins of those lower value resistors were not available here in Delhi, so had to go with through hole ones. Ditto for the POT ! </p>
-
-<p>With the Tester designing almost final , I grabbed a piece of perfboard since, i didnt have the time to etch the board.</p>
-<p>The circuit is as follows:</p>
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/final.png"><img class="aligncenter size-full wp-image-647" src="https://indiantinker.files.wordpress.com/2014/04/final.png?w=662" alt="final" /></a></p>
-<p>It has two power inputs 12v, 5v and a common ground, all of which are sourced from an ATX! The circuit itself is pretty simple.</p>
-<p>The final build on a perfboard is shown below.</p>
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png"><img class="aligncenter size-full wp-image-645" src="https://indiantinker.files.wordpress.com/2014/04/perfboard1.png?w=662" alt="perfboard1" /></a></p>
-<p><a href="https://indiantinker.files.wordpress.com/2014/04/perf.png"><img class="aligncenter size-full wp-image-653" src="https://indiantinker.files.wordpress.com/2014/04/perf.png?w=662" alt="PERF" /></a></p>
-<p>I chose to use a SMD 0603 10K resistor between pin 8 and 7 to reduce the space and connected 104 (0.1uF) Ceramic caps as shown. The switch is a 10xx and the capacitor is required at the input of stepper driver to reduce supply dips when it draws current. I have used female headers for the motor since most motors come with a connector that can be easily wired up with a single strand wire. I used the Power Terminal connectors for the main 12V Driver supply as the driver is rated for 2.5A which is too high for the usual jumper cables !</p>
-<p><a href="https://www.flickr.com/photos/94411929@N06/13828736933" title="top and bottom by Rohit Gupta, on Flickr"><img src="https://farm6.staticflickr.com/5579/13828736933_b4393c9c19_c.jpg" width="800" height="450" alt="top and bottom" /></a><br />
-&nbsp;</p>
-<p><b>TIP:</b> If you are using the non-tinned/less tinned headers that have been lying around in the component box for a while, make sure to rub the connectors using sandpaper to remove corrosion residue on the contacts else it might seem soldered but it wont actually be soldered. Also you may use some extra flux.</p>
-<p>Video:<br />
-<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="662" height="403" src="https://www.youtube.com/embed/6tETMOMKnxY?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent" frameborder="0" allowfullscreen="true"></iframe></span></div></p>
-<p>Cheers !</p>
-<p>Rohit Gupta</p>
-<a href="/2015/09/24/CNCsnMe1/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

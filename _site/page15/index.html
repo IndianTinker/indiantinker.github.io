@@ -287,6 +287,10 @@
         
       
         
+          
+        
+      
+        
       
 
    <!--
@@ -328,6 +332,43 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/10/16/epubslatex/">
+        Typesetting ePUBs in LaTex
+      </a>
+    </h1>
+
+    <span class="post-date">16 Oct 2016</span>
+
+    <p>In a recent class on Typesetting we were assigned a task to typeset an entire book, preferably an Open Book, using your favorite typesetting Program in a few days time. Typesetting is not <em>easy</em> especially when you do it in <strong>LaTeX</strong> and with the skill going rusty it was a hot pot of dilemmas that I think should not be a part of this post at all.</p>
+
+<p>The book I choose was in ePub format and desperately needed to be converted to latex files so I can typeset them in <a href="http://overleaf.com/">overleaf</a> or <a href="http://sharelatex.com/">sharelatex</a> or <em>texworks</em> as a matter of fact. I have moved in the favour of these online compilers as I no longer have to fiddle with searching the included <code class="language-plaintext highlighter-rouge">.sty</code> that are so robotic to seek and use. I really wish there was some kind of package manager for latex too. Like pip for python. 
+<em>I Wish</em> !</p>
+
+<p>ePubs are essentially a zipped archive of <code class="language-plaintext highlighter-rouge">.html</code> files following a specific numbering scheme or format. So the task was essentially to convert the <code class="language-plaintext highlighter-rouge">.html</code> to <code class="language-plaintext highlighter-rouge">.tex</code>. I did try a few things with python trying the <code class="language-plaintext highlighter-rouge">beautiful soup</code> things. It did not taste well. I had to search other things.</p>
+
+<p>I had heard of <a href="http://pandoc.org/">pandoc</a> while I was writing my thesis few years back too but it <em>felt</em> to complex that time but now it was a necessity I just can’t ignore. Its interesting how the perceived complexity of a act changes with necessity. <strong>Pandoc</strong> is the Swiss army knife when handling documents. It can do anything. It took me a while to figure out it was a CLI tool. ( It happens )</p>
+
+<p>It could translate the html page <em>almost</em> perfectly to be used in <em>overleaf</em>. Only some italics were not getting done properly for which I used <code class="language-plaintext highlighter-rouge">sed</code> and compiled it all in a shell script to iterate over the entire folder and in a blink I had a directory full of tex files ready for the next stage.</p>
+
+<p>The work was only 10% done as a lot of widows needed new husbands and orphans needed parents, I hope you get what I mean !</p>
+
+<p>Just in case you too are a fan of <strong>LaTeX</strong> , the code I used and wrote is <a href="https://github.com/IndianTinker/EPUB-to-Latex">here</a>.</p>
+
+<blockquote>
+  <p>Long Live LaTeX !</p>
+</blockquote>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+
+<a href="/2016/10/16/epubslatex/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -454,41 +495,6 @@ app indicators that exit <em>gracefully</em> and have an on click event that upd
 
 <p>Rohit</p>
 <a href="/2016/08/15/DynamicIndicators/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/08/09/DLog1Movie/">
-        DLogs-How to watch movies better
-      </a>
-    </h1>
-
-    <span class="post-date">09 Aug 2016</span>
-
-    <p>The content of this post was mostly derived during a course on <em>Visual Syntactics</em> taught by Prof. Ravi Pooviah at IDC. The course is an amazing reflection of the thought, vision and ways in Ideas can be conveyed. As a part of the course we are shown a lot of movies,So many that i have never seen soo many in such a short span of time. But there are important aspects that defines the way films as a media are perceived. There is an art called “Cinematography” that probably most of us overlook in the consumerist consumption of the media. The general flow of what i think is : Book Tickets, CheckIn at the Cinema, Watch Movie, Spoilers/Rating/Egoistic Activity on Social Media, Forget.</p>
-
-<p>Well ! There is an Art side. It has always been but differently weighted. Probably so transparent that it just flows and goes un-noticed by many except the <strong>Film Nerds</strong> as I call them. So, here is a n00bs guide to enjoying movies better. FYI, It takes a lot of time and the food is only good movies.</p>
-
-<p>Basically the film viewing process can be divided into 3 stages. You watch the movie at every stage:</p>
-
-<ol>
-  <li><strong>Long Shot</strong> : Get a basic feel of the Movie, Its Plot, Make assumptions, Do what you do now. Natural</li>
-  <li>
-    <p><strong>Mid Shot</strong>  : Now that you know the stuff, look for deeper stuff like segmentation, interplay of various events, various subtle changes in things, spend time with the movie, Live it like a book</p>
-  </li>
-  <li><strong>Close Shot</strong> : This is the deepest stage. You notice the levels in the shots (focus moving), camera motion (pan, air motion) , Camera ON/OFF and basically its a more <em>forensic</em> look to the movie. Shot by Shot, Frame by Frame. Devil is in the Details.</li>
-</ol>
-
-<p>There is also something called the <strong>Establishing Shot</strong> which one of the super geeky film nerd told me here. It is basically the opening shot that introduces you to the movie and people like Martin Scorsese and Hitchcock are the masters in this domain.</p>
-
-<p>Hope we all start watching movies in a better way and enjoy the art.</p>
-
-<p>Cheers!</p>
-
-<p>Rohit</p>
-<a href="/2016/08/09/DLog1Movie/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr

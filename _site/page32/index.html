@@ -287,6 +287,10 @@
         
       
         
+          
+        
+      
+        
       
 
    <!--
@@ -328,6 +332,77 @@ window.twttr = (function (d, s, id) {
   
     </div>
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/11/03/Library-for-MMA7361/">
+        Arduino Library for Freescale's MMA7361 3 axis accelerometer
+      </a>
+    </h1>
+
+    <span class="post-date">03 Nov 2014</span>
+
+    <p>Accelerometers huh! No new term these days! Every <strong>practical</strong> phone these days has one! Accelerometers churn out data in two ways :</p>
+
+<ul>
+  <li>Analog which can be directly read by our friendly ADC</li>
+  <li>Digital which send data in values riding on I2C/SPI.</li>
+</ul>
+
+<p>The one that i had is an analog one and is probably the first one that comes when you search with keywords <em>Arduino Accelerometer</em> on ebay/AliExpress. It(module) is based on <a href="http://www.freescale.com/files/sensors/doc/data_sheet/MMA7361L.pdf">Freescale ‘s MMA7361 analog 3Axis Accelerometer</a>.</p>
+
+<p><img src="http://deadbugelectronics.com/image/cache/data/Sensor/Acc_Gyro/MMA7361%20-%201-500x500.jpg" alt="Image" /></p>
+
+<p>I bought it a while back and was curious to play with it. The pin description (thanks to the simplification done <a href="http://eecs.oregonstate.edu/education/docs/accelerometer/MMA7361_module.pdf">here</a>) is as follows:</p>
+
+<ul>
+  <li><strong>X,Y,Z</strong> give Analog Voltage outputs based on the orientation</li>
+  <li><strong>SL</strong> - Sleep (needs to be Pulled up)</li>
+  <li><strong>0g</strong> - It gives a signal when 0g is detected.</li>
+  <li><strong>5v,3v,GND</strong> - Usual Power Connections 3V is produced internally if 5v is applied</li>
+  <li><strong>GS</strong> - Sensitivity select- the IC allows 1.5g and 6g settings</li>
+  <li><strong>ST</strong> - Self Test</li>
+</ul>
+
+<p>Without doing the <strong>RTFD(D-Datasheet)</strong> i quickly plugged in the board to read X values and to derive any conclusion and Alas! it failed.I then went thru the datasheet to find out the IC is initially in <em>Sleep</em> Mode and has to be awaken by <em>pulling-Up</em> the Sleep pin.</p>
+
+<p>Just connect a 10k resistor to the Sleep Pin and to the 3.3V output pin and now we have most of the circuit set up.</p>
+
+<p><img src="https://farm6.staticflickr.com/5614/15071754173_00038d914a.jpg" alt="IMg" /></p>
+
+<p>Now just:</p>
+
+<ul>
+  <li>read the analog values from the pin</li>
+  <li>convert them to voltages</li>
+  <li>apply sensitivity and correction</li>
+  <li>and get g value</li>
+</ul>
+
+<p>Simple as that!</p>
+
+<p>Having deciphered it, i wrote a test code:</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/1d5402b9b3562345cc44.js"> </script>
+
+<p>It worked as designed.</p>
+
+<p>Then i thought that it will be better to try writing a library for it and learn how to write libraries in the process.
+The process turned out to be easy thanks to the documentation by <strong>Arduino</strong>.</p>
+
+<p>My Library can be found here on <a href="https://github.com/IndianTinker/MMA7361Library">github</a></p>
+
+<p>Feel free to fork it and use it. 
+Hoping the community finds it useful.</p>
+
+<p>Cheers,</p>
+
+<p>Rohit</p>
+<a href="/2014/11/03/Library-for-MMA7361/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+<br>
+<hr>
+  </divr
   
   <div class="post">
     <h1 class="post-title">
@@ -387,34 +462,6 @@ It did have a textbook transformerless design (<a href="4.bp.blogspot.com/-tOTZu
 
     <p>I have recently been working on my blog on using <em>Jekyll</em> on <strong>Github Pages</strong> and the experience has been wonderful.</p>
 <a href="/2014/10/21/Tags-on-Jekyll-Blog-using-liquid.md-Welcome-to-new-home/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-<br>
-<hr>
-  </divr
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/10/16/Welcome-to-new-home/">
-        Welcome to the new home!
-      </a>
-    </h1>
-
-    <span class="post-date">16 Oct 2014</span>
-
-    <p>I am now in process of migrating my main blog on <a href="http://indiantinker.wordpress.com">wordpress</a> to github pages for more contexual/design/layout freedom. This blog is built using <a href="http://jekyllrb.com">Jekyll</a>.</p>
-
-<blockquote>
-  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
-
-<p>For those who have used <a href="http://www.latex-project.org/">LaTeX</a> in the past Jekyll is excellent as it (personally saying) generates a static website by compiling all the code you wrote in the post.Obviously, with the luxury of <strong>platforms</strong> like wordpress,blogspot etc writing bare code is archaic. Jekyll has got your back here too, you never <em>write</em> the html/css tags from scratch. The Jekyll engine takes standard markdown which it builds into a html code and once built gives you a complete website. You an obviously code in html too.</p>
-
-<p>Comments,widgets and Analytics work too with just a bit of playing required.
-The comments on this site are supported via Disqus !</p>
-
-<p>Hope this post compiles well ! :)</p>
-<a href="/2014/10/16/Welcome-to-new-home/" style="text-align:right;">Read more&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 <br>
 <hr>
   </divr
